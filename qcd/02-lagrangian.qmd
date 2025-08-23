@@ -1,9 +1,0 @@
----
-title: "ラグランジアン"
----
-
-# 基本式
-$$
-\\mathcal{L}_{\\text{QCD}} = -\\frac{1}{4} F_{\\mu\\nu}^a F^{a\\mu\\nu}
-+ \\bar{\\psi}_i (i \\gamma^\\mu D_\\mu - m_i)\\psi_i.
-$$

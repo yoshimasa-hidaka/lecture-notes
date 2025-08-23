@@ -1,12 +1,12 @@
 project:
   type: book
+  output-dir: ../docs/hamiltonian_lattice 
 
 book:
-  title: "QCD 講義ノート"
+  title: "格子ゲージ理論 講義ノート"
   chapters:
     - index.qmd
-    - 01-intro.qmd
-    - 02-lagrangian.qmd
+    - 01-basics.qmd
 
 format:
   html:

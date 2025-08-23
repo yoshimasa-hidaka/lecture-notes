@@ -3,15 +3,13 @@ project:
   output-dir: docs
 
 website:
-  title: "講義ノートポータル"
+  title: "講義ノート"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - href: qcd/index.qmd
-        text: QCD（本）
-      - href: lattice/index.qmd
-        text: 格子ゲージ理論（本）
+      - href: hamiltonian_lattice/index.qmd
+        text: ハミルトニアン形式による格子ゲージ理論
 
 format:
   html:

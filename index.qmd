@@ -1,10 +1,6 @@
 ---
-title: "Home"
+title: "講義ノート"
 ---
 
 # ポータル
-
-- QCD 本（HTML）：[こちら](qcd/index.qmd)
-- 格子ゲージ理論 本（HTML）：[こちら](lattice/index.qmd)
-
-> サブ本のPDFは、各サブフォルダで `quarto render --to pdf` を実行して生成してください。
+- ハミルトニアン形式による格子ゲージ理論：[こちら](hamiltonian_lattice/index.html)

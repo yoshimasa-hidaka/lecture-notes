@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>ラグランジアン – 講義ノートポータル</title>
+<title>序文 – 講義ノート</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -108,7 +108,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">講義ノートポータル</span>
+    <span class="navbar-title">講義ノート</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -122,12 +122,8 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../qcd/index.html"> 
-<span class="menu-text">QCD（本）</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../lattice/index.html"> 
-<span class="menu-text">格子ゲージ理論（本）</span></a>
+    <a class="nav-link active" href="../hamiltonian_lattice/index.html" aria-current="page"> 
+<span class="menu-text">ハミルトニアン形式による格子ゲージ理論</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -145,7 +141,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#基本式" id="toc-基本式" class="nav-link active" data-scroll-target="#基本式"><span class="header-section-number">1</span> 基本式</a></li>
+  <li><a href="#格子ゲージ理論の概要" id="toc-格子ゲージ理論の概要" class="nav-link active" data-scroll-target="#格子ゲージ理論の概要"><span class="header-section-number">1</span> 格子ゲージ理論の概要</a></li>
   </ul>
 </nav>
     </div>
@@ -154,7 +150,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">ラグランジアン</h1>
+<h1 class="title">序文</h1>
 </div>
 
 
@@ -171,12 +167,12 @@ window.Quarto = {
 </header>
 
 
-<section id="基本式" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> 基本式</h1>
-<p><span class="math display">\[
-\\mathcal{L}_{\\text{QCD}} = -\\frac{1}{4} F_{\\mu\\nu}^a F^{a\\mu\\nu}
-+ \\bar{\\psi}_i (i \\gamma^\\mu D_\\mu - m_i)\\psi_i.
-\]</span></p>
+<p>本講義ノートは，「原子核三者若手 夏の学校2025」における講義「ハミルトニアン形式による格子ゲージ理論入門」のために作成されたものである． 本講義では，格子ゲージ理論のハミルトニアン形式に焦点を当て，その基礎的枠組みと物理的意味を解説する．</p>
+<section id="格子ゲージ理論の概要" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> 格子ゲージ理論の概要</h1>
+<p>離散化と数値計算の基礎を扱います。 本講義ノートでは，格子上に構成された非可換ゲージ理論のハミルトニアン形式の基礎的事項について解説する． ハミルトニアン形式では，ヒルベルト空間とその上の物理状態を扱う． ゲージ理論の物理的状態はゲージ不変な状態である．つまり，物理状態はGaussの拘束条件（Gauss’s law constraint）を満たす必要がある．連続場の理論では，一般にこの拘束条件を解くのは困難であるが，格子上では形式的に拘束条件を解くことが可能となる．この拘束条件を満たす状態は，ストリングネットやスピンネットワークと呼ばれる． ストリングネット間の演算はトポロジカル秩序相を記述する代数的構造(modular tensor category)を満たすことが知られている． ストリングネットの基底を用いることで、ゲージ不変なヒルベルト空間を明示的に構成することができる．さらに，この基底におけるハミルトニアンの作用は，電場項を加えたストリングネット模型のハミルトニアンとなる． 本講義では，格子上(より一般的にグラフ上)でのゲージ理論の定式化から出発し，それを変形，正則化していくことでスピン模型であるストリングネット模型に帰着する過程を示す．スピン模型による記述を通じて，量子コンピュータやテンソルネットワークを用いた手法が適用しやすくなることが期待される．</p>
+<p>講義の後半では，解析手法の例として，<span class="math inline">\((2+1)\)</span>次元の<span class="math inline">\(\mathrm{SU}(3)\)</span>ゲージ理論を変分波動関数を用いた解析手法を紹介する．</p>
+<p>本講義ノートでは，Einstein記法を用いる．つまり上下に現れた同じ添字に対しては，断りが無い限り縮約（和を取る）を行うものとする．また，状態のテンソル積<span class="math inline">\(\ket{a}\otimes \ket{b}\)</span>は，単に<span class="math inline">\(\ket{a}\ket{b}\)</span>のように表記する． <span class="math inline">\(\mathbb{Z}\)</span>，<span class="math inline">\(\mathbb{R}\)</span>，<span class="math inline">\(\mathbb{C}\)</span>は，整数, 実数および複素数の集合を表す． ノートの最新版は，よりダウンロードできる． 本講義ノートには，誤植や致命的な誤りが含まれている可能性がある点について，あらかじめご了承ください．</p>
 
 
 </section>

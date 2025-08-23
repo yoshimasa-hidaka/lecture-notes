@@ -1,7 +1,0 @@
----
-title: "導入"
----
-
-# 強い相互作用とは
-
-QCD (Quantum Chromodynamics) は強い相互作用を記述するゲージ理論です。
