@@ -1,13 +1,26 @@
-# Template: Portal + Subbooks (Quarto)
+# 講義ノート集
 
-## 使い方
-1. ルートでローカルプレビュー
-   ```bash
-   quarto preview
-   ```
-2. サブ本（例：QCD）だけPDF化
-   ```bash
-   cd qcd
-   quarto render --to pdf
-   ```
-3. GitHub Pages で公開するなら Settings → Pages で `main` / `/docs` を指定。
+このリポジトリは、複数学習テーマをまとめた講義ノート集です。  
+Quarto を用いて **Web公開** と **PDF配布** の両方に対応しています。
+
+公開ページ: [GitHub Pages](https://yoshimasa-hidaka.github.io/lecture-notes/)
+
+---
+
+## 構成
+- **ポータル (Home)**  
+  トップページから各テーマのノートに移動できます。
+
+- **サブ本 (テーマごとに独立構成)**  
+  - [QCD 講義ノート](docs/qcd/index.html)  
+  - [格子ゲージ理論（ハミルトニアン形式）](docs/hamiltonian_lattice/index.html)  
+
+それぞれ HTML と PDF の両方で参照可能です。
+
+---
+
+## 使い方（開発者向け）
+
+### ローカルプレビュー
+```bash
+quarto preview
