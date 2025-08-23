@@ -6,3 +6,6 @@ docs/
 *_cache/
 *.swp
 *.swo
+.DS_Store
+
+/.quarto/
