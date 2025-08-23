@@ -12,3 +12,8 @@ format:
   html:
     toc: true
     number-sections: true
+  pdf:
+    pdf-engine: lualatex
+    documentclass: book
+    luatexjapresetoptions: hiragino-pron
+    number-sections: true
