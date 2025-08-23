@@ -27,7 +27,7 @@ jobs:
           version: "1.5.57"
 
       - name: Render site
-        run: quarto render -v
+        run: quarto render
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
