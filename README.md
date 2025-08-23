@@ -1,18 +1,25 @@
 # 講義ノート集
 
-このリポジトリは、複数学習テーマをまとめた講義ノート集です。  
-Quarto を用いて **Web公開** と **PDF配布** の両方に対応しています。
-
-公開ページ: [GitHub Pages](https://yoshimasa-hidaka.github.io/lecture-notes/)
+このリポジトリでは、複数テーマにわたる講義ノートを公開しています。  
+内容は随時更新され、Web版とPDF版の両方で閲覧できます。
 
 ---
 
-## 構成
-- **ポータル (Home)**  
-  トップページから各テーマのノートに移動できます。
+## 公開ページ
 
+- ポータル（総合入口）  
+  👉 [https://yoshimasa-hidaka.github.io/lecture-notes/](https://yoshimasa-hidaka.github.io/lecture-notes/)
 
-それぞれ HTML と PDF の両方で参照可能です。
+---
+
+## 各テーマ
+- [格子ゲージ理論（ハミルトニアン形式）](https://yoshimasa-hidaka.github.io/lecture-notes/hamiltonian_lattice/)  
+
+---
+
+## PDF版
+
+各ノートのページから **「Download PDF」** をクリックするとダウンロードできます。
 
 ---
 
