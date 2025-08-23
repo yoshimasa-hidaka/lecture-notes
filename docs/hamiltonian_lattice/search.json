@@ -1,0 +1,22 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "格子ゲージ理論 講義ノート",
+    "section": "",
+    "text": "本講義ノートは，「原子核三者若手 夏の学校2025」における講義「ハミルトニアン形式による格子ゲージ理論入門」のために作成されたものである． 本講義では，格子ゲージ理論のハミルトニアン形式に焦点を当て，その基礎的枠組みと物理的意味を解説する．\n\n1 格子ゲージ理論の概要",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>序文</span>"
+    ]
+  },
+  {
+    "objectID": "01-basics.html",
+    "href": "01-basics.html",
+    "title": "2  基礎",
+    "section": "",
+    "text": "3 Wilson作用（例）\n\\[ S = \\\\sum_x \\\\bar\\\\psi(x) D_W \\\\psi(x) + \\\\frac{\\\\beta}{3} \\\\sum_{p} \\\\text{Re}\\\\,\\\\text{Tr}(1-U_p). \\]",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>基礎</span>"
+    ]
+  }
+]
