@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "lattice/index.html",
+    "href": "lattice/index.html",
+    "title": "序文",
+    "section": "",
+    "text": "1 格子ゲージ理論の概要\n離散化と数値計算の基礎を扱います。"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "1 ポータル\n\nQCD 本（HTML）：こちら\n格子ゲージ理論 本（HTML）：こちら\n\n\nサブ本のPDFは、各サブフォルダで quarto render --to pdf を実行して生成してください。"
+  },
+  {
+    "objectID": "qcd/index.html",
+    "href": "qcd/index.html",
+    "title": "序文",
+    "section": "",
+    "text": "1 QCD 本の概要\nこの本はQCDの基礎を体系的にまとめたものです。"
+  },
+  {
+    "objectID": "qcd/01-intro.html",
+    "href": "qcd/01-intro.html",
+    "title": "導入",
+    "section": "",
+    "text": "1 強い相互作用とは\nQCD (Quantum Chromodynamics) は強い相互作用を記述するゲージ理論です。"
+  },
+  {
+    "objectID": "qcd/02-lagrangian.html",
+    "href": "qcd/02-lagrangian.html",
+    "title": "ラグランジアン",
+    "section": "",
+    "text": "1 基本式\n\\[\n\\\\mathcal{L}_{\\\\text{QCD}} = -\\\\frac{1}{4} F_{\\\\mu\\\\nu}^a F^{a\\\\mu\\\\nu}\n+ \\\\bar{\\\\psi}_i (i \\\\gamma^\\\\mu D_\\\\mu - m_i)\\\\psi_i.\n\\]"
+  },
+  {
+    "objectID": "lattice/01-basics.html",
+    "href": "lattice/01-basics.html",
+    "title": "基礎",
+    "section": "",
+    "text": "1 Wilson作用（例）\n\\[ S = \\\\sum_x \\\\bar\\\\psi(x) D_W \\\\psi(x) + \\\\frac{\\\\beta}{3} \\\\sum_{p} \\\\text{Re}\\\\,\\\\text{Tr}(1-U_p). \\]"
+  }
+]

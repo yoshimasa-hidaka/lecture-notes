@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "講義ノートポータル"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: qcd/index.qmd
+        text: QCD（本）
+      - href: lattice/index.qmd
+        text: 格子ゲージ理論（本）
+
+format:
+  html:
+    toc: true
+    number-sections: true

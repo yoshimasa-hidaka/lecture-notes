@@ -1,0 +1,17 @@
+project:
+  type: book
+
+book:
+  title: "QCD 講義ノート"
+  chapters:
+    - index.qmd
+    - 01-intro.qmd
+    - 02-lagrangian.qmd
+
+format:
+  html:
+    toc: true
+    number-sections: true
+  pdf:
+    documentclass: book
+    number-sections: true
