@@ -2,13 +2,20 @@ project:
   type: website
   output-dir: docs
 
+  pre-render:
+    - quarto render hamiltonian_lattice
+
+  post-render:
+    - mkdir -p docs/hamiltonian_lattice
+    - rsync -a hamiltonian_lattice/_book/ docs/hamiltonian_lattice/
+
 website:
   title: "講義ノート"
   navbar:
     left:
-      - href: index.qmd
+      - href: index.html
         text: Home
-      - href: hamiltonian_lattice/index.qmd
+      - href: hamiltonian_lattice/index.html
         text: ハミルトニアン形式による格子ゲージ理論
 
 format:

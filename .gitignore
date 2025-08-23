@@ -1,6 +1,9 @@
-/.quarto/
-hamiltonian_lattice/index.fdb_latexmk
-hamiltonian_lattice/index.log
-hamiltonian_lattice/index.aux
-hamiltonian_lattice/index.fls
-hamiltonian_lattice/index.log
+.DS_Store
+docs/
+.quarto/
+.quarto-build/
+*_files/
+*_cache/
+*.swp
+*.swo
+.DS_Store

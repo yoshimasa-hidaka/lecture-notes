@@ -2,5 +2,6 @@
 title: "講義ノート"
 ---
 
-# ポータル
-- ハミルトニアン形式による格子ゲージ理論：[こちら](hamiltonian_lattice/index.html)
+# Home
+
+- [ハミルトニアン形式による格子ゲージ理論](hamiltonian_lattice/index.html)

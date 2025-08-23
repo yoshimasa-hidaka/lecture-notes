@@ -1,6 +1,6 @@
 project:
   type: book
-  output-dir: ../docs/hamiltonian_lattice 
+
 
 book:
   title: "格子ゲージ理論 講義ノート"
@@ -11,7 +11,4 @@ book:
 format:
   html:
     toc: true
-    number-sections: true
-  pdf:
-    documentclass: book
     number-sections: true
