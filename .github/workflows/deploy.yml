@@ -18,12 +18,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: quarto-dev/quarto-actions/setup@v2
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: "latest"
 
-      # pre/post-render は _quarto.yml に書いてあるので、これ1回でOK
       - name: Render site
         run: quarto render -v
 
@@ -39,5 +41,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - id: deployment
+      - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
