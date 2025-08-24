@@ -1,0 +1,46 @@
+/* 本文フォントと行間 */
+body {
+  font-family: "Noto Serif JP", "Hiragino Mincho ProN", serif;
+  line-height: 1.7;
+}
+
+/* 見出しは読みやすいゴシックに */
+h1, h2, h3, h4 {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* ページ幅（読みやすい最大幅に） */
+.page-columns .content {
+  max-width: 900px;
+}
+
+/* 数式を少し大きく */
+.math, .ltx_math, span.math.inline, div.math.display {
+  font-size: 1.05em;
+}
+
+/* コードブロックの見やすさ */
+pre code {
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+}
+
+/* 図表キャプションを上に（好み） */
+.quarto-figure .figure-caption, .quarto-table .table-caption {
+  caption-side: top;
+  font-weight: 600;
+}
+
+/* サイドバーの見出し間隔 */
+.sidebar .sidebar-item {
+  margin-bottom: 0.2rem;
+}
+
+/* 外部リンクの軽い強調 */
+a[href^="http"]::after {
+  content: " ↗";
+  font-size: 0.85em;
+  opacity: 0.6;
+}

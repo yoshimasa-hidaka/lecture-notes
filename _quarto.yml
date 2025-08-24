@@ -12,11 +12,14 @@ project:
 website:
   title: "講義ノート"
   navbar:
+    search: true
     left:
       - href: index.html
         text: Home
       - href: hamiltonian_lattice/index.html
         text: ハミルトニアン形式による格子ゲージ理論
+  sidebar:
+    style: "floating"
 
 format:
   html:

@@ -4,16 +4,53 @@ project:
 
 book:
   title: "格子ゲージ理論 講義ノート"
+  downloads: [pdf]
+  page-navigation: true
+  sidebar:
+    style: floating
+    background: light
+    search: true
+    collapse-level: 2
+    tools:
+      - icon: github
+        href: "https://github.com/yoshimasa-hidaka/lecture-notes"
+        text: "View source"
+
+      - icon: link
+        href: "../index.html"
+        text: "講義ノートへ戻る"
+
+
   chapters:
     - index.qmd
     - 01-basics.qmd
+  appendices:
+    - references.qmd
 
 format:
   html:
+    theme: flatly
+    css: styles.css
     toc: true
     number-sections: true
-  pdf:
-    pdf-engine: lualatex
-    documentclass: book
-    luatexjapresetoptions: hiragino-pron
-    number-sections: true
+    number-depth: 2         # 見出し番号の深さ
+    code-copy: true         # コードのコピーアイコン
+    code-overflow: wrap     # 長いコードを折り返し
+    highlight-style: github # コード配色
+    link-external-newwindow: true
+    lightbox: auto          # 図版の拡大表示を自動
+  # pdf:
+  #   pdf-engine: lualatex
+  #   documentclass: book
+  #   luatexjapresetoptions: hiragino-pron
+  #   number-sections: true
+
+
+# metadata:
+#   lang: ja
+#   link-citations: true
+#   include-in-header:
+#     text: |
+#       <script>
+#         MathJax = { tex: { tags: 'ams' } };
+#       </script>
