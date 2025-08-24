@@ -1,7 +1,9 @@
 ---
-title: "講義ノート"
+title: "講義ノートなど"
 ---
 
-# Home
+# 講義ノート
 
 - [ハミルトニアン形式による格子ゲージ理論](hamiltonian_lattice/index.html)
+- [有限温度有限密度の場の理論](QFT_finiteT/index.html)
+- [一般化対称性](generalized_globalsymmetry/index.html)

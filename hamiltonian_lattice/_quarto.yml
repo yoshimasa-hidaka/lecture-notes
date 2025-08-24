@@ -6,6 +6,13 @@ book:
   title: "格子ゲージ理論 講義ノート"
   downloads: [pdf]
   page-navigation: true
+  # navbar:
+  #   search: true
+  #   left:
+  #     - href: ../index.html
+  #       text: Toppage
+  #     - href:  index.html
+  #       text: ハミルトニアン形式による格子ゲージ理論
   sidebar:
     style: floating
     background: light
@@ -54,3 +61,5 @@ format:
 #       <script>
 #         MathJax = { tex: { tags: 'ams' } };
 #       </script>
+
+

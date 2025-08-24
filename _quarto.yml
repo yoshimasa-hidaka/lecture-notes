@@ -19,9 +19,11 @@ website:
       - href: hamiltonian_lattice/index.html
         text: ハミルトニアン形式による格子ゲージ理論
   sidebar:
+    background: light
     style: "floating"
 
 format:
   html:
+    theme: flatly  
     toc: true
     number-sections: true

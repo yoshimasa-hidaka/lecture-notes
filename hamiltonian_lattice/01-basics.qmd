@@ -4,4 +4,3 @@ title: "基礎"
 
 # Wilson作用（例）
 
-$$ S = \\sum_x \\bar\\psi(x) D_W \\psi(x) + \\frac{\\beta}{3} \\sum_{p} \\text{Re}\\,\\text{Tr}(1-U_p). $$
