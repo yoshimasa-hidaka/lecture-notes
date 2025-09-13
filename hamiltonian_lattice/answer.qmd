@@ -1,0 +1,297 @@
+# 解答
+
+::: answer
+特別な場合$j_c=0$, $m_c=0$のClebsch-Gordan係数は
+$$\braket{j_am_a\, j_bm_b}{00}
+  =
+  \begin{pmatrix}
+    j_a & j_b & 0\\
+    m_a & m_b & 0
+  \end{pmatrix}
+  =\frac{1}{\sqrt{d_a}}(-1)^{j_a-m_a}\delta_{j_a,j_b}\delta_{m_a,-m_b}$$
+となる．
+:::
+
+::: answer
+$2$つのスピンで$1$重項を作った場合は， $$\ket*{j_aj_b;00} = \sum_{m_a} 
+  \frac{1}{\sqrt{d_a}}(-1)^{j_a-m_a}\ket*{j_a,m_a} \ket*{j_a,-m_a}$$
+となる．
+:::
+
+::: answer
+$[U_{\mathrm{adj}}(e)]_i^j E_j^{\mathrm{t}}(e)$と$U(e)$の交換関係を計算し，
+式[\[eq:\[E_s,U\]\]](#eq:[E_s,U]){reference-type="eqref"
+reference="eq:[E_s,U]"}を満たすかチェックする． 以下，$e$の引数は省略．
+$$\begin{split}
+   [ [U_{\mathrm{adj}}]_i^j E_j^{\mathrm{t}}, U]
+   &=   [U_{\mathrm{adj}}]_i^j[  E_j^{\mathrm{t}}, U]\\
+   &=   [U_{\mathrm{adj}}]_i^jT_jU\\
+  \end{split}$$
+ここで，式[\[eq:\[E_t,U\]\]](#eq:[E_t,U]){reference-type="eqref"
+reference="eq:[E_t,U]"}を使った．
+式[\[eq:adjoint\]](#eq:adjoint){reference-type="eqref"
+reference="eq:adjoint"}より， $$\begin{split}
+   [ [U_{\mathrm{adj}}]_i^j E_j^{\mathrm{t}}, U]
+   &=   UT_i U^\dag U\\
+   &=   UT_i
+  \end{split}$$
+となる．したがって交換関係[\[eq:\[E_s,U\]\]](#eq:[E_s,U]){reference-type="eqref"
+reference="eq:[E_s,U]"}と無矛盾である．
+:::
+
+::: answer
+省略
+:::
+
+::: answer
+省略
+:::
+
+::: answer
+省略
+:::
+
+::: answer
+省略
+:::
+
+::: answer
+省略
+:::
+
+::: answer
+省略
+:::
+
+::: answer
+$k=1$の時の$j_a=0$と$1/2$を取る． $j_a=0$は$1$次元なので，$d_0=1$.
+$j_a=1/2$の時， $$N_{1/2}=
+ \begin{pmatrix}
+  0 & 1\\
+  1 & 0
+ \end{pmatrix}$$
+より，固有値は$\pm1$である．したがって$d_{1/2}=1$となる．
+
+$k=2$について，先ほどと同様に$d_0=0$. $j_a=1/2$について， $$N_{1/2}=
+  \begin{pmatrix}
+    0 & 1 &0\\
+    1 & 0 &1\\
+    0 & 1 &0\\
+  \end{pmatrix}$$ となり，固有値は$\pm\sqrt{2}$,
+$0$であるので，$d_{1/2}=\sqrt{2}$.
+
+$j_a=1$について $$N_{1}=
+  \begin{pmatrix}
+   0 & 0 &1\\
+   0 & 1 &0\\
+   1 & 0 &0
+  \end{pmatrix}$$ となる．固有値は$-1,1,1$より$d_{1}=1$となる．
+:::
+
+::: answer
+$k=1$の時は，$j=0,1/2$が許される． 2次のカシミアを計算しておこう.
+式[\[eq:\[n\]\]](#eq:[n]){reference-type="eqref"
+reference="eq:[n]"}より， $$\begin{aligned}
+&=0,\\
+  C_2=[1/2][1/2+1]&=\frac{\sin\qty(\frac{\pi}{3}\frac{1}{2})}{\sin\qty(\frac{\pi}{3})}
+  \frac{\sin\qty(\frac{\pi}{3}\frac{3}{2})}{\sin\qty(\frac{\pi}{3})}=\frac{2}{3}.\end{aligned}$$
+となる．ハミルトニアンは， $$H =
+  \begin{pmatrix}
+    0 & -K\\
+    -K & 2C_2
+  \end{pmatrix}$$ と表すことができる．この固有値は，
+$$E = C_2\pm\sqrt{C_2^2+K^2}=\frac{2}{3}(2\pm\sqrt{4+9K^2})$$ となる．
+:::
+
+::: answer
+スピン$1/2$の状態を$\ket{\uparrow}=\ket{1/2,1/2}$及び$\ket{\downarrow}=\ket{1/2,-1/2}$で表す．
+$2$つのスピン$1/2$を合成すると，スピン$1$と$0$に分解される:
+$$\begin{aligned}
+    \ket{1,1} &= \ket{\uparrow}\ket{\uparrow},\quad
+    \ket{1,0} = \frac{1}{\sqrt{2}}\qty(\ket{\uparrow}\ket{\downarrow}+\ket{\downarrow}\ket{\uparrow}),\quad
+    \ket{1,-1} = \ket{\downarrow}\ket{\downarrow},\\
+    \ket{0,0} &= \frac{1}{\sqrt{2}}\qty(\ket{\uparrow}\ket{\downarrow}-\ket{\downarrow}\ket{\uparrow}).
+  \end{aligned}$$ $$\begin{aligned}
+    \ket{\qty(\frac{1}{2}\frac{1}{2})0\frac{1}{2};\uparrow}&=\frac{1}{\sqrt{2}}\qty(\ket{\uparrow}\ket{\downarrow}-\ket{\downarrow}\ket{\uparrow})\ket{\uparrow},\\
+    % \ket{\qty(\frac{1}{2}\frac{1}{2})0\frac{1}{2};\downarrow}&=\frac{1}{\sqrt{2}}\qty(\ket{\uparrow}\ket{\downarrow}-\ket{\downarrow}\ket{\uparrow})\ket{\downarrow}.
+    \ket{\qty(\frac{1}{2}\frac{1}{2})1\frac{1}{2};\uparrow}&=\frac{1}{\sqrt{6}}\qty(
+      2\ket{\uparrow}\ket{\uparrow}\ket{\downarrow}
+    -\ket{\uparrow}\ket{\downarrow}\ket{\uparrow}
+    -\ket{\downarrow}\ket{\uparrow}\ket{\uparrow}),\\
+    % \ket{\qty(\frac{1}{2}\frac{1}{2})1\frac{1}{2};\downarrow}&=
+    % \frac{1}{\sqrt{6}}\qty(
+    % -2\ket{\downarrow}\ket{\downarrow}\ket{\uparrow}
+    % +\ket{\uparrow}\ket{\downarrow}\ket{\downarrow}
+    % +\ket{\downarrow}\ket{\uparrow}\ket{\downarrow})\\
+    \ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow}&=\frac{1}{\sqrt{2}}\ket{\uparrow}\qty(\ket{\uparrow}\ket{\downarrow}-\ket{\downarrow}\ket{\uparrow}),\\
+    % \ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\downarrow}&=\frac{1}{\sqrt{2}}\ket{\downarrow}\qty(\ket{\uparrow}\ket{\downarrow}-\ket{\downarrow}\ket{\uparrow}).
+    \ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}&=\frac{1}{\sqrt{6}}\qty(
+      -2\ket{\downarrow}\ket{\uparrow}\ket{\uparrow}
+      +\ket{\uparrow}\ket{\uparrow}\ket{\downarrow}
+      +\ket{\uparrow}\ket{\downarrow}\ket{\uparrow}
+    ).
+    % \ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\downarrow}&=
+    % \frac{1}{\sqrt{6}}\qty(
+    %   2\ket{\uparrow}\ket{\downarrow}\ket{\downarrow}
+    % -\ket{\downarrow}\ket{\uparrow}\ket{\downarrow}
+    % -\ket{\downarrow}\ket{\downarrow}\ket{\uparrow})\\
+  \end{aligned}$$ $$\begin{aligned}
+    \ket{\qty(\frac{1}{2}\frac{1}{2})0\frac{1}{2};\uparrow}&=
+    \frac{\sqrt{3}}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}
+    -\frac{1}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow},
+    \\
+    \ket{\qty(\frac{1}{2}\frac{1}{2})1\frac{1}{2};\uparrow}&=
+    \frac{1}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}
+    +\frac{\sqrt{3}}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow}
+  \end{aligned}$$ となる．したがって， $$\begin{aligned}
+_{00}&=-\frac{1}{2},\quad
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{11}=\frac{1}{2},\\
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{01}&=\frac{\sqrt{3}}{2},\quad
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{10}=\frac{\sqrt{3}}{2}
+  \end{aligned}$$ となる．
+:::
+
+::: answer
+$$\begin{split}
+      [\Delta(J_0),\Delta(J_\pm)]&=[J_0\otimes 1 + 1\otimes J_0, J_\pm\otimes q^{J_0/2} + q^{-J_0/2} \otimes J_\pm]\\
+      &=
+      [J_0, J_\pm]\otimes q^{J_0/2}
+      +q^{-J_0/2} \otimes[ J_0,  J_\pm]\\
+      &=
+      \pm (J_\pm\otimes q^{J_0/2}
+      + q^{-J_0/2} \otimes J_\pm)\\
+      &=\pm\Delta(J_\pm)\\
+      &=\Delta([J_0,J_\pm])
+    \end{split}$$
+
+$$\begin{split}
+      [\Delta(J_+),\Delta(J_-)]&=
+      [J_+ \otimes q^{J_0/2} + q^{-J_0/2} \otimes  J_+,
+      J_- \otimes q^{J_0/2} + q^{-J_0/2} \otimes J_-
+      ]\\
+      &=
+      [J_+\otimes q^{J_0/2} ,J_- \otimes q^{J_0/2} 
+      ]+
+      [J_+\otimes  q^{J_0/2} ,q^{-J_0/2} \otimes J_-
+      ]\\
+      &\quad+[ q^{-J_0/2} \otimes J_+,J_-\otimes  q^{J_0/2}
+      ]
+      +[ q^{-J_0/2} \otimes J_+,q^{-J_0/2} \otimes J_-
+      ]\\
+      &=
+      [J_+ ,J_-]\otimes q^{J_0}+q^{-J_0} \otimes[  J_+,J_-]\\
+      &\quad+J_+q^{-J_0/2} \otimes  q^{J_0/2}J_-
+      -q^{-J_0/2}J_+ \otimes J_- q^{J_0/2}
+      \\
+      &\quad+
+      q^{-J_0/2}J_- \otimes J_+  q^{J_0/2}
+      -J_-q^{-J_0/2} \otimes  q^{J_0/2} J_+
+      \\
+      &=
+      [2J_0]\otimes q^{J_0}+q^{-J_0} \otimes[2J_0]\\
+      &\quad+q^{-(J_0-1)/2}J_+ \otimes  q^{J_0/2}J_-
+      -q^{-J_0/2}J_+ \otimes  q^{(J_0+1)/2}J_-
+      \\
+      &\quad+
+      q^{-J_0/2}J_- \otimes   q^{(J_0-1)/2}J_+
+      -q^{-(J_0+1)/2}J_- \otimes  q^{J_0/2} J_+
+      \\
+      &=
+      \frac{q^{J_0}-q^{-J_0}}{q^{1/2}-q^{-1/2}}\otimes q^{J_0}+q^{-J_0} \otimes\frac{q^{J_0}-q^{-J_0}}{q^{1/2}-q^{-1/2}}\\
+      &=
+      \frac{q^{J_0}\otimes q^{J_0}-q^{-J_0}\otimes q^{-J_0}}{q^{1/2}-q^{-1/2}}\\
+      &=[\Delta(2J_0)]
+    \end{split}$$
+:::
+
+$$\ket{\uparrow}\ket{\uparrow}\ket{\downarrow}
+  +q^{\frac{1}{4}}\ket{\uparrow}\ket{\downarrow}\ket{\uparrow}+q^{-\frac{1}{4}}\ket{\downarrow}\ket{\uparrow}\ket{\uparrow}$$
+
+::: answer
+スピン$1/2$の状態を$\ket{\uparrow}=\ket{1/2,1/2}$及び$\ket{\downarrow}=\ket{1/2,-1/2}$で表す．
+$2$つのスピン$1/2$を合成すると，スピン$1$と$0$に分解される:
+$$\begin{aligned}
+    \ket{1,1} &= \ket{\uparrow}\ket{\uparrow},\quad
+    \ket{1,0} = \frac{1}{\sqrt{[2]}}\qty(q^{-\frac{1}{4}}\ket{\uparrow}\ket{\downarrow}+q^{\frac{1}{4}}\ket{\downarrow}\ket{\uparrow}),\quad
+    \ket{1,-1} = \ket{\downarrow}\ket{\downarrow},\\
+    \ket{0,0} &= \frac{1}{\sqrt{[2]}}\qty(q^{\frac{1}{4}}\ket{\uparrow}\ket{\downarrow}-q^{-\frac{1}{4}}\ket{\downarrow}\ket{\uparrow}).
+  \end{aligned}$$
+さらに，スピン$1$とスピン$1/2$を合成して，スピン$1/2$を作ると，
+
+$$\ket{\frac{1}{2},\frac{1}{2}}=\frac{1}{\sqrt{[3]}}(q^{\frac{1}{4}}\sqrt{[2]}\ket{1,1}\ket{\downarrow}-q^{-\frac{1}{2}}\ket{1,0}\ket{\uparrow})$$
+また，スピン$1/2$とスピン$1$を合成して，スピン$1/2$を作ると，
+$$\ket{\frac{1}{2},\frac{1}{2}}=\frac{1}{\sqrt{[3]}}(q^{\frac{1}{2}}\ket{\uparrow}\ket{1,0}-q^{-\frac{1}{4}}\sqrt{[2]}\ket{\downarrow}\ket{1,1})$$
+となる．したがって， $$\begin{aligned}
+  \ket{\qty(\frac{1}{2}\frac{1}{2})0\frac{1}{2};\uparrow}&= \frac{1}{\sqrt{[2]}}\qty(q^{\frac{1}{4}}\ket{\uparrow}\ket{\downarrow}\ket{\uparrow}-q^{-\frac{1}{4}}\ket{\downarrow}\ket{\uparrow}\ket{\uparrow})\\
+  \ket{\qty(\frac{1}{2}\frac{1}{2})1\frac{1}{2};\uparrow}&=
+  \frac{1}{\sqrt{[3]!}}(q^{\frac{1}{4}}[2]\ket{\uparrow}\ket{\uparrow}\ket{\downarrow}-q^{-\frac{3}{4}}\ket{\uparrow}\ket{\downarrow}\ket{\uparrow}-q^{-\frac{1}{4}}\ket{\downarrow}\ket{\uparrow}\ket{\uparrow})
+  \\
+  %
+  \ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow}&=
+   \frac{1}{\sqrt{[2]}}\qty(q^{\frac{1}{4}}\ket{\uparrow}\ket{\uparrow}\ket{\downarrow}-q^{-\frac{1}{4}}\ket{\uparrow}\ket{\downarrow}\ket{\uparrow})\\
+  \ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}&=
+  \frac{1}{\sqrt{[3]!}}(
+    q^{\frac{1}{4}}\ket{\uparrow}\ket{\uparrow}\ket{\downarrow}+q^{\frac{3}{4}}\ket{\uparrow}\ket{\downarrow}\ket{\uparrow}
+  -q^{-\frac{1}{4}}[2]\ket{\downarrow}\ket{\uparrow}\ket{\uparrow})\end{aligned}$$
+となり，これより， $$\begin{aligned}
+    \ket{\qty(\frac{1}{2}\frac{1}{2})0\frac{1}{2};\uparrow}&=
+    \frac{\sqrt{[3]}}{[2]}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}
+    -\frac{1}{[2]}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow},
+    \\
+    \ket{\qty(\frac{1}{2}\frac{1}{2})1\frac{1}{2};\uparrow}&=
+    \frac{1}{[2]}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}
+    +\frac{\sqrt{[3]}}{[2]}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow}
+  \end{aligned}$$ となる．したがって， $$\begin{aligned}
+_{00}&=-\frac{1}{[2]},\quad
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{11}=\frac{1}{[2]},\\
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{01}&=\frac{\sqrt{[3]}}{[2]},\quad
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{10}=\frac{\sqrt{[3]}}{[2]}
+  \end{aligned}$$ が得られる．
+:::
+
+::: answer
+具体的には， $$J_\pm [J_0]= [J_0\mp 1]J_{\pm}$$ または，
+$$]= ([J_0\mp 1]-[J_0]) J_{\pm}$$ となることに注意して， $$\begin{split}
+    [J_+,C_2]
+    &=  
+    +  [J_+,J_-]J_+
+    +  [J_+,[J_0]][J_0+1]+
+    [J_0][J_+,[J_0+1]]\\
+    &=
+    +  [2J_0]J_+
+    +  ([J_0-1]-[J_0])[J_0]J_++
+    [J_0]([J_0]-[J_0+1])J_+\\
+    &=
+      ([2J_0]+  [J_0-1][J_0]-[J_0][J_0+1])J_+
+    =0
+  \end{split}$$
+となる．同様に，$[J_-,C_2]=0$が示せる．一方，$[J_0,C_2]=0$は容易に示せる．
+:::
+
+::: answer
+$\Delta(q_{i}^{\pm H_i/4})=q_{i}^{\pm H_i/4}\otimes q_{i}^{\pm H_i/4}$に注意して，
+$$\begin{split}
+    ( \Delta\otimes1)\Delta(L_i^{\pm})&=
+    ( \Delta\otimes1)\qty(
+      L_i^\pm\otimes q_i^{H_i/4}+q_{i}^{-H_i/4}\otimes L_i^\pm
+    )\\
+    &=
+      L_i^\pm\otimes q_i^{H_i/4}\otimes q_i^{H_i/4}+q_{i}^{-H_i/4}\otimes L_i^\pm\otimes q_i^{H_i/4}
+      +q_{i}^{-H_i/4}\otimes q_{i}^{-H_i/4}\otimes L_i^\pm
+      %+1\otimes q_{i}^{-H_i/4}\otimes L_i^\pm
+      %+q_{i}^{-H_i/4}\otimes 1\otimes L_i^\pm
+  \end{split}$$ 及び， $$\begin{split}
+    ( 1\otimes\Delta)\Delta(L_i^{\pm})&=
+    ( 1\otimes\Delta)\qty(
+      L_i^\pm\otimes q_i^{H_i/4}+q_{i}^{-H_i/4}\otimes L_i^\pm
+    )\\
+    &=
+    L_i^\pm\otimes q_i^{H_i/4}\otimes q_i^{H_i/4}
+%    L_i^\pm\otimes q_i^{H_i/4}\otimes 1
+%    +L_i^\pm\otimes 1\otimes q_i^{H_i/4}
+    +
+    q_{i}^{-H_i/4}\otimes L_i^\pm\otimes q_i^{H_i/4}
+    +q_{i}^{-H_i/4}\otimes q_{i}^{-H_i/4}\otimes L_i^\pm
+  \end{split}$$
+より，$(\Delta\otimes 1)\Delta(L_i^{\pm})= ( 1\otimes\Delta)\Delta(L_i^{\pm})$である．
+:::

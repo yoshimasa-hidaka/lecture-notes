@@ -1,0 +1,5 @@
+# Gauge theory
+
+$$L=-\frac{1}{2}\tr F_{\mu\nu}F^{\mu\nu}$$
+$$\pi^\mu  = \frac{\partial \mathcal{L}}{\partial \partial_0A^i_\mu}$$
+$$H = \dot{\pi}^\mu\partial_0 A_\mu -\mathcal{L}=$$

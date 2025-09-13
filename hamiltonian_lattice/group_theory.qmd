@@ -1,0 +1,179 @@
+# 群論基礎 {#sec:group_theory}
+
+## $S_3$群 {#sec:S3}
+
+$S_3$は，3次の対称群で，正三角形の合同群である．
+正三角形の合同群の元は$120^\circ$回転$r$, $240^\circ$回転$r^2 = r^{-1}$,
+及び，各頂点を通る軸の反転$s_i$($i=1,2,3$)の$6$つからなる．
+置換群との対応は， $$\begin{aligned}
+&e=\begin{pmatrix}
+1 & 2 & 3  \\
+1 & 2 & 3 
+\end{pmatrix}=(),\quad
+r=\begin{pmatrix}
+1 & 2 & 3  \\
+2 & 3 & 1 
+\end{pmatrix}=(123),\quad
+r^2=\begin{pmatrix}
+1 & 2 & 3  \\
+3 & 1 & 2 
+\end{pmatrix}=(132),\notag\\
+&s_1=\begin{pmatrix}
+1 & 2 & 3  \\
+1 & 3 & 2 
+\end{pmatrix}=(23),\quad
+s_2=\begin{pmatrix}
+1 & 2 & 3  \\
+3 & 2 & 1
+\end{pmatrix}=(13),\quad
+s_3=\begin{pmatrix}
+1 & 2 & 3  \\
+2 & 1 & 3 
+\end{pmatrix}=(12)\end{aligned}$$ である． 元の合成は，例えば
+$s_3r= s_1$や$s_3r^2= s_2$のようになる．他の積は表[2](#table:S3){reference-type="ref"
+reference="table:S3"}にまとめてある．
+
+::: {#table:S3}
+   $\circ$    $e$     $r$    $r^2$   $s_1$   $s_2$   $s_3$
+  --------- ------- ------- ------- ------- ------- -------
+     $e$      $e$     $r$    $r^2$   $s_1$   $s_2$   $s_3$
+     $r$      $r$    $r^2$    $e$    $s_3$   $s_1$   $s_2$
+    $r^2$    $r^2$    $e$     $r$    $s_2$   $s_3$   $s_1$
+    $s_1$    $s_1$   $s_2$   $s_3$    $e$     $r$    $r^2$
+    $s_2$    $s_2$   $s_3$   $s_1$   $r^2$    $e$     $r$
+    $s_3$    $s_3$   $s_1$   $s_2$    $r$    $r^2$    $e$
+
+  : $\mathrm{S}_3$群の積表．
+:::
+
+共役類は， $$\begin{aligned}
+\mathcal{C}_1 = \{e\},\quad \mathcal{C}_2 = \{s_1, s_2, s_3\}, \quad \mathcal{C}_3 = \{r, r^2\}.\end{aligned}$$
+の$3$種類ある．共役類の積は，
+
+::: {#table:S3}
+            $e$     $r$    $r^2$   $s_1$   $s_2$   $s_3$
+  ------- ------- ------- ------- ------- ------- -------
+    $e$     $e$     $e$     $e$     $e$     $e$     $e$
+    $r$     $r$     $r$     $r$    $r^2$   $r^2$   $r^2$
+   $r^2$   $r^2$   $r^2$   $r^2$    $r$     $r$     $r$
+   $s_1$   $s_1$   $s_2$   $s_3$   $s_1$   $s_3$   $s_2$
+   $s_2$   $s_2$   $s_3$   $s_1$   $s_3$   $s_2$   $s_1$
+   $s_3$   $s_3$   $s_1$   $s_2$   $s_2$   $s_1$   $s_3$
+
+  : $\mathrm{S}_3$の共役演算表．
+:::
+
+[]{#table:S3 label="table:S3"}
+
+中心化群
+($\mathrm{C}_{S_3}(s) = \{g\in G| sg=gs \text{ for all } s\in G \}$) of
+the representative of a conjugacy class are $$\begin{aligned}
+\mathrm{C}_{S_3}(\mathcal{C}_1) &= \mathrm{S}_3,\\
+\mathrm{C}_{S_3}(\mathcal{C}_2) &= \{e,s_1\},\\
+\mathrm{C}_{S_3}(\mathcal{C}_3) &= \{e,r,r^2\}=\mathbb{Z}_3.\end{aligned}$$
+
+$$\begin{aligned}
+\rho_{A_1} &\equiv \rho^{(1)} \quad\text{(trivial)} \\
+\rho_{A_2} &\equiv \rho^{(1')} \quad\text{(sign)} \\
+\rho_E     &\equiv \rho^{(2)} \quad\text{(standard)}\end{aligned}$$
+
+We define the class operators as $T_i = \sum_{g \in \mathcal{C}_i} g$.
+The products of these operators give the fusion rules of the conjugacy
+classes. The products of the conjugacy classes are summarized in Table
+[3](#table:S3 conjugacy class){reference-type="ref"
+reference="table:S3 conjugacy class"}.
+
+::: {#table:S3 conjugacy class}
+           $T_1$      $T_2$        $T_3$
+  ------- ------- ------------- ------------
+   $T_1$   $T_1$      $T_2$        $T_3$
+   $T_2$   $T_2$   $3T_1+3T_3$     $2T_2$
+   $T_3$   $T_3$     $2T_2$      $2T_1+T_3$
+
+  : Multiplication table of conjugacy class of $\mathrm{S}_3$
+:::
+
+::: {#table:S3 representation}
+   $\otimes$   $A_1$   $A_2$             $E$
+  ----------- ------- ------- -------------------------
+     $A_1$     $A_1$   $A_2$             $E$
+     $A_2$     $A_2$   $A_1$             $E$
+      $E$       $E$     $E$    $A_1\oplus A_2\oplus E$
+
+  : Multiplication table of representation of $\mathrm{S}_3$
+:::
+
+::: {#table:S3 character}
+           $d_a$   $T_1$   $T_2$   $T_3$
+  ------- ------- ------- ------- -------
+   $A_1$     1      $1$     $1$     $1$
+   $A_2$     1      $1$    $-1$     $1$
+    $E$      2      $2$     $0$    $-1$
+
+  : character of $\mathrm{S}_3$
+:::
+
+$\mathrm{S}_3$ has three unitary representations. These are two
+one-dimensional representations (the trivial representation $A_1$ and
+the $A_2$ representation) and one two-dimensional representation $E$.
+Specifically, $A_1$ is trivial for all $g \in \mathrm{S}_3$, i.e.,
+$D_{A_1}(g) = 1$. For $A_2$, we have $D_{A_2}(g) = 1$ for
+$g \in \{e, r, r^2\}$, and $D_{A_2}(g) = -1$ for
+$g \in \{s_1, s_2, s_3\}$. The two-dimensional representation $E$ is
+given by the matrices: $$\begin{split}
+D_{E}(e) &= \begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix},\quad
+D_{E}(r) = \begin{pmatrix}
+c & -s\\
+s & c
+\end{pmatrix},
+\quad
+D_{E}(r^2) = \begin{pmatrix}
+c & s\\
+-s & c
+\end{pmatrix},\\
+D_{E}(s_1) &= \begin{pmatrix}
+1 & 0\\
+0 & -1
+\end{pmatrix},\quad
+D_{E}(s_2) = \begin{pmatrix}
+c & -s\\
+-s & -c
+\end{pmatrix},\quad
+D_{E}(s_3) = \begin{pmatrix}
+c & s\\
+s & -c
+\end{pmatrix}.
+\end{split}$$ Here, $c=\cos(2\pi/3)=-1/2$, $s=\sin(2\pi/3)=\sqrt{3}/2$.
+The tensor product of representations can be taken, and it decomposes
+into a direct sum. For example,
+$\rho_E \otimes \rho_E = A_1 \oplus A_2 \oplus E$. Table
+[4](#table:S3 representation){reference-type="ref"
+reference="table:S3 representation"} summarizes the decomposition of the
+tensor product of representations.
+
+$$\begin{aligned}
+T_1& = e\\
+T_2 &= s_1+s_2+s_3,\\
+T_3 &= r+r^2.\end{aligned}$$
+
+$$\begin{aligned}
+D_E(T_1) &= I_2\\
+D_E(T_2) &= 0,\\
+D_E(T_3) &= -I_2.\end{aligned}$$
+
+$$\begin{aligned}
+D_{A_1}(T_1) = 1\\
+D_{A_1}(T_2) = 3,\\
+D_{A_1}(T_3) = 2.\end{aligned}$$
+
+$$\begin{aligned}
+D_{A_2}(T_1) &= 1\\
+D_{A_2}(T_2) &= -3,\\
+D_{A_2}(T_3) &= 2.\end{aligned}$$
+
+$$\begin{split}
+    \frac{|c_g|}{d_a}\chi_a(g) 1_a
+  \end{split}$$

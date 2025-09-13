@@ -1,0 +1,244 @@
+# フェルミオン
+
+$\mathrm{SU}(2)$の場合のフェルミオンを考えよう．
+$N$自由度のフェルミン場を$\chi^n$, $\chi^\dag_n$とする．
+ここで，$(\chi^n)^\dag = \chi^\dag_n$という表記を用いる． これらは，
+$$\{\chi^n,\chi^\dag_m\}=\delta^n_m$$
+を満たす．ここで，$\{,\}$は反交換関係である．その他の反交換関係はゼロである:
+$$\{\chi^m,\chi^n\}= \{\chi^\dag_m,\chi^\dag_n\}=0.$$
+
+フェルミオンが1フレーバ，スピンレス，$\mathrm{SU}(2)$の基本表現である場合を考える．この場合，$n$が取る値は2つである．フェルミオンはグラフの頂点上で定義される．
+一つの頂点に$2$つのフェルミオンが入るまたは入らないことができるので，取りうる状態は，各頂点に$4$状態である．
+$\ket*{0}$を$\chi^n\ket*{0}=0$となる状態，$B^\dag =\epsilon^{mn}\chi^\dag_m\chi^\dag_n/2$として，$4$つの状態は，$\ket*{0}$及び
+$$\begin{aligned}
+  \ket*{\uparrow} &\coloneqq \ket{\frac{1}{2}}=\chi_1^\dag\ket*{0}, \\
+  \ket*{\downarrow} &\coloneqq \ket{-\frac{1}{2}}=\chi_2^\dag\ket*{0},\\
+  \ket*{B} &\coloneqq B^\dag\ket*{0}\end{aligned}$$ である．
+
+物質場が存在することでGaussの拘束条件は，
+$$G_i(v)=  \sum_{e\in \mathcal{E}| \mathrm{s}(e)=v}\ER_{i}(e)-\sum_{e\in \mathcal{E}| \mathrm{t}(e)=v}\EL_{i}(e)
+  +\rho_i(v)
+\label{eq:gauss_fermion}$$
+と修正される．ここで，$\rho_i(v)$は，カラー電荷密度で，
+$\rho_i(v) = \chi^\dag(v) T_i\chi(v)$で与えられる．
+$\rho_i$を$\ket{0}$,$\ket{B}$に作用させると，
+$\rho_i \ket{0}=0$，$\rho_i\ket{B}=0$となることから$\ket{0}$,
+$\ket{B}$は単独でゲージ不変な状態である．
+一方，$\ket*{\uparrow}$及び$\ket*{\downarrow}$は，例えば$\rho_3$を作用させると，
+$$\begin{aligned}
+  \rho_3\ket*{\uparrow}&=\frac{1}{2}\ket*{\uparrow},\\
+  \rho_3\ket*{\downarrow}&=-\frac{1}{2}\ket*{\downarrow}\end{aligned}$$
+となり，単独ではゲージ不変ではないことがわかる．この場合，状態をWilson
+lineでつないでゲージ不変にする必要がある． 例えば，
+$$\sum_{m,l}\braket*{\frac{1}{2}l}{\frac{1}{2}m} \ket*{\frac{1}{2},m,n} |l\rangle 
+   =\sum_{m}\frac{\delta^l_m}{\sqrt{2}} \ket*{\frac{1}{2},m,n} |l\rangle$$
+は，$m$,$l$が定義されている頂点でゲージ不変である．これは，Gaussの拘束条件[\[eq:gauss_fermion\]](#eq:gauss_fermion){reference-type="eqref"
+reference="eq:gauss_fermion"}を作用させることで確認できる．例えば$i=3$成分については，
+$$G_3\sum_{m}\frac{\delta^l_m}{\sqrt{2}} \ket*{\frac{1}{2},m,n} |l\rangle =\sum_{m}\frac{\delta^l_m}{\sqrt{2}}(-m+l) \ket*{\frac{1}{2},m,n} |l\rangle=0.$$
+となる.
+$\ket{0}$に作用させて，このある頂点でゲージ不変な状態を生成する演算子は，
+$$U^m_n \chi^\dag_m$$ である．
+
+グラフィカルな表現として，$U^m_n \chi^\dag_m$, $B^\dag$に対応する表現を
+$$\begin{aligned}
+  U^m_n \chi^\dag_m:
+  \parbox{0.5cm}{\includegraphics[scale=0.3]{figs/quark.pdf}},
+  \\
+  B^\dag :\parbox{0.5cm}{\includegraphics[scale=0.3]{figs/baryon.pdf}}\end{aligned}$$
+と表す．
+
+次に，状態の演算子を作用させるとどうなるか見てみよう．
+非自明な状態は，$\chi_m^\dag$,$B^\dag$を$\ket{0}$に作用させて生成される．
+これらの状態に作用する演算子は，$\chi^n$，$\chi_n^\dag$で，非自明な状態に当ててゼロにならないものは，
+$$\begin{aligned}
+  \chi^m\ket{n} &= \delta_n^m\ket{0},\\
+  \chi_m^\dag\ket{n} &= \epsilon_{mn}\ket{B},\\
+  \chi^m\ket{B} &= \sum_n\epsilon^{mn}\ket{n}\end{aligned}$$
+である．これは，演算子に対応させると， $$\begin{aligned}
+  \chi^m\chi^\dag_n&\sim \delta^m_n,\label{eq:psipsidag}\\
+  \chi^\dag_m\chi^\dag_n&=\epsilon_{mn} B^\dag,\\
+  \chi^m B^\dag&\sim [   \chi^m, B^\dag] = \epsilon^{mn}\chi_n^\dag,\\
+  \chi^\dag_m B^\dag&= 0\end{aligned}$$ である．
+ここで，$\sim$は，$\ket{0}$に作用させた時に等しくなるという意味である．例えば，式[\[eq:psipsidag\]](#eq:psipsidag){reference-type="eqref"
+reference="eq:psipsidag"}は， $$\chi^m\chi_n^\dag\ket{0}=
+  (\delta_n^m-\chi_n^\dag\chi^m)\ket{0}=
+  \delta_n^m\ket{0}$$ である．
+これらの関係を用いると，フェルミオンの合成ルールは，グラフィカルに
+$$\begin{aligned}
+  \parbox{.7cm}{\includegraphics[scale=0.3]{figs/parallel_fermion.pdf}}&\Rightarrow\frac{1}{\sqrt{d_{\frac{1}{2}}}}
+  \parbox{1.cm}{\includegraphics[scale=0.3]{figs/fuse_fermion.pdf}},\label{eq:fuse_fermion}\\
+  \parbox{0.5cm}{\includegraphics[scale=0.3]{figs/baryon.pdf}}&\Rightarrow\sqrt{d_{\frac{1}{2}}}\quad
+  \parbox{1.cm}{\includegraphics[scale=0.3]{figs/split_fermion.pdf}}\end{aligned}$$
+と書ける．この合成の$\Rightarrow$は，
+$\chi^\dag_n U^n_m\chi^m$を作用させたことに等しい．
+$\chi^\dag_n U^n_m\chi^m$はホッピング項であり,始点にあるフェルミオンを終点に動かす操作を与える．
+様々な状態に$\chi^\dag_n U^n_m\chi^m$を作用させることを考えてみよう．
+ここでは，以下のような形で表される状態を考える: $$\begin{aligned}
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/vq.pdf}},
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qq.pdf}},
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/vB.pdf}},
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/Bv.pdf}}.
+  \label{eq:states_fermion}\end{aligned}$$ ドット線は，自明なWilson
+lineを表す．フェルミオンがない状態は，ドットの端点に何も書かないルールとする．また，ドット線はしばしば省略する．
+これらの状態に$\chi^\dag_n U^n_m\chi^m$を作用させると，
+始点にあるフェルミオンが終点に移動する．例えば，
+[\[eq:states_fermion\]](#eq:states_fermion){reference-type="eqref"
+reference="eq:states_fermion"}の左の状態に作用させると，
+$$\chi^\dag_n U^n_m\chi^m \parbox{2.cm}{\includegraphics[scale=0.4]{figs/vq.pdf}}=
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/vqmove.pdf}}
+  =\parbox{2.cm}{\includegraphics[scale=0.4]{figs/qv.pdf}}$$
+となり，線が左に動く．
+一方，終点の方にフェルミオンがいる場合は，式[\[eq:fuse_fermion\]](#eq:fuse_fermion){reference-type="eqref"
+reference="eq:fuse_fermion"}と，F-moves [\[eq:F-moves\]](#eq:F-moves){reference-type="eqref"
+reference="eq:F-moves"}を用いて，
+$$\chi^\dag_n U^n_m\chi^m \parbox{1.9cm}{\includegraphics[scale=0.4]{figs/qq.pdf}}
+  =\frac{1}{\sqrt{d_{\frac{1}{2}}}}
+  \parbox{1.9cm}{\includegraphics[scale=0.4]{figs/qqmove1.pdf}}
+  =\frac{[F_c^{a\frac{1}{2}\frac{1}{2}}]_{b0}}{\sqrt{d_{\frac{1}{2}}}}
+  \parbox{1.9cm}{\includegraphics[scale=0.4]{figs/qqmove2.pdf}}
+  =\delta_{ac}
+  \sqrt{d_{\frac{1}{2}}}[F_a^{a\frac{1}{2}\frac{1}{2}}]_{b0}
+  \parbox{2.1cm}{\includegraphics[scale=0.4]{figs/Bv.pdf}}$$
+が得られる． 同様に，
+$$\chi^\dag_n U^n_m\chi^m \parbox{2.cm}{\includegraphics[scale=0.4]{figs/vB.pdf}}
+  =\sqrt{d_{\frac{1}{2}}}
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/vBmove1.pdf}}
+  =
+  \sum_{b}\sqrt{d_{\frac{1}{2}}}[(F_{a}^{a\frac{1}{2}\frac{1}{2}})^{-1}]_{0b}
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qqaba.pdf}}$$ や
+$$\chi^\dag_n U^n_m\chi^m \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qB.pdf}}
+  =
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qBmove1.pdf}}
+  =\sum_{b}
+  [F^{0\frac{1}{2}}_{\frac{1}{2}0}]_{\frac{1}{2}\frac{1}{2}}
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qBmove2.pdf}}
+  =\sum_{b}
+  [F^{0\frac{1}{2}}_{\frac{1}{2}0}]_{\frac{1}{2}\frac{1}{2}}
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/Bq.pdf}}$$ が得られる．
+まとめると， $$\begin{aligned}
+  \chi^\dag_n U^n_m\chi^m \parbox{2.cm}{\includegraphics[scale=0.4]{figs/vq.pdf}}
+  &=\parbox{2.cm}{\includegraphics[scale=0.4]{figs/qv.pdf}},\label{eq:action_hopping1}\\
+  \chi^\dag_n U^n_m\chi^m \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qq.pdf}}
+  &=\delta_{ac}
+  \sqrt{d_{\frac{1}{2}}}[F_a^{a\frac{1}{2}\frac{1}{2}}]_{b0}
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/Bv.pdf}}\notag\\
+  &=\delta_{ac}\qty(
+    \delta_{a+\frac{1}{2},b}\sqrt{\frac{[2j_a+2]}{[2j_a+1]}}
+    -\delta_{a-\frac{1}{2},b}\sqrt{\frac{[2j_a]}{[2j_a+1]}}
+  )
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/Bv.pdf}}
+  ,\\
+  \chi^\dag_n U^n_m\chi^m \parbox{2.cm}{\includegraphics[scale=0.4]{figs/vB.pdf}}
+  &=
+  \sum_{b}\sqrt{d_{\frac{1}{2}}}[(F_{a}^{a\frac{1}{2}\frac{1}{2}})^{-1}]_{0b}
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qqaba.pdf}},\notag\\
+  &=\sum_b\qty(
+  \sqrt{\frac{[2j_a+2]}{[2j_a+1]}}\delta_{a+\frac{1}{2},b}
+  -  \sqrt{\frac{[2j_a]}{[2j_a+1]}}\delta_{a-\frac{1}{2},b}
+  )
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qqaba.pdf}}, \\
+  \chi^\dag_n U^n_m\chi^m \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qB.pdf}}
+  &=
+  [F^{0\frac{1}{2}}_{\frac{1}{2}0}]_{\frac{1}{2}\frac{1}{2}}
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/Bq.pdf}}
+  =-
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/Bq.pdf}}
+  \label{eq:action_hopping4}\end{aligned}$$
+となる．その他の状態への$\chi^\dag_n U^n_m\chi^m$の作用は消える．
+同様の手続きで， $$\begin{aligned}
+  (\chi^\dag_n U^n_m\chi^m)^\dag
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qv.pdf}}
+  &=\parbox{2.cm}{\includegraphics[scale=0.4]{figs/vq.pdf}},
+  \label{eq:action_hopping5}\\
+  (\chi^\dag_n U^n_m\chi^m)^\dag
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qq.pdf}}
+  &=\delta_{ac}
+  \sqrt{d_{\frac{1}{2}}}[F_a^{a\frac{1}{2}\frac{1}{2}}]_{b0}
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/vB.pdf}}\notag\\
+  &=\delta_{ac}\qty(
+    \sqrt{\frac{[2j_a+2]}{[2j_a+1]}}\delta_{a+\frac{1}{2},b}
+  -  \sqrt{\frac{[2j_a]}{[2j_a+1]}}\delta_{a-\frac{1}{2},b}
+  )
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/vB.pdf}},\\
+  (\chi^\dag_n U^n_m\chi^m)^\dag
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/Bv.pdf}}
+  &=\sum_b
+ \sqrt{d_{\frac{1}{2}}}[(F_{a}^{a\frac{1}{2}\frac{1}{2}})^{-1}]_{0b}
+ \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qqaba.pdf}}\notag\\
+ &=\sum_b\qty(
+\sqrt{\frac{[2j_a+2]}{[2j_a+1]}}\delta_{a+\frac{1}{2},b}
+-\sqrt{\frac{[2j_a]}{[2j_a+1]}}\delta_{a-\frac{1}{2},b}
+ )
+ \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qqaba.pdf}},\\
+ (\chi^\dag_n U^n_m\chi^m)^\dag
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/Bq.pdf}}
+  &=
+  [F^{\frac{1}{2}0}_{0\frac{1}{2}}]_{\bar{\frac{1}{2}}\frac{1}{2}}
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qB.pdf}}
+  =-
+  \parbox{2.cm}{\includegraphics[scale=0.4]{figs/qB.pdf}}
+  \label{eq:action_hopping8}\end{aligned}$$
+が得られる．これらにより，フェルミオンの状態にハミルトニアンを作用させた時の行き先が決まる．
+
+## 例:$(1+1)$次元 $\mathrm{SU}(2)$ゲージ理論$+$物質場
+
+$N$サイト系を考える．頂点の集合は，$\mathcal{V}=\{1,\cdots, N\}$に取る．辺の集合は，$\mathcal{E}=\{(1,2),(2,3),\cdots (N-1,N)\}$とする．
+すべての辺に電場を乗せる場合を考えるので$\tilde{\mathcal{E}}=\mathcal{E}$である．
+空間$1$次元の場合は，頂点$n\in \mathcal{V}$に辺$(n,n+1)\in \mathcal{E}$を対応させることで，辺は頂点を使って対応させることができる．
+するとスタッガードフェルミオンを持つ$\mathrm{SU}(2)_k$ゲージ理論のハミルトニアンは,
+$$H =\frac{g^2}{2}\sum_{n\in \mathcal{V}}E_i^2(n) 
+  +t\sum_{n\in  \mathcal{V}}(\chi^\dag(n+1) U(n) \chi(n)+\chi^\dag(n) U^\dag(n) \chi(n+1)) +m\sum_{n\in  \mathcal{V}}(-1)^{n} \chi^\dag(n) \chi(n)$$
+と記述される．ここで$\chi$は$2$成分フェルミオン場，$t$はホッピングパラメータ，$m$は質量，$g^2$は結合定数である．
+
+ハミルトニアンの状態への作用は，電場については，
+式[\[eq:action_electric_field\]](#eq:action_electric_field){reference-type="eqref"
+reference="eq:action_electric_field"}で，フェルミオンのホッピング項については，式[\[eq:action_hopping1\]](#eq:action_hopping1){reference-type="eqref"
+reference="eq:action_hopping1"}-[\[eq:action_hopping8\]](#eq:action_hopping8){reference-type="eqref"
+reference="eq:action_hopping8"}で与えられる．質量項の状態への作用は，対角であるため簡単に評価できる．
+
+### 2サイト系
+
+ここでは，例として$2$サイト系を開放境界条件で解析してみよう．
+この場合ハミルトニアンは，
+$$H=\frac{g^2}{2}E^2 + t{\chi}^\dag_2U\chi_1+t{\chi}^\dag_1U^\dag \chi_2+m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2$$
+である．この系は，バリオン数$B=(\chi^\dag_1\chi_1+\chi_2^\dag\chi_2)/2-1$が保存する．$1/2$の因子は，バリオン数がクォーク数をカラーの数($2$)で割ったものであることに起因する．また，定数項$-1$は，半分粒子が詰まった状態をバリオン数$0$するために定数分引いてある．
+全体のHilbert空間の次元は，$2^{4}=16$次元であるが，物理的状態は，$5$次元となる．具体的な物理状態は，バリオン数$B=-1,0,1$で分類でき，
+$$\begin{aligned}
+  B=-1:&  \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/vac_twosite.pdf}},  \\
+  B=0:&  \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}},  \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}},
+  \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}},
+  \\
+  B=1:&  \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/BB_twosite.pdf}}\end{aligned}$$
+となり，各セクターはそれぞれ，$1$, $3$, $1$次元のHilbert空間となる．
+まず，$B=\pm1$にハミルトニアンを作用させると $$\begin{aligned}
+  H\, \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/vac_twosite.pdf}}&=0,\\
+  H\, \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/BB_twosite.pdf}}&=0.\end{aligned}$$
+となる．次に$B=0$のセクターを見てみよう． 電場と質量項は対角であるので，
+$$\begin{aligned}
+  \qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)\  \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}&=
+  2m\ \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}},\\
+  \qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)\  \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}&=
+  \frac{3g^2}{8} \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}},\\
+  \qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)\  \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}&=
+  -2m\ \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}\end{aligned}$$
+となる．ホッピング項は， $$\begin{aligned}
+  t\qty(
+    {\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2
+  ) \  \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}&=
+  t\sqrt{2}\ \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}},\\
+  t\qty(
+    {\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2
+  ) \  \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}&=
+  t\sqrt{2}\ \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}+ t\sqrt{2}\ \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}},\\
+  t\qty(
+    {\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2
+  ) \  \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}&=
+  t\sqrt{2}\ \parbox{1.7cm}{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}},\end{aligned}$$
+となる．したがって，$B=0$セクターのハミルトニアンは，
+$$H_{B=0} = \begin{pmatrix}
+    2m & t\sqrt{2} & 0\\
+    t\sqrt{2} & \frac{3g^2}{8} & t\sqrt{2}\\
+    0 & t\sqrt{2} & -2m  
+  \end{pmatrix}$$ となる．これを対角化するとエネルギーが求まる．
+特別な場合$g=0$は，$E=0$,　$\pm2\sqrt{m^2+t^2}$, $m=0$の場合は，$E=0$,
+$(3g^2\pm\sqrt{9g^4+1024t^2})/16$となる．

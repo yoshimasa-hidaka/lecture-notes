@@ -1,0 +1,160 @@
+# $q$変形 {#sec:q_deformation}
+
+$q$変形に関する参考文献として[@Bonatsos:1999xj; @Ardonne2010ClebschGordanA6]を上げておく．
+表現をカットオフしたゲージ理論で性質の良いものは，$q$変形された量子群を考えることに対応する．
+ここでは，本稿で用いた$q$変形について簡単に紹介する．
+
+## セミシンプルLie代数
+
+まず一般のセミシンプルLie代数$\mathfrak{g}$の量子群変形を考えよう．
+$\mathfrak{g}$のルートベクトルを$\vb*{\alpha}_i$とする． 生成子$H_i$,
+$L_i^\pm$の交換関係をChevalley基底を用いて， $$\begin{aligned}
+\label{eq:q_algebra}
+  [H_i,H_j]&=0,\quad
+  [H_i,L_j^\pm] = \pm A_{ij}L_{j}^\pm,\quad
+  [L_i^+,L_j^-]=\delta_{ij}[H_i]_{q_i}\end{aligned}$$ とする．これらは，
+$i\neq j$について， Serre関係式 $$\sum_{s=0}^{1-A_{ij}}(-1)^s
+  \begin{bmatrix}
+    1 - A_{ij}\\
+    s
+  \end{bmatrix}_{q_i}
+  (L_i^\pm)^{1-A_{ij}-s}L_j^\pm(L_i^{\pm})^s=0$$ 満たす．
+ここで，$A_{ij}$はCartan行列の要素である:
+$$A_{ij} = \frac{2(\vb*{\alpha}_i,\vb*{\alpha}_j)}{(\vb*{\alpha}_j,\vb*{\alpha}_j)}.$$
+また，$t_j$は， $$t_j=\frac{2}{(\vb*{\alpha}_j,\vb*{\alpha}_j)}$$
+で定義されている．ただし，$(\vb*{\alpha}_j,\vb*{\alpha}_j)$は，規格化に一般にルートベクトルの依存するが，ここでは，最高次のルートベクトル(随伴表現のhighest
+weight
+vector)を$\theta$としたとき，$(\theta,\theta)=2$と規格化してあるものとする．$g$をdual
+Coxeter数[^1]として，$q$は， $$q\coloneqq e^{\frac{2\pi\ri}{k+g}}$$
+で定義される．添字付きは$q_i\coloneqq q^{1/t_i}$とする． $[n]_{q_i}$は，
+$$_{q_i} \coloneqq \frac{q_i^{\frac{n}{2}}-q_i^{\frac{n}{2}}}{q_i^{\frac{1}{2}}-q_i^{-\frac{1}{2}}}
+  =\sum_{m=1}^nq_i^{\frac{n+1}{2}-m}$$ で定義され，二項係数は，
+$$\begin{bmatrix}
+    n\\
+    m
+  \end{bmatrix}_{q_i}
+  \coloneqq\frac{[n]_{q_i}!}{[m]_{q_i}![n-m]_{q_i}!}$$ である． ここで，
+$[n]_{q_i}!\coloneqq[1]_{q_i}[2]_{q_i}\cdots [n]_{q_i}$を導入した.
+$k\to\infty$，つまり$q=1$の場合は，式[\[eq:q_algebra\]](#eq:q_algebra){reference-type="eqref"
+reference="eq:q_algebra"}は，通常のLie代数に戻る．以下，混乱の恐れがない場合は，添字の$q_i$は省略する．
+
+表現の分解を対応付けるcoproduct $\Delta$を $$\begin{aligned}
+  \Delta(H_i)&\coloneqq 1\otimes H_i+H_i\otimes 1\\
+  \Delta(L_i^\pm)&\coloneqq L_i^\pm\otimes q_i^{H_i/4}+q_{i}^{-H_i/4}\otimes L_i^\pm\end{aligned}$$
+で定義する．これは，coassociativity
+$$( \Delta\otimes1)\Delta=(1\otimes \Delta)\Delta
+  \label{eq:coassociativity}$$ を満たす．
+
+::: question
+式[\[eq:coassociativity\]](#eq:coassociativity){reference-type="eqref"
+reference="eq:coassociativity"}を$L_i^\pm$の場合に確かめよ．
+つまり，$( \Delta\otimes1)\Delta(L_i^\pm)=(1\otimes \Delta)\Delta(L_i^\pm)$を示せ．
+:::
+
+## $\mathrm{SU}(2)_k$
+
+具体例として，$\mathfrak{g}=\mathfrak{su}(2)$の場合を考えよう．
+この場合，ルートベクトルは一つで，$A=2$,
+$t_1=2/(\vb*{\alpha}_1,\vb*{\alpha}_1)=1$, $g=2$である． したがって，
+$$q \eqqcolon q_1= \exp\ri \frac{2\pi}{k+2}$$ として，
+$$\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+2}n)}{\sin\qty(\frac{\pi}{k+2})}$$
+となる．$J_0=H_0/A$, $J_\pm=L^\pm$とすると， 交換関係は，
+$$\begin{aligned}
+&= \pm J_{\pm},\\  
+  [J_+,J_-]&=  [2J_{0}]\end{aligned}$$ となる．
+特に$2$次のカシミア不変量は$[j][j+1]$となる. これは， $$\label{eq:C2}
+ C_2= J_-J_++[J_0][J_0+1]=
+ J_+J_-+[J_0][J_0-1]$$ で，これは，$J_{\pm}$, $J_0$と可換である．
+
+::: question
+$[C_2,J_\pm]=0$, $[C_2,J_0]=0$を示せ．
+:::
+
+状態を，$C_2$と$J_0$の固有状態 $\ket{j,m}$でラベルすると
+$$\begin{aligned}
+  C_2\ket{j,m}&=[j][j+1]\ket{j,m},\\
+  J_0\ket{j,m}& = m \ket{j,m}\end{aligned}$$ となる．
+ここで，状態の内積は，$j=0,1/2,1,\cdots k/2$及び，$m=-j,j+1,\cdots, j-1,j$の値を取る．
+また,
+$J_0 J_\pm\ket{j,m}= (J_\pm J_0+[J_0,J_\pm])\ket{j,m}=(m\pm 1)J_\pm \ket{j,m}$より，$J_\pm\ket{j,m} \propto  \ket{j,m\pm 1}$がわかり，$J_\pm\ket{j,m}=N_\pm(j,m)\ket{j,m\pm1}$として，式[\[eq:C2\]](#eq:C2){reference-type="eqref"
+reference="eq:C2"}より，
+$$|N_\pm(j,m)|^2 =  \bra{j,m}J_\mp J_\pm\ket{j,m}=
+  \bra{j,m}C_2-[J_0][J_0\pm1]\ket{j,m}=[j][j+1]-[m][m\pm 1]$$
+となることから，
+$$N_{\pm}(j,m) = \sqrt{[j][j+1]-[m][m\pm1]}=\sqrt{[j\mp m][j\pm m+1]}$$
+に選ぶことができる．
+
+次の表現の合成について考えよう．まずcoproduct$\Delta$は，
+$$\Delta(J_0)= J_0\otimes 1 + 1\otimes J_0,$$$$\Delta(J_\pm)= J_\pm\otimes q^{J_0/2} + q^{-J_0/2} \otimes J_\pm.$$
+である．
+
+::: question
+coproductと交換子$[-,-]$は作用の順番によらないことを示せ．つまり，
+$\Delta([J_i,J_j]) = [\Delta(J_i),\Delta(J_j) ]$を示せ．
+:::
+
+具体的な例として，ふたつの$j=1/2$の合成を考えよう．
+まず，$\ket{1,1}=\ket{\uparrow}\ket{\uparrow}$となることは容易にわかる．
+$\ket{1,0}$は，$\Delta(J_-)$を作用させることで得ることができる:
+$$\Delta(J_-)\ket{1,1}=
+  q^{1/4}\ket{\uparrow}\ket{\downarrow}
+  +q^{-1/4}\ket{\downarrow}\ket{\uparrow}$$
+となる．これは規格化されていない．$\ket{1,0}=\mathcal{N}\Delta(J_-)\ket{1,1}$として，規格化因子$\mathcal{N}$を
+$\bra{1,0}\ket{1,0}=1$となるように決める．ただし，$q$の複素共役は，$q$とする．
+すると， $$1=\bra{1,0}\ket{1,0}=|\mathcal{N}|^2(q^{1/2}+q^{-1/2})=
+  |\mathcal{N}|^2[2]$$ より，$\mathcal{N}$の位相を実に選んで
+$$\mathcal{N}= \frac{1}{\sqrt{[2]}}$$
+が得られる．さらに$\Delta(J_-)$を$\ket{1,0}$に作用させると，
+$$\Delta(J_-)\ket{1,0}=
+  \frac{2}{\sqrt{[2]}}\ket{\downarrow}\ket{\downarrow}$$
+となるので，規格化を考慮して，
+$$\ket{1,-1}=\ket{\downarrow}\ket{\downarrow}$$ を得る．
+したがって，Clebsch-Gordan係数は， $$\begin{aligned}
+  \bra{1,1}\ket{\frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}{2}}_q&=1,\\
+  \bra{1,0}\ket{\frac{1}{2},\frac{1}{2},\frac{1}{2},-\frac{1}{2}}_q&=\frac{q^{\frac{1}{4}}}{\sqrt{[2]}},\\
+  \bra{1,0}\ket{\frac{1}{2},\frac{1}{2},-\frac{1}{2},\frac{1}{2}}_q&
+  =\frac{q^{-\frac{1}{4}}}{\sqrt{[2]}},\\
+  \bra{1,-1}\ket{\frac{1}{2},\frac{1}{2},-\frac{1}{2},-\frac{1}{2}}_q&=1\end{aligned}$$
+となる．$\ket{0,0}$は，$\ket{1,0}$と直交するように選んで，
+$$\begin{aligned}
+  \ket{0,0}=  \frac{q^{-1/4}}{\sqrt{[2]}}\ket{\uparrow}\ket{\downarrow}
+  -\frac{q^{1/4}}{\sqrt{[2]}}\ket{\downarrow}\ket{\uparrow}\end{aligned}$$
+となる．
+
+次により一般のスピン$j_1$と$j_2$の合成を考えよう．
+スピン$j_1+j_2$の状態は，
+$$\ket{j_1+j_2,j_1+j_2}=\ket{j_1,j_1}\ket{j_2,j_2}$$
+を考え，$\Delta(J_-)$で状態を下げていけば求まる:
+$$\Delta(J_-)\ket{j_1,j_1}\ket{j_2,j_2}
+  = 
+  q^{\frac{j_2}{2}}\sqrt{[2j_1]}\ket{j_1,j_1-1}\ket{j_2,j_2}+q^{-\frac{j_1}{2}}\sqrt{[2j_2]}\ket{j_1,j_1}\ket{j_2,j_2-1}.$$
+先ほどと同様に，
+$\ket{j_1+j_2,j_1+j_2-1}=\mathcal{N}\ket{j_1,j_1}\ket{j_2,j_2}$として，規格化因子は，
+$$\begin{split}
+    1&=|\mathcal{N}|^2(q^{j_2}[2j_1]+q^{-j_1}[2j_2])\\
+    &=|\mathcal{N}|^2
+      \frac{q^{j_1+j_2}-q^{-j_1+j_2}
+      +q^{j_2-j_1}-q^{-j_2-j_1}
+      }{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}\\
+    &=|\mathcal{N}|^2[2(j_1+j_2)]
+  \end{split}$$ より求まり，
+$$\ket{j_1+j_2,j_1+j_2-1}=\frac{1}{\sqrt{[2(j_1+j_2)]}}(q^{\frac{j_2}{2}}\sqrt{[2j_1]}\ket{j_1,j_1-1}\ket{j_2,j_2}+q^{-\frac{j_1}{2}}\sqrt{[2j_2]}\ket{j_1,j_1}\ket{j_2,j_2-1})$$
+が得られる．この手順を繰り返すことで，$j_1+j_2-2,\cdots,-j_1-j_2$の状態が求まる．
+また，$\ket{j_1+j_2-1,j_1+j_2-1}$の状態は，$\ket{j_1+j_2,j_1+j_2-1}$と直交するように選ぶことで得られる:
+$$\ket{j_1+j_2-1,j_1+j_2-1}
+  =\frac{1}{\sqrt{[2(j_1+j_2)]}}(
+    q^{\frac{j_2}{2}}\sqrt{[2j_1]}\ket{j_1,j_1}\ket{j_2,j_2-1}  
+  -q^{-\frac{j_1}{2}}\sqrt{[2j_2]}\ket{j_1,j_1-1}\ket{j_2,j_2}
+  ).$$
+
+::: question
+$3$つの$j=1/2$を合成して， $$\begin{aligned}
+_{00}&=-\frac{1}{[2]},\quad
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{11}=\frac{1}{[2]},\\
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{01}&=\frac{\sqrt{[3]}}{[2]},\quad
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{10}=\frac{\sqrt{[3]}}{[2]}
+  \end{aligned}$$ を示せ．
+:::
+
+[^1]: コルートを$\vb*{\alpha}^{\lor}_i=2\vb*{\alpha}_i/(\vb*{\alpha}_i,\vb*{\alpha}_i)$と定義する．すると$a_i^{\lor}$を非負の整数として，$\theta=\sum_{i=1}^ra_i^{\lor}\vb*{\alpha}^{\lor}_i$と展開できる．ここで，$r$は，Lie代数のランクである．dual
+    Coxeter数は$g\coloneqq\sum_{i=1}^r a^{\lor}_{i}+1$と定義される．

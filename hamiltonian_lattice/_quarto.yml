@@ -30,9 +30,23 @@ book:
 
   chapters:
     - index.qmd
-    - 01-basics.qmd
+    # Lie.qmd
+    # Gaugetheory.qmd
+    - SU2.qmd
+    - Kogut-Susskind.qmd
+    - spinnet.qmd
+    - Example.qmd
+    - MTC.qmd
+    - SU3.qmd
+    - meanfield.qmd
+    - fermion.qmd
+#    - prepotential.qmd
+#    - tensor_renormalization.qmd
   appendices:
     - references.qmd
+    - group_theory.qmd
+    - q-deformation.qmd
+    #- answer.qmd
 
 format:
   html:
@@ -46,6 +60,20 @@ format:
     highlight-style: github # コード配色
     link-external-newwindow: true
     lightbox: auto          # 図版の拡大表示を自動
+    include-in-header:
+      - text: |
+          <script>
+            MathJax = {
+              tex: {
+              packages: {'[+]': ['physics']},
+                macros: {
+                  bm: ["{\\boldsymbol{#1}}", 1],
+                  ri: "{\\mathrm{i}}",
+                  dag: "\\dagger"
+                }
+              }
+            };
+          </script>    
   # pdf:
   #   pdf-engine: lualatex
   #   documentclass: book
