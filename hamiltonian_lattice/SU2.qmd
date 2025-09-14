@@ -1,12 +1,12 @@
  <!-- \section{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群の復習}-->
-# $\mathrm{SU}(2)$群の復習
+# $\mathrm{SU}(2)$群の復習　{#su2 short-title="SU(2) 群の復習"}
 本稿では，具体例として，$\mathrm{SU}(2)$(およびその量子群変形)ゲージ理論について取り上げる.
  その解析に必要となる$\mathrm{SU}(2)$群の表現について簡単に復習しておこう．
 Lie群の表現論を習熟している読者は，本節を読み飛ばし，\ref{sec:KS形式}節に進んでもらって差し支えない．
  
  <!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群} -->
 
-## $\mathrm{SU}(2)$群 {#sec-su2}
+## $\mathrm{SU}(2)$群　　{#sec-su2}
 $\mathrm{SU}(2)$群は，複素$2$次元ベクトル空間の内積を保ち，行列式が$1$である変換全体からなる群である．
  つまり，$2$つの複素$2$次元ベクトル$w=(w_1,w_2)^T$, $z=(z_1,z_2)^T$に対して，変換$w\mapsto g w$, $z\mapsto gz$のもとで，内積は，
  次のように変換される:
