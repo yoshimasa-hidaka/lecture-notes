@@ -97,19 +97,19 @@ format:
             };
           </script>
 
-  pdf:
-    pdf-engine: lualatex
-    documentclass: book
-    include-in-header:
-      text: |
-        \usepackage{luatexja}
-        \usepackage[hiragino-pron]{luatexja-preset} % ← プリセットでヒラギノ指定
-        \usepackage{amsmath,amssymb,mathtools,bm,bbm}
-        \usepackage[italicdiff]{physics}
-        \newcommand{\ri}{\mathrm{i}}
-        \newcommand{\ER}{R}
-        \newcommand{\EL}{L}
-        \newtheorem{example}{例}
-        \newtheorem{definition}{定義}
-        \newtheorem{theorem}{定理}
-        \newtheorem{question}{問}
+  # pdf:
+  #   pdf-engine: lualatex
+  #   documentclass: book
+  #   include-in-header:
+  #     text: |
+  #       \usepackage{luatexja}
+  #       \usepackage[hiragino-pron]{luatexja-preset} % ← プリセットでヒラギノ指定
+  #       \usepackage{amsmath,amssymb,mathtools,bm,bbm}
+  #       \usepackage[italicdiff]{physics}
+  #       \newcommand{\ri}{\mathrm{i}}
+  #       \newcommand{\ER}{R}
+  #       \newcommand{\EL}{L}
+  #       \newtheorem{example}{例}
+  #       \newtheorem{definition}{定義}
+  #       \newtheorem{theorem}{定理}
+  #       \newtheorem{question}{問}
