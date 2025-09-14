@@ -169,7 +169,7 @@ $\mathrm{SU}(2)$の元$g$に対応した演算子$U_g=\exp\ri\theta^i J_i$と書
 \begin{equation}\label{eq:su2-D-orthogonality}
   \int\dd{g} [D_j^{*}]^{m'}_{n'}(g) [D_j]^m_n(g) = \frac{1}{d_j}\delta_{j,j'}\delta_{m,m'}\delta_{n,n'}
 \end{equation}
-の直交関係を満たす．ここで$\dd{g}$は$\mathrm{SU}(2)$のHaar測度である(詳細は，\ref{sec:Haar_measure}節参照)．
+の直交関係を満たす．ここで$\dd{g}$は$\mathrm{SU}(2)$のHaar測度である(詳細は，@sec-Haar_measure 節参照)．
 
 ## 表現の合成
 <!-- \subsection{表現の合成} -->
@@ -563,9 +563,9 @@ Clebsch-Gordan係数を図を使って表現するといろいろ便利である
 まず，2点頂点は，
 
 ::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; gap:10px;">
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/ab.svg" style="height:5.5em;">
-  <span class="math display">
+  <span class="math display" style="display:inline-block;">
     $$= \braket{j_b n_b}{j_a m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}$$
   </span>
 </div>
@@ -581,16 +581,40 @@ Clebsch-Gordan係数を図を使って表現するといろいろ便利である
 と表す．
 特に，$j_a=j_b$のときは，単にドットと取って
 
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/a.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\braket{j_an_a}{j_am_a} =\delta^{n_a}_{m_b}$$
+  </span>
+</div>
+:::
+
 ::: {.content-visible when-format=pdf}
 \begin{equation}
   \parbox{.6cm}{\includegraphics[scale=0.3]{figs/a.pdf}}=
  \braket{j_an_a}{j_am_a} =\delta^{n_a}_{m_b}
  \end{equation}
- :::
+:::
 
  と書くことにする．Clebsch-Gordan係数は，
 
- ::: {.content-visible when-format=pdf}
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/abc.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\braket{ j_cn_c}{j_am_a\, j_bm_b}$$
+  </span>
+</div>
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/cab.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=  \braket{j_an_a\, j_bn_b}{j_cm_c}$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
 \begin{align}
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/abc.pdf}}&=  
   \braket{ j_cn_c}{j_am_a\, j_bm_b}, \\
@@ -602,6 +626,24 @@ Clebsch-Gordan係数を図を使って表現するといろいろ便利である
 で表す．
 <!-- % (共役は反転させて矢印をひっくり返す？) -->
 $c=0$の特別な場合は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/ab0.svg" style="height:3.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \braket{j_an_a\, j_bn_b}{00}=\delta_{j_a,j_b}\delta_{n_a,-n_b}\frac{(-1)^{j_a-n_a}}{\sqrt{d_{a}}}$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/0ab.svg" style="height:3.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \braket{00}{j_am_a\, j_bm_b}=\delta_{j_a,j_b}\delta_{m_a,-m_b}\frac{(-1)^{j_a-m_a}}{\sqrt{d_{a}}}$$
+  </span>
+</div>
+:::
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
@@ -616,6 +658,15 @@ $c=0$の特別な場合は，
 
 $3$つの表現の合成に対応するダイアグラムは，
 
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove1a.svg" style="height:7.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \sum_{l_e}\braket{j_an_a\, j_bn_b}{j_el_e}\braket{j_el_e\, j_cn_c}{ j_dm_d}$$
+  </span>
+</div>
+:::
+
 ::: {.content-visible when-format=pdf}
 \begin{align}
   \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}= \sum_{l_e}\braket{j_an_a\, j_bn_b}{j_el_e}\braket{j_el_e\, j_cn_c}{ j_dm_d}
@@ -626,16 +677,40 @@ $3$つの表現の合成に対応するダイアグラムは，
 
 このルールを用いると，式\eqref{eq:Clebsch-Gordan orthogonal1}の直交性は，
 
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/abcloop.svg" style="height:7.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/ccprime.svg" style="height:7.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\delta_{c,c'}$$
+  </span>
+  <img src="figs/c.svg" style="height:6.5em;">
+</div>
+:::
+
 ::: {.content-visible when-format=pdf}
 \begin{equation}
   \parbox{1.4cm}{\includegraphics[scale=0.3]{figs/abcloop.pdf}}=
   \parbox{.6cm}{\includegraphics[scale=0.3]{figs/ccprime.pdf}}
   =\delta_{c,c'}
   \parbox{.6cm}{\includegraphics[scale=0.3]{figs/c.pdf}}
- \end{equation}
- :::
+\end{equation}
+:::
 
 と表すことができる．同様に，式\eqref{eq:Clebsch-Gordan orthogonal2}は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/parallel1.svg" style="height:6.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \sum_{c}$$
+  </span>
+  <img src="figs/parallel2.svg" style="height:5.5em;">
+</div>
+:::
 
 ::: {.content-visible when-format=pdf}
 \begin{equation}
@@ -647,6 +722,16 @@ $3$つの表現の合成に対応するダイアグラムは，
 
 と表すことができる．また，$F$-symbolは，
 
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove1a.svg" style="height:7em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \sum_{f}[F^{abc}_d]_{ef}$$
+  </span>
+  <img src="figs/fmove2a.svg" style="height:7em;">
+</div>
+:::
+
 ::: {.content-visible when-format=pdf}
 \begin{equation}
   \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}
@@ -656,8 +741,16 @@ $3$つの表現の合成に対応するダイアグラムは，
 \end{equation}
 :::
 
-と表現され，
-$F$自身は，
+と表現され，$F$自身は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove.svg" style="height:8.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\frac{1}{d_d}[F^{abc}_d]_{ef}$$
+  </span>
+</div>
+:::
 
 ::: {.content-visible when-format=pdf}
 \begin{equation}
@@ -667,6 +760,15 @@ $F$自身は，
 :::
 
 と表すことができる．また，式\eqref{eq:pentagon}のペンタゴン方程式は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/pentagonRelation.svg" style="height:14.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \braket{j_b n_b}{j_a m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}$$
+  </span>
+</div>
+:::
 
 ::: {.content-visible when-format=pdf}
 \begin{equation}
@@ -741,6 +843,22 @@ $F$自身は，
 
 
 これらのグラフィカルルールを用いると，例えば
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vertex1.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{f} [(F_d^{abc})^{-1}]_{ef}$$
+  </span>
+  <img src="figs/vertex2.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= [(F_d^{abc})^{-1}]_{eg}$$
+  </span>
+  <img src="figs/vertex3.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
 \begin{equation}
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/vertex1.pdf}}
   =\sum_{f} [(F_d^{abc})^{-1}]_{ef}
@@ -748,6 +866,8 @@ $F$自身は，
   = [(F_d^{abc})^{-1}]_{eg}
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/vertex3.pdf}}
 \end{equation}
+:::
+
 が比較的簡単に評価できる．つまり，
 \begin{equation}
 \sum_{l_a,l_b,l_e}  \braket{j_g n_g}{j_a l_a \, j_b l_b}
@@ -761,7 +881,7 @@ $F$自身は，
 
 
 ## Haar測度 {#sec-Haar_measure}
-<!-- \subsection{Haar測度}\label{sec:Haar_measure} -->
+<!-- \subsection{Haar測度}\label{sec-Haar_measure} -->
 群上で関数の積分を行うには，群構造と両立する自然な測度を導入する必要がある．特に，$\mathrm{SU}(2)$のような連続群においては，離散的な和に代わる操作として，群の左右変換に対して不変な測度が求められる．このような測度は一般にHaar測度と呼ばれ，任意のコンパクト群に対して，定数倍を除いて一意に定まる．
 Haar測度は，群の元$g\in G$に対し，
 \begin{equation}
@@ -1110,7 +1230,6 @@ T_\theta T_{\theta'}
 \begin{equation}
   \begin{split}
    \mathcal{K}(\theta,\theta',\theta'')= \sum_{a}\frac{1}{d_a}\chi_a(\theta)\chi_a(\theta')\chi^\dag_a(\theta'')
-   <!-- % =\frac{\pi}{4}\frac{1}{\sin\frac{\theta}{2}\sin\frac{\theta'}{2}\sin\frac{\theta''}{2}} -->
   \end{split}
 \end{equation}
 である．この関数は，$\theta''$が$|\theta-\theta'|\leq \theta''\leq\min(\theta+\theta',4\pi-\theta-\theta')$のときに値(台)を持つ．その上では次のように具体的に計算される:
@@ -1120,6 +1239,7 @@ T_\theta T_{\theta'}
    =\frac{\pi}{4}\frac{1}{\sin\frac{\theta}{2}\sin\frac{\theta'}{2}\sin\frac{\theta''}{2}}.
   \end{split}
 \end{equation}
+
 <!-- %  Racah係数$W(abcd;ef)$を用いて，
 %  \begin{equation}
 %    % \braket{ j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}
