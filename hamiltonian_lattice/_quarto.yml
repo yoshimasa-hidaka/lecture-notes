@@ -1,6 +1,6 @@
+
 project:
   type: book
-
 
 book:
   title: "格子ゲージ理論 講義ノート"
@@ -33,20 +33,34 @@ book:
     # Lie.qmd
     # Gaugetheory.qmd
     - SU2.qmd
-    - Kogut-Susskind.qmd
-    - spinnet.qmd
-    - Example.qmd
-    - MTC.qmd
-    - SU3.qmd
-    - meanfield.qmd
-    - fermion.qmd
+#    - Kogut-Susskind.qmd
+    #- spinnet.qmd
+    #- Example.qmd
+    #- MTC.qmd
+    #- SU3.qmd
+    #- meanfield.qmd
+    #- fermion.qmd
 #    - prepotential.qmd
 #    - tensor_renormalization.qmd
   appendices:
     - references.qmd
-    - group_theory.qmd
-    - q-deformation.qmd
+#    - group_theory.qmd
+#    - q-deformation.qmd
     #- answer.qmd
+
+lang: ja
+crossref:
+  chapters: false   # 「Chapter 3」と出さない
+  eq-prefix: ""  # 「式(3.1)」と出さない
+  fig-prefix: "" # 「図3.1」と出さない
+  
+language:
+  crossref-ch-prefix: ""
+  crossref-sec-prefix: ""  
+
+execute:
+  cache: true        # Jupyter でも knitr でも有効（チャンク単位の #| cache: true も可）
+  freeze: auto       # 変更がなければ再レンダーしない（ページ/サイトで劇的に効く）
 
 format:
   html:
@@ -65,29 +79,37 @@ format:
           <script>
             MathJax = {
               tex: {
-              packages: {'[+]': ['physics']},
+                packages: {'[+]': ['physics']},
                 macros: {
                   bm: ["{\\boldsymbol{#1}}", 1],
                   ri: "{\\mathrm{i}}",
+                  ER: "R",
+                  EL: "L",
                   dag: "\\dagger"
-                }
+                },
+                tags: 'ams'
+              },
+              chtml: { matchFontHeight: false },
+              options: {
+                skipHtmlTags: ["script","noscript","style","textarea","pre","code"],
+                enableMenu: false
               }
             };
-          </script>    
+          </script>
+
   # pdf:
   #   pdf-engine: lualatex
   #   documentclass: book
-  #   luatexjapresetoptions: hiragino-pron
-  #   number-sections: true
-
-
-# metadata:
-#   lang: ja
-#   link-citations: true
-#   include-in-header:
-#     text: |
-#       <script>
-#         MathJax = { tex: { tags: 'ams' } };
-#       </script>
-
-
+  #   include-in-header:
+  #     text: |
+  #       \usepackage{luatexja}
+  #       \usepackage[hiragino-pron]{luatexja-preset} % ← プリセットでヒラギノ指定
+  #       \usepackage{amsmath,amssymb,mathtools,bm,bbm}
+  #       \usepackage[italicdiff]{physics}
+  #       \newcommand{\ri}{\mathrm{i}}
+  #       \newcommand{\ER}{R}
+  #       \newcommand{\EL}{L}
+  #       \newtheorem{example}{例}
+  #       \newtheorem{definition}{定義}
+  #       \newtheorem{theorem}{定理}
+  #       \newtheorem{question}{問}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.8519pt" height="100.3429pt" viewBox="0 0 22.8519 100.3429">
+<defs>
+<clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 0 0 L 22.851562 0 L 22.851562 100.34375 L 0 100.34375 Z M 0 0 "/>
+</clipPath>
+<clipPath id="clip-1">
+<path clip-rule="nonzero" d="M 8 11.898438 L 13 11.898438 L 13 99.253906 L 8 99.253906 Z M 8 11.898438 "/>
+</clipPath>
+<clipPath id="clip-2">
+<path clip-rule="nonzero" d="M 9 45.683594 L 13 45.683594 L 13 56 L 9 56 Z M 9 45.683594 "/>
+</clipPath>
+<clipPath id="clip-3">
+<path clip-rule="nonzero" d="M 8 4 L 13 4 L 13 19.699219 L 8 19.699219 Z M 8 4 "/>
+</clipPath>
+</defs>
+<g clip-path="url(#clip-0)">
+<rect x="-2.28519" y="-10.03429" width="27.42228" height="120.41148" fill="rgb(100%, 100%, 100%)" fill-opacity="1"/>
+</g>
+<g clip-path="url(#clip-1)">
+<path fill="none" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.00150625 -0.00020625 L 85.353962 -0.00020625 " transform="matrix(0, -1, -1, 0, 10.5662, 98.2524)"/>
+</g>
+<g clip-path="url(#clip-2)">
+<path fill="none" stroke-width="3" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M 0.00159375 0.00020625 L 6.907844 0.00020625 " transform="matrix(0, 1, 1, 0, 10.5662, 46.682)"/>
+</g>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 17.167969 52.089844 L 10.566406 65.289062 L 3.964844 52.089844 Z M 17.167969 52.089844 "/>
+<g clip-path="url(#clip-3)">
+<path fill="none" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-miterlimit="4" d="M -0.0008875 0.00176875 L 6.378019 0.00176875 L -5.621981 0.00176875 " transform="matrix(0, 1, 1, 0, 10.6662, 12.3212)"/>
+</g>
+<path fill-rule="nonzero" fill="rgb(0%, 0%, 0%)" fill-opacity="1" d="M 3.667969 18.699219 L 17.667969 18.699219 L 17.667969 4.699219 L 3.667969 4.699219 Z M 3.667969 18.699219 "/>
+</svg>

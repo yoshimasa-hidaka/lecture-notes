@@ -1,3 +1,7 @@
+execute:
+  cache: true        # Jupyter でも knitr でも有効（チャンク単位の #| cache: true も可）
+  freeze: auto       # 変更がなければ再レンダーしない（ページ/サイトで劇的に効く）
+  
 project:
   type: website
   output-dir: docs

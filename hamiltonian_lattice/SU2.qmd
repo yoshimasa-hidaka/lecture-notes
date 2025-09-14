@@ -1,43 +1,49 @@
+ <!-- \section{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群の復習}-->
 # $\mathrm{SU}(2)$群の復習
-
 本稿では，具体例として，$\mathrm{SU}(2)$(およびその量子群変形)ゲージ理論について取り上げる.
-その解析に必要となる$\mathrm{SU}(2)$群の表現について簡単に復習しておこう．
-Lie群の表現論を習熟している読者は，本節を読み飛ばし，[\[sec:KS形式\]](#sec:KS形式){reference-type="ref"
-reference="sec:KS形式"}節に進んでもらって差し支えない．
+ その解析に必要となる$\mathrm{SU}(2)$群の表現について簡単に復習しておこう．
+Lie群の表現論を習熟している読者は，本節を読み飛ばし，\ref{sec:KS形式}節に進んでもらって差し支えない．
+ 
+ <!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群} -->
 
-## $\mathrm{SU}(2)$群
-
+## $\mathrm{SU}(2)$群 {#sec-su2}
 $\mathrm{SU}(2)$群は，複素$2$次元ベクトル空間の内積を保ち，行列式が$1$である変換全体からなる群である．
-つまり，$2$つの複素$2$次元ベクトル$w=(w_1,w_2)^T$,
-$z=(z_1,z_2)^T$に対して，変換$w\mapsto g w$,
-$z\mapsto gz$のもとで，内積は， 次のように変換される:
-$$w^\dag z\mapsto w^\dag g^\dag g z.$$
-ここで，$g$は，$2\times 2$複素行列で，$\dag$はHermite共役を表す．
-この変換で内積が不変となるためには，$g^\dag g=\mathbf{1}_2$を満たす必要がある．ここで，$\mathbf{1}_2$は$(2\times2)$の単位行列
-$$\mathbf{1}_2\coloneqq\begin{pmatrix}
+ つまり，$2$つの複素$2$次元ベクトル$w=(w_1,w_2)^T$, $z=(z_1,z_2)^T$に対して，変換$w\mapsto g w$, $z\mapsto gz$のもとで，内積は，
+ 次のように変換される:
+ \begin{equation}
+     w^\dag z\mapsto w^\dag g^\dag g z.
+ \end{equation}
+ ここで，$g$は，$2\times 2$複素行列で，$\dag$はHermite共役を表す．
+ この変換で内積が不変となるためには，$g^\dag g=\mathbf{1}_2$を満たす必要がある．ここで，$\mathbf{1}_2$は$(2\times2)$の単位行列
+\begin{equation}
+    \mathbf{1}_2\coloneqq\begin{pmatrix}
       1 & 0 \\
       0 & 1
-    \end{pmatrix}$$ である．
-また，行列式が$1$である条件から，$\det g=1$が要求される．したがって，$\mathrm{SU}(2)$
-群は次のように表される: $$\mathrm{SU}(2) \coloneqq
+    \end{pmatrix}
+\end{equation}
+である．
+ また，行列式が$1$である条件から，$\det g=1$が要求される．したがって，$\mathrm{SU}(2)$群は次のように表される:
+ \begin{equation}
+  \mathrm{SU}(2) \coloneqq
   \left\{ g=\begin{pmatrix}
     \alpha & \beta\\
     -\beta^* & \alpha^*
   \end{pmatrix}\in \mathrm{GL}(2,\mathbb{C})\Bigl| |\alpha|^2+|\beta|^2=1
-  \right\}.$$
-ここで，$\mathrm{GL}(2,\mathbb{C})$は，2次元複素線形群（すなわち、$2 \times 2$
-の正則な複素行列全体からなる群）を表す． $\alpha$,
-$\beta$が取りうる空間は条件$|\alpha|^2+|\beta|^2=1$により$3$次元球面$S^3$と同一視される．
-
-::: question
+  \right\}.
+\end{equation}
+ここで，$\mathrm{GL}(2,\mathbb{C})$は，2次元複素線形群（すなわち、$2 \times 2$の正則な複素行列全体からなる群）を表す．
+ $\alpha$, $\beta$が取りうる空間は条件$|\alpha|^2+|\beta|^2=1$により$3$次元球面$S^3$と同一視される．
+ \begin{question}
 $\begin{pmatrix}
   \alpha & \beta\\
   -\beta^* & \alpha^*
 \end{pmatrix}\in\mathrm{SU}(2)$がユニタリ行列であること，また群の公理(単位元の存在，逆元の存在，結合則)を満たすことを確認せよ．
-:::
+\end{question}
 
 パラメータを$\alpha=a_0+\ri a_3$, $\beta=a_1+\ri a_2$と置き，
-Pauli行列$\sigma_i$ $$\sigma_1 \coloneqq \begin{pmatrix}
+Pauli行列$\sigma_i$
+\begin{equation}
+    \sigma_1 \coloneqq \begin{pmatrix}
     0 & 1\\
     1 & 0
     \end{pmatrix},\quad
@@ -49,99 +55,135 @@ Pauli行列$\sigma_i$ $$\sigma_1 \coloneqq \begin{pmatrix}
     1 & 0\\
     0 & -1
     \end{pmatrix}
-    \label{eq:Pauli_Matrix}$$
+    \label{eq:Pauli_Matrix}
+\end{equation}
 を導入する．このとき，$\mathrm{SU}(2)$の元$g$は，次のように表される:
-$$\begin{split}
-    g = a_0 \mathbf{1}_2 +\ri\bm{\sigma}\cdot \bm{a}.
-  \end{split}$$ ここで，$\bm{a} = (a_1, a_2, a_3)$
-は実ベクトルであり，パラメータは$a_0^2+a_1^2+a_2^2+a_3^2=1$を満たす．さらに$3$次元単位ベクトル${\bm{n}}$を導入すると，$g$
-は次のようにも表せる: $$\label{eq:SU(2)_n}
-    g= \mathbf{1}_2\cos\frac{\theta}{2}+\ri{\bm{n}}\cdot\bm{\sigma}\sin\frac{\theta}{2}=\exp(\ri\frac{\theta}{2}{\bm{n}}\cdot\bm{\sigma}
-    )$$
+\begin{equation}
+  \begin{split}
+    g = a_0 \mathbf{1}_2 +\ri{\sigma}\cdot \bm{a}.
+  \end{split}
+\end{equation}
+ここで，$\bm{a} = (a_1, a_2, a_3)$は実ベクトルであり，パラメータは$a_0^2+a_1^2+a_2^2+a_3^2=1$を満たす．さらに$3$次元単位ベクトル${\bm{n}}$を導入すると，$g$は次のようにも表せる:
+\begin{equation}\label{eq:SU(2)_n}
+    g= \mathbf{1}_2\cos\frac{\theta}{2}+\ri{\bm{n}}\cdot{\sigma}\sin\frac{\theta}{2}=\exp(\ri\frac{\theta}{2}{\bm{n}}\cdot{\sigma}
+    )
+\end{equation}
 と表すこともできる．ここで，$\theta$は，$0$から$2\pi$を動く実パラメータである．
-$\bm{n}$を極座標表示すると $$\label{eq:n_polar}
+$\bm{n}$を極座標表示すると
+\begin{equation}\label{eq:n_polar}
   n_1=\cos\varphi\sin\psi,\quad
   n_2=\sin\varphi\sin\psi,\quad
-  n_3=\cos\psi.$$ と表せる．ただし，$0\leq\varphi\leq 2\pi$,
-$0\leq\psi\leq \pi$を満たす．このとき，次のユニタリ行列 $$\begin{split}
+  n_3=\cos\psi.
+\end{equation}
+と表せる．ただし，$0\leq\varphi\leq 2\pi$, $0\leq\psi\leq \pi$を満たす．このとき，次のユニタリ行列
+\begin{equation}
+  \begin{split}
     \mathcal{U}_{\bm{n}}=\begin{pmatrix}
       \cos\frac{\psi}{2} &   -e^{-\ri\varphi}\sin\frac{\psi}{2}\\
       e^{\ri\varphi}\sin\frac{\psi}{2} & \cos\frac{\psi}{2}
     \end{pmatrix}
-  \end{split}$$ を用いると，以下の関係が成り立つ: $$\begin{split}
-    {\bm{n}}\cdot\bm{\sigma} = \mathcal{U}_{\bm{n}}\sigma_3\mathcal{U}_{\bm{n}}^{-1}
-  \end{split}$$
+  \end{split}
+\end{equation}
+を用いると，以下の関係が成り立つ:
+\begin{equation}
+  \begin{split}
+    {\bm{n}}\cdot {\sigma} = \mathcal{U}_{\bm{n}}\sigma_3\mathcal{U}_{\bm{n}}^{-1}
+  \end{split}
+\end{equation}
 したがって，$\mathrm{SU}(2)$の元は，次のように書くことができる:
-$$\begin{split}
+\begin{equation}
+  \begin{split}
     g = \mathcal{U}_{\bm{n}}e^{\ri\frac{\theta}{2}\sigma_3}
     \mathcal{U}_{\bm{n}}^{-1}.
-  \end{split}$$
+  \end{split}
+\end{equation}
 この表示は，あとで導入される共役類を議論する際に有用である．
 
 ## $\mathrm{SU}(2)$のLie代数
-
+<!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}のLie代数} -->
 任意の実数$t$に対して$e^{t X}$が$\mathrm{SU}(2)$の元となる$X$全体の集合を$\mathfrak{su}(2)$と書き，$\mathrm{SU}(2)$のLie代数と呼ぶ．
 物理分野では，$\mathrm{SU}(2)$の元を$\exp\ri \theta^iJ_i$と表し，$J_i$は
 $\mathrm{SU}(2)$の生成子と呼ばれる．各$J_i$はHermiteで，生成子の添字は$i=1,2,3$の値をとる．生成子は，以下の交換関係を満たす:
-$$=\ri f^k_{~ij} J_k
-  \label{eq:commutatorSU(N)}$$
+\begin{equation}
+  [J_i,J_j]=\ri f^k_{~ij} J_k
+  \label{eq:commutatorSU(N)}
+\end{equation}
 ここで，$f^k_{~ij}$は構造定数であり，完全反対称テンソル(Levi-Civita記号)$\epsilon_{ijk}$を用いて，
-$$f^k_{~ij}=\epsilon_{ijk}$$ と表される．
+\begin{equation}
+f^k_{~ij}=\epsilon_{ijk}
+\end{equation}
+と表される．
 具体的な$\epsilon_{ijk}$の値は，以下のようになる:
-$$\epsilon_{123}=\epsilon_{231}=\epsilon_{312}=-\epsilon_{213}=-\epsilon_{132}=-\epsilon_{321}=1.$$
+\begin{equation}
+  \epsilon_{123}=\epsilon_{231}=\epsilon_{312}=-\epsilon_{213}=-\epsilon_{132}=-\epsilon_{321}=1.
+\end{equation}
 他はゼロである．
 Lie代数の生成子$J_i$を行列で表現したものを$T_i$と表記する．
-$T_i=\sigma_i/2$に取ると，$T_i$は，式[\[eq:commutatorSU(N)\]](#eq:commutatorSU(N)){reference-type="eqref"
-reference="eq:commutatorSU(N)"}を満たすことがわかる．
+$T_i=\sigma_i/2$に取ると，$T_i$は，式\eqref{eq:commutatorSU(N)}を満たすことがわかる．
 
 ## $\mathrm{SU}(2)$群の表現
 
+<!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群の表現} -->
 $\mathrm{SU}(2)$群のユニタリ表現は，そのLie代数$\mathfrak{su}(2)$の表現と$1$対$1$対応があるのでそれを求めれば十分である．
 以下では，$\mathrm{SU}(2)$と$\mathfrak{su}(2)$の表現の違いを混乱の恐れが無いかぎり区別せずに用いる．
-また，この節では，$\mathrm{SU}(2)$の表現の導出は行わず基本的な結果のみを紹介する．導出については，標準的な群論の教科書(例えば[@Georgi])を参照．
-また，[@Martin-Dussaud:2019ypf]も参考になる．
+また，この節では，$\mathrm{SU}(2)$の表現の導出は行わず基本的な結果のみを紹介する．導出については，標準的な群論の教科書(例えば\cite{Georgi})を参照．
+また，\cite{Martin-Dussaud:2019ypf}も参考になる．
 表現を議論するのに昇降演算子$J_{\pm}\coloneqq J_1\pm\ri J_2$及び，$J_0\coloneqq J_3$を定義しておく便利である．
-これらの交換関係は，式[\[eq:commutatorSU(N)\]](#eq:commutatorSU(N)){reference-type="eqref"
-reference="eq:commutatorSU(N)"}より， $$\begin{aligned}
-&=\pm J_\pm,\\
-  [J_+,J_-]&=2 J_0\end{aligned}$$
+これらの交換関係は，式\eqref{eq:commutatorSU(N)}より，
+\begin{align}
+  [J_0,J_\pm]&=\pm J_\pm,\\
+  [J_+,J_-]&=2 J_0
+\end{align}
 となる．$2$次のCasimir演算子$J_i^2$は，
-$$J_i^2=J_+J_-+J_0^2-J_0=J_-J_++J_0^2+J_0$$
+\begin{equation}
+  J_i^2=J_+J_-+J_0^2-J_0=J_-J_++J_0^2+J_0
+\end{equation}
 と表すことができる．$J_i^2$はすべての$J_j$と可換である．
 
 $\mathrm{SU}(2)$の有限次元既約表現は$J_i^2$と
 $J_3(=J_0)$の同時固有状態$\ket*{j,m}$を用いて表すことができる．
 ここで，状態の内積は，
-$$\bra{j,m}\ket{j',m'}=\delta_{j,j'}\delta_{m,m'}$$
+\begin{equation}
+  \bra{j,m}\ket{j',m'}=\delta_{j,j'}\delta_{m,m'}
+\end{equation}
 と規格化されているものとする．
 この状態は，$J_i^2$と$J_3$の固有状態に選んであることから
-$$\begin{aligned}
+\begin{align}
   J_i^2\ket*{j,m}  &= j(j+1)\ket*{j,m},\\
-  J_3\ket*{j,m}  &= m\ket*{j,m}\end{aligned}$$
-を満たす．昇降演算子を状態に作用させると $$\begin{aligned}
-  J_{\pm}\ket*{j,m}  &= \sqrt{j(j+1)-m(m\pm 1)}\ket*{j,m\pm1}\end{aligned}$$
-となる[^1]．
+  J_3\ket*{j,m}  &= m\ket*{j,m}
+\end{align}
+を満たす．昇降演算子を状態に作用させると
+\begin{align}
+  J_{\pm}\ket*{j,m}  &= \sqrt{j(j+1)-m(m\pm 1)}\ket*{j,m\pm1}
+\end{align}
+となる\footnote{一般には位相の不定性があるがここでは係数が実で正になるように取ってある．}．
 $j$は，$j\in\frac{1}{2}\mathbb{Z}$の非負の整数，半整数の値を取り，$m$は$m=-j,-j+1,\cdots j-1,j$の値を取る．以下，表現$j$に付随した$(2j+1)\eqqcolon d_j$次元Hilbert空間を$\mathcal{Q}_j$と表す．
 
+<!-- \subsection{Wignerの\texorpdfstring{$D$}{D}行列} -->
 ## Wignerの$D$行列
-
 $\mathrm{SU}(2)$の元$g$に対応した演算子$U_g=\exp\ri\theta^i J_i$と書くことにする．Wignerの$D$行列(表現行列)は，$U_g$の状態$\ket{j,m}$への作用を表す:
-$$\label{eq:Wigner_matrix}
-  [D_j]^m_n(g)\coloneqq \bra{j,m}U_g\ket{j,n}.$$ この行列は，
-$$\label{eq:su2-D-orthogonality}
-  \int\dd{g} [D_j^{*}]^{m'}_{n'}(g) [D_j]^m_n(g) = \frac{1}{d_j}\delta_{j,j'}\delta_{m,m'}\delta_{n,n'}$$
-の直交関係を満たす．ここで$\dd{g}$は$\mathrm{SU}(2)$のHaar測度である(詳細は，[1.7](#sec:Haar_measure){reference-type="ref"
-reference="sec:Haar_measure"}節参照)．
+\begin{equation}\label{eq:Wigner_matrix}
+  [D_j]^m_n(g)\coloneqq \bra{j,m}U_g\ket{j,n}.
+\end{equation}
+この行列は，
+\begin{equation}\label{eq:su2-D-orthogonality}
+  \int\dd{g} [D_j^{*}]^{m'}_{n'}(g) [D_j]^m_n(g) = \frac{1}{d_j}\delta_{j,j'}\delta_{m,m'}\delta_{n,n'}
+\end{equation}
+の直交関係を満たす．ここで$\dd{g}$は$\mathrm{SU}(2)$のHaar測度である(詳細は，\ref{sec:Haar_measure}節参照)．
 
 ## 表現の合成
-
+<!-- \subsection{表現の合成} -->
 次にふたつの表現$j_a$と$j_b$の合成を考える．本稿では，しばしば表現のラベルに$a,b,c,d,\cdots$を用いる．表現の添字は，$\mathcal{Q}_{j_a}$や，$j$を略して$\mathcal{Q}_{a}$と書くことがある．
 $2$つの表現を合成(直積)するとそれは既約表現の直和に分解する:
-$$\begin{split}
+\begin{equation}
+  \begin{split}
     \mathcal{Q}_{j_{a}}\otimes \mathcal{Q}_{j_{b}}  &= (\mathcal{Q}_{j_{a}+j_{b}})\oplus \mathcal{Q}_{j_{a}+j_{b}-1}\oplus\cdots \oplus \mathcal{Q}_{|j_{a}-j_{b}|}\\
    & =\bigoplus_cN_{ab}^{c}\mathcal{Q}_{c}.
-   \end{split}$$ ここで $N_{ab}^{c}=\delta_{abc}$で
-$$\delta_{abc}\coloneqq \begin{cases}
+   \end{split}
+  \end{equation}
+  ここで $N_{ab}^{c}=\delta_{abc}$で
+  \begin{equation}
+  \delta_{abc}\coloneqq \begin{cases}
   1 &
   j_{a}+j_{b}\geq j_{c},
   j_{b}+j_{c}\geq j_{a},
@@ -150,38 +192,54 @@ $$\delta_{abc}\coloneqq \begin{cases}
   j_{a}+j_{b}+j_{c}\in\mathbb{Z}\\
   0 & \text{その他}
   \label{eq:fusion delta}
-  \end{cases}$$
+  \end{cases}
+  \end{equation}
 を導入した．$N_{ab}^{c}$はfusion係数またはテンソル積係数と呼ばれる．
 本稿では，$\delta_{abc}=1$を満たす$j_a,j_b,j_c$を，$j_a,j_b,j_c$が三角不等式を満たすという．
 例えば，$j_a=1$と$j_b=1/2$とすると，三角不等式を満たす$j_c$は，$3/2$または，$1/2$となる．したがって，
-$$\mathcal{Q}_{1}\otimes \mathcal{Q}_{\frac{1}{2}} \simeq Q_{\frac{3}{2}}\oplus Q_{\frac{1}{2}}$$
+\begin{equation}
+  \mathcal{Q}_{1}\otimes \mathcal{Q}_{\frac{1}{2}} \simeq Q_{\frac{3}{2}}\oplus Q_{\frac{1}{2}}
+\end{equation}
 となり，$N^c_{\frac{1}{2}1}$は，
-$$N_{1\frac{1}{2}}^{\frac{3}{2}}=1,\quad
-  N_{1\frac{1}{2}}^{\frac{1}{2}}=1$$ で他の$c$についてゼロとなる．
+\begin{equation}
+  N_{1\frac{1}{2}}^{\frac{3}{2}}=1,\quad
+  N_{1\frac{1}{2}}^{\frac{1}{2}}=1
+\end{equation}
+で他の$c$についてゼロとなる．
 
-$3$つの表現の合成(直積)は$\mathcal{Q}_{a}\otimes (\mathcal{Q}_{b}\otimes \mathcal{Q}_{c})\simeq (\mathcal{Q}_{a}\otimes \mathcal{Q}_{b}) \otimes \mathcal{Q}_{c}$
-を満たす．これに対応して，fusion係数は，
-$$\sum_{d}N_{ad}^{f}N_{bc}^{d}= \sum_{d}N_{ab}^{d}N_{dc}^{f}$$
+  $3$つの表現の合成(直積)は$\mathcal{Q}_{a}\otimes (\mathcal{Q}_{b}\otimes \mathcal{Q}_{c})\simeq (\mathcal{Q}_{a}\otimes \mathcal{Q}_{b}) \otimes \mathcal{Q}_{c}$
+  を満たす．これに対応して，fusion係数は，
+\begin{equation}
+\sum_{d}N_{ad}^{f}N_{bc}^{d}= \sum_{d}N_{ab}^{d}N_{dc}^{f}
+\end{equation}
 を満たす．
 
-次に具体的に表現を合成しよう．表現$j_a$,
-$j_b$を合成し$j_c$を作ったとする．そのときのベクトル$\ket*{j_aj_b;j_c,m_c}$は，
-$$\ket*{j_aj_b;j_c,m_c} = \sum_{m_a,m_b}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_am_a\, j_bm_b}{j_c,m_c}$$
+次に具体的に表現を合成しよう．表現$j_a$, $j_b$を合成し$j_c$を作ったとする．そのときのベクトル$\ket*{j_aj_b;j_c,m_c}$は，
+\begin{equation}
+  \ket*{j_aj_b;j_c,m_c} = \sum_{m_a,m_b}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_am_a\, j_bm_b}{j_c,m_c}
+\end{equation}
 と表せる．ここで，
-$\braket{j_am_a\, j_bm_b}{j_cm_c}$はClebsch-Gordan係数である． $j_c$,
-および$m_c$が取りうる値は
+$\braket{j_am_a\, j_bm_b}{j_cm_c}$はClebsch-Gordan係数である．
+$j_c$, および$m_c$が取りうる値は
 $j_c\in \{|j_a-j_b|,|j_a-j_b|+1,\cdots, j_a+j_b\}$及び，$m_c\in\{-j_c,-j_c+1,\cdots j_c\}$である．
 これは，$\mathcal{Q}_{c}\to \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$の写像を与える．
-また， $$\begin{aligned}
+また，
+\begin{align}
   (J_{a3}+J_{b3})\ket*{j_aj_b;j_c,m_c} &= (m_a+m_b)\ket*{j_aj_b;j_c,m_c},\\
   (J_{ai}+J_{bi})^2\ket*{j_aj_b;j_c,m_c} &= j_c(j_c+1)\ket*{j_aj_b;j_c,m_c},\\
   J_{ai}^2\ket*{j_aj_b;j_c,m_c} &= j_a(j_a+1)\ket*{j_aj_b;j_c,m_c},\\
-  J_{bi}^2\ket*{j_aj_b;j_c,m_c} &= j_b(j_b+1)\ket*{j_aj_b;j_c,m_c}\end{aligned}$$
-を満たす． 逆に直積状態は，
-$$\ket*{j_a,m_a} \ket*{j_b,m_b}= \sum_{m_c}  \ket*{j_aj_b;j_c,m_c} \braket{j_cm_c}{j_am_a\, j_bm_b}$$
-と表せる． $\mathrm{SU}(2)$のClebsch-Gordan係数は，通常，
+  J_{bi}^2\ket*{j_aj_b;j_c,m_c} &= j_b(j_b+1)\ket*{j_aj_b;j_c,m_c}
+\end{align}
+を満たす．
+逆に直積状態は，
+\begin{equation}
+\ket*{j_a,m_a} \ket*{j_b,m_b}= \sum_{m_c}  \ket*{j_aj_b;j_c,m_c} \braket{j_cm_c}{j_am_a\, j_bm_b}
+ \end{equation}
+と表せる．
+$\mathrm{SU}(2)$のClebsch-Gordan係数は，通常，
 $\braket{j_cm_c}{j_am_a\, j_bm_b}=\braket{j_am_a\, j_bm_b}{j_c,m_c}^*=\braket{j_am_a\, j_bm_b}{j_c,m_c}$を満たすように位相が選ばれている．
-また，Clebsch-Gordan係数は，直交関係 $$\begin{aligned}
+また，Clebsch-Gordan係数は，直交関係
+\begin{align}
   \sum_{m_a,m_b}
   \braket{j_dm_d}{j_am_a\, j_b,m_b}
   \braket{j_am_a\, j_bm_b}{j_c,m_c}
@@ -190,21 +248,28 @@ $\braket{j_cm_c}{j_am_a\, j_bm_b}=\braket{j_am_a\, j_bm_b}{j_c,m_c}^*=\braket{j_
   \sum_{j_c}\sum_{m_c}
   \braket{j_am_a\, j_bm_b}{j_c,m_c}
   \braket{j_cm_c}{j_am'_a\, j_bm'_b}
-  =\delta^{m_a}_{m'_a}\delta^{m_b}_{m'_b} \label{eq:Clebsch-Gordan orthogonal2}\end{aligned}$$
-を満たす． Wigner $3$-$j$シンボル$\begin{psmallmatrix}
+  =\delta^{m_a}_{m'_a}\delta^{m_b}_{m'_b} \label{eq:Clebsch-Gordan orthogonal2}
+\end{align}
+を満たす．
+Wigner $3$-$j$シンボル$\begin{psmallmatrix}
   j_a & j_b & j_c\\
   m_a & m_b & m_c
 \end{psmallmatrix}$を用いると，Clebsch-Gordan係数は，
-$$\braket{j_am_a\, j_bm_b}{j_cm_c}
+\begin{equation}
+\braket{j_am_a\, j_bm_b}{j_cm_c}
 =(-1)^{j_{a}-j_{b}+m_{c}}\sqrt{d_c}
 \begin{pmatrix}
   j_a & j_b & j_c\\
   m_a & m_b & -m_c
 \end{pmatrix}
-\label{eq:Clebsch-Gordan-Wigner3j}$$
-と表すことができる．本稿では，あまり使わないが， Wigner
-$3$-$j$シンボルはClebsch-Gordan係数より対称性が高く， 便利なことが多い．
-Wigner $3$-$j$シンボルは，偶置換に関して，不変 $$\begin{pmatrix}
+\label{eq:Clebsch-Gordan-Wigner3j}
+\end{equation}
+と表すことができる．本稿では，あまり使わないが，
+Wigner $3$-$j$シンボルはClebsch-Gordan係数より対称性が高く，
+便利なことが多い．
+Wigner $3$-$j$シンボルは，偶置換に関して，不変
+\begin{equation}
+  \begin{pmatrix}
     j_a & j_b & j_c\\
     m_a & m_b & m_c
   \end{pmatrix}
@@ -216,7 +281,11 @@ Wigner $3$-$j$シンボルは，偶置換に関して，不変 $$\begin{pmatrix}
   \begin{pmatrix}
     j_c & j_a & j_b\\
     m_c & m_a & m_b
-  \end{pmatrix}$$ であり，奇置換に対して， $$\begin{split}
+  \end{pmatrix}
+\end{equation}
+であり，奇置換に対して，
+\begin{equation}
+  \begin{split}
       \begin{pmatrix}
         j_a & j_b & j_c\\
         m_a & m_b & m_c
@@ -237,18 +306,24 @@ Wigner $3$-$j$シンボルは，偶置換に関して，不変 $$\begin{pmatrix}
       m_c & m_b & m_a
     \end{pmatrix} 
   \end{split}
-  \label{eq:Wigner3joddperm}$$
+  \label{eq:Wigner3joddperm}
+\end{equation}
 
-となる．また$m$の反転に対し， $$\begin{pmatrix}
+となる．また$m$の反転に対し，
+\begin{equation}
+  \begin{pmatrix}
     j_a & j_b & j_c\\
     -m_a & -m_b & -m_c
   \end{pmatrix}
   =(-1)^{j_a+j_b+j_c}\begin{pmatrix}
     j_a & j_b & j_c\\
     m_a & m_b & m_c
-  \end{pmatrix}$$ となる性質を持つ．値は，$j_a$, $j_b$,
-$j_c$が三角不等式を満たすとき$\delta_{abc}=1$のみ
-非ゼロで，他はゼロとなる． 直交性関係は， $$\begin{aligned}
+  \end{pmatrix}
+\end{equation}
+となる性質を持つ．値は，$j_a$, $j_b$, $j_c$が三角不等式を満たすとき$\delta_{abc}=1$のみ
+非ゼロで，他はゼロとなる．
+直交性関係は，
+\begin{align}
   (2j_c+1)\sum_{m_a,m_b}
   \begin{pmatrix}
     j_a & j_b & j_c\\
@@ -266,63 +341,90 @@ $j_c$が三角不等式を満たすとき$\delta_{abc}=1$のみ
   \begin{pmatrix}
     j_a & j_b & j_c\\
     m'_a & m'_b & m_c
-  \end{pmatrix}&=\delta_{m_a,m'_a}\delta_{m_b,m'_b}\end{aligned}$$
+  \end{pmatrix}&=\delta_{m_a,m'_a}\delta_{m_b,m'_b}
+\end{align}
 となる．
 
-::: question
-$2$つの表現$j_a$, $j_b$を合成し$1$重項を作り，
-Clebsch-Gordan係数$\braket{j_am_a\, j_bm_b}{00}$を具体的に求めよ．
-:::
+\begin{question}
+  $2$つの表現$j_a$, $j_b$を合成し$1$重項を作り，
+  Clebsch-Gordan係数$\braket{j_am_a\, j_bm_b}{00}$を具体的に求めよ．
+\end{question}
+
 
 $\ket*{j_aj_b;j_c,m_c}$と$\ket*{j_bj_a;j_c,m_c}$は，位相分だけ状態が異なる:
-$$\ket*{j_aj_b;j_c,m_c} =R^{ab}_c \ket*{j_bj_a;j_c,m_c}.$$ ここで，
-$$R^{ab}_c= (-1)^{j_a+j_b-j_c}$$
+\begin{equation}
+  \ket*{j_aj_b;j_c,m_c} =R^{ab}_c \ket*{j_bj_a;j_c,m_c}.
+\end{equation}
+ここで，
+\begin{equation}
+  R^{ab}_c= (-1)^{j_a+j_b-j_c}
+\end{equation}
 である．これは，$R^{ab}_cR^{ba}_c=1$を満たす．
+\begin{question}
+  $R^{ab}_c= (-1)^{j_a+j_b-j_c}$を式\eqref{eq:Clebsch-Gordan-Wigner3j}及び
+  \eqref{eq:Wigner3joddperm}を用いて示せ．
+\end{question}
 
-::: question
-$R^{ab}_c= (-1)^{j_a+j_b-j_c}$を式[\[eq:Clebsch-Gordan-Wigner3j\]](#eq:Clebsch-Gordan-Wigner3j){reference-type="eqref"
-reference="eq:Clebsch-Gordan-Wigner3j"}及び
-[\[eq:Wigner3joddperm\]](#eq:Wigner3joddperm){reference-type="eqref"
-reference="eq:Wigner3joddperm"}を用いて示せ．
-:::
 
-3つの表現 $j_a$, $j_b$,
-$j_c$を合成し，$j_d$を作る問題を考える．$j_a$と$j_b$を合成し$j_{e}$を作り，その後，$j_c$を合成すると，
-$$\begin{aligned}
+3つの表現 $j_a$, $j_b$, $j_c$を合成し，$j_d$を作る問題を考える．$j_a$と$j_b$を合成し$j_{e}$を作り，その後，$j_c$を合成すると，
+\begin{align}
   &\ket*{(j_aj_b)j_{e}j_c;j_d,m_d} \notag\\
   &=
   \sum_{m_{a},m_b,m_c,m_{e}}
    \ket*{j_a,m_a}\ket*{j_b,m_b}\ket*{j_c,m_c}
      \braket{j_am_a\, j_bm_b}{j_{e},m_{e}}
-   \braket{j_{e}m_{e}\, j_cm_c}{j_d,m_d}\end{aligned}$$
+   \braket{j_{e}m_{e}\, j_cm_c}{j_d,m_d}
+\end{align}
 となる．一方，先に$j_b$と$j_c$を合成し，$j_{f}$を作り，その後$j_a$を合成すると，
-$$\begin{split}
+\begin{equation}
+  \begin{split}
     &\ket*{j_a (j_bj_c)j_{f};j_d,m_d}\\
     &=
    \sum_{m_{a},m_b,m_c,m_{f}}
    \ket*{j_a,m_a}\ket*{j_b,m_b}\ket*{j_c,m_c}
    \braket{j_am_a\, j_{f}m_{f}}{j_{d},m_{d}}
     \braket{j_{b}m_{b}\, j_cm_c}{j_{f},m_{f}}
-  \end{split}$$ となる．
+  \end{split}
+\end{equation}
+となる．
 
+<!-- %  $j_d=0$, $m_d=0$の場合は，
+%  \begin{align}
+%    &
+%    \sum_{m_{a},m_b,m_{e},m_c}  \ket*{j_a,m_a}\ket*{j_b,m_b}\ket*{j_c,m_c}
+%    \braket{j_am_a\, j_bm_b}{j_{e},m_{e}}
+%     \braket{ j_{e}m_{e}\, j_cm_c}{0,0}
+%    \\
+%    &=\delta_{j_{e},j_c}
+%  \sum_{m_{a},m_b,m_c} 
+%    (-1)^{j_{a}-j_{b}+j_c}
+%  \begin{pmatrix}
+%    j_a & j_b & j_c\\
+%    m_a & m_b & m_c
+%  \end{pmatrix}
+%    \ket*{j_a,m_a}\ket*{j_b,m_b}{j_c,m_c}\\
+%  \end{align} -->
 $\ket*{(j_aj_b)j_{e}j_c;j_d,m_d}$と
 $\ket*{j_a (j_bj_c)j_{f};j_d,m_d}$は，独立ではなく次のユニタリ変換($F$-moves)で結びついている:
-$$\ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
+\begin{equation}
+  \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
   =\sum_{j_{f}}  \ket*{j_a (j_bj_c)j_{f};j_d,m_d}
   \braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}
-  \label{eq:recoupling}$$
+  \label{eq:recoupling}
+\end{equation}
 この係数は，$\braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$は，$m_d$に依存しない．
-これは，式[\[eq:recoupling\]](#eq:recoupling){reference-type="eqref"
-reference="eq:recoupling"}の両辺に$J_{\pm}$を作用させることで確かめられる．
-
-::: question
-$\braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$が$m_d$によらないことを確かめよ．
-:::
-
+これは，式\eqref{eq:recoupling}の両辺に$J_{\pm}$を作用させることで確かめられる．
+\begin{question}
+  $\braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$が$m_d$によらないことを確かめよ．
+\end{question}
 本稿では，$[F^{abc}_d]_{ef}\coloneqq \braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$とし$F$-symbolと呼ぶことにする:
-$$\ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
-  =\sum_{j_f}[F^{abc}_d]_{ef}\ket*{j_a (j_bj_c)j_{f};j_d,m_d}.$$
-Clebsch-Gordan係数を用いて$F$-symbolを表すと $$\begin{split}
+\begin{equation}
+  \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
+  =\sum_{j_f}[F^{abc}_d]_{ef}\ket*{j_a (j_bj_c)j_{f};j_d,m_d}.
+\end{equation}
+Clebsch-Gordan係数を用いて$F$-symbolを表すと
+\begin{equation}
+  \begin{split}
     &    [F^{abc}_d]_{ef}\\    
 &=  \sum_{m_{a},m_b,m_c,m_{e} m_{f}}
 \braket{j_am_a\, j_bm_b}{j_{e}m_{e}}
@@ -330,166 +432,418 @@ Clebsch-Gordan係数を用いて$F$-symbolを表すと $$\begin{split}
 \braket{j_{f}m_{f}}{ j_bm_b\, j_{c}m_{c} }
 \braket{j_dm_d}{j_am_a\, j_{f}m_{f}}
     \end{split}
-    \label{F-move_def}$$ となる．Wigner
-$6$-$j$シンボルを用いると，よりコンパクトに
-$$_{ef}=(-1)^{j_a+j_b+j_c+j_d}\sqrt{d_{e}d_{f}}
+    \label{F-move_def}
+\end{equation}
+となる．Wigner $6$-$j$シンボルを用いると，よりコンパクトに
+\begin{equation}
+  [F^{abc}_d]_{ef}=(-1)^{j_a+j_b+j_c+j_d}\sqrt{d_{e}d_{f}}
   \begin{Bmatrix}
     j_a & j_b & j_e\\
     j_c & j_d & j_f
   \end{Bmatrix}
-  \label{eq:fmoves}$$ と表せることが知られている． Wigner
-$6$-$j$シンボルは， $$\begin{split}
+  \label{eq:fmoves}
+\end{equation}
+と表せることが知られている．
+Wigner $6$-$j$シンボルは，
+\begin{equation}
+  \begin{split}
     \begin{Bmatrix}
       a & b & c\\
       d & e & f
     \end{Bmatrix}
     \coloneqq \Delta(a,b,c)\Delta(a,e,f)\Delta(d,b,f)\Delta(d,e,c)\sum_z(-1)^z (z+1)!\\   
     \times \frac{((a+b+d+e-z)!(a+d+c+f-z)!(b+e+c+f-z)!)^{-1}}{(z-a-b-c)!(z-a-e-f)!(z-d-b-f)!(z-d-e-c)!}
-  \end{split}$$ と表せる．ここで
-$$\Delta(a,b,c)=\delta_{abc}\sqrt{\frac{(a+b-c)!(a-b+c)!(-a+b+c)!}{(a+b+c+1)!}}$$
-である． また，$z$が取りうる範囲は，
-$$\max(a+b+c,a+e+f,d+b+f,d+e+c)\leq z\leq 
-  \min(a+b+d+e,a+d+c+f,b+e+c+f)$$ である．
+  \end{split}
+\end{equation}
+と表せる．ここで
+\begin{equation}
+  \Delta(a,b,c)=\delta_{abc}\sqrt{\frac{(a+b-c)!(a-b+c)!(-a+b+c)!}{(a+b+c+1)!}}
+\end{equation}
+である．
+また，$z$が取りうる範囲は，
+\begin{equation}
+  \max(a+b+c,a+e+f,d+b+f,d+e+c)\leq z\leq 
+  \min(a+b+d+e,a+d+c+f,b+e+c+f)
+\end{equation}
+である．
 
-逆変換は， $$\ket*{j_a (j_bj_c)j_{f};j_d,m_d}
+
+
+逆変換は，
+\begin{equation}
+  \ket*{j_a (j_bj_c)j_{f};j_d,m_d}
   =\sum_{j_e}[(F^{abc}_d)^{-1}]_{fe} 
-  \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}$$ で，$[(F^{abc}_d)^{-1}]_{fe}=
+  \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
+\end{equation}
+で，$[(F^{abc}_d)^{-1}]_{fe}=
 \braket{ (j_aj_b)j_{e}j_c;j_d,m_d}{j_a (j_bj_c)j_{f};j_d,m_d}$である．これは，ユニタリである性質
-$$_{fe}=
+\begin{equation}
+  [(F^{abc}_d)^{-1}]_{fe}=
   [(F^{abc}_d)^{\dag}]_{fe}
-  =[F^{abc}_d]^*_{ef}$$ を満たす．
+  =[F^{abc}_d]^*_{ef}
+\end{equation}
+を満たす．
 また，$F$-symbolは，以下の関係を満たす(pentagon equation):
-$$_{gl} [F_e^{abl}]_{fk} 
+\begin{equation}
+  [F_e^{fcd}]_{gl} [F_e^{abl}]_{fk} 
 = \sum_{h} [F^{abc}_g]_{fh} [F_{e}^{ahd}]_{gk} [F^{bcd}_{k}]_{hl}.
-\label{eq:pentagon}$$
+\label{eq:pentagon}
+\end{equation}
 
-::: question
-スピン$1/2$を$3$つを合成する問題を考える．
-これは，表現の次元を使って表すと$2\otimes 2\otimes 2=4\oplus 2\oplus 2$分解される．そこで，$a=b=c=d=1/2$となる場合を考え，$F$-symbolが
-$$\begin{aligned}
-_{00}&=-\frac{1}{2},\quad
+\begin{question}
+  スピン$1/2$を$3$つを合成する問題を考える．
+  これは，表現の次元を使って表すと$2\otimes 2\otimes 2=4\oplus 2\oplus 2$分解される．そこで，$a=b=c=d=1/2$となる場合を考え，$F$-symbolが
+  \begin{align}
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{00}&=-\frac{1}{2},\quad
     [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{11}=\frac{1}{2},\\
     [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{01}&=\frac{\sqrt{3}}{2},\quad
     [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{10}=\frac{\sqrt{3}}{2}
-  \end{aligned}$$ となることを示せ．
-:::
+  \end{align}
+  となることを示せ．
+\end{question}
 
-## Clebsch-Gordan係数の演算のグラフィカルな表現 {#sec:graphical_Clebsch-Gordan}
 
+<!-- %  \begin{align}
+%    \ket{\qty(\frac{1}{2}\frac{1}{2})0\frac{1}{2};\uparrow}&=
+%    \frac{\sqrt{3}}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}-\frac{1}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow}\\
+%  \end{align}
+%  \begin{align}
+%    \ket{\qty(\frac{1}{2}\frac{1}{2})1\frac{1}{2};\uparrow}&=
+%    \frac{1}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}+\frac{\sqrt{3}}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow}\\
+%  \end{align}
+%  \begin{align}
+%    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});11}=\ket{\bar{\downarrow}}\ket{\uparrow},\\
+%    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});10}=\frac{1}{\sqrt{2}}\qty(\ket{\bar{\downarrow}}\ket{\downarrow}-\ket{\bar{\uparrow}}\ket{\uparrow}),\\
+%    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});1-1}=\ket{\bar{\uparrow}}\ket{\downarrow},\\
+%    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});0}=\frac{1}{\sqrt{2}}\qty(\ket{\bar{\uparrow}}\ket{\uparrow}+\ket{\bar{\downarrow}}\ket{\downarrow}),\\
+%  \end{align}
+
+%  \begin{equation}
+%    \braket{j_cm_c}{j_am_a\, j_bm_b}
+%    =(-1)^{j_{a}-j_{b}+m_{c}}\sqrt{d_c}
+%    \begin{pmatrix}
+%      j_a & j_b & j_c\\
+%      m_a & m_b & -m_c
+%    \end{pmatrix}
+%  \end{equation}
+%  \begin{equation}
+%    \begin{split}
+%      \braket{j_cm_c\, j_bm_b}{j_am_a}
+%      &=(-1)^{j_{c}-j_{b}+m_{a}}\sqrt{d_a}
+%      \begin{pmatrix}
+%        j_c & j_b & j_a\\
+%        m_c & m_b & -m_a
+%      \end{pmatrix}\\
+%      &=(-1)^{j_{c}-j_a+m_{b}}
+%      \frac{\sqrt{d_a}}{\sqrt{d_c}}
+%      \braket{j_cm_c}{j_am_a\, j_b-m_b}\\
+%      &=(-1)^{j_{c}-j_a-j_b}
+%      \frac{\sqrt{d_a}\sqrt{d_b}}{\sqrt{d_c}}
+%      \sum_{l_b}\braket{j_cm_c}{j_am_a\, j_bl_b}\braket{j_bl_b\, j_bm_b}{00}
+%    \end{split}
+%  \end{equation}
+%  \begin{equation}
+%    \begin{split}
+%      \braket{j_cm_c}{j_am_a\, j_bm_b}
+%      &=(-1)^{j_{a}-j_c+m_{b}}\frac{\sqrt{d_c}}{\sqrt{d_a}}
+%      (-1)^{j_c-j_b+m_a}\sqrt{d_a}\begin{pmatrix}
+%        j_c & j_b & j_a\\
+%        m_c & -m_b & -m_a
+%      \end{pmatrix}\\
+%      &=(-1)^{j_{a}-j_c-j_b}\frac{\sqrt{d_cd_b}}{\sqrt{d_a}}
+%      \sum_{l_b}\braket{00}{j_bl_b\, j_bm_b}
+%      \braket{j_cm_c\, j_bl_b}{j_am_a}
+%      \end{split}
+%  \end{equation} -->
+
+## Clebsch-Gordan係数の演算のグラフィカルな表現
+<!-- \subsection{Clebsch-Gordan係数の演算のグラフィカルな表現} -->
+\label{sec:graphical_Clebsch-Gordan}
 Clebsch-Gordan係数を図を使って表現するといろいろ便利である．
 まず，2点頂点は，
-$$\parbox{.6cm}{\includegraphics[scale=0.3]{figs/ab.pdf}}=
-\braket{j_bn_b}{j_am_a}=\delta^{j_b}_{j_a}\delta^{n_b}_{m_a}$$ と表す．
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; gap:10px;">
+  <img src="figs/ab.svg" style="height:5.5em;">
+  <span class="math display">
+    $$= \braket{j_b n_b}{j_a m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{equation}
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  = \braket{j_b n_b}{j_a m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}
+\end{equation}
+:::
+
+と表す．
 特に，$j_a=j_b$のときは，単にドットと取って
-$$\parbox{.6cm}{\includegraphics[scale=0.3]{figs/a.pdf}}=
- \braket{j_an_a}{j_am_a} =\delta^{n_a}_{m_b}$$
-と書くことにする．Clebsch-Gordan係数は， $$\begin{aligned}
+
+::: {.content-visible when-format=pdf}
+\begin{equation}
+  \parbox{.6cm}{\includegraphics[scale=0.3]{figs/a.pdf}}=
+ \braket{j_an_a}{j_am_a} =\delta^{n_a}_{m_b}
+ \end{equation}
+ :::
+
+ と書くことにする．Clebsch-Gordan係数は，
+
+ ::: {.content-visible when-format=pdf}
+\begin{align}
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/abc.pdf}}&=  
   \braket{ j_cn_c}{j_am_a\, j_bm_b}, \\
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/cab.pdf}}
-  &= \braket{j_an_a\, j_bn_b}{j_cm_c}\end{aligned}$$ で表す．
-$c=0$の特別な場合は， $$\begin{aligned}
+  &= \braket{j_an_a\, j_bn_b}{j_cm_c}
+\end{align}
+:::
+
+で表す．
+<!-- % (共役は反転させて矢印をひっくり返す？) -->
+$c=0$の特別な場合は，
+
+::: {.content-visible when-format=pdf}
+\begin{align}
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/ab0.pdf}}
   &= \braket{j_an_a\, j_bn_b}{00}=\delta_{j_a,j_b}\delta_{n_a,-n_b}\frac{(-1)^{j_a-n_a}}{\sqrt{d_{a}}},\\  
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/0ab.pdf}}&=  
-  \braket{00}{j_am_a\, j_bm_b}=\delta_{j_a,j_b}\delta_{m_a,-m_b}\frac{(-1)^{j_a-m_a}}{\sqrt{d_{a}}}\end{aligned}$$
+  \braket{00}{j_am_a\, j_bm_b}=\delta_{j_a,j_b}\delta_{m_a,-m_b}\frac{(-1)^{j_a-m_a}}{\sqrt{d_{a}}}
+\end{align}
+:::
+
 となる．
 
-$3$つの表現の合成に対応するダイアグラムは， $$\begin{aligned}
-  \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}= \sum_{l_e}\braket{j_an_a\, j_bn_b}{j_el_e}\braket{j_el_e\, j_cn_c}{ j_dm_d}\end{aligned}$$
+$3$つの表現の合成に対応するダイアグラムは，
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}= \sum_{l_e}\braket{j_an_a\, j_bn_b}{j_el_e}\braket{j_el_e\, j_cn_c}{ j_dm_d}
+\end{align}
+:::
+
 である．ここで，内線の表現の$3$成分については和を取るものとする．
 
-このルールを用いると，式[\[eq:Clebsch-Gordan orthogonal1\]](#eq:Clebsch-Gordan orthogonal1){reference-type="eqref"
-reference="eq:Clebsch-Gordan orthogonal1"}の直交性は，
-$$\parbox{1.4cm}{\includegraphics[scale=0.3]{figs/abcloop.pdf}}=
+このルールを用いると，式\eqref{eq:Clebsch-Gordan orthogonal1}の直交性は，
+
+::: {.content-visible when-format=pdf}
+\begin{equation}
+  \parbox{1.4cm}{\includegraphics[scale=0.3]{figs/abcloop.pdf}}=
   \parbox{.6cm}{\includegraphics[scale=0.3]{figs/ccprime.pdf}}
   =\delta_{c,c'}
-  \parbox{.6cm}{\includegraphics[scale=0.3]{figs/c.pdf}}$$
-と表すことができる．同様に，式[\[eq:Clebsch-Gordan orthogonal2\]](#eq:Clebsch-Gordan orthogonal2){reference-type="eqref"
-reference="eq:Clebsch-Gordan orthogonal2"}は，
-$$\parbox{1.3cm}{\includegraphics[scale=0.3]{figs/parallel1.pdf}}=
+  \parbox{.6cm}{\includegraphics[scale=0.3]{figs/c.pdf}}
+ \end{equation}
+ :::
+
+と表すことができる．同様に，式\eqref{eq:Clebsch-Gordan orthogonal2}は，
+
+::: {.content-visible when-format=pdf}
+\begin{equation}
+  \parbox{1.3cm}{\includegraphics[scale=0.3]{figs/parallel1.pdf}}=
   \sum_{c}
-  \parbox{1.cm}{\includegraphics[scale=0.3]{figs/parallel2.pdf}}$$
+  \parbox{1.cm}{\includegraphics[scale=0.3]{figs/parallel2.pdf}}
+\end{equation}
+:::
+
 と表すことができる．また，$F$-symbolは，
-$$\parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}
+
+::: {.content-visible when-format=pdf}
+\begin{equation}
+  \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}
   =
   \sum_{f}[F^{abc}_d]_{ef}
-  \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove2a.pdf}}$$
-と表現され， $F$自身は，
-$$\parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove.pdf}}
-  =\frac{1}{d_d}[F^{abc}_d]_{ef}$$
-と表すことができる．また，式[\[eq:pentagon\]](#eq:pentagon){reference-type="eqref"
-reference="eq:pentagon"}のペンタゴン方程式は，
-$$\includegraphics[scale=0.3]
-  {figs/pentagonRelation.pdf}$$ より得られる．
+  \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove2a.pdf}}
+\end{equation}
+:::
+
+と表現され，
+$F$自身は，
+
+::: {.content-visible when-format=pdf}
+\begin{equation}
+  \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove.pdf}}
+  =\frac{1}{d_d}[F^{abc}_d]_{ef}
+\end{equation}
+:::
+
+と表すことができる．また，式\eqref{eq:pentagon}のペンタゴン方程式は，
+
+::: {.content-visible when-format=pdf}
+\begin{equation}
+ \includegraphics[scale=0.3]
+  {figs/pentagonRelation.pdf}
+\end{equation}
+:::
+
+より得られる．
+
+<!-- %  $[F^{abc}_d]_{ef}$は，$d\to abc$の分解(または$3$つの表現の合成)に関するものであるが，
+%  同様に$cd\to ab$の分解に関する$[F_{cd}^{ab}]_{ef}$も定義できる:
+%  \begin{equation}
+%    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22a.pdf}}
+%    =
+%    \sum_{f}[F^{ab}_{cd}]_{ef}
+%    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22b.pdf}}.
+%    \label{eq:Fmove2}
+%  \end{equation}
+%  これは，
+%  \begin{equation}
+%    [F^{ab}_{cd}]_{ef}=\sqrt{\frac{d_ed_f}{d_ad_d}}[F_f^{ceb}]^*_{ad}
+%    \label{eq:FandF}
+%  \end{equation}
+%  の関係がある．
+%  \begin{question}
+%    式\eqref{eq:FandF}を示せ．
+%  \end{question}
+%  式\eqref{eq:Fmove2}の左の図が，
+%  \begin{equation}
+%    \sum_{m_a,m_b,m_e}\braket{j_am_a}{j_cm_c\, j_em_e}
+%    \braket{j_em_e\,j_bm_b}{j_dm_d}
+%    \ket{j_a,m_a}\ket{j_b,m_b}
+%  \end{equation}
+%  で，右の図が
+%  \begin{equation}
+%    \sum_{m_a,m_b,m_f}\braket{j_am_a\,j_bm_b}{j_fm_f}
+%    \braket{j_fm_f}{j_cm_c\, j_dm_d}
+%    \ket{j_a,m_a}\ket{j_b,m_b}
+%  \end{equation}
+%  に対応することに注意して，
+%  $[F_{cd}^{ab}]_{ef}$は，
+%  \begin{equation}
+%    [F_{cd}^{ab}]_{ef}=\sum_{m_a,m_b,m_e,m_f}
+%    \braket{j_am_a}{j_cm_c\, j_em_e}
+%    \braket{j_em_e\,j_bm_b}{j_dm_d}
+%  % 
+%  \braket{j_fm_f}{j_am_a\,j_bm_b}
+%  \braket{j_cm_c\, j_dm_d}{j_fm_f}
+%  \end{equation}
+%  と表すことができる．
+%  一方，$[F_f^{ceb}]^*_{ad}$は，式\eqref{F-move_def}より，
+%  \begin{equation}
+%    \begin{split}
+%      [F_f^{ceb}]^*_{ad}&=[F_f^{ceb}]_{ad}\\
+%      &=
+%    \end{split}
+%  \end{equation}
+%  \begin{equation}
+%    \begin{split}
+%      &    [F^{ceb}_{f}]_{ad}\\
+%  &=  \sum_{m_{c},m_{e},m_{b},m_{a} m_{d}}
+%  \braket{j_{c}m_{c}\, j_{e}m_{e}}{j_{a}m_{a}}
+%  \braket{j_{a}m_{a}\, j_{b}m_{b}}{j_{f}m_{f}}
+%  \braket{j_{d}m_{d}}{ j_{e}m_{e}\, j_{b}m_{b} }
+%  \braket{j_{f}m_{f}}{j_{c}m_{c}\, j_{d}m_{d}}
+%      \end{split}
+%  \end{equation} -->
+
+
+
+
 
 これらのグラフィカルルールを用いると，例えば
-$$\parbox{1.5cm}{\includegraphics[scale=0.3]{figs/vertex1.pdf}}
+\begin{equation}
+  \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/vertex1.pdf}}
   =\sum_{f} [(F_d^{abc})^{-1}]_{ef}
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/vertex2.pdf}}
   = [(F_d^{abc})^{-1}]_{eg}
-  \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/vertex3.pdf}}$$
+  \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/vertex3.pdf}}
+\end{equation}
 が比較的簡単に評価できる．つまり，
-$$\sum_{l_a,l_b,l_e}  \braket{j_g n_g}{j_a l_a \, j_b l_b}
+\begin{equation}
+\sum_{l_a,l_b,l_e}  \braket{j_g n_g}{j_a l_a \, j_b l_b}
   \braket{j_b l_b \, j_c n_c}{j_e l_e}
   \braket{j_al_a\, j_el_e}{j_d,m_d}
   =
 [(F_{d}^{abc})^{-1}]_{eg} \braket{j_gn_g j_cn_c}{j_dm_d}
-\label{eq:deform}$$ が成り立つが示せる．
+\label{eq:deform}
+\end{equation}
+が成り立つが示せる．
 
-## Haar測度 {#sec:Haar_measure}
 
+## Haar測度 {#sec-Haar_measure}
+<!-- \subsection{Haar測度}\label{sec:Haar_measure} -->
 群上で関数の積分を行うには，群構造と両立する自然な測度を導入する必要がある．特に，$\mathrm{SU}(2)$のような連続群においては，離散的な和に代わる操作として，群の左右変換に対して不変な測度が求められる．このような測度は一般にHaar測度と呼ばれ，任意のコンパクト群に対して，定数倍を除いて一意に定まる．
 Haar測度は，群の元$g\in G$に対し，
-$$\int_G \dd{g} f(g)= \int_G \dd{g} f(hg)= \int_G \dd{g} f(gh)$$
-を満たす測度である． ここで，$f(g)$は，群の元$g$に依存する関数である．
+\begin{equation}
+    \int_G \dd{g} f(g)= \int_G \dd{g} f(hg)= \int_G \dd{g} f(gh)
+\end{equation}
+を満たす測度である．
+ここで，$f(g)$は，群の元$g$に依存する関数である．
 この条件は，測度が群の左・右作用に対して不変であること，すなわち群の構造に依存しない自然な積分を定めることを意味する．
-本稿では， $$\int_G \dd{g}  = 1$$ となるように正規化されたものを用いる．
+本稿では，
+\begin{equation}
+    \int_G \dd{g}  = 1
+\end{equation}
+となるように正規化されたものを用いる．
 
-具体的に$\mathrm{SU}(2)$の場合に見ていこう． $\mathrm{SU}(2)$の元を
-$$g= \cos\frac{\theta}{2}+\ri \bm{\sigma}\cdot\bm{n}\sin\frac{\theta}{2}$$
-と表す\[式[\[eq:SU(2)\_n\]](#eq:SU(2)_n){reference-type="eqref"
-reference="eq:SU(2)_n"}\]．$\bm{n}\in S^2$で，極座標表示[\[eq:n_polar\]](#eq:n_polar){reference-type="eqref"
-reference="eq:n_polar"}を用いると，Haar測度は， $$\dd g =
-    \frac{\dd{\theta}}{\pi} \sin^2\frac{\theta}{2} \frac{\dd{\Omega}}{4\pi}$$
+具体的に$\mathrm{SU}(2)$の場合に見ていこう．
+$\mathrm{SU}(2)$の元を
+\begin{equation}
+    g= \cos\frac{\theta}{2}+\ri {\sigma}\cdot\bm{n}\sin\frac{\theta}{2}
+\end{equation}
+と表す[式\eqref{eq:SU(2)_n}]．$\bm{n}\in S^2$で，極座標表示\eqref{eq:n_polar}を用いると，Haar測度は，
+\begin{equation}
+    \dd g =
+    \frac{\dd{\theta}}{\pi} \sin^2\frac{\theta}{2} \frac{\dd{\Omega}}{4\pi}
+\end{equation}
 となる．ここで，$\dd\Omega$は，$S^2$の測度で，
-$$\dd\Omega=\sin\psi \dd\psi \dd\varphi$$
-である．パラメータは，$0\leq\theta\leq 2\pi$, $0\leq\psi\leq \pi$,
-$0\leq\varphi\leq 2\pi$を取る．
+\begin{equation}
+\dd\Omega=\sin\psi \dd\psi \dd\varphi
+\end{equation}
+である．パラメータは，$0\leq\theta\leq 2\pi$, $0\leq\psi\leq \pi$, $0\leq\varphi\leq 2\pi$を取る．
 
 ## 中心
-
-群$G$の*中心*とは，群の元$g\in G$であって，任意の元$h\in G$に対し
-$$hg=gh$$ を満たすものの集合をいう．群$G$の中心を$Z(G)$と表す:
-$$Z(G)=\{g\in G\mid \forall h\in G,\; hg=gh\}.$$
+<!-- \subsection{中心} -->
+群$G$の\textit{中心}とは，群の元$g\in G$であって，任意の元$h\in G$に対し
+\begin{equation}
+  hg=gh
+\end{equation}
+を満たすものの集合をいう．群$G$の中心を$Z(G)$と表す:
+\begin{equation}
+  Z(G)=\{g\in G\mid \forall h\in G,\; hg=gh\}.
+\end{equation}
 $Z(G)$も群(アーベル群)をなす．
 $\mathrm{SU}(2)$の場合は，すべての元と可換な元は単位行列に比例するので，$\omega\mathbf{1}_2$
 の形をとる．ユニタリ行列である条件から$|\omega|^2=1$が得られ，行列式が$1$である条件から，
 $\omega^2=1$が得られる．これを満たす$\omega$は，$1,-1$である．したがって，$\mathrm{SU}(2)$の中心は，
-$$Z(\mathrm{SU}(2))=\{ \mathbf{1}_{2},-\mathbf{1}_2\}\simeq \mathbb{Z}_2$$
+\begin{equation}
+  Z(\mathrm{SU}(2))=\{ \mathbf{1}_{2},-\mathbf{1}_2\}\simeq \mathbb{Z}_2
+\end{equation}
 となる．
 中心は，物質場を含まないゲージ理論においては，閉じ込め，非閉じ込め相を区別する高次対称性と関係する．
 
 ## 共役類
-
+<!-- \subsection{共役類} -->
 群$G$において，$2$つの群の元$g,g'\in G$が，ある$h\in G$を用いて，
-$$g'=hgh^{-1}$$ と表されるとき，$g$と$g'$は*共役*であるという．
-このとき，$g$と$g'$は*同じ*共役類*に属する*という．
-$g$の*共役類*を$\mathcal{C}_g$と表す:
-$$\mathcal{C}_g\coloneqq\{hgh^{-1}\mid h\in G\}.$$
+\begin{equation}
+  g'=hgh^{-1}
+\end{equation}
+と表されるとき，$g$と$g'$は\textit{共役}であるという．
+このとき，$g$と$g'$は\textit{同じ\textit{共役類}に属する}という．
+$g$の\textit{共役類}を$\mathcal{C}_g$と表す:
+\begin{equation}
+  \mathcal{C}_g\coloneqq\{hgh^{-1}\mid h\in G\}.
+\end{equation}
 
 $G=\mathrm{SU}(2)$の場合，$hgh^{-1}$によって，$g$を対角化できるので，$g$として対角行列を考えれば良い．対角行列は，
-$$e^{\ri\theta T_3}=\begin{pmatrix}
+\begin{equation}
+  e^{\ri\theta T_3}=\begin{pmatrix}
     e^{\ri\theta/2} & 0\\
     0 & e^{-\ri\theta/2}
   \end{pmatrix}
-    \label{eq:representative_SU2}$$ と表される．さらに，
-$$\ri X=\ri \sigma_1= 
+    \label{eq:representative_SU2}
+\end{equation}
+と表される．さらに，
+\begin{equation}
+  \ri X=\ri \sigma_1= 
   \begin{pmatrix}
     0 & 1\\
     1 & 0
-  \end{pmatrix}$$ を用い，$(\ri X)^{-1}=-\ri X$に注意して，
-$$\ri X\begin{pmatrix}
+  \end{pmatrix}
+\end{equation}
+を用い，$(\ri X)^{-1}=-\ri X$に注意して，
+\begin{equation}
+  \ri X\begin{pmatrix}
     e^{\ri\theta/2} & 0\\
     0 & e^{-\ri\theta/2}
   \end{pmatrix}(\ri X)^{-1}
@@ -497,150 +851,313 @@ $$\ri X\begin{pmatrix}
   \begin{pmatrix}
     e^{-\ri\theta/2} & 0\\
     0 & e^{\ri\theta/2}
-  \end{pmatrix}$$
+  \end{pmatrix}
+\end{equation}
 となることがわかる．つまり，$\theta$と$-\theta$は共役となるので，
 $\theta$は，$0$から$2\pi$までの範囲を動くと考えることができる．
 以下では，共役類のラベルとして$\mathcal{C}_\theta$の表記を用いる．
 $\theta=0$および$2\pi$に対応する行列は，すべての元と可換であり，中心に属する．したがって，
-$$\begin{aligned}
+\begin{align}
     \mathcal{C}_0&= \{\mathbf{1}_2\},\\
-    \mathcal{C}_{2\pi}&= \{-\mathbf{1}_2\}.\end{aligned}$$
+    \mathcal{C}_{2\pi}&= \{-\mathbf{1}_2\}.
+\end{align}
 $0<\theta<2\pi$の場合，共役類は，
-$$\mathcal{C}_{\theta}=\left\{\mathbf{1}_2\cos\frac{\theta}{2}+\ri\bm{n}\cdot\bm{\sigma}\sin\frac{\theta}{2}\left|\bm{n}\in S^2\right.\right\}$$
+\begin{equation}
+\mathcal{C}_{\theta}=\left\{\mathbf{1}_2\cos\frac{\theta}{2}+\ri\bm{n}\cdot {\sigma}\sin\frac{\theta}{2}\left|\bm{n}\in S^2\right.\right\}
+\end{equation}
 と書ける．
 
-## 指標
+<!-- %  \subsection{中心化群}
+%  群の元の$h\in G$と可換な群の元の集合は，中心化群(Centralizer)と呼ばれる．
+%  \begin{equation}
+%      \mathrm{C}_G(h)\coloneqq\{g\in G|gh=hg\}
+%      \label{eq:Centralizer}
+%  \end{equation}
+%  中心の元$z\in {Z}(G)$関しては，$\mathrm{C}_G(z)=G$となる．
 
+%  $\mathrm{SU}(2)$の場合は，中心については，
+%  \begin{equation}
+%       \mathrm{C}_G(\mathbf{1}_2)=\mathrm{C}_G(-\mathbf{1}_2)=\mathrm{SU}(2)
+%  \end{equation}
+%  $h=\exp\ri\theta T_3$については，
+%  \begin{equation}
+%      C_{\mathrm{SU}(2)}(e^{\ri\theta T_3})=\{ e^{\ri\alpha T_3}|0\leq \alpha<4\pi\}\simeq \mathrm{U}(1)
+%  \end{equation}
+%  となる． -->
+
+
+## 指標
+<!-- \subsection{指標} -->
 表現行列のトレースは指標と呼ばれる．
 トレースの性質より，$h\in G$として，$\chi_a(g)=\chi_a(hgh^{-1})$となることから，共役な元は，同じ指標の値を返すことがわかる．
 
-$\mathrm{SU}(2)$の表現$j_a$の指標は， $$\chi_a(g) =\tr_a D_{a}(g)
-=\sum_{m_a} e^{\ri m_a\theta} = \frac{\sin\frac{\theta(2j_a+1)}{2} }{\sin\frac{\theta}{2}}$$
+
+$\mathrm{SU}(2)$の表現$j_a$の指標は，
+\begin{equation}
+\chi_a(g) =\tr_a D_{a}(g)
+=\sum_{m_a} e^{\ri m_a\theta} = \frac{\sin\frac{\theta(2j_a+1)}{2} }{\sin\frac{\theta}{2}}
+\end{equation}
 と表される．ここで，$e^{\ri m_a\theta}$は，$D_{a}(g)$を対角化したときの固有値で，共役類のラベルに対応する．
-このことから，$\chi_a(g)$の代わりに，$\chi_a(\theta)$と書くこともある．
+このことから，$\chi_a(g) $の代わりに，$\chi_a(\theta)$と書くこともある．
 
-#### 指標の直交性
+\paragraph{指標の直交性}
 
-式[\[eq:su2-D-orthogonality\]](#eq:su2-D-orthogonality){reference-type="eqref"
-reference="eq:su2-D-orthogonality"}に示される表現の直交性より，
-$$\int \dd{g} \chi^\dag_a(g) \chi_b(g)=\delta_{ab}$$
+式\eqref{eq:su2-D-orthogonality}に示される表現の直交性より，
+\begin{equation}
+  \int \dd{g} \chi^\dag_a(g) \chi_b(g)=\delta_{ab}
+\end{equation}
 が成り立つ．指標は共役類のみに依存するため，測度$\dd{\nu(\theta)}$を導入することで，
-$$\label{eq:character_orthogonality}
-  \int \dd{\nu(\theta)}\chi^\dag_a(\theta) \chi_b(\theta)=\delta_{ab}$$
-という形で表すことができる． ここで，$\dd{\nu(\theta)}$は，
-$$\dd{\nu(\theta)}\coloneqq\frac{\dd\theta}{\pi}\sin^2\frac{\theta}{2}$$
+\begin{equation}\label{eq:character_orthogonality}
+  \int \dd{\nu(\theta)}\chi^\dag_a(\theta) \chi_b(\theta)=\delta_{ab}
+\end{equation}
+という形で表すことができる．
+ここで，$\dd{\nu(\theta)}$は，
+\begin{equation}
+    \dd{\nu(\theta)}\coloneqq\frac{\dd\theta}{\pi}\sin^2\frac{\theta}{2}
+\end{equation}
 で与えられる共役類上の規格化された測度である．
 
 さらに，
-$$\sum_{a} \chi^\dag_a(\theta) \chi_a(\theta')=\delta_\nu(\theta-\theta')$$
+\begin{equation}
+\sum_{a} \chi^\dag_a(\theta) \chi_a(\theta')=\delta_\nu(\theta-\theta')
+\end{equation}
 が成り立つ．ここで$\delta_\nu(\theta-\theta')$は，次を満たすデルタ関数である:
-$$\int \dd{\nu(\theta')} f(\theta')\delta_\nu(\theta-\theta')=f(\theta).$$
+\begin{equation}
+    \int \dd{\nu(\theta')} f(\theta')\delta_\nu(\theta-\theta')=f(\theta).
+\end{equation}
 
 $\mathrm{SU}(2)$の指標に，
-$$\Delta_\theta=\frac{\partial^2}{\partial\theta^2}+\frac{\cos\frac{\theta}{2}}{\sin\frac{\theta}{2}}\frac{\partial}{\partial\theta}$$
+\begin{equation}
+\Delta_\theta=\frac{\partial^2}{\partial\theta^2}+\frac{\cos\frac{\theta}{2}}{\sin\frac{\theta}{2}}\frac{\partial}{\partial\theta}
+\end{equation}
 を作用させると，次の固有値方程式が成り立つ事がわかる:
-$$-\Delta_\theta\chi_a(\theta)=C_2(a)\chi_a(\theta).$$
+\begin{equation}
+-\Delta_\theta\chi_a(\theta)=C_2(a)\chi_a(\theta).
+\end{equation}
 ここで，$C_2(a)=j_a(j_a+1)$は，$2$次のCasimir不変量である．
 
 ## $\mathrm{SU}(2)$上のHilbert空間
-
-$\mathrm{SU}(2)$上の複素関数$f$で， $$\int \dd{g} f^*(g)f(g) < \infty$$
+<!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{Hilbert}上のHilbert空間} -->
+$\mathrm{SU}(2)$上の複素関数$f$で，
+\begin{equation}
+  \int \dd{g} f^*(g)f(g) < \infty
+\end{equation}
 を満たすものは，Hilbert空間をなす．
 このヒルベルト空間は，$L^2(\mathrm{SU}(2))$と表される．
 
-Dirac記法を導入すると，状態は， $$\ket{f} = \int dg f(g)\ket{g}$$
+
+Dirac記法を導入すると，状態は，
+\begin{equation}
+\ket{f} = \int dg f(g)\ket{g}
+\end{equation}
 の形で書け，$f(g)$は， $f(g)$は内積$\bra{g}\ket{f}$により，
-$$f(g) = \bra{g}\ket{f}$$ と表される．
-また，$\ket{g}$の内積は，以下のデルタ関数になる: $$\begin{split}
+\begin{equation}
+f(g) = \bra{g}\ket{f}
+\end{equation}
+と表される．
+また，$\ket{g}$の内積は，以下のデルタ関数になる:
+\begin{equation}
+  \begin{split}
     \bra{g}\ket{g'} = \delta_{g,g'}.
-  \end{split}$$
+  \end{split}
+\end{equation}
 
-#### Fourier展開
 
-円周$S^1\simeq \mathrm{U}(1)$上の$2$乗可積分関数$f$に対する Fourier
-展開を復習する．$f(\theta)$は，
-$$f(\theta) = \sum_{n\in\mathbb{Z}}e^{\ri n \theta} f_n$$ と展開できる．
+
+### Fourier展開
+
+円周$S^1\simeq \mathrm{U}(1)$上の$2$乗可積分関数$f$に対する Fourier 展開を復習する．$f(\theta)$は，
+<!-- %  $\mathrm{U}(1)$の生成子を$J$，
+%  $U_g=\exp\ri\theta J$とし，$\bra{n}U_g\ket{n}=e^{\ri \theta n}$として， -->
+\begin{equation}
+  f(\theta) = \sum_{n\in\mathbb{Z}}e^{\ri n \theta} f_n
+\end{equation}
+と展開できる．
 $e^{\ri n\theta}$は，$\mathrm{U}(1)$の1次元既約表現に対応しており，既約表現は整数$n$でラベルされる．
 この関係は，完全系$1=\sum_{n}\bra{n}\ket{n}$の挿入して
-$$f(\theta) =\bra{\theta}\ket{f}
-  =\sum_{n}\bra{\theta}\ket{n}\bra{n}\ket{f}$$
+\begin{equation}
+  f(\theta) =\bra{\theta}\ket{f}
+  =\sum_{n}\bra{\theta}\ket{n}\bra{n}\ket{f}
+\end{equation}
 と展開することで得られる．ここから，$e^{\ri n\theta}=\bra{\theta}\ket{n}$および，$f_n=\bra{n}\ket{f}$であることがわかる．
 
+
 同様に$\mathrm{SU}(2)$のFourier展開が可能である．
-関数空間$L^2(\mathrm{SU}(2))$は，$\mathrm{SU}(2)$の既約表現
-$\mathcal{Q}_j$ を用いて
-$$L^2(\mathrm{SU}(2))\simeq \bigoplus_{j\in\frac{1}{2}\mathbb{Z}} (\mathcal{Q}_j^*\otimes \mathcal{Q}_j)
-  \label{eq:Hilbert_space_dual}$$
+関数空間$L^2(\mathrm{SU}(2))$は，$\mathrm{SU}(2)$の既約表現 $\mathcal{Q}_j$を用いて
+\begin{equation}
+  L^2(\mathrm{SU}(2))\simeq \bigoplus_{j\in\frac{1}{2}\mathbb{Z}} (\mathcal{Q}_j^*\otimes \mathcal{Q}_j)
+  \label{eq:Hilbert_space_dual}
+\end{equation}
 という直和構造を持つことが知られている．
 
-この空間における完全系は， $$\begin{split}
+この空間における完全系は，
+\begin{equation}
+  \begin{split}
     1 =\sum_{j\in\frac{1}{2}\mathbb{Z}} \sum_{m=-j}^j \sum_{n=-j}^j\ket{j,m,n}\bra{j,m,n}
-  \end{split}$$ とかける．これを$f(g)=\bra{g}\ket{f}$に挿入することで，
-$$f(g) = \sum_{j\in\frac{1}{2}\mathbb{Z}} \sum_{m=-j}^j \sum_{n=-j}^j\sqrt{d_j}[D_j]^m_n(g) [f_j]_m^n$$
-と展開することができる(Peter--Weyl 定理)． ここで， $$\begin{aligned}
+  \end{split}
+\end{equation}
+とかける．これを$f(g)=\bra{g}\ket{f}$に挿入することで，
+\begin{equation}
+  f(g) = \sum_{j\in\frac{1}{2}\mathbb{Z}} \sum_{m=-j}^j \sum_{n=-j}^j\sqrt{d_j}[D_j]^m_n(g) [f_j]_m^n
+\end{equation}
+と展開することができる(Peter–Weyl 定理)．
+ここで，
+\begin{align}
     \sqrt{d_j}[D_j]^m_n(g)&=\bra{g}\ket{j,m,n},\\
-    [f_j]_m^n&=\bra{j,m,n}\ket{f}\end{aligned}$$ である． $[D_j]^m_n(g)$
-は，スピン $j$ の既約表現の行列表現（Wigner
-$D$行列）であり，$d_j = 2j + 1$ はその次元である．
+    [f_j]_m^n&=\bra{j,m,n}\ket{f}
+\end{align}
+である．
+$[D_j]^m_n(g)$は，スピン $j$の既約表現の行列表現（Wigner $D$行列）であり，$d_j = 2j + 1$はその次元である．
+
+<!-- %  つまり，ヒルベルト空間の基底を
+%  \begin{equation}
+%      \ket{j,m,n}=\ket{j,m}\otimes\ket{j,n}
+%  \end{equation} -->
+
+
 
 ## 類演算子
-
-群の元$h\in G$に対応する演算子として$L^h$を導入し， $\ket{g}$に対して，
-$$L^h\ket{g}=\ket{hg}$$ と定義する．同様に，右作用を表す演算子$R^h$を
-$$R^h\ket{g}=\ket{g\bar{h}}$$
+群の元$h\in G$に対応する演算子として$L^h$を導入し，
+$\ket{g}$に対して，
+\begin{equation}
+  L^h\ket{g}=\ket{hg}
+\end{equation}
+と定義する．同様に，右作用を表す演算子$R^h$を
+\begin{equation}
+  R^h\ket{g}=\ket{g\bar{h}}
+\end{equation}
 と定義する．ここで，$\bar{h}$は，$h$の逆元を表す．
 $L^h$は，群の左作用，$R^h$は右作用を表しており，次の関係を満たす:
-$$\begin{aligned}
+\begin{align}
   L^{h}L^{h'}&=L^{hh'},\\
   R^{h}R^{h'}&=R^{hh'},\\
-  L^hR^{h'}&=R^{h'}L^h.\end{aligned}$$
+  L^hR^{h'}&=R^{h'}L^h.
+\end{align}
 
-$L^{h}R^{h}$を状態$\ket{\psi}$ に作用させると $$\begin{split}
+$L^{h}R^{h}$を状態$\ket{\psi}$に作用させると
+\begin{equation}
+  \begin{split}
     L^hR^{h}\ket{\psi}=\int dg \psi(g)\ket{hg\bar{h}}=
     \int dg \psi(\bar{h}gh)\ket{g}
-  \end{split}$$ となる．
+  \end{split}
+\end{equation}
+となる．
+<!-- %  $L^g\ket{h}=\ket{gh}$,
+%  $R^g\ket{h}=\ket{h\bar{g}}$
 
-共役類 $\mathcal{C}_\theta$ に属する元 $g$ にわたる左作用 $L^g$
-の積分で定義される演算子
-$$T_\theta = \int_{g\in \mathcal{C}_\theta} dg L^g$$
+%  $L^g U_a L^{\bar{g}}=D_a(\bar{g})U_a$, 
+
+%  $R^g U_a R^{\bar{g}}=U_aD_a(g)$
+
+%  $R^g=e^{\ri\theta^aR_a}$
+%  $L^g=e^{-\ri\theta^aL_a}$
+%  \begin{equation}
+%    \begin{split}
+%      L^gR^g\ket{j,m,n}=[D_a(\bar{g})]^m_{m'}
+%      [D_a(g)]^{n'}_{n}
+%      \ket{j,m',n'}
+%    \end{split}
+%  \end{equation} -->
+
+共役類 $\mathcal{C}_\theta$に属する元 $g$にわたる左作用 $L^g$の積分で定義される演算子
+\begin{equation}
+    T_\theta = \int_{g\in \mathcal{C}_\theta} dg L^g
+\end{equation}
 は，すべての$L^h$および$R^h$と可換である．
-このような演算子$T_\theta$を類演算子と呼ぶ． ここでは左作用
-$L^g$を用いて定義したが，$R^g$を使っても同様に定義できる．
+このような演算子$T_\theta$を類演算子と呼ぶ．
+ここでは左作用 $L^g$を用いて定義したが，$R^g$を使っても同様に定義できる．
 
 $\mathrm{SU}(2)$の場合，群のすべての元と可換であるので，$T_\theta$は
 表現空間の基底$\ket{j,m,n}$を取ると，単位行列に比例する形で作用する．
-したがって， $$T_\theta = \sum_{j}c_jP_{j}$$
+したがって，
+\begin{equation}
+    T_\theta = \sum_{j}c_jP_{j}
+\end{equation}
 ここで，$P_{j}$は，$\mathcal{Q}^*_j\otimes \mathcal{Q}_j$への射影演算子で，$c_j$は係数関数である．
-$T_\theta$に対して表現を取り，トレースとすると，係数 $c_j$ は
-$$c_j = \frac{1}{d_j}\chi_j(\theta)$$ と計算される．
+$T_\theta$に対して表現を取り，トレースとすると，係数 $c_j$は
+\begin{equation}
+c_j = \frac{1}{d_j}\chi_j(\theta)
+\end{equation}
+と計算される．
 したがって、類演算子は次のように展開される：
-$$T_\theta = \sum_{j}\frac{1}{d_j}\chi_j(\theta)P_{j}.$$
+\begin{equation}
+    T_\theta = \sum_{j}\frac{1}{d_j}\chi_j(\theta)P_{j}.
+\end{equation}
 
-指標の直交性[\[eq:character_orthogonality\]](#eq:character_orthogonality){reference-type="eqref"
-reference="eq:character_orthogonality"}を用いると，射影演算子$P_j$は，
-$$\label{eq:projector}
-    P_j =  d_j\int_{0}^{2\pi}\dd{\nu(\theta)}\chi^\dag_j(\theta) T_\theta$$
+
+
+指標の直交性\eqref{eq:character_orthogonality}を用いると，射影演算子$P_j$は，
+\begin{equation}\label{eq:projector}
+    P_j =  d_j\int_{0}^{2\pi}\dd{\nu(\theta)}\chi^\dag_j(\theta) T_\theta
+\end{equation}
 と表すことができる．
 
-#### 類演算子の積
-
-$T_\theta$と$T_{\theta'}$の積は， $$T_\theta T_{\theta'}
-= \sum_{j}\frac{1}{d^2_j}\chi_j(\theta)\chi_j(\theta')P_j$$ となる．
-一方で，射影演算$P_j$は，式[\[eq:projector\]](#eq:projector){reference-type="eqref"
-reference="eq:projector"}により$T_{\theta''}$を使って表されるので，
-$$T_\theta T_{\theta'}
-= 
-\int_{0}^{2\pi}\dd{\nu(\theta'')}
-\mathcal{K}(\theta,\theta',\theta'') T_{\theta''}$$ と書くことできる．
-ここで，結合係数（structure
-constant）$\mathcal{K}(\theta, \theta', \theta'')$ は $$\begin{split}
+\paragraph{類演算子の積}
+$T_\theta$と$T_{\theta'}$の積は，
+\begin{equation}
+T_\theta T_{\theta'}
+= \sum_{j}\frac{1}{d^2_j}\chi_j(\theta)\chi_j(\theta')P_j
+\end{equation}
+となる．
+一方で，射影演算$P_j$は，式\eqref{eq:projector}により$T_{\theta''}$を使って表されるので，
+\begin{equation}
+T_\theta T_{\theta'}
+=\int_{0}^{2\pi}\dd{\nu(\theta'')}
+\mathcal{K}(\theta,\theta',\theta'') T_{\theta''}
+\end{equation}
+と書くことできる．
+ここで，結合係数（structure constant）$\mathcal{K}(\theta, \theta', \theta'')$は
+\begin{equation}
+  \begin{split}
    \mathcal{K}(\theta,\theta',\theta'')= \sum_{a}\frac{1}{d_a}\chi_a(\theta)\chi_a(\theta')\chi^\dag_a(\theta'')
-   %=\frac{\pi}{4}\frac{1}{\sin\frac{\theta}{2}\sin\frac{\theta'}{2}\sin\frac{\theta''}{2}}
-  \end{split}$$
+   <!-- % =\frac{\pi}{4}\frac{1}{\sin\frac{\theta}{2}\sin\frac{\theta'}{2}\sin\frac{\theta''}{2}} -->
+  \end{split}
+\end{equation}
 である．この関数は，$\theta''$が$|\theta-\theta'|\leq \theta''\leq\min(\theta+\theta',4\pi-\theta-\theta')$のときに値(台)を持つ．その上では次のように具体的に計算される:
-$$\begin{split}
+\begin{equation}
+  \begin{split}
    \mathcal{K}(\theta,\theta',\theta'')
    =\frac{\pi}{4}\frac{1}{\sin\frac{\theta}{2}\sin\frac{\theta'}{2}\sin\frac{\theta''}{2}}.
-  \end{split}$$
+  \end{split}
+\end{equation}
+<!-- %  Racah係数$W(abcd;ef)$を用いて，
+%  \begin{equation}
+%    % \braket{ j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}
+%    [F_{abc}^d]_f^e=v_{e}v_{f}W(j_aj_bj_dj_c;j_{e}j_{f})
+%  \end{equation}
+%  と表せる．Wigner $6$-jシンボルを用いると
+%  \begin{equation}
+%    W(abcd;ef)=(-1)^{a+b+c+d}
+%    \begin{Bmatrix}
+%      a & b & e\\
+%      d & c & f
+%    \end{Bmatrix}
+%    % checked sympy 
+%  \end{equation} -->
 
-[^1]: 一般には位相の不定性があるがここでは係数が実で正になるように取ってある．
+
+<!-- %  \begin{equation}
+%    \begin{split}
+%      &\begin{Bmatrix}
+%        j_a,j_b,j_c\\
+%        j_d,j_e,j_f
+%      \end{Bmatrix}\\
+%      &=\sum_{m_a}(-1)^{\sum_{k}(j_k-m_k)}
+%      \begin{pmatrix}
+%        j_a & j_b & j_c\\
+%        -m_a & -m_b & -m_c
+%      \end{pmatrix}
+%      \begin{pmatrix}
+%        j_a & j_e & j_f\\
+%        m_a & -m_e & m_f
+%      \end{pmatrix}
+%      \begin{pmatrix}
+%        j_d & j_b & j_f\\
+%        m_d & m_b & -m_f
+%      \end{pmatrix}
+%      \begin{pmatrix}
+%        j_d & j_e & j_c\\
+%        -m_d & m_e & m_c
+%      \end{pmatrix}.          
+%    \end{split}
+%  \end{equation} -->

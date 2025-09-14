@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="106.291pt" height="105.2889pt" viewBox="0 0 106.291 105.2889">
+<defs>
+<g>
+<g id="glyph-0-0">
+<path d="M 15.515625 -0.578125 L 9.546875 -6.546875 L 15.515625 -12.578125 L 14.328125 -13.75 L 8.3125 -7.78125 L 2.34375 -13.75 L 1.125 -12.5625 L 7.09375 -6.546875 L 1.125 -0.546875 L 2.3125 0.65625 L 8.3125 -5.328125 L 14.328125 0.65625 Z M 15.515625 -0.578125 "/>
+</g>
+</g>
+<clipPath id="clip-0">
+<path clip-rule="nonzero" d="M 0 0 L 106.289062 0 L 106.289062 105.289062 L 0 105.289062 Z M 0 0 "/>
+</clipPath>
+<clipPath id="clip-1">
+<path clip-rule="nonzero" d="M 0 0 L 106.289062 0 L 106.289062 105.289062 L 0 105.289062 Z M 0 0 "/>
+</clipPath>
+</defs>
+<g clip-path="url(#clip-0)">
+<rect x="-10.6291" y="-10.52889" width="127.5492" height="126.34668" fill="rgb(100%, 100%, 100%)" fill-opacity="1"/>
+<path fill="none" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="8 8" stroke-miterlimit="4" d="M 57.602688 10.251638 C 70.778469 23.923513 70.778469 46.087575 57.602688 59.755544 C 44.423 73.427419 23.059719 73.427419 9.883938 59.755544 C -3.29575 46.087575 -3.29575 23.923513 9.883938 10.251638 C 23.059719 -3.416331 44.423 -3.416331 57.602688 10.251638 Z M 57.602688 10.251638 " transform="matrix(1, 0, 0, 1, 19.5145, 17.0843)"/>
+</g>
+<g fill="rgb(0%, 0%, 0%)" fill-opacity="1">
+<use xlink:href="#glyph-0-0" x="44.9371" y="58.64034"/>
+</g>
+<g clip-path="url(#clip-1)">
+<path fill="none" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter" stroke="rgb(0%, 0%, 0%)" stroke-opacity="1" stroke-dasharray="8 8" stroke-miterlimit="4" d="M 80.869806 13.97915 C 99.369806 32.615869 99.369806 62.830713 80.869806 81.471338 C 62.369806 100.108056 32.373712 100.108056 13.873712 81.471338 C -4.626288 62.830713 -4.626288 32.615869 13.873712 13.97915 C 32.373712 -4.657569 62.369806 -4.657569 80.869806 13.97915 Z M 80.869806 13.97915 " transform="matrix(1, 0, 0, 1, 5.8841, 4.3646)"/>
+</g>
+</svg>
