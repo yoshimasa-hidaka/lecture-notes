@@ -2,7 +2,7 @@
 # $\mathrm{SU}(2)$群の復習　{#su2 short-title="SU(2) 群の復習"}
 本稿では，具体例として，$\mathrm{SU}(2)$(およびその量子群変形)ゲージ理論について取り上げる.
  その解析に必要となる$\mathrm{SU}(2)$群の表現について簡単に復習しておこう．
-Lie群の表現論を習熟している読者は，本節を読み飛ばし，\ref{sec:KS形式}節に進んでもらって差し支えない．
+Lie群の表現論を習熟している読者は，本節を読み飛ばし，@sec-ks 節に進んでもらって差し支えない．
  
  <!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群} -->
 
@@ -875,10 +875,16 @@ $3$つの表現の合成に対応するダイアグラムは，
   \braket{j_al_a\, j_el_e}{j_d,m_d}
   =
 [(F_{d}^{abc})^{-1}]_{eg} \braket{j_gn_g j_cn_c}{j_dm_d}
-\label{eq:deform}
-\end{equation}
+\end{equation}{#eq-deform2}
+
 が成り立つが示せる．
 
+
+\begin{equation}
+E = mc^2
+\end{equation} {#eq-deform}
+
+式 (@eq-deform) に従って…
 
 ## Haar測度 {#sec-Haar_measure}
 <!-- \subsection{Haar測度}\label{sec-Haar_measure} -->

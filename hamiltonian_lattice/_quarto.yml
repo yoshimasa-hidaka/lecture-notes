@@ -33,7 +33,7 @@ book:
     # Lie.qmd
     # Gaugetheory.qmd
     - SU2.qmd
-#    - Kogut-Susskind.qmd
+    - Kogut-Susskind.qmd
     #- spinnet.qmd
     #- Example.qmd
     #- MTC.qmd
@@ -85,7 +85,9 @@ format:
                   ri: "{\\mathrm{i}}",
                   ER: "R",
                   EL: "L",
-                  dag: "\\dagger"
+                  dag: "\\dagger",
+                  mathbbm: ["{\\mathbb{#1}}", 1],
+                  bbone: "\\unicode{x1D7D9}"
                 },
                 tags: 'ams'
               },
