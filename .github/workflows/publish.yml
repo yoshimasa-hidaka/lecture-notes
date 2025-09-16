@@ -1,0 +1,33 @@
+name: Publish Quarto site
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+
+      # ---- サブブックを HTML ビルド (_site/hamiltonian_lattice) に出力 ----
+      - name: Render sub book
+        run: |
+          quarto render hamiltonian_lattice --to html --output-dir _site/hamiltonian_lattice
+
+      # ---- ルートサイトを HTML ビルド (_site) に出力 ----
+      - name: Render root site
+        run: |
+          quarto render --to html --output-dir _site
+
+      # ---- gh-pages へデプロイ ----
+      - name: Publish to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _site
