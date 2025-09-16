@@ -1,4 +1,4 @@
-name: Publish Quarto site
+name: Publish Quarto site (simple)
 
 on:
   push:
@@ -18,62 +18,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
+      # ① サブをビルド（出力先はサブの設定どおり docs/hamiltonian_lattice/）
+      - name: Render sub (hamiltonian_lattice)
+        run: quarto render hamiltonian_lattice --to html
 
-      # 参考: リポジトリの中身を確認（デバッグ用）
-      - name: List repo
-        run: |
-          pwd
-          ls -la
-          echo "---- hamiltonian_lattice exists? ----"
-          [ -d hamiltonian_lattice ] && ls -la hamiltonian_lattice || echo "NO hamiltonian_lattice dir!"
+      # ② ルートをビルド（出力先は docs/）
+      - name: Render root
+        run: quarto render --to html
 
-      # ルートを _site_root に出力
-      - name: Render root site (to _site_root)
-        run: |
-          quarto render --to html --output-dir _site_root
-          echo "ROOT CONTENTS:"
-          ls -la _site_root || true
-
-      # ★サブはサブ直下で render（作業ディレクトリを移すのが重要）
-      - name: Render sub book (to ../_site_sub)
-        working-directory: hamiltonian_lattice
-        run: |
-          quarto render --to html --output-dir ../_site_sub
-        # 直後に中身確認
-      - name: Show sub output
-        run: |
-          echo "SUB CONTENTS:"
-          ls -la _site_sub || true
-
-      # 統合（存在チェックしてから rsync）
-      - name: Assemble site
-        run: |
-          set -e
-          mkdir -p _site
-          if [ -d "_site_root" ] && [ "$(ls -A _site_root)" ]; then
-            rsync -a _site_root/ _site/
-          else
-            echo "WARN: _site_root is empty or missing"
-          fi
-          if [ -d "_site_sub" ] && [ "$(ls -A _site_sub)" ]; then
-            mkdir -p _site/hamiltonian_lattice
-            rsync -a _site_sub/ _site/hamiltonian_lattice/
-          else
-            echo "WARN: _site_sub is empty or missing"
-          fi
-          echo "FINAL _site tree:"
-          ls -la _site
-          ls -la _site/hamiltonian_lattice || true
-
+      # ③ docs/ を Pages artifact としてアップロード
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: _site
+          path: docs
 
   deploy:
     needs: build
