@@ -24,25 +24,40 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      # ルートを一時出力（_site_root）
+      # ルート → _site_root に出力（プロジェクトの output-dir を上書き）
       - name: Render root site (to _site_root)
         run: |
           quarto render --to html --output-dir _site_root
+          echo "ROOT CONTENTS:"
+          ls -la _site_root || true
 
-      # サブを一時出力（_site_sub）
+      # サブ → _site_sub に出力（プロジェクトの output-dir を上書き）
       - name: Render sub book (to _site_sub)
         run: |
           quarto render hamiltonian_lattice --to html --output-dir _site_sub
+          echo "SUB CONTENTS:"
+          ls -la _site_sub || true
 
-      # 統合して _site/ へ配置
+      # 統合：存在するものだけを _site に集約（無ければスキップ）
       - name: Assemble site
         run: |
+          set -e
           mkdir -p _site
-          rsync -a _site_root/ _site/
-          mkdir -p _site/hamiltonian_lattice
-          rsync -a _site_sub/ _site/hamiltonian_lattice/
+          if [ -d "_site_root" ] && [ "$(ls -A _site_root)" ]; then
+            rsync -a _site_root/ _site/
+          else
+            echo "WARN: _site_root is empty or missing"
+          fi
+          if [ -d "_site_sub" ] && [ "$(ls -A _site_sub)" ]; then
+            mkdir -p _site/hamiltonian_lattice
+            rsync -a _site_sub/ _site/hamiltonian_lattice/
+          else
+            echo "WARN: _site_sub is empty or missing"
+          fi
+          echo "FINAL _site:"
+          ls -la _site
+          ls -la _site/hamiltonian_lattice || true
 
-      # Pages 用 artifact をアップロード
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
