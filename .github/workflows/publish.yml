@@ -21,15 +21,15 @@ jobs:
       - uses: actions/checkout@v4
       - uses: quarto-dev/quarto-actions/setup@v2
 
-      # ① サブをビルド（出力先はサブの設定どおり docs/hamiltonian_lattice/）
-      - name: Render sub (hamiltonian_lattice)
-        run: quarto render hamiltonian_lattice --to html
-
-      # ② ルートをビルド（出力先は docs/）
+      # ① ルートを先にビルド（docs/ を生成／クリーンするのはこの時点で済ませる）
       - name: Render root
         run: quarto render --to html
 
-      # ③ docs/ を Pages artifact としてアップロード
+      # ② サブを後でビルド（docs/hamiltonian_lattice/ を上書き・追記）
+      - name: Render sub (hamiltonian_lattice)
+        run: quarto render hamiltonian_lattice --to html
+
+      # ③ docs/ を Pages artifact に
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
