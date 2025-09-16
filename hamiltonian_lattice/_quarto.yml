@@ -1,18 +1,11 @@
-
 project:
   type: book
+  output-dir: ../docs/hamiltonian_lattice
 
 book:
   title: "格子ゲージ理論 講義ノート"
   downloads: [pdf]
   page-navigation: true
-  # navbar:
-  #   search: true
-  #   left:
-  #     - href: ../index.html
-  #       text: Toppage
-  #     - href:  index.html
-  #       text: ハミルトニアン形式による格子ゲージ理論
   sidebar:
     style: floating
     background: light
@@ -22,45 +15,30 @@ book:
       - icon: github
         href: "https://github.com/yoshimasa-hidaka/lecture-notes"
         text: "View source"
-
       - icon: link
         href: "../index.html"
         text: "講義ノートへ戻る"
-
-
   chapters:
     - index.qmd
-    # Lie.qmd
-    # Gaugetheory.qmd
     - SU2.qmd
     - Kogut-Susskind.qmd
-    #- spinnet.qmd
-    #- Example.qmd
-    #- MTC.qmd
-    #- SU3.qmd
-    #- meanfield.qmd
-    #- fermion.qmd
-#    - prepotential.qmd
-#    - tensor_renormalization.qmd
   appendices:
     - references.qmd
-#    - group_theory.qmd
-#    - q-deformation.qmd
-    #- answer.qmd
 
 lang: ja
+
 crossref:
-  chapters: false   # 「Chapter 3」と出さない
-  eq-prefix: ""  # 「式(3.1)」と出さない
-  fig-prefix: "" # 「図3.1」と出さない
-  
+  chapters: false
+  eq-prefix: ""
+  fig-prefix: ""
+
 language:
   crossref-ch-prefix: ""
-  crossref-sec-prefix: ""  
+  crossref-sec-prefix: ""
 
 execute:
-  cache: true        # Jupyter でも knitr でも有効（チャンク単位の #| cache: true も可）
-  freeze: auto       # 変更がなければ再レンダーしない（ページ/サイトで劇的に効く）
+  cache: true
+  freeze: auto
 
 format:
   html:
@@ -68,12 +46,12 @@ format:
     css: styles.css
     toc: true
     number-sections: true
-    number-depth: 2         # 見出し番号の深さ
-    code-copy: true         # コードのコピーアイコン
-    code-overflow: wrap     # 長いコードを折り返し
-    highlight-style: github # コード配色
+    number-depth: 2
+    code-copy: true
+    code-overflow: wrap
+    highlight-style: github
     link-external-newwindow: true
-    lightbox: auto          # 図版の拡大表示を自動
+    lightbox: auto
     include-in-header:
       - text: |
           <script>
@@ -98,20 +76,19 @@ format:
               }
             };
           </script>
-
-  # pdf:
-  #   pdf-engine: lualatex
-  #   documentclass: book
-  #   include-in-header:
-  #     text: |
-  #       \usepackage{luatexja}
-  #       \usepackage[hiragino-pron]{luatexja-preset} % ← プリセットでヒラギノ指定
-  #       \usepackage{amsmath,amssymb,mathtools,bm,bbm}
-  #       \usepackage[italicdiff]{physics}
-  #       \newcommand{\ri}{\mathrm{i}}
-  #       \newcommand{\ER}{R}
-  #       \newcommand{\EL}{L}
-  #       \newtheorem{example}{例}
-  #       \newtheorem{definition}{定義}
-  #       \newtheorem{theorem}{定理}
-  #       \newtheorem{question}{問}
+  pdf:
+    pdf-engine: lualatex
+    documentclass: book
+    include-in-header:
+      text: |
+        \usepackage{luatexja}
+        \usepackage[ipaex]{luatexja-preset} 
+        \usepackage{amsmath,amssymb,mathtools,bm,bbm}
+        \usepackage[italicdiff]{physics}
+        \newcommand{\ri}{\mathrm{i}}
+        \newcommand{\ER}{R}
+        \newcommand{\EL}{L}
+        \newtheorem{example}{例}
+        \newtheorem{definition}{定義}
+        \newtheorem{theorem}{定理}
+        \newtheorem{question}{問}

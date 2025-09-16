@@ -1,33 +1,31 @@
-execute:
-  cache: true        # Jupyter でも knitr でも有効（チャンク単位の #| cache: true も可）
-  freeze: auto       # 変更がなければ再レンダーしない（ページ/サイトで劇的に効く）
-  
 project:
   type: website
   output-dir: docs
 
-  pre-render:
-    - quarto render hamiltonian_lattice
-
-  post-render:
-    - mkdir -p docs/hamiltonian_lattice
-    - rsync -a hamiltonian_lattice/_book/ docs/hamiltonian_lattice/
+  render:
+    - index.qmd
+    - "!hamiltonian_lattice/**"
 
 website:
   title: "講義ノート"
   navbar:
     search: true
     left:
-      - href: index.html
+      - href: index.qmd
         text: Home
       - href: hamiltonian_lattice/index.html
         text: ハミルトニアン形式による格子ゲージ理論
-  sidebar:
-    background: light
-    style: "floating"
+
+sidebar:
+  background: light
+  style: floating
+
+execute:
+  cache: true
+  freeze: auto
 
 format:
   html:
-    theme: flatly  
+    theme: flatly
     toc: true
     number-sections: true
