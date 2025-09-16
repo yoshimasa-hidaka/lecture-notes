@@ -5,13 +5,11 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
-# ★ Pages に必要な権限
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# ★ 同時実行制御（推奨）
 concurrency:
   group: "pages"
   cancel-in-progress: true
@@ -26,17 +24,17 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      # ルートを一時出力
+      # ルートを一時出力（_site_root）
       - name: Render root site (to _site_root)
         run: |
           quarto render --to html --output-dir _site_root
 
-      # サブを一時出力
+      # サブを一時出力（_site_sub）
       - name: Render sub book (to _site_sub)
         run: |
           quarto render hamiltonian_lattice --to html --output-dir _site_sub
 
-      # 統合して _site へ
+      # 統合して _site/ へ配置
       - name: Assemble site
         run: |
           mkdir -p _site
