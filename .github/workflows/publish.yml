@@ -5,8 +5,19 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+# ★ Pages に必要な権限
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# ★ 同時実行制御（推奨）
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -15,19 +26,37 @@ jobs:
       - name: Setup Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
-      # ---- サブブックを HTML ビルド (_site/hamiltonian_lattice) に出力 ----
-      - name: Render sub book
+      # ルートを一時出力
+      - name: Render root site (to _site_root)
         run: |
-          quarto render hamiltonian_lattice --to html --output-dir _site/hamiltonian_lattice
+          quarto render --to html --output-dir _site_root
 
-      # ---- ルートサイトを HTML ビルド (_site) に出力 ----
-      - name: Render root site
+      # サブを一時出力
+      - name: Render sub book (to _site_sub)
         run: |
-          quarto render --to html --output-dir _site
+          quarto render hamiltonian_lattice --to html --output-dir _site_sub
 
-      # ---- gh-pages へデプロイ ----
-      - name: Publish to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      # 統合して _site へ
+      - name: Assemble site
+        run: |
+          mkdir -p _site
+          rsync -a _site_root/ _site/
+          mkdir -p _site/hamiltonian_lattice
+          rsync -a _site_sub/ _site/hamiltonian_lattice/
+
+      # Pages 用 artifact をアップロード
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _site
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
