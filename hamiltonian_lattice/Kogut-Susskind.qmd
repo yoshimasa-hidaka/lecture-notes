@@ -445,7 +445,7 @@ $[U_{a}]^{m_a}_{n_a}\ket*{0}$は$\ket*{j_a,m_a,n_a}$に比例する．
 $$
   [U_{a}]^{m_a}_{n_a}\ket*{0}= C(j_a,m_a,n_a)\ket*{j_a,m_a,n_a}
 $${#eq-U0_normalization}
-として，規格化因子$C(j_a,m_a,n_a)$を求めよう．式(@eq-U0_normalization}の両辺に$\ER_{\pm}$を作用させると，式(@eq-Espm),
+として，規格化因子$C(j_a,m_a,n_a)$を求めよう．式(@eq-U0_normalization)の両辺に$\ER_{\pm}$を作用させると，式(@eq-Espm),
 (@eq-EspmUa)，$\ER_\pm\ket{0}=0$より， 
 $$
   \begin{split}
@@ -813,7 +813,7 @@ $$
   </span>
   <img src="figs/plaquetteAction5.svg" style="height:5.5em;">
 </div>
-$$ $$#{eq-Wilson_loop_action}
+$$ $${#eq-Wilson_loop_action}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -835,7 +835,7 @@ $$
 [F_{b_{i}}^{c_{i}a_{i-1}d}]_{a_{i}b_{i-1}}
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction5.pdf}}}.
   \end{split}
-$$#{eq-Wilson_loop_action}
+$${#eq-Wilson_loop_action}
 :::
 
 ここで，$a_{0}$と$b_{0}$は，$a_{4}$および$b_{4}$と解釈する．

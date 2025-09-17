@@ -96,6 +96,20 @@ $$
 $$
 :::
 
+
+::: {.content-visible when-format=html}
+<div markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$Q \quad $$
+  </span>
+  <img src="figs/cab.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\delta_{abc}$$
+  </span>
+    <img src="figs/cab.svg" style="height:5.5em;">
+</div>
+:::
+
 ::: {.content-visible when-format=pdf}
 $$
   Q \quad \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cab.pdf}}}
@@ -137,6 +151,13 @@ $Q(v)$はすべての$Q(v')$, $E^2(e)$, $\tr U(f)$と可換で，ハミルトニ
 まず，$2$次元六角(ハニカム)格子上の$\mathrm{SU}(2)_k$ゲージ理論を考えよう．
 ハニカム格子は，すべての頂点が$3$点である:
 
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/HoneycombLattice.svg" style="height:5.5em;">
+</div>
+:::
+
+
 :::{ .content-visible when-format=pdf}
 \begin{equation*}
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/HoneycombLattice.pdf}}}.
@@ -149,6 +170,13 @@ $Q(v)$はすべての$Q(v')$, $E^2(e)$, $\tr U(f)$と可換で，ハミルトニ
 \subsubsection{正方格子上の\texorpdfstring{$\mathrm{SU}(2)_k$}{SU(2)k}ゲージ理論}
 次に$2$次元正方格子上の$\mathrm{SU}(2)_k$ゲージ理論を考えよう:
 
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/square.svg" style="height:5.5em;">
+</div>
+:::
+
 ::: {.content-visible when-format=pdf}
 $$
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/square.pdf}}}.
@@ -156,6 +184,16 @@ $$
 :::
 頂点は$4$点になっているので，このままでは3点頂点を仮定した我々の模型が適用できない．
 我々の模型が適用できるように補助リンクを導入し各頂点を$3$点に分解する:
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/square.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$ \Rightarrow $$
+  </span>
+  <img src="figs/square_honeycomb.svg" style="height:5.5em;">
+</div>
+:::
 
 ::: {.content-visible when-format=pdf}
 $$
@@ -169,6 +207,17 @@ $$
 $\tilde{\mathcal{E}}$を黒色の辺の集合とする．$\mathcal{F}$は，6角形の集合に取れば良い．
 
 補助線の入れ方には任意性がある．別の補助線の入れ方では，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/square.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$ \Rightarrow $$
+  </span>
+  <img src="figs/square_mod.svg" style="height:5.5em;">
+</div>
+:::
+
 
 ::: {.content-visible when-format=pdf}
 $$
@@ -231,7 +280,7 @@ $$
   \qty(\tr U)^n
 $$
 と展開される．$n\geq1$について，
-$\qty(\tr U)^n$は，式\eqref{eq-fusion Wilson loop}を用いると
+$\qty(\tr U)^n$は，式(@eq-fusion_Wilson_loop)を用いると
 $$
   \qty(\tr U)^n= \sum_{c}\tr U_c
   [(N_{\frac{1}{2}})^{n-1}]^{c}_{\frac{1}{2}}
@@ -253,7 +302,7 @@ $$
   \end{split}
 $$
 と表せる．
-ここで$ N_{\frac{1}{2}}$は，
+ここで$N_{\frac{1}{2}}$は，
 $$
   N_{\frac{1}{2}}=
     \begin{pmatrix}
@@ -275,7 +324,7 @@ $$
   S_{ab}= \sqrt{\frac{2}{k+2}}\sin\qty(\frac{(2j_a+1) (2j_b+1)\pi}{k+2})=\frac{1}{\mathcal{D}}[(2j_a+1)(2j_b+1)]
 $$
 である．
-したがって，行列$N_{\frac{1}{2}}$[式(@eq-N_matrix)を参照]は，固有値$\lambda_a$を
+したがって，行列$N_{\frac{1}{2}}$ (式(@eq-N_matrix)を参照)は，固有値$\lambda_a$を
 $$
   \lambda_a =  \frac{S_{\frac{  1}{2}a}}{S_{0a}}=2\cos\qty(\frac{(2j_a+1)\pi}{k+2}),\\
 $$

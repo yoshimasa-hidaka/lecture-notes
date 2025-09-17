@@ -23,6 +23,8 @@ book:
     - SU2.qmd
     - Kogut-Susskind.qmd
     - stringnet.qmd
+    - Example.qmd
+    - MTC.qmd
   appendices:
     - references.qmd
 

@@ -1,0 +1,393 @@
+## Modular tensor categoryを用いたハミルトニアンゲージ理論
+
+これまでボトムアップ的に理論を構成してきたが，ここではトップダウン的に理論を構成する．
+ゲージ理論の構成に必要なデータとその代数は，
+unitary modular tensor category(UMTC)に含まれている. この代数は，トポロジカル秩序相を記述するエニオン模型でよく用いられる~\cite{Kitaev:2005hzj}.
+$\mathrm{SU}(2)_k$ゲージ理論で見たように，UMTCは，ゲージ理論を記述する上でも有用である．
+ここでの表記は，参考文献\cite{Barkeshli:2014cna}に準じている．
+<!-- % For more comprehensive details, see, e.g., references \cite{Kitaev:2005hzj,Bonderson:2007ci}. -->
+
+### String type 
+
+Wilson lineの表現に対応する自由度．本稿では，$a,b,c,\cdots$で表現する．$\mathrm{SU}(2)_k$ゲージ理論の場合は，角運動量$j$がそれに当たる．
+一般に$\mathrm{SU}(N)_k$の場合は，最高ウェイトベクトルやDynkinラベルに対応する．
+
+### String orientations
+ 表現$a$に対して反表現が存在する．それを$\bar{a}$と書く．グラフィカルな表現では，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/a.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/abar.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+ =
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abar.pdf}}}
+$$と表す．
+:::
+
+### Branching rule
+ 
+ Wilson lineは合成することができ，合成した，
+ $3$点頂点が満たすべき状態のルール．Gaussの拘束条件に対応する．$\mathrm{SU}(2)_k$の時は，三角不等式を満たす状態に対応する．
+
+Fusionルールは，
+$$  a\times b = \sum_{c}N_{ab}^{c}c
+$$で，結合則
+$$  \sum_e  N_{ab}^{e} N_{ec}^{d} = \sum_f N_{af}^{d} N_{bc}^{f}
+$$で，$N_{ab}^c=N_{ba}^c=N_{b\bar{c}}^{\bar{a}}=N_{\bar{a}\bar{b}}^{\bar{c}}$を満たす．
+ここで，$N_{ab}^{c}$は重複度と呼ばれ非負の整数である．これは，表現$a$, $b$を合成して，$c$ができる数に対応し，$\mathrm{SU}(2)_k$の場合は，$N_{ab}^{c}$は$0$または$1$の値を取る．
+一般には，$N_{ab}^c>1$の値を取る．例えば，$\mathrm{SU}(3)$群の場合は，$2$つの随伴表現$\vb{8}$の合成$\vb{8}\otimes \vb{8}$は，$\vb{1}\oplus\vb{8}\oplus\vb{8}\oplus\overline{\vb{10}}\oplus\vb{10}\oplus\vb{27}$に分解される．つまり，
+$N_{\vb{8}\vb{8}}^{\vb{1}}=N_{\vb{8}\vb{8}}^{\vb{10}}=N_{\vb{8}\vb{8}}^{\overline{\vb{10}}}=N_{\vb{8}\vb{8}}^{{\vb{27}}}=1$ and $N_{\vb{8}\vb{8}}^{\vb{8}}=2$.である．Dynkinラベルのかわりに表現の次元を用いて状態を指定した． Dynkinラベル$(p,q)$
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/Young_diagram.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Young_diagram.pdf}}}
+$$
+:::
+
+を用いる場合は，$\vb{1}=(0,0)$, $\vb{8}=(1,1)$, $\vb{10}=(3,0)$, $\overline{\vb{10}}=(0,3)$, 及び${\vb{27}}=(2,2)$が対応する．
+
+特別な場合として，$0$を自明な表現とすると，$N_{a0}^{e}=N_{0a}^{e}=\delta_a^e$となる．また，$N_{a\bar{a}}^0=1$である．
+
+
+$\vb{N}_a$を行列の成分が$[\vb{N}_a]_b^c=N_{ab}^c$で与えられる行列とみなした時，$\vb{N}_a$の最大固有値を$d_a$と書き，量子次元と呼ぶ．また，
+$$  \mathcal{D}=\sqrt{\sum_{a}d_a^2}
+$$を全量子次元と呼ぶ．$d_a$は一般に整数ではない点に注意．
+$N_{ab}^c=N_{\bar{a}\bar{b}}^{\bar{c}}$であるので，表現と反表現の量子次元は等しい $d_{\bar{a}}=d_a$.
+
+
+
+Wilson線のネットワークは，ジャンクションを持つが，一般にジャンクションにも量子数 $\mu$が付与される．これは，状態の重複度$N_{ab}^c\geq2$のときに状態を区別するためのラベルである:
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/abcmu.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$, $$
+  </span>
+  <img src="figs/cabmu.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abcmu.pdf}}},\quad
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cabmu.pdf}}},
+\end{align}
+:::
+
+
+
+ここで． $\mu\in\{1,2,\cdots, N_{ab}^c\}$の値を取る．
+$\mathrm{SU}(2)_k$の場合は，$ N_{ab}^c\in\{0,1\}$なので，このラベルは必要がない．
+
+トポロジカルな変形ルールを以下にまとめる．
+式(@eq-merge)や式(@eq-loop)は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/abcloopmu.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \delta_c^{c'}\delta_{\mu}^{\mu'}\sqrt{\frac{d_ad_b}{d_c}}$$
+  </span>
+  <img src="figs/c.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{includegraphics[scale=0.3]{figs/abcloopmu.pdf}}}
+= \delta_c^{c'}\delta_{\mu}^{\mu'}\sqrt{\frac{d_ad_b}{d_c}}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/c.pdf}}}
+  \label{eq-stacking}
+\end{align}
+:::
+
+や
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/parallel1.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{c,\mu}\sqrt{\frac{d_c}{d_ad_b}}$$
+  </span>
+  <img src="figs/parallel2mu.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{includegraphics[scale=0.3]{figs/parallel1.pdf}}}
+= \sum_{c,\mu}\sqrt{\frac{d_c}{d_ad_b}}
+  \vcenter{\hbox{includegraphics[scale=0.3]{figs/parallel2mu.pdf}}}
+  \label{eq-partition}
+\end{align}
+:::
+
+に拡張される．また，$F$シンボルは,$[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$となり，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove1mu.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \sum_{f,\rho,\sigma} [F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$$
+  </span>
+  <img src="figs/fmove2mu.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1mu.pdf}}}
+&= \sum_{f,\rho,\sigma} [F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}
+\ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2mu.pdf}}}
+\label{eq-Fmove}
+\end{align}
+:::
+
+によって与えられ，
+$$  [(F^{abc}_d)^{-1}]_{(e,\mu,\nu)(f,\rho,\sigma)}
+  =[(F^{abc}_d)^{\dag}]_{(e,\mu,\nu)(f,\rho,\sigma)}
+  =[F^{abc}_d]^{*}_{(f,\rho,\sigma)(e,\mu,\nu)}
+$$や，ペンタゴン方程式
+$$  \begin{split}
+    &\sum_{\delta}[F_e^{fcd}]_{(g,\beta,\gamma)(l,\nu,\delta)} [F_e^{abl}]_{(f,\alpha,\delta)(k,\mu,\lambda)}\\
+    &\quad= \sum_{h,\sigma,\psi,\rho} [F^{abc}_g]_{(f,\alpha,\beta)(h,\psi,\sigma)} [F_{e}^{ahd}]_{(g,\sigma,\gamma)(k,\rho,\lambda)} [F^{bcd}_{k}]_{(h,\psi,\rho)(l,\nu,\mu)}
+  \end{split}
+$$を満たす．
+また，Wilson線の交換に対応するブレイドは，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/Rabmu.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{\nu}[R_c^{ab}]_{\mu\nu}\ $$
+  </span>
+  <img src="figs/cabnu.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+\vcenter{\hbox{\includegraphics[scale=0.3]{figs/Rabmu.pdf}}}
+=
+  \sum_{\nu}[R_c^{ab}]_{\mu\nu}\ 
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cabnu.pdf}}}
+\end{align}
+:::
+
+と記述される．これらは，具体系は書かないが，$[R^{ab}]_{\mu\nu}$と$F$-symbolsは，無矛盾条件(Hexagon equations)を満たす．
+
+<!-- % Let us use the deformation rules to derive some relations.
+% A Wilson loop with representation $a$ is graphically represented as
+% \begin{align}
+%   \tr U_a =\  \parbox{2.cm}{\includegraphics[scale=0.3]{figs/loopa2.pdf}}.
+% \end{align}
+% {Here, we introduced a defect at the center of the loop to prevent it from collapsing when contracted.
+% When the defect is absent, it reduced to}
+% \begin{align}\label{eq-loop_deformation}
+%   \parbox{2.cm}{\includegraphics[scale=0.3]{figs/loopa1.pdf}} = d_a,
+% \end{align}
+% by choosing $b=\bar{a}$ and $c=0$ in eq.~(@eq-stacking).
+% Two Wilson loops with representations $a$ and $b$ can be deformed using eqs~(@eq-stacking) and (@eq-partition) to 
+% \begin{align}
+% \label{eq-wilsonloop_fusion_graph}
+%   \parbox{2.cm}{\includegraphics[scale=0.3]{figs/loopab1.pdf}}
+%   &=\sum_{\mu,c}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}\ \parbox{2.2cm}{\includegraphics[scale=0.3]{figs/loopab2.pdf}}
+%   =\sum_{\mu,c}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}\  \parbox{2.2cm}{\includegraphics[scale=0.3]{figs/loopab3.pdf}}\notag\\
+%   &=\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}\frac{\sqrt{d_{\bar{b}} d_{\bar{a}}}}{\sqrt{d_{\bar{c}}}}\  \parbox{2.cm}{\includegraphics[scale=0.3]{figs/loopc.pdf}}
+%   =\sum_{c}N_{ab}^c\  \parbox{2.cm}{\includegraphics[scale=0.3]{figs/loopc.pdf}}.
+% \end{align}
+% In the last equality, we used $d_{\bar{a}}=d_{a}$, etc.
+% This leads to the fusion rule of Wilson loops:
+% $$% \label{eq-wilsonloop_fusion}
+%   \tr U_a \tr U_b = \sum_{c}N_{ab}^c\tr U_c.
+% $$% Furthermore, using eq.~(@eq-loop_deformation}, we obtain
+% \begin{equation}\label{eq-dadb}
+%   d_{a}d_{b} =\sum_{c}N_{ab}^c d_c.
+% $$% Let us derive the inverse relation of eq.~(@eq-dadb}.
+% Noting $d_{\bar{b}}=d_{b}$, $d_{\bar{c}}=d_{c}$, and $N_{a\bar{b}}^{\bar{c}}=N_{ac}^b$, we obtain
+% $$%   d_{a}d_{b} =\sum_{c}N_{ac}^{b} d_c.
+% $$% Multiplying both sides by $d_a$ and summing over $a$ yield
+% the inverse relation of eq.~(@eq-dadb},
+% \begin{equation}\label{eq-inverser_dadb}
+%   \mathcal{D}^2 d_{b} =\sum_{a,c}N_{ac}^{b} d_a d_c.
+% $$% where $\mathcal{D}$ is the total quantum dimension defined by 
+% $$%   \mathcal{D} \coloneqq \sqrt{\sum_{a}d_a^2}.
+% $$% In a gauge theory, of course, the Wilson lines are generally not topological. However, as will be seen later, these rules play a crucial role in computing the action of the operators on a physical state. -->
+
+
+
+
+
+
+
+以下の量も導入しておくと便利である．
+$S$行列\footnote{散乱理論の$S$行列ではない点に注意.}は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$S_{ab}=\frac{1}{\mathcal{D}}$$
+  </span>
+  <img src="figs/sab0.svg" style="height:3.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  S_{ab}=\frac{1}{\mathcal{D}}\,\,
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/sab0.pdf}}}
+\end{align}
+:::
+
+である．
+これより，$b=0$にすると，$S_{0a}=S_{a0}=d_a/\mathcal{D}$が得られる．
+また，
+
+::: {.content-visible when-format=html}
+<div markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/sab.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\frac{S_{ab}}{S_{0b}}$$
+  </span>
+  <img src="figs/b.svg" style="height:5.5em;">
+</div>
+$$ $${#eq-link}
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/sab.pdf}}}
+=\frac{S_{ab}}{S_{0b}}\,\,
+\vcenter{\hbox{\includegraphics[scale=0.3]{figs/b.pdf}}}
+\end{align}
+:::{#eq-link}
+
+が成り立つ．
+
+式(@eq-vacuum_line)と同様に真空線を
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vacuumLine.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\frac{1}{\mathcal{D}}\sum_{a}d_a$$
+  </span>
+  <img src="figs/a.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{a}S_{a0}$$
+  </span>
+<img src="figs/a.svg" style="height:5.5em;">
+  </div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLine.pdf}}}
+=\frac{1}{\mathcal{D}}\sum_{a}d_a\,\,
+\vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+=\sum_{a}S_{a0}\,\,
+\vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+\end{align}
+:::
+
+で定義する\footnote{この線は，自明表現の線とは異なるので注意}．
+これは，正則表現のWilson線を$\mathcal{D}$で割ったものに対応する．
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vacuumMove1.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/vacuumMove2.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{includegraphics[scale=0.3]{figs/vacuumMove1.pdf}}}
+=\vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove2.pdf}}}
+\end{align}
+:::
+
+を満たす．真空線のループは
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vacuumLoop0.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\mathcal{D}$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLoop0.pdf}}}=\mathcal{D}
+\end{align}
+:::
+
+となり全量子次元に等しい．
+真空線の合成より
+
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vacuumDoubleLoop.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\mathcal{D}$$
+  </span>
+  <img src="figs/vacuumLoop.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumDoubleLoop.pdf}}}=\mathcal{D}\,
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLoop.pdf}}}
+\end{align}
+:::
+
+が成り立つ．
+
+式(@eq-link)を用いると真空線の周りのループは，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vacuumLoopa.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_b S_{b0}$$
+  </span>
+  <img src="figs/sab.svg" style="height:5.5em;">
+   <span class="math display" style="display:inline-block;">
+    $$=\sum_{b}S_{ab}$$
+  </span>
+  <img src="figs/b.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLoopa.pdf}}}
+=\sum_b S_{b0}\,\,\vcenter{\hbox{\includegraphics[scale=0.3]{figs/sab.pdf}}}
+=\sum_{b}S_{ab}\,\,
+\vcenter{\hbox{\includegraphics[scale=0.3]{figs/b.pdf}}}
+\end{align}
+:::
+
+となる．
