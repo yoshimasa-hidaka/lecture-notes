@@ -248,9 +248,9 @@ $\theta^i$は$g$に対応したパラメータである．波動関数$\psi(g)=\
 $\ER_i$, $\EL_i$は独立な演算子として取り扱う．
 ただし，$(\ER_i)^2=(\EL_i)^2$であるため，完全に独立ではないことに注意する．
 昇降演算子$\ER_\pm = \ER_1\pm\ri \ER_2$, $\EL_\pm = \EL_1\pm\ri \EL_2$を定義すると，
-交換関係(@eq-[E_s,E_s])，(@eq-[E_t,E_t])は，
+交換関係(@eq-E_sE_s)，(@eq-E_tE_t)は，
 $$\begin{aligned}
-  [\ER_3,\ER_\pm] &= \pm \ER_{\pm},\\
+  ~[\ER_3,\ER_\pm] &= \pm \ER_{\pm},\\
   [\ER_+,\ER_-] &= 2 \ER_{3},\\
   [\EL_3,\EL_\pm] &= \mp \EL_{\pm},\\
   [\EL_+,\EL_-] &= -2 \EL_{3}
@@ -430,7 +430,7 @@ $$
   \end{split}
 $$
 がわかる． また，$\ER_3$，$\EL_3$との交換関係
-(@eq-[E_s3,Ua])，(@eq-[E_t3,Ua])
+(@eq-E_s3Ua)，(@eq-E_t3Ua)
 から，
 $$\begin{aligned}
   \ER_3[U_{a}]^{m_a}_{n_a}\ket*{0}&=
@@ -623,14 +623,15 @@ $$
 そうすると，式(@eq-fusion_U)に対応して，
 
 ::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+<div markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/parallel1.svg" style="height:5.5em;">
   <span class="math display" style="display:inline-block;">
     $$= \sum_{c}
-  \sqrt{\frac{d_c}{d_ad_b}}$$
+      \sqrt{\frac{d_c}{d_a d_b}}$$
   </span>
-   <img src="figs/parallel2.svg" style="height:5.5em;">
-</div> {#eq-merge}
+  <img src="figs/parallel2.svg" style="height:5.5em;">
+</div>
+$$ $${#eq-merge}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -645,13 +646,14 @@ $${#eq-merge}
 同様に，
 
 ::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+<div markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/abcloop.svg" style="height:6.5em;">
   <span class="math display" style="display:inline-block;">
     $$=\delta_{c,c'}\sqrt{\frac{d_ad_b}{d_c}}$$
   </span>
   <img src="figs/c.svg" style="height:5.5em;">
 </div>
+$$ $${#eq-loop}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -788,7 +790,7 @@ $$
 へのWilsonループ$\tr U_d$の作用は，Wilsonループのトポロジカルな変形を用いて評価することができる:
 
 ::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+<div markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/plaquetteAction1.svg" style="height:5.5em;">
   <span class="math display" style="display:inline-block;">
     $$=\sum_{b_{1}}\sqrt{\frac{d_{b_{1}} }{d_{a_{1}}d_{d}}}$$
@@ -811,6 +813,7 @@ $$
   </span>
   <img src="figs/plaquetteAction5.svg" style="height:5.5em;">
 </div>
+$$ $$#{eq-Wilson_loop_action}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -846,7 +849,7 @@ $$#{eq-Wilson_loop_action}
 
 ## 表現のカットオフ {#sec-cutoff_representation}
 表現のラベル$j$は無限大まで値を取れるため，数値計算を行なう上では，有限次元に近似する必要がある．ここでは，$j\leq j_{\mathrm{max}}=k/2$のカットオフを入れる．つまり，$j$は，$0,1/2,1,\cdots, k/2$を取り，状態の数は$(k+1)$個である．
-単純なカットオフだとこれまで見てきた式 @eq-merge や(@eq-loop}などのルールが使えなくなる．これらのルールを満たすカットオフは，存在することが知られており，それは，$\mathrm{SU}(2)$を量子群$\mathrm{SU}(2)_k$に変形させることに対応する．量子群の詳細は割愛し( @sec-q_deformation 節参照)，議論に必要な結果だけを記す．
+単純なカットオフだとこれまで見てきた式 (@eq-merge) や(@eq-loop)などのルールが使えなくなる．これらのルールを満たすカットオフは，存在することが知られており，それは，$\mathrm{SU}(2)$を量子群$\mathrm{SU}(2)_k$に変形させることに対応する．量子群の詳細は割愛し( @sec-q_deformation 節参照)，議論に必要な結果だけを記す．
 
 表現のカットオフにより，式(@eq-fusion_delta)の$\delta_{abc}$は修正され
 $$

@@ -193,9 +193,8 @@ $$
   \text{かつ}
   j_{a}+j_{b}+j_{c}\in\mathbb{Z}\\
   0 & \text{その他}
-  \label{eq-fusion delta}
-  \end{cases}
-  $$
+ \end{cases}
+  $${#eq-fusion_delta}
 を導入した．$N_{ab}^{c}$はfusion係数またはテンソル積係数と呼ばれる．
 本稿では，$\delta_{abc}=1$を満たす$j_a,j_b,j_c$を，$j_a,j_b,j_c$が三角不等式を満たすという．
 例えば，$j_a=1$と$j_b=1/2$とすると，三角不等式を満たす$j_c$は，$3/2$または，$1/2$となる．したがって，
@@ -434,8 +433,7 @@ $$
 \braket{j_{f}m_{f}}{ j_bm_b\, j_{c}m_{c} }
 \braket{j_dm_d}{j_am_a\, j_{f}m_{f}}
     \end{split}
-    \label{F-move_def}
-$$
+$${#eq-F-move_def}
 となる．Wigner $6$-$j$シンボルを用いると，よりコンパクトに
 $$
   [F^{abc}_d]_{ef}=(-1)^{j_a+j_b+j_c+j_d}\sqrt{d_{e}d_{f}}
@@ -443,8 +441,7 @@ $$
     j_a & j_b & j_e\\
     j_c & j_d & j_f
   \end{Bmatrix}
-  \label{eq-fmoves}
-$$
+$${#eq-fmoves}
 と表せることが知られている．
 Wigner $6$-$j$シンボルは，
 $$
@@ -843,18 +840,17 @@ $$
 これらのグラフィカルルールを用いると，例えば
 
 ::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+<div  markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/vertex1.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$=\sum_{f} [(F_d^{abc})^{-1}]_{ef}$$
-  </span>
+  = $\sum_{f} [(F_d^{abc})^{-1}]_{ef}$
   <img src="figs/vertex2.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$= [(F_d^{abc})^{-1}]_{eg}$$
-  </span>
+  = $[(F_d^{abc})^{-1}]_{eg}$
   <img src="figs/vertex3.svg" style="height:5.5em;">
 </div>
+
+$$\text{}$${#eq-deform}
 :::
+
 
 ::: {.content-visible when-format=pdf}
 $$
@@ -1103,8 +1099,7 @@ $$
 関数空間$L^2(\mathrm{SU}(2))$は，$\mathrm{SU}(2)$の既約表現 $\mathcal{Q}_j$を用いて
 $$
   L^2(\mathrm{SU}(2))\simeq \bigoplus_{j\in\frac{1}{2}\mathbb{Z}} (\mathcal{Q}_j^*\otimes \mathcal{Q}_j)
-  \label{eq-Hilbert_space_dual}
-$$
+$${#eq-Hilbert_space_dual}
 という直和構造を持つことが知られている．
 
 この空間における完全系は，

@@ -22,13 +22,14 @@ book:
     - index.qmd
     - SU2.qmd
     - Kogut-Susskind.qmd
+    - stringnet.qmd
   appendices:
     - references.qmd
 
 lang: ja
 
 crossref:
-  chapters: false
+  chapters: true
   eq-prefix: ""
   fig-prefix: ""
 
