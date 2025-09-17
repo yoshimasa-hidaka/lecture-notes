@@ -1,0 +1,514 @@
+
+# q変形 {#sec-q_deformation}
+
+$q$変形に関する参考文献として\cite{Bonatsos:1999xj,Ardonne2010ClebschGordanA6}を上げておく．
+表現をカットオフしたゲージ理論で性質の良いものは，$q$変形された量子群を考えることに対応する．
+ここでは，本稿で用いた$q$変形について簡単に紹介する．
+
+## セミシンプルLie代数
+まず一般のセミシンプルLie代数$\mathfrak{g}$の量子群変形を考えよう．
+$\mathfrak{g}$のルートベクトルを$\vb*{\alpha}_i$とする．
+生成子$H_i$, $L_i^\pm$の交換関係をChevalley基底を用いて，
+$$
+  [H_i,H_j]=0,\quad
+  [H_i,L_j^\pm] = \pm A_{ij}L_{j}^\pm,\quad
+  [L_i^+,L_j^-]=\delta_{ij}[H_i]_{q_i}
+$${#eq-q_algebra}
+とする．これらは，
+$i\neq j$について， Serre関係式
+$$
+  \sum_{s=0}^{1-A_{ij}}(-1)^s
+  \begin{bmatrix}
+    1 - A_{ij}\\
+    s
+  \end{bmatrix}_{q_i}
+  (L_i^\pm)^{1-A_{ij}-s}L_j^\pm(L_i^{\pm})^s=0
+$$
+満たす．
+ここで，$A_{ij}$はCartan行列の要素である:
+$$
+  A_{ij} = \frac{2(\vb*{\alpha}_i,\vb*{\alpha}_j)}{(\vb*{\alpha}_j,\vb*{\alpha}_j)}.
+$$
+また，$t_j$は，
+$$
+  t_j=\frac{2}{(\vb*{\alpha}_j,\vb*{\alpha}_j)}
+$$
+で定義されている．ただし，$(\vb*{\alpha}_j,\vb*{\alpha}_j)$は，規格化に一般にルートベクトルの依存するが，ここでは，最高次のルートベクトル(随伴表現のhighest weight vector)を$\theta$としたとき，$(\theta,\theta)=2$と規格化してあるものとする．$g$をdual Coxeter数\footnote{コルートを$\vb*{\alpha}^{\lor}_i=2\vb*{\alpha}_i/(\vb*{\alpha}_i,\vb*{\alpha}_i)$と定義する．すると$a_i^{\lor}$を非負の整数として，$\theta=\sum_{i=1}^ra_i^{\lor}\vb*{\alpha}^{\lor}_i$と展開できる．ここで，$r$は，Lie代数のランクである．dual Coxeter数は$g\coloneqq\sum_{i=1}^r a^{\lor}_{i}+1$と定義される．}として，$q$は，
+$$
+  q\coloneqq e^{\frac{2\pi\ri}{k+g}}
+$$
+で定義される．添字付きは$q_i\coloneqq q^{1/t_i}$とする．
+$[n]_{q_i}$は，
+$$
+  [n]_{q_i} \coloneqq \frac{q_i^{\frac{n}{2}}-q_i^{\frac{n}{2}}}{q_i^{\frac{1}{2}}-q_i^{-\frac{1}{2}}}
+  =\sum_{m=1}^nq_i^{\frac{n+1}{2}-m}
+$$
+で定義され，二項係数は，
+$$
+  \begin{bmatrix}
+    n\\
+    m
+  \end{bmatrix}_{q_i}
+  \coloneqq\frac{[n]_{q_i}!}{[m]_{q_i}![n-m]_{q_i}!}
+$$
+である．
+ここで，
+$[n]_{q_i}!\coloneqq[1]_{q_i}[2]_{q_i}\cdots [n]_{q_i}$を導入した.
+$k\to\infty$，つまり$q=1$の場合は，式(@eq-q_algebra)は，通常のLie代数に戻る．以下，混乱の恐れがない場合は，添字の$q_i$は省略する．
+
+
+表現の分解を対応付けるcoproduct $\Delta$を
+$$
+  \Delta(H_i)\coloneqq 1\otimes H_i+H_i\otimes 1,
+$$
+
+$$
+  \Delta(L_i^\pm)\coloneqq L_i^\pm\otimes q_i^{H_i/4}+q_{i}^{-H_i/4}\otimes L_i^\pm
+$$
+
+で定義する．これは，coassociativity
+$$
+  ( \Delta\otimes1)\Delta=(1\otimes \Delta)\Delta
+$${#eq-coassociativity}
+を満たす．
+\begin{question}
+  式(@eq-coassociativity)を$L_i^\pm$の場合に確かめよ．
+  つまり，$( \Delta\otimes1)\Delta(L_i^\pm)=(1\otimes \Delta)\Delta(L_i^\pm)$を示せ．
+\end{question}
+<!-- 
+
+% \begin{align}
+%   \Delta(L_i^-)&= L_i^-\otimes q_i^{H_i/4}+q_{i}^{-H_i/4}\otimes L_i^-,\\
+%   \Delta^2(L_i^-)&= L_i^-\otimes q_i^{H_i/4}\otimes q_i^{H_i/4}
+%   + q_{i}^{-H_i/4}\otimes L_i^-\otimes q_i^{H_i/4}+
+%   q_{i}^{-H_i/4}\otimes q_{i}^{-H_i/4}\otimes L_i^-,\\
+% \end{align}
+% $$
+%   \Delta^n(L_i^-)=\sum_{k=0}(\otimes q_i^{-H_i/4})^{k}\otimes L_i^-(\otimes q_i^{-H_i/4})^{n-k}
+% $$
+
+% %また，$\Delta([-,-])=([\Delta(-),\Delta(-)])$を満たす．
+% $$
+% L_-(++++)=
+% q^{-3/4}(-+++)
+% +q^{-1/4}(+-++)
+% +q^{1/4}(++-+)
+% +q^{3/4}(+++-)
+% $$
+% $$
+%   L_-^2(+++++)=
+%   (q^{-3/4}q^{-3/4}+q^{-1/4}q^{-1/4})(--++)
+%   +(q^{-1/4}q^{-3/4}+q^{-1/4}q^{1/4})(-+-+)
+%   +(q^{1/4}q^{-3/4}+q^{-1/4}q^{3/4})(-++-)
+%   +(q^{-1/4}q^{-1/4}+q^{1/4}q^{1/4})(+--+)
+%   +(q^{1/4}q^{-1/4}+q^{1/4}q^{3/4})(+-+-)
+%   +(q^{1/4}q^{1/4}+q^{3/4}q^{3/4})(++--)
+%     $$
+
+% $$
+%   L_-^3(+++++)=
+%   q^{-3/4}(q^{-3/4}q^{-3/4}+q^{-1/4}q^{-1/4})(---+)
+%   +q^{-1/4}(q^{-1/4}q^{-3/4}+q^{-1/4}q^{1/4})(---+)
+%   +q^{1/4}(q^{-1/4}q^{-1/4}+q^{1/4}q^{1/4})(---+)
+%   + q^{-1/4} (q^{-3/4}q^{-3/4}+q^{-1/4}q^{-1/4})(--+-)
+%   +q^{-1/4}(q^{1/4}q^{-3/4}+q^{-1/4}q^{3/4})(--+-)
+%   +q^{1/4}(q^{1/4}q^{-1/4}+q^{1/4}q^{3/4})(--+-)
+%   +q^{-1/4}(q^{-1/4}q^{-3/4}+q^{-1/4}q^{1/4})(-+--)
+%   +q^{1/4}(q^{1/4}q^{-3/4}+q^{-1/4}q^{3/4})(-+--)
+%   +q^{1/4}(q^{1/4}q^{1/4}+q^{3/4}q^{3/4})(-+--)
+%   +q^{1/4}(q^{1/4}q^{-1/4}+q^{1/4}q^{3/4})(+---)
+%   +q^{-1/4}(q^{-1/4}q^{-1/4}+q^{1/4}q^{1/4})(+---)
+%   +q^{3/4}(q^{1/4}q^{1/4}+q^{3/4}q^{3/4})(+---)
+% $$
+
+% $$
+%   (L_-)_k(s_1s_2\cdots s_n)=q^{(\sum_{i=1}^{k-1}s_i-\sum_{i=k+1}^{n}s_i)/4}(s_1s_2\cdots s_{k-1}\bar{s}_ks_{k+1}\cdots s_n)
+% $$-->
+
+
+
+## $\mathrm{SU}(2)_k$
+
+具体例として，$\mathfrak{g}=\mathfrak{su}(2)$の場合を考えよう．
+この場合，ルートベクトルは一つで，$A=2$, $t_1=2/(\vb*{\alpha}_1,\vb*{\alpha}_1)=1$, $g=2$である．
+したがって，
+$$
+  q \eqqcolon q_1= \exp\ri \frac{2\pi}{k+2}
+$$
+として，
+$$
+  [n]\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+2}n)}{\sin\qty(\frac{\pi}{k+2})}
+$$
+となる．$J_0=H_0/A$, $J_\pm=L^\pm$とすると，
+交換関係は，
+$$
+  [J_0,J_\pm]= \pm J_{\pm},
+$$
+$$
+  [J_+,J_-]=  [2J_{0}]
+$$
+となる．
+特に$2$次のカシミア不変量は$[j][j+1]$となる.
+これは，
+$$
+ C_2= J_-J_++[J_0][J_0+1]=
+ J_+J_-+[J_0][J_0-1]
+$${#eq-C2}
+
+で，これは，$J_{\pm}$, $J_0$と可換である．
+\begin{question}
+  $[C_2,J_\pm]=0$, $[C_2,J_0]=0$を示せ．
+\end{question}
+
+状態を，$C_2$と$J_0$の固有状態
+$\ket{j,m}$でラベルすると
+$$
+  C_2\ket{j,m}=[j][j+1]\ket{j,m},
+$$
+$$
+  J_0\ket{j,m} = m \ket{j,m}
+$$
+となる．
+ここで，状態の内積は，$j=0,1/2,1,\cdots k/2$及び，$m=-j,j+1,\cdots, j-1,j$の値を取る．
+また, $J_0 J_\pm\ket{j,m}= (J_\pm J_0+[J_0,J_\pm])\ket{j,m}=(m\pm 1)J_\pm \ket{j,m}$より，$J_\pm\ket{j,m} \propto  \ket{j,m\pm 1}$がわかり，$J_\pm\ket{j,m}=N_\pm(j,m)\ket{j,m\pm1}$として，式 (@eq-C2) より，
+$$
+  |N_\pm(j,m)|^2 =  \bra{j,m}J_\mp J_\pm\ket{j,m}=
+  \bra{j,m}C_2-[J_0][J_0\pm1]\ket{j,m}=[j][j+1]-[m][m\pm 1]
+$$
+となることから，
+$$
+  N_{\pm}(j,m) = \sqrt{[j][j+1]-[m][m\pm1]}=\sqrt{[j\mp m][j\pm m+1]}
+$$
+に選ぶことができる．
+
+次の表現の合成について考えよう．まずcoproduct$\Delta$は，
+$$
+  \Delta(J_0)= J_0\otimes 1 + 1\otimes J_0,
+$$$$
+  \Delta(J_\pm)= J_\pm\otimes q^{J_0/2} + q^{-J_0/2} \otimes J_\pm.
+$$
+である．
+\begin{question}
+coproductと交換子$[-,-]$は作用の順番によらないことを示せ．つまり，
+$\Delta([J_i,J_j]) = [\Delta(J_i),\Delta(J_j) ]$を示せ．
+\end{question}
+
+具体的な例として，ふたつの$j=1/2$の合成を考えよう．
+まず，$\ket{1,1}=\ket{\uparrow}\ket{\uparrow}$となることは容易にわかる．
+$\ket{1,0}$は，$\Delta(J_-)$を作用させることで得ることができる:
+$$
+  \Delta(J_-)\ket{1,1}=
+  q^{1/4}\ket{\uparrow}\ket{\downarrow}
+  +q^{-1/4}\ket{\downarrow}\ket{\uparrow}
+$$
+となる．これは規格化されていない．$\ket{1,0}=\mathcal{N}\Delta(J_-)\ket{1,1}$として，規格化因子$\mathcal{N}$を
+$\bra{1,0}\ket{1,0}=1$となるように決める．ただし，$q$の複素共役は，$q$とする．
+すると，
+$$
+  1=\bra{1,0}\ket{1,0}=|\mathcal{N}|^2(q^{1/2}+q^{-1/2})=
+  |\mathcal{N}|^2[2]
+$$
+より，$\mathcal{N}$の位相を実に選んで
+$$
+  \mathcal{N}= \frac{1}{\sqrt{[2]}}
+$$
+が得られる．さらに$\Delta(J_-)$を$\ket{1,0}$に作用させると，
+$$
+  \Delta(J_-)\ket{1,0}=
+  \frac{2}{\sqrt{[2]}}\ket{\downarrow}\ket{\downarrow}
+$$
+となるので，規格化を考慮して，
+$$
+  \ket{1,-1}=\ket{\downarrow}\ket{\downarrow}
+$$
+を得る．
+したがって，Clebsch-Gordan係数は，
+\begin{align}
+  \bra{1,1}\ket{\frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}{2}}_q&=1,\\
+  \bra{1,0}\ket{\frac{1}{2},\frac{1}{2},\frac{1}{2},-\frac{1}{2}}_q&=\frac{q^{\frac{1}{4}}}{\sqrt{[2]}},\\
+  \bra{1,0}\ket{\frac{1}{2},\frac{1}{2},-\frac{1}{2},\frac{1}{2}}_q&
+  =\frac{q^{-\frac{1}{4}}}{\sqrt{[2]}},\\
+  \bra{1,-1}\ket{\frac{1}{2},\frac{1}{2},-\frac{1}{2},-\frac{1}{2}}_q&=1
+\end{align}
+となる．$\ket{0,0}$は，$\ket{1,0}$と直交するように選んで，
+\begin{align}
+  \ket{0,0}=  \frac{q^{-1/4}}{\sqrt{[2]}}\ket{\uparrow}\ket{\downarrow}
+  -\frac{q^{1/4}}{\sqrt{[2]}}\ket{\downarrow}\ket{\uparrow}
+\end{align}
+となる．
+
+次により一般のスピン$j_1$と$j_2$の合成を考えよう．
+スピン$j_1+j_2$の状態は，
+$$
+  \ket{j_1+j_2,j_1+j_2}=\ket{j_1,j_1}\ket{j_2,j_2}
+$$
+を考え，$\Delta(J_-)$で状態を下げていけば求まる:
+$$
+  \Delta(J_-)\ket{j_1,j_1}\ket{j_2,j_2}
+  = 
+  q^{\frac{j_2}{2}}\sqrt{[2j_1]}\ket{j_1,j_1-1}\ket{j_2,j_2}+q^{-\frac{j_1}{2}}\sqrt{[2j_2]}\ket{j_1,j_1}\ket{j_2,j_2-1}.
+$$
+先ほどと同様に，
+$\ket{j_1+j_2,j_1+j_2-1}=\mathcal{N}\ket{j_1,j_1}\ket{j_2,j_2}$として，規格化因子は，
+$$
+  \begin{split}
+    1&=|\mathcal{N}|^2(q^{j_2}[2j_1]+q^{-j_1}[2j_2])\\
+    &=|\mathcal{N}|^2
+      \frac{q^{j_1+j_2}-q^{-j_1+j_2}
+      +q^{j_2-j_1}-q^{-j_2-j_1}
+      }{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}\\
+    &=|\mathcal{N}|^2[2(j_1+j_2)]
+  \end{split}
+$$
+より求まり，
+$$
+  \ket{j_1+j_2,j_1+j_2-1}=\frac{1}{\sqrt{[2(j_1+j_2)]}}(q^{\frac{j_2}{2}}\sqrt{[2j_1]}\ket{j_1,j_1-1}\ket{j_2,j_2}+q^{-\frac{j_1}{2}}\sqrt{[2j_2]}\ket{j_1,j_1}\ket{j_2,j_2-1})
+$$
+が得られる．この手順を繰り返すことで，$j_1+j_2-2,\cdots,-j_1-j_2$の状態が求まる．
+また，$\ket{j_1+j_2-1,j_1+j_2-1}$の状態は，$\ket{j_1+j_2,j_1+j_2-1}$と直交するように選ぶことで得られる:
+$$
+  \ket{j_1+j_2-1,j_1+j_2-1}
+  =\frac{1}{\sqrt{[2(j_1+j_2)]}}(
+    q^{\frac{j_2}{2}}\sqrt{[2j_1]}\ket{j_1,j_1}\ket{j_2,j_2-1}  
+  -q^{-\frac{j_1}{2}}\sqrt{[2j_2]}\ket{j_1,j_1-1}\ket{j_2,j_2}
+  ).
+$$
+
+\begin{question}
+$3$つの$j=1/2$を合成して，
+  \begin{align}
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{00}&=-\frac{1}{[2]},\quad
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{11}=\frac{1}{[2]},\\
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{01}&=\frac{\sqrt{[3]}}{[2]},\quad
+    [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{10}=\frac{\sqrt{[3]}}{[2]}
+  \end{align}
+  を示せ．
+\end{question}
+
+<!-- 
+% \subsubsection{一般的なClebsch-Gordan係数}
+% $$
+%   \ket*{j_c,m_c} = \sum_{m_a,m_b}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_am_a\, j_bm_b}{j_c,m_c}
+% $$
+% の両辺に，$J_\pm$を作用させると，
+% $$
+%   \begin{split}
+%     &\sqrt{[j_c\mp m_c][j_c\pm m_c+1]}\sum_{m_a,m_b}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_am_a\, j_bm_b}{j_c,m_c\pm1}\\
+%     &= \sum_{m_a,m_b}\Bigl(
+%       \sqrt{[j_a\mp m_a][j_a\pm m_a+1]}q^{\frac{j_b}{2}}\ket*{j_a,m_a\pm1}\ket*{j_b,m_b}\braket{j_am_a\, j_bm_b}{j_c,m_c}\\
+%       &+ \sqrt{[j_b\mp m_b][j_b\pm m_b+1]}q^{-\frac{j_a}{2}}\ket*{j_a,m_a}\ket*{j_b,m_b\pm1}\braket{j_am_a\, j_bm_b}{j_c,m_c}
+%       \Bigr)\\ 
+%       &= \sum_{m_a,m_b}\Bigl(
+%         \sqrt{[j_a \mp m_a+1][j_a \pm m_a]}q^{\frac{j_b}{2}}\ket*{j_a,m_a}\ket*{j_b,m_b}\braket{j_am_a\mp1\, j_bm_b}{j_c,m_c}\\
+%         &+ \sqrt{[j_b \mp m_b+1][j_b \pm m_b]}q^{-\frac{j_a}{2}}\ket*{j_a,m_a}\ket*{j_b,m_b}\braket{j_am_a\, j_bm_b\mp1}{j_c,m_c}
+%         \Bigr)
+%     \end{split}
+% $$
+% となる．両辺を比べると，漸化式
+% $$
+%   \begin{split}
+%     &\sqrt{[j_c\mp m_c][j_c\pm m_c+1]}\braket{j_am_a\, j_bm_b}{j_c,m_c\pm1}
+%     \\
+%     &=
+%     q^{\frac{j_b}{2}}\sqrt{[j_a \mp m_a+1][j_a \pm m_a]}\braket{j_am_a\mp1\, j_bm_b}{j_c,m_c}\\
+%     &\quad+ q^{-\frac{j_a}{2}}\sqrt{[j_b \mp m_b+1][j_b \pm m_b]}\braket{j_am_a\, j_bm_b\mp1}{j_c,m_c}
+%   \end{split}
+% $$
+% が得られる．
+
+
+% \subsection{\texorpdfstring{$\mathrm{SU}(3)_k$}{SU(3)k}}
+% 次に$\mathfrak{g}=\mathfrak{su}(3)$を考える．
+% $$
+%   A_{ij} =\begin{pmatrix}
+%     2 & -1\\
+%     -1 & 2
+%   \end{pmatrix}
+% $$
+% $t_i=1$, $g=3$である．したがって，
+% $$
+%   q \eqqcolon q_i= \exp\ri \frac{2\pi}{k+3}
+% $$
+
+% \begin{align}
+%   [H_i,H_j]&=0,\\
+%   [H_i,L_j^\pm] &= \pm A_{ij}L_{j}^\pm,\\
+%   [L_i^+,L_j^-]&=\delta_{ij}[H_i]
+% \end{align}
+
+% $$
+%   (L_1^\pm)^{2}L_2^\pm
+%   -[2]
+%   (L_1^\pm)L_2^\pm(L_1^{\pm})
+%   +
+%   L_2^\pm(L_1^{\pm})^2=0
+% $$
+
+% \begin{align}
+%   L_3^+&\coloneqq a L_1^+L_2^+-bL_2^+L_1^+,\\
+%   L_3^-&\coloneqq cL_2^-L_1^--dL_1^-L_2^-
+% \end{align}
+% $$
+%   \begin{split}
+%     [L_3^+,L_3^-]&=[aL_1^+L_2^+-bL_2^+L_1^+,cL_2^-L_1^--dL_1^-L_2^-]\\
+%     &=
+%     L_1^+L_1^-(ac [H_2+1] -da [H_2]-bc[H_2]
+%     +bd [H_2-1]
+%     )\\
+%     &+L_2^+L_2^-(+ac [H_1-1]-da[H_1]-bc [H_1]+bd [H_1+1])\\
+%     &+(da+bc)[H_1][H_2]
+%     -bd [H_1][H_2-1]
+%     -ac [H_1-1][H_2]
+%   \end{split}
+% $$
+% $$
+%   acq^{1/2}  +bdq^{-1/2}  -(ad+bc)=0
+% $$
+
+% $$
+%   \begin{split}
+%     [L_3^+,L_3^-]&=[aL_1^+L_2^+-bL_2^+L_1^+,cL_2^-L_1^--dL_1^-L_2^-]\\
+%     &=
+%     +ac\Bigl((q^{1/2}  +q^{-1/2})[H_1][H_2]
+%     - [H_1][H_2-1]
+%     - [H_1-1][H_2]
+%     \Bigr)\\
+%     &=ac[H_1+H_2]\\
+%   \end{split}
+% $$
+% $$
+%   acq^{1/2}  +bdq^{-1/2}  -(ad+bc)=0
+% $$
+% $$
+%   +ac q^{-1/2} +bd q^{1/2}-(da+bc)=0
+% $$
+% $$
+%   ac=bd =1
+% $$
+% $$
+%   (da+bc)= q^{-1/2} + q^{1/2}
+% $$
+% $$
+%   [H_i]L_j^\pm  = L_j^{\pm}[H_i\pm A_{ij}]
+% $$
+
+
+% 基本表現と反基本表現のウェイトベクトルを$\vb*{\omega}_1$及び$\vb*{\omega}_2$とすると，一般の表現のウェイトベクトルは，$\vb*{\omega} = p\vb*{\omega}_1+q\vb*{\omega}_2$と表すことができる．したがって，表現はDynkin index $(p,q)$で指定することができる．
+% ルートベクトルは，$\vb*{\alpha}_1=2\vb*{\omega}_1-\vb*{\omega}_2=(2,-1)$, $\vb*{\alpha}_2=-\vb*{\omega}_1+2\vb*{\omega}_2=(-1,2)$.
+
+% \begin{align}
+%   \Delta(H_i)&=1\otimes H_i+H_i\otimes 1\\
+%   \Delta(L_i^\pm)&=L_i^\pm\otimes q_i^{H_i/4}+q_{i}^{-H_i/4}\otimes L_i^\pm
+% \end{align}
+% $\ket{(2,0)(2,0)}$, $\ket{(1,0)(-1,1)}$, $\ket{(1,0)(0,-1)}$.
+
+% $$
+%   \ket{(2,0)(2,0)} =\ket{(1,0)(1,0)}\ket{(1,0)(1,0)}
+% $$
+% $$
+%   \Delta(L_1^-)\ket{(1,0)(1,0)}\ket{(1,0)(1,0)}
+%   =q^{\frac{1}{4}}\ket{(1,0)(-1,1)}\ket{(1,0)(1,0)}
+%   +q^{-\frac{1}{4}}\ket{(1,0)(1,0)}\ket{(1,0)(-1,1)}
+% $$
+% $$
+%   \begin{split}
+%     &\Delta(L_1^-)(q^{\frac{1}{4}}\ket{(1,0)(-1,1)}\ket{(1,0)(1,0)}
+%     +q^{-\frac{1}{4}}\ket{(1,0)(1,0)}\ket{(1,0)(-1,1)})\\
+%     &=2\ket{(1,0)(-1,1)}\ket{(1,0)(-1,1)}
+%   \end{split}
+% $$
+% $$
+%   \begin{split}
+%     &\Delta(L_2^-)(q^{\frac{1}{4}}\ket{(1,0)(-1,1)}\ket{(1,0)(1,0)}
+%     +q^{-\frac{1}{4}}\ket{(1,0)(1,0)}\ket{(1,0)(-1,1)})\\
+%     &=
+%     q^{\frac{1}{4}}\ket{(1,0)(0,-1)}\ket{(1,0)(1,0)}+q^{-\frac{1}{4}}\ket{(1,0)(1,0)}\ket{(1,0)(0,-1)}
+%   \end{split}
+% $$
+% $$
+%   \begin{split}
+%     &\Delta(L_2^-)\ket{(1,0)(-1,1)}\ket{(1,0)(-1,1)}\\
+%     &=q^{\frac{1}{4}}\ket{(1,0)(0,-1)}\ket{(1,0)(-1,1)}
+%     +q^{-\frac{1}{4}}\ket{(1,0)(-1,1)}\ket{(1,0)(0,-1)}
+%   \end{split}
+% $$
+
+% $$
+%   L_1^\pm\ket{(p,q)}=N_{i\pm}(p,q)\ket{(p\pm 2,q\pm1)}
+% $$
+% $$
+%   |N_{i+}(p,q)|^2-|N_{i-}(p,q)|^2=[H_i]
+% $$
+
+% $$
+%   |N_{1+}|^2-|N_{1-}|^2=[2H_0]
+% $$
+% $$
+%   |N_{2+}|^2-|N_{2-}|^2=[2H_0]
+% $$
+% $$
+%   2[H_0]^2+|N_+|^2+|N_-|^2=2C_2
+% $$
+
+
+% \begin{align}
+%   \ket{(2,0)(2,0)}&=\ket{(1,0)(1,0)}\ket{(1,0)(1,0)},\\
+%   \ket{(2,0)(0,1)}&=\frac{1}{\sqrt{[2]}}\qty(q^{\frac{1}{4}}\ket{(1,0)(-1,1)}\ket{(1,0)(1,0)}
+%   +q^{-\frac{1}{4}}\ket{(1,0)(1,0)}\ket{(1,0)(-1,1)}),\\
+%   \ket{(2,0)(1,-1)}&=\frac{1}{\sqrt{[2]}}\qty(    q^{\frac{1}{4}}\ket{(1,0)(0,-1)}\ket{(1,0)(1,0)}+q^{-\frac{1}{4}}\ket{(1,0)(1,0)}\ket{(1,0)(0,-1)}),\\
+%   \ket{(2,0)(-1,0)}&=\frac{1}{\sqrt{[2]}}\qty(q^{\frac{1}{4}}\ket{(1,0)(0,-1)}\ket{(1,0)(-1,1)}
+%   +q^{-\frac{1}{4}}\ket{(1,0)(-1,1)}\ket{(1,0)(0,-1)}),\\
+%   \ket{(2,0)(-2,2)}&=\ket{(1,0)(-1,1)}\ket{(1,0)(-1,1)},\\
+%   \ket{(2,0)(0,-2)}&=\ket{(1,0)(0,-1)}\ket{(1,0)(0,-1)}.
+% \end{align}
+
+% $$
+%   \ket{(1,1)(1,1)}=\ket{(1,0)(1,0)}\ket{(0,1)(0,1)}
+% $$
+% $$
+%   \Delta(L_1^-)\ket{(1,1)(1,1)}=\ket{(1,0)(-1,1)}\ket{(0,1)(0,1)}
+% $$
+% $$
+%   \Delta(L_2^-)\ket{(1,1)(1,1)}=\ket{(1,0)(1,0)}\ket{(0,1)(1,-1)}
+% $$
+% $$
+%   \begin{split}
+%     \Delta(L_2^-)\Delta(L_1^-)\ket{(1,1)(1,1)}&=
+%     \Delta(L_2^-)\ket{(1,0)(-1,1)}\ket{(0,1)(0,1)}\\
+%     &=
+%     q^{1/4}\ket{(1,0)(0,-1)}\ket{(0,1)(0,1)}
+%     +q^{-1/4}\ket{(1,0)(-1,1)}\ket{(0,1)(1,-1)} 
+%   \end{split}
+% $$
+% $$
+%   \begin{split}
+%     \Delta(L_1^-)\Delta(L_2^-)\ket{(1,1)(1,1)}&=
+%     \Delta(L_1^-)\ket{(1,0)(1,0)}\ket{(0,1)(1,-1)}\\
+%     &=
+%     q^{1/4}\ket{(1,0)(-1,1)}\ket{(0,1)(1,-1)}
+%     +q^{-1/4}\ket{(1,0)(1,0)}\ket{(0,1)(-1,1)}
+%   \end{split}
+% $$
+
+
+% $$
+%   \begin{bmatrix}
+%     () & () & ()\\
+%     () & () & ()
+%   \end{bmatrix}_q
+% $$
+% $$
+%   J_i^2=\frac{1}{2}(J_+J_-+J_-J_+)+J_0^2
+% $$
+% $$
+%   J_+\ket{j,m}= N_+(j,m)\ket{j,m+1}
+% $$$$
+%   J_-\ket{j,m}= N_-(j,m)\ket{j,m-1}
+% $$
+% $$
+%   m^2+\frac{1}{2}|N_+(j,m)|^2+\frac{1}{2}|N_-(j,m)|^2=j(j+1)
+% $$
+% $$
+%   |N_-(j,m)|^2-|N_+(j,m)|^2=2m
+% $$
+ -->

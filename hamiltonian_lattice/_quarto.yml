@@ -27,6 +27,7 @@ book:
     - MTC.qmd
   appendices:
     - references.qmd
+    - q-deformation.qmd    
 
 lang: ja
 

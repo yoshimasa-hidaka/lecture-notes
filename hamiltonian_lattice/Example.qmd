@@ -190,12 +190,13 @@ $$
 +2K\cos\frac{\omega}{2}\psi(\omega)=0
 $$
 が得られる．この波動関数は$\psi(\omega+4\pi)=\psi(\omega)$の周期境界条件を満たす．変数と関数を
-\begin{align}
-  \omega&=4x ,\\
-  y(x)&=\psi(\omega),\\
-  a&=4(1+2\varepsilon),\\
-  q&=-8K
-\end{align}
+$$
+  \omega=4x ,\quad
+  y(x)=\psi(\omega),\quad
+  a=4(1+2\varepsilon),\quad
+  q=-8K
+$$
+
 に置くと，Mathieuの微分方程式
 $$
   \frac{d^2}{d x^2}y +(a-2q\cos(2x))y=0
