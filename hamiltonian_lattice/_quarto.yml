@@ -55,26 +55,26 @@ format:
     include-in-header:
       - text: |
           <script>
-            MathJax = {
-              tex: {
-                packages: {'[+]': ['physics']},
-                macros: {
-                  bm: ["{\\boldsymbol{#1}}", 1],
-                  ri: "{\\mathrm{i}}",
-                  ER: "R",
-                  EL: "L",
-                  dag: "\\dagger",
-                  mathbbm: ["{\\mathbb{#1}}", 1],
-                  bbone: "\\unicode{x1D7D9}"
-                },
-                tags: 'ams'
-              },
-              chtml: { matchFontHeight: false },
-              options: {
-                skipHtmlTags: ["script","noscript","style","textarea","pre","code"],
-                enableMenu: false
+          window.MathJax = {
+            tex: {
+              packages: {'[+]': ['ams','physics']},  // ← ams を追加
+              tags: 'ams',                           // \label / \eqref を有効化
+              macros: {
+                bm: ["{\\boldsymbol{#1}}", 1],
+                ri: "{\\mathrm{i}}",
+                ER: "R",
+                EL: "L",
+                dag: "\\dagger",
+                mathbbm: ["{\\mathbb{#1}}", 1],
+                bbone: "\\unicode{x1D7D9}"
               }
-            };
+            },
+            chtml: { matchFontHeight: false },
+            options: {
+              skipHtmlTags: ["script","noscript","style","textarea","pre","code"],
+              enableMenu: false
+            }
+          };
           </script>
   pdf:
     pdf-engine: lualatex
@@ -82,13 +82,15 @@ format:
     include-in-header:
       text: |
         \usepackage{luatexja}
-        \usepackage[ipaex]{luatexja-preset} 
+        \usepackage[ipaex]{luatexja-preset}
         \usepackage{amsmath,amssymb,mathtools,bm,bbm}
+        \numberwithin{equation}{chapter} % 章ごとに式番号
         \usepackage[italicdiff]{physics}
         \newcommand{\ri}{\mathrm{i}}
         \newcommand{\ER}{R}
         \newcommand{\EL}{L}
-        \newtheorem{example}{例}
-        \newtheorem{definition}{定義}
-        \newtheorem{theorem}{定理}
-        \newtheorem{question}{問}
+        % --- 定理環境（章ごとに番号を振るなら [chapter] を付ける）---
+        \newtheorem{example}{例}[chapter]
+        \newtheorem{definition}{定義}[chapter]
+        \newtheorem{theorem}{定理}[chapter]
+        \newtheorem{question}{問}[chapter]

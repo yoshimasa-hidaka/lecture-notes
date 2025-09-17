@@ -16,9 +16,9 @@
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{equation}
+$$
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/graph.pdf}}}
-\end{equation}
+$$
 :::
 
 
@@ -42,143 +42,143 @@ $U$は$\mathrm{SU}(N)$の基本表現行列になっている演算子である�
 さて，量子論を展開するためには，交換関係が必要である．
 まず，量子力学の場合に交換関係が何を意味していたか思い出してみよう．実数$x\in\mathbb{R}$を力学変数とした量子力学では，正準運動量$p$との交換関係は，$[x,p]=\ri$と定義される．
 この$p$は，$x$を並進させる変換の生成子とみなすことができる:
-\begin{equation}
+$$
   e^{\ri p a}x e^{-\ri p a} =x+a.
-\end{equation}
+$$
 次に$x$が円周$S^1$上の座標の場合を考えよう．円周の長さを$2\pi$に取り$x$と$x+2\pi$は同一視する．
 この場合の交換関係も$[x,p]=\ri$で，$\mathbb{R}$上の場合と同様に$p$は$x$をシフトさせる．しかし，$x$と$x+2\pi$は同一視されるので，$x$そのものは，物理量ではないと言えるだろう．一方$x$を指数にのせた$e^{\ri x}$は，$e^{\ri x}=e^{\ri (x+2\pi)}$が成り立つので物理量となる．この場合，物理量$p$と$e^{\ri x}$の交換関係は，
-\begin{equation}
+$$
   [p,e^{\ri x}] =e^{\ri x}
-\end{equation}
+$$
 となり，有限の変換は$e^{\ri pa}e^{\ri x} e^{-\ri pa}=e^{\ri (x+a)}$となる．
 $S^1\simeq \mathrm{U}(1)$であるので，変数が$S^1$の量子力学は変数が$\mathrm{U}(1)$の量子力学とみなせる．
 
 次に$\mathrm{SU}(N)$への拡張を考える．$U\in\mathrm{SU}(N)$を力学変数に取った量子力学を考える．$\mathrm{SU}(N)$を多様体とみなして変数を多様体上の点にとっても良いが，ここでは，$\mathrm{SU}(N)$の基本表現の行列に値を取る場合を考える．これは，$\mathrm{U}(1)$の場合に変数を$x$に取るか$e^{\ri x}$に取るかに対応する．
 行列を変換する演算子は右から作用するか左から作用するかの$2$通り考えられる．それに対応して正準運動量を$2$種類$\ER_i$,$\EL_i$導入し，これらは
-\begin{align}
-  [\ER_{i},U] &=U T_i, \label{eq:[E_s,U]}\\
-  [\EL_{i},U] &=T_iU , \label{eq:[E_t,U]}
-\end{align}
+$$
+[\ER_{i},U] =U T_i, 
+$${#eq-E_sU}
+
+$$
+[\EL_{i},U] =T_iU , 
+$${#eq-E_tU}
 の交換関係を満たすものとして定義する．
 ここで， $T_i$は$\mathrm{SU}(N)$の生成子で構造定数を$f^{k}_{~ij}$として$[T_i,T_j]=\ri f^{k}_{~ij}T_k$を満たす．
-式\eqref{eq:[E_s,U]}および\eqref{eq:[E_t,U]}がJacobiの恒等式を従うという要請から
-\begin{align}
-  [\ER_{i},\ER_{j}] &=\ri f^{k}_{~ij}\ER_{k},    \label{eq:[E_s,E_s]} \\
-  [\EL_{i},\EL_{j}] &=-\ri f^k_{~ij}\EL_{k}   \label{eq:[E_t,E_t]}
-\end{align}
+式(@eq-E_sU)および(@eq-E_tU)がJacobiの恒等式を従うという要請から
+$$
+[\ER_{i},\ER_{j}] =\ri f^{k}_{~ij}\ER_{k},
+$${#eq-E_sE_s}
+$$
+  [\EL_{i},\EL_{j}] =-\ri f^k_{~ij}\EL_{k}
+  $${#eq-E_tE_t}
 が導かれる．ここで$f^k_{~ij}$は構造定数である．
 つまり，$\ER_i$, $\EL_i$は$\mathrm{SU}(N)$の生成子の代数($\EL_i$は複素共役を取った代数)を満たすことがわかる．
-% \begin{eqnarray}
+<!-- % \begin{eqnarray}
 %   -[T^*_i]^m_{n}=-[T^T]^m_{n}=-[T_a]^n_m
-% \end{eqnarray}
+% \end{eqnarray} -->
 $U$に対して2種類の正準共役量$\EL_{i}$と$\ER_{j}$を導入したがこれらは独立ではなく，``平行移動''を通じて関係している:
-<!-- %\begin{equation}
+<!-- %$$
   %U^\dag(e) \EL(e)U(e) = \ER(e).
-%\end{equation}
+%$$
 %ここで$E^{n}(e)= \delta^{ij}T_i E^n_j(e)$ ($n=\mathrm{s},\mathrm{t}$)とした． -->
-\begin{equation}
+$$
   [U_{\mathrm{adj}}]_i^j \EL_j = \ER_i.
-\end{equation}
+$$
 ここで，$[U_{\mathrm{adj}}]_i^j$は，随伴表現のリンク変数で，基本表現のリンク変数を用いて，
-\begin{equation}
-  \begin{split}
-    U T_i U^\dag &=T_j[U_{\mathrm{adj}}]_i^j 
+$$
+    U T_i U^\dag =T_j[U_{\mathrm{adj}}]_i^j 
     %= T_i + \ri A^j [T_j, T_i]+\cdots    \\
     %&= T_i + \ri A^j \ri f^{k}_{~ji}T_k=T_j[U_{\mathrm{adj}}]_i^j 
-    \label{eq:adjoint}
-  \end{split}
-\end{equation}
+$${#eq-adjoint}
 と表される．
 \begin{question}
-  $ [U_{\mathrm{adj}}]_i^j \EL_j = \ER_i$が，式\eqref{eq:[E_s,U]}, \eqref{eq:[E_t,U]}と無矛盾であることを示せ．
+  $ [U_{\mathrm{adj}}]_i^j \EL_j = \ER_i$が，式(@eq-E_sU), (@eq-E_tU)と無矛盾であることを示せ．
 \end{question}
 $U_{\mathrm{adj}}$の直交関係
-\begin{equation}
-  \begin{split}
+$$
   \sum_k[U_{\mathrm{adj}}]^i_k [U_{\mathrm{adj}}]^j_k =\delta^{ij}
-  \end{split}
-\end{equation}
+$$
 を用いると，
-\begin{equation}
-\begin{split}
+$$
   \delta^{ij}\ER_{i}\ER_{j}=\delta^{ij} \EL_{i}\EL_{j}
   \eqqcolon E^2
-\end{split}
-\label{eq:constraint}
-\end{equation}
+$${#eq-constraint}
 は，$\ER_i$, $\EL_i$に依存しないことがわかる．依存しないことを強調するために記号$E^2$を導入した．$\delta^{ij}$はKroneckerのデルタである．
 
 ここまでは量子力学の話だがグラフ上の場の理論に拡張するのは容易である．単にリンクを引数として導入し，交換関係は，
-\begin{align}
-  [\ER_{i}(e),U(e')] &=U(e') T_i\delta_{e,e'}, \label{eq:[E_s,U]field}\\
-  [\EL_{i}(e),U(e')] &=T_iU(e)\delta_{e,e'} , \label{eq:[E_t,U]field}
-  \\
-[\ER_{i}(e),\ER_{j}(e')] &=\ri f^{k}_{~ij}\ER_{k}(e)\delta_{e,e'},    \label{eq:[E_s,E_s]field} \\
-[\EL_{i}(e),\EL_{j}(e')] &=-\ri f^k_{~ij}\EL_{k}(e)\delta_{e,e'}    \label{eq:[E_t,E_t]field}
-\end{align}
+$$
+[\ER_{i}(e),U(e')] =U(e') T_i\delta_{e,e'},
+$${#eq-E_sUfield}
+$$
+  [\EL_{i}(e),U(e')] =T_iU(e)\delta_{e,e'} ,
+$${#eq-E_tUfield}
+$$
+[\ER_{i}(e),\ER_{j}(e')] =\ri f^{k}_{~ij}\ER_{k}(e)\delta_{e,e'}, 
+$${#eq-E_sE_sfield}
+$$
+[\EL_{i}(e),\EL_{j}(e')] =-\ri f^k_{~ij}\EL_{k}(e)\delta_{e,e'}
+$${#eq-E_tE_tfield}
 に取ればよい．
 
 
 各リンク上で交換関係が定まったので，各リンク上でHilbert空間$L^2\qty(\mathrm{SU}(N))$を構成することができる\footnote{この$L^2$は，電場ではない点に注意．}．全Hilbert空間は，
-\begin{equation}
+$$
   \mathcal{H}_\mathrm{tot} = L^2\qty(\mathrm{SU}(N)^{|\mathcal{E}|})
-\end{equation}
+$$
 である．
 ここで$|\mathcal{E}|$は辺の数である．
 
 我々が興味があるのはゲージ理論である．ゲージ理論では，ゲージ不変な状態が物理的な状態で，ゲージ不変な演算子によって状態は変換される．
 リンク変数は，ゲージ変換の元で，
-\begin{equation}
+$$
   U(e)\to  D^\dag(\mathrm{t}(e))U(e)D(\mathrm{s}(e))
-\end{equation}
+$$
 と変換される．ここで，
-\begin{equation}
+$$
   D(v) = e^{\ri \theta^i(v)T_i}
-\end{equation}
+$$
 で，$\theta^i(v)$はゲージ変換パラメータである．
 これは，ユニタリ変換で表すと，ゲージ変換の生成子を
-\begin{equation}
+$$
 G_i(v)\coloneqq  \sum_{e\in \mathcal{E}| \mathrm{s}(e)=v}\ER_{i}(e)-\sum_{e\in \mathcal{E}| \mathrm{t}(e)=v}\EL_{i}(e)
-\end{equation}
+$$
 を用いて，$V=e^{\ri\sum_{v\in\mathcal{V}}\theta^i(v)G_i(v)}$
 として，
-\begin{equation}
+$$
   U(e)\to V U(e)V^\dag
   = D^\dag(\mathrm{t}(e))U(e)D(\mathrm{s}(e))
-  \label{eq:Gauge_transformationU}
-\end{equation}
+$${#eq-Gauge_transformationU}
 である．
 同様に電場は，
-\begin{align}
-  \ER_i(e)&\to V \ER_i(e) V^\dag = [D_\mathrm{adj}(\mathrm{s}(e))]^j_i\ER_j(e),\label{eq:Gauge_transformationER}\\
-  \EL_i(e)&\to V \EL_i(e) V^\dag = [D^\dag_\mathrm{adj}(\mathrm{t}(e))]^j_i\EL_j(e)
-  \label{eq:Gauge_transformationEL}
-\end{align}
+$$
+  \ER_i(e)\to V \ER_i(e) V^\dag = [D_\mathrm{adj}(\mathrm{s}(e))]^j_i\ER_j(e),
+$${#eq-Gauge_transformationER}
+$$
+  \EL_i(e)\to V \EL_i(e) V^\dag = [D^\dag_\mathrm{adj}(\mathrm{t}(e))]^j_i\EL_j(e)
+$${#eq-Gauge_transformationEL}
 と変換される．
 ここで$D_\mathrm{adj}(v)$は，随伴表現の表現行列で，
 $[T_{{\mathrm{adj}},i}]^k_j=\ri f^k_{~ij}$として，
-\begin{equation}
+$$
   D_\mathrm{adj}(v) = e^{\ri \theta^i(v)T_{{\mathrm{adj}},i}}
-\end{equation}
+$$
 で与えられる．
 
 ゲージ理論では，全空間$\mathcal{H}_\mathrm{tot}$が物理的空間というわけではなく，ゲージ不変な部分空間が物理的空間となる．
 ゲージ変換より，状態$\ket{\Psi}\in\mathcal{H}_\mathrm{tot}$は，
-\begin{equation}
+$$
 \ket{\Psi}\to   e^{-\ri\sum_{v\in\mathcal{V}}\theta^i(v)G_i(v)}\ket{\Psi}
-\label{eq:gauge_transformation}
-\end{equation}
+$${#eq-gauge_transformation}
 と変換する．物理状態は任意の$\theta^i(v)$に対して不変である必要がある\footnote{量子論は大域的な位相は区別しないので正確には位相を除いて不変であれば良い．非自明な位相は，いわゆる$\theta$項と関係する.}ので，微小変換の元での不変性，つまり，すべての$v\in\mathcal{V}$に対して，Gaussの拘束条件
-\begin{equation}
+$$
 G^i(v)\ket*{\Psi}=0
-\label{eq:gauss}
-\end{equation}
-を満たす必要がある．逆に式\eqref{eq:gauss}を満たせば，状態は式\eqref{eq:gauge_transformation}の変換の元で不変である．
+$${#eq-gauss}
+を満たす必要がある．逆に式(@eq-gauss)を満たせば，状態は式(@eq-gauge_transformation)の変換の元で不変である．
 物理的にはGaussの拘束条件は，各頂点での電束の保存を表す．
 全物理空間を$\mathcal{H}_\mathrm{phys}(\subset\mathcal{H}_\mathrm{tot})$と書くと，これは，各頂点のゲージ変換の自由度が同一視され
-\begin{equation}
+$$
   \mathcal{H}_\mathrm{phys}= L^2[\mathrm{SU}(N)^{|\mathcal{E}|}/\mathrm{SU}(N)^{|\mathcal{V}|}]
-\end{equation}
+$$
 となる．ここで$|\mathcal{V}|$は頂点の数である．
 
 
@@ -190,28 +190,27 @@ $\mathrm{s}(e_{1})=\mathrm{t}(e_{n-1})$の時は閉路という．
 
 グラフ$\Gamma$上の閉路の集合を$C(\Gamma)$とする．
 閉路$c\in C(\Gamma)$に対してリンク変数の積(Wilsonループ)を対応させる:
-\begin{equation}
+$$
   U(c)\coloneqq U(e_{n-1})U(e_{n-2})\cdots U(e_2)U(e_1).
-\end{equation}
+$$
 ここで，演算子の積は経路の順序に従って並べてある．
 これはWilsonループ演算子である．
 
 
 $\mathcal{F}\subseteq C$を閉路の部分集合，$\tilde{\mathcal{E}}\subseteq \mathcal{E}$を辺の部分集合とする．
 この時，ハミルトニアン$H=H_E+H_B$を
-\begin{align}
-  &H_E=\sum_{e\in \tilde{\mathcal{E}}}\frac{1}{2}E^2(e),
-  \label{eq:electric}
-  \\
-  &H_B=
+$$
+  H_E=\sum_{e\in \tilde{\mathcal{E}}}\frac{1}{2}E^2(e),
+$${#eq-electric}
+$$
+  H_B=
    -\frac{K}{2}\sum_{f\in \mathcal{F}}(\mathrm{tr}U(f)+\mathrm{tr}U^\dag(f) )
-  \label{eq:magnetic}
-\end{align}
+$${#eq-magnetic}
 と定義する．ここで，$K$は結合定数である．
 $H_{E}$を電場項．$H_{B}$を磁場項と呼ぶ．
 電場項についても結合定数を導入しても良いがここでは$1$に取ってある．
 正方格子上の格子ゲージ理論では，$\mathcal{F}$は，プラケットの集合に取り，$\tilde{\mathcal{E}}$はすべての辺$\tilde{\mathcal{E}}=\mathcal{E}$に取れば良い．
-ハミルトニアンは，ゲージ変換\eqref{eq:Gauge_transformationU}-\eqref{eq:Gauge_transformationEL}の元で不変である．
+ハミルトニアンは，ゲージ変換(@eq-Gauge_transformationU)-(@eq-Gauge_transformationEL)の元で不変である．
 つまり，ハミルトニアンとゲージ変換の生成子は可換である:$[H,G_i(v)]=0$．
 
 
@@ -233,13 +232,13 @@ $[U]^{m}_{n}$は，基本表現のリンク変数(Wilson線演算子)だが，�
 $[U_a]^{m}_{n}$はすべて可換であるので$[U_a]^{m}_{n}$の同時固有状態に取れる\footnote{任意の表現は，基本表現を合成して作ることができるので基本表現の作用を考えれば十分である.}．
 $g\in \mathrm{SU}(N)$として，状態を$\ket*{g}$と表す．
 固有値は表現行列$[D_a]^m_{n}$である．つまり，
-\begin{equation}
+$$
 [U_{a}]^{m}_{n}\ket*{g} = [D_{a}(g)]^{m}_{n} \ket*{g}
-\end{equation}
+$$
 を満たす．表現行列は，生成子の表現$a$での表現行列を$T_{ai}$として，
-\begin{equation}
+$$
   D_{a}(g) = e^{\ri T_{ai}\theta^i}
-\end{equation}
+$$
 と表す事ができる．
 $\theta^i$は$g$に対応したパラメータである．波動関数$\psi(g)=\bra{g}\ket{\psi}$は，$g\in\mathrm{SU}(N)$を引数にした二乗可積分関数で表される．つまりHilbert空間は，$L^2(\mathrm{SU}(N))$である．
 
@@ -249,61 +248,67 @@ $\theta^i$は$g$に対応したパラメータである．波動関数$\psi(g)=\
 $\ER_i$, $\EL_i$は独立な演算子として取り扱う．
 ただし，$(\ER_i)^2=(\EL_i)^2$であるため，完全に独立ではないことに注意する．
 昇降演算子$\ER_\pm = \ER_1\pm\ri \ER_2$, $\EL_\pm = \EL_1\pm\ri \EL_2$を定義すると，
-交換関係\eqref{eq:[E_s,E_s]}，\eqref{eq:[E_t,E_t]}は，
-\begin{align}
+交換関係(@eq-[E_s,E_s])，(@eq-[E_t,E_t])は，
+$$\begin{aligned}
   [\ER_3,\ER_\pm] &= \pm \ER_{\pm},\\
   [\ER_+,\ER_-] &= 2 \ER_{3},\\
   [\EL_3,\EL_\pm] &= \mp \EL_{\pm},\\
   [\EL_+,\EL_-] &= -2 \EL_{3}
-\end{align}
+\end{aligned}$$
 となる．同様に，$T_{\pm}=T_1\pm\ri T_2$を定義する．
 角運動量の標準的な取り扱いと同じ様に，可換な演算子として，
 $E^2=(\ER_i)^2=(\EL_i)^2$と
 $\ER_3$，$\EL_3$を選ぶのが良いだろう．
 この時状態は，$E^2$，$\EL_3$，$\ER_3$の固有値のラベル$j$，$m$，$n$を用いて$\ket*{j,m,n}$と表せる．この状態は，
-\begin{align}
-(\ER_i)^2\ket*{j,m,n}&=(\EL_i)^2\ket*{j,m,n} = j(j+1)\ket*{j,m,n},\\
-\ER_3\ket*{j,m,n}&=n\ket*{j,m,n},\\
-\EL_3\ket*{j,m,n}&=m\ket*{j,m,n},\label{eq:EL3_ket}\\
-\ER_\pm\ket*{j,m,n}&=\sqrt{j(j+1)-n(n\pm 1)}\ket*{j,m,n\pm1}, \label{eq:Espm}\\
-\EL_\pm\ket*{j,m,n}&=
+$$
+(\ER_i)^2\ket*{j,m,n}=(\EL_i)^2\ket*{j,m,n} = j(j+1)\ket*{j,m,n},
+$$
+$$
+\ER_3\ket*{j,m,n}=n\ket*{j,m,n},
+$$
+$$
+\EL_3\ket*{j,m,n}=m\ket*{j,m,n},
+$${#eq-EL3_ket}
+$$
+\ER_\pm\ket*{j,m,n}=\sqrt{j(j+1)-n(n\pm 1)}\ket*{j,m,n\pm1},
+$${#eq-Espm}
+$$\EL_\pm\ket*{j,m,n}=
 \sqrt{j(j+1)-m(m\mp 1)}
-\ket*{j,m\mp1,n} \label{eq:Etpm}
-\end{align}
+\ket*{j,m\mp1,n}
+$${#eq-Etpm}
 を満たす．これがGaussの拘束条件を課していない時のリンクが取りうる状態である．$j$を固定した時各$m,n$は，$-j,-j+1,\cdots, j-1,j$の値を取るので，それぞれの脚が$d_j=2j+1$個，したがって
-状態の数は，$d_j^2$となる．このHilbert空間は，$\bigoplus_{j}Q^*_j\otimes Q_j$となっている．これは式\eqref{eq:Hilbert_space_dual}を思い出すと$L^2(\mathrm{SU}(2))$と同型であることがわかる．
+状態の数は，$d_j^2$となる．このHilbert空間は，$\bigoplus_{j}Q^*_j\otimes Q_j$となっている．これは式@(eq-Hilbert_space_dual)を思い出すと$L^2(\mathrm{SU}(2))$と同型であることがわかる．
 
 $j$は，非負の整数，半整数を取るのでヒルベルト空間の次元は無限大になる．ハミルトニアン形式を数値計算に乗せる場合には，$j$が取りうる値の最大値を導入して全体として有限次元にする必要がある．
 これについては，@sec-cutoff_representation 節で議論する．
 
-物理状態は，Gaussの拘束条件\eqref{eq:gauss}を満たす必要がある．
+物理状態は，Gaussの拘束条件(@eq-gauss)を満たす必要がある．
 これは頂点において，状態が表現の$1$重項になるようにすることで実現できる．まず，簡単な例として，頂点が$2$点の場合を考える．ふたつの辺$a$, $b$を考え，$a$の終点が$b$の始点とつながっている場合を考える．つまり$\mathrm{t}(a)=\mathrm{s}(b)$とする．
 状態の線形結合
-\begin{equation}
+$$
   \ket*{\psi} =\sum_{m_a,n_b}C(j_a,m_a,j_b,n_b)
   \ket*{j_b,m_b,n_b}\ket*{j_a,m_a,n_a} 
-\end{equation}
+$$
 を取り，これが頂点でGaussの拘束条件
-\begin{equation}
+$$
   (\ER_i(b)-\EL_i(a) )\ket*{\psi}=0
-  \label{eq:Gauss_two_point}
-\end{equation}
+$${#eq-Gauss_two_point}
 を満たすようにしたい．
-これは，式\eqref{eq:Gauss_two_point}を満たす状態として
-\begin{equation}
+これは，式(@eq-Gauss_two_point)を満たす状態として
+$$
   C(j_a,m_a,j_b,n_b)=\frac{1}{\sqrt{d_a}}\braket{j_bn_b}{j_am_a}=\frac{\delta_{j_a}^{j_b}\delta_{m_a}^{n_b}}{\sqrt{d_a}}
-\end{equation}
+$$
 に選んで
-\begin{equation}
+$$
   \sum_{m_a,n_b}
   \frac{1}{\sqrt{d_a}}\braket{j_bn_b}{ j_am_a}
   \ket*{j_b,m_b,n_b}\ket*{j_a,m_a,n_a} =
   \sum_{l_{ab}}
   \frac{1}{\sqrt{d_a}}\ket*{j_b,m_b,l_{ab}}\ket*{j_a,l_{ab},n_a}
-\end{equation}
+$$
 とすればよい．
 ここで，$j_a=j_b$とする．$1/\sqrt{d_a}$は規格化因子である．実際，内積を取ると，
-\begin{equation}
+$$
   \begin{split}
     \braket{\psi}{\psi} &=  
     \sum_{l'_{ab}}    \sum_{l_{ab}}
@@ -313,11 +318,11 @@ $j$は，非負の整数，半整数を取るのでヒルベルト空間の次�
     \frac{1}{d_a}\delta_{l_{ab},l'_{ab}}\\
     &=1
   \end{split}
-\end{equation}
+$$
 となることがわかる．
 
-$\ER_\pm(b)-\EL_\pm(a)$を作用させて，実際に状態が消えることを確かめよう．式\eqref{eq:Espm}, \eqref{eq:Etpm}より，
-\begin{equation}
+$\ER_\pm(b)-\EL_\pm(a)$を作用させて，実際に状態が消えることを確かめよう．式(@eq-Espm), (@eq-Etpm)より，
+$$
   \begin{split}
     &(\ER_\pm(b)-\EL_\pm(a))\sum_{l_{ab}}
     \ket*{j_b,m_b,l_{ab}}\ket*{j_a,l_{ab},n_a}\\
@@ -328,7 +333,7 @@ $\ER_\pm(b)-\EL_\pm(a)$を作用させて，実際に状態が消えることを
 &      -\sqrt{j_a(j_a+1)-l_{ab}(l_{ab}\mp 1)}\ket*{j_b,m_b,l_{ab}}\ket*{j_a,l_{ab}\mp1,n_a}
     \Bigr)    
   \end{split}
-\end{equation}
+$$
 となる．境界の値に注意して，変数変換をすることで$2$つの項はキャンセルして消えることがわかる．
 一方，第$3$成分については，$(\ER_3(b)-\EL_3(a))\ket*{\psi}=0$となるのは簡単に確かめられる．
 
@@ -336,14 +341,13 @@ $\ER_\pm(b)-\EL_\pm(a)$を作用させて，実際に状態が消えることを
 なっている場合を考える．つまり，$\mathrm{s}(a)=\mathrm{s}(b)=\mathrm{t}(c)$である．
 この時，状態$\ket*{j_a,m_a,n_a}
 \ket*{j_b,m_b,n_b}\ket*{j_c,m_c,n_c}$に対して，Clebsch-Gordan係数を用いて，
-\begin{equation}
+$$
   \ket*{\varphi}=\sum_{n_{a},n_b,m_c}\frac{1}{\sqrt{d_c}}
   \braket{j_an_a\, j_bn_b}{j_cm_c}
   \ket*{j_a,m_a,n_a} \ket*{j_b,m_b,n_b} \ket*{j_c,m_c,n_c}
-    \label{eq:three point state}
-\end{equation}
+$${#eq-three_point_state}
 の線形結合取ると，
-\begin{equation}
+$$
   (
     \ER_i(a)
     +\ER_i(b)-\EL_i(c)
@@ -351,11 +355,11 @@ $\ER_\pm(b)-\EL_\pm(a)$を作用させて，実際に状態が消えることを
 \frac{1}{\sqrt{d_c}}  \braket{j_an_a\, j_bn_b}{j_cm_c}
 \ket*{j_a,m_a,n_a} \ket*{j_b,m_b,n_b} \ket*{j_c,m_c,n_c}
     =0
-\end{equation}
+$$
 となりGaussの拘束条件を満たしていることがわかる．
 ここで，$1/\sqrt{d_c}$は規格化因子である．
 \begin{question}
-  式\eqref{eq:three point state}で定義した，$\ket*{\varphi}$が，
+  式(@eq-three_point_state)で定義した，$\ket*{\varphi}$が，
   $\braket{\varphi}{\varphi}=1$を満たすことを確かめよ．
 \end{question}
 一般には係数に位相がついていても良い．$\mathrm{SU}(2)$の場合は，位相をうまく選ぶことによって有向グラフの矢印の向きに依存しないように定式化することもできる．
@@ -371,192 +375,188 @@ $3$点頂点に分解することができるので，$3$点頂点のみのネ�
 そのために表現$a$をもつリンク演算子$U_a$を考えよう．
 <!-- %表現$a$の次元を$d_{a}=(2j_a+1)$とする． -->
 これは，$(d_{a}\times d_{a})$行列の演算子で，以下の交換関係を満たす:
-\begin{align}
-  [\ER_i,U_{{a}}] &=U_{a} T_{ai}, \label{eq:[E_s,U_a]}\\
-  [\EL_i,U_{a}] &=T_{ai}U_{a} \label{eq:[E_t,U_a]}.
-\end{align}
+$$
+  [\ER_i,U_{{a}}] =U_{a} T_{ai},
+$${#eq-E_sU_a}
+$$
+  [\EL_i,U_{a}] =T_{ai}U_{a} .
+$${#eq-E_tU_a}
 ここで$a$については和を取らない点に注意．$T_{ai}$は，生成子の$d_a\times d_a$表現行列である．
 具体的な行列の成分は，
-\begin{align}
+$$\begin{aligned}
   [T_{a3}]^{m_a}_{n_a} &= m_a\delta^{m_a}_{n_a},\\
   [T_{a+}]^{m_a}_{n_a} &= \sqrt{j_a(j_a+1)-n_a(n_a+ 1)}\delta^{m_a}_{n_a+1},\\
   [T_{a-}]^{m_a}_{n_a} &= \sqrt{j_a(j_a+1)-n_a(n_a- 1)}\delta^{m_a}_{n_a-1}
-\end{align}
+\end{aligned}$$
 である．$m_a,n_a$は，$-j_a,-j_a+1,\cdots, j_a$の値を取る．
-これらを用いると，式\eqref{eq:[E_s,U_a]}, \eqref{eq:[E_t,U_a]}は，
-\begin{align}
-  [\ER_{\pm},[U_{{a}}]^{m_a}_{n_a}] &=
+これらを用いると，式(@eq-E_sU_a), (@eq-E_tU_a)は，
+$$
+  [\ER_{\pm},[U_{{a}}]^{m_a}_{n_a}] =
   \sqrt{j_a(j_a+1)-n_a(n_a\pm 1)}[U_{a}]^{m_a}_{n_a\pm 1} ,
-  \label{eq:[Espm,Ua]}
-  \\
-  [\ER_3,[U_{{a}}]^{m_a}_{n_a}] &
-  =  n_a[U_{a}]^{m_a}_{n_a}, \label{eq:[E_s3,Ua]}\\
-  [\EL_{\pm},[U_{{a}}]^{m_a}_{n_a}] &=
+$${#eq-EspmUa}
+$$
+  [\ER_3,[U_{{a}}]^{m_a}_{n_a}] 
+  =  n_a[U_{a}]^{m_a}_{n_a}, 
+$${#eq-E_s3Ua}
+$$
+  [\EL_{\pm},[U_{{a}}]^{m_a}_{n_a}] =
   \sqrt{j_a(j_a+1)-m_a(m_a\mp 1)} 
-  [U_{a}]^{m_a\mp 1}_{n_a} , \label{eq:[Etpm,Ua]}
-  \\
-  [\EL_{3},[U_{{a}}]^{m_a}_{n_a}] &=m_a[U_{a}]^{m_a}_{n_a}
-  \label{eq:[E_t3,Ua]}
-\end{align}
+  [U_{a}]^{m_a\mp 1}_{n_a},
+$${#eq-EtpmUa}
+$$
+  [\EL_{3},[U_{{a}}]^{m_a}_{n_a}] =m_a[U_{a}]^{m_a}_{n_a}
+$${#eq-E_t3Ua}
 と表せる．
 また，$E^2=\ER_i^2=\EL_i^2$との交換関係は，
-\begin{align}
+$$
   [\ER_i^2,[U_{{a}}]^{m_a}_{n_a}]
-  &=
+  =
   j_a(j_a+1)[U_{{a}}]^{m_a}_{n_a}
-  +\sum_{i}2[U_{{a}}T_{ai}]^{m_a}_{n_a}\ER_i, \label{eq:[E_s^2,Ua]}\\  
+  +\sum_{i}2[U_{{a}}T_{ai}]^{m_a}_{n_a}\ER_i,
+$${#eq-E_s2Ua}
+$$  
   [\EL_i^2,[U_{{a}}]^{m_a}_{n_a}],
-  &=
+  =
   j_a(j_a+1)[U_{{a}}]^{m_a}_{n_a}
-  +\sum_{i}2[T_{ai}U_{{a}}]^{m_a}_{n_a}\EL_i \label{eq:[E_t^2,Ua]}
-\end{align}
+  +\sum_{i}2[T_{ai}U_{{a}}]^{m_a}_{n_a}\EL_i
+$${#eq-E_t2Ua}
 となる．ここで，$T_{ai}^2=j_a(j_a+1)\mathbbm{1}_a$となることを使った．
-$[U_{a}]^{m_a}_{n_a}\ket*{0}$がどのような状態になるか考察しよう．まず，式\eqref{eq:[E_s^2,Ua]}，\eqref{eq:[E_t^2,Ua]}および$\ER_i\ket*{0}=\EL_i\ket*{0}=0$を用いると，
-\begin{equation}
+$[U_{a}]^{m_a}_{n_a}\ket*{0}$がどのような状態になるか考察しよう．まず，式(@eq-[E_s^2,Ua])，(@eq-[E_t^2,Ua])および$\ER_i\ket*{0}=\EL_i\ket*{0}=0$を用いると，
+$$
   \begin{split}
     E^2[U_{a}]^{m_a}_{n_a}\ket*{0} &=
     [E^2,[U_{a}]^{m_a}_{n_a}]\ket*{0}\\
     &= j_a(j_a+1)[U_{a}]^{m_a}_{n_a}\ket*{0}
   \end{split}
-\end{equation}
+$$
 がわかる． また，$\ER_3$，$\EL_3$との交換関係
-\eqref{eq:[E_s3,Ua]}，\eqref{eq:[E_t3,Ua]}
+(@eq-[E_s3,Ua])，(@eq-[E_t3,Ua])
 から，
-\begin{align}
+$$\begin{aligned}
   \ER_3[U_{a}]^{m_a}_{n_a}\ket*{0}&=
   n_a[U_{a}]^{m_a}_{n_a}\ket*{0},\\
   \EL_3[U_{a}]^{m}_{n}\ket*{0}&=
   m_a[U_{a}]^{m_a}_{n_a}\ket*{0}
-\end{align}
+\end{aligned}$$
 がわかる．
 したがって，
 $[U_{a}]^{m_a}_{n_a}\ket*{0}$は$\ket*{j_a,m_a,n_a}$に比例する．
 次に
-\begin{equation}
+$$
   [U_{a}]^{m_a}_{n_a}\ket*{0}= C(j_a,m_a,n_a)\ket*{j_a,m_a,n_a}
-  \label{eq:U|0> normalization}
-\end{equation}
-として，規格化因子$C(j_a,m_a,n_a)$を求めよう．式\eqref{eq:U|0> normalization}の両辺に$\ER_{\pm}$を作用させると，式\eqref{eq:Espm},
-\eqref{eq:[Espm,Ua]}，$\ER_\pm\ket{0}=0$より， 
-\begin{equation}
+$${#eq-U0_normalization}
+として，規格化因子$C(j_a,m_a,n_a)$を求めよう．式(@eq-U0_normalization}の両辺に$\ER_{\pm}$を作用させると，式(@eq-Espm),
+(@eq-EspmUa)，$\ER_\pm\ket{0}=0$より， 
+$$
   \begin{split}
     &\sqrt{j_a(j_a+1)-n_a(n_a\pm 1)}C(j_a,m_a,n_a\pm 1)\ket*{j_a,m_a,n_a\pm 1}\\
     &\quad= C(j_a,m_a,n_a)\sqrt{j_a(j_a+1)-n_a(n_a\pm 1)}\ket*{j_a,m_a,n_a\pm 1}
   \end{split}
-\end{equation}
+$$
 が得られ，$C(j_a,m_a,n_a)$は$n_a$に依存しない事がわかる．
 同様に，両辺に$\EL_{\pm}$を作用させると，
-式\eqref{eq:Etpm}，\eqref{eq:[Etpm,Ua]}，$\EL_\pm\ket{0}=0$より，
-<!-- % \begin{equation}
+式(@eq-Etpm)，(@eq-EtpmUa)，$\EL_\pm\ket{0}=0$より，
+<!-- % $$
 %   \begin{split}
 %     &\sqrt{j_a(j_a+1)-m_a(m_a\mp 1)} C(j_a,m_a\mp1,n_a) \ket*{j_a,m_a\mp1,n_a}\\
 %     &\quad= C(j_a,m_a,n_a)\sqrt{j_a(j_a+1)-m_a(m_a\mp 1)}
 %     \ket*{j_a,m_a\mp1,n_a}
 %   \end{split}
-% \end{equation} -->
+% $$ -->
 $m_a$にも依存しないことがわかる．
 したがって，$C(j_a,m_a,n_a)=C(j_a)$の形を取る．
 $[U_{a}]^{m_a}_{n_a}\ket*{0}$の内積を取ると，
-\begin{equation}
+$$
   |C(j_a)|^2=\bra{0}[U^\dag_{a}]_{m_a}^{n_a}  [U_{a}]^{m_a}_{n_a}\ket*{0}
-\end{equation}
+$$
 となるが，両辺$m_a$で和を取ると，右辺の中の$[U^\dag U]^{n_a}_{n_a}=\mathbbm{1}$より，
 $  d_a|C(j_a)|^2=1$が得られる．ここで，$([U_a]^{m_a}_{n_a})^\dag =[U_a^\dag]_{m_a}^{n_a}$となることに注意する．
 よって，これらの条件で決まらない位相部分は$1$に取り，$C(j_a)=1/\sqrt{d_a}$と選んで，
-\begin{equation}
+$$
   [U_{a}]^{m_a}_{n_a}\ket*{0}=
   \frac{1}{\sqrt{d_a}}\ket*{j_a,m_a,n_a}
-  \label{eq:U action}
-\end{equation}
+$${#eq-U_action}
 を得る．
 次にリンク変数の積$[U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b}$を考えよう．添字の変換性から，
-\begin{equation}
+$$
   [U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b}
   =\sum_{j_c,m_c,n_c} 
   \braket{j_am_a\, j_bm_b}{j_c,m_c}
   \braket{j_c,n_c}{j_an_a\, j_bn_b}
   [U_{c}]^{m_c}_{n_c}
-  \label{eq:fusion U}
-\end{equation}
+$${#eq-fusion_U}
 となる．規格化についても上式で正しく規格化されている．
 \begin{question}
   $1=\sum_{m_a,m_b}([U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b})^\dag [U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b}$を
-  考え，この右辺を式\eqref{eq:fusion U}を用いて評価することで，正しく規格化されていることを確かめよ．  
+  考え，この右辺を式(@eq-fusion_U)を用いて評価することで，正しく規格化されていることを確かめよ．  
 \end{question}
-式\eqref{eq:fusion U}の両辺に$\sqrt{d_b}$をかけ$\ket*{0}$に作用させ，
-式\eqref{eq:U action}を用いると表現$a$のリンク変数の状態への作用
-\begin{equation}
+式(@eq-fusion_U)の両辺に$\sqrt{d_b}$をかけ$\ket*{0}$に作用させ，
+式(@eq-U_action)を用いると表現$a$のリンク変数の状態への作用
+$$
   [U_{a}]^{m_a}_{n_a}\ket*{j_b,m_b,n_b} =
   \sum_{j_c,m_c,n_c}\sqrt{\frac{d_b}{d_c}}
   \braket{j_am_a\, j_bm_b}{j_c,m_c}
   \braket{j_c,n_c}{j_an_a\, j_bn_b}
    \ket*{j_c,m_c,n_c}
-\end{equation}
+$$
 が得られる．
-また，式\eqref{eq:fusion U}の両辺について，$m_a=n_a$, $m_b=n_b$として和を取ると
-\begin{equation}
+また，式(@eq-fusion_U)の両辺について，$m_a=n_a$, $m_b=n_b$として和を取ると
+$$
   \tr U_a \tr U_b = \sum_{c}N_{ab}^c \tr U_c
-  \label{eq:fusion Wilson loop}
-\end{equation}
+$${#eq-fusion_Wilson_loop}
 が得られる．
 \begin{question}
-  式\eqref{eq:fusion Wilson loop}を示せ．
+  式(@eq-fusion_Wilson_loop)を示せ．
 \end{question}
 
 
 これまで，$U$についての見てきたが，$U^\dag$についても考察しておこう．
-式\eqref{eq:[E_s,U_a]}，及び式\eqref{eq:[E_t,U_a]}の両辺の$\dag$を取ることで，
-\begin{align}
-  [\ER_i,U_{{a}}^\dag] &=-T_{ai} U^\dag_{a}, \label{eq:[E_s,U_a]dag}\\
-  [\EL_i,U_{a}^\dag] &=-U_{a}^\dag T_{ai} \label{eq:[E_t,U_a]dag}
-\end{align}
+式(@eq-E_sU_a)，及び式(@eq-E_tU_a)の両辺の$\dag$を取ることで，
+$$
+  [\ER_i,U_{{a}}^\dag] =-T_{ai} U^\dag_{a},
+$${#eq-E_sU_adag}
+$$
+  [\EL_i,U_{a}^\dag] =-U_{a}^\dag T_{ai}
+$${#eq-E_tU_adag}
 を得る．したがって，
-\begin{equation}
+$$
   [U^\dag_{a}]^{n_a}_{m_a}\ket*{0}=
   \frac{e^{\ri\theta(j_a,n_a,m_a)}}{\sqrt{d_a}}\ket*{j_a,-m_a,-n_a}
-  %\label{eq:U action}
-\end{equation}
+$$
 となる．これは，$[U^\dag_a]^{n_a}_{m_a}=e^{\ri\theta(j_a,n_a,m_a)}[U_a]_{-n_a}^{-m_a}$を意味し．
 位相の不定性は，$[U_{a}U^\dag_{a}]^{m}_n=\delta^m_n$になるところから決定することができる：
-\begin{equation}
-  \begin{split}
+$$
     [U_{a}U^\dag_{a}]^{m}_n
-    &=\sum_{l,j_c,m_c,n_c}e^{\ri\theta(j_a,l,n)}
+    =\sum_{l,j_c,m_c,n_c}e^{\ri\theta(j_a,l,n)}
     \braket{j_am\, j_a-n}{j_c,m_c}
     \braket{j_c,n_c}{j_al\, j_a-l}
      [U_c]^{m_c}_{n_c}
-   \end{split}
-\end{equation}
+$$
 より，
-\begin{equation}
-  \begin{split}
+$$
   1=  \sum_{l}e^{\ri\theta(j_a,l,n)}
     \braket{j_an\, j_a-n}{0,0}
     \braket{0,0}{j_al\, j_a-l}
    % =\frac{1}{d_a}\sum_l e^{\ri\theta(j_a,n,l)}(-1)^{j_a-n}(-1)^{j_a-l}
-  \end{split}
-\end{equation}
+$$
 となり，
-\begin{equation}
-  \begin{split}
+$$
       [U^\dag_{a}]^{n_a}_{m_a}=
       d_a\sum_{l_a,k_a}
       \braket{0,0}{j_am_a\, j_al_a}
       \braket{j_an_a\, j_ak_a}{0,0}
       [U_a]^{l_a}_{k_a}
-  \end{split}
-\end{equation}
+$$
 を得る．
 
-また，式\eqref{eq:fusion U}の両辺$\dag$を取ることで，$U^\dag$の合成，
-\begin{equation}
+また，式(@eq-fusion_U)の両辺$\dag$を取ることで，$U^\dag$の合成，
+$$
   [U^\dag_{b}]_{m_b}^{n_b}[U^\dag_{a}]_{m_a}^{n_a} 
   =\sum_{j_c,m_c,n_c} 
   \braket{j_c,m_c}{j_am_a\, j_bm_b}
   \braket{j_an_a\, j_bn_b}{j_c,n_c}
   [U^\dag_{c}]_{m_c}^{n_c}
-  \label{eq:fusion Udag}
-\end{equation}
+$${#eq-fusion_Udag}
 が従う．
 
 
@@ -573,10 +573,10 @@ $  d_a|C(j_a)|^2=1$が得られる．ここで，$([U_a]^{m_a}_{n_a})^\dag =[U_a
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{equation}
+$$
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
    =  \sqrt{d_a}U_a.
-\end{equation}
+$$
 :::
 
 逆向きの矢印には，$\sqrt{d_a}U_a^\dag$を対応させる．
@@ -592,12 +592,12 @@ $  d_a|C(j_a)|^2=1$が得られる．ここで，$([U_a]^{m_a}_{n_a})^\dag =[U_a
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{equation}
+$$
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cab.pdf}}}
   = \braket{j_an_a\, j_bn_b}{j_c,m_c}\frac{1}{\sqrt{d_c}}
   %\sqrt{d_a}U_a \sqrt{d_b}U_b \sqrt{d_c}U_c
   ,
-\end{equation}
+$$
 :::
 
 および
@@ -612,15 +612,15 @@ $  d_a|C(j_a)|^2=1$が得られる．ここで，$([U_a]^{m_a}_{n_a})^\dag =[U_a
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{equation}
+$$
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abc.pdf}}}
   = \braket{j_c,n_c}{j_am_a\, j_bm_b}\frac{1}{\sqrt{d_c}}
   %\sqrt{d_a}U_a \sqrt{d_b}U_b \sqrt{d_c}U_c
-\end{equation}
+$$
 :::
 
 を対応させる．
-そうすると，式\eqref{eq:fusion U}に対応して，
+そうすると，式(@eq-fusion_U)に対応して，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -630,16 +630,15 @@ $  d_a|C(j_a)|^2=1$が得られる．ここで，$([U_a]^{m_a}_{n_a})^\dag =[U_a
   \sqrt{\frac{d_c}{d_ad_b}}$$
   </span>
    <img src="figs/parallel2.svg" style="height:5.5em;">
-</div> 
+</div> {#eq-merge}
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{equation}
+$$
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel1.pdf}}}
   =\sum_{c}
   \sqrt{\frac{d_c}{d_ad_b}}\,\, \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel2.pdf}}}
-  \label{eq:merge}
-\end{equation}
+$${#eq-merge}
 :::
 
 を得る．ここで内線の$m,n$については和を取るものとする．
@@ -656,33 +655,32 @@ $  d_a|C(j_a)|^2=1$が得られる．ここで，$([U_a]^{m_a}_{n_a})^\dag =[U_a
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{equation}
+$$
    \vcenter{\hbox{includegraphics[scale=0.3]{figs/abcloop.pdf}}}
   =\delta_{c,c'}\sqrt{\frac{d_ad_b}{d_c}}
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/c.pdf}}}
-  \label{eq:loop}
- \end{equation}
+$${#eq-loop}
 :::
  
 が得られる．ここで，$3$つに並んだ$U$は一つに結合している．
 \ref{sec:graphical_Clebsch-Gordan}節のClebsch-Gordan係数のグラフィカルな表現と似ているが，係数が違うことに注意する．
 \begin{question}
-  式\eqref{eq:merge}，\eqref{eq:loop}を確認せよ．
+  式(@eq-merge)，(@eq-loop)を確認せよ．
 \end{question}
 
 <!-- %$[U_{a}]^{m_a}_{~m}(a)[U_{a}]^{m}_{n_b}(b)$を考えよう.
-% \begin{equation}
+% $$
 %   \begin{split}
 %     \sqrt{d_a}[U_{a}]^{m_a}_{~m}(a)[U_{a}]^{m}_{n_b}(b)|0\rangle&=
 %     \sum_m\frac{1}{\sqrt{d_a}}|j_a,m_a,m\rangle
 %     |j_a,m,n_b\rangle\\
 %   &= \sqrt{d_a}U^{m_a}_{n_b}(ab)\\
 %   \end{split}
-% \end{equation}
+% $$
 % となる． -->
 
 次に辺$1$, $2$, $3$について，$1$, $2$の始点，$3$の終点からなる頂点を持つ
-\begin{equation}
+$$
   \begin{split}
 & \sum_{n_a,n_b,m_c}
 \braket{j_an_a\, j_bn_b}{j_c m_c}
@@ -690,11 +688,12 @@ $  d_a|C(j_a)|^2=1$が得られる．ここで，$([U_a]^{m_a}_{n_a})^\dag =[U_a
     [U_{b}(2)]^{m_b}_{n_b}
     [U_{c}(3)]^{m_c}_{n_c}
   \end{split}
-\end{equation}
+$$
 を考える．頂点はGaussの拘束条件を満たす．
 これに
 $\sum_l[U_{c'}(1)]^{m_{a'}}_{l} [U_{c'}(3)]^{l}_{n_{c'}} $を作用させると，
-\begin{equation}
+
+$$
   \begin{split}
 &\sum_{n_a,n_b,m_c}\sum_l[U_{c'}(1)]^{m_{a'}}_{l} [U_{c'}(3)]^{l}_{n_{c'}}
 \braket{j_an_a\, j_bn_b}{j_c m_c}
@@ -717,17 +716,17 @@ $\sum_l[U_{c'}(1)]^{m_{a'}}_{l} [U_{c'}(3)]^{l}_{n_{c'}} $を作用させると�
 \braket{ j_f,n_f}{j_{c'}n_{c'}\, j_cn_c}
 \braket{ j_{c'}m_{a'}\, j_a m_a}{ j_e,m_e}
 \braket{ j_en_e j_bn_b}{j_fm_f}[U_{e}(1)]^{m_e}_{n_e} [U_{b}(2)]^{m_b}_{n_b}[U_{f}(3)]^{m_f}_{n_f}
-  \end{split}\label{eq:Fmoves U}
-\end{equation}
+  \end{split}
+$${#eq-Fmoves_U}
 となる．
-ここで，$1$行目から$2$行目は，$1$, $3$の辺について，式\eqref{eq:fusion U}を使って変形し，
+ここで，$1$行目から$2$行目は，$1$, $3$の辺について，式(@eq-fusion_U)を使って変形し，
 $3$行目へは，式 (@eq-deform) を用いて変形した．
 
 \begin{question}
-  式\eqref{eq:Fmoves U}を確かめよ．
+  式(@eq-Fmoves_U)を確かめよ．
 \end{question}
 
-この関係式\eqref{eq:Fmoves U}を用いると
+この関係式(@eq-Fmoves_U)を用いると
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -740,11 +739,11 @@ $3$行目へは，式 (@eq-deform) を用いて変形した．
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{equation}
+$$
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2a.pdf}}}=
   \sum_{e}([F^{abc}_d)^{-1}]_{fe} 
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}} 
-\end{equation}
+$$
 :::
 
 が得られる．同様の手続きで，
@@ -760,13 +759,12 @@ $3$行目へは，式 (@eq-deform) を用いて変形した．
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{equation}
+$$
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}}
   =
   \sum_{f}[F^{abc}_d]_{ef} 
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2a.pdf}}}
-  \label{eq:F-moves}
-\end{equation}
+$${#eq-F-moves}
 :::
 
 が得られる．
@@ -780,11 +778,11 @@ $3$行目へは，式 (@eq-deform) を用いて変形した．
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{equation}
+$$
 \begin{split}
     \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction0.pdf}}}
 \end{split}
-\end{equation}
+$$
 :::
 
 へのWilsonループ$\tr U_d$の作用は，Wilsonループのトポロジカルな変形を用いて評価することができる:
@@ -816,7 +814,7 @@ $3$行目へは，式 (@eq-deform) を用いて変形した．
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{equation}
+$$
 \begin{split}
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction1.pdf}}}
    &=
@@ -833,9 +831,8 @@ $3$行目へは，式 (@eq-deform) を用いて変形した．
 &      =\prod_{i=1}^{4} \sum_{b_{i}}
 [F_{b_{i}}^{c_{i}a_{i-1}d}]_{a_{i}b_{i-1}}
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction5.pdf}}}.
-  \label{eq:Wilson_loop_action}
   \end{split}
-\end{equation}
+$$#{eq-Wilson_loop_action}
 :::
 
 ここで，$a_{0}$と$b_{0}$は，$a_{4}$および$b_{4}$と解釈する．
@@ -849,10 +846,10 @@ $3$行目へは，式 (@eq-deform) を用いて変形した．
 
 ## 表現のカットオフ {#sec-cutoff_representation}
 表現のラベル$j$は無限大まで値を取れるため，数値計算を行なう上では，有限次元に近似する必要がある．ここでは，$j\leq j_{\mathrm{max}}=k/2$のカットオフを入れる．つまり，$j$は，$0,1/2,1,\cdots, k/2$を取り，状態の数は$(k+1)$個である．
-単純なカットオフだとこれまで見てきた式 @eq-merge や\eqref{eq:loop}などのルールが使えなくなる．これらのルールを満たすカットオフは，存在することが知られており，それは，$\mathrm{SU}(2)$を量子群$\mathrm{SU}(2)_k$に変形させることに対応する．量子群の詳細は割愛し( @sec-q_deformation 節参照)，議論に必要な結果だけを記す．
+単純なカットオフだとこれまで見てきた式 @eq-merge や(@eq-loop}などのルールが使えなくなる．これらのルールを満たすカットオフは，存在することが知られており，それは，$\mathrm{SU}(2)$を量子群$\mathrm{SU}(2)_k$に変形させることに対応する．量子群の詳細は割愛し( @sec-q_deformation 節参照)，議論に必要な結果だけを記す．
 
-表現のカットオフにより，式\eqref{eq:fusion delta}の$\delta_{abc}$は修正され
-\begin{equation}
+表現のカットオフにより，式(@eq-fusion_delta)の$\delta_{abc}$は修正され
+$$
   N_{ab}^c=\delta_{abc}\coloneqq \begin{cases}
   1 &
   j_{a}+j_{b}\geq j_{c},
@@ -863,22 +860,19 @@ $3$行目へは，式 (@eq-deform) を用いて変形した．
   \\
   0 & \text{その他}
   \end{cases}
-  \label{eq:fusion q}
-  \end{equation}
+  $${#eq-fusion_q}
   となる．表現の次元だった$d_a$は，量子次元(Frobenius-Perron dimension)と呼ばれ，
-  \begin{equation}
+  $$
     [N_a]^{c}_{b}=N_{ab}^c
-    \label{eq:N_matrix}
-  \end{equation}
+  $${#eq-N_matrix}
   を行列$N_{a}$と見た時の最大固有値で与えられる．これは，パラメータ
-\begin{equation}
+$$
   q = \exp\ri \frac{2\pi}{k+2}
-\end{equation}
+$$
 を用いて，
-\begin{equation}
+$$
   [n]\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+2}n)}{\sin\qty(\frac{\pi}{k+2})}
-  \label{eq:[n]}
-\end{equation}
+$${#eq-n}
 を定義すると，$d_a=[2j_a+1]$となることが知られている．カットオフ無限大$k\to\infty$では，
 $d_a=2j_a+1$に帰着する．
 
@@ -887,23 +881,23 @@ $d_a=2j_a+1$に帰着する．
 \end{question}
 
 全量子次元は，
-\begin{equation}
+$$
   \mathcal{D} \coloneqq \sqrt{\sum_{a}d_a^2}=\sqrt{\frac{k+2}{2}}\frac{1}{\sin\qty(\frac{\pi}{k+2})}
-\end{equation}
+$$
 と定義される．$k$が大きい場合に$\mathcal{D}\sim (k+2)^{3/2}$と振る舞う．
 また，$2$次のCasimir不変量は$[j_a][j_a+1]$となる．
 
-Wilsonループの作用を計算するためには$F$-movesが必要であった．これは，式\eqref{eq:fmoves}と同様に
-\begin{equation}
+Wilsonループの作用を計算するためには$F$-movesが必要であった．これは，式(@eq-fmoves}と同様に
+$$
   [F^{abc}_d]_{ef}=(-1)^{j_a+j_b+j_c+j_d}\sqrt{d_{e}d_{f}}
   \begin{Bmatrix}
     j_a & j_b & j_e\\
     j_c & j_d & j_f
   \end{Bmatrix}
-\end{equation}
+$$
 と表せる．
 ただし，Wigner $6$-$j$シンボルは，
-\begin{equation}
+$$
   \begin{split}
     \begin{Bmatrix}
       a & b & c\\
@@ -912,17 +906,17 @@ Wilsonループの作用を計算するためには$F$-movesが必要であっ�
     \coloneqq \Delta(a,b,c)\Delta(a,e,f)\Delta(d,b,f)\Delta(d,e,c)\sum_z(-1)^z [z+1]!\\   
     \times \frac{([a+b+d+e-z]![a+d+c+f-z]![b+e+c+f-z]!)^{-1}}{[z-a-b-c]![z-a-e-f]![z-d-b-f]![z-d-e-c]!}
   \end{split}
-\end{equation}
+$$
 と修正される．ここで，
-\begin{equation}
+$$
   \Delta(a,b,c)=\delta_{abc}\sqrt{\frac{[a+b-c]![a-b+c]![-a+b+c]!}{[a+b+c+1]!}},
-\end{equation}
+$$
 及び，$[n]!=[n][n-1]\cdots [2][1]$である．
 また，$z$が取りうる範囲は，
-\begin{equation}
+$$
   \max(a+b+c,a+e+f,d+b+f,d+e+c)\leq z\leq 
   \min(a+b+d+e,a+d+c+f,b+e+c+f)
-\end{equation}
+$$
 である．
 
 
