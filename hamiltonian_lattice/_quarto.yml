@@ -21,13 +21,21 @@ book:
   chapters:
     - index.qmd
     - SU2.qmd
+#   - Lie.qmd
+#.  - Gaugetheory.qmd
     - Kogut-Susskind.qmd
     - stringnet.qmd
     - Example.qmd
     - MTC.qmd
+    - SU3.qmd
+#.  - meanfield.qmd
+#.  - fermion.qmd
+#.  - prepotential.qmd
+
   appendices:
+#    - q-deformation.qmd
+#.  - group_theory.qmd
     - references.qmd
-    - q-deformation.qmd    
 
 lang: ja
 

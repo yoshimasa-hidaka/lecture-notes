@@ -1,0 +1,154 @@
+\section{Prepotentialの方法}(以下未完成)
+生成消滅演算子を用いて表現する方法を紹介する．
+$\ER_i$, $\EL_i$を生成消滅演算子を用いて
+\begin{align}
+  \ER_i &= b^\dag T_i b,\\
+  \EL_i &= -a^\dag T_i a
+\end{align}
+と表す．ここで，$a_i=(a_1,a_2)$, $b_i=(b_1,b_2)$は$2$成分の生成消滅演算子で，
+\begin{align}
+  [a_i, a_j^\dag] &= \delta_{ij},\\
+  [b_i, b_j^\dag] &= \delta_{ij}
+\end{align}
+を満たし，他の交換関係はゼロであるとする．生成子は交換関係，
+\begin{align}
+  [T_i, T_j] &=\ri f^k_{~ij} T_k
+\end{align}
+を満たす．これより，
+\begin{align}
+  [\ER_i , \ER_j]&=\ri f_{~ij}^k \ER_k\\
+  [\EL_i , \EL_j]&=-\ri f_{~ij}^k \EL_k
+\end{align}
+が示される．
+
+次に$U$との交換関係を考える．
+$$
+  U = U_L(b)U_R(a)
+$$
+と分解され，
+\begin{align}
+  U_R(b) &=
+  \begin{pmatrix}
+    b_1^\dag & b_2^\dag\\
+    -b_2 & b_1
+    \end{pmatrix}\frac{1}{\sqrt{N_R+1} } 
+    \label{eq:prepotential1}\\
+  U_L(a) &=
+  \frac{1}{\sqrt{N_L+1} }
+  \begin{pmatrix}
+    a_2^\dag &  a_1\\
+    -a_1^\dag &  a_2
+    \end{pmatrix} 
+    \label{eq:prepotential2}
+\end{align}
+に取ることができる．ここで，$N_{R}=b^\dag b$, $N_{L}=b^\dag b$である．
+$$
+  \begin{split}
+    U =U_LU_R =\frac{1}{\sqrt{N_L+1}} \begin{pmatrix}
+      a_2^\dag b_1^\dag-a_1b_2 & a_2^\dag  b_2^\dag+a_1b_1\\
+      -a_1^\dag b_1^\dag -a_2b_2  & -a_1^\dag b_2^\dag+a_2b_1
+    \end{pmatrix}
+    \frac{1}{\sqrt{N_R+1}}
+  \end{split}
+$$
+
+$$
+  \begin{split}
+    U^\dag =U_R^\dag U_L^\dag =\frac{1}{\sqrt{N_R+1}} \begin{pmatrix}
+      a_2 b_1-a_1^\dag b_2^\dag & 
+      -a_1 b_1 -a_2^\dag b_2^\dag \\
+      a_2  b_2+a_1^\dag b_1^\dag  & -a_1 b_2+a_2^\dag b_1^\dag
+    \end{pmatrix}
+    \frac{1}{\sqrt{N_L+1}}
+  \end{split}
+$$
+
+
+\begin{question}
+  交換関係\eqref{eq:[E_s,U]}式, \eqref{eq:[E_t,U]}式は，$U=U_{L}U_{R}$の分解により，
+  \begin{align}
+    [\ER_{i},U_R] &=U_R T_i,\\
+    [\EL_{i},U_L] &=T_{i}U_L
+  \end{align}
+  に帰着する．\eqref{eq:prepotential1}式，\eqref{eq:prepotential2}式が，上記の交換関係を満たす示せ．
+\end{question}
+
+$$
+  U_{11}=\frac{1}{\sqrt{N_L+1}}
+  (a_2^\dag b_1^\dag-a_1b_2)\frac{1}{\sqrt{N_R+1}}
+$$
+
+$L_i = -a^\dag T_i a$
+\begin{align}
+  \sqrt{2}U_{11}\ket{00;00}&=  \ket{01;10}=\ket{\frac{1}{2},\frac{1}{2};\frac{1}{2},\frac{1}{2}},\\
+  \sqrt{2} U_{12}\ket{00;00}&=  \ket{01;01}=\ket{\frac{1}{2},\frac{1}{2};\frac{1}{2},-\frac{1}{2}},\\
+  \sqrt{2} U_{21}\ket{00;00}&=  -\ket{10;10}=\ket{\frac{1}{2},-\frac{1}{2};\frac{1}{2},\frac{1}{2}},\\
+  \sqrt{2} U_{22}\ket{00;00}&=  -\ket{10;01}=\ket{\frac{1}{2},-\frac{1}{2};\frac{1}{2},-\frac{1}{2}}
+\end{align}
+$$
+  [L_{-}, U_{11}]\ket{0}= U_{21}\ket{0}
+$$
+$$
+  L_-= -a^\dag T_- a = -a^\dag_2 a_1
+$$
+
+$$
+  [U_{a}]^{m_a}_{n_a}\ket*{0}=
+  \frac{1}{\sqrt{d_a}}\ket*{j_a,m_a,n_a}
+  \label{eq:U action}
+$$
+
+\begin{align}
+  [\ER_{i}(e),U(e')] &=U(e') T_i\delta_{e,e'}, \label{eq:[E_s,U]field}\\
+  [\EL_{i}(e),U(e')] &=T_iU(e)\delta_{e,e'} , \label{eq:[E_t,U]field}
+  \\
+[\ER_{i}(e),\ER_{j}(e')] &=\ri f^{k}_{~ij}\ER_{k}(e)\delta_{e,e'},    \label{eq:[E_s,E_s]field} \\
+[\EL_{i}(e),\EL_{j}(e')] &=-\ri f^k_{~ij}\EL_{k}(e)\delta_{e,e'}    \label{eq:[E_t,E_t]field}
+\end{align}
+
+
+$\ket*{n,m}_R$を，$b_1^\dag b_1$及び
+$b^\dag_2b_2$の固有値を用いて表す:
+$$
+  \ket*{n,m}_R\coloneqq\frac{(b_1^\dag)^n}{\sqrt{n!}}\frac{(b_2^\dag)^m}{\sqrt{m!}}\ket*{0,0}
+$$
+$$
+  \ket*{j,m}_R:=\ket*{{j+m},{j-m}}_R
+$$
+
+$$
+  R_+ = b_1^\dag b_2
+$$
+$$
+  R_+\ket*{j,m}_R = b_1^\dag b_2\ket*{{j+m},{j-m}}_R=\sqrt{(j+m+1)(j-m)}\ket{j,m+1}_R
+$$
+$$
+  a^\dag \ket{n}=\sqrt{n+1}\ket{n+1}
+$$
+$$
+  a \ket{n}=\sqrt{n}\ket{n-1}
+$$
+
+
+$L_i = -a^\dag T_i a$
+
+
+$$
+  L^2\ket{j,m}= j(j+1)\ket{j,m}
+$$$$
+  L_3\ket{j,m}= m\ket{j,m}
+$$
+
+$$
+  L^2=N_L(N_L+1)
+$$
+
+
+$$
+  \ket*{j,m}_L:=(-1)^{j-m} \ket*{{j-m},{j+m}}_L
+$$
+
+
+$$
+  \ket*{j,m,n}= (-1)^{j-m} \ket*{{j-m},{j+m}}_L \ket*{{j+n},{j-n}}_R
+$$

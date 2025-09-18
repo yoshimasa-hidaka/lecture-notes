@@ -92,7 +92,7 @@ $$
 $${#eq-adjoint}
 と表される．
 \begin{question}
-  $ [U_{\mathrm{adj}}]_i^j \EL_j = \ER_i$が，式(@eq-E_sU), (@eq-E_tU)と無矛盾であることを示せ．
+  $ [U_{\mathrm{adj}}]_i^j \EL_j = \ER_i$が，式\eqref{eq-E_sU}, \eqref{eq-E_tU}と無矛盾であることを示せ．
 \end{question}
 $U_{\mathrm{adj}}$の直交関係
 $$
@@ -359,7 +359,7 @@ $$
 となりGaussの拘束条件を満たしていることがわかる．
 ここで，$1/\sqrt{d_c}$は規格化因子である．
 \begin{question}
-  式(@eq-three_point_state)で定義した，$\ket*{\varphi}$が，
+  式\eqref{eq-three_point_state}で定義した，$\ket*{\varphi}$が，
   $\braket{\varphi}{\varphi}=1$を満たすことを確かめよ．
 \end{question}
 一般には係数に位相がついていても良い．$\mathrm{SU}(2)$の場合は，位相をうまく選ぶことによって有向グラフの矢印の向きに依存しないように定式化することもできる．
@@ -488,7 +488,7 @@ $${#eq-fusion_U}
 となる．規格化についても上式で正しく規格化されている．
 \begin{question}
   $1=\sum_{m_a,m_b}([U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b})^\dag [U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b}$を
-  考え，この右辺を式(@eq-fusion_U)を用いて評価することで，正しく規格化されていることを確かめよ．  
+  考え，この右辺を式\eqref{eq-fusion_U}を用いて評価することで，正しく規格化されていることを確かめよ．  
 \end{question}
 式(@eq-fusion_U)の両辺に$\sqrt{d_b}$をかけ$\ket*{0}$に作用させ，
 式(@eq-U_action)を用いると表現$a$のリンク変数の状態への作用
@@ -506,7 +506,7 @@ $$
 $${#eq-fusion_Wilson_loop}
 が得られる．
 \begin{question}
-  式(@eq-fusion_Wilson_loop)を示せ．
+  式\eqref{eq-fusion_Wilson_loop}を示せ．
 \end{question}
 
 
@@ -667,7 +667,7 @@ $${#eq-loop}
 が得られる．ここで，$3$つに並んだ$U$は一つに結合している．
 \ref{sec:graphical_Clebsch-Gordan}節のClebsch-Gordan係数のグラフィカルな表現と似ているが，係数が違うことに注意する．
 \begin{question}
-  式(@eq-merge)，(@eq-loop)を確認せよ．
+  式\eqref{eq-merge}，\eqref{eq-loop}を確認せよ．
 \end{question}
 
 <!-- %$[U_{a}]^{m_a}_{~m}(a)[U_{a}]^{m}_{n_b}(b)$を考えよう.
@@ -725,7 +725,7 @@ $${#eq-Fmoves_U}
 $3$行目へは，式 (@eq-deform) を用いて変形した．
 
 \begin{question}
-  式(@eq-Fmoves_U)を確かめよ．
+  式\eqref{eq-Fmoves_U}を確かめよ．
 \end{question}
 
 この関係式(@eq-Fmoves_U)を用いると

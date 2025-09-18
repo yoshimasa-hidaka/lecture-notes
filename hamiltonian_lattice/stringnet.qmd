@@ -52,11 +52,10 @@ $$ $${#eq-action_electric_field}
 
 ::: {.content-visible when-format=pdf}
 $$
-  E^2 \parbox{.8cm}{\includegraphics[scale=0.3]{figs/a.pdf}}
+  E^2 \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
   = [j_a][j_a+1] 
-  \parbox{.8cm}{\includegraphics[scale=0.3]{figs/a.pdf}},
-  \label{eq-action_electric_field}
-$$
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}},
+$${#eq-action_electric_field}
 :::
 
 

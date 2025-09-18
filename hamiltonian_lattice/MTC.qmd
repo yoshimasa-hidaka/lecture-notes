@@ -109,7 +109,7 @@ $\mathrm{SU}(2)_k$の場合は，$ N_{ab}^c\in\{0,1\}$なので，このラベ�
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
-  \vcenter{\hbox{includegraphics[scale=0.3]{figs/abcloopmu.pdf}}}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abcloopmu.pdf}}}
 = \delta_c^{c'}\delta_{\mu}^{\mu'}\sqrt{\frac{d_ad_b}{d_c}}
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/c.pdf}}}
   \label{eq-stacking}
@@ -130,9 +130,9 @@ $\mathrm{SU}(2)_k$の場合は，$ N_{ab}^c\in\{0,1\}$なので，このラベ�
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
-  \vcenter{\hbox{includegraphics[scale=0.3]{figs/parallel1.pdf}}}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel1.pdf}}}
 = \sum_{c,\mu}\sqrt{\frac{d_c}{d_ad_b}}
-  \vcenter{\hbox{includegraphics[scale=0.3]{figs/parallel2mu.pdf}}}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel2mu.pdf}}}
   \label{eq-partition}
 \end{align}
 :::
@@ -216,14 +216,14 @@ $$を満たす．
 % $$% \label{eq-wilsonloop_fusion}
 %   \tr U_a \tr U_b = \sum_{c}N_{ab}^c\tr U_c.
 % $$% Furthermore, using eq.~(@eq-loop_deformation}, we obtain
-% \begin{equation}\label{eq-dadb}
+% $$\label{eq-dadb}
 %   d_{a}d_{b} =\sum_{c}N_{ab}^c d_c.
 % $$% Let us derive the inverse relation of eq.~(@eq-dadb}.
 % Noting $d_{\bar{b}}=d_{b}$, $d_{\bar{c}}=d_{c}$, and $N_{a\bar{b}}^{\bar{c}}=N_{ac}^b$, we obtain
 % $$%   d_{a}d_{b} =\sum_{c}N_{ac}^{b} d_c.
 % $$% Multiplying both sides by $d_a$ and summing over $a$ yield
 % the inverse relation of eq.~(@eq-dadb},
-% \begin{equation}\label{eq-inverser_dadb}
+% $$\label{eq-inverser_dadb}
 %   \mathcal{D}^2 d_{b} =\sum_{a,c}N_{ac}^{b} d_a d_c.
 % $$% where $\mathcal{D}$ is the total quantum dimension defined by 
 % $$%   \mathcal{D} \coloneqq \sqrt{\sum_{a}d_a^2}.
@@ -320,7 +320,7 @@ $$ $${#eq-link}
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
-  \vcenter{\hbox{includegraphics[scale=0.3]{figs/vacuumMove1.pdf}}}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove1.pdf}}}
 =\vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove2.pdf}}}
 \end{align}
 :::

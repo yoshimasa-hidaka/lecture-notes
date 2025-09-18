@@ -1,0 +1,198 @@
+\newcommand{\sthreer}{r}
+\newcommand{\sthreerr}{r^2}
+\newcommand{\sthreera}{s_1}
+\newcommand{\sthreerb}{s_2}
+\newcommand{\sthreerc}{s_3}
+
+\section{群論基礎}\label{sec:group_theory}
+
+\subsection{\texorpdfstring{$S_3$}{S3}群}\label{sec:S3}
+$S_3$は，3次の対称群で，正三角形の合同群である．
+正三角形の合同群の元は$120^\circ$回転$\sthreer$, $240^\circ$回転$\sthreer^2 = \sthreer^{-1}$, 及び，各頂点を通る軸の反転$s_i$($i=1,2,3$)の$6$つからなる．
+置換群との対応は，
+\begin{align}
+&e=\begin{pmatrix}
+1 & 2 & 3  \\
+1 & 2 & 3 
+\end{pmatrix}=(),\quad
+\sthreer=\begin{pmatrix}
+1 & 2 & 3  \\
+2 & 3 & 1 
+\end{pmatrix}=(123),\quad
+\sthreerr=\begin{pmatrix}
+1 & 2 & 3  \\
+3 & 1 & 2 
+\end{pmatrix}=(132),\notag\\
+&\sthreera=\begin{pmatrix}
+1 & 2 & 3  \\
+1 & 3 & 2 
+\end{pmatrix}=(23),\quad
+\sthreerb=\begin{pmatrix}
+1 & 2 & 3  \\
+3 & 2 & 1
+\end{pmatrix}=(13),\quad
+\sthreerc=\begin{pmatrix}
+1 & 2 & 3  \\
+2 & 1 & 3 
+\end{pmatrix}=(12)
+\end{align}
+である．%$\sthreerc \sthreer \sthreerc=\sthreerr$.
+元の合成は，例えば $\sthreerc\sthreer = \sthreera$や$\sthreerc\sthreerr = \sthreerb$のようになる．他の積は表\ref{table:S3}にまとめてある．
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{|c||c|c|c|c|c|c|} \hline
+    $\circ$ &  $e$& $\sthreer$ & $\sthreerr$  & $\sthreera$ & $\sthreerb$ & $\sthreerc$   \\ \hline \hline
+    $e$ &  $e$& $\sthreer$ & $\sthreerr$  & $\sthreera$ & $\sthreerb$ & $\sthreerc$   \\ \hline
+     $\sthreer$ &  $\sthreer$& $\sthreerr$ & $e$  & $\sthreerc$ & $\sthreera$ & $\sthreerb$   \\ \hline
+     $\sthreerr$ &  $\sthreerr$& $e$ & $\sthreer$  & $\sthreerb$ & $\sthreerc$ & $\sthreera$   \\ \hline
+     $\sthreera$ &  $\sthreera$& $\sthreerb$ & $\sthreerc$  & $e$ & $\sthreer$ & $\sthreerr$   \\ \hline
+     $\sthreerb$ &  $\sthreerb$& $\sthreerc$ & $\sthreera$  & $\sthreerr$ & $e$ & $\sthreer$   \\ \hline
+     $\sthreerc$ &  $\sthreerc$& $\sthreera$ & $\sthreerb$  & $\sthreer$ & $\sthreerr$ & $e$   \\ \hline
+  \end{tabular}
+  \caption{$\mathrm{S}_3$群の積表．}
+  \label{table:S3}
+\end{table}
+%群$G$の元$a,b\in G$について$a = g b g^{-1}$となる単位元でない$g$の元が存在する時，$a$と$b$は共役という．
+%$a$に共役な元の集合を$a$の共役類という．群の元は互いに共役な元事に集めて類別できる．
+%共役類を見るために，群の掛け算表の右から群の元を掛けて
+共役類は，
+\begin{align}
+\mathcal{C}_1 = \{e\},\quad \mathcal{C}_2 = \{\sthreera, \sthreerb, \sthreerc\}, \quad \mathcal{C}_3 = \{\sthreer, \sthreerr\}.
+\end{align}
+の$3$種類ある．共役類の積は，
+\begin{table}[h]
+  \centering
+  \caption{$\mathrm{S}_3$の共役演算表．}
+  \begin{tabular}{c|c c c c c c}
+       & $e$ & $\sthreer$ & $\sthreerr$ & $\sthreera$ & $\sthreerb$ & $\sthreerc$ \\
+      \hline
+      $e$          & $e$          & $e$       & $e$  & $e$ & $e$ & $e$ \\
+      $\sthreer$        & $\sthreer$        & $\sthreer$  & $\sthreer$         & $\sthreerr$ & $\sthreerr$ & $\sthreerr$ \\
+      $\sthreerr$   & $\sthreerr$   & $\sthreerr$          & $\sthreerr$        & $\sthreer$  & $\sthreer$ & $\sthreer$ \\
+      $\sthreera$   & $\sthreera$   & $\sthreerb$  & $\sthreerc$  &$\sthreera$   & $\sthreerc$  & $\sthreerb$ \\
+      $\sthreerb$   & $\sthreerb$   & $\sthreerc$  & $\sthreera$  & $\sthreerc$ & $\sthreerb$        & $\sthreera$      \\
+      $\sthreerc$   & $\sthreerc$   & $\sthreera$  & $\sthreerb$  & $\sthreerb$      & $\sthreera$ & $\sthreerc$        \\
+  \end{tabular}
+  \label{table:S3}
+\end{table}
+中心化群 ($\mathrm{C}_{S_3}(s) = \{g\in G| sg=gs \text{ for all } s\in G \}$) of the representative of a conjugacy class are
+\begin{align}
+\mathrm{C}_{S_3}(\mathcal{C}_1) &= \mathrm{S}_3,\\
+\mathrm{C}_{S_3}(\mathcal{C}_2) &= \{e,\sthreera\},\\
+\mathrm{C}_{S_3}(\mathcal{C}_3) &= \{e,\sthreer,\sthreerr\}=\mathbb{Z}_3.
+\end{align}
+
+\begin{align*}
+\rho_{A_1} &\equiv \rho^{(1)} \quad\text{(trivial)} \\
+\rho_{A_2} &\equiv \rho^{(1')} \quad\text{(sign)} \\
+\rho_E     &\equiv \rho^{(2)} \quad\text{(standard)}
+\end{align*}
+
+We define the class operators as $T_i = \sum_{g \in \mathcal{C}_i} g$. 
+The products of these operators give the fusion rules of the conjugacy classes. 
+The products of the conjugacy classes are summarized in Table \ref{table:S3 conjugacy class}.
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{|c||c|c|c|} \hline
+    &  $T_1$& $T_2$ & $T_3$\\ \hline\hline
+    $T_1$ &  $T_1$& $T_2$ & $T_3$\\ \hline
+    $T_2$&  $T_2$& $3T_1+3T_3$ & $2T_2$\\ \hline
+    $T_3$ &  $T_3$& $2T_2$ & $2T_1+T_3$\\ \hline
+  \end{tabular}
+  \caption{Multiplication table of conjugacy class of $\mathrm{S}_3$}
+  \label{table:S3 conjugacy class}
+\end{table}
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{|c||c|c|c|} \hline
+    $\otimes$ &  $A_1$& $A_2$& $E$ \\ \hline\hline
+    $A_1$ &  $A_1$& $A_2$& $E$ \\ \hline
+    $A_2$ &  $A_2$& $A_1$& $E$ \\ \hline
+    $E$&  $E$& $E$& $A_1\oplus A_2\oplus E$ \\ \hline
+  \end{tabular}
+  \caption{Multiplication table of representation of $\mathrm{S}_3$}
+  \label{table:S3 representation}
+\end{table}
+
+\begin{table}[htbp]
+  \centering
+  \begin{tabular}{|c|c|c|c|c|} \hline
+     &  $d_a$ & $T_1$& $T_2$& $T_3$ \\ \hline\hline
+    $A_1$ &  1& $1$& $1$& $1$ \\ \hline
+    $A_2$ &  1& $1$& $-1$& $1$ \\ \hline
+    $E$&     2& $2$& $0$& $-1$ \\ \hline
+  \end{tabular}
+  \caption{character of $\mathrm{S}_3$}
+  \label{table:S3 character}
+\end{table}
+
+
+$\mathrm{S}_3$ has three unitary representations. These are two one-dimensional representations (the trivial representation $A_1$ and the $A_2$ representation) and one two-dimensional representation $E$. Specifically, $A_1$ is trivial for all $g \in \mathrm{S}_3$, i.e., $D_{A_1}(g) = 1$. For $A_2$, we have $D_{A_2}(g) = 1$ for $g \in \{e, \sthreer, \sthreerr\}$, and $D_{A_2}(g) = -1$ for $g \in \{\sthreera, \sthreerb, \sthreerc\}$.
+The two-dimensional representation $E$ is given by the matrices:
+$$
+\begin{split}
+D_{E}(e) &= \begin{pmatrix}
+1 & 0\\
+0 & 1
+\end{pmatrix},\quad
+D_{E}(\sthreer) = \begin{pmatrix}
+c & -s\\
+s & c
+\end{pmatrix},
+\quad
+D_{E}(\sthreerr) = \begin{pmatrix}
+c & s\\
+-s & c
+\end{pmatrix},\\
+D_{E}(\sthreera) &= \begin{pmatrix}
+1 & 0\\
+0 & -1
+\end{pmatrix},\quad
+D_{E}(\sthreerb) = \begin{pmatrix}
+c & -s\\
+-s & -c
+\end{pmatrix},\quad
+D_{E}(\sthreerc) = \begin{pmatrix}
+c & s\\
+s & -c
+\end{pmatrix}.
+\end{split}
+\end{equation}
+Here, $c=\cos(2\pi/3)=-1/2$, $s=\sin(2\pi/3)=\sqrt{3}/2$.
+The tensor product of representations can be taken, and it decomposes into a direct sum. For example, 
+$\rho_E \otimes \rho_E = A_1 \oplus A_2 \oplus E$.
+Table \ref{table:S3 representation} summarizes the decomposition of the tensor product of representations.
+
+
+\begin{align}
+T_1& = e\\
+T_2 &= \sthreera+\sthreerb+\sthreerc,\\
+T_3 &= \sthreer+\sthreerr.
+\end{align}
+
+
+\begin{align}
+D_E(T_1) &= I_2\\
+D_E(T_2) &= 0,\\
+D_E(T_3) &= -I_2.
+\end{align}
+
+
+\begin{align}
+D_{A_1}(T_1) = 1\\
+D_{A_1}(T_2) = 3,\\
+D_{A_1}(T_3) = 2.
+\end{align}
+
+\begin{align}
+D_{A_2}(T_1) &= 1\\
+D_{A_2}(T_2) &= -3,\\
+D_{A_2}(T_3) &= 2.
+\end{align}
+
+
+$$
+  \begin{split}
+    \frac{|c_g|}{d_a}\chi_a(g) 1_a
+  \end{split}
+\end{equation}

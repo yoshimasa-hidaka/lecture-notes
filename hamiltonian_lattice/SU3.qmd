@@ -1,1 +1,414 @@
+# $\mathrm{SU}(3)_k$ゲージ理論
+<!-- # texorpdfstring{$\mathrm{SU}(3)_k$}{SU(3)k}ゲージ理論 -->
+\label{sec:su3_k}
+正則化された$\mathrm{SU(3)}$ゲージ理論として，$\mathrm{SU(3)}_k$を考える．ハミルトニアン形式の計算に必要な量の具体系をいくつか示そう．
+$\mathrm{SU}(3)_k$の表現は，Dynkinラベル$a=(p_a,q_a)$で表される．
+fusionの重複度は，
+$$
+  N_{ab}^{c} =(k_0^{\max}-k_0^{\min}+1)\delta_{ab}^c
+$$
+で与えられる~\cite{Begin:1992rt}.
+ここで，
+$$
+  k_0^{\min}=\max(p_a+q_a,p_b+q_b,p_c+q_c,\mathcal{A}-\min(p_a,p_b,q_c),\mathcal{B}-\min(q_a,q_b,p_c)),
+$$
+$$
+  k_0^{\max}=\min(\mathcal{A},\mathcal{B}),
+$$
 
+$$
+  \mathcal{A}=\frac{1}{3}\qty(2(p_a+p_b+q_c)+q_a+q_b+p_c),
+$$
+
+$$
+  \mathcal{B}=\frac{1}{3}\qty(p_a+p_b+q_c+2(q_a+q_b+p_c)),
+$$
+
+$$
+  \delta_{ab}^c=\begin{cases}
+    1\quad \text{if $k_0^{\max}>k_0^{\min}$ and $\mathcal{A}, \mathcal{B}\in\mathbb{Z}_+$}
+    0\quad\text{otherwise}
+  \end{cases}
+$$
+である．$\mathbb{Z}_+$は非負の整数全体を表す．
+
+$q$変形パラメータ
+$$
+  q = \exp(\ri\frac{2\pi}{k+3})
+$$
+を用いて，$q$数は，
+$$
+  [n]\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+3}n)}{\sin\qty(\frac{\pi}{k+3})}
+  \label{eq-[n]su3}
+$$
+で定義される．$q$は，Dynkinラベルのではない点に注意.
+
+$2$次のCasimir不変量 $C_2(a)$は，
+$$
+  C_2(a)  = \frac{1}{2}\qty(\left[\frac{p_a}{3}-\frac{q_a}{3}\right]^2+\left[\frac{2p_a}{3}+\frac{q_a}{3}+1\right]^2+\left[\frac{p_a}{3}+\frac{2q_a}{3}+1\right]^2-2)
+$${#eq-C2_su3}
+で与えられる~\cite{Bonatsos:1999xj}\footnote{ここでの$C_2(a)$の規格化因子は\cite{Bonatsos:1999xj}の$1/2$を採用している．}．
+
+同様に，量子次元は，
+$$
+  d_{a} =\frac{1}{[2]}[p_a+1][q_a+1][p_a+q_a+2]
+  \label{eq-dpq}
+$$
+となる~\cite{Coquereaux:2005hu}．
+もっとも重要なのは$F$-symbolsだが，残念ながらコンパクトな表式は知られていない．小さい$k$については，\cite{Ardonne2010ClebschGordanA6}で議論されている．
+
+
+$\mathrm{SU}(3)_k$ Yang-Mills theoryのハミルトニアンは，
+$$
+  H = \frac{1}{2}\sum_{e\in {\tilde{\mathcal{E}}}} E_i^2(e) - \frac{K}{2} \sum_{f\in \mathcal{F}}\qty( \tr U_{(1,0)} (f)+\tr U_{(0,1)} (f) )
+  \label{eq-Hamiltonian}
+$$
+で与えられる．ここで， $\tilde{\mathcal{E}}\subset\mathcal{E}$は電場が作用する辺の集合で$\mathcal{F}$はプラケットの集合である．
+$E^2_i(e)$は電場の$2$乗で$\tr U_{(1,0)} (f)$は基本表現のWilsonループである．$K$は結合定数で，通常の結合定数$g$とは$K=1/g^4$の関係にある．
+演算子の状態への作用は，以下で与えられる.
+$E_i^2$項については，
+
+::: {.content-visible when-format=html}
+<div  style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$E_i^2 $$
+  </span>
+  <img src="figs/a.svg" style="height:6.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= C_2(a)$$
+  </span>
+  <img src="figs/a.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  E_i^2 \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  = C_2(a)\
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  \label{eq-action_electric_field_su3}
+$$
+:::
+
+である．ここで， $C_2(a)$は2次のCasimir不変量で，式(@eq-C2_su3)で与えられる．一方，Wilsonループ $\tr U_{d}$ の作用は，
+
+
+::: {.content-visible when-format=html}
+<div  style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$\tr U_{d}$$
+  </span>
+  <img src="figs/plaquetteAction0_su3.svg" style="height:6.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$ =\sum_{\{a'_{i},\mu'_i\}}\prod_{i=1}^{6}
+       [F_{a'_{i}}^{c_{i}a_{i-1}d}]_{(a_{i},\mu_i,\mu_{i+1}),({a'}_{i-1},\mu'_{i-1},\mu'_{i})}$$
+  </span>
+  <img src="figs/plaquetteAction2_su3.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \tr U_{d}\quad
+  \vcenter{\hbox{\includegraphics[scale=0.21]{figs/plaquetteAction0_su3.pdf}}}
+       =\sum_{\{a'_{i},\mu'_i\}}\prod_{i=1}^{6}
+       [F_{a'_{i}}^{c_{i}a_{i-1}d}]_{(a_{i},\mu_i,\mu_{i+1}),({a'}_{i-1},\mu'_{i-1},\mu'_{i})}
+       \ \vcenter{\hbox{\includegraphics[scale=0.21 ]{figs/plaquetteAction2_su3.pdf}}}
+         \label{eq-action_trU}
+$$
+:::
+
+
+となる．ここで， $a'_0=a'_6$, $\mu_0=\mu_6$, $\mu'_0=\mu'_6$, and $\mu'_7=\mu'_1$である．
+
+<!-- % Equation~(@eq-action_trU) can be graphically derived by using the topological deformation rules discussed in the previous section.
+% First, let us put defects in the center of all plaquettes.
+% For a plaquette, it is graphically represented as
+% $$
+%   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop9.pdf}}}.
+% $$
+% Here, the indices have been dropped for brevity.
+% % The defect is responsible for making the network non-trivial in its topological deformation.
+% The action of $\tr U_d$ on a plaquette is expressed by a loop encircling the defect,
+% $$
+%   \tr U_d \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop9.pdf}}}
+%   =\ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop1.pdf}}}.
+% $$
+% Using the deformation rules in eqs~(@eq-stacking}-(@eq-Fmove):
+% $$
+%   \begin{split}
+%     &\vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop1.pdf}}}
+%     \overset{\red{\text{eq.~(@eq-partition)}}}{\Longrightarrow}
+%     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop2.pdf}}}
+%     \overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+%     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop3.pdf}}}\\
+%     &
+%     \overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+%     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop4.pdf}}}
+%     \overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+%     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop5.pdf}}}
+%     \overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+%     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop6.pdf}}}\\
+%     &\overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+%     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop7.pdf}}}
+%     \overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+%     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop8.pdf}}}
+%     \overset{\red{\text{eq.~(@eq-stacking)}}}{\Longrightarrow}
+%     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop9.pdf}}},
+%   \end{split}
+% $$
+% we obtain eq.~(@eq-action_trU), by tracing the changes of indices.
+
+
+% $\mathrm{SU}(3)$ゲージ理論を考えよう．
+% まず，$\mathrm{SU}(3)$群の規約表現について復習しよう．
+% $\mathrm{SU(3)}$群の生成子を$T_i$とする．生成子の交換関係は，
+% $$
+%   [T_i,T_j]=\ri f^k_{~ij} T_k
+% $$
+% とかける．ここで$f^k_{~ij}$は構造定数である．
+% $i,j,k$の添字は，$1$から$8$まで走る．
+% Gell-Mann行列を$\lambda_i$として，生成子を$T_i=\lambda_i/2$とすると基本表現の生成子の行列表現が得られる．
+% Gell-Mann行列は，
+% \textrm{Gell-Mann}行列
+% \begin{align}
+%   &\lambda_1 = \begin{pmatrix}
+%     0 & 1 & 0\\
+%     1 & 0 & 0\\
+%     0 & 0 &  0
+%   \end{pmatrix},\quad
+%   \lambda_2 = \begin{pmatrix}
+%     0 & -\ri & 0\\
+%     \ri & 0 & 0\\
+%     0 & 0 &  0
+%   \end{pmatrix},\quad
+%   \lambda_3 = \begin{pmatrix}
+%     1 & 0 & 0\\
+%     0 & -1 & 0\\
+%     0 & 0 &  0
+%   \end{pmatrix},\quad
+%   \lambda_4 = \begin{pmatrix}
+%     0 & 0 & 1\\
+%     0 & 0 & 0\\
+%     1 & 0 &  0
+%   \end{pmatrix},\notag\\
+%   &\lambda_5 = \begin{pmatrix}
+%     0 & 0 & -\ri\\
+%     0 & 0 & 0\\
+%     \ri & 0 &  0
+%   \end{pmatrix},\quad
+%   \lambda_6 = \begin{pmatrix}
+%     0 & 0 & 0\\
+%     0 & 0 & 1\\
+%     0 & 1 &  0
+%   \end{pmatrix},\quad
+%   \lambda_7 = \begin{pmatrix}
+%     0 & 0 & 0\\
+%     0 & 0 & -\ri\\
+%     0 & \ri & 0
+%   \end{pmatrix},\quad
+%   \lambda_8 = \frac{1}{\sqrt{3}}\begin{pmatrix}
+%     1 & 0 & 0\\
+%     0 & 1 & 0\\
+%     0 & 0 &  -2
+%   \end{pmatrix}.
+% \end{align}
+% このGell-Mann行列から
+% $$
+%   d_{ijk}\coloneqq \frac{1}{4}\tr\qty(\{\lambda_i,\lambda_j\}\lambda_k)
+% $$
+% で定義される$d_{ijk}$を用いると，$C_3 =\sum_{i,j,k}d_{ijk}T_iT_jT_k$は，すべての生成子と可換である．
+
+% $H_1=T_3$, $H_2=T_8$，
+
+
+% 残りの
+% \begin{align}
+%   [H_i,E_{\vb*{\alpha}}] &= \alpha_i E_{\vb*{\alpha}}\\
+%   [H_i,E^\dag_{\vb*{\alpha}}] &= -\alpha_i E^\dag_{\vb*{\alpha}}
+% \end{align}
+% に選ぶことができる．
+% 既約表現は，weightベクトル$\vb*{\mu}$を指定すると決まる．
+% これは，Dynkinラベルを用いて$\lambda=(p,q)$で表すことができる．
+% $$
+%   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Young_diagram.pdf}}}
+% $$
+% 基本表現は$(1,0)$，反基本表現は$(0,1)$，随伴表現は$(1,1)$となる．
+
+% 表現の次元は，
+% $$
+%   d_a =\frac{1}{2}(p_a+1)(q_a+1)(p_a+q_a+2)
+% $$
+% となる．
+% $2$次のCasimirは,
+% $$
+%   C_2 = \frac{1}{3}(p^2+q^2+3p+3p+pq)
+% $$
+% $3$次のCasimirは，
+% $$
+%   C_3=\frac{1}{18}(p-q)(3+p+2q)(3+q+2p)
+% $$
+% である．
+
+% 基本表現及び反基本表現と$(p,q)$表現との合成は，
+% $$
+%   (p,q)\otimes (1,0)=
+%   (p+1,q)\oplus (p-1,q+1)\oplus (p,q-1)
+% $$
+% 及び
+% $$
+%   (p,q)\otimes (0,1)=
+%   (p-1,q)\oplus (p+1,q-1)\oplus (p,q+1)
+% $$
+% となる．これは，$3$つのベクトル$(1,0)$, $(-1,1)$, $(0,-1)$
+% を加えるまたは，引くことに対応する．
+% $\mathrm{SU}(3)$の場合，一般のClebsch–Gordan係数を求めるのは結構大変である．ここでは，フェルミオン系で必要になるものを計算しておこう．
+% 基本表現の基底ベクトルを下付き，反表現の基底ベクトルを上付きで書くことにする．$\ket{_i}$, $\ket{^i}$で，$i$は，$1$から$3$までの値を取る．daggerは，
+% \begin{align}
+%   (\ket{_i})^\dag &=  \bra{^i},\\
+%   (\ket{^i})^\dag &=  \bra{_i}
+% \end{align}
+% と表記する．これらの内積は，
+% \begin{align}
+%   \braket{_i}{^j}&=\delta_i^j,\\
+%   \braket{^i}{_j}&=\delta^i_j  
+% \end{align}
+% を満たす．
+
+% $2$つの基本表現の合成は，$6$表現と$\bar{3}$に分解される．
+% $\bar{3}$表現は，
+% \begin{align}
+%   \ket{^i}&=\frac{1}{\sqrt{2}}\epsilon^{ijk}\ket{_j}\ket{_k}
+% \end{align}
+% と表せる．また，$3$表現と$\bar{3}$表現を合成すると，$8$表現と$1$表現が作れるが，$1$表現の次元は，
+% \begin{align}
+%   |0\rangle = \frac{\delta^i_j}{\sqrt{3}}\ket{_i}\ket{^j}
+% \end{align}
+
+
+% \subsection{フェルミオン}
+% $\mathrm{SU}(3)$ゲージ理論に基本表現のフェルミオンを導入しよう．
+% $\psi^\dag_n$, $[d^\dag]^l=\epsilon^{lmn}\psi^\dag_m\psi^\dag_n/2$, $B^\dag =\epsilon^{mnl}\psi_m^\dag \psi_n^\dag \psi_l^\dag/3!$.
+
+% \begin{align}
+%   \psi_n^\dag\psi_m^\dag &= \epsilon_{nml}[d^\dag]^l\\
+%   [d^\dag]^m \psi_n^\dag  &= \delta_n^m B^\dag\\
+% \end{align}
+% \begin{align}
+%   \psi^n  \psi_m^\dag&\sim \delta^n_m\\
+%   \psi^n [d^\dag]^m   &\sim \epsilon^{nml}\psi_l^\dag\\
+%   \psi^n B^\dag   &\sim  [d^\dag]^n
+% \end{align}
+% \begin{align}
+%   \text{quark: }\vcenter{\hbox{\includegraphics[scale=0.3]{figs/quark.pdf}}},\quad
+%   \text{diquark: }\vcenter{\hbox{\includegraphics[scale=0.3]{figs/diquark.pdf}}},\quad
+%   \text{baryon: }\vcenter{\hbox{\includegraphics[scale=0.3]{figs/baryon.pdf}}}
+% \end{align}
+
+% これらの関係を用いると，フェルミオンの合成ルールは，グラフィカルに
+% \begin{align}
+%   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel_fermion.pdf}}}&\Rightarrow\frac{\sqrt{2}}{3}
+%   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fuse_quarks_to_diquarks.pdf}}},\label{eq-SU3_fuse_quarks}\\
+%   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/quark_diquark_parallel.pdf}}}&\Rightarrow\frac{1}{\sqrt{3}}
+%   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fuse_diquarks_to_baryon.pdf}}},\label{eq-SU3_fuse_diquarks}\\
+%   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/baryon.pdf}}}&\Rightarrow\sqrt{3}\quad
+%   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/SU3_split_baryon.pdf}}},\\
+%   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/diquark.pdf}}}&\Rightarrow\frac{\sqrt{2}}{\sqrt{3}}\quad
+%   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/split_diquarks.pdf}}}.
+% \end{align}
+% % \section{\texorpdfstring{$\mathrm{SU}(N)$}{SU(N)}ゲージ理論}
+% % $\mathrm{SU}(N)$ゲージ理論を考えよう．
+% % まず，$\mathrm{SU}(N)$群の規約表現について復習しよう．
+% % $\mathrm{SU(N)}$群の生成子を$T_i$とする．生成子の交換関係は，
+% % $$
+% %   [T_i,T_j]=\ri f^k_{~ij} T_k
+% % $$
+% % とかける．ここで$f^k_{~ij}$は構造定数である．
+% % 生成子の中で互いに可換な$N-1$個の生成子を$H_i$とする．
+% % 例えば$\mathrm{SU}(3)$群の場合は，Gell-Mann行列を$\lambda_i$として，
+% % 生成子を$T_i=\lambda_i/2$とすると$H_1=T_3$, $H_2=T_8$である．
+% % 残りの
+% % \begin{align}
+% %   [H_i,E_{\vb*{\alpha}}] &= \alpha_i E_{\vb*{\alpha}}\\
+% %   [H_i,E^\dag_{\vb*{\alpha}}] &= -\alpha_i E^\dag_{\vb*{\alpha}}
+% % \end{align}
+% % に選ぶことができる．
+% % 既約表現は，weightベクトル$\vb*{\mu}$を指定すると一意に定まる．
+% \begin{align}
+%   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vq.pdf}}}
+%   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qv.pdf}}},\\
+%   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
+%   &=
+%   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dv.pdf}}}
+%   ,\\
+%   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
+%   &=
+%   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}
+%   ,\\
+%   %%%%
+%   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vd.pdf}}}
+%   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}},\\
+%   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}}
+%   &=
+%   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
+%   ,\\
+%   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}}
+%   &=
+%   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bq.pdf}}}
+%   ,\\
+%   %%%%%
+%   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}}
+%   &=
+%   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}},\notag\\
+%   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qB.pdf}}}
+%   &=
+%   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}},\\
+%   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dB.pdf}}}
+%   &=
+%   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bd.pdf}}}.
+% \end{align}
+
+% \begin{align}
+%   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qv.pdf}}}&=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vq.pdf}}},\\
+%   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dv.pdf}}}
+%   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}},\\
+%   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}
+%   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}},\\
+%   %%%%
+%   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
+%   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vd.pdf}}},\\
+%   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
+%   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}},\\
+%   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bq.pdf}}}
+%   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}},\\
+%   %%%%%
+%   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}}
+%   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}},\\
+%   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}}
+%   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qB.pdf}}},\\
+%   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bd.pdf}}}
+%   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dB.pdf}}}.
+% \end{align}
+
+
+% \section{\texorpdfstring{$\mathrm{SU}(3)_k$}{SU(3)k}ゲージ理論のFusionルールの計算方法}
+% $\mathrm{SU}(2)$の場合のDynkin labelを$\lambda$とする．
+% $j=\lambda/2$に対応する．fusion行列$[N_{\lambda}]^{\nu}_{\rho}=N_{\lambda\rho}^\nu$として，これは，
+% $$
+%   N_{\lambda+1}=G N_{\lambda}-N_{\lambda-1}
+% $$
+% の漸化式を満たす．ここで，$N_{0}=\mathbbm{1}$, $G=N_{1}$である．
+% また，$N_{-1}=0$である．
+% 具体的には，$[G]^n_m=\delta^{n+1}_{m}+\delta^{n-1}_{m}$.
+% 生成汎関数は，
+% $$
+%   X(s)=\sum_{\lambda=0}^k s^\lambda N_\lambda = \frac{\mathbbm{1}+s^{h}P}{\mathbbm{1}-sG+s^2}
+% $$
+% となる．ここで，$h=k+2$, $P=N_k$である．
+
+% $\mathrm{SU}(3)_k$の場合の生成関数を
+% $$
+%   X(s,t) =% \sum_{\lambda=(\lambda_1,\lambda_2)\in\mathcal{P}^{(k)}}
+%   s^{\lambda_1}t^{\lambda_2}N_{(\lambda_1,\lambda_2)}
+% $$
+% $X(s,t)^T=X(t,s)$を満たす． -->
