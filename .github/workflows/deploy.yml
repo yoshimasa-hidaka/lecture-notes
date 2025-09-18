@@ -1,4 +1,4 @@
-name: Build & Deploy Quarto site
+name: Publish Quarto site (simple)
 
 on:
   push:
@@ -12,23 +12,24 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+      - uses: quarto-dev/quarto-actions/setup@v2
 
-      - name: Setup Quarto
-        uses: quarto-dev/quarto-actions/setup@v2
-        with:
-          version: "1.5.57"
+      # ① ルートを先にビルド（docs/ を生成／クリーンするのはこの時点で済ませる）
+      - name: Render root
+        run: quarto render --to html
 
-      - name: Render site
-        run: quarto render
+      # ② サブを後でビルド（docs/hamiltonian_lattice/ を上書き・追記）
+      - name: Render sub (hamiltonian_lattice)
+        run: quarto render hamiltonian_lattice --to html
 
+      # ③ docs/ を Pages artifact に
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
