@@ -1,5 +1,5 @@
-\section{平均場近似による解析}
-\label{sec:mean field}
+# 平均場近似による解析 {#sec-mean_field}
+
 ここでは，平均場近似による解析手法を紹介しよう．ここで用いる波動関数は$(2+1)$次元系では，閉じ込め相と非閉じ込め相の両方を記述する波動関数である．
 変分波動関数として，以下の形を仮定する~\cite{Dusuel:2015sta,Zache:2023dko,Hayata:2023bgh}．
 $$
@@ -9,10 +9,11 @@ $$
 ここで，$\ket{0}$は強結合極限の真空である．変分関数$\psi(a)$は，$\langle\Psi|\Psi\rangle=1$となるように$\sum_a |\psi(a)|^2=1$で規格化されされている．
 空間体積無限大を考え，境界条件として開放端境界条件を置く．
 
-\subsection{物理量の期待値}
+## 物理量の期待値
+
 この変分波動関数が得られたとして，物理量$O$の期待値を評価してみよう, $\expval{O}\coloneqq\expval{O}{\Psi}$.
 例としてWilsonループ$O=\tr U_d(\partial S)$を考える．ここで，$\partial S$は，$S$で囲まれたループを意味する．期待値は，
-$$\label{eq-expvalue_Wilson_loop}
+$$
   \begin{split}
     &\expval{\tr U_d(\partial S)}\\
     &= 
@@ -21,7 +22,7 @@ $$\label{eq-expvalue_Wilson_loop}
     \sum_{\{a\},\{b\},\{c\}}\qty(\prod_{f'\in\mathcal{F}}\psi^*(a_{f'})\psi(b_{f'})N_{\bar{a}_{f'}b_{f'}}^{c_{f'}})
     \bra{0}\tr U_{d}(\partial S)\prod_{f\in \mathcal{F}} \tr U_{c_f}(f)\ket{0}
   \end{split}
-$$
+$${#eq-expvalue_Wilson_loop}
 の形を取る．ここで，表記として，
 $$
   \sum_{\{a\}}=\prod_{f\in\mathcal{F}}\sum_{a_f}
@@ -42,34 +43,93 @@ $$\label{eq-state}
 $$
 を考え，この状態に$\bra{0}$を作用させることを考える．
 境界の小さい格子を用いて計算法を説明する．状態は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$= U_{d}(\partial S)\prod_{f\in \mathcal{F}} \tr U_{c_f}(f)\ket{0}$$
+  </span>
+  <img src="figs/large_Wilson_loop1.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
 $$
-  \begin{split}\label{eq-action_Wilson_loop}
+  \begin{split}
     U_{d}(\partial S)\prod_{f\in \mathcal{F}} \tr U_{c_f}(f)\ket{0}=\ \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop1.pdf}}}
   \end{split}
-$$
+$${#eq-action_Wilson_loop}
+:::
+
 のように表すことができる．ここで，赤線は$\partial S$を表し，その内側の領域$S$は，薄いグレーで表している．ここに，$\bra{0}$を作用させ，期待値を評価しよう．まず，境界に注目する．
 境界において，Wilsonループを辺に移動させる:
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/boundary1.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\quad=\quad$$
+  </span>
+  <img src="figs/boundary2.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
 $$
 \label{eq-plaquette_boundary}
   \begin{split}
     \vcenter{\hbox{includegraphics[scale=0.25]{figs/boundary1.pdf}}}=\vcenter{\hbox{\includegraphics[scale=0.25]{figs/boundary2.pdf}}}
   \end{split}.
 $$
+:::
+
 $\bra{0}$を作用させると，$\bra{0}\ket{a}=\delta_{a}^0$であるため，境界は$a=0$の状態のみが生き残る．したがって，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/boundary1.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\quad=\quad $$
+  </span>
+  <img src="figs/boundary2.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\quad\to\quad$$
+  </span>
+  <img src="figs/boundary3.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
 $$
 \label{eq-reduction}
   \begin{split}
-    \vcenter{\hbox{\includegraphics[scale=0.25]{figs/boundary1.pdf}}}= \ \vcenter{\hbox{\includegraphics[scale=0.25]{figs/boundary2.pdf}}}
+    \vcenter{\hbox{\includegraphics[scale=0.25]{figs/boundary1.pdf}}}
+    = \ \vcenter{\hbox{\includegraphics[scale=0.25]{figs/boundary2.pdf}}}
     \to  \delta_{a}^0\ \vcenter{\hbox{\includegraphics[scale=0.25]{figs/boundary3.pdf}}}
   \end{split}
 $$
-と置き換えることができる．このプラケットの期待値(@eq-expvalue_Wilson_loop}への寄与は，自明である:
+:::
+
+と置き換えることができる．このプラケットの期待値(@eq-expvalue_Wilson_loop)への寄与は，自明である:
 $$
   \sum_{a,b,c}\psi^*(a)\psi(b)N_{\bar{a}b}^{c}\delta_{c}^0
   =\sum_{a,b}\psi^*(a)\psi(b)\delta^{a}_b =1.
 $$
 ここで，$N_{\bar{a}b}^0=\delta^{a}_b$を用いた．
 この操作を$\partial S$を含む辺まで繰り返すと，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/large_Wilson_loop1.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\quad\to\quad$$
+  </span>
+  <img src="figs/large_Wilson_loop0.svg" style="height:5.5em;">
+</div>
+:::
+
+
+::: {.content-visible when-format=pdf}
 $$
   \begin{split}
     \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop1.pdf}}}
@@ -77,8 +137,26 @@ $$
     \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop0.pdf}}}
   \end{split}
 $$
+:::
+
 となる．次にWilsonループが接触するところの評価をしよう．
-式~(@eq-partition}を用いて，
+式(@eq-partition)を用いて，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/deformation1.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\quad =\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{{d}}d_{c_1}}} \quad$$
+  </span>
+  <img src="figs/deformation2.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\quad\to\frac{\delta^{\bar{d}}_{c_1}}{d_d}\quad$$
+  </span>
+  <img src="figs/deformation3.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
 $$
 \label{eq-reduction2}
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/deformation1.pdf}}}
@@ -88,19 +166,42 @@ $$
   \frac{\delta^{\bar{d}}_{c_1}}{d_d} \
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/deformation3.pdf}}}
 $$
+:::
+
 となる．これの操作を繰り返すと，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/large_Wilson_loop2.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\quad\to\qty(\prod_{f\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})$$
+  </span>
+  <img src="figs/large_Wilson_loop3.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=d_{d}\qty(\prod_{f\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})$$
+  </span>
+  <img src="figs/large_Wilson_loop4.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
 $$
   \begin{split}
     \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop2.pdf}}}
     &\to
-    \qty(\prod_{f\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}}) \   \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop3.pdf}}}\\
+    \qty(\prod_{f\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}}) \  
+     \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop3.pdf}}}\\
     &=
-    d_{d}\qty(\prod_{f\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})\    \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop4.pdf}}}
+    d_{d}\qty(\prod_{f\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})\
+    \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop4.pdf}}}
   \end{split}
 $$
-が得られる．式~(@eq-expvalue_Wilson_loop}の係数を考慮すると，Wilsonループの期待値は，
+:::
+
+が得られる．式(@eq-expvalue_Wilson_loop)の係数を考慮すると，Wilsonループの期待値は，
+
+::: {.content-visible when-format=pdf}
 $$
-\label{eq-wilsonloop_vev}
   \begin{split}
     \expval{\tr U_d(\partial S)}
     &= 
@@ -109,7 +210,9 @@ $$
     d_d\qty(\frac{\sum_{a,b}N_{db}^{a}\psi^*(a)\psi(b)}{d_d})^{|S|}\\
     &=d_d\exp(-|S|\sigma_d)
   \end{split}
-$$
+$${#eq-wilsonloop_vev}
+:::
+
 となる．ここで，$2$行目で$N_{\bar{a}b}^{\bar{d}}=N_{db}^{a}$という事実を用いた．
 $|S|$は $\partial S$の内側のプラケットの数を表し，$\sigma_d$はストリングテンション
 $$
@@ -119,8 +222,8 @@ $$
 を表す．もし，$\sigma_d$が有限であれば，Wilsonループの期待値は面積則を示す．
 一方，ストリングネット凝縮状態$\psi(a)=d_a/\mathcal{D}$~\cite{Levin:2004mi}では，Wilsonループの期待値は定数となり，非閉じ込め相(トポロジカル相)になる．
 
-次にハミルトニアン(@eq-Hamiltonian}の期待値を考えよう．
-式~(@eq-wilsonloop_vev}を用いると，プラケットに作用するWilson loopはの期待値は，
+次にハミルトニアン(@eq-Hamiltonian)の期待値を考えよう．
+式(@eq-wilsonloop_vev)を用いると，プラケットに作用するWilson loopはの期待値は，
 $$\label{eq-exp_trU10}
   \expval{\tr U_{(1,0)}(f)}{\Psi}=
   \sum_{a,b}M_{ab}\psi^*(a)\psi(b)
@@ -136,10 +239,42 @@ $$
 $$
 ここで，$f$と$f'$は辺$e$に接するプラケットである．辺に接していないプラケットでの計算は，Wilsonループの期待値の時と同じように，期待値には非自明には寄与しない．したがって，辺$e$に接するプラケットのみを考慮すれば十分である．
 まず状態
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$\tr U_{{a}}(f)\tr U_{b}(f')\ket{0}=$$
+  </span>
+  <img src="figs/two_loops1.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
 $$
   \tr U_{{a}}(f)\tr U_{b}(f')\ket{0}= \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/two_loops1.pdf}}}
 $$
+:::
+
 に$E_i^2$を作用させると
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$E_i^2(e)$$
+  </span>
+  <img src="figs/two_loops1.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}$$
+  </span>
+  <img src="figs/two_loops2.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)$$
+  </span>
+  <img src="figs/two_loops2.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
 $$
   \begin{split}
     E_i^2(e) \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/two_loops1.pdf}}}
@@ -149,9 +284,35 @@ $$
     \vcenter{\hbox{\includegraphics[scale=0.3]{figs/two_loops2.pdf}}}
   \end{split}
 $$
+:::
+
 となる．$1$行目，$2$行目で，
-式~(@eq-partition} and~(@eq-action_electric_field}をそれぞれ用いた．
+式(@eq-partition)，(@eq-action_electric_field)をそれぞれ用いた．
 次にこれらのプラケットにWilsonループを作用させ，期待値を評価すると，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$\tr U_{\bar{a}'}(f)\tr U_{\bar{b}'}(f') E_i^2(e)\tr U_{{a}}(f)\tr U_{b}(f')\ket{0}
+    =\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)
+    $$
+  </span>
+  <img src="figs/two_loops4.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\to\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)
+    \frac{\delta_{a}^{a'}\delta_{b}^{b'}}{d_ad_b}$$
+  </span>
+  <img src="figs/two_loops5.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{c}N_{\bar{a}b}^c\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)\frac{\delta_{a}^{a'}\delta_{b}^{b'}}{d_ad_b}
+    \frac{\sqrt{d_{{a}}d_c}}{\sqrt{d_b}}d_b$$
+  </span>
+  <img src="figs/two_loops6.svg" style="height:5.5em;">  
+</div>
+:::
+
+
+::: {.content-visible when-format=pdf}
 $$
   \begin{split}
     &\tr U_{\bar{a}'}(f)\tr U_{\bar{b}'}(f') E_i^2(e)\tr U_{{a}}(f)\tr U_{b}(f')\ket{0}\\
@@ -168,13 +329,14 @@ $$
     \vcenter{\hbox{\includegraphics[scale=0.3]{figs/two_loops6.pdf}}}
   \end{split}
 $$
+:::
+
 となる．したがって，$E_i^2(e)$の期待値は，
 $$\label{eq-exp_E2}
-  \begin{split}
-    \expval{E_i^2(e)}&=
+    \expval{E_i^2(e)}=
     \sum_{a,b,c}C_2(c)N_{\bar{a}b}^c\frac{d_c}{d_ad_b}|\psi(a)|^2|\psi(b)|^2
-  \end{split}
 $$
+
 となる．結果として，ハミルトニアンの期待値は，
 $$
 \begin{split}
@@ -185,6 +347,7 @@ $$
   \label{eq-Hamiltonian_one_plaquette_su3}
 \end{split}
 $$
+
 となる．ここで，$V$はプラケットの数である．
 $\mathcal{H}$を最小化するように変分波動関数を求める問題に帰着する．
 

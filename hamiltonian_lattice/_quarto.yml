@@ -28,12 +28,12 @@ book:
     - Example.qmd
     - MTC.qmd
     - SU3.qmd
-#.  - meanfield.qmd
-#.  - fermion.qmd
+    - meanfield.qmd
+    - fermion.qmd
 #.  - prepotential.qmd
 
   appendices:
-#    - q-deformation.qmd
+    - q-deformation.qmd
 #.  - group_theory.qmd
     - references.qmd
 
@@ -69,10 +69,11 @@ format:
           <script>
           window.MathJax = {
             tex: {
-              packages: {'[+]': ['ams','physics']},  // ← ams を追加
+              packages: {'[+]': ['ams','physics',]},  // ← ams を追加
               tags: 'ams',                           // \label / \eqref を有効化
               macros: {
                 bm: ["{\\boldsymbol{#1}}", 1],
+                symbf: ["{\\boldsymbol{#1}}", 1],
                 ri: "{\\mathrm{i}}",
                 ER: "R",
                 EL: "L",
@@ -98,6 +99,7 @@ format:
         \usepackage{amsmath,amssymb,mathtools,bm,bbm}
         \numberwithin{equation}{chapter} % 章ごとに式番号
         \usepackage[italicdiff]{physics}
+         \usepackage{unicode-math}
         \newcommand{\ri}{\mathrm{i}}
         \newcommand{\ER}{R}
         \newcommand{\EL}{L}

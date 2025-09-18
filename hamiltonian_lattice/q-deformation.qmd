@@ -7,7 +7,7 @@ $q$変形に関する参考文献として\cite{Bonatsos:1999xj,Ardonne2010Clebs
 
 ## セミシンプルLie代数
 まず一般のセミシンプルLie代数$\mathfrak{g}$の量子群変形を考えよう．
-$\mathfrak{g}$のルートベクトルを$\vb*{\alpha}_i$とする．
+$\mathfrak{g}$のルートベクトルを$\symbf{\alpha}_i$とする．
 生成子$H_i$, $L_i^\pm$の交換関係をChevalley基底を用いて，
 $$
   [H_i,H_j]=0,\quad
@@ -27,13 +27,13 @@ $$
 満たす．
 ここで，$A_{ij}$はCartan行列の要素である:
 $$
-  A_{ij} = \frac{2(\vb*{\alpha}_i,\vb*{\alpha}_j)}{(\vb*{\alpha}_j,\vb*{\alpha}_j)}.
+  A_{ij} = \frac{2(\symbf{\alpha}_i,\symbf{\alpha}_j)}{(\symbf{\alpha}_j,\symbf{\alpha}_j)}.
 $$
 また，$t_j$は，
 $$
-  t_j=\frac{2}{(\vb*{\alpha}_j,\vb*{\alpha}_j)}
+  t_j=\frac{2}{(\symbf{\alpha}_j,\symbf{\alpha}_j)}
 $$
-で定義されている．ただし，$(\vb*{\alpha}_j,\vb*{\alpha}_j)$は，規格化に一般にルートベクトルの依存するが，ここでは，最高次のルートベクトル(随伴表現のhighest weight vector)を$\theta$としたとき，$(\theta,\theta)=2$と規格化してあるものとする．$g$をdual Coxeter数\footnote{コルートを$\vb*{\alpha}^{\lor}_i=2\vb*{\alpha}_i/(\vb*{\alpha}_i,\vb*{\alpha}_i)$と定義する．すると$a_i^{\lor}$を非負の整数として，$\theta=\sum_{i=1}^ra_i^{\lor}\vb*{\alpha}^{\lor}_i$と展開できる．ここで，$r$は，Lie代数のランクである．dual Coxeter数は$g\coloneqq\sum_{i=1}^r a^{\lor}_{i}+1$と定義される．}として，$q$は，
+で定義されている．ただし，$(\symbf{\alpha}_j,\symbf{\alpha}_j)$は，規格化に一般にルートベクトルの依存するが，ここでは，最高次のルートベクトル(随伴表現のhighest weight vector)を$\theta$としたとき，$(\theta,\theta)=2$と規格化してあるものとする．$g$をdual Coxeter数\footnote{コルートを$\symbf{\alpha}^{\lor}_i=2\symbf{\alpha}_i/(\symbf{\alpha}_i,\symbf{\alpha}_i)$と定義する．すると$a_i^{\lor}$を非負の整数として，$\theta=\sum_{i=1}^ra_i^{\lor}\symbf{\alpha}^{\lor}_i$と展開できる．ここで，$r$は，Lie代数のランクである．dual Coxeter数は$g\coloneqq\sum_{i=1}^r a^{\lor}_{i}+1$と定義される．}として，$q$は，
 $$
   q\coloneqq e^{\frac{2\pi\ri}{k+g}}
 $$
@@ -130,7 +130,7 @@ $${#eq-coassociativity}
 ## $\mathrm{SU}(2)_k$
 
 具体例として，$\mathfrak{g}=\mathfrak{su}(2)$の場合を考えよう．
-この場合，ルートベクトルは一つで，$A=2$, $t_1=2/(\vb*{\alpha}_1,\vb*{\alpha}_1)=1$, $g=2$である．
+この場合，ルートベクトルは一つで，$A=2$, $t_1=2/(\symbf{\alpha}_1,\symbf{\alpha}_1)=1$, $g=2$である．
 したがって，
 $$
   q \eqqcolon q_1= \exp\ri \frac{2\pi}{k+2}
@@ -393,8 +393,8 @@ $3$つの$j=1/2$を合成して，
 % $$
 
 
-% 基本表現と反基本表現のウェイトベクトルを$\vb*{\omega}_1$及び$\vb*{\omega}_2$とすると，一般の表現のウェイトベクトルは，$\vb*{\omega} = p\vb*{\omega}_1+q\vb*{\omega}_2$と表すことができる．したがって，表現はDynkin index $(p,q)$で指定することができる．
-% ルートベクトルは，$\vb*{\alpha}_1=2\vb*{\omega}_1-\vb*{\omega}_2=(2,-1)$, $\vb*{\alpha}_2=-\vb*{\omega}_1+2\vb*{\omega}_2=(-1,2)$.
+% 基本表現と反基本表現のウェイトベクトルを$\bm{\omega}_1$及び$\bm{\omega}_2$とすると，一般の表現のウェイトベクトルは，$\bm{\omega} = p\bm{\omega}_1+q\bm{\omega}_2$と表すことができる．したがって，表現はDynkin index $(p,q)$で指定することができる．
+% ルートベクトルは，$\symbf{\alpha}_1=2\bm{\omega}_1-\bm{\omega}_2=(2,-1)$, $\symbf{\alpha}_2=-\bm{\omega}_1+2\bm{\omega}_2=(-1,2)$.
 
 % \begin{align}
 %   \Delta(H_i)&=1\otimes H_i+H_i\otimes 1\\
