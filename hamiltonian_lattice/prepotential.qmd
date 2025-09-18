@@ -1,24 +1,25 @@
-\section{Prepotentialの方法}(以下未完成)
+# Prepotentialの方法 (以下未完成)
+
 生成消滅演算子を用いて表現する方法を紹介する．
 $\ER_i$, $\EL_i$を生成消滅演算子を用いて
-\begin{align}
-  \ER_i &= b^\dag T_i b,\\
-  \EL_i &= -a^\dag T_i a
-\end{align}
+$$
+  \ER_i = b^\dag T_i b,\quad
+  \EL_i = -a^\dag T_i a
+$$
 と表す．ここで，$a_i=(a_1,a_2)$, $b_i=(b_1,b_2)$は$2$成分の生成消滅演算子で，
-\begin{align}
-  [a_i, a_j^\dag] &= \delta_{ij},\\
-  [b_i, b_j^\dag] &= \delta_{ij}
-\end{align}
+$$
+  [a_i, a_j^\dag] = \delta_{ij},\quad
+  [b_i, b_j^\dag] = \delta_{ij}
+$$
 を満たし，他の交換関係はゼロであるとする．生成子は交換関係，
-\begin{align}
-  [T_i, T_j] &=\ri f^k_{~ij} T_k
-\end{align}
+$$
+  [T_i, T_j] =\ri f^k_{~ij} T_k
+$$
 を満たす．これより，
-\begin{align}
-  [\ER_i , \ER_j]&=\ri f_{~ij}^k \ER_k\\
-  [\EL_i , \EL_j]&=-\ri f_{~ij}^k \EL_k
-\end{align}
+$$
+  [\ER_i , \ER_j]=\ri f_{~ij}^k \ER_k,\quad
+  [\EL_i , \EL_j]=-\ri f_{~ij}^k \EL_k
+$$
 が示される．
 
 次に$U$との交換関係を考える．

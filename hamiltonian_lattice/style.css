@@ -37,10 +37,3 @@ pre code {
 .sidebar .sidebar-item {
   margin-bottom: 0.2rem;
 }
-
-/* 外部リンクの軽い強調 */
-a[href^="http"]::after {
-  content: " ↗";
-  font-size: 0.85em;
-  opacity: 0.6;
-}

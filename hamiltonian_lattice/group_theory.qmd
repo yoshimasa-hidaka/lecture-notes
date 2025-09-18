@@ -4,9 +4,11 @@
 \newcommand{\sthreerb}{s_2}
 \newcommand{\sthreerc}{s_3}
 
-\section{群論基礎}\label{sec:group_theory}
+# 群論基礎 {#sec-group_theory}
 
-\subsection{\texorpdfstring{$S_3$}{S3}群}\label{sec:S3}
+
+## $S_3$群 {#sec-S3}
+
 $S_3$は，3次の対称群で，正三角形の合同群である．
 正三角形の合同群の元は$120^\circ$回転$\sthreer$, $240^\circ$回転$\sthreer^2 = \sthreer^{-1}$, 及び，各頂点を通る軸の反転$s_i$($i=1,2,3$)の$6$つからなる．
 置換群との対応は，

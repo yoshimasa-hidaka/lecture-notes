@@ -21,8 +21,8 @@ book:
   chapters:
     - index.qmd
     - SU2.qmd
-#   - Lie.qmd
-#.  - Gaugetheory.qmd
+    #- Lie.qmd
+    #- Gaugetheory.qmd
     - Kogut-Susskind.qmd
     - stringnet.qmd
     - Example.qmd
@@ -30,11 +30,10 @@ book:
     - SU3.qmd
     - meanfield.qmd
     - fermion.qmd
-#.  - prepotential.qmd
-
+    #- prepotential.qmd
   appendices:
     - q-deformation.qmd
-#.  - group_theory.qmd
+    #- group_theory.qmd
     - references.qmd
 
 lang: ja
@@ -52,10 +51,14 @@ execute:
   cache: true
   freeze: auto
 
+# 参考文献を使う場合は下を有効化（.bib と .csl はプロジェクト直下に置く想定）
+bibliography: references.bib
+# csl: nature.csl  # 好みのスタイルに変更可
+
 format:
   html:
     theme: flatly
-    css: styles.css
+    css: style.css
     toc: true
     number-sections: true
     number-depth: 2
@@ -69,8 +72,9 @@ format:
           <script>
           window.MathJax = {
             tex: {
-              packages: {'[+]': ['ams','physics',]},  // ← ams を追加
-              tags: 'ams',                           // \label / \eqref を有効化
+              // MathJax v3 で ams / physics を追加
+              packages: {'[+]': ['ams','physics']},
+              tags: 'ams',   // \label / \eqref を有効化
               macros: {
                 bm: ["{\\boldsymbol{#1}}", 1],
                 symbf: ["{\\boldsymbol{#1}}", 1],
@@ -79,7 +83,7 @@ format:
                 EL: "L",
                 dag: "\\dagger",
                 mathbbm: ["{\\mathbb{#1}}", 1],
-                bbone: "\\unicode{x1D7D9}"
+                bbone: "\\unicode{x1D7D9}" // 𝟙
               }
             },
             chtml: { matchFontHeight: false },
@@ -89,21 +93,26 @@ format:
             }
           };
           </script>
+
   pdf:
     pdf-engine: lualatex
     documentclass: book
     include-in-header:
       text: |
         \usepackage{luatexja}
-        \usepackage[ipaex]{luatexja-preset}
+        \usepackage[ipaex]{luatexja-preset} % 日本語フォント
         \usepackage{amsmath,amssymb,mathtools,bm,bbm}
-        \numberwithin{equation}{chapter} % 章ごとに式番号
         \usepackage[italicdiff]{physics}
-         \usepackage{unicode-math}
+        \usepackage{unicode-math}
+        \numberwithin{equation}{chapter} % 章ごとに式番号
+        % 必要なら数式フォントを指定（任意）
+        % \setmathfont{Latin Modern Math}
+        % 𝟙 の統一（MathJax と揃えるなら）
+        % \newcommand{\bbone}{\symbb{1}}
         \newcommand{\ri}{\mathrm{i}}
         \newcommand{\ER}{R}
         \newcommand{\EL}{L}
-        % --- 定理環境（章ごとに番号を振るなら [chapter] を付ける）---
+        % --- 定理環境（章ごとに番号）---
         \newtheorem{example}{例}[chapter]
         \newtheorem{definition}{定義}[chapter]
         \newtheorem{theorem}{定理}[chapter]
