@@ -2,10 +2,10 @@
 
 これまでボトムアップ的に理論を構成してきたが，ここではトップダウン的に理論を構成する．
 ゲージ理論の構成に必要なデータとその代数は，
-unitary modular tensor category(UMTC)に含まれている. この代数は，トポロジカル秩序相を記述するエニオン模型でよく用いられる~\cite{Kitaev:2005hzj}.
+unitary modular tensor category(UMTC)に含まれている. この代数は，トポロジカル秩序相を記述するエニオン模型でよく用いられる[@Kitaev:2005hzj].
 $\mathrm{SU}(2)_k$ゲージ理論で見たように，UMTCは，ゲージ理論を記述する上でも有用である．
-ここでの表記は，参考文献\cite{Barkeshli:2014cna}に準じている．
-<!-- % For more comprehensive details, see, e.g., references \cite{Kitaev:2005hzj,Bonderson:2007ci}. -->
+ここでの表記は，参考文献[@Barkeshli:2014cna]に準じている．
+<!-- % For more comprehensive details, see, e.g., references [@Kitaev:2005hzj,@Bonderson:2007ci]. -->
 
 ### String type 
 

@@ -1,7 +1,7 @@
 # 平均場近似による解析 {#sec-mean_field}
 
 ここでは，平均場近似による解析手法を紹介しよう．ここで用いる波動関数は$(2+1)$次元系では，閉じ込め相と非閉じ込め相の両方を記述する波動関数である．
-変分波動関数として，以下の形を仮定する~\cite{Dusuel:2015sta,Zache:2023dko,Hayata:2023bgh}．
+変分波動関数として，以下の形を仮定する[@Dusuel:2015sta,@Zache:2023dko,@Hayata:2023bgh]．
 $$
 |\Psi\rangle=\prod_{f\in \mathcal{F}} \sum_{a_f}\psi(a_f)\tr U_{a_f}(f)\ket{0} .
 \label{eq-wavefunction}
@@ -220,7 +220,7 @@ $$
   \sigma_d\coloneqq\ln\frac{d_d}{\sum_{a,b}N_{db}^{a}\psi^*(a)\psi(b)}
 $$
 を表す．もし，$\sigma_d$が有限であれば，Wilsonループの期待値は面積則を示す．
-一方，ストリングネット凝縮状態$\psi(a)=d_a/\mathcal{D}$~\cite{Levin:2004mi}では，Wilsonループの期待値は定数となり，非閉じ込め相(トポロジカル相)になる．
+一方，ストリングネット凝縮状態$\psi(a)=d_a/\mathcal{D}$[@Levin:2004mi]では，Wilsonループの期待値は定数となり，非閉じ込め相(トポロジカル相)になる．
 
 次にハミルトニアン(@eq-Hamiltonian)の期待値を考えよう．
 式(@eq-wilsonloop_vev)を用いると，プラケットに作用するWilson loopはの期待値は，

@@ -36,7 +36,7 @@ book:
     #- group_theory.qmd
     - references.qmd
 
-lang: ja
+
 
 crossref:
   chapters: true
@@ -53,6 +53,7 @@ execute:
 
 # 参考文献を使う場合は下を有効化（.bib と .csl はプロジェクト直下に置く想定）
 bibliography: references.bib
+lang: en
 # csl: nature.csl  # 好みのスタイルに変更可
 
 format:

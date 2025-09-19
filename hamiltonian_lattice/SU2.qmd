@@ -125,8 +125,8 @@ $T_i=\sigma_i/2$に取ると，$T_i$は，式(@eq-commutatorSUN)を満たすこ�
 <!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群の表現} -->
 $\mathrm{SU}(2)$群のユニタリ表現は，そのLie代数$\mathfrak{su}(2)$の表現と$1$対$1$対応があるのでそれを求めれば十分である．
 以下では，$\mathrm{SU}(2)$と$\mathfrak{su}(2)$の表現の違いを混乱の恐れが無いかぎり区別せずに用いる．
-また，この節では，$\mathrm{SU}(2)$の表現の導出は行わず基本的な結果のみを紹介する．導出については，標準的な群論の教科書(例えば\cite{Georgi})を参照．
-また，\cite{Martin-Dussaud:2019ypf}も参考になる．
+また，この節では，$\mathrm{SU}(2)$の表現の導出は行わず基本的な結果のみを紹介する．導出については，標準的な群論の教科書(例えば[@Georgi])を参照．
+また，[@Martin-Dussaud:2019ypf]も参考になる．
 表現を議論するのに昇降演算子$J_{\pm}\coloneqq J_1\pm\ri J_2$及び，$J_0\coloneqq J_3$を定義しておく便利である．
 これらの交換関係は，式(@eq-commutatorSUN)より，
 
@@ -976,7 +976,7 @@ $$ \begin{aligned}
  \end{aligned}$$
 $0<\theta<2\pi$の場合，共役類は，
 $$
-\mathcal{C}_{\theta}=\left\{\mathbf{1}_2\cos\frac{\theta}{2}+\ri\bm{n}\cdot {\sigma}\sin\frac{\theta}{2}\left|\bm{n}\in S^2\right.\right\}
+\mathcal{C}_{\theta}=\left\{\mathbf{1}_2\cos\frac{\theta}{2}+\ri\bm{n}\cdot \symbf{\sigma}\sin\frac{\theta}{2}\left|\bm{n}\in S^2\right.\right\}
 $$
 と書ける．
 
@@ -1011,11 +1011,11 @@ $$
 =\sum_{m_a} e^{\ri m_a\theta} = \frac{\sin\frac{\theta(2j_a+1)}{2} }{\sin\frac{\theta}{2}}
 $$
 と表される．ここで，$e^{\ri m_a\theta}$は，$D_{a}(g)$を対角化したときの固有値で，共役類のラベルに対応する．
-このことから，$\chi_a(g) $の代わりに，$\chi_a(\theta)$と書くこともある．
+このことから，$\chi_a(g)$の代わりに，$\chi_a(\theta)$と書くこともある．
 
 \paragraph{指標の直交性}
 
-式@eq-su2-D-orthogonalityに示される表現の直交性より，
+式(@eq-su2-D-orthogonality)に示される表現の直交性より，
 $$
   \int \dd{g} \chi^\dag_a(g) \chi_b(g)=\delta_{ab}
 $$

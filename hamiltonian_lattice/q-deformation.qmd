@@ -1,7 +1,7 @@
 
 # q変形 {#sec-q_deformation}
 
-$q$変形に関する参考文献として\cite{Bonatsos:1999xj,Ardonne2010ClebschGordanA6}を上げておく．
+$q$変形に関する参考文献として[@Bonatsos:1999xj,@Ardonne2010ClebschGordanA6]を上げておく．
 表現をカットオフしたゲージ理論で性質の良いものは，$q$変形された量子群を考えることに対応する．
 ここでは，本稿で用いた$q$変形について簡単に紹介する．
 

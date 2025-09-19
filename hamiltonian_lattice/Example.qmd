@@ -57,7 +57,7 @@ $$
 $$
   \ket{\psi}=\sum_j \tilde{\psi}(j)\ket{j}
 $$
-で展開すると，時間に依存しないSchr\"{o}dinger方程式
+で展開すると，時間に依存しないSchrödinger方程式
 $$
   H\ket{\psi} = \varepsilon\ket{\psi}
 $$
@@ -221,7 +221,7 @@ $$
   H = -  K\sum_{f\in \mathcal{F}} \tr U ( f)
 $${#eq-weakcouplingH}
 となる．
-このハミルトニアンの基底状態は，ストリング凝縮状態\cite{Levin:2004mi}を用いて記述することができる．
+このハミルトニアンの基底状態は，ストリング凝縮状態[@Levin:2004mi]を用いて記述することができる．
 そのために真空線を
 
 ::: {.content-visible when-format=html}
