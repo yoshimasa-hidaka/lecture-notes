@@ -123,9 +123,9 @@ $$
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel_fermion.pdf}}&\Rightarrow\frac{1}{\sqrt{d_{\frac{1}{2}}}}}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fuse_fermion.pdf}},\label{eq-fuse_fermion}}\\
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/baryon.pdf}}&\Rightarrow\sqrt{d_{\frac{1}{2}}}}\quad
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel_fermion.pdf}}}&\Rightarrow\frac{1}{\sqrt{d_{\frac{1}{2}}}}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fuse_fermion.pdf}}},\label{eq-fuse_fermion}\\
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/baryon.pdf}}}&\Rightarrow\sqrt{d_{\frac{1}{2}}}\quad
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/split_fermion.pdf}}}
 \end{align}
 :::
@@ -705,15 +705,18 @@ $$
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
-  \qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)\ 
-  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}}&=
-  2m\ \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}},\\
-  \qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)\  
-  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}}&=
-  \frac{3g^2}{8} \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}},\\
-  \qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)\  
-  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}}&=
-  -2m\ \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}}
+  \qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}}
+  &=2m
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}},\\
+  \qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}}
+  &=\frac{3g^2}{8}
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}},\\
+  \qty(\frac{g^2}{2}E^2+m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}}
+  &=-2m
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}}
 \end{align}
 :::
 
@@ -722,7 +725,7 @@ $$
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
-    $$t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2) $$
+    $$t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)$$
   </span>
   <img src="figs/B0_twosite.svg" style="height:1.5em;">
   <span class="math display" style="display:inline-block;">
@@ -732,7 +735,7 @@ $$
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
-    $$t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2) $$
+    $$t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)$$
   </span>
   <img src="figs/qq_twosite.svg" style="height:1.5em;">
   <span class="math display" style="display:inline-block;">
@@ -742,7 +745,7 @@ $$
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
-    $$t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2) $$
+    $$t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)$$
   </span>
   <img src="figs/0B_twosite.svg" style="height:1.5em;">
   <span class="math display" style="display:inline-block;">
@@ -754,20 +757,20 @@ $$
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
-  t\qty(
-    {\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2
-  ) \  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}}&=
-  t\sqrt{2}\ \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}},\\
-  t\qty(
-    {\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2
-  ) \  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}}&=
-  t\sqrt{2}\ \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}}
-  + t\sqrt{2}\
-   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}},\\
-  t\qty(
-    {\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2
-  ) \  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}}&=
-  t\sqrt{2}\ \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}},
+  t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}}
+  &=t\sqrt{2}
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}},\\
+  t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}}&=
+  t\sqrt{2}
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}}
+  + t\sqrt{2}
+  + \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}},\\
+  t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)\
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}}
+  &=t\sqrt{2}
+  \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}},
 \end{align}
 :::
 
