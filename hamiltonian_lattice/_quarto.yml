@@ -3,7 +3,8 @@ project:
   output-dir: ../docs/hamiltonian_lattice
 
 book:
-  title: "格子ゲージ理論 講義ノート"
+  title: "ハミルトニアン形式による格子QCD入門"
+  author: ""
   downloads: [pdf]
   page-navigation: true
   sidebar:
@@ -51,7 +52,6 @@ execute:
   cache: true
   freeze: auto
 
-# 参考文献を使う場合は下を有効化（.bib と .csl はプロジェクト直下に置く想定）
 bibliography: references.bib
 lang: en
 # csl: nature.csl  # 好みのスタイルに変更可
@@ -73,7 +73,6 @@ format:
           <script>
           window.MathJax = {
             tex: {
-              // MathJax v3 で ams / physics を追加
               packages: {'[+]': ['ams','physics']},
               tags: 'ams',   // \label / \eqref を有効化
               macros: {
@@ -101,19 +100,14 @@ format:
     include-in-header:
       text: |
         \usepackage{luatexja}
-        \usepackage[ipaex]{luatexja-preset} % 日本語フォント
+        \usepackage[ipaex]{luatexja-preset} 
         \usepackage{amsmath,amssymb,mathtools,bm,bbm}
         \usepackage[italicdiff]{physics}
         \usepackage{unicode-math}
-        \numberwithin{equation}{chapter} % 章ごとに式番号
-        % 必要なら数式フォントを指定（任意）
-        % \setmathfont{Latin Modern Math}
-        % 𝟙 の統一（MathJax と揃えるなら）
-        % \newcommand{\bbone}{\symbb{1}}
+        \numberwithin{equation}{chapter}
         \newcommand{\ri}{\mathrm{i}}
         \newcommand{\ER}{R}
         \newcommand{\EL}{L}
-        % --- 定理環境（章ごとに番号）---
         \newtheorem{example}{例}[chapter]
         \newtheorem{definition}{定義}[chapter]
         \newtheorem{theorem}{定理}[chapter]
