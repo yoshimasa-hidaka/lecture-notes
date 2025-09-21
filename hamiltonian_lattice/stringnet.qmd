@@ -1,5 +1,5 @@
 # ストリングネット模型による記述 {#sec-string_network}
-%spin network\cite{Rovelli:1995ac}
+
 ハミルトニアン形式で，ゲージ理論を計算機を用いて計算するために，
 空間の離散化，ゲージ群の表現にカットオフを入れ必要があった．
 物理状態の基底は，$\mathrm{SU}(2)_k$ゲージ理論の場合，
@@ -41,11 +41,11 @@ $$
   <span class="math display" style="display:inline-block;">
   $$ E^2 $$
   </span>
-  <img src="figs/a.svg" style="height:5.5em;">
+  <img src="figs/a.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
     $$=[j_a][j_a+1]$$
   </span>
-    <img src="figs/a.svg" style="height:5.5em;">
+    <img src="figs/a.svg" style="height:5.0em;">
 </div>
 $$ $${#eq-action_electric_field}
 :::
@@ -59,7 +59,7 @@ $${#eq-action_electric_field}
 :::
 
 
-::: {.content-visible when-format=html}
+<!-- ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/a.svg" style="height:5.5em;">
   <span class="math display" style="display:inline-block;">
@@ -73,18 +73,18 @@ $$
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
   = \braket{j_b n_b}{j_a m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}
 $$
-:::
+::: -->
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
     $$Q$$
   </span>
-  <img src="figs/abc.svg" style="height:5.5em;">
+  <img src="figs/abc.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
     $$=\delta_{abc} $$
   </span>
-  <img src="figs/abc.svg" style="height:5.5em;">
+  <img src="figs/abc.svg" style="height:5.0em;">
 </div>
 :::
 
@@ -128,6 +128,7 @@ $$
   </span>
   <img src="figs/plaquetteAction5.svg" style="height:5.5em;">
 </div>
+$$ $$ {#eq-Wilson_loop_action}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -137,7 +138,7 @@ $$
        =\prod_{i=1}^{4} \sum_{b_{i}}
        [F_{b_{i}}^{c_{i}a_{i-1}\frac{1}{2}}]_{a_{i}b_{i-1}}
          \vcenter{\hbox{\\includegraphics[scale=0.3]{figs/plaquetteAction5.pdf}}}
-$$
+$$ {#eq-Wilson_loop_action}
 :::
 となる．
 <!-- %$[n]$や$F$の定義は，\eqref{sec:MTC}節を参照． -->

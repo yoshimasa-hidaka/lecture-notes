@@ -120,11 +120,11 @@ $$
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/large_Wilson_loop1.svg" style="height:5.5em;">
+  <img src="figs/large_Wilson_loop1.svg" style="height:8.5em;">
   <span class="math display" style="display:inline-block;">
     $$\quad\to\quad$$
   </span>
-  <img src="figs/large_Wilson_loop0.svg" style="height:5.5em;">
+  <img src="figs/large_Wilson_loop0.svg" style="height:8.5em;">
 </div>
 :::
 
@@ -245,7 +245,7 @@ $$
   <span class="math display" style="display:inline-block;">
     $$\tr U_{{a}}(f)\tr U_{b}(f')\ket{0}=$$
   </span>
-  <img src="figs/two_loops1.svg" style="height:5.5em;">
+  <img src="figs/two_loops1.svg" style="height:4.5em;">
 </div>
 :::
 
@@ -262,15 +262,15 @@ $$
   <span class="math display" style="display:inline-block;">
     $$E_i^2(e)$$
   </span>
-  <img src="figs/two_loops1.svg" style="height:5.5em;">
+  <img src="figs/two_loops1.svg" style="height:4.5em;">
   <span class="math display" style="display:inline-block;">
     $$=\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}$$
   </span>
-  <img src="figs/two_loops2.svg" style="height:5.5em;">
+  <img src="figs/two_loops2.svg" style="height:4.5em;">
   <span class="math display" style="display:inline-block;">
     $$=\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)$$
   </span>
-  <img src="figs/two_loops2.svg" style="height:5.5em;">
+  <img src="figs/two_loops2.svg" style="height:4.5em;">
 </div>
 :::
 
@@ -297,17 +297,17 @@ $$
     =\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)
     $$
   </span>
-  <img src="figs/two_loops4.svg" style="height:5.5em;">
+  <img src="figs/two_loops4.svg" style="height:4.5em;">
   <span class="math display" style="display:inline-block;">
     $$\to\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)
     \frac{\delta_{a}^{a'}\delta_{b}^{b'}}{d_ad_b}$$
   </span>
-  <img src="figs/two_loops5.svg" style="height:5.5em;">
+  <img src="figs/two_loops5.svg" style="height:4.5em;">
   <span class="math display" style="display:inline-block;">
     $$=\sum_{c}N_{\bar{a}b}^c\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)\frac{\delta_{a}^{a'}\delta_{b}^{b'}}{d_ad_b}
     \frac{\sqrt{d_{{a}}d_c}}{\sqrt{d_b}}d_b$$
   </span>
-  <img src="figs/two_loops6.svg" style="height:5.5em;">  
+  <img src="figs/two_loops6.svg" style="height:4.5em;">  
 </div>
 :::
 

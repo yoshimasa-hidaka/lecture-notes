@@ -74,11 +74,11 @@ Wilson線のネットワークは，ジャンクションを持つが，一般�
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/abcmu.svg" style="height:5.5em;">
+  <img src="figs/abcmu.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
     $$, $$
   </span>
-  <img src="figs/cabmu.svg" style="height:5.5em;">
+  <img src="figs/cabmu.svg" style="height:5.0em;">
 </div>
 :::
 
@@ -99,7 +99,7 @@ $\mathrm{SU}(2)_k$の場合は，$ N_{ab}^c\in\{0,1\}$なので，このラベ�
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/abcloopmu.svg" style="height:5.5em;">
+  <img src="figs/abcloopmu.svg" style="height:6.5em;">
   <span class="math display" style="display:inline-block;">
     $$= \delta_c^{c'}\delta_{\mu}^{\mu'}\sqrt{\frac{d_ad_b}{d_c}}$$
   </span>
@@ -141,11 +141,11 @@ $\mathrm{SU}(2)_k$の場合は，$ N_{ab}^c\in\{0,1\}$なので，このラベ�
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/fmove1mu.svg" style="height:5.5em;">
+  <img src="figs/fmove1mu.svg" style="height:6.0em;">
   <span class="math display" style="display:inline-block;">
     $$= \sum_{f,\rho,\sigma} [F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$$
   </span>
-  <img src="figs/fmove2mu.svg" style="height:5.5em;">
+  <img src="figs/fmove2mu.svg" style="height:6.0em;">
 </div>
 :::
 
@@ -172,11 +172,11 @@ $$を満たす．
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/Rabmu.svg" style="height:5.5em;">
+  <img src="figs/Rabmu.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
     $$=\sum_{\nu}[R_c^{ab}]_{\mu\nu}\ $$
   </span>
-  <img src="figs/cabnu.svg" style="height:5.5em;">
+  <img src="figs/cabnu.svg" style="height:5.0em;">
 </div>
 :::
 
@@ -264,7 +264,7 @@ $S$行列\footnote{散乱理論の$S$行列ではない点に注意.}は，
   <span class="math display" style="display:inline-block;">
     $$=\frac{S_{ab}}{S_{0b}}$$
   </span>
-  <img src="figs/b.svg" style="height:5.5em;">
+  <img src="figs/b.svg" style="height:5.0em;">
 </div>
 $$ $${#eq-link}
 :::

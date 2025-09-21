@@ -22,6 +22,7 @@ book:
   chapters:
     - index.qmd
     - SU2.qmd
+    - quantum_on_SUN.qmd
     #- Lie.qmd
     #- Gaugetheory.qmd
     - Kogut-Susskind.qmd
@@ -33,9 +34,8 @@ book:
     - fermion.qmd
     #- prepotential.qmd
   appendices:
+    - group_theory.qmd
     - q-deformation.qmd
-    #- group_theory.qmd
-    - references.qmd
 
 
 

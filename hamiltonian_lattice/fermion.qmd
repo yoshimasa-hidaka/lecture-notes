@@ -168,7 +168,7 @@ $\chi^\dag_n U^n_m\chi^m$はホッピング項であり,始点にあるフェル
 ドット線は，自明なWilson lineを表す．フェルミオンがない状態は，ドットの端点に何も書かないルールとする．また，ドット線はしばしば省略する．
 これらの状態に$\chi^\dag_n U^n_m\chi^m$を作用させると，
 始点にあるフェルミオンが終点に移動する．例えば，
-(@eq-states_fermion)の左の状態に作用させると，
+式(@eq-states_fermion)の左の状態に作用させると，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -601,27 +601,27 @@ $$
   <span class="math display" style="display:inline-block;">
     $$B=-1:$$
   </span>
-  <img src="figs/vac_twosite.svg" style="height:.8em;">
+  <img src="figs/vac_twosite.svg" style="width:6.0em;">
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
     $$B=0:$$
   </span>
-  <img src="figs/B0_twosite.svg" style="height:.8em;">
+  <img src="figs/B0_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
     $$,\quad$$
   </span>
-  <img src="figs/0B_twosite.svg" style="height:.8em;">
+  <img src="figs/0B_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
     $$,\quad$$
   </span>
-  <img src="figs/qq_twosite.svg" style="height:.8em;">
+  <img src="figs/qq_twosite.svg" style="width:6.0em;">
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
     $$B=1:$$
   </span>
-  <img src="figs/BB_twosite.svg" style="height:.8em;">
+  <img src="figs/BB_twosite.svg" style="width:6.0em;">
 </div>
 :::
 
@@ -644,7 +644,7 @@ $$
   <span class="math display" style="display:inline-block;">
     $$H$$
   </span>
-  <img src="figs/vac_twosite.svg" style="height:.8em;">
+  <img src="figs/vac_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
     $$=0$$
   </span>
@@ -653,7 +653,7 @@ $$
   <span class="math display" style="display:inline-block;">
     $$H$$
   </span>
-  <img src="figs/BB_twosite.svg" style="height:.8em;">
+  <img src="figs/BB_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
     $$=0$$
   </span>
@@ -675,31 +675,31 @@ $$
   <span class="math display" style="display:inline-block;">
     $$\qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)$$
   </span>
-  <img src="figs/B0_twosite.svg" style="height:1.5em;">
+  <img src="figs/B0_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
     $$=2m$$
   </span>
-  <img src="figs/B0_twosite.svg" style="height:1.5em;">
+  <img src="figs/B0_twosite.svg" style="width:6.0em;">
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
     $$\qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)$$
   </span>
-  <img src="figs/qq_twosite.svg" style="height:1.5em;">
+  <img src="figs/qq_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
     $$=\frac{3g^2}{8}$$
   </span>
-  <img src="figs/qq_twosite.svg" style="height:1.5em;">
+  <img src="figs/qq_twosite.svg" style="width:6.0em;">
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
     $$\qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)$$
   </span>
-  <img src="figs/0B_twosite.svg" style="height:1.5em;">
+  <img src="figs/0B_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
     $$=-2m$$
   </span>
-  <img src="figs/0B_twosite.svg" style="height:1.5em;">
+  <img src="figs/0B_twosite.svg" style="width:6.0em;">
 </div>
 :::
 
@@ -727,21 +727,21 @@ $$
   <span class="math display" style="display:inline-block;">
     $$t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)$$
   </span>
-  <img src="figs/B0_twosite.svg" style="height:1.5em;">
+  <img src="figs/B0_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
     $$=t\sqrt{2}$$
   </span>
-  <img src="figs/qq_twosite.svg" style="height:1.5em;">
+  <img src="figs/qq_twosite.svg" style="width:6.0em;">
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
     $$t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)$$
   </span>
-  <img src="figs/qq_twosite.svg" style="height:1.5em;">
+  <img src="figs/qq_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
     $$=t\sqrt{2}$$
   </span>
-  <img src="figs/B0_twosite.svg" style="height:1.5em;">
+  <img src="figs/B0_twosite.svg" style="width:6.0em;">
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">

@@ -1,30 +1,155 @@
-# 簡単な模型
-一般のグラフ上で計算するのは大変なのでここでは，簡単な模型を用いて$\mathrm{SU}(2)_k$ゲージ理論を解析してみよう．
+# 解ける具体例
 
-## (1+1)次元系(物質場なし)
-$(1+1)$次元系は，空間的な面が作れないため，空間的なWilsonループが存在しない．
-そのため，フェルミオンがなければ，自明に解ける系である．
-ハミルトニアンは，
+ここまでハミルトニアン形式の定式化について述べてきた．
+残る課題はハミルトニアンを対角化することであるが，解析計算は一般に困難である．
+ここでは，具体的に解ける例として，
+強結合極限，弱結合極限，および1つのプラケット模型を紹介する．
+
+## 強結合極限
+強結合極限$K\to0$では，磁場項を落すことができ，ハミルトニアンは，
 $$
-  H = \frac{1}{2}\sum_{e\in \tilde{\mathcal{E}}}E^2(e)
-$$
-である．各頂点は$2$点頂点であるので，隣り合うスピンの量子数は等しい．そのため状態は，リンクの数に依存しない．周期境界条件を課した場合，状態は一つのラベルで表現できる．
-これを$\ket*{j}$と書こう．この状態は，
-$$
-  E^2(e)\ket*{j} = [j][j+1]\ket*{j}
-$$
-を満し，$\ket*{j}$はハミルトニアンの固有状態となる．
-辺の数を$N=|\tilde{\mathcal{E}}|$とすると，
-$$
-  H\ket*{j} = \frac{N}{2}[j][j+1]\ket*{j}
-$$
+  H = \frac{1}{2}\sum_{e\in {\mathcal{E}}}E^2(e)
+$${#eq-Hamiltonian_strong_coupling}
+
 となる．
+この場合は，表現のネットワークの基底がハミルトニアンの固有状態となる．
+この状態を$\ket{\bm{a};\bm{\mu}}$
+と書くと，
+$$
+  H\ket{\bm{a};\bm{\mu}}=E(\bm{a})\ket{\bm{a};\bm{\mu}}
+$$
+で，エネルギーは$E(\bm{a})=\sum_{e\in {\mathcal{E}}}C_2(a_e)/2$となる．
+二次のCasimir不変量$C_2(a_e)\geq 0$であるから，すべての辺上$C_2(a_e)=0$になるのが基底状態であり，その波動関数は$\ket{0}\coloneqq \ket{\bm{0};\bm{1}}$で表される．
+ここで，$\bm{0}$はすべての辺が自明表現であることを表し，
+$\bm{1}$は各頂点に対応する Clebsch--Gordan 多重度ラベルが自明なものを取っていることを意味する．
 
-$j$を整数に制限することで$\mathrm{SO}(3)$ゲージ理論にすることができる．基本群が$\pi_1(\mathrm{SO}(3))=\mathbb{Z}_2$となるため，$\mathrm{SO}(3)$ゲージ理論には，離散化された
-$\theta=0,\pi$項を入れることができる．$\mathrm{U}(1)$ゲージ理論と異なり，ハミルトニアンを修正して，$\theta$を表現しづらいが状態を修正して$\theta$項を入れるのは簡単である．$\theta$真空は，$\theta=0$の時は，自明な真空$\ket{0}$で，$\theta=\pi$の時は，$\mathrm{SU}(2)$の状態を使って$\ket*{\frac{1}{2}}$と表せる．$\theta=\pi$の世界の物理状態は，$j$を非負の整数として$\ket*{j+\frac{1}{2}}$で表される． 
+### $(1+1)$次元系(物質場なし)
+
+ $(1+1)$ 次元系では，空間的な面が作れないため，空間的なWilsonループが存在しない．したがって，ハミルトニアン (@eq-Hamiltonian_strong_coupling) がそのまま $(1+1)$ 次元系のハミルトニアンとなる．
+ ゲージ不変性により，辺上の表現がすべて等しい状態が基底となる．
+ 周期境界条件を課した場合，状態は一つのラベルで表現でき，
+ これを$\ket*{a}$と書く．
+ 辺の数を $L=|{\mathcal{E}}|$ とすると，
+ ハミルトニアンの固有値は，$C_2(a)L/2$ となる．
+
+
+
+<!-- $j$を整数に制限することで$\mathrm{SO}(3)$ゲージ理論にすることができる．基本群が$\pi_1(\mathrm{SO}(3))=\mathbb{Z}_2$となるため，$\mathrm{SO}(3)$ゲージ理論には，離散化された
+$\theta=0,\pi$項を入れることができる．$\mathrm{U}(1)$ゲージ理論と異なり，ハミルトニアンを修正して，$\theta$を表現しづらいが状態を修正して$\theta$項を入れるのは簡単である．$\theta$真空は，$\theta=0$の時は，自明な真空$\ket{0}$で，$\theta=\pi$の時は，$\mathrm{SU}(2)$の状態を使って$\ket*{\frac{1}{2}}$と表せる．$\theta=\pi$の世界の物理状態は，$j$を非負の整数として$\ket*{j+\frac{1}{2}}$で表される．  -->
+
+
+
+## 弱結合極限
+弱結合極限では，電場項を省略してハミルトニアンは，
+
+$$
+  H = -  \frac{K}{2}\sum_{p\in \mathcal{P}}( \tr U (p)+\tr U^\dag (p))
+$$ {#eq-weakcouplingH}
+
+となる．
+このハミルトニアンの基底状態は，$\tr U(p)+\tr U^\dag(p)$を最大化する状態である．
+これはストリングネット凝縮状態[@Levin:2004mi]によって記述できることが知られている．
+そのために真空線を
+
+::: {.content-visible when-format=html}
+<div markdown=="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vacuumLine.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \frac{1}{\mathcal{D}}\sum_{a}d_a$$
+  </span>
+  <img src="figs/a.svg" style="height:5.5em;">
+</div>
+$$ $${#eq-vacuum_line}
+:::
+
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLine.pdf}}}
+=\frac{1}{\mathcal{D}}\sum_{a}d_a\,\,
+\vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+\label{eq-vacuum_line}
+\end{align}
+:::
+
+で定義する．これは，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vacuumMove1.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/vacuumMove2.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove1.pdf}}}
+=\vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove2.pdf}}}
+\end{align}
+:::
+
+を満たす．つまり真空線の内側にdefectがあってもWilson線はすり抜けることができる．これによりWilsonループはトポロジカルになる．
+また，真空線のループは潰すと
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vacuumLoop0.svg" style="height:3.5em;　vertical-align:middle;">
+   <span class="math display" style="display:inline-block;">
+    $$=\mathcal{D}$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLoop0.pdf}}}=\mathcal{D}
+\end{align}
+:::
+
+となり全量子次元に等しい．
+また，真空線の合成より
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vacuumDoubleLoop.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\mathcal{D}$$
+  </span>
+  <img src="figs/vacuumLoop.svg" style="height:3.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumDoubleLoop.pdf}}}=\mathcal{D}\,
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLoop.pdf}}}
+\end{align}
+:::
+
+が成り立つ．
+
+この真空線を用いて，
+$$
+  B(p)\coloneqq \sum_a\frac{d_a}{\mathcal{D}^2}\tr U_a(p)
+$$
+を定義し，ストリング凝縮状態として
+$$
+  \ket{\Phi} = \prod_p B(p)\ket{0}
+$$
+を定義する．
+ここで，$\ket{0}$は強結合極限での真空を表す．
+すべてのプラケットに真空線を作用させた状態$\ket{\Phi}$に作用させたWilsonループはトポロジカルに変形することができる．もし空間にサイクルがないとするとこのWilsonループは自明に潰すことができる．つまり$\tr U_a(p)\ket{\Phi}=d_{a}\ket{\Phi}$を意味する．したがってストリング凝縮状態は，ハミルトニアン(@eq-weakcouplingH) の基底状態となる．
+
+
+
+
+
 
 ## 1つのプラケット模型
-次に1つのプラケットのみがある場合の模型を考えよう:
+最後に，1つのプラケットのみを含む場合($\mathcal{P}=\{p\}$)の$\mathrm{SU}(2)_k$ゲージ理論を考える:
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -38,17 +163,22 @@ $$
 $$
 :::
 
+この場合，辺は$4$本($\mathcal{E}=\{e_1,e_2,e_3,e_4\}$)，頂点は$4$点($\mathcal{V}=\{v_1,v_2,v_3,v_4\}$)である．
 ハミルトニアンは，
 $$
-  H = \frac{1}{2}\sum_{e\in \tilde{\mathcal{E}}}E^2(e) - K\tr U(p)
+  H = \frac{1}{2}\sum_{e\in{\mathcal{E}}}E^2(e) - K\tr U(p)
 $$
-である．この場合も各頂点は$2$点頂点であるので，隣り合うスピンの量子数は等しいため，物理状態は，一つの状態$\ket*{j}$でラベルできる．電場項の状態$\ket*{j}$への作用は，
+で与えられる．ここで，$\mathrm{SU}(2)_k$の性質として，$\tr U(p)=\tr U^\dag(p)$を用いた．
+各頂点は$2$点頂点であるため，Gaussの拘束条件により隣接するスピンの量子数は等しくなる．
+したがって物理状態の基底は，単一の表現(スピン)$j$を用いて$\ket*{j}$で表される．この状態は，$j=0$の状態$\ket{0}$と$\tr U_j$を用いて，
+$\ket{j}=\tr U_j\ket{0}$と表される．
+基底$\ket*{j}$への電場項の作用は，
 $$
-  \frac{1}{2}\sum_{e\in \tilde{\mathcal{E}}}E^2(e)\ket*{j}
-  =2[j][j+1]\ket*{j}
+  \frac{1}{2}\sum_{e\in {\mathcal{E}}}E^2(e)\ket*{j}
+  =\frac{1}{2}\sum_{e\in {\mathcal{E}}}C_2(j)\ket*{j}
+  =2C_2(j)\ket*{j}
 $$
-となる．
-一方，プラケットの状態$\ket*{j}$への作用は，(@eq-fusion_Wilson_loop)式から，
+となる．一方，プラケット項の状態$\ket*{j}$への作用は，式(@eq-fusion_Wilson_loop) から，
 $$
   \tr U(p)\ket*{j} = \ket*{j+\frac{1}{2}}
   +\ket*{j-\frac{1}{2}}
@@ -57,27 +187,81 @@ $$
 $$
   \ket{\psi}=\sum_j \tilde{\psi}(j)\ket{j}
 $$
-で展開すると，時間に依存しないSchrödinger方程式
+と展開すると，時間に依存しないSchrödinger方程式$H\ket{\psi} = \varepsilon\ket{\psi}$は，
 $$
-  H\ket{\psi} = \varepsilon\ket{\psi}
+  (\varepsilon-2C_2(j))\tilde{\psi}(j) +K \tilde{\psi}(j+{1}/{2})
+  +K \tilde{\psi}(j-{1}/{2})=0
+  \label{eq-single_plaquette_Sch}
 $$
-は，
-$$
-  (\varepsilon-2[j][j+1])\tilde{\psi}(j) +K \tilde{\psi}(j+\frac{1}{2})
-  +K \tilde{\psi}(j-\frac{1}{2})=0
-$$
-となる．ここで，$\varepsilon$はエネルギーである．
-この問題は，$j$が$0,1/2,1,\cdots k/2$の$k+1$状態を走るので，
-$(k+1)\times(k+1)$行列の対角化問題に帰着する．
+に帰着する．
+ここで，$\varepsilon$はエネルギーである．
+$j$は$0,1/2,1,\cdots, k/2$を走るので，$(k+1)\times(k+1)$行列の対角化問題に帰着する．
 比較的小さい$k$については，数値的に容易に解くことができる．
-\begin{question}
-  $k=1$の場合に解析的に解け．また，$k=100$の場合を数値的に解け．
-\end{question}
 
-$k\to\infty$の時には特殊関数を用いて解くこともできる．これを見てみよう．
-まず電場が対角な基底からWilsonループが対角な基底に移ろう．
-これは，基底の変換(Fourier変換)を施すことで移ることができる.
-天下りであるが，
+
+極限$k\to\infty$の時，すなわち通常の$\mathrm{SU}(2)$の場合には特殊関数を用いて解くことも可能である．
+そのために，電気的基底から磁気的基底に移ろう．
+これは，基底の変換として
+$$
+  \ket*{\omega}
+    = \sum_{j}\chi_j(\omega)
+  \ket*{j}
+$$
+で与えられる．
+ここで，$\chi_j(\omega)= \sin(\omega(2j+1)/{2})/\sin({\omega}/{2})$は$\mathrm{SU}(2)$の指標である．
+この基底は$\tr U(p)$の固有状態であり，
+$$
+    \tr U(p) \ket*{\omega}
+    =\sum_{j}\chi_j(\omega)(\ket*{j+\frac{1}{2}}+\ket*{j-\frac{1}{2}})
+    =\sum_{j}(\chi_{j+1/2}(\omega)+\chi_{j-1/2}(\omega))\ket*{j}
+  =2\cos\frac{\omega}{2}\ket{\omega}
+$$
+が成り立つ．
+ここで，$\chi_{j+1/2}(\omega)+\chi_{j-1/2}(\omega)=2\cos(\omega/2)\chi_j(\omega)$を用いた．
+一方，この基底では，$E^2$は非対角であり，具体的には，指標の性質
+$$
+\frac{d^2}{d\omega^2}\chi_j(\omega)+
+\cot\frac{\omega}{2}\frac{d}{d\omega}\chi_j(\omega)=-j(j+1)\chi_j(\omega)
+$$
+を用いると，
+$$
+  H\ket{\omega}=-\qty(
+  2\frac{d^2}{d\omega^2}
++2\cot\frac{\omega}{2}\frac{d}{d\omega}
++2K\cos\frac{\omega}{2})\ket{\omega}
+$$
+となる．
+したがって，
+$$
+  \ket{\psi}=\int_0^{4\pi} \frac{d\omega}{2\pi}\sin^2\frac{\omega}{2}  \psi(\omega)\ket{\omega}
+$$
+と展開すれば，$\varepsilon\ket{\psi}=H\ket{\psi}$は，
+微分方程式
+$$
+\qty(
+\varepsilon
++2\frac{d^2}{d\omega^2}+
+2\cot\frac{\omega}{2}\frac{d}{d\omega}
++2K\cos\frac{\omega}{2}
+)\psi(\omega)=0
+$$
+に帰着する．
+ここで，この波動関数は指標$\chi_j(\omega)$の性質から，$\psi(\omega+4\pi)=\psi(\omega)$の周期境界条件を満たす偶関数である．
+さらに変数変換
+\begin{align}
+  \omega&=4x ,\quad
+  y(x)=\sin\frac{\omega}{2}\psi(\omega),\quad
+  a=4(1+2\varepsilon),\quad
+  q=-8K
+\end{align}
+を行なうと，Mathieu型の微分方程式
+$$
+  \frac{d^2}{d x^2}y +(a-2q\cos(2x))y=0
+$$
+に帰着する．
+この微分方程式の解は，Mathieu関数で表され，境界条件$y(x)=y(x+\pi)$によってエネルギー固有値が離散化される．
+
+<!-- 天下りであるが，
 $$
   S_{la} =     \sqrt{\frac{2}{k+2}}
   \sin\qty(\frac{\omega_l}{2}(2j_a+1))
@@ -201,114 +385,4 @@ $$
 $$
   \frac{d^2}{d x^2}y +(a-2q\cos(2x))y=0
 $$
-に帰着する．この微分方程式の解は，Mathieu関数を用いて表され，境界条件$y(0)=y(\pi)$より離散的なエネルギーに量子化される．
-
-## 強結合極限
-強結合極限$K\to0$では，磁場項を落として，ハミルトニアンは，
-$$
-  H = \frac{1}{2}\sum_{e\in \tilde{\mathcal{E}}}E^2(e)
-$$
-となる．この場合は，スピンネットワークの基底がハミルトニアンの固有状態になっている．ある状態を$\ket{\{j\}}$
-と書くと，
-$$
-  H\ket{\{j_e\}}=E_j\ket{\{j\}}
-$$
-で$E_j=\sum_{e\in \tilde{\mathcal{E}}}E^2(e)/2$となる．
-
-## 弱結合極限
-逆に弱結合極限では，電場項を落として，ハミルトニアンは，
-$$
-  H = -  K\sum_{f\in \mathcal{F}} \tr U ( f)
-$${#eq-weakcouplingH}
-となる．
-このハミルトニアンの基底状態は，ストリング凝縮状態[@Levin:2004mi]を用いて記述することができる．
-そのために真空線を
-
-::: {.content-visible when-format=html}
-<div markdown=="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/vacuumLine.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$= \frac{1}{\mathcal{D}}\sum_{a}d_a$$
-  </span>
-  <img src="figs/a.svg" style="height:5.5em;">
-</div>
-$$ $${#eq-vacuum_line}
-:::
-
-
-::: {.content-visible when-format=pdf}
-\begin{align}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLine.pdf}}}
-=\frac{1}{\mathcal{D}}\sum_{a}d_a\,\,
-\vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-\label{eq-vacuum_line}
-\end{align}
-:::
-
-で定義する．これは，
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/vacuumMove1.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$=$$
-  </span>
-  <img src="figs/vacuumMove2.svg" style="height:5.5em;">
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-\begin{align}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove1.pdf}}}
-=\vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove2.pdf}}}
-\end{align}
-:::
-
-を満たす．つまり真空線の内側にdefectがあってもWilson線はすり抜けることができる．これによりWilsonループはトポロジカルになる．
-また，真空線のループは
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/vacuumLoop0.svg" style="height:5.5em;">
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-\begin{align}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLoop0.pdf}}}=\mathcal{D}
-\end{align}
-:::
-
-となり全量子次元に等しい．
-真空線の合成より
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/vacuumDoubleLoop.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$= =\mathcal{D}$$
-  </span>
-  <img src="figs/vacuumLoop.svg" style="height:5.5em;">
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-\begin{align}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumDoubleLoop.pdf}}}=\mathcal{D}\,
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLoop.pdf}}}
-\end{align}
-:::
-
-が成り立つ．
-
-この真空線を用いて，
-$$
-  B(f)\coloneqq \sum_a\frac{d_a}{\mathcal{D}^2}\tr U_a(f)
-$$
-を定義し，ストリング凝縮状態として
-$$
-  \ket{\Phi} = \prod_f B(f)\ket{0}
-$$
-を定義する．
-ここで，$\ket{0}$は強結合極限での真空を表す．
-すべてのプラケットに真空線を作用させた状態$\ket{\Phi}$に作用させたWilsonループはトポロジカルに変形することができる．もし空間にサイクルがないとするとこのWilsonループは自明に潰すことができる．つまり$\tr U(f)\ket{\Phi}=d_{1/2}\ket{\Phi}$を意味する．したがってストリング凝縮状態は，ハミルトニアン(@eq-weakcouplingH)の基底状態となる．
+に帰着する．この微分方程式の解は，Mathieu関数を用いて表され，境界条件$y(0)=y(\pi)$より離散的なエネルギーに量子化される． -->
