@@ -8,6 +8,7 @@ project:
 
 website:
   title: "講義ノート"
+  favicon: favicon.ico
   navbar:
     search: true
     left:
