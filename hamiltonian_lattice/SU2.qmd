@@ -97,7 +97,6 @@ $$
     \mathcal{U}_{\bm{n}}^{-1}.
   \end{split}
 $$
-この表示は，あとで導入される共役類を議論する際に有用である．
 
 ## $\mathrm{SU}(2)$のLie代数
 <!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}のLie代数} -->

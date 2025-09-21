@@ -3,7 +3,7 @@
 ## Kogut-Susskind形式 {#sec-hamiltonian}
 
 ::: {.content-visible when-format="html"}
-::: {#fig-Honeycomb_Lattice fig-cap="ハニカム格子とプラケット" fig-align="center"}
+::: {#fig-Honeycomb_Lattice fig-cap="左：ハニカム格子．右：プラケット．" fig-align="center"}
 ::: {layout-ncol=2}
 ![](figs/Honeycomb.svg){fig-subcap="ハニカム格子" width=60%}
 ![](figs/plaquette.svg){fig-subcap="プラケット"  width=30%}
@@ -12,7 +12,7 @@
 :::
 
 ::: {.content-visible when-format="pdf"}
-::: {#fig-Honeycomb_Lattice fig-cap="ハニカム格子とプラケット" fig-align="center"}
+::: {#fig-Honeycomb_Lattice fig-cap="左：ハニカム格子．右：プラケット．" fig-align="center"}
 ::: {layout-ncol=2}
 ![](figs/Honeycomb.pdf){fig-subcap="ハニカム格子"}
 ![](figs/plaquette.pdf){fig-subcap="プラケット"}
@@ -29,7 +29,7 @@
 
 格子上のゲージ理論のハミルトニアン形式はKogutとSusskindによって1970年代に定式化された [@Kogut:1974ag]．
 本節では格子上の$\mathrm{SU}(N)$ Yang--Mills理論のハミルトニアン形式について考える．
-任意の格子について定式化できるが，ここではゲージ不変な物理状態の構成が容易なハニカム格子を扱う(図 @fig-Honeycomb_Lattice-a 左)．
+任意の格子について定式化できるが，ここではゲージ不変な物理状態の構成が容易なハニカム格子を扱う(図 @fig-Honeycomb_Lattice 左)．
 頂点の集合を$\mathcal{V}$，辺の集合を$\mathcal{E}$とする．
 各辺は，向きを持ち，始点と終点が定められている．
 辺$e\in\mathcal{E}$に対して，その始点および終点を
@@ -143,7 +143,7 @@ $$ {#eq-gauss}
 $G_i(v)$はLie代数の生成子であり，式(@eq-gauss) は，頂点において，状態が表現の$1$重項になることを要請している．
 ここでは，ハニカム格子を考えているので$3$点頂点を考えれば十分である．頂点を$v$とし，それが
 辺$e_1$, $e_2$の始点，$e_3$の終点になっている場合を考える．
-すなわち，$\mathrm{s}(e_1)=\mathrm{s}(e_2)=\mathrm{t}(e_3)=v$である(図@fig-vertex)．
+すなわち，$\mathrm{s}(e_1)=\mathrm{s}(e_2)=\mathrm{t}(e_3)=v$である(図 @fig-vertex)．
 このとき，状態$\ket*{a,m_a,n_a}_1\ket*{b,m_b,n_b}_2\ket*{c,m_c,n_c}_3$に対して，Clebsch--Gordan係数$\braket{a,n_a;\, b,n_b}{c,m_c;\mu}$を用いると
 $$
   \ket*{\varphi}=\sum_{n_a,n_b,m_c}\frac{1}{\sqrt{d_c}}
@@ -701,7 +701,7 @@ $3$点頂点に分解することができるので，$3$点頂点のみのネ�
 例えば，$\mathrm{SU}(2)_k$の場合は，スピン$j$が$0,1/2,1,\cdots, k/2$の値に制限される．
 量子群変形の利点は，これまでに導入した式(@eq-partition) や(@eq-Fmove) が形式的にはそのまま成り立つ点である．
 ただし，係数が変形される．
-量子群の詳細は割愛し( @sec-q_deformation 節参照)，ここでは，$\mathrm{SU}(2)_k$の場合について照会する．
+量子群の詳細は割愛し(@sec-q_deformation 節参照)，ここでは，$\mathrm{SU}(2)_k$の場合について照会する．
 
 表現のカットオフにより，式(@eq-fusion_delta) の$\delta_{abc}$は修正され
 $$
