@@ -28,7 +28,7 @@ $$
 具体的に$\mathrm{SU}(2)$の場合に見ていこう．
 $\mathrm{SU}(2)$の元を
 $$
-    g= \cos\frac{\theta}{2}+\ri {\sigma}\cdot\bm{n}\sin\frac{\theta}{2}
+    g= \cos\frac{\theta}{2}+\ri \symbf{\sigma}\cdot\bm{n}\sin\frac{\theta}{2}
 $$
 と表す(式(@eq-SU2_n))．$\bm{n}\in S^2$で，極座標表示(@eq-n_polar)を用いると，Haar測度は，
 $$
@@ -44,7 +44,8 @@ $$
 
 ## 中心
 <!-- \subsection{中心} -->
-群$G$の\textit{中心}とは，群の元$g\in G$であって，任意の元$h\in G$に対し
+
+群$G$の**中心**とは，群の元$g\in G$であって，任意の元$h\in G$に対し
 $$
   hg=gh
 $$
