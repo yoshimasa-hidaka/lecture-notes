@@ -1,26 +1,30 @@
 # Lie群の復習　{#Lie short-title="SLie群の復習"}
 本稿では，$\mathrm{SU}(N)$(およびその量子群変形)ゲージ理論について取り上げる.
- その解析に必要となる$\mathrm{SU}(N)$群の表現について簡単に復習しておこう．
+その解析に必要となる$\mathrm{SU}(N)$群の表現について簡単に復習しておこう．
 Lie群の表現論や群上の量子論を習熟している読者は，本節を読み飛ばし，@sec-ks 節に進んでもらって差し支えない．
- 
+
 ## $\mathrm{SU}(2)$群　　{#sec-su2}
 まず，量子力学で習うスピンの対称性である$\mathrm{SU}(2)$群から始める．
 $\mathrm{SU}(2)$群は，複素$2$次元ベクトル空間の内積を保ち，行列式が$1$である変換全体からなる群である．
- $2$つの複素$2$次元ベクトル$w=(w_1,w_2)^T$, $z=(z_1,z_2)^T$に対して，変換$w\mapsto g w$, $z\mapsto gz$のもとで，内積は，
- 次のように変換される:
- $$
-     w^\dag z\mapsto w^\dag g^\dag g z.
- $$
- ここで，$g$は，$2\times 2$複素行列で，$\dag$はHermite共役を表す．
- この変換で内積が不変となるためには，$g^\dag g=\mathbf{1}_2$を満たす必要がある．ここで，$\mathbf{1}_2$は$(2\times2)$の単位行列
+$2$つの複素$2$次元ベクトル$w=(w_1,w_2)^T$, $z=(z_1,z_2)^T$に対して，変換$w\mapsto g w$, $z\mapsto gz$のもとで，内積は，
+次のように変換される:
+$$
+  w^\dag z\mapsto w^\dag g^\dag g z.
+$$
+
+ここで，$g$は，$2\times 2$複素行列で，$\dag$はHermite共役を表す．
+この変換で内積が不変となるためには，$g^\dag g=\mathbf{1}_2$を満たす必要がある．ここで，$\mathbf{1}_2$は$(2\times2)$の単位行列
+
 $$
     \mathbf{1}_2\coloneqq\begin{pmatrix}
       1 & 0 \\
       0 & 1
     \end{pmatrix}
 $$
+
 である．
- また，行列式が$1$である条件から，$\det g=1$が要求される．したがって，$\mathrm{SU}(2)$群は次のように表される:
+また，行列式が$1$である条件から，$\det g=1$が要求される．
+したがって，$\mathrm{SU}(2)$群は次のように表される:
  $$
   \mathrm{SU}(2) \coloneqq
   \left\{ g=\begin{pmatrix}
@@ -29,17 +33,19 @@ $$
   \end{pmatrix}\in \mathrm{GL}(2,\mathbb{C})\Bigl| |\alpha|^2+|\beta|^2=1
   \right\}.
 $$
+
 ここで，$\mathrm{GL}(2,\mathbb{C})$は，2次元複素線形群（すなわち、$2 \times 2$の正則な複素行列全体からなる群）を表す．
- $\alpha$, $\beta$が取りうる空間は条件$|\alpha|^2+|\beta|^2=1$により$3$次元球面$S^3$と同一視される．
- \begin{question}
+$\alpha$, $\beta$が取りうる空間は条件$|\alpha|^2+|\beta|^2=1$により$3$次元球面$S^3$と同一視される．
+
+\begin{question}
 $\begin{pmatrix}
   \alpha & \beta\\
   -\beta^* & \alpha^*
 \end{pmatrix}\in\mathrm{SU}(2)$がユニタリ行列であること，また群の公理(単位元の存在，逆元の存在，結合則)を満たすことを確認せよ．
 \end{question}
 
-パラメータを$\alpha=a_0+\ri a_3$, $\beta=a_1+\ri a_2$と置き，
-Pauli行列$\sigma_i$
+パラメータを$\alpha=a_0+\ri a_3$, $\beta=a_1+\ri a_2$と置き，Pauli行列$\sigma_i$
+
 $$
     \sigma_1 \coloneqq \begin{pmatrix}
     0 & 1\\
@@ -55,25 +61,37 @@ $$
     \end{pmatrix}
     \label{eq-Pauli_Matrix}
 $$
+
 を導入する．このとき，$\mathrm{SU}(2)$の元$g$は，次のように表される:
+
 $$
   \begin{split}
     g = a_0 \mathbf{1}_2 +\ri\symbf{\sigma}\cdot \bm{a}.
   \end{split}
 $$
-ここで，$\bm{a} = (a_1, a_2, a_3)$は実ベクトルであり，パラメータは$a_0^2+a_1^2+a_2^2+a_3^2=1$を満たす．さらに$3$次元単位ベクトル${\bm{n}}$を導入すると，$g$は次のようにも表せる:
+
+ここで，$\bm{a} = (a_1, a_2, a_3)$は実ベクトルであり，パラメータは$a_0^2+a_1^2+a_2^2+a_3^2=1$を満たす．
+さらに$3$次元単位ベクトル${\bm{n}}$を導入すると，$g$は次のようにも表せる:
+
 $$
     g= \mathbf{1}_2\cos\frac{\theta}{2}+\ri{\bm{n}}\cdot\symbf{\sigma}\sin\frac{\theta}{2}=\exp(\ri\frac{\theta}{2}{\bm{n}}\cdot\symbf{\sigma}
     )
 $${#eq-SU2_n}
-と表すこともできる．ここで，$\theta$は，$0$から$2\pi$を動く実パラメータである．
+
+と表すこともできる．
+ここで，$\theta$は，$0$から$2\pi$を動く実パラメータである．
 $\bm{n}$を極座標表示すると
+
 $$
   n_1=\cos\varphi\sin\psi,\quad
   n_2=\sin\varphi\sin\psi,\quad
   n_3=\cos\psi.
 $${#eq-n_polar}
-と表せる．ただし，$0\leq\varphi\leq 2\pi$, $0\leq\psi\leq \pi$を満たす．このとき，次のユニタリ行列
+
+と表せる．
+ただし，$0\leq\varphi\leq 2\pi$, $0\leq\psi\leq \pi$を満たす．
+このとき，次のユニタリ行列
+
 $$
   \begin{split}
     \mathcal{U}_{\bm{n}}=\begin{pmatrix}
@@ -82,13 +100,17 @@ $$
     \end{pmatrix}
   \end{split}
 $$
+
 を用いると，以下の関係が成り立つ:
+
 $$
   \begin{split}
     {\bm{n}}\cdot \symbf{\sigma} = \mathcal{U}_{\bm{n}}\sigma_3\mathcal{U}_{\bm{n}}^{-1}
   \end{split}
 $$
+
 したがって，$\mathrm{SU}(2)$の元は，次のように書くことができる:
+
 $$
   \begin{split}
     g = \mathcal{U}_{\bm{n}}e^{\ri\frac{\theta}{2}\sigma_3}
@@ -97,19 +119,30 @@ $$
 $$
 
 ### $\mathrm{SU}(2)$のLie代数
+
 式(@eq-SU2_n)において，$\theta_i=\theta n_i$と置き，$T_i=\sigma_i/2$と定義すると，
 $$
 g= \exp(\ri T_i\theta^i)
 $$
-と表せる．単位元近傍で展開すると$\theta_i\ll 1$として，
+
+と表せる．
+単位元近傍で展開すると$\theta_i\ll 1$として，
+
 $$
 g= 1+\ri T_i\theta^i + \order{\theta^2}
 $$
-となる．従って，単位元近傍での無限小変換は，
+となる．
+従って，単位元近傍での無限小変換は，
+
 $$
 \ri T_i\theta^i
 $$
 に比例する行列によって特徴づけられる．
+この$T_i$ は次の交換関係を満たす：
+$$
+[T_i,T_j]=\ri f^k_{~ij}T_k, \qquad f^k_{~ij}=\epsilon_{ijk}.
+$$ {#eq-Lie_SU2}
+
 このように，群の接空間をなす元の集合を Lie代数 と呼び，
 $\mathrm{SU}(2)$の場合は，$\mathfrak{su}(2)$と書く．
 
@@ -123,14 +156,9 @@ $$
 
 と表す。$J_i$ は行列表示でもよいし，より高次元のヒルベルト空間に作用する演算子として実現してもよい。したがって，$2\times 2$ 表現は最も基本的な「スピン$1/2$」表現であり，スピン$1, 3/2, \dots$ の高次表現では $J_i$ はより大きな行列（演算子）として現れる．
 
-$T_i$ は次の交換関係を満たす：
-$$
-[T_i,T_j]=\ri f^k_{~ij}T_k, \qquad f^k_{~ij}=\epsilon_{ijk}.
-$$
 
 ここで，$f^k_{~ij}$は構造定数であり，完全反対称テンソル(Levi-Civita記号)$\epsilon_{ijk}$を用いて，$f^k_{~ij}=\epsilon_{ijk}$と表される．
-また同様に，抽象的な生成子 $J_i$ も
-
+また同様に，抽象的な生成子 $J_i$ も式(@eq-Lie_SU2)
 $$
 [J_i,J_j]=\ri \epsilon_{ijk} J_k
 $$ {#eq-commutatorSU2}
