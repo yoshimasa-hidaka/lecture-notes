@@ -1,11 +1,8 @@
- <!-- \section{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群の復習}-->
 # Lie群の復習　{#Lie short-title="SLie群の復習"}
 本稿では，$\mathrm{SU}(N)$(およびその量子群変形)ゲージ理論について取り上げる.
  その解析に必要となる$\mathrm{SU}(N)$群の表現について簡単に復習しておこう．
 Lie群の表現論や群上の量子論を習熟している読者は，本節を読み飛ばし，@sec-ks 節に進んでもらって差し支えない．
  
- <!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群} -->
-
 ## $\mathrm{SU}(2)$群　　{#sec-su2}
 まず，量子力学で習うスピンの対称性である$\mathrm{SU}(2)$群から始める．
 $\mathrm{SU}(2)$群は，複素$2$次元ベクトル空間の内積を保ち，行列式が$1$である変換全体からなる群である．
@@ -100,35 +97,57 @@ $$
 $$
 
 ### $\mathrm{SU}(2)$のLie代数
-<!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}のLie代数} -->
-任意の実数$t$に対して$e^{t X}$が$\mathrm{SU}(2)$の元となる$X$全体の集合を$\mathfrak{su}(2)$と書き，$\mathrm{SU}(2)$のLie代数と呼ぶ．
-物理分野では，$\mathrm{SU}(2)$の元を$\exp\ri \theta^iJ_i$と表し，$J_i$は
-$\mathrm{SU}(2)$の生成子と呼ばれる．各$J_i$はHermiteで，生成子の添字は$i=1,2,3$の値をとる．生成子は，以下の交換関係を満たす:
+式(@eq-SU2_n)において，$\theta_i=\theta n_i$と置き，$T_i=\sigma_i/2$と定義すると，
 $$
-  [J_i,J_j]=\ri f^k_{~ij} J_k
-$${#eq-commutatorSUN}
-ここで，$f^k_{~ij}$は構造定数であり，完全反対称テンソル(Levi-Civita記号)$\epsilon_{ijk}$を用いて，
+g= \exp(\ri T_i\theta^i)
 $$
-f^k_{~ij}=\epsilon_{ijk}
+と表せる．単位元近傍で展開すると$\theta_i\ll 1$として，
 $$
-と表される．
-具体的な$\epsilon_{ijk}$の値は，以下のようになる:
+g= 1+\ri T_i\theta^i + \order{\theta^2}
 $$
-  \epsilon_{123}=\epsilon_{231}=\epsilon_{312}=-\epsilon_{213}=-\epsilon_{132}=-\epsilon_{321}=1.
+となる．従って，単位元近傍での無限小変換は，
 $$
-他はゼロである．
-Lie代数の生成子$J_i$を行列で表現したものを$T_i$と表記する．
-$T_i=\sigma_i/2$に取ると，$T_i$は，式(@eq-commutatorSUN)を満たすことがわかる．
+\ri T_i\theta^i
+$$
+に比例する行列によって特徴づけられる．
+このように，群の接空間をなす元の集合を Lie代数 と呼び，
+$\mathrm{SU}(2)$の場合は，$\mathfrak{su}(2)$と書く．
+
+ここで得られた $T_i=\sigma_i/2$ は $2\times 2$ の行列として表されているが，
+物理学ではこれをスピン $1/2$ の状態空間に作用する演算子として解釈する．
+より一般には，Lie代数 $\mathfrak{su}(2)$ の抽象的な生成子を $J_i$ と書き，
+
+$$
+g= \exp(\ri J_i\theta^i)
+$$
+
+と表す。$J_i$ は行列表示でもよいし，より高次元のヒルベルト空間に作用する演算子として実現してもよい。したがって，$2\times 2$ 表現は最も基本的な「スピン$1/2$」表現であり，スピン$1, 3/2, \dots$ の高次表現では $J_i$ はより大きな行列（演算子）として現れる．
+
+$T_i$ は次の交換関係を満たす：
+$$
+[T_i,T_j]=\ri f^k_{~ij}T_k, \qquad f^k_{~ij}=\epsilon_{ijk}.
+$$
+
+ここで，$f^k_{~ij}$は構造定数であり，完全反対称テンソル(Levi-Civita記号)$\epsilon_{ijk}$を用いて，$f^k_{~ij}=\epsilon_{ijk}$と表される．
+また同様に，抽象的な生成子 $J_i$ も
+
+$$
+[J_i,J_j]=\ri \epsilon_{ijk} J_k
+$$ {#eq-commutatorSU2}
+
+を満たす．すなわち，$T_i$ と $J_i$ は同じLie代数 $\mathfrak{su}(2)$ の関係式を共有しており，$T_i$ は $J_i$ の $2\times 2$ 行列表示に対応する．
+
+
 
 ### $\mathrm{SU}(2)$群の表現
 
-<!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群の表現} -->
-$\mathrm{SU}(2)$群のユニタリ表現は，そのLie代数$\mathfrak{su}(2)$の表現と$1$対$1$対応があるのでそれを求めれば十分である．
-以下では，$\mathrm{SU}(2)$と$\mathfrak{su}(2)$の表現の違いを混乱の恐れが無いかぎり区別せずに用いる．
+$\mathrm{SU}(2)$群は単連結なコンパクトLie群であるため，その有限次元ユニタリ表現はLie代数$\mathfrak{su}(2)$の有限次元表現と1対1対応する．
+したがって，群の表現を理解するにはLie代数の表現を調べれば十分である．
+以下では，両者の違いを混乱の恐れがない限り区別せずに用いる．
 また，この節では，$\mathrm{SU}(2)$の表現の導出は行わず基本的な結果のみを紹介する．導出については，標準的な群論の教科書(例えば[@Georgi])を参照．
 また，[@Martin-Dussaud:2019ypf]も参考になる．
 表現を議論するのに昇降演算子$J_{\pm}\coloneqq J_1\pm\ri J_2$及び，$J_0\coloneqq J_3$を定義しておく便利である．
-これらの交換関係は，式(@eq-commutatorSUN)より，
+これらの交換関係は，式(@eq-commutatorSU2)より，
 
 $$
 \begin{aligned}
@@ -136,13 +155,13 @@ $$
 [J_+,J_-] & = 2 J_0
 \end{aligned}
 $$
-となる．$2$次のCasimir演算子$J_i^2$は，
+となる．$2$次のCasimir演算子$J^2$は，
 $$
-  J_i^2=J_+J_-+J_0^2-J_0=J_-J_++J_0^2+J_0
+  J^2=\sum_{i=1}^3J_i^2=J_+J_-+J_0^2-J_0=J_-J_++J_0^2+J_0
 $$
-と表すことができる．$J_i^2$はすべての$J_j$と可換である．
+と表すことができる．$J^2$はすべての$J_j$と可換である．
 
-$\mathrm{SU}(2)$の有限次元既約表現は$J_i^2$と
+$\mathrm{SU}(2)$の有限次元既約表現は$J^2$と
 $J_3(=J_0)$の同時固有状態$\ket*{j,m}$を用いて表すことができる．
 ここで，状態の内積は，
 $$
@@ -169,7 +188,7 @@ $$\label{eq-Wigner_matrix}
 $$
 この行列は，
 $$
-  \int\dd{g} [D_j^{*}]^{m'}_{n'}(g) [D_j]^m_n(g) = \frac{1}{d_j}\delta_{j,j'}\delta_{m,m'}\delta_{n,n'}
+  \int\dd{g} [D_{j'}^{*}]^{m'}_{n'}(g) [D_j]^m_n(g) = \frac{1}{d_j}\delta_{j,j'}\delta_{m,m'}\delta_{n,n'}
 $${#eq-su2-D-orthogonality}
 の直交関係を満たす．ここで$\dd{g}$は$\mathrm{SU}(2)$のHaar測度である(詳細は，@sec-Haar_measure 節参照)．
 
@@ -199,7 +218,7 @@ $$
 本稿では，$\delta_{abc}=1$を満たす$j_a,j_b,j_c$を，$j_a,j_b,j_c$が三角不等式を満たすという．
 例えば，$j_a=1$と$j_b=1/2$とすると，三角不等式を満たす$j_c$は，$3/2$または，$1/2$となる．したがって，
 $$
-  \mathcal{Q}_{1}\otimes \mathcal{Q}_{\frac{1}{2}} \simeq Q_{\frac{3}{2}}\oplus Q_{\frac{1}{2}}
+  \mathcal{Q}_{1}\otimes \mathcal{Q}_{\frac{1}{2}} \simeq \mathcal{Q}_{\frac{3}{2}}\oplus \mathcal{Q}_{\frac{1}{2}}
 $$
 となり，$N^c_{\frac{1}{2}1}$は，
 $$
@@ -334,7 +353,7 @@ $$ \begin{aligned}
   \begin{pmatrix}
     j_a & j_b & j_d\\
     m_a & m_b & m_d
-  \end{pmatrix}&=\delta_{j_c,j_d}\delta_{m_c,m_d}\delta_{a,b,c}, \\
+  \end{pmatrix}&=\delta_{j_c,j_d}\delta_{m_c,m_d}\delta_{abc}, \\
   \sum_{j_c,m_c}(2j_c+1)
   \begin{pmatrix}
     j_a & j_b & j_c\\
@@ -576,13 +595,13 @@ $$
 :::
 
 と表す．
-特に，$j_a=j_b$のときは，単にドットと取って
+特に，$j_a=j_b$のときは，単にドットを取って
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/a.svg" style="height:4.2em;">
   <span class="math display" style="display:inline-block;">
-    $$=\braket{j_an_a}{j_am_a} =\delta^{n_a}_{m_b}$$
+    $$=\braket{j_an_a}{j_am_a} =\delta^{n_a}_{m_a}$$
   </span>
 </div>
 :::
@@ -590,7 +609,7 @@ $$
 ::: {.content-visible when-format=pdf}
 $$
   \parbox{.6cm}{\includegraphics[scale=0.3]{figs/a.pdf}}=
- \braket{j_an_a}{j_am_a} =\delta^{n_a}_{m_b}
+ \braket{j_an_a}{j_am_a} =\delta^{n_a}_{m_a}
  $$
 :::
 
@@ -875,3 +894,33 @@ $${#eq-deform2}
 ## $\mathrm{SU}(N)$群
 
 $\mathrm{SU}$(2)群でみてきたものを$\mathrm{SU}(N)$群に拡張する．
+
+
+$$
+  [T_i,T_j] = \ri f^k_{~ij} T_k
+$$
+
+$$
+    [T_i,[T_j,T_k]]+  [T_j,[T_k,T_i]]+[T_k,[T_i,T_j]]=0
+$$
+より，
+$$
+  \ri f^{m}_{~~il}\ri f^l_{~jk} 
+  +  \ri f^{m}_{~~jl}\ri f^l_{~ki} 
+  +  \ri f^{m}_{~~kl}\ri f^l_{~ij} =0
+$$
+が得られる．
+
+$$
+  [T_i^{\mathrm{adj}}]^j_k = \ri f^j_{~ik}
+$$
+と置くと，
+$$
+  [T_i^{\mathrm{adj}},T_j^{\mathrm{adj}}]=\ri f^k_{~ij} T^{\mathrm{adj}}_k
+$$
+を満たすことがわかる．つまり構造定数自身もLie代数を満たす．
+また，基本表現では，
+$$
+  \sum_{i}[T_i]^j_k [T_i]^l_m = \frac{1}{2}\qty(\delta^j_m\delta^l_k-\frac{1}{N}\delta^j_k\delta^l_m)
+$$
+を満たす．
