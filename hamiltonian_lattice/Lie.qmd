@@ -1,14 +1,15 @@
  <!-- \section{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群の復習}-->
-# $\mathrm{SU}(2)$群の復習　{#su2 short-title="SU(2) 群の復習"}
-本稿では，具体例として，$\mathrm{SU}(2)$(およびその量子群変形)ゲージ理論について取り上げる.
- その解析に必要となる$\mathrm{SU}(2)$群の表現について簡単に復習しておこう．
+# Lie群の復習　{#Lie short-title="SLie群の復習"}
+本稿では，$\mathrm{SU}(N)$(およびその量子群変形)ゲージ理論について取り上げる.
+ その解析に必要となる$\mathrm{SU}(N)$群の表現について簡単に復習しておこう．
 Lie群の表現論や群上の量子論を習熟している読者は，本節を読み飛ばし，@sec-ks 節に進んでもらって差し支えない．
  
  <!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群} -->
 
 ## $\mathrm{SU}(2)$群　　{#sec-su2}
+まず，量子力学で習うスピンの対称性である$\mathrm{SU}(2)$群から始める．
 $\mathrm{SU}(2)$群は，複素$2$次元ベクトル空間の内積を保ち，行列式が$1$である変換全体からなる群である．
- つまり，$2$つの複素$2$次元ベクトル$w=(w_1,w_2)^T$, $z=(z_1,z_2)^T$に対して，変換$w\mapsto g w$, $z\mapsto gz$のもとで，内積は，
+ $2$つの複素$2$次元ベクトル$w=(w_1,w_2)^T$, $z=(z_1,z_2)^T$に対して，変換$w\mapsto g w$, $z\mapsto gz$のもとで，内積は，
  次のように変換される:
  $$
      w^\dag z\mapsto w^\dag g^\dag g z.
@@ -98,7 +99,7 @@ $$
   \end{split}
 $$
 
-## $\mathrm{SU}(2)$のLie代数
+### $\mathrm{SU}(2)$のLie代数
 <!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}のLie代数} -->
 任意の実数$t$に対して$e^{t X}$が$\mathrm{SU}(2)$の元となる$X$全体の集合を$\mathfrak{su}(2)$と書き，$\mathrm{SU}(2)$のLie代数と呼ぶ．
 物理分野では，$\mathrm{SU}(2)$の元を$\exp\ri \theta^iJ_i$と表し，$J_i$は
@@ -119,7 +120,7 @@ $$
 Lie代数の生成子$J_i$を行列で表現したものを$T_i$と表記する．
 $T_i=\sigma_i/2$に取ると，$T_i$は，式(@eq-commutatorSUN)を満たすことがわかる．
 
-## $\mathrm{SU}(2)$群の表現
+### $\mathrm{SU}(2)$群の表現
 
 <!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{SU(2)}群の表現} -->
 $\mathrm{SU}(2)$群のユニタリ表現は，そのLie代数$\mathfrak{su}(2)$の表現と$1$対$1$対応があるのでそれを求めれば十分である．
@@ -161,7 +162,7 @@ $$ \begin{aligned}
 $j$は，$j\in\frac{1}{2}\mathbb{Z}$の非負の整数，半整数の値を取り，$m$は$m=-j,-j+1,\cdots j-1,j$の値を取る．以下，表現$j$に付随した$(2j+1)\eqqcolon d_j$次元Hilbert空間を$\mathcal{Q}_j$と表す．
 
 <!-- \subsection{Wignerの\texorpdfstring{$D$}{D}行列} -->
-## Wignerの$D$行列
+### Wignerの$D$行列
 $\mathrm{SU}(2)$の元$g$に対応した演算子$U_g=\exp\ri\theta^i J_i$と書くことにする．Wignerの$D$行列(表現行列)は，$U_g$の状態$\ket{j,m}$への作用を表す:
 $$\label{eq-Wigner_matrix}
   [D_j]^m_n(g)\coloneqq \bra{j,m}U_g\ket{j,n}.
@@ -172,7 +173,7 @@ $$
 $${#eq-su2-D-orthogonality}
 の直交関係を満たす．ここで$\dd{g}$は$\mathrm{SU}(2)$のHaar測度である(詳細は，@sec-Haar_measure 節参照)．
 
-## 表現の合成
+### 表現の合成
 <!-- \subsection{表現の合成} -->
 次にふたつの表現$j_a$と$j_b$の合成を考える．本稿では，しばしば表現のラベルに$a,b,c,d,\cdots$を用いる．表現の添字は，$\mathcal{Q}_{j_a}$や，$j$を略して$\mathcal{Q}_{a}$と書くことがある．
 $2$つの表現を合成(直積)するとそれは既約表現の直和に分解する:
@@ -553,7 +554,7 @@ $${#eq-pentagon}
 %      \end{split}
 %  $$ -->
 
-## Clebsch-Gordan係数の演算のグラフィカルな表現 {#sec-graphical_Clebsch-Gordan}
+### Clebsch-Gordan係数の演算のグラフィカルな表現 {#sec-graphical_Clebsch-Gordan}
 
 Clebsch-Gordan係数を図を使って表現するといろいろ便利である．
 まず，2点頂点は，
@@ -870,3 +871,7 @@ $$
 $${#eq-deform2}
 
 が成り立つが示せる．
+
+## $\mathrm{SU}(N)$群
+
+$\mathrm{SU}$(2)群でみてきたものを$\mathrm{SU}(N)$群に拡張する．

@@ -21,7 +21,7 @@ book:
         text: "講義ノートへ戻る"
   chapters:
     - index.qmd
-    - SU2.qmd
+    - Lie.qmd
     - quantum_on_SUN.qmd
     #- Lie.qmd
     #- Gaugetheory.qmd
