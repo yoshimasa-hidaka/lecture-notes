@@ -187,8 +187,7 @@ $$
 $$
 ここで，$C_2(a)=j_a(j_a+1)$は，$2$次のCasimir不変量である．
 
-## $\mathrm{SU}(2)$上のHilbert空間
-<!-- \subsection{\texorpdfstring{$\mathrm{SU}(2)$}{Hilbert}上のHilbert空間} -->
+<!-- ## $\mathrm{SU}(2)$上のHilbert空間
 $\mathrm{SU}(2)$上の複素関数$f$で，
 $$
   \int \dd{g} f^*(g)f(g) < \infty
@@ -211,7 +210,7 @@ $$
   \begin{split}
     \bra{g}\ket{g'} = \delta_{g,g'}.
   \end{split}
-$$
+$$ -->
 
 
 
