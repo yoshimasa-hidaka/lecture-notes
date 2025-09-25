@@ -11,13 +11,13 @@
 
 ## Haar測度 {#sec-Haar_measure}
 <!-- \subsection{Haar測度}\label{sec-Haar_measure} -->
-群上で関数の積分を行うには，群構造と両立する自然な測度を導入する必要がある．特に，$\mathrm{SU}(2)$のような連続群においては，離散的な和に代わる操作として，群の左右変換に対して不変な測度が求められる．このような測度は一般にHaar測度と呼ばれ，任意のコンパクト群に対して，定数倍を除いて一意に定まる．
-Haar測度は，群の元$g\in G$に対し，
+群上で関数の積分を行うには，群構造と両立する自然な測度を導入する必要がある．特に，$\mathrm{SU}(2)$ のような連続群においては，離散的な和に代わる操作として，群の左右変換に対して不変な測度が求められる．このような測度は一般にHaar測度と呼ばれ，任意のコンパクト群に対して，定数倍を除いて一意に定まる．
+Haar測度は，群の元 $g\in G$ に対し，
 $$
     \int_G \dd{g} f(g)= \int_G \dd{g} f(hg)= \int_G \dd{g} f(gh)
 $$
 を満たす測度である．
-ここで，$f(g)$は，群の元$g$に依存する関数である．
+ここで，$f(g)$ は，群の元 $g$ に依存する関数である．
 この条件は，測度が群の左・右作用に対して不変であること，すなわち群の構造に依存しない自然な積分を定めることを意味する．
 本稿では，
 $$
@@ -25,38 +25,40 @@ $$
 $$
 となるように正規化されたものを用いる．
 
-具体的に$\mathrm{SU}(2)$の場合に見ていこう．
-$\mathrm{SU}(2)$の元を
+具体的に $\mathrm{SU}(2)$ の場合に見ていこう．
+$\mathrm{SU}(2)$ の元を
 $$
     g= \cos\frac{\theta}{2}+\ri \symbf{\sigma}\cdot\bm{n}\sin\frac{\theta}{2}
 $$
-と表す(式 (@eq-SU2_n))．$\bm{n}\in S^2$で，極座標表示(@eq-n_polar)を用いると，Haar測度は，
+と表す(式 (@eq-SU2_n))．
+$\bm{n}\in S^2$で，極座標表示 (@eq-n_polar) を用いると，Haar測度は，
 $$
     \dd g =
     \frac{\dd{\theta}}{\pi} \sin^2\frac{\theta}{2} \frac{\dd{\Omega}}{4\pi}
 $$
-となる．ここで，$\dd\Omega$は，$S^2$の測度で，
+となる．ここで，$\dd\Omega$ は，$S^2$ の測度で，
 $$
 \dd\Omega=\sin\psi \dd\psi \dd\varphi
 $$
-である．パラメータは，$0\leq\theta\leq 2\pi$, $0\leq\psi\leq \pi$, $0\leq\varphi\leq 2\pi$を取る．
+である．パラメータは，$0\leq\theta\leq 2\pi$, $0\leq\psi\leq \pi$, $0\leq\varphi\leq 2\pi$ を取る．
 
 
 ## 中心
 <!-- \subsection{中心} -->
 
-群$G$の**中心**とは，群の元$g\in G$であって，任意の元$h\in G$に対し
+群 $G$ の**中心**とは，群の元 $g\in G$ であって，任意の元 $h\in G$ に対し
 $$
   hg=gh
 $$
-を満たすものの集合をいう．群$G$の中心を$Z(G)$と表す:
+を満たすものの集合をいう．群 $G$ の中心を $Z(G)$ と表す:
 $$
   Z(G)=\{g\in G\mid \forall h\in G,\; hg=gh\}.
 $$
-$Z(G)$も群(アーベル群)をなす．
-$\mathrm{SU}(2)$の場合は，すべての元と可換な元は単位行列に比例するので，$\omega\mathbf{1}_2$
-の形をとる．ユニタリ行列である条件から$|\omega|^2=1$が得られ，行列式が$1$である条件から，
-$\omega^2=1$が得られる．これを満たす$\omega$は，$1,-1$である．したがって，$\mathrm{SU}(2)$の中心は，
+
+$Z(G)$ も 群(アーベル群)をなす．
+$\mathrm{SU}(2)$ の場合は，すべての元と可換な元は単位行列に比例するので，$\omega\mathbf{1}_2$
+の形をとる．ユニタリ行列である条件から $|\omega|^2=1$ が得られ，行列式が $1$ である条件から，
+$\omega^2=1$ が得られる．これを満たす $\omega$ は，$1,-1$ である．したがって，$\mathrm{SU}(2)$ の中心は，
 $$
   Z(\mathrm{SU}(2))=\{ \mathbf{1}_{2},-\mathbf{1}_2\}\simeq \mathbb{Z}_2
 $$
@@ -65,18 +67,18 @@ $$
 
 ## 共役類
 <!-- \subsection{共役類} -->
-群$G$において，$2$つの群の元$g,g'\in G$が，ある$h\in G$を用いて，
+群 $G$ において，$2$ つの群の元 $g,g'\in G$ が，ある $h\in G$ を用いて，
 $$
   g'=hgh^{-1}
 $$
-と表されるとき，$g$と$g'$は\textit{共役}であるという．
-このとき，$g$と$g'$は\textit{同じ\textit{共役類}に属する}という．
-$g$の\textit{共役類}を$\mathcal{C}_g$と表す:
+と表されるとき，$g$ と $g'$は\textit{共役}であるという．
+このとき，$g$ と $g'$ は\textit{同じ\textit{共役類}に属する}という．
+$g$ の\textit{共役類}を $\mathcal{C}_g$ と表す:
 $$
   \mathcal{C}_g\coloneqq\{hgh^{-1}\mid h\in G\}.
 $$
 
-$G=\mathrm{SU}(2)$の場合，$hgh^{-1}$によって，$g$を対角化できるので，$g$として対角行列を考えれば良い．対角行列は，
+$G=\mathrm{SU}(2)$ の場合，$hgh^{-1}$ によって，$g$ を対角化できるので，$g$ として対角行列を考えれば良い．対角行列は，
 $$
   e^{\ri\theta T_3}=\begin{pmatrix}
     e^{\ri\theta/2} & 0\\
@@ -92,7 +94,7 @@ $$
     1 & 0
   \end{pmatrix}
 $$
-を用い，$(\ri X)^{-1}=-\ri X$に注意して，
+を用い，$(\ri X)^{-1}=-\ri X$ に注意して，
 $$
   \ri X\begin{pmatrix}
     e^{\ri\theta/2} & 0\\
@@ -104,15 +106,18 @@ $$
     0 & e^{\ri\theta/2}
   \end{pmatrix}
 $$
-となることがわかる．つまり，$\theta$と$-\theta$は共役となるので，
-$\theta$は，$0$から$2\pi$までの範囲を動くと考えることができる．
-以下では，共役類のラベルとして$\mathcal{C}_\theta$の表記を用いる．
-$\theta=0$および$2\pi$に対応する行列は，すべての元と可換であり，中心に属する．したがって，
+となることがわかる．つまり，$\theta$ と $-\theta$ は共役となるので，
+$\theta$ は，$0$ から $2\pi$ までの範囲を動くと考えることができる．
+以下では，共役類のラベルとして $\mathcal{C}_\theta$ の表記を用いる．
+$\theta=0$ および $2\pi$ に対応する行列は，すべての元と可換であり，中心に属する．したがって，
 $$ \begin{aligned}
     \mathcal{C}_0&= \{\mathbf{1}_2\},\\
     \mathcal{C}_{2\pi}&= \{-\mathbf{1}_2\}.
- \end{aligned}$$
-$0<\theta<2\pi$の場合，共役類は，
+ \end{aligned}
+ $$
+
+$0<\theta<2\pi$ の場合，共役類は，
+
 $$
 \mathcal{C}_{\theta}=\left\{\mathbf{1}_2\cos\frac{\theta}{2}+\ri\bm{n}\cdot \symbf{\sigma}\sin\frac{\theta}{2}\left|\bm{n}\in S^2\right.\right\}
 $$
@@ -140,16 +145,16 @@ $$
 ## 指標
 <!-- \subsection{指標} -->
 表現行列のトレースは指標と呼ばれる．
-トレースの性質より，$h\in G$として，$\chi_a(g)=\chi_a(hgh^{-1})$となることから，共役な元は，同じ指標の値を返すことがわかる．
+トレースの性質より，$h\in G$として，$\chi_a(g)=\chi_a(hgh^{-1})$ となることから，共役な元は，同じ指標の値を返すことがわかる．
 
 
-$\mathrm{SU}(2)$の表現$j_a$の指標は，
+$\mathrm{SU}(2)$ の表現 $j_a$ の指標は，
 $$
 \chi_a(g) =\tr_a D_{a}(g)
 =\sum_{m_a} e^{\ri m_a\theta} = \frac{\sin\frac{\theta(2j_a+1)}{2} }{\sin\frac{\theta}{2}}
 $$
-と表される．ここで，$e^{\ri m_a\theta}$は，$D_{a}(g)$を対角化したときの固有値で，共役類のラベルに対応する．
-このことから，$\chi_a(g)$の代わりに，$\chi_a(\theta)$と書くこともある．
+と表される．ここで，$e^{\ri m_a\theta}$ は，$D_{a}(g)$ を対角化したときの固有値で，共役類のラベルに対応する．
+このことから，$\chi_a(g)$ の代わりに，$\chi_a(\theta)$ と書くこともある．
 
 \paragraph{指標の直交性}
 
@@ -157,10 +162,10 @@ $$
 $$
   \int \dd{g} \chi^\dag_a(g) \chi_b(g)=\delta_{ab}
 $$
-が成り立つ．指標は共役類のみに依存するため，測度$\dd{\nu(\theta)}$を導入することで，
+が成り立つ．指標は共役類のみに依存するため，測度 $\dd{\nu(\theta)}$ を導入することで，
 $$
   \int \dd{\nu(\theta)}\chi^\dag_a(\theta) \chi_b(\theta)=\delta_{ab}
-$${#eq-character_orthogonality}
+$$ {#eq-character_orthogonality}
 という形で表すことができる．
 ここで，$\dd{\nu(\theta)}$は，
 $$
@@ -172,7 +177,7 @@ $$
 $$
 \sum_{a} \chi^\dag_a(\theta) \chi_a(\theta')=\delta_\nu(\theta-\theta')
 $$
-が成り立つ．ここで$\delta_\nu(\theta-\theta')$は，次を満たすデルタ関数である:
+が成り立つ．ここで $\delta_\nu(\theta-\theta')$ は，次を満たすデルタ関数である:
 $$
     \int \dd{\nu(\theta')} f(\theta')\delta_\nu(\theta-\theta')=f(\theta).
 $$
@@ -185,7 +190,7 @@ $$
 $$
 -\Delta_\theta\chi_a(\theta)=C_2(a)\chi_a(\theta).
 $$
-ここで，$C_2(a)=j_a(j_a+1)$は，$2$次のCasimir不変量である．
+ここで，$C_2(a)=j_a(j_a+1)$ は，2次のCasimir不変量である．
 
 <!-- ## $\mathrm{SU}(2)$上のHilbert空間
 $\mathrm{SU}(2)$上の複素関数$f$で，
@@ -217,24 +222,24 @@ $$ -->
 
 
 ## 類演算子
-群の元$h\in G$に対応する演算子として$L^h$を導入し，
+群の元 $h\in G$ に対応する演算子として $L^h$ を導入し，
 $\ket{g}$に対して，
 $$
   L^h\ket{g}=\ket{hg}
 $$
-と定義する．同様に，右作用を表す演算子$R^h$を
+と定義する．同様に，右作用を表す演算子 $R^h$ を
 $$
   R^h\ket{g}=\ket{g\bar{h}}
 $$
-と定義する．ここで，$\bar{h}$は，$h$の逆元を表す．
-$L^h$は，群の左作用，$R^h$は右作用を表しており，次の関係を満たす:
+と定義する．ここで，$\bar{h}$ は，$h$ の逆元を表す．
+$L^h$ は，群の左作用，$R^h$は 右作用を表しており，次の関係を満たす:
 $$ \begin{aligned}
   L^{h}L^{h'}&=L^{hh'},\\
   R^{h}R^{h'}&=R^{hh'},\\
   L^hR^{h'}&=R^{h'}L^h.
  \end{aligned}$$
 
-$L^{h}R^{h}$を状態$\ket{\psi}$に作用させると
+$L^{h}R^{h}$ を状態 $\ket{\psi}$ に作用させると
 $$
   \begin{split}
     L^hR^{h}\ket{\psi}=\int dg \psi(g)\ket{hg\bar{h}}=
@@ -259,22 +264,22 @@ $$
 %    \end{split}
 %  $$ -->
 
-共役類 $\mathcal{C}_\theta$に属する元 $g$にわたる左作用 $L^g$の積分で定義される演算子
+共役類 $\mathcal{C}_\theta$ に属する元 $g$ にわたる左作用 $L^g$ の積分で定義される演算子
 $$
     T_\theta = \int_{g\in \mathcal{C}_\theta} dg L^g
 $$
-は，すべての$L^h$および$R^h$と可換である．
-このような演算子$T_\theta$を類演算子と呼ぶ．
-ここでは左作用 $L^g$を用いて定義したが，$R^g$を使っても同様に定義できる．
+は，すべての $L^h$ および$R^h$ と可換である．
+このような演算子 $T_\theta$ を類演算子と呼ぶ．
+ここでは左作用 $L^g$ を用いて定義したが，$R^g$ を使っても同様に定義できる．
 
-$\mathrm{SU}(2)$の場合，群のすべての元と可換であるので，$T_\theta$は
-表現空間の基底$\ket{j,m,n}$を取ると，単位行列に比例する形で作用する．
+$\mathrm{SU}(2)$の場合，群のすべての元と可換であるので，$T_\theta$ は
+表現空間の基底 $\ket{j,m,n}$ を取ると，単位行列に比例する形で作用する．
 したがって，
 $$
     T_\theta = \sum_{j}c_jP_{j}
 $$
-ここで，$P_{j}$は，$\mathcal{Q}^*_j\otimes \mathcal{Q}_j$への射影演算子で，$c_j$は係数関数である．
-$T_\theta$に対して表現を取り，トレースとすると，係数 $c_j$は
+ここで，$P_{j}$ は，$\mathcal{Q}^*_j\otimes \mathcal{Q}_j$ への射影演算子で，$c_j$ は係数関数である．
+$T_\theta$に対して表現を取り，トレースとすると，係数 $c_j$ は
 $$
 c_j = \frac{1}{d_j}\chi_j(\theta)
 $$
@@ -286,39 +291,44 @@ $$
 
 
 
-指標の直交性(@eq-character_orthogonality)を用いると，射影演算子$P_j$は，
+指標の直交性 (@eq-character_orthogonality) を用いると，射影演算子 $P_j$ は，
 $$
     P_j =  d_j\int_{0}^{2\pi}\dd{\nu(\theta)}\chi^\dag_j(\theta) T_\theta
-$${#eq-projector}
+$$ {#eq-projector}
 と表すことができる．
 
-\paragraph{類演算子の積}
-$T_\theta$と$T_{\theta'}$の積は，
+#### 類演算子の積
+
+$T_\theta$と$T_{\theta'}$ の積は，
 $$
 T_\theta T_{\theta'}
 = \sum_{j}\frac{1}{d^2_j}\chi_j(\theta)\chi_j(\theta')P_j
 $$
 となる．
-一方で，射影演算$P_j$は，式(@eq-projector)により$T_{\theta''}$を使って表されるので，
+一方で，射影演算 $P_j$は，式 (@eq-projector) により $T_{\theta''}$ を使って表されるので，
 $$
 T_\theta T_{\theta'}
 =\int_{0}^{2\pi}\dd{\nu(\theta'')}
 \mathcal{K}(\theta,\theta',\theta'') T_{\theta''}
 $$
 と書くことできる．
-ここで，結合係数（structure constant）$\mathcal{K}(\theta, \theta', \theta'')$は
+ここで，結合係数（structure constant）$\mathcal{K}(\theta, \theta', \theta'')$ は
+
 $$
   \begin{split}
    \mathcal{K}(\theta,\theta',\theta'')= \sum_{a}\frac{1}{d_a}\chi_a(\theta)\chi_a(\theta')\chi^\dag_a(\theta'')
   \end{split}
 $$
-である．この関数は，$\theta''$が$|\theta-\theta'|\leq \theta''\leq\min(\theta+\theta',4\pi-\theta-\theta')$のときに値(台)を持つ．その上では次のように具体的に計算される:
+
+である．この関数は，$\theta''$ が $|\theta-\theta'|\leq \theta''\leq\min(\theta+\theta',4\pi-\theta-\theta')$ のときに値(台)を持つ．その上では次のように具体的に計算される:
+
 $$
   \begin{split}
    \mathcal{K}(\theta,\theta',\theta'')
    =\frac{\pi}{4}\frac{1}{\sin\frac{\theta}{2}\sin\frac{\theta'}{2}\sin\frac{\theta''}{2}}.
   \end{split}
 $$
+
 
 <!-- %  Racah係数$W(abcd;ef)$を用いて，
 %  $$

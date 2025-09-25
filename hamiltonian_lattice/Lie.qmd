@@ -121,7 +121,7 @@ $$
 $$
 
 と表せる．
-単位元近傍で展開すると$\theta_i\ll 1$として，
+単位元近傍で展開すると $\theta_i\ll 1$ として，
 
 $$
   g= 1+\ri T_i\theta^i + \order{\theta^2}
@@ -171,7 +171,7 @@ $\mathrm{SU}(2)$ 群は単連結なコンパクトLie群であるため，その
 また，この節では，$\mathrm{SU}(2)$ の表現の導出は行わず基本的な結果のみを紹介する．導出については，標準的な群論の教科書(例えば[@Georgi])を参照．
 また，[@Martin-Dussaud:2019ypf]も参考になる．
 表現を議論するのに昇降演算子 $J_{\pm}\coloneqq J_1\pm\ri J_2$ 及び，$J_0\coloneqq J_3$ を定義しておく便利である．
-これらの交換関係は，式 (@eq-commutatorSU2)より，
+これらの交換関係は，式 (@eq-commutatorSU2) より，
 
 $$
   ~[J_0,J_{\pm}] = \pm J_\pm,\quad
@@ -191,13 +191,19 @@ $J_3(=J_0)$ の同時固有状態 $\ket*{j,m}$ を用いて表すことができ
 $$
   \bra{j,m}\ket{j',m'}=\delta_{j,j'}\delta_{m,m'}
 $$
+
 と規格化されているものとする．
 この状態は，$J_i^2$ と $J_3$ の固有状態に選んであることから
-$$ \begin{aligned}
+
+$$
+\begin{aligned}
   J_i^2\ket*{j,m}  &= j(j+1)\ket*{j,m},\\
   J_3\ket*{j,m}  &= m\ket*{j,m}
- \end{aligned}$$
+\end{aligned}
+$$
+
 を満たす．昇降演算子を状態に作用させると
+
 $$ \begin{aligned}
   J_{\pm}\ket*{j,m}  &= \sqrt{j(j+1)-m(m\pm 1)}\ket*{j,m\pm1}
  \end{aligned}$$
@@ -205,6 +211,7 @@ $$ \begin{aligned}
 $j$は，$j\in\frac{1}{2}\mathbb{Z}$ の非負の整数，半整数の値を取り，$m$ は $m=-j,-j+1,\cdots j-1,j$ の値を取る．以下，表現 $j$ に付随した$(2j+1)\eqqcolon d_j$ 次元Hilbert空間を $\mathcal{Q}_j$ と表す．
 
 ### Wignerの$D$行列
+
 $\mathrm{SU}(2)$の元$g$に対応した演算子$U_g=\exp\ri\theta^i J_i$と書くことにする．Wignerの$D$行列(表現行列)は，$U_g$の状態$\ket{j,m}$への作用を表す:
 
 $$
@@ -228,8 +235,9 @@ $$
     \mathcal{Q}_{j_{a}}\otimes \mathcal{Q}_{j_{b}} = (\mathcal{Q}_{j_{a}+j_{b}})\oplus \mathcal{Q}_{j_{a}+j_{b}-1}\oplus\cdots \oplus \mathcal{Q}_{|j_{a}-j_{b}|}
     =\bigoplus_cN_{ab}^{c}\mathcal{Q}_{c}.
 $$
-  ここで $N_{ab}^{c}=\delta_{abc}$ で
-  
+
+ここで $N_{ab}^{c}=\delta_{abc}$ で
+
 $$
   \delta_{abc}\coloneqq \begin{cases}
   1 &
@@ -245,27 +253,34 @@ $$ {#eq-fusion_delta}
 を導入した．$N_{ab}^{c}$ はfusion係数またはテンソル積係数と呼ばれる．
 本稿では，$\delta_{abc}=1$ を満たす $j_a,j_b,j_c$を，$j_a,j_b,j_c$ が三角不等式を満たすという．
 例えば，$j_a=1$ と $j_b=1/2$ とすると，三角不等式を満たす $j_c$ は，$3/2$ または，$1/2$ となる．したがって，
+
 $$
   \mathcal{Q}_{1}\otimes \mathcal{Q}_{\frac{1}{2}} \simeq \mathcal{Q}_{\frac{3}{2}}\oplus \mathcal{Q}_{\frac{1}{2}}
 $$
+
 となり，$N^c_{\frac{1}{2}1}$ は，
+
 $$
   N_{1\frac{1}{2}}^{\frac{3}{2}}=1,\quad
   N_{1\frac{1}{2}}^{\frac{1}{2}}=1
 $$
+
 で他の $c$ についてゼロとなる．
 
 3つの表現の合成(直積)は $\mathcal{Q}_{a}\otimes (\mathcal{Q}_{b}\otimes \mathcal{Q}_{c})\simeq (\mathcal{Q}_{a}\otimes \mathcal{Q}_{b}) \otimes \mathcal{Q}_{c}$
   を満たす．これに対応して，fusion係数は，
+
 $$
 \sum_{d}N_{ad}^{f}N_{bc}^{d}= \sum_{d}N_{ab}^{d}N_{dc}^{f}
 $$
+
 を満たす．
 
 次に具体的に表現を合成しよう．表現 $j_a$, $j_b$ を合成し $j_c$ を作ったとする．そのときのベクトル $\ket*{j_aj_b;j_c,m_c}$ は，
 $$
   \ket*{j_aj_b;j_c,m_c} = \sum_{m_a,m_b}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_am_a\, j_bm_b}{j_c,m_c}
 $$
+
 と表せる．ここで，
 $\braket{j_am_a\, j_bm_b}{j_cm_c}$ はClebsch-Gordan係数である．
 $j_c$, および $m_c$ が取りうる値は
@@ -295,20 +310,23 @@ $$
   \braket{j_dm_d}{j_am_a\, j_b,m_b}
   \braket{j_am_a\, j_bm_b}{j_c,m_c}
   =\delta_{j_c}^{j_d}\delta_{m_c}^{m_d}\delta_{abc},
-$${#eq-Clebsch-Gordan_orthogonal1}
+$$ {#eq-Clebsch-Gordan_orthogonal1}
 
 $$
   \sum_{j_c}\sum_{m_c}
   \braket{j_am_a\, j_bm_b}{j_c,m_c}
   \braket{j_cm_c}{j_am'_a\, j_bm'_b}
   =\delta^{m_a}_{m'_a}\delta^{m_b}_{m'_b} 
-$${#eq-Clebsch-Gordan_orthogonal2}
+$$ {#eq-Clebsch-Gordan_orthogonal2}
 
 を満たす．
-Wigner $3$-$j$シンボル $\begin{psmallmatrix}
+Wigner $3$-$j$シンボル
+$\begin{psmallmatrix}
   j_a & j_b & j_c\\
   m_a & m_b & m_c
-\end{psmallmatrix}$ を用いると，Clebsch-Gordan係数は，
+\end{psmallmatrix}$
+を用いると，Clebsch-Gordan係数は，
+
 $$
 \braket{j_am_a\, j_bm_b}{j_cm_c}
 =(-1)^{j_{a}-j_{b}+m_{c}}\sqrt{d_c}
@@ -379,10 +397,11 @@ $$
   \end{pmatrix}
 $$
 
-となる性質を持つ．値は，$j_a$, $j_b$, $j_c$ が三角不等式を満たすとき \delta_{abc}=1$ のみ非ゼロで，他はゼロとなる．
+となる性質を持つ．値は，$j_a$, $j_b$, $j_c$ が三角不等式を満たすとき $\delta_{abc}=1$ のみ非ゼロで，他はゼロとなる．
 直交性関係は，
 
-$$ \begin{aligned}
+$$ 
+\begin{aligned}
   (2j_c+1)\sum_{m_a,m_b}
   \begin{pmatrix}
     j_a & j_b & j_c\\
@@ -401,7 +420,8 @@ $$ \begin{aligned}
     j_a & j_b & j_c\\
     m'_a & m'_b & m_c
   \end{pmatrix}&=\delta_{m_a,m'_a}\delta_{m_b,m'_b}
- \end{aligned}$$
+\end{aligned}
+$$
 となる．
 
 \begin{question}
@@ -410,7 +430,7 @@ $$ \begin{aligned}
 \end{question}
 
 
-$\ket*{j_aj_b;j_c,m_c}$と$\ket*{j_bj_a;j_c,m_c}$は，位相分だけ状態が異なる:
+$\ket*{j_aj_b;j_c,m_c}$ と $\ket*{j_bj_a;j_c,m_c}$ は，位相分だけ状態が異なる:
 
 $$
   \ket*{j_aj_b;j_c,m_c} =R^{ab}_c \ket*{j_bj_a;j_c,m_c}.
@@ -429,7 +449,7 @@ $$
 \end{question}
 
 
-3つの表現 $j_a$, $j_b$, $j_c$を合成し，$j_d$を作る問題を考える．$j_a$と$j_b$を合成し$j_{e}$を作り，その後，$j_c$を合成すると，
+3つの表現 $j_a$, $j_b$, $j_c$ を合成し，$j_d$ を作る問題を考える．$j_a$ と $j_b$ を合成し $j_{e}$ を作り，その後，$j_c$ を合成すると，
 $$ \begin{aligned}
   &\ket*{(j_aj_b)j_{e}j_c;j_d,m_d} \notag\\
   &=
@@ -438,7 +458,8 @@ $$ \begin{aligned}
      \braket{j_am_a\, j_bm_b}{j_{e},m_{e}}
    \braket{j_{e}m_{e}\, j_cm_c}{j_d,m_d}
  \end{aligned}$$
-となる．一方，先に$j_b$と$j_c$を合成し，$j_{f}$を作り，その後$j_a$を合成すると，
+となる．一方，先に $j_b$ と j_c$ を合成し，$j_{f}$ を作り，その後$j_a$を合成すると，
+
 $$
   \begin{split}
     &\ket*{j_a (j_bj_c)j_{f};j_d,m_d}\\
@@ -467,24 +488,27 @@ $$
 %  \end{pmatrix}
 %    \ket*{j_a,m_a}\ket*{j_b,m_b}{j_c,m_c}\\
 %   \end{aligned}$$ -->
-$\ket*{(j_aj_b)j_{e}j_c;j_d,m_d}$と
-$\ket*{j_a (j_bj_c)j_{f};j_d,m_d}$は，独立ではなく次のユニタリ変換($F$-moves)で結びついている:
+$\ket*{(j_aj_b)j_{e}j_c;j_d,m_d}$ と$\ket*{j_a (j_bj_c)j_{f};j_d,m_d}$ は，独立ではなく次のユニタリ変換（$F$-moves）で結びついている:
+
 $$
   \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
   =\sum_{j_{f}}  \ket*{j_a (j_bj_c)j_{f};j_d,m_d}
   \braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}
 $${#eq-recoupling}
-この係数は，$\braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$は，$m_d$に依存しない．
-これは，式(@eq-recoupling)の両辺に$J_{\pm}$を作用させることで確かめられる．
+
+この係数は，$\braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$ は，$m_d$ に依存しない．
+これは，式 (@eq-recoupling) の両辺に$J_{\pm}$ を作用させることで確かめられる．
 \begin{question}
-  $\braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$が$m_d$によらないことを確かめよ．
+  $\braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$ が $m_d$ によらないことを確かめよ．
 \end{question}
-本稿では，$[F^{abc}_d]_{ef}\coloneqq \braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$とし$F$-symbolと呼ぶことにする:
+本稿では，$[F^{abc}_d]_{ef}\coloneqq \braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$ とし $F$-symbolと呼ぶことにする:
 $$
   \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
   =\sum_{j_f}[F^{abc}_d]_{ef}\ket*{j_a (j_bj_c)j_{f};j_d,m_d}.
 $$
+
 Clebsch-Gordan係数を用いて$F$-symbolを表すと
+
 $$
   \begin{split}
     &    [F^{abc}_d]_{ef}\\    
@@ -495,7 +519,9 @@ $$
 \braket{j_dm_d}{j_am_a\, j_{f}m_{f}}
     \end{split}
 $${#eq-F-move_def}
+
 となる．Wigner $6$-$j$シンボルを用いると，よりコンパクトに
+
 $$
   [F^{abc}_d]_{ef}=(-1)^{j_a+j_b+j_c+j_d}\sqrt{d_{e}d_{f}}
   \begin{Bmatrix}
@@ -503,6 +529,7 @@ $$
     j_c & j_d & j_f
   \end{Bmatrix}
 $${#eq-fmoves}
+
 と表せることが知られている．
 Wigner $6$-$j$シンボルは，
 $$
@@ -547,7 +574,7 @@ $$
 $$
   [F_e^{fcd}]_{gl} [F_e^{abl}]_{fk} 
 = \sum_{h} [F^{abc}_g]_{fh} [F_{e}^{ahd}]_{gk} [F^{bcd}_{k}]_{hl}.
-$${#eq-pentagon}
+$$ {#eq-pentagon}
 
 \begin{question}
   スピン$1/2$を$3$つを合成する問題を考える．
@@ -637,7 +664,7 @@ $$
 :::
 
 と表す．
-特に，$j_a=j_b$のときは，単にドットを取って
+特に，$j_a=j_b$ のときは，単にドットを取って
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -683,7 +710,7 @@ $$ \begin{aligned}
 
 で表す．
 <!-- % (共役は反転させて矢印をひっくり返す？) -->
-$c=0$の特別な場合は，
+$c=0$ の特別な場合は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -714,7 +741,7 @@ $$ \begin{aligned}
 
 となる．
 
-$3$つの表現の合成に対応するダイアグラムは，
+3つの表現の合成に対応するダイアグラムは，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -731,9 +758,9 @@ $$ \begin{aligned}
  \end{aligned}$$
 :::
 
-である．ここで，内線の表現の$3$成分については和を取るものとする．
+である．ここで，内線の表現の3成分については和を取るものとする．
 
-このルールを用いると，式(@eq-Clebsch-Gordan_orthogonal1)の直交性は，
+このルールを用いると，式 (@eq-Clebsch-Gordan_orthogonal1) の直交性は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -758,7 +785,7 @@ $$
 $$
 :::
 
-と表すことができる．同様に，式(@eq-Clebsch-Gordan_orthogonal2)は，
+と表すことができる．同様に，式 (@eq-Clebsch-Gordan_orthogonal2) は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -817,7 +844,7 @@ $$
 $$
 :::
 
-と表すことができる．また，式(@eq-pentagon)のペンタゴン方程式は，
+と表すことができる．また，式 (@eq-pentagon) のペンタゴン方程式は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -935,7 +962,7 @@ $${#eq-deform2}
 
 ## $\mathrm{SU}(N)$群
 
-$\mathrm{SU}$(2)群でみてきたものを$\mathrm{SU}(N)$群に拡張する．
+$\mathrm{SU}(2)$ 群でみてきたものを $\mathrm{SU}(N)$ 群に拡張する．
 
 
 $$

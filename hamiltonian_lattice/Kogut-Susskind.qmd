@@ -507,6 +507,7 @@ $$
   </span>
   <img src="figs/c.svg" style="height:5.5em;">
 </div>
+$$ $${#eq-partition}
 
 :::
 

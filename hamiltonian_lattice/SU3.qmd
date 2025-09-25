@@ -61,8 +61,7 @@ $$
 $\mathrm{SU}(3)_k$ Yang-Mills theoryのハミルトニアンは，
 $$
   H = \frac{1}{2}\sum_{e\in {\tilde{\mathcal{E}}}} E_i^2(e) - \frac{K}{2} \sum_{f\in \mathcal{F}}\qty( \tr U_{(1,0)} (f)+\tr U_{(0,1)} (f) )
-  \label{eq-Hamiltonian}
-$$
+$$ {#eq-HamiltonianSU3}
 で与えられる．ここで， $\tilde{\mathcal{E}}\subset\mathcal{E}$は電場が作用する辺の集合で$\mathcal{F}$はプラケットの集合である．
 $E^2_i(e)$は電場の$2$乗で$\tr U_{(1,0)} (f)$は基本表現のWilsonループである．$K$は結合定数で，通常の結合定数$g$とは$K=1/g^4$の関係にある．
 演算子の状態への作用は，以下で与えられる.

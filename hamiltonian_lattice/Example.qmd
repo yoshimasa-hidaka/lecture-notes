@@ -48,8 +48,8 @@ $$
 $$ {#eq-weakcouplingH}
 
 となる．
-このハミルトニアンの基底状態は，$\tr U(p)+\tr U^\dag(p)$を最大化する状態である．
-これはストリングネット凝縮状態[@Levin:2004mi]によって記述できることが知られている．
+このハミルトニアンの基底状態は，$\tr U(p)+\tr U^\dag(p)$ を最大化する状態である．
+これはストリングネット凝縮状態 [@Levin:2004mi] によって記述できることが知られている．
 そのために真空線を
 
 ::: {.content-visible when-format=html}
@@ -142,7 +142,7 @@ $$
 $$
 を定義する．
 ここで，$\ket{0}$は強結合極限での真空を表す．
-すべてのプラケットに真空線を作用させた状態$\ket{\Phi}$に作用させたWilsonループはトポロジカルに変形することができる．もし空間にサイクルがないとするとこのWilsonループは自明に潰すことができる．つまり$\tr U_a(p)\ket{\Phi}=d_{a}\ket{\Phi}$を意味する．したがってストリング凝縮状態は，ハミルトニアン(@eq-weakcouplingH) の基底状態となる．
+すべてのプラケットに真空線を作用させた状態 $\ket{\Phi}$ に作用させたWilsonループはトポロジカルに変形することができる．もし空間にサイクルがないとするとこのWilsonループは自明に潰すことができる．つまり$\tr U_a(p)\ket{\Phi}=d_{a}\ket{\Phi}$を意味する．したがってストリング凝縮状態は，ハミルトニアン (@eq-weakcouplingH) の基底状態となる．
 
 
 
@@ -150,7 +150,7 @@ $$
 
 
 ## 1つのプラケット模型
-最後に，1つのプラケットのみを含む場合($\mathcal{P}=\{p\}$)の$\mathrm{SU}(2)_k$ゲージ理論を考える:
+最後に，1つのプラケットのみを含む場合（$\mathcal{P}=\{p\}$）の $\mathrm{SU}(2)_k$ ゲージ理論を考える:
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -169,17 +169,16 @@ $$
 $$
   H = \frac{1}{2}\sum_{e\in{\mathcal{E}}}E^2(e) - K\tr U(p)
 $$
-で与えられる．ここで，$\mathrm{SU}(2)_k$の性質として，$\tr U(p)=\tr U^\dag(p)$を用いた．
+で与えられる．ここで，$\mathrm{SU}(2)_k$ の性質として，$\tr U(p)=\tr U^\dag(p)$ を用いた．
 各頂点は$2$点頂点であるため，Gaussの拘束条件により隣接するスピンの量子数は等しくなる．
-したがって物理状態の基底は，単一の表現(スピン)$j$を用いて$\ket*{j}$で表される．この状態は，$j=0$の状態$\ket{0}$と$\tr U_j$を用いて，
-$\ket{j}=\tr U_j\ket{0}$と表される．
-基底$\ket*{j}$への電場項の作用は，
+したがって物理状態の基底は，単一の表現(スピン) $j$ を用いて $\ket*{j}$ で表される．この状態は，$j=0$ の状態 $\ket{0}$ と $\tr U_j$ を用いて，$\ket{j}=\tr U_j\ket{0}$ と表される．
+基底 $\ket*{j}$ への電場項の作用は，
 $$
   \frac{1}{2}\sum_{e\in {\mathcal{E}}}E^2(e)\ket*{j}
   =\frac{1}{2}\sum_{e\in {\mathcal{E}}}C_2(j)\ket*{j}
   =2C_2(j)\ket*{j}
 $$
-となる．一方，プラケット項の状態$\ket*{j}$への作用は，式(@eq-fusion_Wilson_loop) から，
+となる．一方，プラケット項の状態 $\ket*{j}$ への作用は，式(@eq-fusion_Wilson_loop) から，
 $$
   \tr U(p)\ket*{j} = \ket*{j+\frac{1}{2}}
   +\ket*{j-\frac{1}{2}}
@@ -188,19 +187,18 @@ $$
 $$
   \ket{\psi}=\sum_j \tilde{\psi}(j)\ket{j}
 $$
-と展開すると，時間に依存しないSchrödinger方程式$H\ket{\psi} = \varepsilon\ket{\psi}$は，
+と展開すると，時間に依存しないSchrödinger方程式 $H\ket{\psi} = \varepsilon\ket{\psi}$ は，
 $$
   (\varepsilon-2C_2(j))\tilde{\psi}(j) +K \tilde{\psi}(j+{1}/{2})
   +K \tilde{\psi}(j-{1}/{2})=0
-  \label{eq-single_plaquette_Sch}
-$$
+$$ {#eq-single_plaquette_Sch}
 に帰着する．
-ここで，$\varepsilon$はエネルギーである．
-$j$は$0,1/2,1,\cdots, k/2$を走るので，$(k+1)\times(k+1)$行列の対角化問題に帰着する．
+ここで，$\varepsilon$ はエネルギーである．
+$j$ は $0,1/2,1,\cdots, k/2$ を走るので，$(k+1)\times(k+1)$ 行列の対角化問題に帰着する．
 比較的小さい$k$については，数値的に容易に解くことができる．
 
 
-極限$k\to\infty$の時，すなわち通常の$\mathrm{SU}(2)$の場合には特殊関数を用いて解くことも可能である．
+極限 $k\to\infty$ の時，すなわち通常の $\mathrm{SU}(2)$ の場合には特殊関数を用いて解くことも可能である．
 そのために，電気的基底から磁気的基底に移ろう．
 これは，基底の変換として
 $$
@@ -209,7 +207,7 @@ $$
   \ket*{j}
 $$
 で与えられる．
-ここで，$\chi_j(\omega)= \sin(\omega(2j+1)/{2})/\sin({\omega}/{2})$は$\mathrm{SU}(2)$の指標である．
+ここで，$\chi_j(\omega)= \sin(\omega(2j+1)/{2})/\sin({\omega}/{2})$ は $\mathrm{SU}(2)$ の指標である．
 この基底は$\tr U(p)$の固有状態であり，
 $$
     \tr U(p) \ket*{\omega}
@@ -218,8 +216,8 @@ $$
   =2\cos\frac{\omega}{2}\ket{\omega}
 $$
 が成り立つ．
-ここで，$\chi_{j+1/2}(\omega)+\chi_{j-1/2}(\omega)=2\cos(\omega/2)\chi_j(\omega)$を用いた．
-一方，この基底では，$E^2$は非対角であり，具体的には，指標の性質
+ここで，$\chi_{j+1/2}(\omega)+\chi_{j-1/2}(\omega)=2\cos(\omega/2)\chi_j(\omega)$ を用いた．
+一方，この基底では，$E^2$ は非対角であり，具体的には，指標の性質
 $$
 \frac{d^2}{d\omega^2}\chi_j(\omega)+
 \cot\frac{\omega}{2}\frac{d}{d\omega}\chi_j(\omega)=-j(j+1)\chi_j(\omega)
@@ -236,7 +234,7 @@ $$
 $$
   \ket{\psi}=\int_0^{4\pi} \frac{d\omega}{2\pi}\sin^2\frac{\omega}{2}  \psi(\omega)\ket{\omega}
 $$
-と展開すれば，$\varepsilon\ket{\psi}=H\ket{\psi}$は，
+と展開すれば，$\varepsilon\ket{\psi}=H\ket{\psi}$ は，
 微分方程式
 $$
 \qty(
@@ -247,7 +245,7 @@ $$
 )\psi(\omega)=0
 $$
 に帰着する．
-ここで，この波動関数は指標$\chi_j(\omega)$の性質から，$\psi(\omega+4\pi)=\psi(\omega)$の周期境界条件を満たす偶関数である．
+ここで，この波動関数は指標 $\chi_j(\omega)$ の性質から，$\psi(\omega+4\pi)=\psi(\omega)$ の周期境界条件を満たす偶関数である．
 さらに変数変換
 \begin{align}
   \omega&=4x ,\quad
@@ -260,7 +258,7 @@ $$
   \frac{d^2}{d x^2}y +(a-2q\cos(2x))y=0
 $$
 に帰着する．
-この微分方程式の解は，Mathieu関数で表され，境界条件$y(x)=y(x+\pi)$によってエネルギー固有値が離散化される．
+この微分方程式の解は，Mathieu関数で表され，境界条件 $y(x)=y(x+\pi)$ によってエネルギー固有値が離散化される．
 
 <!-- 天下りであるが，
 $$

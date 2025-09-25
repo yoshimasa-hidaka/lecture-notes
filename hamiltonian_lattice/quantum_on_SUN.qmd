@@ -42,34 +42,48 @@ $$\bra{x}\ket{x'}=\delta_{2\pi}(x-x')$$
  $$1=\int_0^{2\pi} dx\ket{x}\bra{x}$$
 が成立する．
 ここで，$\delta_{2\pi}(x-x')$は
+
 $$
 f(x) = \int_{0}^{2\pi} \dd{x'}  \delta_{2\pi}(x-x') f(x')
 $$
+
 を満たす$2\pi$ -周期デルタ関数である．ここで，$f(x)$ は $\mathrm{U}(1)$ 上の関数である．
-一方，周期境界条件から$p$の固有値は整数 $n\in\mathbb{Z}$ に量子化される．その固有状態 $\ket{n}$ は，直交関係 
-$$\bra{n}\ket{n'}=\delta_{n,n'}$$
- および完全性 
- $$1=\sum_{n}\ket{n}\bra{n}$$
-  を満たす．
+一方，周期境界条件から$p$の固有値は整数 $n\in\mathbb{Z}$ に量子化される．その固有状態 $\ket{n}$ は，直交関係
+
+$$
+  \bra{n}\ket{n'}=\delta_{n,n'}
+$$
+
+および完全性
+$$
+  1=\sum_{n}\ket{n}\bra{n}
+$$
+
+を満たす．
 
 ### Fourier展開
 
-任意の状態$\ket{\psi}$は，座標表示と運動量表示を用いて
+任意の状態 $\ket{\psi}$ は，座標表示と運動量表示を用いて
+
 $$
   \begin{split}
     \ket{\psi} = \int_0^{2\pi} dx \ket{x}\psi(x)=\sum_{n\in\mathbb{Z}}\ket{n}\psi^n
   \end{split}
 $$
-と展開できる．ここで，$\psi(x)=\bra{x}\ket{\psi}$, $\psi^n=\bra{n}\ket{\psi}$である．
+
+と展開できる．ここで，$\psi(x)=\bra{x}\ket{\psi}$, $\psi^n=\bra{n}\ket{\psi}$ である．
 両者は，Fourier展開を通じて
+
 $$
   \psi(x) = \sum_{n\in\mathbb{Z}}\bra{x}\ket{n}\psi^n =\sum_{n\in\mathbb{Z}}\frac{e^{\ri n x}}{\sqrt{2\pi}} \psi^n
 $$
+
 と結びついている．基底関数 $\bra{x}\ket{n}=e^{\ri n x}/\sqrt{2\pi}$ は，$\mathrm{U}(1)$ の1次元既約表現に対応している．
 
 ## $\mathrm{SU}(N)$上の量子力学 {#sec-SUN_quantum}
+
 次に $\mathrm{SU}(N)$ への拡張を考える．$\mathrm{SU}(N)$ の既約表現 $a$ の表現行列の行列要素を $[D_a]^{m_a}_{n_a}$ とする．これに対応する演算子を $[U_a]^{m_a}_{n_a}$ と表す．
-$\mathrm{SU}(N)$ を多様体とみなして変数を多様体上の座標にとっても良いが，ここでは，$\mathrm{SU}(N)$ の表現行列を基本変数とする立場をとる．これは，$\mathrm{U}(1)$の場合に座標 $x$ を直接用いる代わりに，位相因子 $U_n$ を用いたことに対応する．
+$\mathrm{SU}(N)$ を多様体とみなして変数を多様体上の座標にとっても良いが，ここでは，$\mathrm{SU}(N)$ の表現行列を基本変数とする立場をとる．これは，$\mathrm{U}(1)$ の場合に座標 $x$ を直接用いる代わりに，位相因子 $U_n$ を用いたことに対応する．
 
 ### 右作用と左作用
 $\mathrm{U}(1)$ の場合の交換関係 (@eq-commutation_relation) を $\mathrm{SU}(N)$ に拡張しよう．
@@ -111,18 +125,20 @@ $$
 :::
 
 右作用と同様に，
-\begin{align}
+$$
   [\EL_{i},U_a] &=T_{ai}U_{a} , \quad
-    [\EL_{i},\EL_{j}] =-\ri f^k_{~ij}\EL_{k}   \label{eq-[E_t,E_t]}
-\end{align}
-を満たす左から作用する演算子$\EL_{i}$を導入することができる．しかし，$\EL_{i}$と$\ER_{j}$は独立ではなく，随伴行列$[U_{\mathrm{adj}}]_i^j$を通じて関係している:
+    [\EL_{i},\EL_{j}] =-\ri f^k_{~ij}\EL_{k}
+$${#{eq-E_tE_t}}
+
+を満たす左から作用する演算子 $\EL_{i}$ を導入することができる．しかし，$\EL_{i}$ と $\ER_{j}$ は独立ではなく，随伴行列 $[U_{\mathrm{adj}}]_i^j$ を通じて関係している:
+
 $$
 [U_{\mathrm{adj}}]_i^j \EL_j = \ER_i.
 $$
 ここで，$[U_{\mathrm{adj}}]_i^j$ は，随伴表現の演算子で，基本表現の演算子$U$を用いて，
 $$
     U T_i U^\dag =T_j[U_{\mathrm{adj}}]_i^j 
-$${#eq-adjoint}
+$$ {#eq-adjoint}
 と表される．ここで，$T_i$は基本表現の生成子である．
 
 <!-- ::: {.callout-note collapse="true"}
@@ -145,7 +161,7 @@ $$
   \sum_k[U_{\mathrm{adj}}]^i_k [U_{\mathrm{adj}}]^j_k =\delta^{ij}
 $$
 より，$\delta^{ij}\ER_{i}\ER_{j}=\delta^{ij} \EL_{i}\EL_{j}\eqqcolon E^2$
-が成り立ち，$\ER_i$と $\EL_i$ のいずれから定義しても同じ演算子$E^2$が得られる．
+が成り立ち，$\ER_i$と $\EL_i$ のいずれから定義しても同じ演算子 $E^2$ が得られる．
 
 <!-- \begin{question}
   $[U_{\mathrm{adj}}]_i^j \EL_j = \ER_i$ が，式(@eq-E_sU), (@eq-E_tU) と無矛盾であることを示せ．
@@ -154,7 +170,8 @@ $$
 
 
 
-$[U_{a}]^{m}_{n}$の積は，$\mathrm{SU}(N)$のClebsch--Gordan係数を用いて
+$[U_{a}]^{m}_{n}$の積は，$\mathrm{SU}(N)$ のClebsch--Gordan係数を用いて
+
 $$
   [U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b}
   =\sum_c\sum_{m_c,n_c,\mu} 
@@ -162,10 +179,11 @@ $$
   \braket{c,n_c;\mu}{a,n_a;\, b,n_b}
   [U_{c}]^{m_c}_{n_c}
 $${#eq-fusion_U}
+
 と展開できる．
-ここで，$\mu\in\{1,2,\cdots, N_{ab}^c\}$は，多重度に対するラベルで$N_{ab}^c$は既約表現が直積分解の中に何回現れるかを表す多重度である．
-例えば，$\mathrm{SU}(3)$の場合に，随伴表現の合成は$\mathbf{8} \otimes \mathbf{8}
-= \mathbf{27} \oplus \mathbf{10} \oplus \overline{\mathbf{10}}\oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}$と分解され，$\mathbf{8}$が$2$回現れる．従って$N_{\mathbf{8}\mathbf{8}}^{\mathbf{8}}=2$となる．$\mathrm{SU}(2)$の場合は，既約表現の合成で同じ表現が$2$回現れることはなく，多重度$N_{ab}^c$は，$1$か$0$となり，$\mu$の添字は必要ない．
+ここで，$\mu\in\{1,2,\cdots, N_{ab}^c\}$ は，多重度に対するラベルで $N_{ab}^c$ は既約表現が直積分解の中に何回現れるかを表す多重度である．
+例えば，$\mathrm{SU}(3)$ の場合に，随伴表現の合成は $\mathbf{8} \otimes \mathbf{8}
+= \mathbf{27} \oplus \mathbf{10} \oplus \overline{\mathbf{10}}\oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}$ と分解され，$\mathbf{8}$ が2回現れる．従って $N_{\mathbf{8}\mathbf{8}}^{\mathbf{8}}=2$ となる．$\mathrm{SU}(2)$ の場合は，既約表現の合成で同じ表現が2回現れることはなく，多重度$N_{ab}^c$は，$1$ か $0$ となり，$\mu$ の添字は必要ない．
 
 式 (@eq-fusion_U) について $m_a=n_a$, $m_b=n_b$ として和を取ると，
 Clebsch--Gordan係数の直交性を用いて
@@ -189,12 +207,12 @@ $$
     \bra{g}\ket{g'} = \delta(g^{-1}g'),\quad 1=\int dg \ket{g}\bra{g}
   \end{split}
 $$
-で与えられる．$dg$は$\int dg =1$に規格化されたHaar測度で，$\delta(g^{-1}g')$は，$\int dg' \delta(g^{-1}g')\psi(g')=\psi(g)$を満たすデルタ関数である．
+で与えられる．$dg$は$\int dg =1$に規格化されたHaar測度で，$\delta(g^{-1}g')$ は，$\int dg' \delta(g^{-1}g')\psi(g')=\psi(g)$ を満たすデルタ関数である．
 
 
 ### 電気的基底
-$E^2 = \delta^{ij}{\ER}_i{\ER}_j = \delta^{ij}{\EL}_i{\EL}_j$を対角化する基底を導入し，これを 電気的基底と呼ぶ．
-これは，$\ER_i$, $\EL_i$の作用に対して，
+$E^2 = \delta^{ij}{\ER}_i{\ER}_j = \delta^{ij}{\EL}_i{\EL}_j$ を対角化する基底を導入し，これを 電気的基底と呼ぶ．
+これは，$\ER_i$, $\EL_i$ の作用に対して，
 $$
     \ER_i\ket{a,m_a,n_a}=\sum_{n'_a}[T_i]^{n'_a}_{n_a}\ket{a,m_a,{n'}_a},\quad
     \EL_i\ket{a,m_a,n_a}=\sum_{m'_a}[T_i]^{m_a}_{m'_a}\ket{a,{m'}_a,{n}_a}
@@ -202,8 +220,8 @@ $$
 となるように取れば良い．実際，
 $\delta^{ij}[T_{ai}T_{aj}]^{m_a}_{n_a}=C_2(a)\delta^{m_a}_{n_a}$より，
 $E^2\ket{a,m_a,n_a}=C_2(a)\ket{a,m_a,n_a}$となっていることがわかる．
-ここで，$C_2(a)$は，表現$a$に対する2次のCasimir不変量である．例えば，$\mathrm{SU}(2)$の場合は，スピン$j_a$を持つ表現に対して，$C_2(a)=j_a(j_a+1)$となる．
-この状態は，$[U_{a}]^{m_a}_{n_a}$を用いて，
+ここで，$C_2(a)$ は，表現$a$に対する2次のCasimir不変量である．例えば，$\mathrm{SU}(2)$ の場合は，スピン $j_a$ を持つ表現に対して，$C_2(a)=j_a(j_a+1)$ となる．
+この状態は，$[U_{a}]^{m_a}_{n_a}$ を用いて，
 $$
   [U_{a}]^{m_a}_{n_a}\ket*{0,0,0}=
   \frac{1}{\sqrt{d_a}}\ket*{a,m_a,n_a}
@@ -218,17 +236,17 @@ $$
 
 ### Fourier(Peter--Weyl) 展開
 
-$\mathrm{U}(1)$の場合と同様に状態は，
+$\mathrm{U}(1)$ の場合と同様に状態は，
 $$
 \ket{\psi} = \int dg \psi(g)\ket{g} =  \sum_a\sum_{m_a,n_a} [\psi^a]_{m_a}^{n_a}\ket{a,m_a,n_a}
 $$
-の形で書ける．ここで，$\psi(g) = \bra{g}\ket{\psi}$および，$[\psi^a]_{m_a}^{n_a}=\bra{a,m_a,n_a}\ket{\psi}$である．
-$\psi(g)$と$[\psi^a]_{m_a}^{n_a}$は，Peter--Weyl 定理により
+の形で書ける．ここで，$\psi(g) = \bra{g}\ket{\psi}$および，$[\psi^a]_{m_a}^{n_a}=\bra{a,m_a,n_a}\ket{\psi}$ である．
+$\psi(g)$ と $[\psi^a]_{m_a}^{n_a}$ は，Peter--Weyl 定理により
 $$
   \psi(g) = \sum_{a}\sum_{m_a,n_a}\bra{g}\ket{a,m_a,n_a}[\psi^a]_{m_a}^{n_a} =\sum_{a}\sum_{m_a,n_a}\sqrt{d_a}[D_a]^{m_a}_{n_a}(g) [\psi^a]_{m_a}^{n_a}
 $$
 と関係している．
-ここで，$\sqrt{d_a}[D_a]^{m_a}_{n_a}(g)=\bra{g}\ket{a,m_a,n_a}$である．
+ここで，$\sqrt{d_a}[D_a]^{m_a}_{n_a}(g)=\bra{g}\ket{a,m_a,n_a}$ である．
 
 
 
