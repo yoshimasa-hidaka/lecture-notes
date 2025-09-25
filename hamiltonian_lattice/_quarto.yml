@@ -60,9 +60,11 @@ format:
   html:
     theme: flatly
     css: style.css
-    toc: true
+    toc: false
+    sidebar: false
+    toc-location: right
     number-sections: true
-    number-depth: 2
+    number-depth: 3
     code-copy: true
     code-overflow: wrap
     highlight-style: github

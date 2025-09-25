@@ -7,7 +7,7 @@ fusionの重複度は，
 $$
   N_{ab}^{c} =(k_0^{\max}-k_0^{\min}+1)\delta_{ab}^c
 $$
-で与えられる~\cite{Begin:1992rt}.
+で与えられる [@Begin:1992rt].
 ここで，
 $$
   k_0^{\min}=\max(p_a+q_a,p_b+q_b,p_c+q_c,\mathcal{A}-\min(p_a,p_b,q_c),\mathcal{B}-\min(q_a,q_b,p_c)),
@@ -47,15 +47,15 @@ $2$次のCasimir不変量 $C_2(a)$は，
 $$
   C_2(a)  = \frac{1}{2}\qty(\left[\frac{p_a}{3}-\frac{q_a}{3}\right]^2+\left[\frac{2p_a}{3}+\frac{q_a}{3}+1\right]^2+\left[\frac{p_a}{3}+\frac{2q_a}{3}+1\right]^2-2)
 $${#eq-C2_su3}
-で与えられる~\cite{Bonatsos:1999xj}\footnote{ここでの$C_2(a)$の規格化因子は\cite{Bonatsos:1999xj}の$1/2$を採用している．}．
+で与えられる [@Bonatsos:1999xj] \footnote{ここでの$C_2(a)$の規格化因子は[@Bonatsos:1999xj] の $1/2$ を採用している．}．
 
 同様に，量子次元は，
 $$
   d_{a} =\frac{1}{[2]}[p_a+1][q_a+1][p_a+q_a+2]
   \label{eq-dpq}
 $$
-となる~\cite{Coquereaux:2005hu}．
-もっとも重要なのは$F$-symbolsだが，残念ながらコンパクトな表式は知られていない．小さい$k$については，\cite{Ardonne2010ClebschGordanA6}で議論されている．
+となる [@Coquereaux:2005hu]．
+もっとも重要なのは$F$-symbolsだが，残念ながらコンパクトな表式は知られていない．小さい$k$については，[@Ardonne2010ClebschGordanA6] で議論されている．
 
 
 $\mathrm{SU}(3)_k$ Yang-Mills theoryのハミルトニアンは，
