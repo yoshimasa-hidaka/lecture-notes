@@ -23,7 +23,6 @@ book:
     - index.qmd
     - Lie.qmd
     - quantum_on_SUN.qmd
-    #- Lie.qmd
     #- Gaugetheory.qmd
     - Kogut-Susskind.qmd
     - stringnet.qmd
@@ -60,8 +59,8 @@ format:
   html:
     theme: flatly
     css: style.css
-    toc: true
-    sidebar: true
+    toc: false
+    sidebar: false
     toc-location: right
     number-sections: true
     number-depth: 3
