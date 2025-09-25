@@ -66,7 +66,7 @@ $$
 である．
 ここで，
 $[n]_{q_i}!\coloneqq[1]_{q_i}[2]_{q_i}\cdots [n]_{q_i}$ を導入した.
-$k\to\infty$，つまり$q=1$の場合は，式 (@eq-q_algebra) は，通常のLie代数に戻る．以下，混乱の恐れがない場合は，添字の $q_i$ は省略する．
+$k\to\infty$，つまり$q=1$の場合は，式(@eq-q_algebra) は，通常のLie代数に戻る．以下，混乱の恐れがない場合は，添字の $q_i$ は省略する．
 
 
 表現の分解を対応付けるcoproduct $\Delta$ を
@@ -85,7 +85,7 @@ $${#eq-coassociativity}
 を満たす．
 
 \begin{question}
-  式 (@eq-coassociativity)を$L_i^\pm$の場合に確かめよ．
+  式(@eq-coassociativity)を$L_i^\pm$の場合に確かめよ．
   つまり，$( \Delta\otimes1)\Delta(L_i^\pm)=(1\otimes \Delta)\Delta(L_i^\pm)$を示せ．
 \end{question}
 <!-- 
@@ -185,7 +185,7 @@ $$
 $$
 となる．
 ここで，状態の内積は，$j=0,1/2,1,\cdots k/2$ 及び，$m=-j,j+1,\cdots, j-1,j$ の値を取る．
-また, $J_0 J_\pm\ket{j,m}= (J_\pm J_0+[J_0,J_\pm])\ket{j,m}=(m\pm 1)J_\pm \ket{j,m}$ より，$J_\pm\ket{j,m} \propto  \ket{j,m\pm 1}$ がわかり，$J_\pm\ket{j,m}=N_\pm(j,m)\ket{j,m\pm1}$ として，式 (@eq-C2) より，
+また, $J_0 J_\pm\ket{j,m}= (J_\pm J_0+[J_0,J_\pm])\ket{j,m}=(m\pm 1)J_\pm \ket{j,m}$ より，$J_\pm\ket{j,m} \propto  \ket{j,m\pm 1}$ がわかり，$J_\pm\ket{j,m}=N_\pm(j,m)\ket{j,m\pm1}$ として，式(@eq-C2) より，
 $$
   |N_\pm(j,m)|^2 =  \bra{j,m}J_\mp J_\pm\ket{j,m}=
   \bra{j,m}C_2-[J_0][J_0\pm1]\ket{j,m}=[j][j+1]-[m][m\pm 1]

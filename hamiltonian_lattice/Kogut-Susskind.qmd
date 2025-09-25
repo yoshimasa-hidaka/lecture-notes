@@ -1,9 +1,9 @@
 # ハミルトニアン形式  {#sec-ks}
 
-## Kogut-Susskind形式 {#sec-hamiltonian}
+## Kogut--Susskind形式 {#sec-hamiltonian}
 
 ::: {.content-visible when-format="html"}
-::: {#fig-Honeycomb_Lattice fig-cap="左：ハニカム格子．右：プラケット．" fig-align="center"}
+::: {#fig-Honeycomb_Lattice fig-cap="左：ハニカム格子．右：プラケット．" fig-align="center"} 
 ::: {layout-ncol=2}
 ![](figs/Honeycomb.svg){fig-subcap="ハニカム格子" width=60%}
 ![](figs/plaquette.svg){fig-subcap="プラケット"  width=30%}
@@ -29,14 +29,14 @@
 
 格子上のゲージ理論のハミルトニアン形式はKogutとSusskindによって1970年代に定式化された [@Kogut:1974ag]．
 本節では格子上の$\mathrm{SU}(N)$ Yang--Mills理論のハミルトニアン形式について考える．
-任意の格子について定式化できるが，ここではゲージ不変な物理状態の構成が容易なハニカム格子を扱う(図 @fig-Honeycomb_Lattice 左)．
+任意の格子について定式化できるが，ここではゲージ不変な物理状態の構成が容易なハニカム格子を扱う(図@fig-Honeycomb_Lattice 左)．
 頂点の集合を$\mathcal{V}$，辺の集合を$\mathcal{E}$とする．
 各辺は，向きを持ち，始点と終点が定められている．
 辺$e\in\mathcal{E}$に対して，その始点および終点を
 それぞれ$\mathrm{s}(e)\in\mathcal{V}$および$\mathrm{t}(e)\in\mathcal{V}$と書く．また，$e$の始点と終点を入れ替えた辺は$\bar{e}$と表す．
-各六角形をプラケット(図 @fig-Honeycomb_Lattice 右)と呼び，その集合を$\mathcal{P}$とする．
+各六角形をプラケット(図@fig-Honeycomb_Lattice 右)と呼び，その集合を$\mathcal{P}$とする．
 各プラケットは面であり，その境界をなす有向閉曲線（経路）を定める．
-例えば，図 @fig-Honeycomb_Lattice 右では，始点を$e_1$として，
+例えば，図@fig-Honeycomb_Lattice 右では，始点を$e_1$として，
 経路は$e_1 \to e_2 \to e_3 \to \bar{e}_4 \to \bar{e}_5 \to \bar{e}_6$である．
 
 以下では，物質場を含まないゲージ理論を考える．
@@ -116,8 +116,8 @@ $$ {#eq-gauss}
 ::: {.content-visible when-format="html"}
 ::: {#fig-vertex fig-cap="左：頂点とそれにつながる辺．右：物理状態の基底" fig-align="center"}
 ::: {layout-ncol=2}
-![](figs/v123.svg){fig-subcap="頂点" width=25%}
-![](figs/PhysState.svg){fig-subcap="物理状態の基底"  width=50%}
+![](figs/v123.svg){fig-subcap="頂点" width=23%}
+![](figs/PhysState.svg){fig-subcap="物理状態の基底"  width=45%}
 :::
 :::
 :::
@@ -143,7 +143,7 @@ $$ {#eq-gauss}
 $G_i(v)$はLie代数の生成子であり，式(@eq-gauss) は，頂点において，状態が表現の$1$重項になることを要請している．
 ここでは，ハニカム格子を考えているので$3$点頂点を考えれば十分である．頂点を$v$とし，それが
 辺$e_1$, $e_2$の始点，$e_3$の終点になっている場合を考える．
-すなわち，$\mathrm{s}(e_1)=\mathrm{s}(e_2)=\mathrm{t}(e_3)=v$である(図 @fig-vertex)．
+すなわち，$\mathrm{s}(e_1)=\mathrm{s}(e_2)=\mathrm{t}(e_3)=v$である(図@fig-vertex)．
 このとき，状態$\ket*{a,m_a,n_a}_1\ket*{b,m_b,n_b}_2\ket*{c,m_c,n_c}_3$に対して，Clebsch--Gordan係数$\braket{a,n_a;\, b,n_b}{c,m_c;\mu}$を用いると
 $$
   \ket*{\varphi}=\sum_{n_a,n_b,m_c}\frac{1}{\sqrt{d_c}}

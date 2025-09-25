@@ -37,3 +37,17 @@ pre code {
 .sidebar .sidebar-item {
   margin-bottom: 0.2rem;
 }
+
+.quarto-layout-panel .quarto-layout-row {
+  justify-content: center;
+  align-items: start;
+}
+.figure-caption {
+  text-align: center;     /* 全体キャプション中央 */
+}
+.quarto-layout-panel .quarto-figure .figure-caption {
+  text-align: center; 
+  margin-top: 0.3em;
+  min-height: 2.5em;      /* サブキャプションの高さを統一 */
+}
+

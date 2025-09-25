@@ -81,7 +81,7 @@ $$
     [\ER_{i},U_R] &=U_R T_i,\\
     [\EL_{i},U_L] &=T_{i}U_L
   \end{align}
-  に帰着する．式 (@eq-prepotential1)，式 (@eq-prepotential2) が，上記の交換関係を満たす示せ．
+  に帰着する．式(@eq-prepotential1)，式(@eq-prepotential2) が，上記の交換関係を満たす示せ．
 \end{question}
 
 $$

@@ -192,7 +192,7 @@ $\chi^\dag_n U^n_m\chi^m$ はホッピング項であり，始点にあるフェ
 ドット線は，自明なWilson線を表す．フェルミオンがない状態は，ドットの端点に何も書かないルールとする．また，ドット線はしばしば省略する．
 これらの状態に $\chi^\dag_n U^n_m\chi^m$ を作用させると，
 始点にあるフェルミオンが終点に移動する．例えば，
-式 (@eq-states_fermion)の左の状態に作用させると，
+式(@eq-states_fermion)の左の状態に作用させると，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -558,7 +558,7 @@ $$
 と記述される．ここで $\chi$ は2成分フェルミオン場，$t$ はホッピングパラメータ，$m$ は質量，$g^2$ は結合定数である．
 
 ハミルトニアンの状態への作用は，電場については，
-式 (@eq-action_electric_field)で，フェルミオンのホッピング項については，式(@eq-action_hopping1)-(@eq-action_hopping8)で与えられる．質量項の状態への作用は，対角であるため簡単に評価できる．
+式(@eq-action_electric_field)で，フェルミオンのホッピング項については，式(@eq-action_hopping1)-(@eq-action_hopping8)で与えられる．質量項の状態への作用は，対角であるため簡単に評価できる．
 
 <!-- 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

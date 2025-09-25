@@ -107,7 +107,7 @@ Wilson線のネットワークは，ジャンクションを持つが，一般�
 $\mathrm{SU}(2)_k$ の場合は，$N_{ab}^c\in\{0,1\}$ なので，このラベルは必要がない．
 
 トポロジカルな変形ルールを以下にまとめる．
-式 (@eq-merge) や式 (@eq-loop) は，
+式(@eq-merge) や式(@eq-loop) は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -297,7 +297,7 @@ $$ $${#eq-link}
 
 が成り立つ．
 
-式 (@eq-vacuum_line) と同様に真空線を
+式(@eq-vacuum_line) と同様に真空線を
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -383,7 +383,7 @@ $$ $${#eq-link}
 
 が成り立つ．
 
-式 (@eq-link)を用いると真空線の周りのループは，
+式(@eq-link)を用いると真空線の周りのループは，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">

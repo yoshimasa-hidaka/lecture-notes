@@ -185,7 +185,7 @@ $${#eq-fusion_U}
 例えば，$\mathrm{SU}(3)$ の場合に，随伴表現の合成は $\mathbf{8} \otimes \mathbf{8}
 = \mathbf{27} \oplus \mathbf{10} \oplus \overline{\mathbf{10}}\oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}$ と分解され，$\mathbf{8}$ が2回現れる．従って $N_{\mathbf{8}\mathbf{8}}^{\mathbf{8}}=2$ となる．$\mathrm{SU}(2)$ の場合は，既約表現の合成で同じ表現が2回現れることはなく，多重度$N_{ab}^c$は，$1$ か $0$ となり，$\mu$ の添字は必要ない．
 
-式 (@eq-fusion_U) について $m_a=n_a$, $m_b=n_b$ として和を取ると，
+式(@eq-fusion_U) について $m_a=n_a$, $m_b=n_b$ として和を取ると，
 Clebsch--Gordan係数の直交性を用いて
 $$
   \tr U_a \tr U_b = \sum_{c}N_{ab}^c \tr U_c
@@ -406,7 +406,7 @@ $$
 $$
 が得られ，$C(j_a,m_a,n_a)$は$n_a$に依存しない事がわかる．
 同様に，両辺に$\EL_{\pm}$を作用させると，
-式 (@eq-Etpm)，(@eq-EtpmUa)，$\EL_\pm\ket{0}=0$より， -->
+式(@eq-Etpm)，(@eq-EtpmUa)，$\EL_\pm\ket{0}=0$より， -->
 <!-- % $$
 %   \begin{split}
 %     &\sqrt{j_a(j_a+1)-m_a(m_a\mp 1)} C(j_a,m_a\mp1,n_a) \ket*{j_a,m_a\mp1,n_a}\\
@@ -441,8 +441,8 @@ $${#eq-fusion_U}
   $1=\sum_{m_a,m_b}([U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b})^\dag [U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b}$を
   考え，この右辺を式(@eq-fusion_U}を用いて評価することで，正しく規格化されていることを確かめよ．  
 \end{question}
-式 (@eq-fusion_U)の両辺に$\sqrt{d_b}$をかけ$\ket*{0}$に作用させ，
-式 (@eq-U_action)を用いると表現$a$のリンク変数の状態への作用
+式(@eq-fusion_U)の両辺に$\sqrt{d_b}$をかけ$\ket*{0}$に作用させ，
+式(@eq-U_action)を用いると表現$a$のリンク変数の状態への作用
 $$
   [U_{a}]^{m_a}_{n_a}\ket*{j_b,m_b,n_b} =
   \sum_{j_c,m_c,n_c}\sqrt{\frac{d_b}{d_c}}
@@ -457,12 +457,12 @@ $$
 $${#eq-fusion_Wilson_loop}
 が得られる．
 \begin{question}
-  式 (@eq-fusion_Wilson_loop}を示せ．
+  式(@eq-fusion_Wilson_loop}を示せ．
 \end{question}
 
 
 これまで，$U$についての見てきたが，$U^\dag$についても考察しておこう．
-式 (@eq-E_sU_a)，及び式(@eq-E_tU_a)の両辺の$\dag$を取ることで，
+式(@eq-E_sU_a)，及び式(@eq-E_tU_a)の両辺の$\dag$を取ることで，
 $$
   [\ER_i,U_{{a}}^\dag] =-T_{ai} U^\dag_{a},
 $${#eq-E_sU_adag}
