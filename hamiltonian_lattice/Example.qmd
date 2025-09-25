@@ -9,19 +9,20 @@
 強結合極限$K\to0$では，磁場項を落すことができ，ハミルトニアンは，
 $$
   H = \frac{1}{2}\sum_{e\in {\mathcal{E}}}E^2(e)
-$${#eq-Hamiltonian_strong_coupling}
+$$ {#eq-Hamiltonian_strong_coupling}
 
 となる．
 この場合は，表現のネットワークの基底がハミルトニアンの固有状態となる．
-この状態を$\ket{\bm{a};\bm{\mu}}$
-と書くと，
+この状態を $\ket{\bm{a};\symbf{\mu}}$ と書くと，
+
 $$
-  H\ket{\bm{a};\bm{\mu}}=E(\bm{a})\ket{\bm{a};\bm{\mu}}
+  H \ket{\bm{a};\symbf{\mu}} = E(\bm{a})\ket{\bm{a};\symbf{\mu}}
 $$
-で，エネルギーは$E(\bm{a})=\sum_{e\in {\mathcal{E}}}C_2(a_e)/2$となる．
-二次のCasimir不変量$C_2(a_e)\geq 0$であるから，すべての辺上$C_2(a_e)=0$になるのが基底状態であり，その波動関数は$\ket{0}\coloneqq \ket{\bm{0};\bm{1}}$で表される．
-ここで，$\bm{0}$はすべての辺が自明表現であることを表し，
-$\bm{1}$は各頂点に対応する Clebsch--Gordan 多重度ラベルが自明なものを取っていることを意味する．
+
+で，エネルギーは $E(\bm{a})=\sum_{e\in {\mathcal{E}}}C_2(a_e)/2$ となる．
+二次のCasimir不変量 $C_2(a_e)\geq 0$ であるから，すべての辺上 $C_2(a_e)=0$ になるのが基底状態であり，その波動関数は $\ket{0}\coloneqq \ket{\bm{0};\bm{1}}$ で表される．
+ここで，$\bm{0}$ はすべての辺が自明表現であることを表し，
+$\bm{1}$ は各頂点に対応する Clebsch--Gordan 多重度ラベルが自明なものを取っていることを意味する．
 
 ### $(1+1)$次元系(物質場なし)
 

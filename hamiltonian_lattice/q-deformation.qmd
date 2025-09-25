@@ -72,7 +72,7 @@ $$
 $${#eq-coassociativity}
 を満たす．
 \begin{question}
-  式(@eq-coassociativity)を$L_i^\pm$の場合に確かめよ．
+  式 (@eq-coassociativity)を$L_i^\pm$の場合に確かめよ．
   つまり，$( \Delta\otimes1)\Delta(L_i^\pm)=(1\otimes \Delta)\Delta(L_i^\pm)$を示せ．
 \end{question}
 <!-- 

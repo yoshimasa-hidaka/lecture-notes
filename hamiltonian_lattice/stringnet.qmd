@@ -324,7 +324,7 @@ $$
   S_{ab}= \sqrt{\frac{2}{k+2}}\sin\qty(\frac{(2j_a+1) (2j_b+1)\pi}{k+2})=\frac{1}{\mathcal{D}}[(2j_a+1)(2j_b+1)]
 $$
 である．
-したがって，行列$N_{\frac{1}{2}}$ (式(@eq-N_matrix)を参照)は，固有値$\lambda_a$を
+したがって，行列$N_{\frac{1}{2}}$ (式 (@eq-N_matrix)を参照)は，固有値$\lambda_a$を
 $$
   \lambda_a =  \frac{S_{\frac{  1}{2}a}}{S_{0a}}=2\cos\qty(\frac{(2j_a+1)\pi}{k+2}),\\
 $$

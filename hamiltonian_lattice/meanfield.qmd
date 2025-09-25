@@ -140,7 +140,7 @@ $$
 :::
 
 となる．次にWilsonループが接触するところの評価をしよう．
-式(@eq-partition)を用いて，
+式 (@eq-partition)を用いて，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -223,7 +223,7 @@ $$
 一方，ストリングネット凝縮状態$\psi(a)=d_a/\mathcal{D}$[@Levin:2004mi]では，Wilsonループの期待値は定数となり，非閉じ込め相(トポロジカル相)になる．
 
 次にハミルトニアン(@eq-Hamiltonian)の期待値を考えよう．
-式(@eq-wilsonloop_vev)を用いると，プラケットに作用するWilson loopはの期待値は，
+式 (@eq-wilsonloop_vev)を用いると，プラケットに作用するWilson loopはの期待値は，
 $$\label{eq-exp_trU10}
   \expval{\tr U_{(1,0)}(f)}{\Psi}=
   \sum_{a,b}M_{ab}\psi^*(a)\psi(b)
@@ -287,7 +287,7 @@ $$
 :::
 
 となる．$1$行目，$2$行目で，
-式(@eq-partition)，(@eq-action_electric_field)をそれぞれ用いた．
+式 (@eq-partition)，(@eq-action_electric_field)をそれぞれ用いた．
 次にこれらのプラケットにWilsonループを作用させ，期待値を評価すると，
 
 ::: {.content-visible when-format=html}

@@ -30,7 +30,7 @@ $\mathrm{SU}(2)$の元を
 $$
     g= \cos\frac{\theta}{2}+\ri \symbf{\sigma}\cdot\bm{n}\sin\frac{\theta}{2}
 $$
-と表す(式(@eq-SU2_n))．$\bm{n}\in S^2$で，極座標表示(@eq-n_polar)を用いると，Haar測度は，
+と表す(式 (@eq-SU2_n))．$\bm{n}\in S^2$で，極座標表示(@eq-n_polar)を用いると，Haar測度は，
 $$
     \dd g =
     \frac{\dd{\theta}}{\pi} \sin^2\frac{\theta}{2} \frac{\dd{\Omega}}{4\pi}
@@ -153,7 +153,7 @@ $$
 
 \paragraph{指標の直交性}
 
-式(@eq-su2-D-orthogonality)に示される表現の直交性より，
+式 (@eq-su2-D-orthogonality)に示される表現の直交性より，
 $$
   \int \dd{g} \chi^\dag_a(g) \chi_b(g)=\delta_{ab}
 $$

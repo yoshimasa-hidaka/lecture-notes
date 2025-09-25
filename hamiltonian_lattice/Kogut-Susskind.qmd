@@ -264,7 +264,7 @@ $${#eq-loop}
 が得られる．ここで，$3$つに並んだ$U$は一つに結合している．
 @sec:graphical_Clebsch-Gordan 節のClebsch-Gordan係数のグラフィカルな表現と似ているが，係数が違うことに注意する．
 \begin{question}
-  式(@eq-merge)，(@eq-loop) を確認せよ．
+  式 (@eq-merge)，(@eq-loop) を確認せよ．
 \end{question} -->
 
 <!-- %$[U_{a}]^{m_a}_{~m}(a)[U_{a}]^{m}_{n_b}(b)$を考えよう.
@@ -322,7 +322,7 @@ $${#eq-Fmoves_U}
 $3$行目へは，式 (@eq-deform) を用いて変形した．
 
 \begin{question}
-  式(@eq-Fmoves_U) を確かめよ．
+  式 (@eq-Fmoves_U) を確かめよ．
 \end{question}
 
 この関係式(@eq-Fmoves_U) を用いると
@@ -444,7 +444,7 @@ $${#eq-Wilson_loop_action}
 ## 状態と演算子のグラフィカルな表現
 
 ここで状態と演算子に関して，グラフィカルな表現を導入する．
-式(@eq-U_action)より状態と$U_a$には対応関係があり，$\sqrt{d_a}U_a$に表現$a$のラベルを持った向きのある線を対応させる:
+式 (@eq-U_action)より状態と$U_a$には対応関係があり，$\sqrt{d_a}U_a$に表現$a$のラベルを持った向きのある線を対応させる:
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -680,7 +680,7 @@ $$
 となりGaussの拘束条件を満たしていることがわかる．
 ここで，$1/\sqrt{d_c}$は規格化因子である．
 \begin{question}
-  式(@eq-three_point_state) で定義した，$\ket*{\varphi}$が，
+  式 (@eq-three_point_state) で定義した，$\ket*{\varphi}$が，
   $\braket{\varphi}{\varphi}=1$を満たすことを確かめよ．
 \end{question}
 一般には係数に位相がついていても良い．$\mathrm{SU}(2)$の場合は，位相をうまく選ぶことによって有向グラフの矢印の向きに依存しないように定式化することもできる．
@@ -703,7 +703,8 @@ $3$点頂点に分解することができるので，$3$点頂点のみのネ�
 ただし，係数が変形される．
 量子群の詳細は割愛し(@sec-q_deformation 節参照)，ここでは，$\mathrm{SU}(2)_k$の場合について照会する．
 
-表現のカットオフにより，式(@eq-fusion_delta) の$\delta_{abc}$は修正され
+表現のカットオフにより，式(@eq-fusion_delta) の $\delta_{abc}$ は修正され
+
 $$
   N_{ab}^c=\delta_{abc}\coloneqq \begin{cases}
   1 &
@@ -715,12 +716,14 @@ $$
   \\
   0 & \text{その他}
   \end{cases}
-  $${#eq-fusion_q}
-  となる．表現の次元だった$d_a$は，量子次元(Frobenius-Perron dimension)と呼ばれ，
-  $$
+$$ {#eq-fusion_q}
+  となる．表現の次元だった $d_a$ は，量子次元(Frobenius-Perron dimension)と呼ばれ，
+
+$$
     [N_a]^{c}_{b}=N_{ab}^c
-  $${#eq-N_matrix}
-  を行列$N_{a}$と見た時の最大固有値で与えられる．これは，パラメータ
+$$ {#eq-N_matrix}
+
+を行列$N_{a}$と見た時の最大固有値で与えられる．これは，パラメータ
 $$
   q = \exp\ri \frac{2\pi}{k+2}
 $$
@@ -732,15 +735,15 @@ $${#eq-n}
 $d_a=2j_a+1$に帰着する．
 
 \begin{question}
-  $k=1,2$の場合に具体的に量子次元を計算し，表現$j$の量子次元が$[j+1]$となることを確かめよ．
+  $k=1,2$ の場合に具体的に量子次元を計算し，表現 $j$ の量子次元が $[j+1]$ なることを確かめよ．
 \end{question}
 
 全量子次元は，
 $$
   \mathcal{D} \coloneqq \sqrt{\sum_{a}d_a^2}=\sqrt{\frac{k+2}{2}}\frac{1}{\sin\qty(\frac{\pi}{k+2})}
 $$
-と定義される．$k$が大きい場合に$\mathcal{D}\sim (k+2)^{3/2}$と振る舞う．
-また，$2$次のCasimir不変量は$[j_a][j_a+1]$となる．
+と定義される．$k$ が大きい場合に $\mathcal{D}\sim (k+2)^{3/2}$ と振る舞う．
+また，2次のCasimir不変量は $[j_a][j_a+1]$ となる．
 
 Wilsonループの作用を計算するためには$F$-movesが必要であった．これは，式(@eq-fmoves) と同様に
 $$
@@ -751,14 +754,15 @@ $$
   \end{Bmatrix}
 $$
 と表せる．
-ただし，Wigner $6$-$j$シンボルは，
+ただし，Wigner $6$-$j $シンボルは，
+
 $$
   \begin{split}
     \begin{Bmatrix}
       a & b & c\\
       d & e & f
     \end{Bmatrix}
-    \coloneqq \Delta(a,b,c)\Delta(a,e,f)\Delta(d,b,f)\Delta(d,e,c)\sum_z(-1)^z [z+1]!\\   
+    &\coloneqq \Delta(a,b,c)\Delta(a,e,f)\Delta(d,b,f)\Delta(d,e,c)\sum_z(-1)^z [z+1]!\\   
     \times \frac{([a+b+d+e-z]![a+d+c+f-z]![b+e+c+f-z]!)^{-1}}{[z-a-b-c]![z-a-e-f]![z-d-b-f]![z-d-e-c]!}
   \end{split}
 $$
@@ -766,8 +770,10 @@ $$
 $$
   \Delta(a,b,c)=\delta_{abc}\sqrt{\frac{[a+b-c]![a-b+c]![-a+b+c]!}{[a+b+c+1]!}},
 $$
+
 及び，$[n]!=[n][n-1]\cdots [2][1]$である．
 また，$z$が取りうる範囲は，
+
 $$
   \max(a+b+c,a+e+f,d+b+f,d+e+c)\leq z\leq 
   \min(a+b+d+e,a+d+c+f,b+e+c+f)

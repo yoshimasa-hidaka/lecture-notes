@@ -101,6 +101,7 @@ format:
       text: |
         \usepackage{luatexja}
         \usepackage[ipaex]{luatexja-preset} 
+        \usepackage{amsmath,amssymb,mathtools}
         \usepackage{amsmath,amssymb,mathtools,bm,bbm}
         \usepackage[italicdiff]{physics}
         \usepackage{unicode-math}

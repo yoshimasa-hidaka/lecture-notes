@@ -1,19 +1,21 @@
-# Lie群の復習　{#Lie short-title="SLie群の復習"}
-本稿では，$\mathrm{SU}(N)$(およびその量子群変形)ゲージ理論について取り上げる.
-その解析に必要となる$\mathrm{SU}(N)$群とその表現について簡単に復習する．
+# Lie群の復習　{#Lie short-title="Lie群の復習"}
+
+本稿では，$\mathrm{SU}(N)$ 群（およびその量子群変形）ゲージ理論について取り上げる.
+その解析に必要となる $\mathrm{SU}(N)$ 群とその表現について簡単に復習する．
 Lie群の表現論や群上の量子論を習熟している読者は，本節を読み飛ばし，@sec-ks 節に進んでもらって差し支えない．
 
-## $\mathrm{SU}(2)$群　　{#sec-su2}
-まず，量子力学で習うスピンの対称性である$\mathrm{SU}(2)$群から始める．
-$\mathrm{SU}(2)$群は，複素$2$次元ベクトル空間の内積を保ち，行列式が$1$である変換全体からなる群である．
-$2$つの複素$2$次元ベクトル$w=(w_1,w_2)^T$, $z=(z_1,z_2)^T$に対して，変換$w\mapsto g w$, $z\mapsto gz$のもとで，内積は，
+## $\mathrm{SU}(2)$ 群　　{#sec-su2}
+
+まず，量子力学で習うスピンの対称性である $\mathrm{SU}(2)$ 群から始める．
+$\mathrm{SU}(2)$ 群は，複素2次元ベクトル空間の内積を保ち，行列式が $1$ である変換全体からなる群である．
+2つの複素2次元ベクトル $w=(w_1,w_2)^T$, $z=(z_1,z_2)^T$ に対して，変換 $w\mapsto g w$, $z\mapsto gz$ のもとで，内積は，
 次のように変換される:
 $$
   w^\dag z\mapsto w^\dag g^\dag g z.
 $$
 
-ここで，$g$は，$2\times 2$複素行列で，$\dag$はHermite共役を表す．
-この変換で内積が不変となるためには，$g^\dag g=\mathbf{1}_2$を満たす必要がある．ここで，$\mathbf{1}_2$は$(2\times2)$の単位行列
+ここで，$g$ は，$2\times 2$ 複素行列で，$\dag$ はHermite共役を表す．
+この変換で内積が不変となるためには，$g^\dag g=\mathbf{1}_2$ を満たす必要がある．ここで，$\mathbf{1}_2$ は $2\times2$ の単位行列
 
 $$
     \mathbf{1}_2\coloneqq\begin{pmatrix}
@@ -23,8 +25,8 @@ $$
 $$
 
 である．
-また，行列式が$1$である条件から，$\det g=1$が要求される．
-したがって，$\mathrm{SU}(2)$群は次のように表される:
+また，行列式が$1$である条件から，$\det g=1$ が要求される．
+したがって，$\mathrm{SU}(2)$ 群は次のように表される:
  $$
   \mathrm{SU}(2) \coloneqq
   \left\{ g=\begin{pmatrix}
@@ -34,17 +36,20 @@ $$
   \right\}.
 $$
 
-ここで，$\mathrm{GL}(2,\mathbb{C})$は，2次元複素線形群（すなわち、$2 \times 2$の正則な複素行列全体からなる群）を表す．
-$\alpha$, $\beta$が取りうる空間は条件$|\alpha|^2+|\beta|^2=1$により$3$次元球面$S^3$と同一視される．
+ここで，$\mathrm{GL}(2,\mathbb{C})$ は，2次元複素線形群（すなわち、$2 \times 2$ の正則な複素行列全体からなる群）を表す．
+$\alpha$, $\beta$ が取りうる空間は条件 $|\alpha|^2+|\beta|^2=1$ により3次元球面 $S^3$ と同一視される．
 
 \begin{question}
-$\begin{pmatrix}
+$$
+\begin{pmatrix}
   \alpha & \beta\\
   -\beta^* & \alpha^*
-\end{pmatrix}\in\mathrm{SU}(2)$がユニタリ行列であること，また群の公理(単位元の存在，逆元の存在，結合則)を満たすことを確認せよ．
+\end{pmatrix}\in\mathrm{SU}(2)
+$$
+がユニタリ行列であること，また群の公理(単位元の存在，逆元の存在，結合則)を満たすことを確認せよ．
 \end{question}
 
-パラメータを$\alpha=a_0+\ri a_3$, $\beta=a_1+\ri a_2$と置き，Pauli行列$\sigma_i$
+パラメータを $\alpha=a_0+\ri a_3$, $\beta=a_1+\ri a_2$ と置き，Pauli行列 $\sigma_i$
 
 $$
     \sigma_1 \coloneqq \begin{pmatrix}
@@ -59,100 +64,91 @@ $$
     1 & 0\\
     0 & -1
     \end{pmatrix}
-    \label{eq-Pauli_Matrix}
-$$
+$$ {#eq-Pauli_Matrix}
 
-を導入する．このとき，$\mathrm{SU}(2)$の元$g$は，次のように表される:
+を導入する．このとき，$\mathrm{SU}(2)$ 群の元 $g$ は，次のように表される:
 
 $$
-  \begin{split}
     g = a_0 \mathbf{1}_2 +\ri\symbf{\sigma}\cdot \bm{a}.
-  \end{split}
 $$
 
-ここで，$\bm{a} = (a_1, a_2, a_3)$は実ベクトルであり，パラメータは$a_0^2+a_1^2+a_2^2+a_3^2=1$を満たす．
-さらに$3$次元単位ベクトル${\bm{n}}$を導入すると，$g$は次のようにも表せる:
+ここで，$\bm{a} = (a_1, a_2, a_3) $は実ベクトルであり，パラメータは $a_0^2+a_1^2+a_2^2+a_3^2=1$ を満たす．
+さらに3次元単位ベクトル ${\bm{n}}$ を導入すると，$g$ は次のようにも表せる:
 
 $$
     g= \mathbf{1}_2\cos\frac{\theta}{2}+\ri{\bm{n}}\cdot\symbf{\sigma}\sin\frac{\theta}{2}=\exp(\ri\frac{\theta}{2}{\bm{n}}\cdot\symbf{\sigma}
     )
-$${#eq-SU2_n}
+$$ {#eq-SU2_n}
 
-と表すこともできる．
-ここで，$\theta$は，$0$から$2\pi$を動く実パラメータである．
-$\bm{n}$を極座標表示すると
+ここで，$\theta$ は，$0$ から $2\pi$ を動く実パラメータである．
+$\bm{n}$ を極座標表示すると
 
 $$
   n_1=\cos\varphi\sin\psi,\quad
   n_2=\sin\varphi\sin\psi,\quad
   n_3=\cos\psi.
-$${#eq-n_polar}
+$$ {#eq-n_polar}
 
 と表せる．
-ただし，$0\leq\varphi\leq 2\pi$, $0\leq\psi\leq \pi$を満たす．
+ただし，$0\leq\varphi\leq 2\pi$, $0\leq\psi\leq \pi$ を満たす．
 このとき，次のユニタリ行列
 
 $$
-  \begin{split}
-    \mathcal{U}_{\bm{n}}=\begin{pmatrix}
-      \cos\frac{\psi}{2} &   -e^{-\ri\varphi}\sin\frac{\psi}{2}\\
+    \mathcal{U}_{\bm{n}}=
+    \begin{pmatrix}
+      \cos\frac{\psi}{2} &  -e^{-\ri\varphi}\sin\frac{\psi}{2}\\
       e^{\ri\varphi}\sin\frac{\psi}{2} & \cos\frac{\psi}{2}
     \end{pmatrix}
-  \end{split}
 $$
 
 を用いると，以下の関係が成り立つ:
 
 $$
-  \begin{split}
     {\bm{n}}\cdot \symbf{\sigma} = \mathcal{U}_{\bm{n}}\sigma_3\mathcal{U}_{\bm{n}}^{-1}
-  \end{split}
 $$
 
-したがって，$\mathrm{SU}(2)$の元は，次のように書くことができる:
+したがって，$\mathrm{SU}(2)$ 群の元は，次のように書くことができる:
 
 $$
-  \begin{split}
-    g = \mathcal{U}_{\bm{n}}e^{\ri\frac{\theta}{2}\sigma_3}
-    \mathcal{U}_{\bm{n}}^{-1}.
-  \end{split}
+    g = \mathcal{U}_{\bm{n}}e^{\ri\frac{\theta}{2}\sigma_3}\mathcal{U}_{\bm{n}}^{-1}.
 $$
 
-### $\mathrm{SU}(2)$のLie代数
+### $\mathrm{SU}(2)$ 群のLie代数
 
-式(@eq-SU2_n)において，$\theta_i=\theta n_i$と置き，$T_i=\sigma_i/2$と定義すると，
+式 (@eq-SU2_n)において，$\theta_i=\theta n_i$と置き，$T_i=\sigma_i/2$と定義すると，
 $$
-g= \exp(\ri T_i\theta^i)
+  g= \exp(\ri T_i\theta^i)
 $$
 
 と表せる．
 単位元近傍で展開すると$\theta_i\ll 1$として，
 
 $$
-g= 1+\ri T_i\theta^i + \order{\theta^2}
+  g= 1+\ri T_i\theta^i + \order{\theta^2}
 $$
 となる．
 従って，単位元近傍での無限小変換は，
 
 $$
-\ri T_i\theta^i
+  \ri T_i\theta^i
 $$
 に比例する行列によって特徴づけられる．
 この$T_i$ は次の交換関係を満たす：
 $$
-[T_i,T_j]=\ri f^k_{~ij}T_k.
+  [T_i,T_j]=\ri f^k_{~ij}T_k.
 $$ {#eq-Lie_SU2}
+
 ここで，$f^k_{~ij}$は構造定数であり，完全反対称テンソル(Levi-Civita記号)$\epsilon_{ijk}$を用いて，$f^k_{~ij}=\epsilon_{ijk}$と表される．
 
 このように，群の接空間をなす元の集合を Lie代数 と呼び，
-$\mathrm{SU}(2)$の場合は，$\mathfrak{su}(2)$と書く．
+$\mathrm{SU}(2)$ 群の場合は，$\mathfrak{su}(2)$と書く．
 
 ここで得られた $T_i=\sigma_i/2$ は $2\times 2$ の行列として表されているが，
-物理学ではこれをスピン $1/2$ の状態空間に作用する演算子として解釈する．
+これをスピン $1/2$ の状態空間に作用する演算子として解釈する．
 より一般には，Lie代数 $\mathfrak{su}(2)$ の抽象的な生成子を $J_i$ と書き，
 
 $$
-g= \exp(\ri J_i\theta^i)
+  g= \exp(\ri J_i\theta^i)
 $$
 
 と表す。$J_i$ は行列表示でもよいし，より高次元のヒルベルト空間に作用する演算子として実現してもよい．
@@ -160,43 +156,43 @@ $$
 
 また，式 (@eq-Lie_SU2)と 同様に，抽象的な生成子 $J_i$ も
 $$
-[J_i,J_j]=\ri \epsilon_{ijk} J_k
+  [J_i,J_j]=\ri f^k_{~ij} J_k
 $$ {#eq-commutatorSU2}
 
 を満たす．すなわち，$T_i$ と $J_i$ は同じLie代数 $\mathfrak{su}(2)$ の関係式を共有しており，$T_i$ は $J_i$ の $2\times 2$ 行列表示に対応する．
 
 
 
-### $\mathrm{SU}(2)$群の表現
+### $\mathrm{SU}(2)$ 群の表現
 
-$\mathrm{SU}(2)$群は単連結なコンパクトLie群であるため，その有限次元ユニタリ表現はLie代数$\mathfrak{su}(2)$の有限次元表現と1対1対応する．
+$\mathrm{SU}(2)$ 群は単連結なコンパクトLie群であるため，その有限次元ユニタリ表現はLie代数 $\mathfrak{su}(2)$ の有限次元表現と1対1対応する．
 したがって，群の表現を理解するにはLie代数の表現を調べれば十分である．
 以下では，両者の違いを混乱の恐れがない限り区別せずに用いる．
-また，この節では，$\mathrm{SU}(2)$の表現の導出は行わず基本的な結果のみを紹介する．導出については，標準的な群論の教科書(例えば[@Georgi])を参照．
+また，この節では，$\mathrm{SU}(2)$ の表現の導出は行わず基本的な結果のみを紹介する．導出については，標準的な群論の教科書(例えば[@Georgi])を参照．
 また，[@Martin-Dussaud:2019ypf]も参考になる．
-表現を議論するのに昇降演算子$J_{\pm}\coloneqq J_1\pm\ri J_2$及び，$J_0\coloneqq J_3$を定義しておく便利である．
-これらの交換関係は，式(@eq-commutatorSU2)より，
+表現を議論するのに昇降演算子 $J_{\pm}\coloneqq J_1\pm\ri J_2$ 及び，$J_0\coloneqq J_3$ を定義しておく便利である．
+これらの交換関係は，式 (@eq-commutatorSU2)より，
 
 $$
-\begin{aligned}
-~[J_0,J_{\pm}] &= \pm J_\pm,\\
-[J_+,J_-] & = 2 J_0
-\end{aligned}
+  ~[J_0,J_{\pm}] = \pm J_\pm,\quad
+  [J_+,J_-]  = 2 J_0
 $$
+
 となる．$2$次のCasimir演算子$J^2$は，
 $$
   J^2=\sum_{i=1}^3J_i^2=J_+J_-+J_0^2-J_0=J_-J_++J_0^2+J_0
 $$
-と表すことができる．$J^2$はすべての$J_j$と可換である．
 
-$\mathrm{SU}(2)$の有限次元既約表現は$J^2$と
-$J_3(=J_0)$の同時固有状態$\ket*{j,m}$を用いて表すことができる．
+と表すことができる．$J^2$はすべての$J_i$と可換である．
+
+$\mathrm{SU}(2)$ 群の有限次元既約表現は $J^2$ と
+$J_3(=J_0)$ の同時固有状態 $\ket*{j,m}$ を用いて表すことができる．
 ここで，状態の内積は，
 $$
   \bra{j,m}\ket{j',m'}=\delta_{j,j'}\delta_{m,m'}
 $$
 と規格化されているものとする．
-この状態は，$J_i^2$と$J_3$の固有状態に選んであることから
+この状態は，$J_i^2$ と $J_3$ の固有状態に選んであることから
 $$ \begin{aligned}
   J_i^2\ket*{j,m}  &= j(j+1)\ket*{j,m},\\
   J_3\ket*{j,m}  &= m\ket*{j,m}
@@ -206,32 +202,35 @@ $$ \begin{aligned}
   J_{\pm}\ket*{j,m}  &= \sqrt{j(j+1)-m(m\pm 1)}\ket*{j,m\pm1}
  \end{aligned}$$
 となる\footnote{一般には位相の不定性があるがここでは係数が実で正になるように取ってある．}．
-$j$は，$j\in\frac{1}{2}\mathbb{Z}$の非負の整数，半整数の値を取り，$m$は$m=-j,-j+1,\cdots j-1,j$の値を取る．以下，表現$j$に付随した$(2j+1)\eqqcolon d_j$次元Hilbert空間を$\mathcal{Q}_j$と表す．
+$j$は，$j\in\frac{1}{2}\mathbb{Z}$ の非負の整数，半整数の値を取り，$m$ は $m=-j,-j+1,\cdots j-1,j$ の値を取る．以下，表現 $j$ に付随した$(2j+1)\eqqcolon d_j$ 次元Hilbert空間を $\mathcal{Q}_j$ と表す．
 
-<!-- \subsection{Wignerの\texorpdfstring{$D$}{D}行列} -->
 ### Wignerの$D$行列
 $\mathrm{SU}(2)$の元$g$に対応した演算子$U_g=\exp\ri\theta^i J_i$と書くことにする．Wignerの$D$行列(表現行列)は，$U_g$の状態$\ket{j,m}$への作用を表す:
-$$\label{eq-Wigner_matrix}
-  [D_j]^m_n(g)\coloneqq \bra{j,m}U_g\ket{j,n}.
+
 $$
+  [D_j]^m_n(g)\coloneqq \bra{j,m}U_g\ket{j,n}.
+$$ {#eq-Wigner_matrix}
+
 この行列は，
+
 $$
   \int\dd{g} [D_{j'}^{*}]^{m'}_{n'}(g) [D_j]^m_n(g) = \frac{1}{d_j}\delta_{j,j'}\delta_{m,m'}\delta_{n,n'}
-$${#eq-su2-D-orthogonality}
+$$ {#eq-su2-D-orthogonality}
+
 の直交関係を満たす．ここで$\dd{g}$は$\mathrm{SU}(2)$のHaar測度である(詳細は，@sec-Haar_measure 節参照)．
 
 ### 表現の合成
-<!-- \subsection{表現の合成} -->
-次にふたつの表現$j_a$と$j_b$の合成を考える．本稿では，しばしば表現のラベルに$a,b,c,d,\cdots$を用いる．表現の添字は，$\mathcal{Q}_{j_a}$や，$j$を略して$\mathcal{Q}_{a}$と書くことがある．
+
+次にふたつの表現 $j_a$ と $j_b$ の合成を考える．本稿では，しばしば表現のラベルに $a,b,c,d,\cdots$ を用いる．表現の添字は，$\mathcal{Q}_{j_a}$ や，$j$ を略して $\mathcal{Q}_{a}$ と書くことがある．
 $2$つの表現を合成(直積)するとそれは既約表現の直和に分解する:
+
 $$
-  \begin{split}
-    \mathcal{Q}_{j_{a}}\otimes \mathcal{Q}_{j_{b}}  &= (\mathcal{Q}_{j_{a}+j_{b}})\oplus \mathcal{Q}_{j_{a}+j_{b}-1}\oplus\cdots \oplus \mathcal{Q}_{|j_{a}-j_{b}|}\\
-   & =\bigoplus_cN_{ab}^{c}\mathcal{Q}_{c}.
-   \end{split}
-  $$
-  ここで $N_{ab}^{c}=\delta_{abc}$で
-  $$
+    \mathcal{Q}_{j_{a}}\otimes \mathcal{Q}_{j_{b}} = (\mathcal{Q}_{j_{a}+j_{b}})\oplus \mathcal{Q}_{j_{a}+j_{b}-1}\oplus\cdots \oplus \mathcal{Q}_{|j_{a}-j_{b}|}
+    =\bigoplus_cN_{ab}^{c}\mathcal{Q}_{c}.
+$$
+  ここで $N_{ab}^{c}=\delta_{abc}$ で
+  
+$$
   \delta_{abc}\coloneqq \begin{cases}
   1 &
   j_{a}+j_{b}\geq j_{c},
@@ -241,36 +240,37 @@ $$
   j_{a}+j_{b}+j_{c}\in\mathbb{Z}\\
   0 & \text{その他}
  \end{cases}
-  $${#eq-fusion_delta}
-を導入した．$N_{ab}^{c}$はfusion係数またはテンソル積係数と呼ばれる．
-本稿では，$\delta_{abc}=1$を満たす$j_a,j_b,j_c$を，$j_a,j_b,j_c$が三角不等式を満たすという．
-例えば，$j_a=1$と$j_b=1/2$とすると，三角不等式を満たす$j_c$は，$3/2$または，$1/2$となる．したがって，
+$$ {#eq-fusion_delta}
+
+を導入した．$N_{ab}^{c}$ はfusion係数またはテンソル積係数と呼ばれる．
+本稿では，$\delta_{abc}=1$ を満たす $j_a,j_b,j_c$を，$j_a,j_b,j_c$ が三角不等式を満たすという．
+例えば，$j_a=1$ と $j_b=1/2$ とすると，三角不等式を満たす $j_c$ は，$3/2$ または，$1/2$ となる．したがって，
 $$
   \mathcal{Q}_{1}\otimes \mathcal{Q}_{\frac{1}{2}} \simeq \mathcal{Q}_{\frac{3}{2}}\oplus \mathcal{Q}_{\frac{1}{2}}
 $$
-となり，$N^c_{\frac{1}{2}1}$は，
+となり，$N^c_{\frac{1}{2}1}$ は，
 $$
   N_{1\frac{1}{2}}^{\frac{3}{2}}=1,\quad
   N_{1\frac{1}{2}}^{\frac{1}{2}}=1
 $$
-で他の$c$についてゼロとなる．
+で他の $c$ についてゼロとなる．
 
-$3$つの表現の合成(直積)は$\mathcal{Q}_{a}\otimes (\mathcal{Q}_{b}\otimes \mathcal{Q}_{c})\simeq (\mathcal{Q}_{a}\otimes \mathcal{Q}_{b}) \otimes \mathcal{Q}_{c}$
+3つの表現の合成(直積)は $\mathcal{Q}_{a}\otimes (\mathcal{Q}_{b}\otimes \mathcal{Q}_{c})\simeq (\mathcal{Q}_{a}\otimes \mathcal{Q}_{b}) \otimes \mathcal{Q}_{c}$
   を満たす．これに対応して，fusion係数は，
 $$
 \sum_{d}N_{ad}^{f}N_{bc}^{d}= \sum_{d}N_{ab}^{d}N_{dc}^{f}
 $$
 を満たす．
 
-次に具体的に表現を合成しよう．表現$j_a$, $j_b$を合成し$j_c$を作ったとする．そのときのベクトル$\ket*{j_aj_b;j_c,m_c}$は，
+次に具体的に表現を合成しよう．表現 $j_a$, $j_b$ を合成し $j_c$ を作ったとする．そのときのベクトル $\ket*{j_aj_b;j_c,m_c}$ は，
 $$
   \ket*{j_aj_b;j_c,m_c} = \sum_{m_a,m_b}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_am_a\, j_bm_b}{j_c,m_c}
 $$
 と表せる．ここで，
-$\braket{j_am_a\, j_bm_b}{j_cm_c}$はClebsch-Gordan係数である．
-$j_c$, および$m_c$が取りうる値は
-$j_c\in \{|j_a-j_b|,|j_a-j_b|+1,\cdots, j_a+j_b\}$及び，$m_c\in\{-j_c,-j_c+1,\cdots j_c\}$である．
-これは，$\mathcal{Q}_{c}\to \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$の写像を与える．
+$\braket{j_am_a\, j_bm_b}{j_cm_c}$ はClebsch-Gordan係数である．
+$j_c$, および $m_c$ が取りうる値は
+$j_c\in \{|j_a-j_b|,|j_a-j_b|+1,\cdots, j_a+j_b\}$及び，$m_c\in\{-j_c,-j_c+1,\cdots j_c\}$ である．
+これは，$\mathcal{Q}_{c}\to \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ の写像を与える．
 また，
 $$ \begin{aligned}
   (J_{a3}+J_{b3})\ket*{j_aj_b;j_c,m_c} &= (m_a+m_b)\ket*{j_aj_b;j_c,m_c},\\
@@ -278,32 +278,37 @@ $$ \begin{aligned}
   J_{ai}^2\ket*{j_aj_b;j_c,m_c} &= j_a(j_a+1)\ket*{j_aj_b;j_c,m_c},\\
   J_{bi}^2\ket*{j_aj_b;j_c,m_c} &= j_b(j_b+1)\ket*{j_aj_b;j_c,m_c}
  \end{aligned}$$
-を満たす．ここで，$(J_{a}+J_{b})^2=\sum_{i=1}^3(J_{ai}+J_{bi})^2$である．
+を満たす．ここで，$(J_{a}+J_{b})^2=\sum_{i=1}^3(J_{ai}+J_{bi})^2$ である．
 逆に直積状態は，
+
 $$
 \ket*{j_a,m_a} \ket*{j_b,m_b}= \sum_{m_c}  \ket*{j_aj_b;j_c,m_c} \braket{j_cm_c}{j_am_a\, j_bm_b}
  $$
+
 と表せる．
-$\mathrm{SU}(2)$のClebsch-Gordan係数は，通常，
-$\braket{j_cm_c}{j_am_a\, j_bm_b}=\braket{j_am_a\, j_bm_b}{j_c,m_c}^*=\braket{j_am_a\, j_bm_b}{j_c,m_c}$を満たすように位相が選ばれている．
+$\mathrm{SU}(2)$ のClebsch-Gordan係数は，通常，
+$\braket{j_cm_c}{j_am_a\, j_bm_b}=\braket{j_am_a\, j_bm_b}{j_c,m_c}^*=\braket{j_am_a\, j_bm_b}{j_c,m_c}$
+を満たすように位相が選ばれている．
 また，Clebsch-Gordan係数は，直交関係
 $$
   \sum_{m_a,m_b}
   \braket{j_dm_d}{j_am_a\, j_b,m_b}
   \braket{j_am_a\, j_bm_b}{j_c,m_c}
   =\delta_{j_c}^{j_d}\delta_{m_c}^{m_d}\delta_{abc},
-  $${#eq-Clebsch-Gordan_orthogonal1}
+$${#eq-Clebsch-Gordan_orthogonal1}
+
 $$
   \sum_{j_c}\sum_{m_c}
   \braket{j_am_a\, j_bm_b}{j_c,m_c}
   \braket{j_cm_c}{j_am'_a\, j_bm'_b}
   =\delta^{m_a}_{m'_a}\delta^{m_b}_{m'_b} 
 $${#eq-Clebsch-Gordan_orthogonal2}
+
 を満たす．
-Wigner $3$-$j$シンボル$\begin{psmallmatrix}
+Wigner $3$-$j$シンボル $\begin{psmallmatrix}
   j_a & j_b & j_c\\
   m_a & m_b & m_c
-\end{psmallmatrix}$を用いると，Clebsch-Gordan係数は，
+\end{psmallmatrix}$ を用いると，Clebsch-Gordan係数は，
 $$
 \braket{j_am_a\, j_bm_b}{j_cm_c}
 =(-1)^{j_{a}-j_{b}+m_{c}}\sqrt{d_c}
@@ -311,12 +316,13 @@ $$
   j_a & j_b & j_c\\
   m_a & m_b & -m_c
 \end{pmatrix}
-\label{eq-Clebsch-Gordan-Wigner3j}
-$$
+$$ {#eq-Clebsch-Gordan-Wigner3j}
+
 と表すことができる．本稿では，あまり使わないが，
-Wigner $3$-$j$シンボルはClebsch-Gordan係数より対称性が高く，
+Wigner $3$-$j$ シンボルはClebsch-Gordan係数より対称性が高く，
 便利なことが多い．
-Wigner $3$-$j$シンボルは，偶置換に関して，不変
+Wigner $3$-$j$ シンボルは，偶置換に関して，不変
+
 $$
   \begin{pmatrix}
     j_a & j_b & j_c\\
@@ -332,7 +338,9 @@ $$
     m_c & m_a & m_b
   \end{pmatrix}
 $$
+
 であり，奇置換に対して，
+
 $$
   \begin{split}
       \begin{pmatrix}
@@ -359,6 +367,7 @@ $$
 $$
 
 となる．また$m$の反転に対し，
+
 $$
   \begin{pmatrix}
     j_a & j_b & j_c\\
@@ -369,9 +378,10 @@ $$
     m_a & m_b & m_c
   \end{pmatrix}
 $$
-となる性質を持つ．値は，$j_a$, $j_b$, $j_c$が三角不等式を満たすとき$\delta_{abc}=1$のみ
-非ゼロで，他はゼロとなる．
+
+となる性質を持つ．値は，$j_a$, $j_b$, $j_c$ が三角不等式を満たすとき \delta_{abc}=1$ のみ非ゼロで，他はゼロとなる．
 直交性関係は，
+
 $$ \begin{aligned}
   (2j_c+1)\sum_{m_a,m_b}
   \begin{pmatrix}
@@ -401,14 +411,18 @@ $$ \begin{aligned}
 
 
 $\ket*{j_aj_b;j_c,m_c}$と$\ket*{j_bj_a;j_c,m_c}$は，位相分だけ状態が異なる:
+
 $$
   \ket*{j_aj_b;j_c,m_c} =R^{ab}_c \ket*{j_bj_a;j_c,m_c}.
 $$
+
 ここで，
+
 $$
   R^{ab}_c= (-1)^{j_a+j_b-j_c}
 $$
-である．これは，$R^{ab}_cR^{ba}_c=1$を満たす．
+
+である．これは，$R^{ab}_cR^{ba}_c=1$ を満たす．
 \begin{question}
   $R^{ab}_c= (-1)^{j_a+j_b-j_c}$を式(@eq-Clebsch-Gordan-Wigner3j)及び
   (@eq-Wigner3joddperm)を用いて示せ．
