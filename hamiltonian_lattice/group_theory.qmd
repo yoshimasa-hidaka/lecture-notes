@@ -4,7 +4,7 @@
 \newcommand{\sthreerb}{s_2}
 \newcommand{\sthreerc}{s_3}
 
-# 群論基礎 {#sec-group_theory}
+#　群論基礎 {#sec-group_theory}
 
 
 
@@ -55,7 +55,7 @@ $$
   Z(G)=\{g\in G\mid \forall h\in G,\; hg=gh\}.
 $$
 
-$Z(G)$ も 群(アーベル群)をなす．
+$Z(G)$ も群(アーベル群)をなす．
 $\mathrm{SU}(2)$ の場合は，すべての元と可換な元は単位行列に比例するので，$\omega\mathbf{1}_2$
 の形をとる．ユニタリ行列である条件から $|\omega|^2=1$ が得られ，行列式が $1$ である条件から，
 $\omega^2=1$ が得られる．これを満たす $\omega$ は，$1,-1$ である．したがって，$\mathrm{SU}(2)$ の中心は，
@@ -124,7 +124,7 @@ $$
 と書ける．
 
 <!-- %  \subsection{中心化群}
-%  群の元の$h\in G$と可換な群の元の集合は，中心化群(Centralizer)と呼ばれる．
+% 群の元の$h\in G$と可換な群の元の集合は，中心化群(Centralizer)と呼ばれる．
 %  $$
 %      \mathrm{C}_G(h)\coloneqq\{g\in G|gh=hg\}
 %      \label{eq-Centralizer}

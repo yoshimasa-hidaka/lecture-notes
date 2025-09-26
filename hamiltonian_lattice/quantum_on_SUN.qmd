@@ -29,7 +29,7 @@ $$ {#eq-commutation_relation}
 であり，有限の変換について，
 $$e^{\ri pa}U_n e^{-\ri pa}=e^{\ri na}U_n$$
 が成り立つ．
-さらに，$e^{\ri p a}e^{\ri p b}=e^{\ri p (a+b)}$ が成立し，また，$e^{\ri n(x+2\pi)}=e^{\ri n x}$ であることから $e^{\ri  2\pi p}$ は恒等変換となる．したがって，$e^{\ri p a}$ の全体は $\mathrm{U}(1)$ 群をなす．
+さらに，$e^{\ri p a}e^{\ri p b}=e^{\ri p (a+b)}$ が成立し，また，$e^{\ri n(x+2\pi)}=e^{\ri n x}$ であることから $e^{\ri  2\pi p}$ は恒等変換となる．したがって，$e^{\ri p a}$ の全体は $\mathrm{U}(1)$群をなす．
 また，式(@eq-commutation_relation) は，$U_n$ が $\mathrm{U}(1)$ 電荷が整数 $n$ の既約表現として振る舞うことを意味している．さらに，$U_n$ の積は，$U_nU_m= U_{n+m}$ を満たし，群の構造を持つことがわかる．
 これは可換群の特徴であり，後で見るように，この$U_n$の群構造は非可換群では成立しない．
 

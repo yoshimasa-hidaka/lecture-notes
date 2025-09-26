@@ -51,7 +51,7 @@ $$
 
 で，$N_{ab}^c=N_{ba}^c=N_{b\bar{c}}^{\bar{a}}=N_{\bar{a}\bar{b}}^{\bar{c}}$ を満たす．
 ここで，$N_{ab}^{c}$ は重複度と呼ばれ非負の整数である．これは，表現 $a$, $b$ を合成して，$c$ ができる数に対応し，$\mathrm{SU}(2)_k$ の場合は，$N_{ab}^{c}$ は $0$ または $1$ の値を取る．
-一般には，$N_{ab}^c>1$ の値を取る．例えば，$\mathrm{SU}(3)$ 群の場合は，2つの随伴表現 $\bm{8}$ の合成 $\bm{8}\otimes \bm{8}$ は，$\bm{1}\oplus\bm{8}\oplus\bm{8}\oplus\overline{\bm{10}}\oplus\bm{10}\oplus\bm{27}$ に分解される．つまり，
+一般には，$N_{ab}^c>1$ の値を取る．例えば，$\mathrm{SU}(3)$群の場合は，2つの随伴表現 $\bm{8}$ の合成 $\bm{8}\otimes \bm{8}$ は，$\bm{1}\oplus\bm{8}\oplus\bm{8}\oplus\overline{\bm{10}}\oplus\bm{10}\oplus\bm{27}$ に分解される．つまり，
 $N_{\bm{8}\bm{8}}^{\bm{1}}=N_{\bm{8}\bm{8}}^{\bm{10}}=N_{\bm{8}\bm{8}}^{\overline{\bm{10}}}=N_{\bm{8}\bm{8}}^{{\bm{27}}}=1$と $N_{\bm{8}\bm{8}}^{\bm{8}}=2$ である．Dynkinラベルのかわりに表現の次元を用いて状態を指定した． Dynkinラベル $(p,q)$
 
 ::: {.content-visible when-format=html}

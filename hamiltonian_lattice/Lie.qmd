@@ -1,22 +1,30 @@
-# Lie　群の復習　{#sec-lie short-title="Lie群の復習"}
+# Lie群の復習　{#sec-lie short-title="Lie群の復習"}
 
-本稿では，$\mathrm{SU}(N)$ 群（およびその量子群変形）ゲージ理論について取り上げる．
-その解析に必要となる $\mathrm{SU}(N)$ 群とその表現について簡単に復習する．
-Lie 群の表現論や群上の量子論を習熟している読者は，本節を読み飛ばし，@sec-ks 節に進んでもらって差し支えない．
+本稿では，$\mathrm{SU}(N)$群（およびその量子群変形）ゲージ理論について取り上げる．
+その解析に必要となる $\mathrm{SU}(N)$群とその表現について簡単に復習する．
+Lie群の表現論や群上の量子論を習熟している読者は，本節を読み飛ばし，@sec-ks 節に進んでもらって差し支えない．
 
-## $\mathrm{SU}(2)$ 群　　{#sec-su2}
+## $\mathrm{SU}(2)$群　　{#sec-su2}
 
-まず，量子力学で習うスピンの対称性である $\mathrm{SU}(2)$ 群から始める．
-$\mathrm{SU}(2)$ 群は，複素2次元ベクトル空間の内積を保ち，行列式が $1$ である変換全体からなる群である．
-2つの複素2次元ベクトル $w=(w_1,w_2)^T$, $z=(z_1,z_2)^T$ に対して，変換 $w\mapsto g w$, $z\mapsto gz$ のもとで，内積は，
+まず，量子力学で習うスピンの対称性である $\mathrm{SU}(2)$群から始める．
+$\mathrm{SU}(2)$群は，複素2次元ベクトル空間の内積を保ち，行列式が $1$ である変換全体からなる群である．
+2つの複素2次元ベクトル
+
+$$
+w = \begin{pmatrix} w_1 \\ w_2 \end{pmatrix}, \quad
+z = \begin{pmatrix} z_1 \\ z_2 \end{pmatrix}
+$$
+
+に対して，変換 $w\mapsto g w$, $z\mapsto gz$ のもとで，内積 $(w,z) \coloneqq w^\dag z$ は，
 次のように変換される:
 
 $$
-  w^\dag z\mapsto w^\dag g^\dag g z.
+  (w,z)\mapsto  (gw,gz) = (w,g^\dag g z) \,.
 $$
 
 ここで，$g$ は，$2 \times 2$ 複素行列で，$\dag$ はHermite 共役を表す．
-この変換で内積が不変となるためには，$g^\dag g=\mathbf{1}_2$ を満たす必要がある．ここで，$\mathbf{1}_2$ は $2 \times 2$ の単位行列
+この変換で内積が不変となるためには，$g^\dag g=\mathbf{1}_2$ を満たす必要がある．
+ここで，$\mathbf{1}_2$ は $2 \times 2$ の単位行列
 
 $$
     \mathbf{1}_2\coloneqq\begin{pmatrix}
@@ -26,8 +34,8 @@ $$
 $$
 
 である．
-また，行列式が$1$である条件から，$\det g=1$ が要求される．
-したがって，$\mathrm{SU}(2)$ 群は次のように表される:
+また，行列式が1である条件から，$\det g=1$ が要求される．
+したがって，$\mathrm{SU}(2)$群は次のように表される:
 
  $$
   \mathrm{SU}(2) \coloneqq
@@ -35,7 +43,7 @@ $$
     \alpha & \beta\\
     -\beta^* & \alpha^*
   \end{pmatrix}\in \mathrm{GL}(2,\mathbb{C})\Bigl| |\alpha|^2+|\beta|^2=1
-  \right\}.
+  \right\} \,.
 $$
 
 ここで，$\mathrm{GL}(2,\mathbb{C})$ は，2次元複素線形群（すなわち、$2 \times 2$ の正則な複素行列全体からなる群）を表す．
@@ -70,18 +78,18 @@ $$
     \end{pmatrix}
 $$ {#eq-Pauli_Matrix}
 
-を導入する．このとき，$\mathrm{SU}(2)$ 群の元 $g$ は，次のように表される:
+を導入する．このとき，$\mathrm{SU}(2)$群の元 $g$ は，次のように表される:
 
 $$
-    g = a_0 \mathbf{1}_2 +\ri\symbf{\sigma}\cdot \bm{a}.
+    g = a_0 \mathbf{1}_2 +\ri\symbf{\sigma}\cdot \bm{a} \,.
 $$
 
-ここで，$\bm{a} = (a_1, a_2, a_3) $は実ベクトルであり，パラメータは $a_0^2+a_1^2+a_2^2+a_3^2=1$ を満たす．
+ここで，$\bm{a} = (a_1, a_2, a_3)^T$ は実ベクトルであり，パラメータは $a_0^2+a_1^2+a_2^2+a_3^2=1$ を満たす．
 さらに3次元単位ベクトル ${\bm{n}}$ を導入すると，$g$ は次のようにも表せる:
 
 $$
     g= \mathbf{1}_2\cos\frac{\theta}{2}+\ri{\bm{n}}\cdot\symbf{\sigma}\sin\frac{\theta}{2}=\exp(\ri\frac{\theta}{2}{\bm{n}}\cdot\symbf{\sigma}
-    )
+    )　\,.
 $$ {#eq-SU2_n}
 
 ここで，$\theta$ は，$0$ から $2\pi$ を動く実パラメータである．
@@ -90,7 +98,7 @@ $\bm{n}$ を極座標表示すると
 $$
   n_1=\cos\varphi\sin\psi,\quad
   n_2=\sin\varphi\sin\psi,\quad
-  n_3=\cos\psi.
+  n_3=\cos\psi \,.
 $$ {#eq-n_polar}
 
 と表せる．
@@ -111,13 +119,13 @@ $$
     {\bm{n}}\cdot \symbf{\sigma} = \mathcal{U}_{\bm{n}}\sigma_3\mathcal{U}_{\bm{n}}^{-1}
 $$
 
-したがって，$\mathrm{SU}(2)$ 群の元は，次のように書くことができる:
+したがって，$\mathrm{SU}(2)$群の元は，次のように書くことができる:
 
 $$
-    g = \mathcal{U}_{\bm{n}}e^{\ri\frac{\theta}{2}\sigma_3}\mathcal{U}_{\bm{n}}^{-1}.
+    g = \mathcal{U}_{\bm{n}}e^{\ri\frac{\theta}{2}\sigma_3}\mathcal{U}_{\bm{n}}^{-1} \,.
 $$
 
-### $\mathrm{SU}(2)$ 群のLie代数
+### $\mathrm{SU}(2)$群のLie代数
 
 式(@eq-SU2_n)において，$\theta_i=\theta n_i$と置き，$T_i=\sigma_i/2$と定義すると，
 
@@ -143,13 +151,13 @@ $$
 この$T_i$ は次の交換関係を満たす：
 
 $$
-  [T_i,T_j]=\ri f^k_{~ij}T_k.
+  [T_i,T_j]=\ri f^k_{~ij}T_k \,.
 $$ {#eq-Lie_SU2}
 
 ここで，$f^k_{~ij}$は構造定数であり，完全反対称テンソル(Levi-Civita記号)$\epsilon_{ijk}$を用いて，$f^k_{~ij}=\epsilon_{ijk}$と表される．
 
 このように，群の接空間をなす元の集合を Lie代数 と呼び，
-$\mathrm{SU}(2)$ 群の場合は，$\mathfrak{su}(2)$と書く．
+$\mathrm{SU}(2)$群の場合は，$\mathfrak{su}(2)$と書く．
 
 ここで得られた $T_i=\sigma_i/2$ は $2\times 2$ の行列として表されているが，
 これをスピン $1/2$ の状態空間に作用する演算子として解釈する．
@@ -172,9 +180,9 @@ $$ {#eq-commutatorSU2}
 
 
 
-### $\mathrm{SU}(2)$ 群の表現
+### $\mathrm{SU}(2)$群の表現
 
-$\mathrm{SU}(2)$ 群は単連結なコンパクトLie群であるため，その有限次元ユニタリ表現はLie代数 $\mathfrak{su}(2)$ の有限次元表現と1対1対応する．
+$\mathrm{SU}(2)$群は単連結なコンパクトLie群であるため，その有限次元ユニタリ表現はLie代数 $\mathfrak{su}(2)$ の有限次元表現と1対1対応する．
 したがって，群の表現を理解するにはLie代数の表現を調べれば十分である．
 以下では，両者の違いを混乱の恐れがない限り区別せずに用いる．
 また，この節では，$\mathrm{SU}(2)$ の表現の導出は行わず基本的な結果のみを紹介する．導出については，標準的な群論の教科書(例えば[@Georgi])を参照．
@@ -195,7 +203,7 @@ $$
 
 と表すことができる．$J^2$はすべての$J_i$と可換である．
 
-$\mathrm{SU}(2)$ 群の有限次元既約表現は $J^2$ と
+$\mathrm{SU}(2)$群の有限次元既約表現は $J^2$ と
 $J_3(=J_0)$ の同時固有状態 $\ket*{j,m}$ を用いて表すことができる．
 ここで，状態の内積は，
 
@@ -227,7 +235,7 @@ $j$は，$j\in\frac{1}{2}\mathbb{Z}$ の非負の整数，半整数の値を取�
 $\mathrm{SU}(2)$の元$g$に対応した演算子$U_g=\exp\ri\theta^i J_i$と書くことにする．Wignerの$D$行列(表現行列)は，$U_g$の状態$\ket{j,m}$への作用を表す:
 
 $$
-  [D_j]^m_n(g)\coloneqq \bra{j,m}U_g\ket{j,n}.
+  [D_j]^m_n(g)\coloneqq \bra{j,m}U_g\ket{j,n} \,.
 $$ {#eq-Wigner_matrix}
 
 この行列は，
@@ -245,7 +253,7 @@ $2$つの表現を合成(直積)するとそれは既約表現の直和に分解
 
 $$
     \mathcal{Q}_{j_{a}}\otimes \mathcal{Q}_{j_{b}} = (\mathcal{Q}_{j_{a}+j_{b}})\oplus \mathcal{Q}_{j_{a}+j_{b}-1}\oplus\cdots \oplus \mathcal{Q}_{|j_{a}-j_{b}|}
-    =\bigoplus_cN_{ab}^{c}\mathcal{Q}_{c}.
+    =\bigoplus_cN_{ab}^{c}\mathcal{Q}_{c} \,.
 $$
 
 ここで $N_{ab}^{c}=\delta_{abc}$ で
@@ -448,7 +456,7 @@ $$
 $\ket*{j_aj_b;j_c,m_c}$ と $\ket*{j_bj_a;j_c,m_c}$ は，位相分だけ状態が異なる:
 
 $$
-  \ket*{j_aj_b;j_c,m_c} =R^{ab}_c \ket*{j_bj_a;j_c,m_c}.
+  \ket*{j_aj_b;j_c,m_c} =R^{ab}_c \ket*{j_bj_a;j_c,m_c} \,.
 $$
 
 ここで，
@@ -520,7 +528,7 @@ $${#eq-recoupling}
 本稿では，$[F^{abc}_d]_{ef}\coloneqq \braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$ とし $F$-symbolと呼ぶことにする:
 $$
   \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
-  =\sum_{j_f}[F^{abc}_d]_{ef}\ket*{j_a (j_bj_c)j_{f};j_d,m_d}.
+  =\sum_{j_f}[F^{abc}_d]_{ef}\ket*{j_a (j_bj_c)j_{f};j_d,m_d} \,.
 $$
 
 Clebsch-Gordan係数を用いて$F$-symbolを表すと
@@ -594,7 +602,7 @@ $$
 
 $$
   [F_e^{fcd}]_{gl} [F_e^{abl}]_{fk} 
-= \sum_{h} [F^{abc}_g]_{fh} [F_{e}^{ahd}]_{gk} [F^{bcd}_{k}]_{hl}.
+= \sum_{h} [F^{abc}_g]_{fh} [F_{e}^{ahd}]_{gk} [F^{bcd}_{k}]_{hl} \,.
 $$ {#eq-pentagon}
 
 \begin{question}
@@ -987,7 +995,7 @@ $${#eq-deform2}
 
 ## $\mathrm{SU}(N)$群
 
-$\mathrm{SU}(2)$ 群でみてきたものを $\mathrm{SU}(N)$ 群に拡張する．
+$\mathrm{SU}(2)$群でみてきたものを $\mathrm{SU}(N)$群に拡張する．
 
 
 $$
