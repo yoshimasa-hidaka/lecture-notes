@@ -103,7 +103,14 @@ $$ {#eq-n_polar}
 
 と表せる．
 ただし，$0\leq\varphi\leq 2\pi$, $0\leq\psi\leq \pi$ を満たす．
-このとき，次のユニタリ行列
+式(@eq-SU2_n)において，$\theta_i=\theta n_i$と置き，$T_i=\sigma_i/2$と定義すると，
+
+$$
+  g= \exp(\ri T_i\theta^i)
+$$ {#eq-gexp}
+
+と表せる．
+また，次のユニタリ行列
 
 $$
     \mathcal{U}_{\bm{n}}=
@@ -116,7 +123,7 @@ $$
 を用いると，以下の関係が成り立つ:
 
 $$
-    {\bm{n}}\cdot \symbf{\sigma} = \mathcal{U}_{\bm{n}}\sigma_3\mathcal{U}_{\bm{n}}^{-1}
+    {\bm{n}}\cdot \symbf{\sigma} = \mathcal{U}_{\bm{n}}\sigma_3\mathcal{U}_{\bm{n}}^{-1} \,.
 $$
 
 したがって，$\mathrm{SU}(2)$群の元は，次のように書くことができる:
@@ -127,14 +134,7 @@ $$
 
 ### $\mathrm{SU}(2)$群のLie代数
 
-式(@eq-SU2_n)において，$\theta_i=\theta n_i$と置き，$T_i=\sigma_i/2$と定義すると，
-
-$$
-  g= \exp(\ri T_i\theta^i)
-$$
-
-と表せる．
-単位元近傍で展開すると $\theta_i\ll 1$ として，
+式(@eq-gexp)において，単位元近傍で展開すると $\theta_i\ll 1$ として，
 
 $$
   g= 1+\ri T_i\theta^i + \order{\theta^2}
@@ -238,6 +238,18 @@ $$
   [D_j]^m_n(g)\coloneqq \bra{j,m}U_g\ket{j,n} \,.
 $$ {#eq-Wigner_matrix}
 
+Lie代数の表現$j$に対する行列要素
+$$
+[T_{ji}]^m_{n} \coloneqq \bra{j,m}J_i\ket{j,n}
+$$
+
+を導入すると，
+
+$$
+[D_j(g)]^m_{n} = [\exp(\ri\theta^i T_{ji})]^{m}_{n}
+$$
+
+と表せる．
 この行列は，
 
 $$
