@@ -1,6 +1,6 @@
-# ハミルトニアン形式  {#sec-ks}
+# ハミルトニアン形式 {#sec-ks}
 
-## Kogut--Susskind形式 {#sec-hamiltonian}
+## Kogut--Susskind形式{#sec-hamiltonian}
 
 ::: {.content-visible when-format="html"}
 ::: {#fig-Honeycomb_Lattice fig-cap="左：ハニカム格子．右：プラケット．" fig-align="center"} 
@@ -27,22 +27,22 @@
 \caption{左：ハニカム格子．右：プラケット．}
 \end{figure} {#fig-Honeycomb_Lattice} -->
 
-格子上のゲージ理論のハミルトニアン形式はKogutとSusskindによって1970年代に定式化された [@Kogut:1974ag]．
-本節では格子上の$\mathrm{SU}(N)$ Yang--Mills理論のハミルトニアン形式について考える．
+格子上のゲージ理論のハミルトニアン形式は Kogut と Susskind によって1970年代に定式化された [@Kogut:1974ag]．
+本節では格子上の $\mathrm{SU}(N)$ Yang--Mills 理論のハミルトニアン形式について考える．
 任意の格子について定式化できるが，ここではゲージ不変な物理状態の構成が容易なハニカム格子を扱う(図@fig-Honeycomb_Lattice 左)．
-頂点の集合を$\mathcal{V}$，辺の集合を$\mathcal{E}$とする．
+頂点の集合を $\mathcal{V}$，辺の集合を $\mathcal{E}$ とする．
 各辺は，向きを持ち，始点と終点が定められている．
-辺$e\in\mathcal{E}$に対して，その始点および終点を
-それぞれ$\mathrm{s}(e)\in\mathcal{V}$および$\mathrm{t}(e)\in\mathcal{V}$と書く．また，$e$の始点と終点を入れ替えた辺は$\bar{e}$と表す．
+辺 $e\in\mathcal{E}$ に対して，その始点および終点を
+それぞれ $\mathrm{s}(e)\in\mathcal{V}$ および $\mathrm{t}(e)\in\mathcal{V}$ と書く．また，$e$ の始点と終点を入れ替えた辺は $\bar{e}$ と表す．
 各六角形をプラケット(図@fig-Honeycomb_Lattice 右)と呼び，その集合を$\mathcal{P}$とする．
 各プラケットは面であり，その境界をなす有向閉曲線（経路）を定める．
-例えば，図@fig-Honeycomb_Lattice 右では，始点を$e_1$として，
-経路は$e_1 \to e_2 \to e_3 \to \bar{e}_4 \to \bar{e}_5 \to \bar{e}_6$である．
+例えば，図@fig-Honeycomb_Lattice 右では，始点を $e_1$ として，
+経路は $e_1 \to e_2 \to e_3 \to \bar{e}_4 \to \bar{e}_5 \to \bar{e}_6$ である．
 
 以下では，物質場を含まないゲージ理論を考える．
-ゲージ場の自由度は，辺$e\in \mathcal{E}$の上に定義され，
-その上の量子系は，@sec-SUN_quantum 節で解説した$\mathrm{SU}(N)$とする．
-つまり，基本的な演算子は$\ER_i(e)$, $\EL_i(e)$, $U_a(e)$である．
+ゲージ場の自由度は，辺 $e\in \mathcal{E}$ の上に定義され，
+その上の量子系は，@sec-SUN_quantum 節で解説した $\mathrm{SU}(N)$ とする．
+つまり，基本的な演算子は $\ER_i(e)$, $\EL_i(e)$, $U_a(e)$ である．
 これらの正準交換関係は，
 $$
   [\ER_{i}(e),U_a(e')] =U_a(e) T_{ai}\delta_{e,e'}, \quad
@@ -56,42 +56,45 @@ $${#eq-E_tE_tfield}
 
 で与えられる．
 
-プラケット$p$に沿った経路を$e_1\to e_2\to e_3\to \bar{e}_4\to \bar{e}_5\to \bar{e}_6$とし，
-その上の演算子$U(p)$を
+プラケット $p$ に沿った経路を $e_1\to e_2\to e_3\to \bar{e}_4\to \bar{e}_5\to \bar{e}_6$ とし，
+その上の演算子 $U(p)$ を
 $$
   U_a(p)\coloneqq U_a(\bar{e}_6)U_a(\bar{e}_5)U_a(\bar{e}_4)U_a(e_3)U_a(e_2)U_a(e_1)
 $$
-と定義する．ここで，バーとバーなしの辺の演算子の対応は，$U_a(\bar{e})=U^\dag_a(e)$である．
-同様に一般の閉じた経路に対して定義された$U_a$からなる演算子は表現$a$のWilsonループと呼ばれる．以下，表記の簡略として基本表現の場合は添字$a$を省略し，$U(e)\coloneqq U_{\mathrm{fund}}(e)$や$U(p)\coloneqq U_{\mathrm{fund}}(p)$と表す．
-ハミルトニアン$H$は，この$U(p)$と電場の2乗$E^2(e)$を用いて，
+と定義する．ここで，バーとバーなしの辺の演算子の対応は，$U_a(\bar{e})=U^\dag_a(e)$ である．
+同様に一般の閉じた経路に対して定義された $U_a$ からなる演算子は表現 $a$ のWilsonループと呼ばれる．以下，表記の簡略として基本表現の場合は添字 $a$ を省略し，$U(e)\coloneqq U_{\mathrm{fund}}(e)$や$U(p)\coloneqq U_{\mathrm{fund}}(p)$と表す．
+ハミルトニアン$H$ は，この $U(p)$ と電場の2乗 $E^2(e)$ を用いて，
 $$
   H=\sum_{e\in {\mathcal{E}}}\frac{1}{2}E^2(e)
    -\frac{K}{2}\sum_{p\in \mathcal{P}}(\tr U(p)+\tr U^\dag(p) )
 $$ {#eq-magnetic}
-と定義される．ここで，$K$は結合定数である．
+と定義される．ここで，$K$ は結合定数である．
 電場項について独立な結合定数を導入してもよいが，エネルギーの単位のスケールを調整することで$1$に取ることができる．
 
 ## ゲージ不変性
 
-ある頂点$v\in \mathcal{V}$に対するゲージ変換の生成子を
+ある頂点 $v\in \mathcal{V}$ に対するゲージ変換の生成子を
 $$
 G_i(v)\coloneqq  \sum_{e\in \mathcal{E}| \mathrm{s}(e)=v}\ER_{i}(e)-\sum_{e\in \mathcal{E}| \mathrm{t}(e)=v}\EL_{i}(e)
 $$
 と定義する．
-この演算子は，頂点が始点になっている辺に対して$\ER_i$を，終点になっている辺に対して，$-\EL_i$を割り当て，和を取ったものである．
-交換関係は$[G_i(v),G_j(v)]=\ri f^k_{~ij}G_k(v)$を満たし，Lie代数をなす．
-有限のゲージ変換はゲージ変換パラメータを$\theta^i(v)$として，
-$V=e^{\ri\sum_{v\in\mathcal{V}}\theta^i(v)G_i(v)}$で表すことができる．この変換のもとで，$U_a(e)$は，
+この演算子は，頂点が始点になっている辺に対して $\ER_i$ を，終点になっている辺に対して，$-\EL_i$ を割り当て，和を取ったものである．
+交換関係は $[G_i(v),G_j(v)]=\ri f^k_{~ij}G_k(v)$を 満たし，Lie 代数をなす．
+有限のゲージ変換はゲージ変換パラメータを $\theta^i(v)$ として，
+$V=e^{\ri\sum_{v\in\mathcal{V}}\theta^i(v)G_i(v)}$ で表すことができる．この変換のもとで，$U_a(e)$ は，
+
 $$
   U_a(e)\to V U_a(e)V^\dag
   = D_a^\dag(\mathrm{t}(e))U_a(e)D_a(\mathrm{s}(e))
 $$ {#eq-Gauge_transformationU}
 と変化する．ここで，$D_a(v) = \exp(\ri \theta^i(v)T_{ai})$ は表現行列である．
 同様に $\ER_i(e)$ や $\EL_i(e)$ は，
+
 $$
   \ER_i(e)\to V \ER_i(e) V^\dag = [D_\mathrm{adj}(\mathrm{s}(e))]^j_i\ER_j(e),\quad
   \EL_i(e)\to V \EL_i(e) V^\dag = [D^\dag_\mathrm{adj}(\mathrm{t}(e))]^j_i\EL_j(e)
 $$ {#eq-Gauge_transformationEL}
+
 と変換される．
 
 ハミルトニアンは，ゲージ変換(@eq-Gauge_transformationU)-(@eq-Gauge_transformationEL)
@@ -105,9 +108,11 @@ $$
 \ket{\Psi}\to   e^{\ri\sum_{v\in\mathcal{V}}\theta^i(v)G_i(v)}\ket{\Psi}
 $$ {#eq-gauge_transformation}
 と変換する．物理状態は任意の$\theta^i(v)$に対して不変である必要があるので，微小変換のもとでの不変性，つまり，すべての$v\in\mathcal{V}$に対して，Gaussの拘束条件
+
 $$
 G_i(v)\ket*{\Psi}=0
 $$ {#eq-gauss}
+
 を満たす必要がある．逆に式(@eq-gauss) を満たせば，状態は式(@eq-gauge_transformation) の変換のもとで不変である．
 以後，本稿では，式(@eq-gauss) を満たす $\ket{\Psi}$ を物理状態と呼ぶ．
 
@@ -145,16 +150,19 @@ $G_i(v)$はLie代数の生成子であり，式(@eq-gauss) は，頂点におい
 辺$e_1$, $e_2$の始点，$e_3$の終点になっている場合を考える．
 すなわち，$\mathrm{s}(e_1)=\mathrm{s}(e_2)=\mathrm{t}(e_3)=v$である(図@fig-vertex)．
 このとき，状態$\ket*{a,m_a,n_a}_1\ket*{b,m_b,n_b}_2\ket*{c,m_c,n_c}_3$に対して，Clebsch--Gordan係数$\braket{a,n_a;\, b,n_b}{c,m_c;\mu}$を用いると
+
 $$
   \ket*{\varphi}=\sum_{n_a,n_b,m_c}\frac{1}{\sqrt{d_c}}
   \braket{a,n_a;\, b,n_b}{c,m_c;\mu}
   \ket*{a,m_a,n_a}_1\ket*{b,m_b,n_b}_2\ket*{c,m_c,n_c}_3
 $$ {#eq-three_point_state}
-という線形結合が得られ，これは，$G_i(v)\ket{\varphi}=0$を満たす．
-ここで，$1/\sqrt{d_c}$は$\braket{\varphi}{\varphi}=1$を保証するための規格化因子である．
 
-一般に，各頂点にClebsch--Gordan係数を割り当てれば，Gaussの拘束条件を満たす物理状態を構成することができる．
-結果として，物理的な基底は，図@fig-vertex 右に示すように，辺に表現，頂点に多重度のラベルを付与した表現のネットワークで表される．ただし任意の表現が許されるわけではなく，Clebsch--Gordan係数が非零となる組み合わせのみが許される．
+という線形結合が得られ，これは，$G_i(v)\ket{\varphi}=0$ を満たす．
+ここで，$1/\sqrt{d_c}$ は $\braket{\varphi}{\varphi}=1$ を保証するための規格化因子である．
+
+一般に，各頂点に Clebsch--Gordan 係数を割り当てれば，Gauss の拘束条件を満たす物理状態を構成することができる．
+結果として，物理的な基底は，図@fig-vertex 右に示すように，辺に表現，頂点に多重度のラベルを付与した表現のネットワークで表される．
+ただし任意の表現が許されるわけではなく，Clebsch--Gordan 係数が非零となる組み合わせのみが許される．
 
 <!-- 
 ここでグラフィカルな表現を導入しよう.
@@ -264,7 +272,7 @@ $${#eq-loop}
 が得られる．ここで，$3$つに並んだ$U$は一つに結合している．
 @sec:graphical_Clebsch-Gordan 節のClebsch-Gordan係数のグラフィカルな表現と似ているが，係数が違うことに注意する．
 \begin{question}
-  式 (@eq-merge)，(@eq-loop) を確認せよ．
+  式(@eq-merge)，(@eq-loop) を確認せよ．
 \end{question} -->
 
 <!-- %$[U_{a}]^{m_a}_{~m}(a)[U_{a}]^{m}_{n_b}(b)$を考えよう.
@@ -319,10 +327,10 @@ $$
 $${#eq-Fmoves_U}
 となる．
 ここで，$1$行目から$2$行目は，$1$, $3$の辺について，式(@eq-fusion_U) を使って変形し，
-$3$行目へは，式 (@eq-deform) を用いて変形した．
+$3$行目へは，式(@eq-deform) を用いて変形した．
 
 \begin{question}
-  式 (@eq-Fmoves_U) を確かめよ．
+  式(@eq-Fmoves_U) を確かめよ．
 \end{question}
 
 この関係式(@eq-Fmoves_U) を用いると
@@ -444,7 +452,7 @@ $${#eq-Wilson_loop_action}
 ## 状態と演算子のグラフィカルな表現
 
 ここで状態と演算子に関して，グラフィカルな表現を導入する．
-式 (@eq-U_action)より状態と$U_a$には対応関係があり，$\sqrt{d_a}U_a$に表現$a$のラベルを持った向きのある線を対応させる:
+式(@eq-U_action) より状態と $U_a$ には対応関係があり，$\sqrt{d_a}U_a$ に表現 $a$ のラベルを持った向きのある線を対応させる:
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -487,8 +495,8 @@ $$
 $$
 :::
 
-とClebsch--Gordan係数を対応づける．
-これにより，式(@eq-fusion_U)などに対応して，
+と Clebsch--Gordan 係数を対応づける．
+これにより，式(@eq-fusion_U) などに対応して，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -524,7 +532,7 @@ $$ $${#eq-partition}
 :::
 
 を得る．ここで内線の添字は縮約するものとする．
-計算の詳細は割愛するが，さらに$3$つの$U_a$の積の順番を考慮していくと
+計算の詳細は割愛するが，さらに3つの $U_a$ の積の順番を考慮していくと
 
 
 ::: {.content-visible when-format=html}
@@ -546,10 +554,10 @@ $$ $$ {#eq-Fmove}
 \end{align}
 :::
 
-の関係も導かれる．ここで$[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$は，$F$シンボルと呼ばれるユニタリ行列である．
+の関係も導かれる．ここで$[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$は，$F$-symbol と呼ばれるユニタリ行列である．
 
 これらの代数を用いると，ハミルトニアンの状態への作用が計算できる．
-$\tr U_{d}$ の作用は，$F$シンボルを用いて
+$\tr U_{d}$ の作用は，$F$-symbol を用いて
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -576,8 +584,8 @@ $$
 $$
 :::
 
-と表される．ここで， $a'_0=a'_6$, $\mu_0=\mu_6$, $\mu'_0=\mu'_6$, および $\mu'_7=\mu'_1$である．
-一方，電気的基底を取っているので，$E^2$の作用は，
+と表される．ここで， $a'_0=a'_6$, $\mu_0=\mu_6$, $\mu'_0=\mu'_6$, および $\mu'_7=\mu'_1$ である．
+一方，電気的基底を取っているので，$E^2$ の作用は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -681,7 +689,7 @@ $$
 となりGaussの拘束条件を満たしていることがわかる．
 ここで，$1/\sqrt{d_c}$は規格化因子である．
 \begin{question}
-  式 (@eq-three_point_state) で定義した，$\ket*{\varphi}$が，
+  式(@eq-three_point_state) で定義した，$\ket*{\varphi}$が，
   $\braket{\varphi}{\varphi}=1$を満たすことを確かめよ．
 \end{question}
 一般には係数に位相がついていても良い．$\mathrm{SU}(2)$の場合は，位相をうまく選ぶことによって有向グラフの矢印の向きに依存しないように定式化することもできる．
@@ -700,7 +708,7 @@ $3$点頂点に分解することができるので，$3$点頂点のみのネ�
 ここでは，ひとつの有効な方法として，量子群変形を用いた有限次元近似法を紹介する[@Zache:2023dko,@Hayata:2023puo]．
 量子群$\mathrm{SU}(N)_k$では，Young図の横方向の箱の数の最大値が$k$となる．
 例えば，$\mathrm{SU}(2)_k$の場合は，スピン$j$が$0,1/2,1,\cdots, k/2$の値に制限される．
-量子群変形の利点は，これまでに導入した式(@eq-partition) や(@eq-Fmove) が形式的にはそのまま成り立つ点である．
+量子群変形の利点は，これまでに導入した式(@eq-partition) や (@eq-Fmove) が形式的にはそのまま成り立つ点である．
 ただし，係数が変形される．
 量子群の詳細は割愛し(@sec-q_deformation 節参照)，ここでは，$\mathrm{SU}(2)_k$の場合について照会する．
 
@@ -718,35 +726,43 @@ $$
   0 & \text{その他}
   \end{cases}
 $$ {#eq-fusion_q}
-  となる．表現の次元だった $d_a$ は，量子次元(Frobenius-Perron dimension)と呼ばれ，
+
+となる．表現の次元だった $d_a$ は，量子次元(Frobenius-Perron dimension)と呼ばれ，
 
 $$
     [N_a]^{c}_{b}=N_{ab}^c
 $$ {#eq-N_matrix}
 
 を行列$N_{a}$と見た時の最大固有値で与えられる．これは，パラメータ
+
 $$
   q = \exp\ri \frac{2\pi}{k+2}
 $$
+
 を用いて，
+
 $$
   [n]\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+2}n)}{\sin\qty(\frac{\pi}{k+2})}
 $${#eq-n}
-を定義すると，$d_a=[2j_a+1]$となることが知られている．カットオフ無限大$k\to\infty$では，
-$d_a=2j_a+1$に帰着する．
+
+を定義すると，$d_a=[2j_a+1]$となることが知られている．カットオフ無限大 $k\to\infty$ では，
+$d_a=2j_a+1$ に帰着する．
 
 \begin{question}
   $k=1,2$ の場合に具体的に量子次元を計算し，表現 $j$ の量子次元が $[j+1]$ なることを確かめよ．
 \end{question}
 
 全量子次元は，
+
 $$
   \mathcal{D} \coloneqq \sqrt{\sum_{a}d_a^2}=\sqrt{\frac{k+2}{2}}\frac{1}{\sin\qty(\frac{\pi}{k+2})}
 $$
+
 と定義される．$k$ が大きい場合に $\mathcal{D}\sim (k+2)^{3/2}$ と振る舞う．
 また，2次のCasimir不変量は $[j_a][j_a+1]$ となる．
 
-Wilsonループの作用を計算するためには$F$-movesが必要であった．これは，式(@eq-fmoves) と同様に
+Wilsonループの作用を計算するためには $F$-moves が必要であった．これは，式(@eq-fmoves) と同様に
+
 $$
   [F^{abc}_d]_{ef}=(-1)^{j_a+j_b+j_c+j_d}\sqrt{d_{e}d_{f}}
   \begin{Bmatrix}
@@ -754,8 +770,9 @@ $$
     j_c & j_d & j_f
   \end{Bmatrix}
 $$
+
 と表せる．
-ただし，Wigner $6$-$j $シンボルは，
+ただし，Wigner $6$-$j$ シンボルは，
 
 $$
   \begin{split}
@@ -767,13 +784,15 @@ $$
     \times \frac{([a+b+d+e-z]![a+d+c+f-z]![b+e+c+f-z]!)^{-1}}{[z-a-b-c]![z-a-e-f]![z-d-b-f]![z-d-e-c]!}
   \end{split}
 $$
+
 と修正される．ここで，
+
 $$
   \Delta(a,b,c)=\delta_{abc}\sqrt{\frac{[a+b-c]![a-b+c]![-a+b+c]!}{[a+b+c+1]!}},
 $$
 
 及び，$[n]!=[n][n-1]\cdots [2][1]$である．
-また，$z$が取りうる範囲は，
+また，$z$ が取りうる範囲は，
 
 $$
   \max(a+b+c,a+e+f,d+b+f,d+e+c)\leq z\leq 
@@ -781,7 +800,7 @@ $$
 $$
 である．
 
-また，$2$次のCasimir不変量は$C_2(a)=[j_a][j_a+1]$と変形される．
+また，2次のCasimir不変量は $C_2(a)=[j_a][j_a+1]$ と変形される．
 
 
 <!-- ## 線の向きについて

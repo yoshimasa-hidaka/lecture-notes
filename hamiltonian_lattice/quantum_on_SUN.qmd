@@ -4,25 +4,11 @@
 ゲージ理論は，その局所的な量子力学的な自由度が群構造をもつ系である．
 この節では，ゲージ場の理論の理解に必要な群上に定義された量子力学について概説する．
 
-
-<!-- さて，量子論を展開するためには，交換関係が必要である．
-まず，量子力学の場合に交換関係が何を意味していたか思い出してみよう．実数$x\in\mathbb{R}$を力学変数とした量子力学では，正準運動量$p$との交換関係は，$[x,p]=\ri$と定義される．
-この$p$は，$x$を並進させる変換の生成子とみなすことができる:
-$$
-  e^{\ri p a}x e^{-\ri p a} =x+a.
-$$
-次に$x$が円周$S^1$上の座標の場合を考えよう．円周の長さを$2\pi$に取り$x$と$x+2\pi$は同一視する．
-この場合の交換関係も$[x,p]=\ri$で，$\mathbb{R}$上の場合と同様に$p$は$x$をシフトさせる．しかし，$x$と$x+2\pi$は同一視されるので，$x$そのものは，物理量ではないと言えるだろう．一方$x$を指数にのせた$e^{\ri x}$は，$e^{\ri x}=e^{\ri (x+2\pi)}$が成り立つので物理量となる．この場合，物理量$p$と$e^{\ri x}$の交換関係は，
-$$
-  [p,e^{\ri x}] =e^{\ri x}
-$$
-となり，有限の変換は$e^{\ri pa}e^{\ri x} e^{-\ri pa}=e^{\ri (x+a)}$となる． -->
-
-
 ## $\mathrm{U}(1)$上の量子力学
 
-興味があるのは $\mathrm{SU}(N)$ であるが，まず構造がより単純な $\mathrm{U}(1)$ の場合，つまり座標$x$が円周 $S^1(\simeq\mathrm{U}(1))$ 上の場合の量子論から始める．円周の長さを $2\pi$ に取ると $x$ と $x+2\pi$ は同一視される．
-形式的には正準交換関係 $[x,p]=\ri$ が成り立つが，$x$ と $x+2\pi$ は同一視されるため，$x$ を直接物理量とはみなせない．一方で，位相因子 $U_n = e^{\ri n x}$ ( $n\in\mathbb{Z}$ )は，周期的に定義され，物理量として意味を持つ．このとき，$p$との交換関係は，
+興味があるのは $\mathrm{SU}(N)$ であるが，まず構造がより単純な $\mathrm{U}(1)$ の場合，つまり座標 $x$ が円周 $S^1(\simeq\mathrm{U}(1))$ 上の場合の量子論から始める．円周の長さを $2\pi$ に取ると $x$ と $x+2\pi$ は同一視される．
+形式的には正準交換関係 $[x,p]=\ri$ が成り立つが，$x$ と $x+2\pi$ は同一視されるため，$x$ を直接物理量とはみなせない．
+一方で，位相因子 $U_n = e^{\ri n x}$ ($n\in\mathbb{Z}$) は，周期的に定義され，物理量として意味を持つ．このとき，$p$ との交換関係は，
 $$
   [p,U_n] =nU_n
 $$ {#eq-commutation_relation}
@@ -36,7 +22,7 @@ $$e^{\ri pa}U_n e^{-\ri pa}=e^{\ri na}U_n$$
 
 ### ブラケット表記
 
-Diracのブラケット表記を用いると，座標の固有状態は $\ket{x}$ と書ける．これは周期境界条件 $\ket{x+2\pi}=\ket{x}$ を満たす\footnote{量子論は大域的な位相は観測できないため，より一般には $\ket{x+2\pi}=e^{\ri\theta}\ket{x}$ としてもよい．}．また直交関係 
+Dirac のブラケット表記を用いると，座標の固有状態は $\ket{x}$ と書ける．これは周期境界条件 $\ket{x+2\pi}=\ket{x}$ を満たす\footnote{量子論は大域的な位相は観測できないため，より一般には $\ket{x+2\pi}=e^{\ri\theta}\ket{x}$ としてもよい．}．また直交関係 
 $$\bra{x}\ket{x'}=\delta_{2\pi}(x-x')$$
 および完全性 
  $$1=\int_0^{2\pi} dx\ket{x}\bra{x}$$
@@ -47,7 +33,7 @@ $$
 f(x) = \int_{0}^{2\pi} \dd{x'}  \delta_{2\pi}(x-x') f(x')
 $$
 
-を満たす$2\pi$ -周期デルタ関数である．ここで，$f(x)$ は $\mathrm{U}(1)$ 上の関数である．
+を満たす $2\pi$-周期デルタ関数である．ここで，$f(x)$ は $\mathrm{U}(1)$ 上の関数である．
 一方，周期境界条件から$p$の固有値は整数 $n\in\mathbb{Z}$ に量子化される．その固有状態 $\ket{n}$ は，直交関係
 
 $$
@@ -61,7 +47,7 @@ $$
 
 を満たす．
 
-### Fourier展開
+### Fourier 展開
 
 任意の状態 $\ket{\psi}$ は，座標表示と運動量表示を用いて
 
@@ -72,7 +58,7 @@ $$
 $$
 
 と展開できる．ここで，$\psi(x)=\bra{x}\ket{\psi}$, $\psi^n=\bra{n}\ket{\psi}$ である．
-両者は，Fourier展開を通じて
+両者は，Fourier 展開を通じて
 
 $$
   \psi(x) = \sum_{n\in\mathbb{Z}}\bra{x}\ket{n}\psi^n =\sum_{n\in\mathbb{Z}}\frac{e^{\ri n x}}{\sqrt{2\pi}} \psi^n
@@ -97,7 +83,7 @@ $$ {#eq-E_sU}
 $$
     [T_{ai}, T_{aj}] =\ri f^k_{~ij}T_{ak}
 $$
-の交換関係を満たす．ここで，$f^k_{~ij}$ は構造定数である．$\mathrm{SU}(2)$ の場合は，Levi-Civita記号 $\epsilon_{ijk}$ を用いて，$f^k_{~ij}=\epsilon_{ijk}$ と表される．
+の交換関係を満たす．ここで，$f^k_{~ij}$ は構造定数である．$\mathrm{SU}(2)$ の場合は，$f^k_{~ij}=\epsilon_{ijk}$ である．
 Jacobiの恒等式を用いると定数の不定性を除いて
 $$
   \begin{split}
@@ -161,7 +147,7 @@ $$
   \sum_k[U_{\mathrm{adj}}]^i_k [U_{\mathrm{adj}}]^j_k =\delta^{ij}
 $$
 より，$\delta^{ij}\ER_{i}\ER_{j}=\delta^{ij} \EL_{i}\EL_{j}\eqqcolon E^2$
-が成り立ち，$\ER_i$と $\EL_i$ のいずれから定義しても同じ演算子 $E^2$ が得られる．
+が成り立ち，$\ER_i$ と $\EL_i$ のいずれから定義しても同じ演算子 $E^2$ が得られる．
 
 <!-- \begin{question}
   $[U_{\mathrm{adj}}]_i^j \EL_j = \ER_i$ が，式(@eq-E_sU), (@eq-E_tU) と無矛盾であることを示せ．
@@ -170,7 +156,7 @@ $$
 
 
 
-$[U_{a}]^{m}_{n}$の積は，$\mathrm{SU}(N)$ のClebsch--Gordan係数を用いて
+$[U_{a}]^{m}_{n}$ の積は，$\mathrm{SU}(N)$ のClebsch--Gordan 係数を用いて
 
 $$
   [U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b}
@@ -183,7 +169,7 @@ $${#eq-fusion_U}
 と展開できる．
 ここで，$\mu\in\{1,2,\cdots, N_{ab}^c\}$ は，多重度に対するラベルで $N_{ab}^c$ は既約表現が直積分解の中に何回現れるかを表す多重度である．
 例えば，$\mathrm{SU}(3)$ の場合に，随伴表現の合成は $\mathbf{8} \otimes \mathbf{8}
-= \mathbf{27} \oplus \mathbf{10} \oplus \overline{\mathbf{10}}\oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}$ と分解され，$\mathbf{8}$ が2回現れる．従って $N_{\mathbf{8}\mathbf{8}}^{\mathbf{8}}=2$ となる．$\mathrm{SU}(2)$ の場合は，既約表現の合成で同じ表現が2回現れることはなく，多重度$N_{ab}^c$は，$1$ か $0$ となり，$\mu$ の添字は必要ない．
+= \mathbf{27} \oplus \mathbf{10} \oplus \overline{\mathbf{10}}\oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}$ と分解され，$\mathbf{8}$ が2回現れる．従って $N_{\mathbf{8}\mathbf{8}}^{\mathbf{8}}=2$ となる．$\mathrm{SU}(2)$ の場合は，既約表現の合成で同じ表現が2回現れることはなく，多重度 $N_{ab}^c$ は，$1$ か $0$ となり，$\mu$ の添字は必要ない．
 
 式(@eq-fusion_U) について $m_a=n_a$, $m_b=n_b$ として和を取ると，
 Clebsch--Gordan係数の直交性を用いて
@@ -204,10 +190,10 @@ $$
 また，直交性と完全性は，
 $$
   \begin{split}
-    \bra{g}\ket{g'} = \delta(g^{-1}g'),\quad 1=\int dg \ket{g}\bra{g}
+    \bra{g}\ket{g'} = \delta(g^{-1}g'),\quad 1=\int \dd{g} \ket{g}\bra{g}
   \end{split}
 $$
-で与えられる．$dg$は$\int dg =1$に規格化されたHaar測度で，$\delta(g^{-1}g')$ は，$\int dg' \delta(g^{-1}g')\psi(g')=\psi(g)$ を満たすデルタ関数である．
+で与えられる．$\dd{g}$ は $\int \dd{g} =1$ に規格化された Haar 測度で，$\delta(g^{-1}g')$ は，$\int \dd{g'} \delta(g^{-1}g')\psi(g')=\psi(g)$ を満たすデルタ関数である．
 
 
 ### 電気的基底
@@ -238,9 +224,9 @@ $$
 
 $\mathrm{U}(1)$ の場合と同様に状態は，
 $$
-\ket{\psi} = \int dg \psi(g)\ket{g} =  \sum_a\sum_{m_a,n_a} [\psi^a]_{m_a}^{n_a}\ket{a,m_a,n_a}
+\ket{\psi} = \int \dd{g} \psi(g)\ket{g} =  \sum_a\sum_{m_a,n_a} [\psi^a]_{m_a}^{n_a}\ket{a,m_a,n_a}
 $$
-の形で書ける．ここで，$\psi(g) = \bra{g}\ket{\psi}$および，$[\psi^a]_{m_a}^{n_a}=\bra{a,m_a,n_a}\ket{\psi}$ である．
+の形で書ける．ここで，$\psi(g) = \bra{g}\ket{\psi}$　および，$[\psi^a]_{m_a}^{n_a}=\bra{a,m_a,n_a}\ket{\psi}$ である．
 $\psi(g)$ と $[\psi^a]_{m_a}^{n_a}$ は，Peter--Weyl 定理により
 $$
   \psi(g) = \sum_{a}\sum_{m_a,n_a}\bra{g}\ket{a,m_a,n_a}[\psi^a]_{m_a}^{n_a} =\sum_{a}\sum_{m_a,n_a}\sqrt{d_a}[D_a]^{m_a}_{n_a}(g) [\psi^a]_{m_a}^{n_a}

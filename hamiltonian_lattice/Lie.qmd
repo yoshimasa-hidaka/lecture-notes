@@ -179,7 +179,7 @@ $$
   [J_+,J_-]  = 2 J_0
 $$
 
-となる．$2$次のCasimir演算子$J^2$は，
+となる．2次のCasimir演算子$J^2$は，
 
 $$
   J^2=\sum_{i=1}^3J_i^2=J_+J_-+J_0^2-J_0=J_-J_++J_0^2+J_0
@@ -216,18 +216,20 @@ $j$は，$j\in\frac{1}{2}\mathbb{Z}$ の非負の整数，半整数の値を取�
 
 ### Wignerの$D$行列
 
-$\mathrm{SU}(2)$の元$g$に対応した演算子$U_g=\exp\ri\theta^i J_i$と書くことにする．Wignerの$D$行列(表現行列)は，$U_g$の状態$\ket{j,m}$への作用を表す:
+$\mathrm{SU}(2)$の元$g$に対応した演算子を
+
+$$
+  U_g=\exp\ri\theta^i J_i
+$$
+
+と書くことにする．
+Wigner の $D$ 行列（表現行列）は，$U_g$ の状態 $\ket{j,m}$ への作用を表すものである:
 
 $$
   [D_j]^m_n(g)\coloneqq \bra{j,m}U_g\ket{j,n} \,.
 $$ {#eq-Wigner_matrix}
 
-Lie代数の表現$j$に対する行列要素
-$$
-[T_{ji}]^m_{n} \coloneqq \bra{j,m}J_i\ket{j,n}
-$$
-
-を導入すると，
+Lie代数の表現 $j$ に対する行列要素 $[T_{ji}]^m_{n} \coloneqq \bra{j,m}J_i\ket{j,n}$ を導入すると，
 
 $$
 [D_j(g)]^m_{n} = [\exp(\ri\theta^i T_{ji})]^{m}_{n}
@@ -244,8 +246,9 @@ $$ {#eq-su2-D-orthogonality}
 
 ### 表現の合成
 
-次にふたつの表現 $j_a$ と $j_b$ の合成を考える．本稿では，しばしば表現のラベルに $a,b,c,d,\cdots$ を用いる．表現の添字は，$\mathcal{Q}_{j_a}$ や，$j$ を略して $\mathcal{Q}_{a}$ と書くことがある．
-$2$つの表現を合成(直積)するとそれは既約表現の直和に分解する:
+次に2つの表現 $j_a$ と $j_b$ の合成を考える．本稿では，しばしば表現のラベルに $a,b,c,d,\cdots$ を用いる．
+表現の添字は，$\mathcal{Q}_{j_a}$ や $j$ を略して $\mathcal{Q}_{a}$ と書くことがある．
+2つの表現を合成(直積)するとそれは既約表現の直和に分解する:
 
 $$
     \mathcal{Q}_{j_{a}}\otimes \mathcal{Q}_{j_{b}} = (\mathcal{Q}_{j_{a}+j_{b}})\oplus \mathcal{Q}_{j_{a}+j_{b}-1}\oplus\cdots \oplus \mathcal{Q}_{|j_{a}-j_{b}|}
@@ -266,7 +269,7 @@ $$
  \end{cases}
 $$ {#eq-fusion_delta}
 
-を導入した．$N_{ab}^{c}$ はfusion係数またはテンソル積係数と呼ばれる．
+を導入した．$N_{ab}^{c}$ は fusion 係数またはテンソル積係数と呼ばれる．
 本稿では，$\delta_{abc}=1$ を満たす $j_a,j_b,j_c$を，$j_a,j_b,j_c$ が三角不等式を満たすという．
 例えば，$j_a=1$ と $j_b=1/2$ とすると，三角不等式を満たす $j_c$ は，$3/2$ または，$1/2$ となる．したがって，
 
@@ -299,9 +302,9 @@ $$
 $$
 
 と表せる．ここで，
-$\braket{j_am_a\, j_bm_b}{j_cm_c}$ はClebsch-Gordan係数である．
+$\braket{j_am_a\, j_bm_b}{j_cm_c}$ は Clebsch-Gordan 係数である．
 $j_c$, および $m_c$ が取りうる値は
-$j_c\in \{|j_a-j_b|,|j_a-j_b|+1,\cdots, j_a+j_b\}$及び，$m_c\in\{-j_c,-j_c+1,\cdots j_c\}$ である．
+$j_c\in \{|j_a-j_b|,|j_a-j_b|+1,\cdots, j_a+j_b\}$ 及び，$m_c\in\{-j_c,-j_c+1,\cdots j_c\}$ である．
 これは，$\mathcal{Q}_{c}\to \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ の写像を与える．
 また，
 
@@ -444,7 +447,7 @@ $$
 となる．
 
 \begin{question}
-  $2$つの表現$j_a$, $j_b$を合成し$1$重項を作り，
+  2つの表現$j_a$, $j_b$を合成し1重項を作り，
   Clebsch-Gordan係数$\braket{j_am_a\, j_bm_b}{00}$を具体的に求めよ．
 \end{question}
 
@@ -477,7 +480,7 @@ $$ \begin{aligned}
      \braket{j_am_a\, j_bm_b}{j_{e},m_{e}}
    \braket{j_{e}m_{e}\, j_cm_c}{j_d,m_d}
  \end{aligned}$$
-となる．一方，先に $j_b$ と j_c$ を合成し，$j_{f}$ を作り，その後$j_a$を合成すると，
+となる．一方，先に $j_b$ と $j_c$ を合成し，$j_{f}$ を作り，その後，$j_a$ を合成すると，
 
 $$
   \begin{split}
@@ -542,7 +545,7 @@ $$
     \end{split}
 $${#eq-F-move_def}
 
-となる．Wigner $6$-$j$シンボルを用いると，よりコンパクトに
+となる．Wigner $6$-$j$ シンボルを用いると，よりコンパクトに
 
 $$
   [F^{abc}_d]_{ef}=(-1)^{j_a+j_b+j_c+j_d}\sqrt{d_{e}d_{f}}
@@ -553,7 +556,8 @@ $$
 $${#eq-fmoves}
 
 と表せることが知られている．
-Wigner $6$-$j$シンボルは，
+Wigner $6$-$j$ シンボルは，
+
 $$
   \begin{split}
     \begin{Bmatrix}
@@ -564,16 +568,21 @@ $$
     \times \frac{((a+b+d+e-z)!(a+d+c+f-z)!(b+e+c+f-z)!)^{-1}}{(z-a-b-c)!(z-a-e-f)!(z-d-b-f)!(z-d-e-c)!}
   \end{split}
 $$
+
 と表せる．ここで
+
 $$
   \Delta(a,b,c)=\delta_{abc}\sqrt{\frac{(a+b-c)!(a-b+c)!(-a+b+c)!}{(a+b+c+1)!}}
 $$
+
 である．
-また，$z$が取りうる範囲は，
+また，$z$ が取りうる範囲は，
+
 $$
   \max(a+b+c,a+e+f,d+b+f,d+e+c)\leq z\leq 
   \min(a+b+d+e,a+d+c+f,b+e+c+f)
 $$
+
 である．
 
 
@@ -596,7 +605,7 @@ $$
 $$
 
 を満たす．
-また，$F$-symbolは，以下の関係を満たす(pentagon equation):
+また，$F$-symbol は，以下の関係を満たす(pentagon equation):
 
 $$
   [F_e^{fcd}]_{gl} [F_e^{abl}]_{fk} 
@@ -604,8 +613,8 @@ $$
 $$ {#eq-pentagon}
 
 \begin{question}
-  スピン$1/2$を$3$つを合成する問題を考える．
-  これは，表現の次元を使って表すと$2\otimes 2\otimes 2=4\oplus 2\oplus 2$分解される．そこで，$a=b=c=d=1/2$となる場合を考え，$F$-symbolが
+  スピン $1/2$ を 3つを合成する問題を考える．
+  これは，表現の次元を使って表すと$2\otimes 2\otimes 2=4\oplus 2\oplus 2$分解される．そこで，$a=b=c=d=1/2$ となる場合を考え，$F$-symbol が
   $$ \begin{aligned}
     [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{00}&=-\frac{1}{2},\quad
     [F_{\frac{1}{2}}^{\frac{1}{2}\frac{1}{2}\frac{1}{2}}]_{11}=\frac{1}{2},\\
@@ -616,62 +625,65 @@ $$ {#eq-pentagon}
 \end{question}
 
 
-<!-- %  $$ \begin{aligned}
-%    \ket{\qty(\frac{1}{2}\frac{1}{2})0\frac{1}{2};\uparrow}&=
-%    \frac{\sqrt{3}}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}-\frac{1}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow}\\
-%   \end{aligned}$$
-%  $$ \begin{aligned}
-%    \ket{\qty(\frac{1}{2}\frac{1}{2})1\frac{1}{2};\uparrow}&=
-%    \frac{1}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}+\frac{\sqrt{3}}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow}\\
-%   \end{aligned}$$
-%  $$ \begin{aligned}
-%    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});11}=\ket{\bar{\downarrow}}\ket{\uparrow},\\
-%    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});10}=\frac{1}{\sqrt{2}}\qty(\ket{\bar{\downarrow}}\ket{\downarrow}-\ket{\bar{\uparrow}}\ket{\uparrow}),\\
-%    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});1-1}=\ket{\bar{\uparrow}}\ket{\downarrow},\\
-%    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});0}=\frac{1}{\sqrt{2}}\qty(\ket{\bar{\uparrow}}\ket{\uparrow}+\ket{\bar{\downarrow}}\ket{\downarrow}),\\
-%   \end{aligned}$$
+<!-- $$ \begin{aligned}
+    \ket{\qty(\frac{1}{2}\frac{1}{2})0\frac{1}{2};\uparrow}&=
+    \frac{\sqrt{3}}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}-\frac{1}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow}\\
+\end{aligned}$$
 
-%  $$
-%    \braket{j_cm_c}{j_am_a\, j_bm_b}
-%    =(-1)^{j_{a}-j_{b}+m_{c}}\sqrt{d_c}
-%    \begin{pmatrix}
-%      j_a & j_b & j_c\\
-%      m_a & m_b & -m_c
-%    \end{pmatrix}
-%  $$
-%  $$
-%    \begin{split}
-%      \braket{j_cm_c\, j_bm_b}{j_am_a}
-%      &=(-1)^{j_{c}-j_{b}+m_{a}}\sqrt{d_a}
-%      \begin{pmatrix}
-%        j_c & j_b & j_a\\
-%        m_c & m_b & -m_a
-%      \end{pmatrix}\\
-%      &=(-1)^{j_{c}-j_a+m_{b}}
-%      \frac{\sqrt{d_a}}{\sqrt{d_c}}
-%      \braket{j_cm_c}{j_am_a\, j_b-m_b}\\
-%      &=(-1)^{j_{c}-j_a-j_b}
-%      \frac{\sqrt{d_a}\sqrt{d_b}}{\sqrt{d_c}}
-%      \sum_{l_b}\braket{j_cm_c}{j_am_a\, j_bl_b}\braket{j_bl_b\, j_bm_b}{00}
-%    \end{split}
-%  $$
-%  $$
-%    \begin{split}
-%      \braket{j_cm_c}{j_am_a\, j_bm_b}
-%      &=(-1)^{j_{a}-j_c+m_{b}}\frac{\sqrt{d_c}}{\sqrt{d_a}}
-%      (-1)^{j_c-j_b+m_a}\sqrt{d_a}\begin{pmatrix}
-%        j_c & j_b & j_a\\
-%        m_c & -m_b & -m_a
-%      \end{pmatrix}\\
-%      &=(-1)^{j_{a}-j_c-j_b}\frac{\sqrt{d_cd_b}}{\sqrt{d_a}}
-%      \sum_{l_b}\braket{00}{j_bl_b\, j_bm_b}
-%      \braket{j_cm_c\, j_bl_b}{j_am_a}
-%      \end{split}
-%  $$ -->
+$$ \begin{aligned}
+    \ket{\qty(\frac{1}{2}\frac{1}{2})1\frac{1}{2};\uparrow}&=
+    \frac{1}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})1;\uparrow}+\frac{\sqrt{3}}{2}\ket{\frac{1}{2}\qty(\frac{1}{2}\frac{1}{2})0;\uparrow}\\
+   \end{aligned}$$
+$$ \begin{aligned}
+    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});11}=\ket{\bar{\downarrow}}\ket{\uparrow},\\
+    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});10}=\frac{1}{\sqrt{2}}\qty(\ket{\bar{\downarrow}}\ket{\downarrow}-\ket{\bar{\uparrow}}\ket{\uparrow}),\\
+    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});1-1}=\ket{\bar{\uparrow}}\ket{\downarrow},\\
+    \ket{\qty(\bar{\frac{1}{2}}\frac{1}{2});0}=\frac{1}{\sqrt{2}}\qty(\ket{\bar{\uparrow}}\ket{\uparrow}+\ket{\bar{\downarrow}}\ket{\downarrow}),\\
+\end{aligned}$$
 
-### Clebsch-Gordan係数の演算のグラフィカルな表現 {#sec-graphical_Clebsch-Gordan}
+$$
+    \braket{j_cm_c}{j_am_a\, j_bm_b}
+    =(-1)^{j_{a}-j_{b}+m_{c}}\sqrt{d_c}
+    \begin{pmatrix}
+      j_a & j_b & j_c\\
+      m_a & m_b & -m_c
+    \end{pmatrix}
+$$
 
-Clebsch-Gordan係数を図を使って表現するといろいろ便利である．
+$$
+    \begin{split}
+      \braket{j_cm_c\, j_bm_b}{j_am_a}
+      &=(-1)^{j_{c}-j_{b}+m_{a}}\sqrt{d_a}
+      \begin{pmatrix}
+        j_c & j_b & j_a\\
+        m_c & m_b & -m_a
+      \end{pmatrix}\\
+      &=(-1)^{j_{c}-j_a+m_{b}}
+      \frac{\sqrt{d_a}}{\sqrt{d_c}}
+      \braket{j_cm_c}{j_am_a\, j_b-m_b}\\
+      &=(-1)^{j_{c}-j_a-j_b}
+      \frac{\sqrt{d_a}\sqrt{d_b}}{\sqrt{d_c}}
+      \sum_{l_b}\braket{j_cm_c}{j_am_a\, j_bl_b}\braket{j_bl_b\, j_bm_b}{00}
+    \end{split}
+$$
+
+$$
+\begin{split}
+      \braket{j_cm_c}{j_am_a\, j_bm_b}
+      &=(-1)^{j_{a}-j_c+m_{b}}\frac{\sqrt{d_c}}{\sqrt{d_a}}
+      (-1)^{j_c-j_b+m_a}\sqrt{d_a}\begin{pmatrix}
+        j_c & j_b & j_a\\
+        m_c & -m_b & -m_a
+      \end{pmatrix}\\
+      &=(-1)^{j_{a}-j_c-j_b}\frac{\sqrt{d_cd_b}}{\sqrt{d_a}}
+      \sum_{l_b}\braket{00}{j_bl_b\, j_bm_b}
+      \braket{j_cm_c\, j_bl_b}{j_am_a}
+      \end{split}
+$$ -->
+
+### Clebsch-Gordan 係数の演算のグラフィカルな表現 {#sec-graphical_Clebsch-Gordan}
+
+Clebsch-Gordan 係数を図を使って表現するといろいろ便利である．
 まず，2点頂点は，
 
 ::: {.content-visible when-format=html}
@@ -768,7 +780,6 @@ $$
 :::
 
 となる．
-
 3つの表現の合成に対応するダイアグラムは，
 
 ::: {.content-visible when-format=html}
@@ -835,7 +846,7 @@ $$
 $$
 :::
 
-と表すことができる．また，$F$-symbolは，
+と表すことができる．また，$F$-symbol は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -856,7 +867,7 @@ $$
 $$
 :::
 
-と表現され，$F$自身は，
+と表現され，$F$-symbol 自身は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -891,65 +902,85 @@ $$
 
 より得られる．
 
-<!-- %  $[F^{abc}_d]_{ef}$は，$d\to abc$の分解(または$3$つの表現の合成)に関するものであるが，
-%  同様に$cd\to ab$の分解に関する$[F_{cd}^{ab}]_{ef}$も定義できる:
-%  $$
-%    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22a.pdf}}
-%    =
-%    \sum_{f}[F^{ab}_{cd}]_{ef}
-%    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22b.pdf}}.
-%    \label{eq-Fmove2}
-%  $$
-%  これは，
-%  $$
-%    [F^{ab}_{cd}]_{ef}=\sqrt{\frac{d_ed_f}{d_ad_d}}[F_f^{ceb}]^*_{ad}
-%    \label{eq-FandF}
-%  $$
-%  の関係がある．
-%  \begin{question}
-%    式\eqref{eq-FandF}を示せ．
-%  \end{question}
-%  式\eqref{eq-Fmove2}の左の図が，
-%  $$
-%    \sum_{m_a,m_b,m_e}\braket{j_am_a}{j_cm_c\, j_em_e}
-%    \braket{j_em_e\,j_bm_b}{j_dm_d}
-%    \ket{j_a,m_a}\ket{j_b,m_b}
-%  $$
-%  で，右の図が
-%  $$
-%    \sum_{m_a,m_b,m_f}\braket{j_am_a\,j_bm_b}{j_fm_f}
-%    \braket{j_fm_f}{j_cm_c\, j_dm_d}
-%    \ket{j_a,m_a}\ket{j_b,m_b}
-%  $$
-%  に対応することに注意して，
-%  $[F_{cd}^{ab}]_{ef}$は，
-%  $$
-%    [F_{cd}^{ab}]_{ef}=\sum_{m_a,m_b,m_e,m_f}
-%    \braket{j_am_a}{j_cm_c\, j_em_e}
-%    \braket{j_em_e\,j_bm_b}{j_dm_d}
-%  % 
-%  \braket{j_fm_f}{j_am_a\,j_bm_b}
-%  \braket{j_cm_c\, j_dm_d}{j_fm_f}
-%  $$
-%  と表すことができる．
-%  一方，$[F_f^{ceb}]^*_{ad}$は，式\eqref{F-move_def}より，
-%  $$
-%    \begin{split}
-%      [F_f^{ceb}]^*_{ad}&=[F_f^{ceb}]_{ad}\\
-%      &=
-%    \end{split}
-%  $$
-%  $$
-%    \begin{split}
-%      &    [F^{ceb}_{f}]_{ad}\\
-%  &=  \sum_{m_{c},m_{e},m_{b},m_{a} m_{d}}
-%  \braket{j_{c}m_{c}\, j_{e}m_{e}}{j_{a}m_{a}}
-%  \braket{j_{a}m_{a}\, j_{b}m_{b}}{j_{f}m_{f}}
-%  \braket{j_{d}m_{d}}{ j_{e}m_{e}\, j_{b}m_{b} }
-%  \braket{j_{f}m_{f}}{j_{c}m_{c}\, j_{d}m_{d}}
-%      \end{split}
-%  $$ -->
+<!-- $[F^{abc}_d]_{ef}$ は，$d\to abc$ の分解(または3つの表現の合成)に関するものであるが，
+同様に $cd\to ab$ の分解に関する $[F_{cd}^{ab}]_{ef}$ も定義できる:
 
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove22a.svg" style="height:5.5em;">
+    <span class="math display" style="display:inline-block;">
+    $$=\sum_{f}[F^{ab}_{cd}]_{ef}$$
+  </span>
+  <img src="figs/fmove22b.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22a.pdf}}
+    =
+    \sum_{f}[F^{ab}_{cd}]_{ef}
+    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22b.pdf}}.
+    \label{eq-Fmove2}
+$$
+:::
+
+これは，
+$$
+    [F^{ab}_{cd}]_{ef}=\sqrt{\frac{d_ed_f}{d_ad_d}}[F_f^{ceb}]^*_{ad}
+$$ {#eq-FandF}
+
+  の関係がある．
+
+\begin{question}
+    式(@eq-FandF) を示せ．
+\end{question}
+
+式(@eq-Fmove2) の左の図が，
+$$
+    \sum_{m_a,m_b,m_e}\braket{j_am_a}{j_cm_c\, j_em_e}
+    \braket{j_em_e\,j_bm_b}{j_dm_d}
+    \ket{j_a,m_a}\ket{j_b,m_b}
+$$
+
+  で，右の図が
+$$
+    \sum_{m_a,m_b,m_f}\braket{j_am_a\,j_bm_b}{j_fm_f}
+    \braket{j_fm_f}{j_cm_c\, j_dm_d}
+    \ket{j_a,m_a}\ket{j_b,m_b}
+$$
+
+に対応することに注意して，$[F_{cd}^{ab}]_{ef}$ は，
+
+$$
+[F_{cd}^{ab}]_{ef}=\sum_{m_a,m_b,m_e,m_f}
+    \braket{j_am_a}{j_cm_c\, j_em_e}
+    \braket{j_em_e\,j_bm_b}{j_dm_d}
+  \braket{j_fm_f}{j_am_a\,j_bm_b}
+  \braket{j_cm_c\, j_dm_d}{j_fm_f}
+$$
+
+と表すことができる．
+一方，$[F_f^{ceb}]^*_{ad}$ は，式\eqref{F-move_def} より，
+
+$$
+    \begin{split}
+      [F_f^{ceb}]^*_{ad}&=[F_f^{ceb}]_{ad}\\
+      &=
+    \end{split}
+$$
+$$
+    \begin{split}
+      &    [F^{ceb}_{f}]_{ad}\\
+  &=  \sum_{m_{c},m_{e},m_{b},m_{a} m_{d}}
+  \braket{j_{c}m_{c}\, j_{e}m_{e}}{j_{a}m_{a}}
+  \braket{j_{a}m_{a}\, j_{b}m_{b}}{j_{f}m_{f}}
+  \braket{j_{d}m_{d}}{ j_{e}m_{e}\, j_{b}m_{b} }
+  \braket{j_{f}m_{f}}{j_{c}m_{c}\, j_{d}m_{d}}
+      \end{split}
+$$
+ -->
 
 
 
@@ -992,7 +1023,7 @@ $${#eq-deform2}
 が成り立つが示せる．
 
 ## $\mathrm{SU}(N)$群
-
+<!-- 
 $\mathrm{SU}(2)$群でみてきたものを $\mathrm{SU}(N)$群に拡張する．
 
 
@@ -1032,4 +1063,4 @@ $$
   \sum_{i}[T_i]^j_k [T_i]^l_m = \frac{1}{2}\qty(\delta^j_m\delta^l_k-\frac{1}{N}\delta^j_k\delta^l_m)
 $$
 
-を満たす．
+を満たす． -->
