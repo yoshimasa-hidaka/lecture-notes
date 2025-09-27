@@ -587,7 +587,7 @@ $$
 
 ::: {.callout-note collapse="true"}
 ## Pythonでの $F$-symbol の実装
-```{python}
+```python
 import sympy as sp
 from sympy import sqrt, Rational
 from sympy.physics.wigner import wigner_6j
@@ -614,7 +614,7 @@ def f_symbol(ja, jb, jc, jd, je, jf) -> sp.Expr:
     return sp.simplify(res)
 
 # サンプル計算
-f_symbol(Rational(1,2), Rational(1,2), Rational(1,2), Rational(1,2), 1, 0)
+#f_symbol(Rational(1,2), Rational(1,2), Rational(1,2), Rational(1,2), 1, 0)
 ```
 :::
 
