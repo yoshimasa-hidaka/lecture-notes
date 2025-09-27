@@ -209,49 +209,6 @@ $$
 
 と記述される．これらは，具体系は書かないが，$[R^{ab}]_{\mu\nu}$ と $F$-symbols は，無矛盾条件(Hexagon equations)を満たす．
 
-<!-- % Let us use the deformation rules to derive some relations.
-% A Wilson loop with representation $a$ is graphically represented as
-% \begin{align}
-%   \tr U_a =\  \parbox{2.cm}{\includegraphics[scale=0.3]{figs/loopa2.pdf}}.
-% \end{align}
-% {Here, we introduced a defect at the center of the loop to prevent it from collapsing when contracted.
-% When the defect is absent, it reduced to}
-% \begin{align}\label{eq-loop_deformation}
-%   \parbox{2.cm}{\includegraphics[scale=0.3]{figs/loopa1.pdf}} = d_a,
-% \end{align}
-% by choosing $b=\bar{a}$ and $c=0$ in eq.~(@eq-stacking).
-% Two Wilson loops with representations $a$ and $b$ can be deformed using eqs~(@eq-stacking) and (@eq-partition) to 
-% \begin{align}
-% \label{eq-wilsonloop_fusion_graph}
-%   \parbox{2.cm}{\includegraphics[scale=0.3]{figs/loopab1.pdf}}
-%   &=\sum_{\mu,c}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}\ \parbox{2.2cm}{\includegraphics[scale=0.3]{figs/loopab2.pdf}}
-%   =\sum_{\mu,c}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}\  \parbox{2.2cm}{\includegraphics[scale=0.3]{figs/loopab3.pdf}}\notag\\
-%   &=\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}\frac{\sqrt{d_{\bar{b}} d_{\bar{a}}}}{\sqrt{d_{\bar{c}}}}\  \parbox{2.cm}{\includegraphics[scale=0.3]{figs/loopc.pdf}}
-%   =\sum_{c}N_{ab}^c\  \parbox{2.cm}{\includegraphics[scale=0.3]{figs/loopc.pdf}}.
-% \end{align}
-% In the last equality, we used $d_{\bar{a}}=d_{a}$, etc.
-% This leads to the fusion rule of Wilson loops:
-% $$% \label{eq-wilsonloop_fusion}
-%   \tr U_a \tr U_b = \sum_{c}N_{ab}^c\tr U_c.
-% $$% Furthermore, using eq.~(@eq-loop_deformation}, we obtain
-% $$\label{eq-dadb}
-%   d_{a}d_{b} =\sum_{c}N_{ab}^c d_c.
-% $$% Let us derive the inverse relation of eq.~(@eq-dadb}.
-% Noting $d_{\bar{b}}=d_{b}$, $d_{\bar{c}}=d_{c}$, and $N_{a\bar{b}}^{\bar{c}}=N_{ac}^b$, we obtain
-% $$%   d_{a}d_{b} =\sum_{c}N_{ac}^{b} d_c.
-% $$% Multiplying both sides by $d_a$ and summing over $a$ yield
-% the inverse relation of eq.~(@eq-dadb},
-% $$\label{eq-inverser_dadb}
-%   \mathcal{D}^2 d_{b} =\sum_{a,c}N_{ac}^{b} d_a d_c.
-% $$% where $\mathcal{D}$ is the total quantum dimension defined by 
-% $$%   \mathcal{D} \coloneqq \sqrt{\sum_{a}d_a^2}.
-% $$% In a gauge theory, of course, the Wilson lines are generally not topological. However, as will be seen later, these rules play a crucial role in computing the action of the operators on a physical state. -->
-
-
-
-
-
-
 
 以下の量も導入しておくと便利である．
 $S$ 行列\footnote{散乱理論の$S$行列ではない点に注意.}は，
@@ -284,16 +241,16 @@ $S$ 行列\footnote{散乱理論の$S$行列ではない点に注意.}は，
   </span>
   <img src="figs/b.svg" style="height:5.0em;">
 </div>
-$$ $${#eq-link}
+$$ $$ {#eq-link}
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{align}
+\begin{equation}
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/sab.pdf}}}
-=\frac{S_{ab}}{S_{0b}}\,\,
-\vcenter{\hbox{\includegraphics[scale=0.3]{figs/b.pdf}}}
-\end{align}
-:::{#eq-link}
+    =\frac{S_{ab}}{S_{0b}}\,\,
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/b.pdf}}}
+\end{equation} {#eq-link}
+:::
 
 が成り立つ．
 
@@ -301,7 +258,7 @@ $$ $${#eq-link}
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/vacuumLine.svg" style="height:5.5em;">
+  <img src="figs/vacuumLine.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
     $$=\frac{1}{\mathcal{D}}\sum_{a}d_a$$
   </span>
@@ -347,7 +304,7 @@ $$ $${#eq-link}
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/vacuumLoop0.svg" style="height:5.5em;">
+  <img src="figs/vacuumLoop0.svg" style="height:4.0em;">
   <span class="math display" style="display:inline-block;">
     $$=\mathcal{D}$$
   </span>
@@ -366,11 +323,11 @@ $$ $${#eq-link}
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/vacuumDoubleLoop.svg" style="height:5.5em;">
+  <img src="figs/vacuumDoubleLoop.svg" style="height:4.0em;">
   <span class="math display" style="display:inline-block;">
     $$=\mathcal{D}$$
   </span>
-  <img src="figs/vacuumLoop.svg" style="height:5.5em;">
+  <img src="figs/vacuumLoop.svg" style="height:4.0em;">
 </div>
 :::
 
@@ -395,7 +352,7 @@ $$ $${#eq-link}
    <span class="math display" style="display:inline-block;">
     $$=\sum_{b}S_{ab}$$
   </span>
-  <img src="figs/b.svg" style="height:5.5em;">
+  <img src="figs/b.svg" style="height:5.0em;">
 </div>
 :::
 
@@ -409,3 +366,112 @@ $$ $${#eq-link}
 :::
 
 となる．
+
+
+ Let us use the deformation rules to derive some relations.
+ A Wilson loop with representation $a$ is graphically represented as
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$\tr U_a =$$
+  </span>
+  <img src="figs/loopa2.svg" style="height:4.0em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{equation}
+   \tr U_a = \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loopa2.pdf}}}.
+\end{equation}
+:::
+ 
+ Here, we introduced a defect at the center of the loop to prevent it from collapsing when contracted.
+ When the defect is absent, it reduced to
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/loopa1.svg" style="height:4.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=d_a$$
+  </span>
+</div>
+$$ $$ {#eq-loop_deformation}
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}\label{eq-loop_deformation}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loopa1.pdf}}} = d_a,
+  \end{align}
+:::
+
+
+ by choosing $b=\bar{a}$ and $c=0$ in eq.~(@eq-stacking).
+ Two Wilson loops with representations $a$ and $b$ can be deformed using eqs~(@eq-stacking) and (@eq-partition) to 
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/loopab1.svg" style="height:4.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{\mu,c}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}$$
+  </span>
+  <img src="figs/loopab2.svg" style="height:4.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{\mu,c}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}$$
+  </span>
+  <img src="figs/loopab3.svg" style="height:4.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}\frac{\sqrt{d_{\bar{b}} d_{\bar{a}}}}{\sqrt{d_{\bar{c}}}}$$
+  </span>
+  <img src="figs/loopc.svg" style="height:4.0em;">
+    <span class="math display" style="display:inline-block;">
+    $$=\sum_{c}N_{ab}^c$$
+  </span>
+  <img src="figs/loopc.svg" style="height:4.0em;">
+</div>
+$$ $${#eq-wilsonloop_fusion_graph}
+:::
+
+::: {.content-visible when-format=pdf}
+ \begin{align}
+ \label{eq-wilsonloop_fusion_graph}
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loopab1.pdf}}}
+   &=\sum_{\mu,c}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}\ 
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loopab2.pdf}}}
+   =\sum_{\mu,c}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}\  
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loopab3.pdf}}}\notag\\
+   &=\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_ad_b}}\frac{\sqrt{d_{\bar{b}} d_{\bar{a}}}}{\sqrt{d_{\bar{c}}}}\  
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loopc.pdf}}}
+   =\sum_{c}N_{ab}^c\  
+   \vcenter{\hbox{includegraphics[scale=0.3]{figs/loopc.pdf}}}.
+ \end{align}
+:::
+
+
+ In the last equality, we used $d_{\bar{a}}=d_{a}$, etc.
+ This leads to the fusion rule of Wilson loops:
+
+$$
+   \tr U_a \tr U_b = \sum_{c}N_{ab}^c\tr U_c.
+$$ {#eq-wilsonloop_fusion}
+
+ Furthermore, using eq.~(@eq-loop_deformation), we obtain
+ 
+$$
+   d_{a}d_{b} =\sum_{c}N_{ab}^c d_c.
+$$ {#eq-dadb}
+ 
+ Let us derive the inverse relation of eq.~(@eq-dadb).
+ Noting $d_{\bar{b}}=d_{b}$, $d_{\bar{c}}=d_{c}$, and $N_{a\bar{b}}^{\bar{c}}=N_{ac}^b$, we obtain
+ 
+$$ 
+   d_{a}d_{b} =\sum_{c}N_{ac}^{b} d_c.
+$$
+ 
+ Multiplying both sides by $d_a$ and summing over $a$ yield
+ the inverse relation of eq.~(@eq-dadb),
+
+$$\label{eq-inverser_dadb}
+   \mathcal{D}^2 d_{b} =\sum_{a,c}N_{ac}^{b} d_a d_c.
+$$
+
