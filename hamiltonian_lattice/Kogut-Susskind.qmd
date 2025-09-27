@@ -45,12 +45,12 @@
 つまり，基本的な演算子は $\ER_i(e)$, $\EL_i(e)$, $U_a(e)$ である．
 これらの正準交換関係は，
 $$
-  [\ER_{i}(e),U_a(e')] =U_a(e) T_{ai}\delta_{e,e'}, \quad
-  [\ER_{i}(e),\ER_{j}(e')]=\ri f^{k}_{~ij}\ER_{k}(e)\delta_{e,e'},
+  [\ER_{i}(e),U_a(e')] =U_a(e) T_{ai}\delta_{e,e'}\,, \quad
+  [\ER_{i}(e),\ER_{j}(e')]=\ri f^{k}_{~ij}\ER_{k}(e)\delta_{e,e'}\,,
 $$ {#eq-E_tUfield}
 
 $$
-  [\EL_{i}(e),U_a(e')] =T_{ai}U_{a}(e)\delta_{e,e'} ,\quad
+  [\EL_{i}(e),U_a(e')] =T_{ai}U_{a}(e)\delta_{e,e'} \,,\quad
 [\EL_{i}(e),\EL_{j}(e')] =-\ri f^k_{~ij}\EL_{k}(e)\delta_{e,e'}
 $${#eq-E_tE_tfield}
 
@@ -466,7 +466,7 @@ $${#eq-Wilson_loop_action}
 ::: {.content-visible when-format=pdf}
 $$
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-   =  \sqrt{d_a}U_a.
+   =  \sqrt{d_a}U_a\,.
 $$
 :::
 
@@ -476,7 +476,7 @@ $$
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/abcmu.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
-    $$= \braket{a,n_a;\, b,n_b}{c,m_c;\mu}\frac{1}{\sqrt{d_c}}, $$
+    $$= \braket{a,n_a;\, b,n_b}{c,m_c;\mu}\frac{1}{\sqrt{d_c}}\,, $$
   </span>
   <img src="figs/cabmu.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
@@ -505,7 +505,7 @@ $$
     $$= \sum_{c,\mu}\sqrt{\frac{d_c}{d_ad_b}}$$
   </span>
   <img src="figs/parallel2mu.svg" style="height:5.0em;">
-  <span class="math display" style="display:inline-block;">$$,$$</span>
+  <span class="math display" style="display:inline-block;">$$\,,$$</span>
 </div>
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -720,8 +720,8 @@ $$
   j_{a}+j_{b}\geq j_{c},
   j_{b}+j_{c}\geq j_{a},
   j_{c}+j_{a}\geq j_{b},
-  j_{a}+j_{b}+j_{c}\in\mathbb{Z},
-  \text{かつ} j_a+j_b+j_c\leq k
+  j_{a}+j_{b}+j_{c}\in\mathbb{Z},\\
+  &\text{かつ } j_a+j_b+j_c\leq k
   \\
   0 & \text{その他}
   \end{cases}
@@ -733,7 +733,7 @@ $$
     [N_a]^{c}_{b}=N_{ab}^c
 $$ {#eq-N_matrix}
 
-を行列$N_{a}$と見た時の最大固有値で与えられる．これは，パラメータ
+を行列 $N_{a}$ と見た時の最大固有値で与えられる．これは，パラメータ
 
 $$
   q = \exp\ri \frac{2\pi}{k+2}
@@ -761,7 +761,8 @@ $$
 と定義される．$k$ が大きい場合に $\mathcal{D}\sim (k+2)^{3/2}$ と振る舞う．
 また，2次のCasimir不変量は $[j_a][j_a+1]$ となる．
 
-Wilsonループの作用を計算するためには $F$-moves が必要であった．これは，式(@eq-fmoves) と同様に
+Wilsonループの作用を計算するためには $F$-moves が必要であった．
+これは，式(@eq-fmoves) と同様に
 
 $$
   [F^{abc}_d]_{ef}=(-1)^{j_a+j_b+j_c+j_d}\sqrt{d_{e}d_{f}}
@@ -780,18 +781,18 @@ $$
       a & b & c\\
       d & e & f
     \end{Bmatrix}
-    &\coloneqq \Delta(a,b,c)\Delta(a,e,f)\Delta(d,b,f)\Delta(d,e,c)\sum_z(-1)^z [z+1]!\\   
-    \times \frac{([a+b+d+e-z]![a+d+c+f-z]![b+e+c+f-z]!)^{-1}}{[z-a-b-c]![z-a-e-f]![z-d-b-f]![z-d-e-c]!}
+    &\coloneqq \Delta(a,b,c)\Delta(a,e,f)\Delta(d,b,f)\Delta(d,e,c)\sum_z(-1)^z [z+1]!\\ 
+    &\quad\times \frac{([a+b+d+e-z]![a+d+c+f-z]![b+e+c+f-z]!)^{-1}}{[z-a-b-c]![z-a-e-f]![z-d-b-f]![z-d-e-c]!}
   \end{split}
 $$
 
 と修正される．ここで，
 
 $$
-  \Delta(a,b,c)=\delta_{abc}\sqrt{\frac{[a+b-c]![a-b+c]![-a+b+c]!}{[a+b+c+1]!}},
+  \Delta(a,b,c)=\delta_{abc}\sqrt{\frac{[a+b-c]![a-b+c]![-a+b+c]!}{[a+b+c+1]!}}\,,
 $$
 
-及び，$[n]!=[n][n-1]\cdots [2][1]$である．
+および，$[n]!=[n][n-1]\cdots [2][1]$である．
 また，$z$ が取りうる範囲は，
 
 $$
@@ -800,7 +801,7 @@ $$
 $$
 である．
 
-また，2次のCasimir不変量は $C_2(a)=[j_a][j_a+1]$ と変形される．
+また，2次の Casimir 不変量は $C_2(a)=[j_a][j_a+1]$ と変形される．
 
 
 <!-- ## 線の向きについて

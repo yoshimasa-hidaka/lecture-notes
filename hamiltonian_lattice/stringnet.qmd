@@ -160,7 +160,7 @@ $Q(v)$はすべての$Q(v')$, $E^2(e)$, $\tr U(f)$と可換で，ハミルトニ
 
 :::{ .content-visible when-format=pdf}
 \begin{equation*}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/HoneycombLattice.pdf}}}.
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/HoneycombLattice.pdf}}}\,.
 \end{equation*}
 :::
 
@@ -250,7 +250,7 @@ $$
 数値計算を行なう上で，しばしば$H$そのものを考えるのではなく，指数関数の上にのせた，$e^{-\ri t H}$や，$e^{-\beta H}$を考えるほうが便利なことがある．
 ここでは，$e^{-\beta H}$を評価する方法を考えよう．まず，
 $$
-  H_E=\frac{1}{2}\sum_{e\in E} E^2(e),
+  H_E=\frac{1}{2}\sum_{e\in E} E^2(e)\,,
 $$
 
 $$
@@ -326,7 +326,7 @@ $$
 である．
 したがって，行列$N_{\frac{1}{2}}$ (式 (@eq-N_matrix)を参照)は，固有値$\lambda_a$を
 $$
-  \lambda_a =  \frac{S_{\frac{  1}{2}a}}{S_{0a}}=2\cos\qty(\frac{(2j_a+1)\pi}{k+2}),\\
+  \lambda_a =  \frac{S_{\frac{  1}{2}a}}{S_{0a}}=2\cos\qty(\frac{(2j_a+1)\pi}{k+2})\,,\\
 $$
 ($j_a=0,\cdots,k/2$)，固有ベクトルを$[u_a]^b=S_{ab}$として，
 $$

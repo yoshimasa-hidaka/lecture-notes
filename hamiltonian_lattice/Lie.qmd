@@ -200,7 +200,7 @@ $$
 
 $$
 \begin{aligned}
-  J_i^2\ket*{j,m}  &= j(j+1)\ket*{j,m},\\
+  J_i^2\ket*{j,m}  &= j(j+1)\ket*{j,m}\,,\\
   J_3\ket*{j,m}  &= m\ket*{j,m}
 \end{aligned}
 $$
@@ -216,10 +216,10 @@ $j$は，$j\in\frac{1}{2}\mathbb{Z}$ の非負の整数，半整数の値を取�
 
 ### Wignerの$D$行列
 
-$\mathrm{SU}(2)$の元$g$に対応した演算子を
+$\mathrm{SU}(2)$の元 $g$ に対応した演算子を
 
 $$
-  U_g=\exp\ri\theta^i J_i
+  U_g=\exp(\ri\theta^i J_i)
 $$
 
 と書くことにする．
@@ -242,7 +242,7 @@ $$
   \int\dd{g} [D_{j'}^{*}]^{m'}_{n'}(g) [D_j]^m_n(g) = \frac{1}{d_j}\delta_{j,j'}\delta_{m,m'}\delta_{n,n'}
 $$ {#eq-su2-D-orthogonality}
 
-の直交関係を満たす．ここで$\dd{g}$は$\mathrm{SU}(2)$のHaar測度である(詳細は，@sec-Haar_measure 節参照)．
+の直交性関係を満たす．ここで$\dd{g}$は$\mathrm{SU}(2)$のHaar測度である(詳細は，@sec-Haar_measure 節参照)．
 
 ### 表現の合成
 
@@ -322,10 +322,10 @@ $$
  $$
 
 と表せる．
-$\mathrm{SU}(2)$ のClebsch-Gordan係数は，通常，
+$\mathrm{SU}(2)$ のClebsch-Gordan 係数は，通常，
 $\braket{j_cm_c}{j_am_a\, j_bm_b}=\braket{j_am_a\, j_bm_b}{j_c,m_c}^*=\braket{j_am_a\, j_bm_b}{j_c,m_c}$
 を満たすように位相が選ばれている．
-また，Clebsch-Gordan係数は，直交関係
+また，Clebsch-Gordan 係数は，直交性関係
 
 $$
   \sum_{m_a,m_b}
@@ -347,7 +347,7 @@ $\begin{psmallmatrix}
   j_a & j_b & j_c\\
   m_a & m_b & m_c
 \end{psmallmatrix}$
-を用いると，Clebsch-Gordan係数は，
+を用いると，Clebsch-Gordan 係数は，
 
 $$
 \braket{j_am_a\, j_bm_b}{j_cm_c}
@@ -721,13 +721,13 @@ $$
  $$
 :::
 
- と書くことにする．Clebsch-Gordan係数は，
+ と書くことにする．Clebsch-Gordan 係数は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/abc.svg" style="height:4.2em;">
   <span class="math display" style="display:inline-block;">
-    $$=\braket{ j_cn_c}{j_am_a\, j_bm_b}$$
+    $$=\braket{ j_cn_c}{j_am_a\, j_bm_b}\,,$$
   </span>
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -755,7 +755,7 @@ $c=0$ の特別な場合は，
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/ab0.svg" style="height:2.2em;">
   <span class="math display" style="display:inline-block;">
-    $$= \braket{j_an_a\, j_bn_b}{00}=\delta_{j_a,j_b}\delta_{n_a,-n_b}\frac{(-1)^{j_a-n_a}}{\sqrt{d_{a}}}$$
+    $$= \braket{j_an_a\, j_bn_b}{00}=\delta_{j_a,j_b}\delta_{n_a,-n_b}\frac{(-1)^{j_a-n_a}}{\sqrt{d_{a}}}\,,$$
   </span>
 </div>
 :::

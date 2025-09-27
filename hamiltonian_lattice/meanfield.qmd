@@ -3,7 +3,7 @@
 ここでは，平均場近似による解析手法を紹介しよう．ここで用いる波動関数は$(2+1)$次元系では，閉じ込め相と非閉じ込め相の両方を記述する波動関数である．
 変分波動関数として，以下の形を仮定する [@Dusuel:2015sta,@Zache:2023dko,@Hayata:2023bgh]．
 $$
-|\Psi\rangle=\prod_{f\in \mathcal{F}} \sum_{a_f}\psi(a_f)\tr U_{a_f}(f)\ket{0} .
+|\Psi\rangle=\prod_{f\in \mathcal{F}} \sum_{a_f}\psi(a_f)\tr U_{a_f}(f)\ket{0} \,.
 \label{eq-wavefunction}
 $$
 ここで，$\ket{0}$ は強結合極限の真空である．変分関数 $\psi(a)$ は，$\langle\Psi|\Psi\rangle=1$ となるように $\sum_a |\psi(a)|^2=1$ で規格化されされている．
@@ -113,7 +113,7 @@ $$
 と置き換えることができる．このプラケットの期待値 (@eq-expvalue_Wilson_loop) への寄与は，自明である:
 $$
   \sum_{a,b,c}\psi^*(a)\psi(b)N_{\bar{a}b}^{c}\delta_{c}^0
-  =\sum_{a,b}\psi^*(a)\psi(b)\delta^{a}_b =1.
+  =\sum_{a,b}\psi^*(a)\psi(b)\delta^{a}_b =1\,.
 $$
 ここで，$N_{\bar{a}b}^0=\delta^{a}_b$ を用いた．
 この操作を $\partial S$ を含む辺まで繰り返すと，
@@ -225,7 +225,7 @@ $$\label{eq-exp_trU10}
   \expval{\tr U_{(1,0)}(f)}{\Psi}=
   \sum_{a,b}M_{ab}\psi^*(a)\psi(b)
 $$
-とかける．ここで，$M_{ab}=N_{(1,0)b}^{a}$を定義した．
+と表せる．ここで，$M_{ab}=N_{(1,0)b}^{a}$を定義した．
 Wilsonループの期待値の計算と同様の方法で，$\expval{E^2(e)}$ の期待値を評価する:
 $$
   \begin{split}
@@ -340,7 +340,7 @@ $$
   \mathcal{H}&=\frac{1}{V}\expval{H}
   \\
   &=   \sum_{a,b,c} C_2(c)N^{c}_{\bar{a}b}\frac{d_{c}}{d_{a}d_{b}} |\psi(a)|^2|\psi(b)|^2
-- \frac{K}{2}\sum_{a,b}\psi^*(a)\left(M_{ab}+M^\dagger_{ab}\right)\psi(b) ,
+- \frac{K}{2}\sum_{a,b}\psi^*(a)\left(M_{ab}+M^\dagger_{ab}\right)\psi(b)
   \label{eq-Hamiltonian_one_plaquette_su3}
 \end{split}
 $$

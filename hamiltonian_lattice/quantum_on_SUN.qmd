@@ -22,8 +22,9 @@ $$e^{\ri pa}U_n e^{-\ri pa}=e^{\ri na}U_n$$
 
 ### ブラケット表記
 
-Dirac のブラケット表記を用いると，座標の固有状態は $\ket{x}$ と書ける．これは周期境界条件 $\ket{x+2\pi}=\ket{x}$ を満たす\footnote{量子論は大域的な位相は観測できないため，より一般には $\ket{x+2\pi}=e^{\ri\theta}\ket{x}$ としてもよい．}．また直交関係 
-$$\bra{x}\ket{x'}=\delta_{2\pi}(x-x')$$
+Dirac のブラケット表記を用いると，座標の固有状態は $\ket{x}$ と書ける．これは周期境界条件 $\ket{x+2\pi}=\ket{x}$ を満たす\footnote{量子論は大域的な位相は観測できないため，より一般には $\ket{x+2\pi}=e^{\ri\theta}\ket{x}$ としてもよい．}．また直交性関係 
+$$\bra{x}\ket{x'}=\delta_{2\pi}(x-x')\,,$$
+
 および完全性 
  $$1=\int_0^{2\pi} dx\ket{x}\bra{x}$$
 が成立する．
@@ -34,10 +35,10 @@ f(x) = \int_{0}^{2\pi} \dd{x'}  \delta_{2\pi}(x-x') f(x')
 $$
 
 を満たす $2\pi$-周期デルタ関数である．ここで，$f(x)$ は $\mathrm{U}(1)$ 上の関数である．
-一方，周期境界条件から$p$の固有値は整数 $n\in\mathbb{Z}$ に量子化される．その固有状態 $\ket{n}$ は，直交関係
+一方，周期境界条件から$p$の固有値は整数 $n\in\mathbb{Z}$ に量子化される．その固有状態 $\ket{n}$ は，直交性関係
 
 $$
-  \bra{n}\ket{n'}=\delta_{n,n'}
+  \bra{n}\ket{n'}=\delta_{n,n'}\,,
 $$
 
 および完全性
@@ -119,12 +120,15 @@ $$ {#eq-E_tE_t}
 を満たす左から作用する演算子 $\EL_{i}$ を導入することができる．しかし，$\EL_{i}$ と $\ER_{j}$ は独立ではなく，随伴行列 $[U_{\mathrm{adj}}]_i^j$ を通じて関係している:
 
 $$
-[U_{\mathrm{adj}}]_i^j \EL_j = \ER_i.
+[U_{\mathrm{adj}}]_i^j \EL_j = \ER_i \,.
 $$
+
 ここで，$[U_{\mathrm{adj}}]_i^j$ は，随伴表現の演算子で，基本表現の演算子$U$を用いて，
+
 $$
     U T_i U^\dag =T_j[U_{\mathrm{adj}}]_i^j 
 $$ {#eq-adjoint}
+
 と表される．ここで，$T_i$は基本表現の生成子である．
 
 <!-- ::: {.callout-note collapse="true"}
@@ -217,7 +221,7 @@ $$
 直交性と完全性は，以下のようになる:
 $$
   \bra{a,m_a,n_a}\ket{b,m_b,n_b}=\delta^a_b\delta_{m_a}^{m_b}\delta^{n_a}_{n_b},\quad
-  1=\sum_{a}\sum_{m_a,n_a}\ket{a,m_a,n_a}\bra{a,m_a,n_a}.
+  1=\sum_{a}\sum_{m_a,n_a}\ket{a,m_a,n_a}\bra{a,m_a,n_a} \,.
 $$
 
 ### Fourier(Peter--Weyl) 展開

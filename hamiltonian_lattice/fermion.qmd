@@ -4,58 +4,72 @@ $\mathrm{SU}(2)$の場合のフェルミオンを考えよう．
 $N$ 自由度のフェルミン場を $\chi^n$, $\chi^\dag_n$ とする．
 ここで，$(\chi^n)^\dag = \chi^\dag_n$ という表記を用いる．
 これらは，
+
 $$
-  \{\chi^n,\chi^\dag_m\}=\delta^n_m
+  \{\chi^n,\chi^\dag_m\} = \delta^n_m
 $$
+
 を満たす．ここで，$\{,\}$ は反交換関係である．その他の反交換関係はゼロである:
+
 $$
-  \{\chi^m,\chi^n\}= \{\chi^\dag_m,\chi^\dag_n\}=0.
+  \{\chi^m,\chi^n\} = \{\chi^\dag_m,\chi^\dag_n\} = 0 \,.
 $$
 
 フェルミオンが1フレーバ，スピンレス，$\mathrm{SU}(2)$ の基本表現である場合を考える．この場合，$n$ が取る値は2つである．フェルミオンはグラフの頂点上で定義される．
 一つの頂点に$2$つのフェルミオンが入るまたは入らないことができるので，取りうる状態は，各頂点に$4$状態である．
 $\ket*{0}$ を $\chi^n\ket*{0}=0$ となる状態，$B^\dag =\epsilon^{mn}\chi^\dag_m\chi^\dag_n/2$ として，$4$つの状態は，$\ket*{0}$ 及び
-\begin{align}
-  \ket*{\uparrow} &\coloneqq \ket{\frac{1}{2}}=\chi_1^\dag\ket*{0}, \\
-  \ket*{\downarrow} &\coloneqq \ket{-\frac{1}{2}}=\chi_2^\dag\ket*{0},\\
-  \ket*{B} &\coloneqq B^\dag\ket*{0}
-\end{align}
-である．
 
-物質場が存在することでGaussの拘束条件は，
+$$
+\begin{aligned}
+  \ket*{\uparrow} &\coloneqq \ket{\frac{1}{2}}=\chi_1^\dag\ket*{0}\,, \\
+  \ket*{\downarrow} &\coloneqq \ket{-\frac{1}{2}}=\chi_2^\dag\ket*{0}\,,\\
+  \ket*{B} &\coloneqq B^\dag\ket*{0}
+\end{aligned}
+$$
+
+である．
+物質場が存在することで Gauss の拘束条件は，
+
 $$
   G_i(v)=  \sum_{e\in \mathcal{E}| \mathrm{s}(e)=v}\ER_{i}(e)-\sum_{e\in \mathcal{E}| \mathrm{t}(e)=v}\EL_{i}(e)
   +\rho_i(v)
 $$ {#eq-gauss_fermion}
+
 と修正される．ここで，$\rho_i(v)$ は，カラー電荷密度で，
 $\rho_i(v) = \chi^\dag(v) T_i\chi(v)$ で与えられる．
 $\rho_i$ を $\ket{0}$, $\ket{B}$ に作用させると，
 $\rho_i \ket{0}=0$，$\rho_i\ket{B}=0$ となることから $\ket{0}$, $\ket{B}$ は単独でゲージ不変な状態である．
 一方，$\ket*{\uparrow}$ 及び $\ket*{\downarrow}$ は，例えば $\rho_3$ を作用させると，
+
 $$
-  \rho_3\ket*{\uparrow}=\frac{1}{2}\ket*{\uparrow},
+  \rho_3\ket*{\uparrow}=\frac{1}{2}\ket*{\uparrow}\,,
 $$
 
 $$
   \rho_3\ket*{\downarrow}=-\frac{1}{2}\ket*{\downarrow}
 $$
+
 となり，単独ではゲージ不変ではないことがわかる．この場合，状態をWilson lineでつないでゲージ不変にする必要がある．
 例えば，
+
 $$
    \sum_{m,l}\braket*{\frac{1}{2}l}{\frac{1}{2}m} \ket*{\frac{1}{2},m,n} |l\rangle 
    =\sum_{m}\frac{\delta^l_m}{\sqrt{2}} \ket*{\frac{1}{2},m,n} |l\rangle 
 $$
 
 は，$m$, $l$ が定義されている頂点でゲージ不変である．これは，Gaussの拘束条件(@eq-gauss_fermion)を作用させることで確認できる．例えば $i=3$ 成分については，
+
 $$
-  G_3\sum_{m}\frac{\delta^l_m}{\sqrt{2}} \ket*{\frac{1}{2},m,n} |l\rangle =\sum_{m}\frac{\delta^l_m}{\sqrt{2}}(-m+l) \ket*{\frac{1}{2},m,n} |l\rangle=0.
+  G_3\sum_{m}\frac{\delta^l_m}{\sqrt{2}} \ket*{\frac{1}{2},m,n} |l\rangle =\sum_{m}\frac{\delta^l_m}{\sqrt{2}}(-m+l) \ket*{\frac{1}{2},m,n} |l\rangle=0
 $$
 
 となる.
 $\ket{0}$ に作用させて，このある頂点でゲージ不変な状態を生成する演算子は，
+
 $$
   U^m_n \chi^\dag_m
 $$
+
 である．
 
 グラフィカルな表現として，$U^m_n \chi^\dag_m$, $B^\dag$ に対応する表現を
@@ -87,12 +101,13 @@ $$
 次に，状態の演算子を作用させるとどうなるか見てみよう．
 非自明な状態は，$\chi_m^\dag$,$B^\dag$ を $\ket{0}$ に作用させて生成される．
 これらの状態に作用する演算子は，$\chi^n$，$\chi_n^\dag$ で，非自明な状態に当ててゼロにならないものは，
+
 $$
-  \chi^m\ket{n} = \delta_n^m\ket{0},
+  \chi^m\ket{n} = \delta_n^m\ket{0}\,,
 $$
 
 $$
-  \chi_m^\dag\ket{n} = \epsilon_{mn}\ket{B},
+  \chi_m^\dag\ket{n} = \epsilon_{mn}\ket{B}\,,
 $$
 
 $$
@@ -102,27 +117,30 @@ $$
 である．これは，演算子に対応させると，
 
 $$
-  \chi^m\chi^\dag_n\sim \delta^m_n,
+  \chi^m\chi^\dag_n\sim \delta^m_n\,,
 $$ {#eq-psipsidag}
 
 $$
-  \chi^\dag_m\chi^\dag_n=\epsilon_{mn} B^\dag,
+  \chi^\dag_m\chi^\dag_n=\epsilon_{mn} B^\dag\,,
 $$
 
 $$
-  \chi^m B^\dag\sim [   \chi^m, B^\dag] = \epsilon^{mn}\chi_n^\dag,
+  \chi^m B^\dag\sim [   \chi^m, B^\dag] = \epsilon^{mn}\chi_n^\dag\,,
 $$
 
 $$
   \chi^\dag_m B^\dag= 0
 $$
+
 である．
 ここで，$\sim$は，$\ket{0}$ に作用させた時に等しくなるという意味である．例えば，式(@eq-psipsidag)は，
+
 $$
   \chi^m\chi_n^\dag\ket{0}=
   (\delta_n^m-\chi_n^\dag\chi^m)\ket{0}=
   \delta_n^m\ket{0}
 $$
+
 である．
 これらの関係を用いると，フェルミオンの合成ルールは，グラフィカルに
 
@@ -155,7 +173,7 @@ $$ $$ {#eq-fuse_fermion}
 :::
 
 と書ける．この合成の $\Rightarrow$ は，
-$\chi^\dag_n U^n_m\chi^m$ を作用させたことに等しい．
+$\chi^\dag_n U^n_m\chi^m$ を作用させたことに対応する．
 $\chi^\dag_n U^n_m\chi^m$ はホッピング項であり，始点にあるフェルミオンを終点に動かす操作を与える．
 様々な状態に　$\chi^\dag_n U^n_m\chi^m$　を作用させることを考えてみよう．
 ここでは，以下のような形で表される状態を考える:
@@ -192,7 +210,7 @@ $\chi^\dag_n U^n_m\chi^m$ はホッピング項であり，始点にあるフェ
 ドット線は，自明なWilson線を表す．フェルミオンがない状態は，ドットの端点に何も書かないルールとする．また，ドット線はしばしば省略する．
 これらの状態に $\chi^\dag_n U^n_m\chi^m$ を作用させると，
 始点にあるフェルミオンが終点に移動する．例えば，
-式(@eq-states_fermion)の左の状態に作用させると，
+式(@eq-states_fermion) の左の状態に作用させると，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -218,7 +236,7 @@ $$
 :::
 
 となり，線が左に動く．
-一方，終点の方にフェルミオンがいる場合は，式(@eq-fuse_fermion)と，F-moves~(@eq-F-moves) を用いて，
+一方，終点の方にフェルミオンがいる場合は，式(@eq-fuse_fermion) と，F-moves~(@eq-F-moves) を用いて，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -640,6 +658,9 @@ $$
     $$B=-1:$$
   </span>
   <img src="figs/vac_twosite.svg" style="width:6.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
@@ -654,6 +675,9 @@ $$
     $$,\quad$$
   </span>
   <img src="figs/qq_twosite.svg" style="width:6.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
@@ -684,7 +708,7 @@ $$
   </span>
   <img src="figs/vac_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
-    $$=0$$
+    $$=0\,,$$
   </span>
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -718,6 +742,9 @@ $$
     $$=2m$$
   </span>
   <img src="figs/B0_twosite.svg" style="width:6.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
@@ -727,7 +754,9 @@ $$
   <span class="math display" style="display:inline-block;">
     $$=\frac{3g^2}{8}$$
   </span>
-  <img src="figs/qq_twosite.svg" style="width:6.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>  
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
@@ -770,6 +799,9 @@ $$
     $$=t\sqrt{2}$$
   </span>
   <img src="figs/qq_twosite.svg" style="width:6.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
@@ -780,6 +812,9 @@ $$
     $$=t\sqrt{2}$$
   </span>
   <img src="figs/B0_twosite.svg" style="width:6.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
