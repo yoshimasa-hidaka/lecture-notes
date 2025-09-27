@@ -585,6 +585,38 @@ $$
 
 である．
 
+::: {.callout-note collapse="true"}
+## Pythonでの $F$-symbol の実装
+```{python}
+import sympy as sp
+from sympy import sqrt, Rational
+from sympy.physics.wigner import wigner_6j
+from sympy import S
+
+def f_symbol(ja, jb, jc, jd, je, jf) -> sp.Expr:
+    """
+    f-symbol の計算:
+        f = (-1)^(ja+jb+jc+jd) * sqrt((2*je+1)*(2*jf+1)) * {ja jb je; jc jd jf}
+
+    入力:
+        ja, jb, jc, jd, je, jf : 半整数 (sp.Rational(1,2), 3/2 など)
+
+    出力:
+        SymPy expression (exact algebraic value)
+    """
+    ja, jb, jc, jd, je, jf = map(S, (ja, jb, jc, jd, je, jf))
+    try:
+        res = wigner_6j(ja, jb, je, jc, jd, jf)
+    except ValueError:
+        # 三角条件/半整数条件を満たさない → 0
+        res = 0
+    res *= sqrt((2 * je + 1) * (2 * jf + 1)) * (-1) ** (ja + jb + jc + jd)
+    return sp.simplify(res)
+
+# サンプル計算
+f_symbol(Rational(1,2), Rational(1,2), Rational(1,2), Rational(1,2), 1, 0)
+```
+:::
 
 
 逆変換は，
