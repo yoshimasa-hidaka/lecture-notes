@@ -26,6 +26,7 @@ book:
         - Lie.qmd
         - quantum_on_SUN.qmd
         - Kogut-Susskind.qmd
+        - regularization.qmd
         - Example.qmd
     - part: "発展編"
       chapters:

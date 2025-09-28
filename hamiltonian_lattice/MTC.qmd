@@ -116,7 +116,7 @@ $\mathrm{SU}(2)_k$ の場合は，$N_{ab}^c\in\{0,1\}$ なので，このラベ�
   </span>
   <img src="figs/c.svg" style="height:5.5em;">
 </div>
-$$ $$ {#eq-stacking}
+$$ $$ {#eq-stacking2}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -124,7 +124,7 @@ $$ $$ {#eq-stacking}
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abcloopmu.pdf}}}
 = \delta_c^{c'}\delta_{\mu}^{\mu'}\sqrt{\frac{d_ad_b}{d_c}}
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/c.pdf}}}
-  \label{eq-stacking}
+  \label{eq-stacking2}
 \end{align}
 :::
 
@@ -138,7 +138,7 @@ $$ $$ {#eq-stacking}
   </span>
   <img src="figs/parallel2mu.svg" style="height:5.5em;">
 </div>
-$$ $$ {#eq-partition}
+$$ $$ {#eq-partition2}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -146,7 +146,7 @@ $$ $$ {#eq-partition}
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel1.pdf}}}
 = \sum_{c,\mu}\sqrt{\frac{d_c}{d_ad_b}}
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel2mu.pdf}}}
-  \label{eq-partition}
+  \label{eq-partition2}
 \end{align}
 :::
 
@@ -330,7 +330,7 @@ $$ {#eq-vacuum_move}
   </span>
   <img src="figs/vacuumMove2.svg" style="height:4.0em;">
 </div>
-等号の変形には，式(@eq-vacuum_line), (@eq-stacking), (@eq-partition) を用いた．
+等号の変形には，式(@eq-vacuum_line), (@eq-stacking2), (@eq-partition2) を用いた．
 :::
 
 
@@ -440,7 +440,7 @@ $$ $$ {#eq-loop_deformation}
 
 が得られる．
 
-表現 $a$ と $b$ を持つ2つのWilson loopを 式 (@eq-stacking) と (@eq-partition) を用いて変形すると，
+表現 $a$ と $b$ を持つ2つのWilson loopを 式 (@eq-stacking2) と (@eq-partition2) を用いて変形すると，
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/loopab1.svg" style="height:4.0em;">

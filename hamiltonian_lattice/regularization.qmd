@@ -1,0 +1,190 @@
+# 有限次元近似　{#sec-cutoff_representation}
+一般に$\mathrm{SU}(N)$の既約表現は無限に存在するため，有限の格子上であってもHilbert空間は無限次元である．
+量子計算機などで数値計算するためには有限次元のHilbert空間に近似する必要がある．
+ここでは，ひとつの有効な方法として，量子群変形を用いた有限次元近似法を紹介する[@Zache:2023dko,@Hayata:2023puo]．
+量子群$\mathrm{SU}(N)_k$では，Young図の横方向の箱の数の最大値が$k$となる．
+例えば，$\mathrm{SU}(2)_k$の場合は，スピン$j$が$0,1/2,1,\cdots, k/2$の値に制限される．
+量子群変形の利点は，これまでに導入した式(@eq-partition) や (@eq-Fmove) が形式的にはそのまま成り立つ点である．
+ただし，係数が変形される．
+量子群の詳細は割愛し(@sec-q_deformation 節参照)，ここでは，$\mathrm{SU}(2)_k$の場合について照会する．
+
+表現のカットオフにより，式(@eq-fusion_delta) の $\delta_{abc}$ は修正され
+
+$$
+  N_{ab}^c=\delta_{abc}\coloneqq \begin{cases}
+  1 &
+  j_{a}+j_{b}\geq j_{c},
+  j_{b}+j_{c}\geq j_{a},
+  j_{c}+j_{a}\geq j_{b},
+  j_{a}+j_{b}+j_{c}\in\mathbb{Z},\\
+  &\text{かつ } j_a+j_b+j_c\leq k
+  \\
+  0 & \text{その他}
+  \end{cases}
+$$ {#eq-fusion_q}
+
+となる．表現の次元だった $d_a$ は，量子次元(Frobenius-Perron dimension)と呼ばれ，
+
+$$
+    [N_a]^{c}_{b}=N_{ab}^c
+$$ {#eq-N_matrix}
+
+を行列 $N_{a}$ と見た時の最大固有値で与えられる．これは，パラメータ
+
+$$
+  q = \exp\ri \frac{2\pi}{k+2}
+$$
+
+を用いて，
+
+$$
+  [n]\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+2}n)}{\sin\qty(\frac{\pi}{k+2})}
+$${#eq-n}
+
+を定義すると，$d_a=[2j_a+1]$となることが知られている．カットオフ無限大 $k\to\infty$ では，
+$d_a=2j_a+1$ に帰着する．
+
+\begin{question}
+  $k=1,2$ の場合に具体的に量子次元を計算し，表現 $j$ の量子次元が $[j+1]$ なることを確かめよ．
+\end{question}
+
+全量子次元は，
+
+$$
+  \mathcal{D} \coloneqq \sqrt{\sum_{a}d_a^2}=\sqrt{\frac{k+2}{2}}\frac{1}{\sin\qty(\frac{\pi}{k+2})}
+$$
+
+と定義される．$k$ が大きい場合に $\mathcal{D}\sim (k+2)^{3/2}$ と振る舞う．
+また，2次のCasimir不変量は $[j_a][j_a+1]$ となる．
+
+Wilsonループの作用を計算するためには $F$-moves が必要であった．
+これは，式(@eq-fmoves) と同様に
+
+$$
+  [F^{abc}_d]_{ef}=(-1)^{j_a+j_b+j_c+j_d}\sqrt{d_{e}d_{f}}
+  \begin{Bmatrix}
+    j_a & j_b & j_e\\
+    j_c & j_d & j_f
+  \end{Bmatrix}
+$$
+
+と表せる．
+ただし，Wigner $6$-$j$ シンボルは，
+
+$$
+  \begin{split}
+    \begin{Bmatrix}
+      a & b & c\\
+      d & e & f
+    \end{Bmatrix}
+    &\coloneqq \Delta(a,b,c)\Delta(a,e,f)\Delta(d,b,f)\Delta(d,e,c)\sum_z(-1)^z [z+1]!\\ 
+    &\quad\times \frac{([a+b+d+e-z]![a+d+c+f-z]![b+e+c+f-z]!)^{-1}}{[z-a-b-c]![z-a-e-f]![z-d-b-f]![z-d-e-c]!}
+  \end{split}
+$$
+
+と修正される．ここで，
+
+$$
+  \Delta(a,b,c)=\delta_{abc}\sqrt{\frac{[a+b-c]![a-b+c]![-a+b+c]!}{[a+b+c+1]!}}\,,
+$$
+
+および，$[n]!=[n][n-1]\cdots [2][1]$である．
+また，$z$ が取りうる範囲は，
+
+$$
+  \max(a+b+c,a+e+f,d+b+f,d+e+c)\leq z\leq 
+  \min(a+b+d+e,a+d+c+f,b+e+c+f)
+$$
+である．
+
+また，2次の Casimir 不変量は $C_2(a)=[j_a][j_a+1]$ と変形される．
+
+
+<!-- ## 線の向きについて
+ある表現のWilson線の矢印の向きを反転させると，これは反表現に対応し，一般には区別される状態である．
+しかし，$\mathrm{SU}(2)$の特殊性として，表現と反表現が同型であるという性質がある．この性質を考慮すると矢印の向きを忘れることができる．
+具体的には，線と頂点の位相の再定義を使って，$d_a$が現れるところを$(-1)^{j_a}d_a$に置き換えることで，向きを忘れることができる． -->
+
+
+
+<!-- $[F^{abc}_d]_{ef}$ は，$d\to abc$ の分解(または3つの表現の合成)に関するものであるが，
+同様に $cd\to ab$ の分解に関する $[F_{cd}^{ab}]_{ef}$ も定義できる:
+
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove22a.svg" style="height:5.5em;">
+    <span class="math display" style="display:inline-block;">
+    $$=\sum_{f}[F^{ab}_{cd}]_{ef}$$
+  </span>
+  <img src="figs/fmove22b.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22a.pdf}}
+    =
+    \sum_{f}[F^{ab}_{cd}]_{ef}
+    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22b.pdf}}.
+    \label{eq-Fmove2}
+$$
+:::
+
+これは，
+$$
+    [F^{ab}_{cd}]_{ef}=\sqrt{\frac{d_ed_f}{d_ad_d}}[F_f^{ceb}]^*_{ad}
+$$ {#eq-FandF}
+
+  の関係がある．
+
+\begin{question}
+    式 (@eq-FandF) を示せ．
+\end{question}
+
+式 (@eq-Fmove2) の左の図が，
+$$
+    \sum_{m_a,m_b,m_e}\braket{j_am_a}{j_cm_c\, j_em_e}
+    \braket{j_em_e\,j_bm_b}{j_dm_d}
+    \ket{j_a,m_a}\ket{j_b,m_b}
+$$
+
+  で，右の図が
+$$
+    \sum_{m_a,m_b,m_f}\braket{j_am_a\,j_bm_b}{j_fm_f}
+    \braket{j_fm_f}{j_cm_c\, j_dm_d}
+    \ket{j_a,m_a}\ket{j_b,m_b}
+$$
+
+に対応することに注意して，$[F_{cd}^{ab}]_{ef}$ は，
+
+$$
+[F_{cd}^{ab}]_{ef}=\sum_{m_a,m_b,m_e,m_f}
+    \braket{j_am_a}{j_cm_c\, j_em_e}
+    \braket{j_em_e\,j_bm_b}{j_dm_d}
+  \braket{j_fm_f}{j_am_a\,j_bm_b}
+  \braket{j_cm_c\, j_dm_d}{j_fm_f}
+$$
+
+と表すことができる．
+一方，$[F_f^{ceb}]^*_{ad}$ は，式\eqref{F-move_def} より，
+
+$$
+    \begin{split}
+      [F_f^{ceb}]^*_{ad}&=[F_f^{ceb}]_{ad}\\
+      &=
+    \end{split}
+$$
+$$
+    \begin{split}
+      &    [F^{ceb}_{f}]_{ad}\\
+  &=  \sum_{m_{c},m_{e},m_{b},m_{a} m_{d}}
+  \braket{j_{c}m_{c}\, j_{e}m_{e}}{j_{a}m_{a}}
+  \braket{j_{a}m_{a}\, j_{b}m_{b}}{j_{f}m_{f}}
+  \braket{j_{d}m_{d}}{ j_{e}m_{e}\, j_{b}m_{b} }
+  \braket{j_{f}m_{f}}{j_{c}m_{c}\, j_{d}m_{d}}
+      \end{split}
+$$
+ -->
+
+

@@ -344,6 +344,20 @@ $$
 $$ {#eq-Clebsch-Gordan_orthogonal2}
 
 を満たす．
+
+また，Clebsch-Gordan 係数は不変テンソル，つまり，
+
+$$
+\braket{j_am_a\, j_bm_b}{j_c,m_c}=\sum_{m'_a,m'_b,m'_{c}}
+[D_{j_c}(\bar{g})]^{m_c}_{m'_c}[D_{j_a}(g)]^{m_a}_{m'_a}[D_{j_b}(g)]^{m_b}_{m'_b}
+\braket{j_am'_a\, j_bm'_b}{j_c,m'_c}
+$$
+
+を満たす．ここで，$\bar{g}$は，$g$の逆元である．
+
+
+
+
 Wigner $3$-$j$ シンボル
 $\begin{psmallmatrix}
   j_a & j_b & j_c\\
@@ -630,7 +644,7 @@ def f_symbol(ja, jb, jc, jd, je, jf) -> sp.Expr:
 
 $$
   \ket*{j_a (j_bj_c)j_{f};j_d,m_d}
-  =\sum_{j_e}[(F^{abc}_d)^{-1}]_{fe} 
+    =\sum_{j_e}[(F^{abc}_d)^{-1}]_{fe}
   \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
 $$
 
@@ -647,7 +661,7 @@ $$
 また，$F$-symbol は，以下の関係を満たす(pentagon equation):
 
 $$
-  [F_e^{fcd}]_{gl} [F_e^{abl}]_{fk} 
+  [F_e^{fcd}]_{gl} [F_e^{abl}]_{fk}
 = \sum_{h} [F^{abc}_g]_{fh} [F_{e}^{ahd}]_{gk} [F^{bcd}_{k}]_{hl} \,.
 $$ {#eq-pentagon}
 
