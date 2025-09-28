@@ -94,7 +94,8 @@ $$
     )　\,.
 $$ {#eq-SU2_n}
 
-ここで，$\theta$ は，$0$ から $2\pi$ を動く実パラメータである（$\bm{n}$を固定して$\theta$を動かした場合の周期は，$4\pi$であることに注意）．
+ここで，$\theta$ は，$0$ から $2\pi$ を動く実パラメータである．
+ただし，$\theta\to\theta+2\pi$ で $g\to -g$ となるため，群としての周期は $4\pi$ である．
 $\bm{n}$ を極座標表示すると
 
 $$
@@ -111,7 +112,7 @@ $$
   g= \exp(\ri T_i\theta^i)
 $$ {#eq-gexp}
 
-と表せる．
+の指数表示が得られる．
 また，次のユニタリ行列
 
 $$
@@ -171,8 +172,9 @@ $$ {#eq-commutatorSU2}
 $\mathrm{SU}(2)$群は単連結なコンパクトLie群であるため，その有限次元ユニタリ表現はLie代数 $\mathfrak{su}(2)$ の有限次元表現と1対1対応する．
 したがって，群の表現を理解するにはLie代数の表現を調べれば十分である．
 以下では，両者の違いを混乱の恐れがない限り区別せずに用いる．
-また，この節では，$\mathrm{SU}(2)$群の表現の導出は行わず基本的な結果のみを紹介する．導出については，標準的な群論の教科書(例えば[@Georgi])を参照．
-また，[@Martin-Dussaud:2019ypf]も参考になる．
+また，この節では，$\mathrm{SU}(2)$群の表現の導出は行わず基本的な結果のみを紹介する．
+導出については，標準的な群論の教科書(例えば[@Georgi])を参照．
+[@Martin-Dussaud:2019ypf]も参考になる．
 表現を議論するのに昇降演算子 $J_{\pm}\coloneqq J_1\pm\ri J_2$ 及び，$J_0\coloneqq J_3$ を定義しておく便利である．
 これらの交換関係は，式 (@eq-commutatorSU2) より，
 
@@ -198,11 +200,11 @@ $$
 $$
 
 と規格化されているものとする．
-この状態は，$J_i^2$ と $J_3$ の固有状態に選んであることから
+この状態は，$J^2$ と $J_3$ の固有状態に選んであることから
 
 $$
 \begin{aligned}
-  J_i^2\ket*{j,m}  &= j(j+1)\ket*{j,m}\,,\\
+  J^2\ket*{j,m}  &= C_2(j)\ket*{j,m} =j(j+1)\ket*{j,m}\,,\\
   J_3\ket*{j,m}  &= m\ket*{j,m}
 \end{aligned}
 $$
@@ -214,7 +216,7 @@ $$
 $$
 
 となる\footnote{一般には位相の不定性があるがここでは係数が実で正になるように取ってある．}．
-$j$は，$j\in\frac{1}{2}\mathbb{Z}$ の非負の整数，半整数の値を取り，$m$ は $m=-j,-j+1,\cdots j-1,j$ の値を取る．以下，表現 $j$ に付随した$(2j+1)\eqqcolon d_j$ 次元Hilbert空間を $\mathcal{Q}_j$ と表す．
+$j$は，$j\in\frac{1}{2}\mathbb{Z}_{\geq 0}$ の非負の整数，半整数の値を取り，$m$ は $m=-j,-j+1,\cdots j-1,j$ の値を取る．以下，表現 $j$ に付随した$(2j+1)\eqqcolon d_j$ 次元の有限次元複素 Hilbert 空間を $\mathcal{Q}_j$ と表す．
 
 ### Wignerの$D$行列
 
@@ -238,13 +240,19 @@ $$
 $$
 
 と表せる．
-この行列は，
+$[D_j(g)]^m_{n}$はユニタリ行列なので，$g$の逆元を$\bar{g}$とすると，
+
+$$
+[D_j(\bar{g})]^m_n= [D^{-1}_j({g})]^m_n=[D^\dag_j(g)]^m_n= [D^*_j(g)]^n_m
+$$
+
+を満たす．また，この行列は，
 
 $$
   \int\dd{g} [D_{j'}^{*}]^{m'}_{n'}(g) [D_j]^m_n(g) = \frac{1}{d_j}\delta_{j,j'}\delta_{m,m'}\delta_{n,n'}
 $$ {#eq-su2-D-orthogonality}
 
-の直交性関係を満たす．ここで$\dd{g}$は$\mathrm{SU}(2)$のHaar測度である(詳細は，@sec-Haar_measure 節参照)．
+の直交性関係を満たす．ここで $\dd{g}$ は，$\int\dd{g}=1$ に正規化された $\mathrm{SU}(2)$群のHaar測度である(詳細は，@sec-Haar_measure 節参照)．
 
 ### 表現の合成
 
@@ -272,8 +280,8 @@ $$
 $$ {#eq-fusion_delta}
 
 を導入した．$N_{ab}^{c}$ は fusion 係数またはテンソル積係数と呼ばれる．
-本稿では，$\delta_{abc}=1$ を満たす $j_a,j_b,j_c$を，$j_a,j_b,j_c$ が三角不等式を満たすという．
-例えば，$j_a=1$ と $j_b=1/2$ とすると，三角不等式を満たす $j_c$ は，$3/2$ または，$1/2$ となる．したがって，
+本稿では，$\delta_{abc}=1$ を満たす $j_a,j_b,j_c$を，$j_a,j_b,j_c$ が三角条件を満たすという．
+例えば，$j_a=1$ と $j_b=1/2$ とすると，三角条件を満たす $j_c$ は，$3/2$ または，$1/2$ となる．したがって，
 
 $$
   \mathcal{Q}_{1}\otimes \mathcal{Q}_{\frac{1}{2}} \simeq \mathcal{Q}_{\frac{3}{2}}\oplus \mathcal{Q}_{\frac{1}{2}}
@@ -311,7 +319,7 @@ $j_c\in \{|j_a-j_b|,|j_a-j_b|+1,\cdots, j_a+j_b\}$ 及び，$m_c\in\{-j_c,-j_c+1
 また，
 
 $$ \begin{aligned}
-  (J_{a3}+J_{b3})\ket*{j_aj_b;j_c,m_c} &= (m_a+m_b)\ket*{j_aj_b;j_c,m_c} \,,\\
+  (J_{a3}+J_{b3})\ket*{j_aj_b;j_c,m_c} &= m_c\ket*{j_aj_b;j_c,m_c} \,,\\
   (J_{a}+J_{b})^2\ket*{j_aj_b;j_c,m_c} &= j_c(j_c+1)\ket*{j_aj_b;j_c,m_c} \,,\\
   J_{ai}^2\ket*{j_aj_b;j_c,m_c} &= j_a(j_a+1)\ket*{j_aj_b;j_c,m_c} \,,\\
   J_{bi}^2\ket*{j_aj_b;j_c,m_c} &= j_b(j_b+1)\ket*{j_aj_b;j_c,m_c}
@@ -320,7 +328,7 @@ $$ \begin{aligned}
 逆に直積状態は，
 
 $$
-\ket*{j_a,m_a} \ket*{j_b,m_b}= \sum_{m_c}  \ket*{j_aj_b;j_c,m_c} \braket{j_cm_c}{j_am_a\, j_bm_b}
+\ket*{j_a,m_a} \ket*{j_b,m_b}= \sum_{j_c,m_c}  \ket*{j_aj_b;j_c,m_c} \braket{j_cm_c}{j_am_a\, j_bm_b}
  $$
 
 と表せる．
@@ -345,7 +353,7 @@ $$ {#eq-Clebsch-Gordan_orthogonal2}
 
 を満たす．
 
-また，Clebsch-Gordan 係数は不変テンソル，つまり，
+また，Clebsch-Gordan 係数は不変テンソルになっている．つまり，
 
 $$
 \braket{j_am_a\, j_bm_b}{j_c,m_c}=\sum_{m'_a,m'_b,m'_{c}}
@@ -435,7 +443,7 @@ $$
   \end{pmatrix}
 $$
 
-となる性質を持つ．値は，$j_a$, $j_b$, $j_c$ が三角不等式を満たすとき $\delta_{abc}=1$ のみ非ゼロで，他はゼロとなる．
+となる性質を持つ．値は，$j_a$, $j_b$, $j_c$ が三角条件を満たすとき $\delta_{abc}=1$ のみ非ゼロで，他はゼロとなる．
 直交性関係は，
 
 $$ 
@@ -511,23 +519,6 @@ $$
 $$
 
 となる．
-
-<!-- %  $j_d=0$, $m_d=0$の場合は，
-%  $$ \begin{aligned}
-%    &
-%    \sum_{m_{a},m_b,m_{e},m_c}  \ket*{j_a,m_a}\ket*{j_b,m_b}\ket*{j_c,m_c}
-%    \braket{j_am_a\, j_bm_b}{j_{e},m_{e}}
-%     \braket{ j_{e}m_{e}\, j_cm_c}{0,0}
-%    \\
-%    &=\delta_{j_{e},j_c}
-%  \sum_{m_{a},m_b,m_c} 
-%    (-1)^{j_{a}-j_{b}+j_c}
-%  \begin{pmatrix}
-%    j_a & j_b & j_c\\
-%    m_a & m_b & m_c
-%  \end{pmatrix}
-%    \ket*{j_a,m_a}\ket*{j_b,m_b}{j_c,m_c}\\
-%   \end{aligned}$$ -->
 
 $\ket*{(j_aj_b)j_{e}j_c;j_d,m_d}$ と$\ket*{j_a (j_bj_c)j_{f};j_d,m_d}$ は，独立ではなく次のユニタリ変換（$F$-moves）で結びついている:
 
@@ -664,6 +655,8 @@ $$
   [F_e^{fcd}]_{gl} [F_e^{abl}]_{fk}
 = \sum_{h} [F^{abc}_g]_{fh} [F_{e}^{ahd}]_{gk} [F^{bcd}_{k}]_{hl} \,.
 $$ {#eq-pentagon}
+
+これは表現の結合順序を変える際の一貫性条件を表している．
 
 \begin{question}
   スピン $1/2$ を 3つを合成する問題を考える．
@@ -851,7 +844,7 @@ $$
 $$
 :::
 
-である．ここで，内線の表現の3成分については和を取るものとする．
+である．ここで，内線の磁気量子数 ($l_e$) については和を取るものとする．
 
 このルールを用いると，式 (@eq-Clebsch-Gordan_orthogonal1) の直交性は，
 
