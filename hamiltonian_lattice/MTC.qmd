@@ -401,6 +401,62 @@ $$ {#eq-vacuum_move}
 
 となる．
 
+$[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$ は，$d\to abc$ の分解(または3つの表現の合成)に関するものであるが，
+同様に $cd\to ab$ の分解に関する $[F_{cd}^{ab}]_{(e,\alpha,\beta)(f,\mu,\nu)}$ も定義できる:
+
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove22a.svg" style="height:5.5em;">
+    <span class="math display" style="display:inline-block;">
+    $$=\sum_{f,\mu,\nu}[F_{cd}^{ab}]_{(e,\alpha,\beta)(f,\mu,\nu)}$$
+  </span>
+  <img src="figs/fmove22b.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22a.pdf}}
+    =
+    \sum_{f,\mu,\nu}[F_{cd}^{ab}]_{(e,\alpha,\beta)(f,\mu,\nu)}
+    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22b.pdf}}.
+    \label{eq-Fmove2}
+$$
+:::
+
+これは，
+$$
+    [F^{ab}_{cd}]_{ef}=\sqrt{\frac{d_ed_f}{d_ad_d}}[F_f^{ceb}]^*_{(a,\alpha,\mu)(d,\beta,\nu)}
+$$ {#eq-FandF}
+
+  の関係がある．
+
+
+::: {.callout-note collapse="true"}
+## 詳細
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove22a.svg" style="height:4.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{f,\nu}\sqrt{\frac{d_f}{d_cd_d}}$$
+  </span>
+  <img src="figs/fmove22c.svg" style="height:4.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{f,h,\mu,\nu,\rho}\sqrt{\frac{d_f}{d_cd_d}}[(F_f^{ceb})^{-1}]_{(d,\beta,\nu)(h,\rho,\mu)}$$
+  </span>
+  <img src="figs/fmove22d.svg" style="height:4.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{f,\mu,\nu}\sqrt{\frac{d_ed_f}{d_ad_d}}[(F_f^{ceb})^{-1}]_{(d,\beta,\nu)(a,\alpha,\mu)}$$
+  </span>
+  <img src="figs/fmove22b.svg" style="height:4.5em;">
+</div>
+より式 (@eq-FandF) が成り立つことがわかる．
+この導出に，式 (@eq-stacking2) と (@eq-partition2) を用いた．
+:::
+
+
+
+
 
 これらの関係式を使って，いくつか便利な式を導出しよう．
 まず，表現 $a$ のWilon ループは，グラフィカルに
@@ -511,3 +567,5 @@ $$
 $$ {#eq-inverser_dadb}
 
 が得られる．
+
+
