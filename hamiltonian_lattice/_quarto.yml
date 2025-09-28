@@ -32,7 +32,6 @@ book:
       chapters:
         - stringnet.qmd
         - MTC.qmd
-        - SU3.qmd
         - meanfield.qmd
         - fermion.qmd
         # - prepotential.qmd        # 必要ならアンコメント

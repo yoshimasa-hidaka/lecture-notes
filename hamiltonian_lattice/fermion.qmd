@@ -858,3 +858,173 @@ $$
 となる．これを対角化するとエネルギーが求まる．
 特別な場合$g=0$は，$E=0$,　$\pm2\sqrt{m^2+t^2}$,
 $m=0$の場合は，$E=0$, $(3g^2\pm\sqrt{9g^4+1024t^2})/16$ となる．
+
+
+
+### フェルミオン
+
+ $\mathrm{SU}(3)$ゲージ理論に基本表現のフェルミオンを導入しよう．
+ $\psi^\dag_n$, $[d^\dag]^l=\epsilon^{lmn}\psi^\dag_m\psi^\dag_n/2$, $B^\dag =\epsilon^{mnl}\psi_m^\dag \psi_n^\dag \psi_l^\dag/3!$.
+
+$$
+   \psi_n^\dag\psi_m^\dag = \epsilon_{nml}[d^\dag]^l \,,
+$$
+
+$$
+   [d^\dag]^m \psi_n^\dag  = \delta_n^m B^\dag \,,
+$$ 
+ 
+$$
+   \psi^n  \psi_m^\dag\sim \delta^n_m \,,
+$$
+
+$$
+   \psi^n [d^\dag]^m   \sim \epsilon^{nml}\psi_l^\dag \,,
+$$
+
+$$
+   \psi^n B^\dag   \sim  [d^\dag]^n \,.
+$$
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$\text{quark:}$$
+  </span>
+  <img src="figs/quark.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$,\qquad \text{diquark:}$$
+  </span>
+  <img src="figs/diquark.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$,\qquad \text{baryon}$$
+  </span>
+  <img src="figs/baryon.svg" style="height:3.em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,.$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+   \text{quark: }\vcenter{\hbox{\includegraphics[scale=0.3]{figs/quark.pdf}}},\quad
+   \text{diquark: }\vcenter{\hbox{\includegraphics[scale=0.3]{figs/diquark.pdf}}},\quad
+   \text{baryon: }\vcenter{\hbox{\includegraphics[scale=0.3]{figs/baryon.pdf}}}
+ $$
+:::
+
+
+ これらの関係を用いると，フェルミオンの合成ルールは，グラフィカルに
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/parallel_fermion.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow\frac{\sqrt{2}}{3}$$
+  </span>
+  <img src="figs/fuse_quarks_to_diquarks.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $,\qquad$
+  </span>
+  <img src="figs/quark_diquark_parallel.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow \frac{1}{\sqrt{3}}$$
+  </span>
+  <img src="figs/fuse_diquarks_to_baryon.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $,\qquad$
+  </span>
+  <img src="figs/baryon.svg" style="height:2.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow \sqrt{3}$$
+  </span>
+  <img src="figs/SU3_split_baryon.svg" style="height:2.5em;">
+  <span class="math display" style="display:inline-block;">
+    $,\qquad$
+  </span>
+  <img src="figs/diquark.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow \frac{\sqrt{2}}{\sqrt{3}}$$
+  </span>
+  <img src="figs/split_diquarks.svg" style="height:3.5em;">
+</div>
+:::
+
+ 
+::: {.content-visible when-format=pdf}
+ \begin{align}
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel_fermion.pdf}}}&\Rightarrow\frac{\sqrt{2}}{3}
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fuse_quarks_to_diquarks.pdf}}},\label{eq-SU3_fuse_quarks}\\
+   %
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/quark_diquark_parallel.pdf}}}&\Rightarrow\frac{1}{\sqrt{3}}
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fuse_diquarks_to_baryon.pdf}}},\label{eq-SU3_fuse_diquarks}\\
+   %
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/baryon.pdf}}}&\Rightarrow\sqrt{3}\quad
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/SU3_split_baryon.pdf}}},\\
+   %
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/diquark.pdf}}}&\Rightarrow\frac{\sqrt{2}}{\sqrt{3}}\quad
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/split_diquarks.pdf}}}.
+ \end{align}
+ :::
+
+ と表される．
+ 
+
+ ::: {.content-visible when-format=pdf}
+ \begin{align}
+   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vq.pdf}}}
+   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qv.pdf}}},\\
+   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
+   &=
+   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dv.pdf}}}
+   ,\\
+   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
+   &=
+   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}
+   ,\\
+   
+   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vd.pdf}}}
+   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}},\\
+   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}}
+   &=
+   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
+   ,\\
+   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}}
+   &=
+   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bq.pdf}}}
+   ,\\
+   
+   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}}
+   &=
+   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}},\notag\\
+   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qB.pdf}}}
+   &=
+   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}},\\
+   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dB.pdf}}}
+   &=
+   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bd.pdf}}}.
+ \end{align}
+
+ \begin{align}
+   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qv.pdf}}}&=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vq.pdf}}},\\
+   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dv.pdf}}}
+   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}},\\
+   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}
+   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}},\\
+   
+   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
+   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vd.pdf}}},\\
+   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
+   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}},\\
+   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bq.pdf}}}
+   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}},\\
+   
+   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}}
+   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}},\\
+   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}}
+   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qB.pdf}}},\\
+   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bd.pdf}}}
+   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dB.pdf}}}.
+ \end{align} 
+:::

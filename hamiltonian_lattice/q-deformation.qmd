@@ -562,3 +562,29 @@ $3$つの$j=1/2$を合成して，
 %   |N_-(j,m)|^2-|N_+(j,m)|^2=2m
 % $$
  -->
+
+
+
+
+
+ <!-- \section{\texorpdfstring{$\mathrm{SU}(3)_k$}{SU(3)k}ゲージ理論のFusionルールの計算方法}
+ $\mathrm{SU}(2)$の場合のDynkin labelを$\lambda$とする．
+ $j=\lambda/2$に対応する．fusion行列$[N_{\lambda}]^{\nu}_{\rho}=N_{\lambda\rho}^\nu$として，これは，
+ $$
+   N_{\lambda+1}=G N_{\lambda}-N_{\lambda-1}
+ $$
+ の漸化式を満たす．ここで，$N_{0}=\mathbbm{1}$, $G=N_{1}$である．
+ また，$N_{-1}=0$である．
+ 具体的には，$[G]^n_m=\delta^{n+1}_{m}+\delta^{n-1}_{m}$.
+ 生成汎関数は，
+ $$
+   X(s)=\sum_{\lambda=0}^k s^\lambda N_\lambda = \frac{\mathbbm{1}+s^{h}P}{\mathbbm{1}-sG+s^2}
+ $$
+ となる．ここで，$h=k+2$, $P=N_k$である．
+
+ $\mathrm{SU}(3)_k$の場合の生成関数を
+ $$
+   X(s,t) = \sum_{\lambda=(\lambda_1,\lambda_2)\in\mathcal{P}^{(k)}}
+   s^{\lambda_1}t^{\lambda_2}N_{(\lambda_1,\lambda_2)}
+ $$
+ $X(s,t)^T=X(t,s)$を満たす． --> -->

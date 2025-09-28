@@ -1031,3 +1031,141 @@ $$
 $$
 
 を満たす． -->
+
+
+
+ <!-- まず，$\mathrm{SU}(3)$群の規約表現について復習しよう．
+ ## $\mathrm{SU}(N)$ ゲージ理論
+ 
+   生成子の中で互いに可換な$N-1$個の生成子を$H_i$とする．
+  例えば$\mathrm{SU}(3)$群の場合は，Gell-Mann行列を$\lambda_i$として，
+  生成子を$T_i=\lambda_i/2$とすると$H_1=T_3$, $H_2=T_8$である．
+  残りの
+  \begin{align}
+    [H_i,E_{\vb*{\alpha}}] &= \alpha_i E_{\vb*{\alpha}}\\
+    [H_i,E^\dag_{\vb*{\alpha}}] &= -\alpha_i E^\dag_{\vb*{\alpha}}
+  \end{align}
+  に選ぶことができる．
+  既約表現は，weightベクトル$\vb*{\mu}$を指定すると一意に定まる．
+ $\mathrm{SU(3)}$群の生成子を$T_i$とする．生成子の交換関係は，
+ $$
+   [T_i,T_j]=\ri f^k_{~ij} T_k
+ $$
+ とかける．ここで$f^k_{~ij}$は構造定数である．
+ $i,j,k$の添字は，$1$から$8$まで走る．
+ Gell-Mann行列を$\lambda_i$として，生成子を$T_i=\lambda_i/2$とすると基本表現の生成子の行列表現が得られる．
+ Gell-Mann行列は，
+ \textrm{Gell-Mann}行列
+ \begin{align}
+   &\lambda_1 = \begin{pmatrix}
+     0 & 1 & 0\\
+     1 & 0 & 0\\
+     0 & 0 &  0
+   \end{pmatrix},\quad
+   \lambda_2 = \begin{pmatrix}
+     0 & -\ri & 0\\
+     \ri & 0 & 0\\
+     0 & 0 &  0
+   \end{pmatrix},\quad
+   \lambda_3 = \begin{pmatrix}
+     1 & 0 & 0\\
+     0 & -1 & 0\\
+     0 & 0 &  0
+   \end{pmatrix},\quad
+   \lambda_4 = \begin{pmatrix}
+     0 & 0 & 1\\
+     0 & 0 & 0\\
+     1 & 0 &  0
+   \end{pmatrix},\notag\\
+   &\lambda_5 = \begin{pmatrix}
+     0 & 0 & -\ri\\
+     0 & 0 & 0\\
+     \ri & 0 &  0
+   \end{pmatrix},\quad
+   \lambda_6 = \begin{pmatrix}
+     0 & 0 & 0\\
+     0 & 0 & 1\\
+     0 & 1 &  0
+   \end{pmatrix},\quad
+   \lambda_7 = \begin{pmatrix}
+     0 & 0 & 0\\
+     0 & 0 & -\ri\\
+     0 & \ri & 0
+   \end{pmatrix},\quad
+   \lambda_8 = \frac{1}{\sqrt{3}}\begin{pmatrix}
+     1 & 0 & 0\\
+     0 & 1 & 0\\
+     0 & 0 &  -2
+   \end{pmatrix}.
+ \end{align}
+ このGell-Mann行列から
+ $$
+   d_{ijk}\coloneqq \frac{1}{4}\tr\qty(\{\lambda_i,\lambda_j\}\lambda_k)
+ $$
+ で定義される$d_{ijk}$を用いると，$C_3 =\sum_{i,j,k}d_{ijk}T_iT_jT_k$は，すべての生成子と可換である．
+
+ $H_1=T_3$, $H_2=T_8$，
+
+
+ 残りの
+ \begin{align}
+   [H_i,E_{\vb*{\alpha}}] &= \alpha_i E_{\vb*{\alpha}}\\
+   [H_i,E^\dag_{\vb*{\alpha}}] &= -\alpha_i E^\dag_{\vb*{\alpha}}
+ \end{align}
+ に選ぶことができる．
+ 既約表現は，weightベクトル$\vb*{\mu}$を指定すると決まる．
+ これは，Dynkinラベルを用いて$\lambda=(p,q)$で表すことができる．
+ $$
+   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Young_diagram.pdf}}}
+ $$
+ 基本表現は$(1,0)$，反基本表現は$(0,1)$，随伴表現は$(1,1)$となる．
+
+ 表現の次元は，
+ $$
+   d_a =\frac{1}{2}(p_a+1)(q_a+1)(p_a+q_a+2)
+ $$
+ となる．
+ $2$次のCasimirは,
+ $$
+   C_2 = \frac{1}{3}(p^2+q^2+3p+3p+pq)
+ $$
+ $3$次のCasimirは，
+ $$
+   C_3=\frac{1}{18}(p-q)(3+p+2q)(3+q+2p)
+ $$
+ である．
+
+ 基本表現及び反基本表現と$(p,q)$表現との合成は，
+ $$
+   (p,q)\otimes (1,0)=
+   (p+1,q)\oplus (p-1,q+1)\oplus (p,q-1)
+ $$
+ 及び
+ $$
+   (p,q)\otimes (0,1)=
+   (p-1,q)\oplus (p+1,q-1)\oplus (p,q+1)
+ $$
+ となる．これは，$3$つのベクトル$(1,0)$, $(-1,1)$, $(0,-1)$
+ を加えるまたは，引くことに対応する．
+ $\mathrm{SU}(3)$の場合，一般のClebsch–Gordan係数を求めるのは結構大変である．ここでは，フェルミオン系で必要になるものを計算しておこう．
+ 基本表現の基底ベクトルを下付き，反表現の基底ベクトルを上付きで書くことにする．$\ket{_i}$, $\ket{^i}$で，$i$は，$1$から$3$までの値を取る．daggerは，
+ \begin{align}
+   (\ket{_i})^\dag &=  \bra{^i},\\
+   (\ket{^i})^\dag &=  \bra{_i}
+ \end{align}
+ と表記する．これらの内積は，
+ \begin{align}
+   \braket{_i}{^j}&=\delta_i^j,\\
+   \braket{^i}{_j}&=\delta^i_j  
+ \end{align}
+ を満たす．
+
+ $2$つの基本表現の合成は，$6$表現と$\bar{3}$に分解される．
+ $\bar{3}$表現は，
+ \begin{align}
+   \ket{^i}&=\frac{1}{\sqrt{2}}\epsilon^{ijk}\ket{_j}\ket{_k}
+ \end{align}
+ と表せる．また，$3$表現と$\bar{3}$表現を合成すると，$8$表現と$1$表現が作れるが，$1$表現の次元は，
+ \begin{align}
+   |0\rangle = \frac{\delta^i_j}{\sqrt{3}}\ket{_i}\ket{^j}
+ \end{align} -->
