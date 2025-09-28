@@ -810,3 +810,85 @@ $$
 具体的には，線と頂点の位相の再定義を使って，$d_a$が現れるところを$(-1)^{j_a}d_a$に置き換えることで，向きを忘れることができる． -->
 
 
+
+<!-- $[F^{abc}_d]_{ef}$ は，$d\to abc$ の分解(または3つの表現の合成)に関するものであるが，
+同様に $cd\to ab$ の分解に関する $[F_{cd}^{ab}]_{ef}$ も定義できる:
+
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove22a.svg" style="height:5.5em;">
+    <span class="math display" style="display:inline-block;">
+    $$=\sum_{f}[F^{ab}_{cd}]_{ef}$$
+  </span>
+  <img src="figs/fmove22b.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22a.pdf}}
+    =
+    \sum_{f}[F^{ab}_{cd}]_{ef}
+    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22b.pdf}}.
+    \label{eq-Fmove2}
+$$
+:::
+
+これは，
+$$
+    [F^{ab}_{cd}]_{ef}=\sqrt{\frac{d_ed_f}{d_ad_d}}[F_f^{ceb}]^*_{ad}
+$$ {#eq-FandF}
+
+  の関係がある．
+
+\begin{question}
+    式 (@eq-FandF) を示せ．
+\end{question}
+
+式 (@eq-Fmove2) の左の図が，
+$$
+    \sum_{m_a,m_b,m_e}\braket{j_am_a}{j_cm_c\, j_em_e}
+    \braket{j_em_e\,j_bm_b}{j_dm_d}
+    \ket{j_a,m_a}\ket{j_b,m_b}
+$$
+
+  で，右の図が
+$$
+    \sum_{m_a,m_b,m_f}\braket{j_am_a\,j_bm_b}{j_fm_f}
+    \braket{j_fm_f}{j_cm_c\, j_dm_d}
+    \ket{j_a,m_a}\ket{j_b,m_b}
+$$
+
+に対応することに注意して，$[F_{cd}^{ab}]_{ef}$ は，
+
+$$
+[F_{cd}^{ab}]_{ef}=\sum_{m_a,m_b,m_e,m_f}
+    \braket{j_am_a}{j_cm_c\, j_em_e}
+    \braket{j_em_e\,j_bm_b}{j_dm_d}
+  \braket{j_fm_f}{j_am_a\,j_bm_b}
+  \braket{j_cm_c\, j_dm_d}{j_fm_f}
+$$
+
+と表すことができる．
+一方，$[F_f^{ceb}]^*_{ad}$ は，式\eqref{F-move_def} より，
+
+$$
+    \begin{split}
+      [F_f^{ceb}]^*_{ad}&=[F_f^{ceb}]_{ad}\\
+      &=
+    \end{split}
+$$
+$$
+    \begin{split}
+      &    [F^{ceb}_{f}]_{ad}\\
+  &=  \sum_{m_{c},m_{e},m_{b},m_{a} m_{d}}
+  \braket{j_{c}m_{c}\, j_{e}m_{e}}{j_{a}m_{a}}
+  \braket{j_{a}m_{a}\, j_{b}m_{b}}{j_{f}m_{f}}
+  \braket{j_{d}m_{d}}{ j_{e}m_{e}\, j_{b}m_{b} }
+  \braket{j_{f}m_{f}}{j_{c}m_{c}\, j_{d}m_{d}}
+      \end{split}
+$$
+ -->
+
+
