@@ -412,6 +412,9 @@ $[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$ は，$d\to abc$ の分解(または3
     $$=\sum_{f,\mu,\nu}[F_{cd}^{ab}]_{(e,\alpha,\beta)(f,\mu,\nu)}$$
   </span>
   <img src="figs/fmove22b.svg" style="height:5.5em;">
+    <span class="math display" style="display:inline-block;">
+    $$\,.$$
+  </span>  
 </div>
 :::
 
