@@ -66,6 +66,7 @@ format:
     toc: true
     sidebar: true
     toc-location: right
+    fig-format: svg
     number-sections: true
     number-depth: 3
     code-copy: true
@@ -102,6 +103,7 @@ format:
   pdf:
     pdf-engine: lualatex
     documentclass: book
+    fig-format: pdf
     include-in-header:
       text: |
         \usepackage{luatexja}
