@@ -27,7 +27,7 @@ book:
         - quantum_on_SUN.qmd
         - Kogut-Susskind.qmd
         - Example.qmd
-    - part: "応用編"
+    - part: "発展編"
       chapters:
         - stringnet.qmd
         - MTC.qmd
