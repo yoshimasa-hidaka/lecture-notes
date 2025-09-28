@@ -107,7 +107,6 @@ Wilson線のネットワークは，ジャンクションを持つが，一般�
 $\mathrm{SU}(2)_k$ の場合は，$N_{ab}^c\in\{0,1\}$ なので，このラベルは必要がない．
 
 トポロジカルな変形ルールを以下にまとめる．
-式(@eq-merge) や式(@eq-loop) は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -117,6 +116,7 @@ $\mathrm{SU}(2)_k$ の場合は，$N_{ab}^c\in\{0,1\}$ なので，このラベ�
   </span>
   <img src="figs/c.svg" style="height:5.5em;">
 </div>
+$$ $$ {#eq-stacking}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -138,6 +138,7 @@ $\mathrm{SU}(2)_k$ の場合は，$N_{ab}^c\in\{0,1\}$ なので，このラベ�
   </span>
   <img src="figs/parallel2mu.svg" style="height:5.5em;">
 </div>
+$$ $$ {#eq-partition}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -149,7 +150,7 @@ $\mathrm{SU}(2)_k$ の場合は，$N_{ab}^c\in\{0,1\}$ なので，このラベ�
 \end{align}
 :::
 
-に拡張される．また，$F$ シンボルは, $[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$ となり，
+また，$F$ シンボルは, $[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$ となり，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -268,16 +269,17 @@ $$ $$ {#eq-link}
   </span>
 <img src="figs/a.svg" style="height:5.5em;">
   </div>
+$$ $$ {#eq-vacuum_line}
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{align}
+$$
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLine.pdf}}}
 =\frac{1}{\mathcal{D}}\sum_{a}d_a\,\,
 \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
 =\sum_{a}S_{a0}\,\,
 \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-\end{align}
+$$ {#eq-vacuum_line}
 :::
 
 で定義する\footnote{この線は，自明表現の線とは異なるので注意}．
@@ -291,16 +293,48 @@ $$ $$ {#eq-link}
   </span>
   <img src="figs/vacuumMove2.svg" style="height:5.5em;">
 </div>
+$$ $$ {#eq-vacuum_move}
 :::
 
 ::: {.content-visible when-format=pdf}
-\begin{align}
+$$
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove1.pdf}}}
-=\vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove2.pdf}}}
-\end{align}
+  =\vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove2.pdf}}}
+$$ {#eq-vacuum_move}
 :::
 
-を満たす．真空線のループは
+を満たす．
+
+::: {.callout-note collapse="true"}
+## 詳細
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vacuumMove1.svg" style="height:4.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\frac{1}{\mathcal{D}}\sum_{d}d_d$$
+  </span>
+  <img src="figs/vacuum_move_proof1.svg" style="height:4.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\frac{1}{\mathcal{D}}\sum_{c,d}d_d\sqrt{\frac{d_c}{d_ad_d}}$$
+  </span>
+  <img src="figs/vacuum_move_proof2.svg" style="height:4.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\frac{1}{\mathcal{D}}\sum_{c,d}\sqrt{\frac{d_dd_c}{d_a}}$$
+  </span>
+  <img src="figs/vacuum_move_proof3.svg" style="height:4.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\frac{1}{\mathcal{D}}\sum_{c}d_c$$
+  </span>
+  <img src="figs/vacuum_move_proof4.svg" style="height:4.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/vacuumMove2.svg" style="height:4.0em;">
+</div>
+等号の変形には，式(@eq-vacuum_line), (@eq-stacking), (@eq-partition) を用いた．
+:::
+
+
+真空線のループは
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -327,7 +361,7 @@ $$ $$ {#eq-link}
   <span class="math display" style="display:inline-block;">
     $$=\mathcal{D}$$
   </span>
-  <img src="figs/vacuumLoop.svg" style="height:4.0em;">
+  <img src="figs/vacuumLoop.svg" style="height:3.0em;">
 </div>
 :::
 
@@ -348,7 +382,7 @@ $$ $$ {#eq-link}
   <span class="math display" style="display:inline-block;">
     $$=\sum_b S_{b0}$$
   </span>
-  <img src="figs/sab.svg" style="height:5.5em;">
+  <img src="figs/sab.svg" style="height:5.0em;">
    <span class="math display" style="display:inline-block;">
     $$=\sum_{b}S_{ab}$$
   </span>
@@ -368,8 +402,8 @@ $$ $$ {#eq-link}
 となる．
 
 
- Let us use the deformation rules to derive some relations.
- A Wilson loop with representation $a$ is graphically represented as
+これらの関係式を使って，いくつか便利な式を導出しよう．
+まず，表現 $a$ のWilon ループは，グラフィカルに
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -385,9 +419,8 @@ $$ $$ {#eq-link}
    \tr U_a = \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loopa2.pdf}}}.
 \end{equation}
 :::
- 
- Here, we introduced a defect at the center of the loop to prevent it from collapsing when contracted.
- When the defect is absent, it reduced to
+
+と表される．中心の欠陥を取り除くと，ループを潰すことができて，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -405,11 +438,23 @@ $$ $$ {#eq-loop_deformation}
   \end{align}
 :::
 
+が得られる．
 
- by choosing $b=\bar{a}$ and $c=0$ in eq.~(@eq-stacking).
- Two Wilson loops with representations $a$ and $b$ can be deformed using eqs~(@eq-stacking) and (@eq-partition) to 
+表現 $a$ と $b$ を持つ2つのWilson loopを 式 (@eq-stacking) と (@eq-partition) を用いて変形すると，
 
-::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/loopab1.svg" style="height:4.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{c}N_{ab}^c$$
+  </span>
+  <img src="figs/loopc.svg" style="height:4.0em;">
+</div>
+$$ $${#eq-wilsonloop_fusion_graph}
+
+が得られる．
+
+::: {.callout-note collapse="true"}
+## 詳細
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/loopab1.svg" style="height:4.0em;">
   <span class="math display" style="display:inline-block;">
@@ -429,10 +474,9 @@ $$ $$ {#eq-loop_deformation}
   </span>
   <img src="figs/loopc.svg" style="height:4.0em;">
 </div>
-$$ $${#eq-wilsonloop_fusion_graph}
 :::
 
-::: {.content-visible when-format=pdf}
+<!-- ::: {.content-visible when-format=pdf}
  \begin{align}
  \label{eq-wilsonloop_fusion_graph}
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loopab1.pdf}}}
@@ -445,33 +489,25 @@ $$ $${#eq-wilsonloop_fusion_graph}
    =\sum_{c}N_{ab}^c\  
    \vcenter{\hbox{includegraphics[scale=0.3]{figs/loopc.pdf}}}.
  \end{align}
-:::
+::: -->
 
-
- In the last equality, we used $d_{\bar{a}}=d_{a}$, etc.
- This leads to the fusion rule of Wilson loops:
+この図式は，Wilson ループの合成則
 
 $$
-   \tr U_a \tr U_b = \sum_{c}N_{ab}^c\tr U_c.
+   \tr U_a \tr U_b = \sum_{c}N_{ab}^c\tr U_c
 $$ {#eq-wilsonloop_fusion}
 
- Furthermore, using eq.~(@eq-loop_deformation), we obtain
+を導く．
+式 (@eq-loop_deformation) より，
  
 $$
-   d_{a}d_{b} =\sum_{c}N_{ab}^c d_c.
+   d_{a}d_{b} =\sum_{c}N_{ab}^c d_c
 $$ {#eq-dadb}
- 
- Let us derive the inverse relation of eq.~(@eq-dadb).
- Noting $d_{\bar{b}}=d_{b}$, $d_{\bar{c}}=d_{c}$, and $N_{a\bar{b}}^{\bar{c}}=N_{ac}^b$, we obtain
- 
-$$ 
-   d_{a}d_{b} =\sum_{c}N_{ac}^{b} d_c.
-$$
- 
- Multiplying both sides by $d_a$ and summing over $a$ yield
- the inverse relation of eq.~(@eq-dadb),
 
-$$\label{eq-inverser_dadb}
-   \mathcal{D}^2 d_{b} =\sum_{a,c}N_{ac}^{b} d_a d_c.
-$$
+が得られる．さらに両辺に $d_a$ をかけ，$a$ について和を取ると，
 
+$$
+   \mathcal{D}^2 d_{b} =\sum_{a,c}N_{ac}^{b} d_a d_c
+$$ {#eq-inverser_dadb}
+
+が得られる．

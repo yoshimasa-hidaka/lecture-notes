@@ -20,22 +20,26 @@ book:
         href: "../index.html"
         text: "講義ノートへ戻る"
   chapters:
-    - index.qmd
-    - Lie.qmd
-    - quantum_on_SUN.qmd
-    #- Gaugetheory.qmd
-    - Kogut-Susskind.qmd
-    - stringnet.qmd
-    - Example.qmd
-    - MTC.qmd
-    - SU3.qmd
-    - meanfield.qmd
-    - fermion.qmd
-    #- prepotential.qmd
+    - index.qmd                     # トップページ（本の概要）
+    - part: "基礎編"
+      chapters:
+        - Lie.qmd
+        - quantum_on_SUN.qmd
+        - Kogut-Susskind.qmd
+        - Example.qmd
+    - part: "応用編"
+      chapters:
+        - stringnet.qmd
+        - MTC.qmd
+        - SU3.qmd
+        - meanfield.qmd
+        - fermion.qmd
+        # - prepotential.qmd        # 必要ならアンコメント
+    - part: "実装編"
+#      chapters:
   appendices:
     - group_theory.qmd
     - q-deformation.qmd
-
 
 
 crossref:
