@@ -6,9 +6,11 @@ $q$変形に関する参考文献として [@Bonatsos:1999xj,@Ardonne2010Clebsch
 ここでは，本稿で用いた$q$変形について簡単に紹介する．
 
 ## セミシンプルLie代数
+
 まず一般のセミシンプルLie代数 $\mathfrak{g}$ の量子群変形を考えよう．
 $\mathfrak{g}$のルートベクトルを $\symbf{\alpha}_i$  とする．
-生成子 $H_i$, $L_i^\pm$ の交換関係をChevalley基底を用いて，
+生成子 $H_i$, $L_i^\pm$ の交換関係を Chevalley 基底を用いて，
+
 $$
   [H_i,H_j]=0,\quad
   [H_i,L_j^\pm] = \pm A_{ij}L_{j}^\pm,\quad
@@ -16,7 +18,8 @@ $$
 $${#eq-q_algebra}
 
 とする．これらは，
-$i\neq j$ について， Serre関係式
+$i\neq j$ について， Serre 関係式
+
 $$
   \sum_{s=0}^{1-A_{ij}}(-1)^s
   \begin{bmatrix}
@@ -27,7 +30,7 @@ $$
 $$
 
 を満たす．
-ここで，$A_{ij}$　はCartan行列の要素である:
+ここで，$A_{ij}$　は Cartan 行列の要素である:
 
 $$
   A_{ij} = \frac{2(\symbf{\alpha}_i,\symbf{\alpha}_j)}{(\symbf{\alpha}_j,\symbf{\alpha}_j)}.
@@ -40,7 +43,7 @@ $$
 $$
 
 で定義されている．ただし，$(\symbf{\alpha}_j,\symbf{\alpha}_j)$ は，規格化に一般にルートベクトルの依存するが，ここでは，最高次のルートベクトル(随伴表現のhighest weight vector)を $\theta$ としたとき，$(\theta,\theta)=2$ と規格化してあるものとする．
-$g$ をdual Coxeter数\footnote{コルートを $\symbf{\alpha}^{\lor}_i=2\symbf{\alpha}_i/(\symbf{\alpha}_i,\symbf{\alpha}_i)$ と定義する．すると $a_i^{\lor}$ を非負の整数として，$\theta=\sum_{i=1}^ra_i^{\lor}\symbf{\alpha}^{\lor}_i$ と展開できる．ここで，$r$ は，Lie代数のランクである．dual Coxeter数は $g\coloneqq\sum_{i=1}^r a^{\lor}_{i}+1$ と定義される．}として，$q$ は，
+$g$ をdual Coxeter 数\footnote{コルートを $\symbf{\alpha}^{\lor}_i=2\symbf{\alpha}_i/(\symbf{\alpha}_i,\symbf{\alpha}_i)$ と定義する．すると $a_i^{\lor}$ を非負の整数として，$\theta=\sum_{i=1}^ra_i^{\lor}\symbf{\alpha}^{\lor}_i$ と展開できる．ここで，$r$ は，Lie代数のランクである．dual Coxeter 数は $g\coloneqq\sum_{i=1}^r a^{\lor}_{i}+1$ と定義される．}として，$q$ は，
 $$
   q\coloneqq e^{\frac{2\pi\ri}{k+g}}
 $$
@@ -66,10 +69,11 @@ $$
 である．
 ここで，
 $[n]_{q_i}!\coloneqq[1]_{q_i}[2]_{q_i}\cdots [n]_{q_i}$ を導入した.
-$k\to\infty$，つまり$q=1$の場合は，式 (@eq-q_algebra) は，通常のLie代数に戻る．以下，混乱の恐れがない場合は，添字の $q_i$ は省略する．
+$k\to\infty$，つまり $q=1$ の場合は，式 (@eq-q_algebra) は，通常の Lie代数に戻る．以下，混乱の恐れがない場合は，添字の $q_i$ は省略する．
 
 
-表現の分解を対応付けるcoproduct $\Delta$ を
+表現の分解を対応付ける coproduct $\Delta$ を
+
 $$
   \Delta(H_i)\coloneqq 1\otimes H_i+H_i\otimes 1,
 $$
@@ -79,9 +83,11 @@ $$
 $$
 
 で定義する．これは，coassociativity
+
 $$
   ( \Delta\otimes1)\Delta=(1\otimes \Delta)\Delta
 $${#eq-coassociativity}
+
 を満たす．
 
 \begin{question}
@@ -145,18 +151,24 @@ $${#eq-coassociativity}
 具体例として，$\mathfrak{g}=\mathfrak{su}(2)$ の場合を考えよう．
 この場合，ルートベクトルは一つで，$A=2$, $t_1=2/(\symbf{\alpha}_1,\symbf{\alpha}_1)=1$, $g=2$ である．
 したがって，
+
 $$
   q \eqqcolon q_1= \exp\ri \frac{2\pi}{k+2}
 $$
+
 として，
+
 $$
   [n]\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+2}n)}{\sin\qty(\frac{\pi}{k+2})}
 $$
+
 となる．$J_0=H_0/A$, $J_\pm=L^\pm$ とすると，
 交換関係は，
+
 $$
   [J_0,J_\pm]= \pm J_{\pm},
 $$
+
 $$
   [J_+,J_-]=  [2J_{0}]
 $$
@@ -164,6 +176,7 @@ $$
 となる．
 特に$2$次のカシミア不変量は $[j][j+1]$ となる.
 これは，
+
 $$
  C_2= J_-J_++[J_0][J_0+1]=
  J_+J_-+[J_0][J_0-1]
@@ -177,15 +190,19 @@ $${#eq-C2}
 
 状態を，$C_2$ と $J_0$ の固有状態
 $\ket{j,m}$ でラベルすると
+
 $$
   C_2\ket{j,m}=[j][j+1]\ket{j,m},
 $$
+
 $$
   J_0\ket{j,m} = m \ket{j,m}
 $$
+
 となる．
 ここで，状態の内積は，$j=0,1/2,1,\cdots k/2$ 及び，$m=-j,j+1,\cdots, j-1,j$ の値を取る．
 また, $J_0 J_\pm\ket{j,m}= (J_\pm J_0+[J_0,J_\pm])\ket{j,m}=(m\pm 1)J_\pm \ket{j,m}$ より，$J_\pm\ket{j,m} \propto  \ket{j,m\pm 1}$ がわかり，$J_\pm\ket{j,m}=N_\pm(j,m)\ket{j,m\pm1}$ として，式 (@eq-C2) より，
+
 $$
   |N_\pm(j,m)|^2 =  \bra{j,m}J_\mp J_\pm\ket{j,m}=
   \bra{j,m}C_2-[J_0][J_0\pm1]\ket{j,m}=[j][j+1]-[m][m\pm 1]
@@ -199,7 +216,7 @@ $$
 
 に選ぶことができる．
 
-次の表現の合成について考えよう．まずcoproduct $\Delta$ は，
+次の表現の合成について考えよう．まず coproduct $\Delta$ は，
 
 $$
   \Delta(J_0)= J_0\otimes 1 + 1\otimes J_0,
@@ -216,9 +233,10 @@ coproductと交換子$[-,-]$は作用の順番によらないことを示せ．�
 $\Delta([J_i,J_j]) = [\Delta(J_i),\Delta(J_j) ]$を示せ．
 \end{question}
 
-具体的な例として，ふたつの$j=1/2$の合成を考えよう．
+具体的な例として，ふたつの $j=1/2$ の合成を考えよう．
 まず，$\ket{1,1}=\ket{\uparrow}\ket{\uparrow}$ となることは容易にわかる．
 $\ket{1,0}$ は，$\Delta(J_-)$ を作用させることで得ることができる:
+
 $$
   \Delta(J_-)\ket{1,1}=
   q^{1/4}\ket{\uparrow}\ket{\downarrow}
@@ -229,10 +247,12 @@ $$
 $\ket{1,0}=\mathcal{N}\Delta(J_-)\ket{1,1}$ として，規格化因子 $\mathcal{N}$ を
 $\bra{1,0}\ket{1,0}=1$ となるように決める．ただし，$q$ の複素共役は，$q$ とする．
 すると，
+
 $$
   1=\bra{1,0}\ket{1,0}=|\mathcal{N}|^2(q^{1/2}+q^{-1/2})=
   |\mathcal{N}|^2[2]
 $$
+
 より，$\mathcal{N}$ の位相を実に選んで
 
 $$
@@ -243,7 +263,7 @@ $$
 さらに $\Delta(J_-)$ を $\ket{1,0}$ に作用させると，
 
 $$
-  \Delta(J_-)\ket{1,0}=
+  \Delta(J_-)\ket{1,0} =
   \frac{2}{\sqrt{[2]}}\ket{\downarrow}\ket{\downarrow}
 $$
 
@@ -254,7 +274,7 @@ $$
 $$
 
 を得る．
-したがって，Clebsch-Gordan係数は，
+したがって，Clebsch--Gordan 係数は，
 
 $$
   \bra{1,1}\ket{\frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}{2}}_q=1,
@@ -282,7 +302,7 @@ $$
 
 となる．
 
-次により一般のスピン$j_1$と$j_2$の合成を考えよう．
+次により一般のスピン $j_1$ と $j_2$ の合成を考えよう．
 スピン $j_1+j_2$ の状態は，
 $$
   \ket{j_1+j_2,j_1+j_2}=\ket{j_1,j_1}\ket{j_2,j_2}
@@ -336,7 +356,7 @@ $3$つの$j=1/2$を合成して，
 \end{question}
 
 <!-- 
-% \subsubsection{一般的なClebsch-Gordan係数}
+% \subsubsection{一般的なClebsch--Gordan係数}
 % $$
 %   \ket*{j_c,m_c} = \sum_{m_a,m_b}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_am_a\, j_bm_b}{j_c,m_c}
 % $$

@@ -1,8 +1,8 @@
 # 量子群による有限次元近似　{#sec-cutoff_representation}
 一般に $\mathrm{SU}(N)$群の既約表現は無限に存在するため，有限の格子上であっても Hilbert 空間は無限次元である．
 量子計算機などで数値計算するためには有限次元の Hilbert 空間に近似する必要がある．
-ここでは，ひとつの有効な方法として，量子群変形を用いた有限次元近似法を紹介する ([@Zache:2023dko,@Hayata:2023puo])．
-量子群 $\mathrm{SU}(N)_k$ では，Young 図の横方向の箱の数の最大値が$k$となる．
+ここでは，ひとつの有効な方法として，量子群変形を用いた有限次元近似法を紹介する [@Zache:2023dko; @Hayata:2023puo]．
+量子群 $\mathrm{SU}(N)_k$ では，Young 図の横方向の箱の数の最大値が $k$ となる．
 例えば，$\mathrm{SU}(2)_k$ の場合は，スピン $j$ が $0,1/2,1,\cdots, k/2$ の値に制限される．
 量子群変形の利点は，これまでに導入した式 (@eq-partition) や (@eq-Fmove) が形式的にはそのまま成り立つ点である．
 ただし，係数が変形される．
@@ -24,7 +24,7 @@ $$
   \end{cases}
 $$ {#eq-fusion_q}
 
-となる．表現の次元だった $d_a$ は，量子次元(Frobenius-Perron dimension)と呼ばれ，
+となる．表現の次元だった $d_a$ は，量子次元 (Frobenius-Perron dimension) と呼ばれ，
 
 $$
     [N_a]^{c}_{b}=N_{ab}^c
@@ -56,7 +56,13 @@ $$
 $$
 
 と定義される．$k$ が大きい場合に $\mathcal{D}\sim (k+2)^{3/2}$ と振る舞う．
-また，2次の Casimir 不変量は $C_2(a)=[j_a][j_a+1]$ となる．
+また，2次の Casimir 不変量は
+
+$$
+  C_2(a)=[j_a][j_a+1]
+$$
+
+となる．
 
 Wilson ループの作用を計算するためには $F$-symbol が必要であった．
 これは，式 (@eq-fmoves) と同様に
@@ -89,27 +95,32 @@ $$
   \Delta(a,b,c)=\delta_{abc}\sqrt{\frac{[a+b-c]![a-b+c]![-a+b+c]!}{[a+b+c+1]!}}\,,
 $$
 
-および，$[n]!=[n][n-1]\cdots [2][1]$である．
+および，$[n]!=[n][n-1]\cdots [2][1]$ である．
 また，$z$ が取りうる範囲は，
 
 $$
   \max(a+b+c,a+e+f,d+b+f,d+e+c)\leq z\leq 
   \min(a+b+d+e,a+d+c+f,b+e+c+f)
 $$
+
 である．
 
 ## $\mathrm{SU(3)}_k$
 
 $\mathrm{SU}(3)_k$ の表現は，Dynkin ラベル $a=(p_a,q_a)$ で表される．
 fusion の多重度は，
+
 $$
   N_{ab}^{c} =(k_0^{\max}-k_0^{\min}+1)\delta_{ab}^c
 $$
+
 で与えられる [@Begin:1992rt].
 ここで，
+
 $$
   k_0^{\min}=\max(p_a+q_a,p_b+q_b,p_c+q_c,\mathcal{A}-\min(p_a,p_b,q_c),\mathcal{B}-\min(q_a,q_b,p_c))\,,
 $$
+
 $$
   k_0^{\max}=\min(\mathcal{A},\mathcal{B})\,,
 $$
@@ -128,36 +139,256 @@ $$
     0\quad\text{otherwise}
   \end{cases}
 $$
-である．$\mathbb{Z}_+$は非負の整数全体を表す．
+
+である．$\mathbb{Z}_+$ は非負の整数全体を表す．
 
 $q$ 変形パラメータ
+
 $$
   q = \exp(\ri\frac{2\pi}{k+3})
 $$
+
 を用いて，$q$ 数は，
+
 $$
   [n]\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+3}n)}{\sin\qty(\frac{\pi}{k+3})}
   \label{eq-[n]su3}
 $$
-で定義される．$q$は，Dynkinラベルのではない点に注意.
 
-$2$次のCasimir不変量 $C_2(a)$は，
+で定義される．$q$ は，Dynkin ラベルのではない点に注意.
+
+2次の Casimir 不変量 $C_2(a)$ は，
+
 $$
   C_2(a)  = \frac{1}{2}\qty(\left[\frac{p_a}{3}-\frac{q_a}{3}\right]^2+\left[\frac{2p_a}{3}+\frac{q_a}{3}+1\right]^2+\left[\frac{p_a}{3}+\frac{2q_a}{3}+1\right]^2-2)
 $${#eq-C2_su3}
-で与えられる [@Bonatsos:1999xj] \footnote{ここでの$C_2(a)$の規格化因子は[@Bonatsos:1999xj] の $1/2$ を採用している．}．
+
+で与えられる [@Bonatsos:1999xj] \footnote{ここでの$C_2(a)$の規格化因子は [@Bonatsos:1999xj] の $1/2$ を採用している．}．
 
 同様に，量子次元は，
+
 $$
   d_{a} =\frac{1}{[2]}[p_a+1][q_a+1][p_a+q_a+2]
   \label{eq-dpq}
 $$
+
 となる [@Coquereaux:2005hu]．
 もっとも重要なのは $F$-symbols だが，残念ながらコンパクトな表式は知られていない．小さい $k$ については，[@Ardonne2010ClebschGordanA6] で議論されている．
 
 
-<!-- ## 線の向きについて
-ある表現のWilson線の矢印の向きを反転させると，これは反表現に対応し，一般には区別される状態である．
-しかし，$\mathrm{SU}(2)$の特殊性として，表現と反表現が同型であるという性質がある．この性質を考慮すると矢印の向きを忘れることができる．
-具体的には，線と頂点の位相の再定義を使って，$d_a$が現れるところを$(-1)^{j_a}d_a$に置き換えることで，向きを忘れることができる． -->
 
+
+$\mathrm{SU}(3)_k$ Yang-Mills 理論のハミルトニアンは，
+
+$$
+  H = \frac{1}{2}\sum_{e\in {\tilde{\mathcal{E}}}} E^2(e) - \frac{K}{2} \sum_{p\in \mathcal{P}}\qty( \tr U_{(1,0)} (p)+\tr U_{(0,1)} (p) )
+$$ {#eq-HamiltonianSU3}
+
+で与えられる．ここで， $\tilde{\mathcal{E}}\subset\mathcal{E}$ は電場が作用する辺の集合で $\mathcal{P}$ はプラケットの集合である．
+$E^2_i(e)$ は電場の2乗で $\tr U_{(1,0)} (p)$ は基本表現の Wilson ループである．$K$は結合定数で，通常の結合定数 $g$ とは $K=1/g^4$ の関係にある．
+演算子の状態への作用は，以下で与えられる.
+$E^2$ 項については，
+
+::: {.content-visible when-format=html}
+<div  style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$E^2 $$
+  </span>
+  <img src="figs/a.svg" style="height:6.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= C_2(a)$$
+  </span>
+  <img src="figs/a.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  E_i^2 \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  = C_2(a)\
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  \label{eq-action_electric_field_su3}
+$$
+:::
+
+である．ここで， $C_2(a)$ は2次の Casimir 不変量で，式 (@eq-C2_su3) で与えられる．一方，Wilsonループ $\tr U_{d}$ の作用は，
+
+
+::: {.content-visible when-format=html}
+<div  style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$\tr U_{d}$$
+  </span>
+  <img src="figs/plaquetteAction0_su3.svg" style="height:6.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$ =\sum_{\{a'_{i},\mu'_i\}}\prod_{i=1}^{6}
+       [F_{a'_{i}}^{c_{i}a_{i-1}d}]_{(a_{i},\mu_i,\mu_{i+1}),({a'}_{i-1},\mu'_{i-1},\mu'_{i})}$$
+  </span>
+  <img src="figs/plaquetteAction2_su3.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \tr U_{d}\quad
+  \vcenter{\hbox{\includegraphics[scale=0.21]{figs/plaquetteAction0_su3.pdf}}}
+       =\sum_{\{a'_{i},\mu'_i\}}\prod_{i=1}^{6}
+       [F_{a'_{i}}^{c_{i}a_{i-1}d}]_{(a_{i},\mu_i,\mu_{i+1}),({a'}_{i-1},\mu'_{i-1},\mu'_{i})}
+       \ \vcenter{\hbox{\includegraphics[scale=0.21 ]{figs/plaquetteAction2_su3.pdf}}}
+         \label{eq-action_trU}
+$$
+:::
+
+
+となる．ここで， $a'_0=a'_6$, $\mu_0=\mu_6$, $\mu'_0=\mu'_6$, および $\mu'_7=\mu'_1$ である．
+
+
+
+
+# ストリングネット模型による記述 {#sec-string_network}
+
+ハミルトニアン形式で，ゲージ理論を計算機を用いて計算するために，
+空間の離散化，ゲージ群の表現にカットオフを入れ必要があった．
+物理状態の基底は，$\mathrm{SU}(2)_k$ ゲージ理論の場合，スピンネットワークで表現される．
+各頂点は，三角不等式を満たすもののみが物理状態になるため，
+物理状態は非局所的なものになっている．非局所的な基底を使って計算しても良いが，
+若干使いにくいので，局所的な基底を用意し，
+三角不等式を満たすようにハミルトニアンにペナルティ項を
+導入し，低エネルギー状態が物理状態になるように構成すると便利である．
+これにより基底は局所的なスピンとして取り扱う事ができる．
+このペナルティ項は，Gaussの 拘束条件に対応するが，もともとの $\ket*{j,m,n}$ の
+基底に比べて$m$, $n$ の自由度がないため，自由度の節約になっている．
+この節では，$\mathrm{SU}(2)_k$ ゲージ理論がストリングネット模型
+[@Levin:2004mi] で記述されることを見る．
+
+## ストリングネット模型
+
+スピンネットワークで表現した，
+頂点が3点のみのグラフ $\Gamma$ 上の $\mathrm{SU}(2)_k$ 格子模型のハミルトニアンは，
+$$
+  H = \frac{1}{2}\sum_{e\in \tilde{\mathcal{E}}} E^2(e) - K \sum_{p\in \mathcal{P}} \tr U ( p) - t\sum_{v\in \mathcal{V}} Q(v)
+$$
+で与えられる．ここで $\mathcal{V}$，$\mathcal{E}$ は頂点および辺の集合で，
+$\tilde{\mathcal{E}}\subseteq \mathcal{E}$ は，電場の運動エネルギーが定義されている辺の集合，
+$\mathcal{P}$は，プラケットの集合である．
+物理的な自由度は辺の上に定義され，$0,1/2,\cdots, k/2$ の $(k+1)$ 状態を取る．
+つまり，辺にスピン $k/2$ を持ったスピン系のように思って良い．
+$Q(v)$ はペナルティ項で，頂点 $v=(a,b,c)$ につながる辺 $a,b,c$ の状態を $\ket*{j_aj_bj_c}$ とすると，
+
+$$
+  Q(v)\ket*{j_aj_bj_c} = \delta_{abc}\ket*{j_aj_bj_c}
+$$
+
+である．ここで $\delta_{abc}$ は，式 (@eq-fusion_q) で定義されている．
+これは Gauss の拘束条件に対応する項である．
+
+ハミルトニアンに含まれる演算子の状態への作用をグラフフィカルに表現すると
+
+::: {.content-visible when-format=html}
+<div markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+  $$ E^2 $$
+  </span>
+  <img src="figs/a.svg" style="height:5.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=[j_a][j_a+1]$$
+  </span>
+    <img src="figs/a.svg" style="height:5.0em;">
+</div>
+$$ $${#eq-action_electric_field}
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  E^2 \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  = [j_a][j_a+1] 
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}},
+$${#eq-action_electric_field}
+:::
+
+
+<!-- ::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/a.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \braket{j_b n_b}{j_a m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  = \braket{j_b n_b}{j_a m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}
+$$
+::: -->
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$Q$$
+  </span>
+  <img src="figs/abc.svg" style="height:5.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\delta_{abc} $$
+  </span>
+  <img src="figs/abc.svg" style="height:5.0em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  Q \quad \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abc.pdf}}}
+  =\delta_{abc}\vcenter{\hbox{\includegraphics[scale=0.3]{figs/abc.pdf}}},
+$$
+:::
+
+
+::: {.content-visible when-format=html}
+<div markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$Q \quad $$
+  </span>
+  <img src="figs/cab.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\delta_{abc}$$
+  </span>
+    <img src="figs/cab.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  Q \quad \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cab.pdf}}}
+  =\delta_{abc}\vcenter{\hbox{\includegraphics[scale=0.3]{figs/cab.pdf}}},
+$$
+:::
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$ \tr U $$
+  </span>
+  <img src="figs/plaquetteAction0.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$ =\prod_{i=1}^{4} \sum_{b_{i}}
+       [F_{b_{i}}^{c_{i}a_{i-1}\frac{1}{2}}]_{a_{i}b_{i-1}} $$
+  </span>
+  <img src="figs/plaquetteAction5.svg" style="height:5.5em;">
+</div>
+$$ $$ {#eq-Wilson_loop_action}
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \tr U \quad
+       \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction0.pdf}}}
+       =\prod_{i=1}^{4} \sum_{b_{i}}
+       [F_{b_{i}}^{c_{i}a_{i-1}\frac{1}{2}}]_{a_{i}b_{i-1}}
+         \vcenter{\hbox{\\includegraphics[scale=0.3]{figs/plaquetteAction5.pdf}}}
+$$ {#eq-Wilson_loop_action}
+:::
+
+となる．
+$Q(v)$ はすべての $Q(v')$, $E^2(e)$, $\tr U(p)$ と可換で，ハミルトニアンとも可換である．
+したがって状態は $Q(v)$ の固有値でラベルすることができる．$Q(v)$ の固有値がすべて $1$ である状態が物理状態に対応する．

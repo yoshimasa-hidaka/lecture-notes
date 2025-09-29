@@ -79,77 +79,69 @@ $$ $${#eq-vacuum_line}
 \end{align}
 :::
 
-で定義する．これは，
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/vacuumMove1.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$=$$
-  </span>
-  <img src="figs/vacuumMove2.svg" style="height:5.5em;">
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-\begin{align}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove1.pdf}}}
-=\vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumMove2.pdf}}}
-\end{align}
-:::
-
-を満たす．つまり真空線の内側に欠陥があっても Wilson 線はすり抜けることができる．これにより Wilson ループはトポロジカルになる．
-また，真空線のループは潰すと
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/vacuumLoop0.svg" style="height:3.5em;　vertical-align:middle;">
-   <span class="math display" style="display:inline-block;">
-    $$=\mathcal{D}$$
-  </span>
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-\begin{align}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLoop0.pdf}}}=\mathcal{D}
-\end{align}
-:::
-
-となり全量子次元に等しい．
-また，真空線の合成より
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/vacuumDoubleLoop.svg" style="height:3.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$=\mathcal{D}$$
-  </span>
-  <img src="figs/vacuumLoop.svg" style="height:3.5em;">
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-\begin{align}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumDoubleLoop.pdf}}}=\mathcal{D}\,
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vacuumLoop.pdf}}}
-\end{align}
-:::
-
-が成り立つ．
-
+で定義する．
+ここで，$\mathcal{D}=\sqrt{\sum_{a}d_a^2}$ は全量子次元である．
 この真空線を用いて，
 $$
   B(p)\coloneqq \sum_a\frac{d_a}{\mathcal{D}^2}\tr U_a(p)
 $$
-を定義し，ストリング凝縮状態として
+を定義する．
+
+この $B(p)$ は，$B(p)B(p)=B(p)$ および，
+
+$$
+\tr U_a(p) B(p)= d_a B(p)
+$$ {#eq-U_Bp}
+
+という性質を持つ．
+
+::: {.callout-note collapse="true"}
+## 詳細
+式 (@eq-fusion_Wilson_loop) を $\ket{g=1}$に作用させると，$\tr D_a(g=1)=d_a$ より，
+
+$$
+d_ad_b=\sum_{c} N_{ab}^c d_c
+$$ {#eq-dadb_Ndb}
+
+が成立する．また，
+
+$$
+\tr U_a(p) B(p)=\sum_{b}\frac{d_b}{\mathcal{D}^2} \tr U_a(p)\tr U_b(p)
+=\sum_{b,c}\frac{d_b}{\mathcal{D}^2}N_{ab}^c \tr U_c(p)
+=d_a\sum_{c}\frac{d_c}{\mathcal{D}^2} \tr U_c(p)=d_a B(p)
+$$
+
+が成り立つ．
+式 (@eq-dadb_Ndb) を用いると，
+
+$$
+\tr U_a(p) B(p)
+=d_a\sum_{c}\frac{d_c}{\mathcal{D}^2} \tr U_c(p)=d_a B(p)
+$$
+
+が示せる．
+この関係式から
+$$
+\tr B(p) B(p)
+=\sum_{a}\frac{d_a}{\mathcal{D}^2}\tr U_a(p) B(p)
+=\sum_{a}\frac{d^2_a}{\mathcal{D}^2} B(p)
+=B(p)
+$$
+
+が従う．
+:::
+
+
+ストリング凝縮状態として
+
 $$
   \ket{\Phi} = \prod_p B(p)\ket{0}
 $$
+
 を定義する．
 ここで，$\ket{0}$ は強結合極限での真空を表す．
-すべてのプラケットに真空線を作用させた状態 $\ket{\Phi}$ に作用させた Wilson ループはトポロジカルに変形することができる．もし空間にサイクルがないとするとこの Wilson ループは自明に潰すことができる．つまり $\tr U_a(p)\ket{\Phi}=d_{a}\ket{\Phi}$ を意味する．したがってストリング凝縮状態は，ハミルトニアン (@eq-weakcouplingH) の基底状態となる．
-
+式 (@eq-U_Bp) より，$\tr U_a(p)\ket{\Phi}=d_{a}\ket{\Phi}$ が成立するため，この状態は，ハミルトニアン (@eq-weakcouplingH) の値を最小化する．
+したがってストリング凝縮状態は，基底状態となる．
 
 
 

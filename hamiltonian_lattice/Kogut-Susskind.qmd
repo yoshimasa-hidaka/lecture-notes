@@ -44,6 +44,7 @@
 その上の量子系は，@sec-SUN_quantum 節で解説した $\mathrm{SU}(N)$ とする．
 つまり，基本的な演算子は $\ER_i(e)$, $\EL_i(e)$, $U_a(e)$ である．
 これらの正準交換関係は，
+
 $$
   [\ER_{i}(e),U_a(e')] =U_a(e) T_{ai}\delta_{e,e'}\,, \quad
   [\ER_{i}(e),\ER_{j}(e')]=\ri f^{k}_{~ij}\ER_{k}(e)\delta_{e,e'}\,,
@@ -58,25 +59,31 @@ $${#eq-E_tE_tfield}
 
 プラケット $p$ に沿った経路を $e_1\to e_2\to e_3\to \bar{e}_4\to \bar{e}_5\to \bar{e}_6$ とし，
 その上の演算子 $U(p)$ を
+
 $$
   U_a(p)\coloneqq U_a(\bar{e}_6)U_a(\bar{e}_5)U_a(\bar{e}_4)U_a(e_3)U_a(e_2)U_a(e_1)
 $$
+
 と定義する．ここで，バーとバーなしの辺の演算子の対応は，$U_a(\bar{e})=U^\dag_a(e)$ である．
 同様に一般の閉じた経路に対して定義された $U_a$ からなる演算子は表現 $a$ の Wilson ループと呼ばれる．以下，表記の簡略として基本表現の場合は添字 $a$ を省略し，$U(e)\coloneqq U_{\mathrm{fund}}(e)$ や $U(p)\coloneqq U_{\mathrm{fund}}(p)$ と表す．
 ハミルトニアン $H$ は，この $U(p)$ と電場の2乗 $E^2(e)$ を用いて，
+
 $$
   H=\sum_{e\in {\mathcal{E}}}\frac{1}{2}E^2(e)
    -\frac{K}{2}\sum_{p\in \mathcal{P}}(\tr U(p)+\tr U^\dag(p) )
-$$ {#eq-magnetic}
+$$ {#eq-Hamiltonian}
+
 と定義される．ここで，$K$ は結合定数である．
 電場項について独立な結合定数を導入してもよいが，エネルギーの単位のスケールを調整することで $1$ に取ることができる．
 
 ## ゲージ不変性
 
 ある頂点 $v\in \mathcal{V}$ に対するゲージ変換の生成子を
+
 $$
 G_i(v)\coloneqq  \sum_{e\in \mathcal{E}| \mathrm{s}(e)=v}\ER_{i}(e)-\sum_{e\in \mathcal{E}| \mathrm{t}(e)=v}\EL_{i}(e)
 $$
+
 と定義する．
 この演算子は，頂点が始点になっている辺に対して $\ER_i$ を，終点になっている辺に対して，$-\EL_i$ を割り当て，和を取ったものである．
 交換関係は $[G_i(v),G_j(v)]=\ri f^k_{~ij}G_k(v)$ を 満たし，Lie代数をなす．
@@ -107,6 +114,7 @@ $$ {#eq-Gauge_transformationEL}
 $$
 \ket{\Psi}\to   e^{\ri\sum_{v\in\mathcal{V}}\theta^i(v)G_i(v)}\ket{\Psi}
 $$ {#eq-gauge_transformation}
+
 と変換する．物理状態は任意の $\theta^i(v)$ に対して不変である必要があるので，微小変換のもとでの不変性，つまり，すべての $v\in\mathcal{V}$ に対して，Gauss の拘束条件
 
 $$
@@ -148,7 +156,7 @@ $$ {#eq-gauss}
 $G_i(v)$ は Lie代数の生成子であり，式 (@eq-gauss) は，頂点において，状態が表現の1重項になることを要請している．
 ここでは，ハニカム格子を考えているので$3$点頂点を考えれば十分である．頂点を$v$とし，それが
 辺 $e_1$, $e_2$ の始点，$e_3$ の終点になっている場合を考える．
-すなわち，$\mathrm{s}(e_1)=\mathrm{s}(e_2)=\mathrm{t}(e_3)=v$ である (図 @fig-vertex)．
+すなわち，$\mathrm{s}(e_1)=\mathrm{s}(e_2)=\mathrm{t}(e_3)=v$ である (図 @fig-vertex 左)．
 このとき，状態 $\ket*{a,m_a,n_a}_1\ket*{b,m_b,n_b}_2\ket*{c,m_c,n_c}_3$ に対して，Clebsch--Gordan 係数 $\braket{a,n_a;\, b,n_b}{c,m_c;\mu}$ を用いると
 
 $$
@@ -195,6 +203,8 @@ $$
   <span class="math display" style="display:inline-block;">
     $$= \braket{a,n_a;\, b,n_b}{c,m_c;\mu}\frac{1}{\sqrt{d_c}}\,, $$
   </span>
+</div>
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/cabmu.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
     $$= \braket{c,n_c;\mu}{a,m_a;\, b,m_b}\frac{1}{\sqrt{d_c}} $$
@@ -273,63 +283,8 @@ $$ $$ {#eq-Fmove}
 
 の関係も導かれる．ここで$[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$は，$F$-symbol と呼ばれるユニタリ行列である．
 
-これらの代数を用いると，ハミルトニアンの状態への作用が計算できる．
-$\tr U_{d}$ の作用は，$F$-symbol を用いて
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <span class="math display" style="display:inline-block;">
-    $$\tr U_{d}$$
-  </span>
-  <img src="figs/plaquetteAction0_su3.svg" style="height:8.0em;">
-  <span class="math display" style="display:inline-block;">
-    $$=\sum_{\{a'_{i},\mu'_i\}}\prod_{i=1}^{6}
-       [F_{a'_{i}}^{c_{i}a_{i-1}d}]_{(a_{i},\mu_i,\mu_{i+1}),({a'}_{i-1},\mu'_{i-1},\mu'_{i})}$$
-  </span>
-  <img src="figs/plaquetteAction2_su3.svg" style="height:8.0em;">
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-$$
-  \tr U_{d}\quad
-  \vcenter{\hbox{\includegraphics[scale=0.21]{figs/plaquetteAction0_su3.pdf}}}
-       =\sum_{\{a'_{i},\mu'_i\}}\prod_{i=1}^{6}
-       [F_{a'_{i}}^{c_{i}a_{i-1}d}]_{(a_{i},\mu_i,\mu_{i+1}),({a'}_{i-1},\mu'_{i-1},\mu'_{i})}
-       \ \vcenter{\hbox{\includegraphics[scale=0.21]{figs/plaquetteAction2_su3.pdf}}}
-         \label{eq-action_trU}
-$$
-:::
-
-と表される．ここで， $a'_0=a'_6$, $\mu_0=\mu_6$, $\mu'_0=\mu'_6$, および $\mu'_7=\mu'_1$ である．
-一方，電気的基底を取っているので，$E^2$ の作用は，
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <span class="math display" style="display:inline-block;">
-    $$E^2 $$
-  </span>
-  <img src="figs/a.svg" style="height:5.0em;">
-  <span class="math display" style="display:inline-block;">
-    $$=C_2(a)$$
-  </span>
-  <img src="figs/a.svg" style="height:5.0em;">
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-$$
-  E^2 \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-  = C_2(a)
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-  \label{eq-action_electric_field_su3}
-$$
-:::
-
-である．これにより，状態にハミルトニアンを作用させた際の遷移先が定まる．
-
-## 導出
-
+::: {.callout-note collapse="true"}
+## 詳細
 辺 $1$, $2$ について，次の演算子を考える：
 
 $$
@@ -418,6 +373,91 @@ $${#eq-F-moves}
 :::
 
 が得られる．
+
+:::
+
+
+## ゲージ不変な基底による$\mathrm{SU}(N)$ ゲージ理論
+
+#### ハミルトニアン
+ハミルトニアンは 式 (@eq-Hamiltonian)
+$$
+  H=\sum_{e\in {\mathcal{E}}}\frac{1}{2}E^2(e)
+   -\frac{K}{2}\sum_{p\in \mathcal{P}}(\tr U(p)+\tr U^\dag(p) )
+$$ 
+
+で与えられる．
+
+#### 物理状態
+
+Gauss の拘束条件を満たす基底は，各辺 ($e\in \mathcal{E}$) に既約表現 $a_e$ をラベルし，各頂点 ($v\in \mathcal{V}$) に 多重度 $\mu_v$ を付与した状態で，Clebsch--Gordan 係数が消えない組み合わせで与えられる．この基底を $\ket{\bm{a};\symbf{\mu}}$ と書く．
+グラフィカルには，図 @fig-vertex 右 で表せる．
+
+一般的な状態は，その線形結合
+
+$$
+\ket{\psi} = \sum_{\bm{a},\bm{\mu}}\psi(\bm{a},\bm{\mu})\ket{\bm{a};\symbf{\mu}}
+$$
+で与えられる．
+
+#### ハミルトニアンの状態への作用
+
+$\tr U_{d}$ の作用は，$F$-symbol を用いて
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$\tr U_{d}$$
+  </span>
+  <img src="figs/plaquetteAction0_su3.svg" style="height:8.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{\{a'_{i},\mu'_i\}}\prod_{i=1}^{6}
+       [F_{a'_{i}}^{c_{i}a_{i-1}d}]_{(a_{i},\mu_i,\mu_{i+1}),({a'}_{i-1},\mu'_{i-1},\mu'_{i})}$$
+  </span>
+  <img src="figs/plaquetteAction2_su3.svg" style="height:8.0em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \tr U_{d}\quad
+  \vcenter{\hbox{\includegraphics[scale=0.21]{figs/plaquetteAction0_su3.pdf}}}
+       =\sum_{\{a'_{i},\mu'_i\}}\prod_{i=1}^{6}
+       [F_{a'_{i}}^{c_{i}a_{i-1}d}]_{(a_{i},\mu_i,\mu_{i+1}),({a'}_{i-1},\mu'_{i-1},\mu'_{i})}
+       \ \vcenter{\hbox{\includegraphics[scale=0.21]{figs/plaquetteAction2_su3.pdf}}}
+         \label{eq-action_trU}
+$$
+:::
+
+と表される．ここで， $a'_0=a'_6$, $\mu_0=\mu_6$, $\mu'_0=\mu'_6$, および $\mu'_7=\mu'_1$ である．
+一方，電気的基底を取っているので，$E^2$ の作用は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <span class="math display" style="display:inline-block;">
+    $$E^2 $$
+  </span>
+  <img src="figs/a.svg" style="height:5.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=C_2(a)$$
+  </span>
+  <img src="figs/a.svg" style="height:5.0em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  E^2 \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  = C_2(a)
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  \label{eq-action_electric_field_su3}
+$$
+:::
+
+である．これにより，状態にハミルトニアンを作用させた際の遷移先が定まる．
+
+
+
 
 <!-- 具体的な証明は省略するが，このグラフィカルな計算法を使うと，物理状態
 
@@ -552,7 +592,7 @@ $$
 同様に辺$a$, $b$, $c$が$a$, $b$の始点，$c$の終点からなる$3$点頂点に
 なっている場合を考える．つまり，$\mathrm{s}(a)=\mathrm{s}(b)=\mathrm{t}(c)$である．
 この時，状態$\ket*{j_a,m_a,n_a}
-\ket*{j_b,m_b,n_b}\ket*{j_c,m_c,n_c}$に対して，Clebsch-Gordan係数を用いて，
+\ket*{j_b,m_b,n_b}\ket*{j_c,m_c,n_c}$に対して，Clebsch--Gordan 係数を用いて，
 $$
   \ket*{\varphi}=\sum_{n_{a},n_b,m_c}\frac{1}{\sqrt{d_c}}
   \braket{j_an_a\, j_bn_b}{j_cm_c}
@@ -576,7 +616,7 @@ $$
 \end{question}
 一般には係数に位相がついていても良い．$\mathrm{SU}(2)$の場合は，位相をうまく選ぶことによって有向グラフの矢印の向きに依存しないように定式化することもできる．
 
-一般に$3$点頂点からなるネットワークを考え，頂点にClebsch-Gordan係数を付与することで，Gaussの拘束条件を満たす物理状態を構成することができる．
+一般に$3$点頂点からなるネットワークを考え，頂点にClebsch--Gordan係数を付与することで，Gaussの拘束条件を満たす物理状態を構成することができる．
 $4$点頂点がある場合は，補助リンクを導入することで，
 $3$点頂点に分解することができるので，$3$点頂点のみのネットワークを考えれば十分である．
 したがって，物理状態の基底は，頂点が$3$ネットワーク上の辺にスピンの量子数を割り当てることで生成することができる．ただし，各頂点は三角不等式を満たすものとする．このようなネットワークは，スピンネットワークやストリングネットワークと呼ばれる．  -->
@@ -623,6 +663,92 @@ Equation~(@eq-action_trU) can be graphically derived by using the topological de
  we obtain eq.~(@eq-action_trU), by tracing the changes of indices.
 --->
 
+## 一般の格子上での取扱い
+
+\subsubsection{六角(ハニカム)格子上の\texorpdfstring{$\mathrm{SU}(2)_k$}{SU(2)k}ゲージ理論}
+まず，$2$次元六角(ハニカム)格子上の$\mathrm{SU}(2)_k$ゲージ理論を考えよう．
+ハニカム格子は，すべての頂点が$3$点である:
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/HoneycombLattice.svg" style="height:5.5em;">
+</div>
+:::
 
 
+:::{ .content-visible when-format=pdf}
+\begin{equation*}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/HoneycombLattice.pdf}}}\,.
+\end{equation*}
+:::
 
+このハニカム格子上の模型では，$\mathcal{F}$を各六角形の集合，$\tilde{\mathcal{E}}$をすべての辺の集合に取れば良い．
+
+
+\subsubsection{正方格子上の\texorpdfstring{$\mathrm{SU}(2)_k$}{SU(2)k}ゲージ理論}
+次に$2$次元正方格子上の$\mathrm{SU}(2)_k$ゲージ理論を考えよう:
+
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/square.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/square.pdf}}}.
+$$
+:::
+頂点は$4$点になっているので，このままでは3点頂点を仮定した我々の模型が適用できない．
+我々の模型が適用できるように補助リンクを導入し各頂点を$3$点に分解する:
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/square.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$ \Rightarrow $$
+  </span>
+  <img src="figs/square_honeycomb.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/square.pdf}}}
+  \Rightarrow
+  \vcenter{\hbox{\includegraphics[scale=0.25]{figs/square_honeycomb.pdf}}}
+$$
+:::
+赤線が，補助リンクに対応する．赤線を潰すと正方格子に戻る．
+この右のハニカム格子を用いて正方格子上のゲージ理論ができる．
+$\tilde{\mathcal{E}}$を黒色の辺の集合とする．$\mathcal{F}$は，6角形の集合に取れば良い．
+
+補助線の入れ方には任意性がある．別の補助線の入れ方では，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/square.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$ \Rightarrow $$
+  </span>
+  <img src="figs/square_mod.svg" style="height:5.5em;">
+</div>
+:::
+
+
+::: {.content-visible when-format=pdf}
+$$
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/square.pdf}}}
+  \Rightarrow
+  \vcenter{\hbox{\includegraphics[scale=0.25]{figs/square_mod.pdf}}}
+$$
+:::
+となる．$F$-symbol の性質のおかげで Wilson 線の作用は，補助線の入れ方には依存しない，
+つまり，理論は補助線の入れ方には依存しないことがわかる．
+
+
+<!-- ## 線の向きについて
+ある表現のWilson線の矢印の向きを反転させると，これは反表現に対応し，一般には区別される状態である．
+しかし，$\mathrm{SU}(2)$の特殊性として，表現と反表現が同型であるという性質がある．この性質を考慮すると矢印の向きを忘れることができる．
+具体的には，線と頂点の位相の再定義を使って，$d_a$が現れるところを$(-1)^{j_a}d_a$に置き換えることで，向きを忘れることができる． -->

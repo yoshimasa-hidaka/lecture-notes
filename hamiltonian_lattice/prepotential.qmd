@@ -30,9 +30,11 @@ $$
 が示される．
 
 次に $U$ との交換関係を考える．
+
 $$
   U = U_L(b)U_R(a)
 $$
+
 と分解され，
 
 $$
@@ -53,6 +55,7 @@ $$
 $$ {#eq-prepotential2}
 
 に取ることができる．ここで，$N_{R}=b^\dag b$, $N_{L}=b^\dag b$ である．
+
 $$
   \begin{split}
     U =U_LU_R =\frac{1}{\sqrt{N_L+1}} \begin{pmatrix}
@@ -90,15 +93,20 @@ $$
 $$
 
 $L_i = -a^\dag T_i a$
-\begin{align}
+
+$$
+\begin{aligned}
   \sqrt{2}U_{11}\ket{00;00}&=  \ket{01;10}=\ket{\frac{1}{2},\frac{1}{2};\frac{1}{2},\frac{1}{2}},\\
   \sqrt{2} U_{12}\ket{00;00}&=  \ket{01;01}=\ket{\frac{1}{2},\frac{1}{2};\frac{1}{2},-\frac{1}{2}},\\
   \sqrt{2} U_{21}\ket{00;00}&=  -\ket{10;10}=\ket{\frac{1}{2},-\frac{1}{2};\frac{1}{2},\frac{1}{2}},\\
   \sqrt{2} U_{22}\ket{00;00}&=  -\ket{10;01}=\ket{\frac{1}{2},-\frac{1}{2};\frac{1}{2},-\frac{1}{2}}
-\end{align}
+\end{aligned}
+$$
+
 $$
   [L_{-}, U_{11}]\ket{0}= U_{21}\ket{0}
 $$
+
 $$
   L_-= -a^\dag T_- a = -a^\dag_2 a_1
 $$
@@ -124,11 +132,13 @@ $$
 [\EL_{i}(e),\EL_{j}(e')] =-\ri f^k_{~ij}\EL_{k}(e)\delta_{e,e'}
 $$ {#eq-E_tE_tfield}
 
-$\ket*{n,m}_R$を，$b_1^\dag b_1$及び
-$b^\dag_2b_2$の固有値を用いて表す:
+$\ket*{n,m}_R$ を，$b_1^\dag b_1$ 及び
+$b^\dag_2b_2$ の固有値を用いて表す:
+
 $$
   \ket*{n,m}_R\coloneqq\frac{(b_1^\dag)^n}{\sqrt{n!}}\frac{(b_2^\dag)^m}{\sqrt{m!}}\ket*{0,0}
 $$
+
 $$
   \ket*{j,m}_R:=\ket*{{j+m},{j-m}}_R
 $$
@@ -136,19 +146,20 @@ $$
 $$
   R_+ = b_1^\dag b_2
 $$
+
 $$
   R_+\ket*{j,m}_R = b_1^\dag b_2\ket*{{j+m},{j-m}}_R=\sqrt{(j+m+1)(j-m)}\ket{j,m+1}_R
 $$
+
 $$
   a^\dag \ket{n}=\sqrt{n+1}\ket{n+1}
 $$
+
 $$
   a \ket{n}=\sqrt{n}\ket{n-1}
 $$
 
-
 $L_i = -a^\dag T_i a$
-
 
 $$
   L^2\ket{j,m}= j(j+1)\ket{j,m}

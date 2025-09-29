@@ -30,7 +30,7 @@ book:
         - Example.qmd
     - part: "発展編"
       chapters:
-        - stringnet.qmd
+        #- stringnet.qmd
         - MTC.qmd
         - meanfield.qmd
         - fermion.qmd

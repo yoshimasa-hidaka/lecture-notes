@@ -56,6 +56,15 @@ $$
 $$
 
 を満たす．
+また，$\ket{n}$ は $U_n$ を用いて，
+
+$$
+ \ket{n} = U_n\ket{0}
+$$
+
+と表すことができる．
+
+
 
 ### Fourier 展開
 
@@ -214,7 +223,7 @@ $$
 が成り立ち，$\ER_i$ と $\EL_i$ のいずれから定義しても同じ演算子 $E^2$ が得られる．
 
 
-$[U_{a}]^{m}_{n}$ の積は，$\mathrm{SU}(N)$ のClebsch--Gordan 係数を用いて
+$[U_{a}]^{m}_{n}$ の積は，$\mathrm{SU}(N)$ の　Clebsch--Gordan 係数を用いて
 
 $$
   [U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b}
@@ -230,7 +239,7 @@ $${#eq-fusion_U}
 = \mathbf{27} \oplus \mathbf{10} \oplus \overline{\mathbf{10}}\oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}$ と分解され，$\mathbf{8}$ が2回現れる．従って $N_{\mathbf{8}\mathbf{8}}^{\mathbf{8}}=2$ となる．$\mathrm{SU}(2)$ の場合は，既約表現の合成で同じ表現が2回現れることはなく，多重度 $N_{ab}^c$ は，$1$ か $0$ となり，$\mu$ の添字は必要ない．
 
 式 (@eq-fusion_U) について $m_a=n_a$, $m_b=n_b$ として和を取ると，
-Clebsch--Gordan係数の直交性 (@eq-Clebsch-Gordan_orthogonal2_SUN) を用いて
+Clebsch--Gordan　係数の直交性 (@eq-Clebsch-Gordan_orthogonal2_SUN) を用いて
 
 $$
   \tr U_a \tr U_b = \sum_{c}N_{ab}^c \tr U_c
