@@ -29,14 +29,14 @@
 
 格子上のゲージ理論のハミルトニアン形式は Kogut と Susskind によって1970年代に定式化された [@Kogut:1974ag]．
 本節では格子上の $\mathrm{SU}(N)$ Yang--Mills 理論のハミルトニアン形式について考える．
-任意の格子について定式化できるが，ここではゲージ不変な物理状態の構成が容易なハニカム格子を扱う(図@fig-Honeycomb_Lattice 左)．
+任意の格子について定式化できるが，ここではゲージ不変な物理状態の構成が容易なハニカム格子を扱う(図 @fig-Honeycomb_Lattice 左)．
 頂点の集合を $\mathcal{V}$，辺の集合を $\mathcal{E}$ とする．
 各辺は，向きを持ち，始点と終点が定められている．
 辺 $e\in\mathcal{E}$ に対して，その始点および終点を
 それぞれ $\mathrm{s}(e)\in\mathcal{V}$ および $\mathrm{t}(e)\in\mathcal{V}$ と書く．また，$e$ の始点と終点を入れ替えた辺は $\bar{e}$ と表す．
-各六角形をプラケット(図@fig-Honeycomb_Lattice 右)と呼び，その集合を$\mathcal{P}$とする．
+各六角形をプラケット(図 @fig-Honeycomb_Lattice 右)と呼び，その集合を$\mathcal{P}$とする．
 各プラケットは面であり，その境界をなす有向閉曲線（経路）を定める．
-例えば，図@fig-Honeycomb_Lattice 右では，始点を $e_1$ として，
+例えば，図 @fig-Honeycomb_Lattice 右では，始点を $e_1$ として，
 経路は $e_1 \to e_2 \to e_3 \to \bar{e}_4 \to \bar{e}_5 \to \bar{e}_6$ である．
 
 以下では，物質場を含まないゲージ理論を考える．
@@ -62,14 +62,14 @@ $$
   U_a(p)\coloneqq U_a(\bar{e}_6)U_a(\bar{e}_5)U_a(\bar{e}_4)U_a(e_3)U_a(e_2)U_a(e_1)
 $$
 と定義する．ここで，バーとバーなしの辺の演算子の対応は，$U_a(\bar{e})=U^\dag_a(e)$ である．
-同様に一般の閉じた経路に対して定義された $U_a$ からなる演算子は表現 $a$ のWilsonループと呼ばれる．以下，表記の簡略として基本表現の場合は添字 $a$ を省略し，$U(e)\coloneqq U_{\mathrm{fund}}(e)$や$U(p)\coloneqq U_{\mathrm{fund}}(p)$と表す．
-ハミルトニアン$H$ は，この $U(p)$ と電場の2乗 $E^2(e)$ を用いて，
+同様に一般の閉じた経路に対して定義された $U_a$ からなる演算子は表現 $a$ の Wilson ループと呼ばれる．以下，表記の簡略として基本表現の場合は添字 $a$ を省略し，$U(e)\coloneqq U_{\mathrm{fund}}(e)$ や $U(p)\coloneqq U_{\mathrm{fund}}(p)$ と表す．
+ハミルトニアン $H$ は，この $U(p)$ と電場の2乗 $E^2(e)$ を用いて，
 $$
   H=\sum_{e\in {\mathcal{E}}}\frac{1}{2}E^2(e)
    -\frac{K}{2}\sum_{p\in \mathcal{P}}(\tr U(p)+\tr U^\dag(p) )
 $$ {#eq-magnetic}
 と定義される．ここで，$K$ は結合定数である．
-電場項について独立な結合定数を導入してもよいが，エネルギーの単位のスケールを調整することで$1$に取ることができる．
+電場項について独立な結合定数を導入してもよいが，エネルギーの単位のスケールを調整することで $1$ に取ることができる．
 
 ## ゲージ不変性
 
@@ -79,7 +79,7 @@ G_i(v)\coloneqq  \sum_{e\in \mathcal{E}| \mathrm{s}(e)=v}\ER_{i}(e)-\sum_{e\in \
 $$
 と定義する．
 この演算子は，頂点が始点になっている辺に対して $\ER_i$ を，終点になっている辺に対して，$-\EL_i$ を割り当て，和を取ったものである．
-交換関係は $[G_i(v),G_j(v)]=\ri f^k_{~ij}G_k(v)$を 満たし，Lie 代数をなす．
+交換関係は $[G_i(v),G_j(v)]=\ri f^k_{~ij}G_k(v)$ を 満たし，Lie代数をなす．
 有限のゲージ変換はゲージ変換パラメータを $\theta^i(v)$ として，
 $V=e^{\ri\sum_{v\in\mathcal{V}}\theta^i(v)G_i(v)}$ で表すことができる．この変換のもとで，$U_a(e)$ は，
 
@@ -97,17 +97,17 @@ $$ {#eq-Gauge_transformationEL}
 
 と変換される．
 
-ハミルトニアンは，ゲージ変換(@eq-Gauge_transformationU)-(@eq-Gauge_transformationEL)
-すなわち，ハミルトニアンとゲージ変換の生成子は可換であり，$[H,G_i(v)]=0$が成り立つ．
+ハミルトニアンは，ゲージ変換 (@eq-Gauge_transformationU) および (@eq-Gauge_transformationEL)，
+すなわち，ハミルトニアンとゲージ変換の生成子は可換であり，$[H,G_i(v)]=0$ が成り立つ．
 これはゲージ対称性またはゲージ不変性と呼ばれる．
 ゲージ対称性は形式的には対称性の一種であるが，実際には理論を記述する冗長性とみなされる．
 したがって，物理量はゲージ不変なものに限られ，状態もゲージ不変であることが要求される．
 
-ゲージ変換のもとで，一般の状態$\ket{\Psi}$は，
+ゲージ変換のもとで，一般の状態 $\ket{\Psi}$ は，
 $$
 \ket{\Psi}\to   e^{\ri\sum_{v\in\mathcal{V}}\theta^i(v)G_i(v)}\ket{\Psi}
 $$ {#eq-gauge_transformation}
-と変換する．物理状態は任意の$\theta^i(v)$に対して不変である必要があるので，微小変換のもとでの不変性，つまり，すべての$v\in\mathcal{V}$に対して，Gaussの拘束条件
+と変換する．物理状態は任意の $\theta^i(v)$ に対して不変である必要があるので，微小変換のもとでの不変性，つまり，すべての $v\in\mathcal{V}$ に対して，Gauss の拘束条件
 
 $$
 G_i(v)\ket*{\Psi}=0
@@ -143,13 +143,13 @@ $$ {#eq-gauss}
 \caption{左：頂点とそれにつながる辺．右：物理状態の基底}
 \end{figure} {#fig-vertex} -->
 
-物理状態は，Gaussの拘束条件(@eq-gauss) を満たす必要があるが，
+物理状態は，Gauss の拘束条件 (@eq-gauss) を満たす必要があるが，
 格子上では，電気的基底を用いることで比較的容易に構成できる．
-$G_i(v)$はLie代数の生成子であり，式 (@eq-gauss) は，頂点において，状態が表現の$1$重項になることを要請している．
+$G_i(v)$ は Lie代数の生成子であり，式 (@eq-gauss) は，頂点において，状態が表現の1重項になることを要請している．
 ここでは，ハニカム格子を考えているので$3$点頂点を考えれば十分である．頂点を$v$とし，それが
-辺$e_1$, $e_2$の始点，$e_3$の終点になっている場合を考える．
-すなわち，$\mathrm{s}(e_1)=\mathrm{s}(e_2)=\mathrm{t}(e_3)=v$である(図@fig-vertex)．
-このとき，状態$\ket*{a,m_a,n_a}_1\ket*{b,m_b,n_b}_2\ket*{c,m_c,n_c}_3$に対して，Clebsch--Gordan係数$\braket{a,n_a;\, b,n_b}{c,m_c;\mu}$を用いると
+辺 $e_1$, $e_2$ の始点，$e_3$ の終点になっている場合を考える．
+すなわち，$\mathrm{s}(e_1)=\mathrm{s}(e_2)=\mathrm{t}(e_3)=v$ である (図 @fig-vertex)．
+このとき，状態 $\ket*{a,m_a,n_a}_1\ket*{b,m_b,n_b}_2\ket*{c,m_c,n_c}_3$ に対して，Clebsch--Gordan 係数 $\braket{a,n_a;\, b,n_b}{c,m_c;\mu}$ を用いると
 
 $$
   \ket*{\varphi}=\sum_{n_a,n_b,m_c}\frac{1}{\sqrt{d_c}}
@@ -161,7 +161,7 @@ $$ {#eq-three_point_state}
 ここで，$1/\sqrt{d_c}$ は $\braket{\varphi}{\varphi}=1$ を保証するための規格化因子である．
 
 一般に，各頂点に Clebsch--Gordan 係数を割り当てれば，Gauss の拘束条件を満たす物理状態を構成することができる．
-結果として，物理的な基底は，図@fig-vertex 右に示すように，辺に表現，頂点に多重度のラベルを付与した表現のネットワークで表される．
+結果として，物理的な基底は，図 @fig-vertex 右に示すように，辺に表現，頂点に多重度のラベルを付与した表現のネットワークで表される．
 ただし任意の表現が許されるわけではなく，Clebsch--Gordan 係数が非零となる組み合わせのみが許される．
 
 ## 状態と演算子のグラフィカルな表現
@@ -185,7 +185,7 @@ $$
 $$
 :::
 
-逆向きの矢印には，$\sqrt{d_a}U_a^\dag$を対応させる．
+逆向きの矢印には，$\sqrt{d_a}U_a^\dag$ を対応させる．
 
 頂点については，
 
@@ -330,60 +330,46 @@ $$
 
 ## 導出
 
-$[U_{a}]^{m_a}_{~m}(a)[U_{a}]^{m}_{n_b}(b)$ を考えよう.
- $$
-   \begin{split}
-     \sqrt{d_a}[U_{a}]^{m_a}_{~m}(a)[U_{a}]^{m}_{n_b}(b)|0\rangle&=
-     \sum_m\frac{1}{\sqrt{d_a}}|j_a,m_a,m\rangle
-     |j_a,m,n_b\rangle\\
-   &= \sqrt{d_a}U^{m_a}_{n_b}(ab)\\
-   \end{split}
- $$
- となる
+辺 $1$, $2$ について，次の演算子を考える：
 
-次に辺 $1$, $2$, $3$ について，$1$, $2$ の始点，$3$ の終点からなる頂点を持つ
+$$
+\sum_{n_a,n_b,m_c}
+\braket{a,n_a; b,n_b}{c, m_c;\mu}
+    [U_{a}(1)]^{m_a}_{n_a}
+    [U_{b}(1)]^{m_b}_{n_b}
+    [U_{c}(2)]^{m_c}_{n_c}\,.
+$$
+
+これに $[U_{c'}(1)]^{m_{a'}}_{n_l} [U_{c'}(2)]^{n_l}_{n_{c'}}$ を作用させると，
 
 $$
   \begin{split}
-& \sum_{n_a,n_b,m_c}
-\braket{j_an_a\, j_bn_b}{j_c m_c}
+&\sum_{n_a,n_b,m_c}[U_{c'}(1)]^{m_{a'}}_{n_l} [U_{c'}(2)]^{n_l}_{n_{c'}}
+\braket{a,n_a; b,n_b}{c, m_c;\mu}
     [U_{a}(1)]^{m_a}_{n_a}
-    [U_{b}(2)]^{m_b}_{n_b}
-    [U_{c}(3)]^{m_c}_{n_c}
-  \end{split}
-$$
-
-を考える．頂点は Gauss の拘束条件を満たす．
-これに $\sum_l[U_{c'}(1)]^{m_{a'}}_{l} [U_{c'}(3)]^{l}_{n_{c'}}$ を作用させると，
-
-$$
-  \begin{split}
-&\sum_{n_a,n_b,m_c}\sum_l[U_{c'}(1)]^{m_{a'}}_{l} [U_{c'}(3)]^{l}_{n_{c'}}
-\braket{j_an_a\, j_bn_b}{j_c m_c}
-    [U_{a}(1)]^{m_a}_{n_a}
-    [U_{b}(2)]^{m_b}_{n_b}
-    [U_{c}(3)]^{m_c}_{n_c}\\
-&=\sum_{j_f,j_e}\sum_{n_b,n_e,m_f}\sum_{n_f,m_e,n_a,m_c,l}
-\braket{j_e,n_e}{j_{c'}l\, j_an_a}
-\braket{j_an_a\, j_bn_b}{ j_c m_c}
-\braket{j_{c'}l\, j_cm_c}{ j_f,m_f}
+    [U_{b}(1)]^{m_b}_{n_b}
+    [U_{c}(2)]^{m_c}_{n_c}\\
+&=\sum_{f,e,\nu,\rho}\sum_{n_b,n_e,m_f}\sum_{n_f,m_e,n_a,m_c,n_l}
+\braket{e,n_e,\nu}{{c'},n_l; a,n_a}
+\braket{a,n_a; b,n_b}{c, m_c;\mu}
+\braket{{c'},n_l; c,m_c}{f,m_f;\rho}
 \\
 &\quad\times
-\braket{j_f,n_f}{j_{c'}n_{c'}\, j_cn_c}
-\braket{j_{c'}m_{a'}\, j_a m_a}{j_e,m_e}
-[U_{e}(1)]^{m_e}_{n_e} [U_{b}(2)]^{m_b}_{n_b}[U_{f}(3)]^{m_f}_{n_f}\\
+\braket{f,n_f;\rho}{{c'},n_{c'}; c,n_c}
+\braket{{c'},m_{a'}; a, m_a}{e,m_e,\nu}
+[U_{e}(1)]^{m_e}_{n_e} [U_{b}(1)]^{m_b}_{n_b}[U_{f}(2)]^{m_f}_{n_f}\\
 &=\sum_{j_f,j_e}
-[(F_{f}^{c'ab})^{-1}]_{ce}
-\sum_{n_b,n_e,m_f}\sum_{n_f,m_e}\\
+[(F_{f}^{c'ab})^{-1}]_{(c)(e)}
+\sum_{n_b,n_e,m_f}\sum_{f,e}\\
 &\quad\times
-\braket{ j_f,n_f}{j_{c'}n_{c'}\, j_cn_c}
-\braket{ j_{c'}m_{a'}\, j_a m_a}{ j_e,m_e}
-\braket{ j_en_e j_bn_b}{j_fm_f}[U_{e}(1)]^{m_e}_{n_e} [U_{b}(2)]^{m_b}_{n_b}[U_{f}(3)]^{m_f}_{n_f}
+\braket{f,n_f;}{{c'},n_{c'}\, c;n_c}
+\braket{{c'},m_{a'}; a, m_a}{ e,m_e;}
+\braket{e,n_e; b,n_b}{f,m_f;}[U_{e}(1)]^{m_e}_{n_e} [U_{b}(1)]^{m_b}_{n_b}[U_{f}(2)]^{m_f}_{n_f}
   \end{split}
 $${#eq-Fmoves_U}
 
 となる．
-ここで，1行目から2行目は，$1$, $3$ の辺について，式 (@eq-fusion_U) を使って変形し，
+ここで，1行目から2行目は，$1$, $2$ の辺について，式 (@eq-fusion_U) を使って変形し，
 $3$行目へは，式 (@eq-deform) を用いて変形した．
 
 \begin{question}

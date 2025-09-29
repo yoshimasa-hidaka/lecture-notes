@@ -35,7 +35,7 @@ $$
 $$
 :::
 
-である．ここで， $C_2(a)$は2次のCasimir不変量で，式(@eq-C2_su3)で与えられる．一方，Wilsonループ $\tr U_{d}$ の作用は，
+である．ここで， $C_2(a)$は2次のCasimir不変量で，式 (@eq-C2_su3)で与えられる．一方，Wilsonループ $\tr U_{d}$ の作用は，
 
 
 ::: {.content-visible when-format=html}

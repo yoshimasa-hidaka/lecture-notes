@@ -31,7 +31,7 @@ $Q(v)$はペナルティ項で，頂点$v=(a,b,c)$につながる辺$a,b,c$の�
 $$
   Q(v)\ket*{j_aj_bj_c} = \delta_{abc}\ket*{j_aj_bj_c}
 $$
-である．ここで$\delta_{abc}$は，式(@eq-fusion_q)で定義されている．
+である．ここで$\delta_{abc}$は，式 (@eq-fusion_q)で定義されている．
 これはGaussの拘束条件に対応する項である．
 
 ハミルトニアンに含まれる演算子の状態への作用をグラフフィカルに表現すると
@@ -280,7 +280,7 @@ $$
   \qty(\tr U)^n
 $$
 と展開される．$n\geq1$について，
-$\qty(\tr U)^n$は，式(@eq-fusion_Wilson_loop)を用いると
+$\qty(\tr U)^n$は，式 (@eq-fusion_Wilson_loop)を用いると
 $$
   \qty(\tr U)^n= \sum_{c}\tr U_c
   [(N_{\frac{1}{2}})^{n-1}]^{c}_{\frac{1}{2}}
@@ -350,7 +350,7 @@ $$
     \sin\qty(\frac{(2j_a+1)\pi}{k+2})e^{2\tilde{K}\cos\frac{(2j_a+1)\pi}{k+2}}
   \end{split}
 $$
-である．Wilsonループの状態への作用は，式(@eq-Wilson_loop_action)によって定まっているので，この展開を用いると$e^{\delta H_M}$の状態への作用が定まる．
+である．Wilsonループの状態への作用は，式 (@eq-Wilson_loop_action)によって定まっているので，この展開を用いると$e^{\delta H_M}$の状態への作用が定まる．
 
 
 <!-- 

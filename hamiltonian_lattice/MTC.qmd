@@ -255,7 +255,7 @@ $$ $$ {#eq-link}
 
 が成り立つ．
 
-式(@eq-vacuum_line) と同様に真空線を
+式 (@eq-vacuum_line) と同様に真空線を
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -330,7 +330,7 @@ $$ {#eq-vacuum_move}
   </span>
   <img src="figs/vacuumMove2.svg" style="height:4.0em;">
 </div>
-等号の変形には，式(@eq-vacuum_line), (@eq-stacking2), (@eq-partition2) を用いた．
+等号の変形には，式 (@eq-vacuum_line), (@eq-stacking2), (@eq-partition2) を用いた．
 :::
 
 
@@ -374,7 +374,7 @@ $$ {#eq-vacuum_move}
 
 が成り立つ．
 
-式(@eq-link)を用いると真空線の周りのループは，
+式 (@eq-link)を用いると真空線の周りのループは，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">

@@ -30,7 +30,7 @@ $\mathrm{SU}(2)$ の元を
 $$
     g= \cos\frac{\theta}{2}+\ri \symbf{\sigma}\cdot\bm{n}\sin\frac{\theta}{2}
 $$
-と表す(式(@eq-SU2_n))．
+と表す(式 (@eq-SU2_n))．
 $\bm{n}\in S^2$で，極座標表示 (@eq-n_polar) を用いると，Haar測度は，
 $$
     \dd g =
@@ -158,7 +158,7 @@ $$
 
 \paragraph{指標の直交性}
 
-式(@eq-su2-D-orthogonality)に示される表現の直交性より，
+式 (@eq-su2-D-orthogonality)に示される表現の直交性より，
 $$
   \int \dd{g} \chi^\dag_a(g) \chi_b(g)=\delta_{ab}
 $$
@@ -305,7 +305,7 @@ T_\theta T_{\theta'}
 = \sum_{j}\frac{1}{d^2_j}\chi_j(\theta)\chi_j(\theta')P_j
 $$
 となる．
-一方で，射影演算 $P_j$は，式(@eq-projector) により $T_{\theta''}$ を使って表されるので，
+一方で，射影演算 $P_j$は，式 (@eq-projector) により $T_{\theta''}$ を使って表されるので，
 $$
 T_\theta T_{\theta'}
 =\int_{0}^{2\pi}\dd{\nu(\theta'')}

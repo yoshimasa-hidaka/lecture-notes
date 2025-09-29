@@ -9,39 +9,48 @@
 興味があるのは $\mathrm{SU}(N)$ であるが，まず構造がより単純な $\mathrm{U}(1)$ の場合，つまり座標 $x$ が円周 $S^1(\simeq\mathrm{U}(1))$ 上の場合の量子論から始める．円周の長さを $2\pi$ に取ると $x$ と $x+2\pi$ は同一視される．
 形式的には正準交換関係 $[x,p]=\ri$ が成り立つが，$x$ と $x+2\pi$ は同一視されるため，$x$ を直接物理量とはみなせない．
 一方で，位相因子 $U_n = e^{\ri n x}$ ($n\in\mathbb{Z}$) は，周期的に定義され，物理量として意味を持つ．このとき，$p$ との交換関係は，
+
 $$
   [p,U_n] =nU_n
 $$ {#eq-commutation_relation}
+
 であり，有限の変換について，
+
 $$e^{\ri pa}U_n e^{-\ri pa}=e^{\ri na}U_n$$
+
 が成り立つ．
 さらに，$e^{\ri p a}e^{\ri p b}=e^{\ri p (a+b)}$ が成立し，また，$e^{\ri n(x+2\pi)}=e^{\ri n x}$ であることから $e^{\ri  2\pi p}$ は恒等変換となる．したがって，$e^{\ri p a}$ の全体は $\mathrm{U}(1)$群をなす．
-また，式(@eq-commutation_relation) は，$U_n$ が $\mathrm{U}(1)$ 電荷が整数 $n$ の既約表現として振る舞うことを意味している．さらに，$U_n$ の積は，$U_nU_m= U_{n+m}$ を満たし，群の構造を持つことがわかる．
-これは可換群の特徴であり，後で見るように，この$U_n$の群構造は非可換群では成立しない．
+また，式 (@eq-commutation_relation) は，$U_n$ が $\mathrm{U}(1)$ 電荷が整数 $n$ の既約表現として振る舞うことを意味している．さらに，$U_n$ の積は，$U_nU_m= U_{n+m}$ を満たし，群の構造を持つことがわかる．
+これは可換群の特徴であり，後で見るように，この $U_n$ の群構造は非可換群では成立しない．
 
 
 ### ブラケット表記
 
 Dirac のブラケット表記を用いると，座標の固有状態は $\ket{x}$ と書ける．これは周期境界条件 $\ket{x+2\pi}=\ket{x}$ を満たす\footnote{量子論は大域的な位相は観測できないため，より一般には $\ket{x+2\pi}=e^{\ri\theta}\ket{x}$ としてもよい．}．また直交性関係 
-$$\bra{x}\ket{x'}=\delta_{2\pi}(x-x')\,,$$
+$$
+  \bra{x}\ket{x'}=\delta_{2\pi}(x-x')\,,
+$$
 
 および完全性 
+
  $$1=\int_0^{2\pi} dx\ket{x}\bra{x}$$
+
 が成立する．
-ここで，$\delta_{2\pi}(x-x')$は
+ここで，$\delta_{2\pi}(x-x')$ は
 
 $$
 f(x) = \int_{0}^{2\pi} \dd{x'}  \delta_{2\pi}(x-x') f(x')
 $$
 
 を満たす $2\pi$-周期デルタ関数である．ここで，$f(x)$ は $\mathrm{U}(1)$ 上の関数である．
-一方，周期境界条件から$p$の固有値は整数 $n\in\mathbb{Z}$ に量子化される．その固有状態 $\ket{n}$ は，直交性関係
+一方，周期境界条件から $p$ の固有値は整数 $n\in\mathbb{Z}$ に量子化される．その固有状態 $\ket{n}$ は，直交性関係
 
 $$
   \bra{n}\ket{n'}=\delta_{n,n'}\,,
 $$
 
 および完全性
+
 $$
   1=\sum_{n}\ket{n}\bra{n}
 $$
@@ -75,42 +84,55 @@ $\mathrm{SU}(N)$ を多様体とみなして変数を多様体上の座標にと
 ### 右作用と左作用
 $\mathrm{U}(1)$ の場合の交換関係 (@eq-commutation_relation) を $\mathrm{SU}(N)$ に拡張しよう．
 そのために，$U_a$ に右から作用する演算子として $\ER_{i}$ を導入し，交換関係を
+
 $$
       [\ER_{i},U_a] =U_a T_{ai}
 $$ {#eq-E_sU}
+
 と定義する．
-ここで，$T_{ai}$は，$\mathrm{SU}(N)$ のLie代数の生成子の行列表示で，表現の次元を$d_a$として，$(d_a\times d_a)$ 行列である．基本表現の場合は，$d_{\mathrm{fund}}=N$ である．
+ここで，$T_{ai}$は，$\mathrm{SU}(N)$ のLie代数の生成子の行列表示で，表現の次元を $d_a$ として，$(d_a\times d_a)$ 行列である．基本表現の場合は，$d_{\mathrm{fund}}=N$ である．
 これらは，
+
 $$
     [T_{ai}, T_{aj}] =\ri f^k_{~ij}T_{ak}
 $$
+
 の交換関係を満たす．ここで，$f^k_{~ij}$ は構造定数である．$\mathrm{SU}(2)$ の場合は，$f^k_{~ij}=\epsilon_{ijk}$ である．
 Jacobiの恒等式を用いると定数の不定性を除いて
+
 $$
   \begin{split}
       [\ER_{i},\ER_{j}] &=\ri f^{k}_{~ij}\ER_{k}
   \end{split}
 $${#eq-E_sE_s}
+
 が得られ，$\ER_i$ は，$T_i$ と同じ交換関係を満たしていることがわかる．
 
 ::: {.callout-note collapse="true"}
 ## 詳細
 Jacobiの恒等式は，
+
 $$
 [R_i,[R_j,U_a]]+[R_j,[U_a,R_i]]+[U_a,[R_j,R_i]]=0
 $$
-で，式(@eq-E_sU)を用いると，
+
+で，式 (@eq-E_sU)を用いると，
+
 $$
 [[R_i,R_j],U_a]-U_a[T_i,T_j]=0
 $$
-を得る．式(@eq-E_sE_s) 及び，$U_a T_{a}=[R_i, U_a]$　であることを用いると
+
+を得る．式 (@eq-E_sE_s) 及び，$U_a T_{a}=[R_i, U_a]$　であることを用いると
+
 $$
 [([R_i,R_j]-\ri f^k_{~ij} R_k),U_a]=0
 $$
+
 が得られる．
 :::
 
 右作用と同様に，
+
 $$
   [\EL_{i},U_a] =T_{ai}U_{a} , \quad
     [\EL_{i},\EL_{j}] =-\ri f^k_{~ij}\EL_{k}
@@ -122,41 +144,74 @@ $$
 [U_{\mathrm{adj}}]_i^j \EL_j = \ER_i \,.
 $$
 
-ここで，$[U_{\mathrm{adj}}]_i^j$ は，随伴表現の演算子で，基本表現の演算子$U$を用いて，
+ここで，$[U_{\mathrm{adj}}]_i^j$ は，随伴表現の演算子で，基本表現の演算子 $U$ を用いて，
 
 $$
     U T_i U^\dag =T_j[U_{\mathrm{adj}}]_i^j 
 $$ {#eq-adjoint}
 
-と表される．ここで，$T_i$は基本表現の生成子である．
+と表される．ここで，$T_i$ は基本表現の生成子である．
 
-<!-- ::: {.callout-note collapse="true"}
+::: {.callout-note collapse="true"}
 ## 詳細
-$$
-[U_a,[U_\mathrm{adj}]^j_iL_j]=
--[U_\mathrm{adj}]^j_i T_jU_a
-=U_a T_i U_a^\dag U_a
-$$
+$[U_{\mathrm{adj}}]_i^j \EL_j$ が $\ER_i$ と同じ交換関係を満たすことを確認しておこう．
+$U$との交換関係は，次のように計算される:
 
 $$
-[U_a]^p_m(L_i[U_a]^m_n-[U_a]^m_nL_i)[U_a^\dag]^n_{l}= [U_a]^p_m[T_{ai}]^m_k[U_a ]^k_n [U_a^\dag]^n_{l}
+  [[U_\mathrm{adj}]^j_iL_j, U]
+  =[U_\mathrm{adj}]^j_i T_jU
+  =U T_i U^\dag U = U T_i\,.
 $$
-で，
 
-::: -->
+ここで，式 (@eq-adjoint) を用いた．
+次に，
+
+$$
+[R_i, [U_\mathrm{adj}]^k_jL_k]
+=[U_\mathrm{adj}]^k_l[T_{\mathrm{adj}i}]^l_jL_k
+= \ri f^l_{~ij} [U_\mathrm{adj}]^k_l L_k
+$$
+
+を満たすことがわかる．ここでは，$[T_{\mathrm{adj}i}]^l_j=\ri f^l_{~ij}$を用いた．
+
+さらに，
+
+$$
+[L_i, [U_\mathrm{adj}]^k_jL_k]
+=[L_i, [U_\mathrm{adj}]^k_j]L_k
++[U_\mathrm{adj}]^k_j [L_i,L_k]
+=[T_{\mathrm{adj}{i}}]^k_l[U_\mathrm{adj}]^l_jL_k
++[U_\mathrm{adj}]^k_j(-\ri f^l_{~ik}L_l)
+=0
+$$
+
+となる．最後に $[U_\mathrm{adj}]^k_iL_k$ 同士の交換関係は，
+
+$$
+[[U_\mathrm{adj}]^k_iL_k, [U_\mathrm{adj}]^l_jL_l]
+=[[U_\mathrm{adj}]^k_iL_k, [U_\mathrm{adj}]^l_j]L_l
++[U_\mathrm{adj}]^l_j[[U_\mathrm{adj}]^k_iL_k, L_l]
+$$
+
+の形になり，右辺の第二項は，ゼロになり，第一項は計算すると，
+
+$$
+[[U_\mathrm{adj}]^k_iL_k, [U_\mathrm{adj}]^l_jL_l]
+= [U_\mathrm{adj}T_{\mathrm{adj}i}]^l_jL_l =\ri f^m_{~ij}[U_\mathrm{adj}]^l_{m} L_l
+$$
+
+となる．したがって，$[U_{\mathrm{adj}}]_i^j \EL_j$ は $\ER_i$ と同じ交換関係を満たす．
+
+:::
 
 $U_{\mathrm{adj}}$ の直交性
+
 $$
   \sum_k[U_{\mathrm{adj}}]^i_k [U_{\mathrm{adj}}]^j_k =\delta^{ij}
 $$
+
 より，$\delta^{ij}\ER_{i}\ER_{j}=\delta^{ij} \EL_{i}\EL_{j}\eqqcolon E^2$
 が成り立ち，$\ER_i$ と $\EL_i$ のいずれから定義しても同じ演算子 $E^2$ が得られる．
-
-<!-- \begin{question}
-  $[U_{\mathrm{adj}}]_i^j \EL_j = \ER_i$ が，式(@eq-E_sU), (@eq-E_tU) と無矛盾であることを示せ．
-\end{question} -->
-
-
 
 
 $[U_{a}]^{m}_{n}$ の積は，$\mathrm{SU}(N)$ のClebsch--Gordan 係数を用いて
@@ -174,43 +229,57 @@ $${#eq-fusion_U}
 例えば，$\mathrm{SU}(3)$ の場合に，随伴表現の合成は $\mathbf{8} \otimes \mathbf{8}
 = \mathbf{27} \oplus \mathbf{10} \oplus \overline{\mathbf{10}}\oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}$ と分解され，$\mathbf{8}$ が2回現れる．従って $N_{\mathbf{8}\mathbf{8}}^{\mathbf{8}}=2$ となる．$\mathrm{SU}(2)$ の場合は，既約表現の合成で同じ表現が2回現れることはなく，多重度 $N_{ab}^c$ は，$1$ か $0$ となり，$\mu$ の添字は必要ない．
 
-式(@eq-fusion_U) について $m_a=n_a$, $m_b=n_b$ として和を取ると，
-Clebsch--Gordan係数の直交性を用いて
+式 (@eq-fusion_U) について $m_a=n_a$, $m_b=n_b$ として和を取ると，
+Clebsch--Gordan係数の直交性 (@eq-Clebsch-Gordan_orthogonal2_SUN) を用いて
+
 $$
   \tr U_a \tr U_b = \sum_{c}N_{ab}^c \tr U_c
-  \label{eq-fusion Wilson loop}
-$$
+$$ {#eq-fusion_Wilson_loop}
+
 が得られる．
 $U_nU_m=U_{n+m}$ となる $\mathrm{U}(1)$ の場合と異なり，$\tr U_a$ または，$[U_a]^{m_a}_{n_a}$ の積は群構造を持たない．
 
 ### 磁気的基底
 群の元 $g\in\mathrm{SU}(N)$ に対応する基底を $\ket{g}$ と表す．これは，$[U_a]^{m_a}_{n_a}$ の作用に対して，表現行列の行列要素を返す状態
+
 $$
 [U_{a}]^{m_a}_{n_a}\ket*{g} = [D_{a}(g)]^{m_a}_{n_a} \ket*{g}
 $$
+
 である．
 この基底を磁気的基底と呼ぶことにする．
 また，直交性と完全性は，
+
 $$
   \begin{split}
     \bra{g}\ket{g'} = \delta(g^{-1}g'),\quad 1=\int \dd{g} \ket{g}\bra{g}
   \end{split}
 $$
-で与えられる．$\dd{g}$ は $\int \dd{g} =1$ に規格化された Haar 測度で，$\delta(g^{-1}g')$ は，$\int \dd{g'} \delta(g^{-1}g')\psi(g')=\psi(g)$ を満たすデルタ関数である．
+
+で与えられる．$\dd{g}$ は $\int \dd{g} =1$ に規格化された Haar 測度で，$\delta(g^{-1}g')$ は，
+
+$$
+  \int \dd{g'} \delta(g^{-1}g')\psi(g')=\psi(g)
+$$
+
+を満たすデルタ関数である．
 
 
 ### 電気的基底
+
 $E^2 = \delta^{ij}{\ER}_i{\ER}_j = \delta^{ij}{\EL}_i{\EL}_j$ を対角化する基底を導入し，これを 電気的基底と呼ぶ．
 これは，$\ER_i$, $\EL_i$ の作用に対して，
+
 $$
     \ER_i\ket{a,m_a,n_a}=\sum_{n'_a}[T_i]^{n'_a}_{n_a}\ket{a,m_a,{n'}_a},\quad
     \EL_i\ket{a,m_a,n_a}=\sum_{m'_a}[T_i]^{m_a}_{m'_a}\ket{a,{m'}_a,{n}_a}
 $$
+
 となるように取れば良い．実際，
-$\delta^{ij}[T_{ai}T_{aj}]^{m_a}_{n_a}=C_2(a)\delta^{m_a}_{n_a}$より，
-$E^2\ket{a,m_a,n_a}=C_2(a)\ket{a,m_a,n_a}$となっていることがわかる．
-ここで，$C_2(a)$ は，表現$a$に対する2次のCasimir不変量である．例えば，$\mathrm{SU}(2)$ の場合は，スピン $j_a$ を持つ表現に対して，$C_2(a)=j_a(j_a+1)$ となる．
-この状態は，$[U_{a}]^{m_a}_{n_a}$ を用いて，
+$\delta^{ij}[T_{ai}T_{aj}]^{m_a}_{n_a}=C_2(a)\delta^{m_a}_{n_a}$ より，
+$E^2\ket{a,m_a,n_a}=C_2(a)\ket{a,m_a,n_a}$ となっていることがわかる．
+ここで，$C_2(a)$ は，表現 $a$ に対する2次の Casimir 不変量である．例えば，$\mathrm{SU}(2)$ の場合は，スピン $j_a$ を持つ表現に対して，$C_2(a)=j_a(j_a+1)$ となる．
+この状態は，$[U_{a}]^{m_a}_{n_a}$ を用いて，位相の不定性を除いて，
 
 $$
   [U_{a}]^{m_a}_{n_a}\ket*{0,0,0}=
@@ -219,6 +288,7 @@ $$ {#eq-U_action}
 
 と表すことができる．
 直交性と完全性は，以下のようになる:
+
 $$
   \bra{a,m_a,n_a}\ket{b,m_b,n_b}=\delta^a_b\delta_{m_a}^{m_b}\delta^{n_a}_{n_b},\quad
   1=\sum_{a}\sum_{m_a,n_a}\ket{a,m_a,n_a}\bra{a,m_a,n_a} \,.
@@ -227,14 +297,18 @@ $$
 ### Fourier(Peter--Weyl) 展開
 
 $\mathrm{U}(1)$ の場合と同様に状態は，
+
 $$
 \ket{\psi} = \int \dd{g} \psi(g)\ket{g} =  \sum_a\sum_{m_a,n_a} [\psi^a]_{m_a}^{n_a}\ket{a,m_a,n_a}
 $$
+
 の形で書ける．ここで，$\psi(g) = \bra{g}\ket{\psi}$　および，$[\psi^a]_{m_a}^{n_a}=\bra{a,m_a,n_a}\ket{\psi}$ である．
 $\psi(g)$ と $[\psi^a]_{m_a}^{n_a}$ は，Peter--Weyl 定理により
+
 $$
   \psi(g) = \sum_{a}\sum_{m_a,n_a}\bra{g}\ket{a,m_a,n_a}[\psi^a]_{m_a}^{n_a} =\sum_{a}\sum_{m_a,n_a}\sqrt{d_a}[D_a]^{m_a}_{n_a}(g) [\psi^a]_{m_a}^{n_a}
 $$
+
 と関係している．
 ここで，$\sqrt{d_a}[D_a]^{m_a}_{n_a}(g)=\bra{g}\ket{a,m_a,n_a}$ である．
 
@@ -303,7 +377,7 @@ $$\EL_\pm\ket*{j,m,n}=
 \ket*{j,m\mp1,n}
 $${#eq-Etpm}
 を満たす．これがGaussの拘束条件を課していない時のリンクが取りうる状態である．$j$を固定した時各$m,n$は，$-j,-j+1,\cdots, j-1,j$の値を取るので，それぞれの脚が$d_j=2j+1$個，したがって
-状態の数は，$d_j^2$となる．このHilbert空間は，$\bigoplus_{j}Q^*_j\otimes Q_j$となっている．これは式(@eq-Hilbert_space_dual)を思い出すと$L^2(\mathrm{SU}(2))$と同型であることがわかる．
+状態の数は，$d_j^2$となる．このHilbert空間は，$\bigoplus_{j}Q^*_j\otimes Q_j$となっている．これは式 (@eq-Hilbert_space_dual)を思い出すと$L^2(\mathrm{SU}(2))$と同型であることがわかる．
 
 $j$は，非負の整数，半整数を取るのでヒルベルト空間の次元は無限大になる．ハミルトニアン形式を数値計算に乗せる場合には，$j$が取りうる値の最大値を導入して全体として有限次元にする必要がある．
 これについては，@sec-cutoff_representation 節で議論する． -->
@@ -330,7 +404,7 @@ $$\begin{aligned}
   [T_{a-}]^{m_a}_{n_a} &= \sqrt{j_a(j_a+1)-n_a(n_a- 1)}\delta^{m_a}_{n_a-1}
 \end{aligned}$$
 である．$m_a,n_a$は，$-j_a,-j_a+1,\cdots, j_a$の値を取る．
-これらを用いると，式(@eq-E_sU_a), (@eq-E_tU_a)は，
+これらを用いると，式 (@eq-E_sU_a), (@eq-E_tU_a)は，
 $$
   [\ER_{\pm},[U_{{a}}]^{m_a}_{n_a}] =
   \sqrt{j_a(j_a+1)-n_a(n_a\pm 1)}[U_{a}]^{m_a}_{n_a\pm 1} ,
@@ -362,7 +436,7 @@ $$
   +\sum_{i}2[T_{ai}U_{{a}}]^{m_a}_{n_a}\EL_i
 $${#eq-E_t2Ua}
 となる．ここで，$T_{ai}^2=j_a(j_a+1)\mathbbm{1}_a$となることを使った．
-$[U_{a}]^{m_a}_{n_a}\ket*{0}$がどのような状態になるか考察しよう．まず，式(@eq-[E_s^2,Ua])，(@eq-[E_t^2,Ua])および$\ER_i\ket*{0}=\EL_i\ket*{0}=0$を用いると，
+$[U_{a}]^{m_a}_{n_a}\ket*{0}$がどのような状態になるか考察しよう．まず，式 (@eq-[E_s^2,Ua])，(@eq-[E_t^2,Ua])および$\ER_i\ket*{0}=\EL_i\ket*{0}=0$を用いると，
 $$
   \begin{split}
     E^2[U_{a}]^{m_a}_{n_a}\ket*{0} &=
@@ -386,7 +460,7 @@ $[U_{a}]^{m_a}_{n_a}\ket*{0}$は$\ket*{j_a,m_a,n_a}$に比例する．
 $$
   [U_{a}]^{m_a}_{n_a}\ket*{0}= C(j_a,m_a,n_a)\ket*{j_a,m_a,n_a}
 $${#eq-U0_normalization}
-として，規格化因子$C(j_a,m_a,n_a)$を求めよう．式(@eq-U0_normalization)の両辺に$\ER_{\pm}$を作用させると，式(@eq-Espm),
+として，規格化因子$C(j_a,m_a,n_a)$を求めよう．式 (@eq-U0_normalization)の両辺に$\ER_{\pm}$を作用させると，式 (@eq-Espm),
 (@eq-EspmUa)，$\ER_\pm\ket{0}=0$より， 
 $$
   \begin{split}
@@ -396,7 +470,7 @@ $$
 $$
 が得られ，$C(j_a,m_a,n_a)$は$n_a$に依存しない事がわかる．
 同様に，両辺に$\EL_{\pm}$を作用させると，
-式(@eq-Etpm)，(@eq-EtpmUa)，$\EL_\pm\ket{0}=0$より， -->
+式 (@eq-Etpm)，(@eq-EtpmUa)，$\EL_\pm\ket{0}=0$より， -->
 <!-- % $$
 %   \begin{split}
 %     &\sqrt{j_a(j_a+1)-m_a(m_a\mp 1)} C(j_a,m_a\mp1,n_a) \ket*{j_a,m_a\mp1,n_a}\\
@@ -429,10 +503,10 @@ $${#eq-fusion_U}
 となる．規格化についても上式で正しく規格化されている．
 \begin{question}
   $1=\sum_{m_a,m_b}([U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b})^\dag [U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b}$を
-  考え，この右辺を式(@eq-fusion_U}を用いて評価することで，正しく規格化されていることを確かめよ．  
+  考え，この右辺を式 (@eq-fusion_U}を用いて評価することで，正しく規格化されていることを確かめよ．  
 \end{question}
-式(@eq-fusion_U)の両辺に$\sqrt{d_b}$をかけ$\ket*{0}$に作用させ，
-式(@eq-U_action)を用いると表現$a$のリンク変数の状態への作用
+式 (@eq-fusion_U)の両辺に$\sqrt{d_b}$をかけ$\ket*{0}$に作用させ，
+式 (@eq-U_action)を用いると表現$a$のリンク変数の状態への作用
 $$
   [U_{a}]^{m_a}_{n_a}\ket*{j_b,m_b,n_b} =
   \sum_{j_c,m_c,n_c}\sqrt{\frac{d_b}{d_c}}
@@ -441,18 +515,18 @@ $$
    \ket*{j_c,m_c,n_c}
 $$
 が得られる．
-また，式(@eq-fusion_U)の両辺について，$m_a=n_a$, $m_b=n_b$として和を取ると
+また，式 (@eq-fusion_U)の両辺について，$m_a=n_a$, $m_b=n_b$として和を取ると
 $$
   \tr U_a \tr U_b = \sum_{c}N_{ab}^c \tr U_c
 $${#eq-fusion_Wilson_loop}
 が得られる．
 \begin{question}
-  式(@eq-fusion_Wilson_loop}を示せ．
+  式 (@eq-fusion_Wilson_loop}を示せ．
 \end{question}
 
 
 これまで，$U$についての見てきたが，$U^\dag$についても考察しておこう．
-式(@eq-E_sU_a)，及び式(@eq-E_tU_a)の両辺の$\dag$を取ることで，
+式 (@eq-E_sU_a)，及び式 (@eq-E_tU_a)の両辺の$\dag$を取ることで，
 $$
   [\ER_i,U_{{a}}^\dag] =-T_{ai} U^\dag_{a},
 $${#eq-E_sU_adag}
@@ -490,7 +564,7 @@ $$
 $$
 を得る．
 
-また，式(@eq-fusion_U)の両辺$\dag$を取ることで，$U^\dag$の合成，
+また，式 (@eq-fusion_U)の両辺$\dag$を取ることで，$U^\dag$の合成，
 $$
   [U^\dag_{b}]_{m_b}^{n_b}[U^\dag_{a}]_{m_a}^{n_a} 
   =\sum_{j_c,m_c,n_c} 
