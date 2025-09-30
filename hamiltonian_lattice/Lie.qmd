@@ -985,11 +985,13 @@ $${#eq-deform}
 が比較的簡単に評価できる．つまり，
 
 $$
-\sum_{l_a,l_b,l_e}  \braket{j_g,n_g}{j_a,l_a;\, j_b,l_b}
+\begin{split}
+&\sum_{l_a,l_b,l_e}  \braket{j_g,n_g}{j_a,l_a;\, j_b,l_b}
   \braket{j_b,l_b;\, j_c,n_c}{j_e,l_e}
-  \braket{j_a,l_a;\, j_e,l_e}{j_d,m_d}
-  =
+  \braket{j_a,l_a;\, j_e,l_e}{j_d,m_d}\\
+&  =
 [(F_{d}^{abc})^{-1}]_{eg} \braket{j_g,n_g;\,j_c,n_c}{j_d,m_d}
+\end{split}
 $${#eq-deform2}
 
 が成り立つが示せる．
