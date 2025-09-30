@@ -6,7 +6,177 @@
 
 #　群論基礎 {#sec-group_theory}
 
+群 $(G,e,\circ)$ とは，集合 $G$ に積 $\circ:G\times G\to G$ が定まっていて，以下の条件を満たすものである
 
+\begin{itemize}
+  \item すべての$G$の元$g$に対して，$eg=ge=g$となる$G$の元$e$が存在する．
+  \item すべての$G$の元$g$に対して，$g^{-1}g=gg^{-1}=e$となる$G$の元$g^{-1}$が存在する．
+  \item 任意の$G$の元$g,g',g''$に対して，$g\circ (g'\circ g'')=(g\circ g')\circ g''$が成り立つ．
+\end{itemize}
+
+任意の　$G$　の元　$g,g'$　について，$gg'=g'g$　が成り立つとき，群　$G$　は可換群であるという．
+
+\begin{example}[$\mathbb{Z}_2$群]
+  要素が$2$つからなる群は，$\mathbb{Z}_2$群と呼ばれる可換群となる．$G=\{1,-1\}$, $\circ =\times$，$e=1$に取ると群になっている．
+\end{example}
+
+場の量子論で特に重要になる群は，ユニタリー群である．$\mathrm{U}(N)$　群は，
+複素　$N$　次元ベクトル　$\bm{z}=(z_1,\cdots z_N)^T$　の内積　$\bm{z}^\dag z$　を不変に保つ変換
+$$
+\bm{z}\to \bm{z}'= g \bm{z}
+$$
+である．内積を保つ条件から$ g^\dag g=1$ となる．つまり $g^\dag = g^{-1}$ である．$g$ は $N\times N$行 列で
+あるので，行列の積，結合則が成り立つ．これらにより群になっていることがわかる．
+
+
+特に，すべての $g$ の行列式が $1$ の時($\det g=1$)，特殊ユニタリー群といい，$\mathrm{SU}(N)$ と書く．
+以下では，$\mathrm{SU}(N)$群を考える．$\mathrm{SU}(N)$ の元は，
+
+$$
+  g = e^{\ri\theta^a T_a}
+$$
+
+とパラメトライズすると便利である．
+ここで，$T_a$は，$N\times N$の行列で，$g$は，形式的に，
+
+$$
+  U=\sum_{n=0}^\infty \frac{1}{n!}(\ri \theta^at_a)^n
+$$
+
+で定義される．
+単位元の周りで1次まで展開すると，
+
+$$
+  U\simeq 1+ \ri\theta^a t_a
+$$
+
+と書ける．ユニタリーである条件から，
+
+$$
+  1\simeq  (1-\ri \theta^a t_a^\dag) (1+\ri \theta^b t_b)\simeq 1-\ri\theta^a(t_a^\dag-t_a)
+$$
+
+より，$t_a^\dag = t_a$ が成り立つ．また，
+で行列式が $1$ になる条件から，$1=\det U\simeq \det(1+ \ri \theta^at_a)\simeq 1+\ri \theta^a \mathrm{tr}\, t_a$ より，
+$\mathrm{tr}\,t_a=0$ がわかる．
+
+$\det(1+ \ri \theta^at_a)\simeq 1+\ri \theta^a \mathrm{tr}\, t_a$ は，行列式の中で非対角成分を含むものは，
+非対角成分の2次以上になる．したがって，$O(\theta)$ には，寄与しない．
+
+次に，$e^{ X} e^{ Y} e^{- X}$ を考える．ここで，$X=\ri\theta^at_a$, $Y=\ri\theta'^a t_a$ とする．
+これは，$X$, $Y$ の2次までで，
+
+$$
+  \begin{split}
+  e^{ X}e^{ Y}  e^{- X}&\simeq (1+X+\frac{X^2}{2})e^{ Y}(1-X+\frac{X^2}{2})=e^{ Y}+[X,e^{ Y}]+\frac{1}{2}[X,[X,e^{ Y}]]+\cdots\\
+  &\simeq 1+Y+[X,Y]+\frac{Y^2}{2}+\cdots
+  \end{split}
+$$
+
+となる．ここで，$[X,Y]=XY-YX$は交換子である．$e^{ X} e^{ Y} e^{- X}$も当然$\mathrm{U}(N)$の元になっているので，
+
+$[t_a,t_b]= \ri f_{ab}^{~~c}t_c$となる必要がある．ここで，$\ri f_{ab}^{~c}$は構造定数と呼ばれる．
+$$
+  \mathrm{tr} t_at_b = \frac{1}{2}g_{ab}
+$$
+
+とし，この逆行列を$g^{ab}$とする．これを用いて，$f_{abc}=f_{ab}^{~~d}g_{dc}$と定義すると，$f_{abc}$は完全反対称テンソルである．
+適当に基底を選ぶと$g_{ab}=\delta_{ab}$に取れる．
+Jacobi恒等式
+
+$$
+  [t_a,[t_b,t_c]]+[t_b,[t_c,t_a]]+[t_c,[t_a,t_b]]=0
+$$
+
+より，構造定数は，
+
+$$
+  f_{bcd}f_{ade}+f_{cad}f_{bde}+f_{abd}f_{cde}=0
+  \label{eq:Jacobi}
+$$
+
+を満たす．
+$[T_a]^b_c=\ri f_{bac}$という行列を考えると，\eqref{eq:Jacobi}より
+$[T_a,T_b]=\ri f_{abc}T_{c}$を満たすことがわかる．これは随伴表現と呼ばれる．
+
+\begin{example}[$\mathrm{SU}(2)$群]
+  $t_a^\dag=t_a$で，$\mathrm{tr}t_a=0$となる，$2\times 2$行列は，$3$つあり，これは\textrm{Pauli}行列である:
+  \begin{align}
+    \sigma_1 = 
+    \begin{pmatrix}
+      0 & 1\\
+      1 & 0
+    \end{pmatrix},\quad
+    \sigma_2 = 
+    \begin{pmatrix}
+      0 & -\ri\\
+      \ri & 0
+    \end{pmatrix},\quad
+    \sigma_3 = 
+    \begin{pmatrix}
+      1 & 0\\
+      0 & -1
+    \end{pmatrix}.
+  \end{align}
+  \textrm{Pauli}行列は，$\mathrm{tr}\sigma_a\sigma_b = 2\delta_{ab}$に規格化されている．
+  したがって，規格化因子を考慮して$t_a=\sigma_a/2$に取ると，
+  $[t_a,t_b]=\ri\epsilon_{abc}t_c$の代数を満たす．$\epsilon_{abc}$は完全反対称テンソルで，$\epsilon_{123}=1$に符号を取ってある．
+\end{example}
+
+\begin{example}[$\mathrm{SU}(3)$群]
+  \textrm{QCD}で重要になる$\mathrm{SU}(3)$群を考えよう．これは，$3$次元複素ベクトルの内積を不変にする変換である．
+  $t_a^\dag=t_a$で，$\mathrm{tr}t_a=0$となる，$2\times 2$行列は$8$つある．したがって生成子は，
+  \textrm{Gell-Mann}行列
+  \begin{align}
+    &\lambda_1 = \begin{pmatrix}
+      0 & 1 & 0\\
+      1 & 0 & 0\\
+      0 & 0 &  0
+    \end{pmatrix},\quad
+    \lambda_2 = \begin{pmatrix}
+      0 & -\ri & 0\\
+      \ri & 0 & 0\\
+      0 & 0 &  0
+    \end{pmatrix},\quad
+    \lambda_3 = \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & -1 & 0\\
+      0 & 0 &  0
+    \end{pmatrix},\quad
+    \lambda_4 = \begin{pmatrix}
+      0 & 0 & 1\\
+      0 & 0 & 0\\
+      1 & 0 &  0
+    \end{pmatrix},\notag\\
+    &\lambda_5 = \begin{pmatrix}
+      0 & 0 & -\ri\\
+      0 & 0 & 0\\
+      \ri & 0 &  0
+    \end{pmatrix},\quad
+    \lambda_6 = \begin{pmatrix}
+      0 & 0 & 0\\
+      0 & 0 & 1\\
+      0 & 1 &  0
+    \end{pmatrix},\quad
+    \lambda_7 = \begin{pmatrix}
+      0 & 0 & 0\\
+      0 & 0 & -\ri\\
+      0 & \ri & 0
+    \end{pmatrix},\quad
+    \lambda_8 = \frac{1}{\sqrt{3}}\begin{pmatrix}
+      1 & 0 & 0\\
+      0 & 1 & 0\\
+      0 & 0 &  -2
+    \end{pmatrix}.
+  \end{align}
+
+  を用いて，$T_a=\lambda_a/2$である．
+  $[T_a,T_b]=\ri f_{abc}T_c$でゼロでないものは，
+   $f_{123}=1$,  $f_{458}=f_{678}={\sqrt{3}}/{2}$, $f_{147}=f_{165}=f_{246}=f_{257}=f_{345}=f_{376}=1/2$である．
+
+\end{example}
+これまで$\mathrm{SU}(N)$群の生成子は，$N\times N$行列を用いて定式化したが抽象化して$[t_a,t_b]= \ri f_{ab}^{~~c}t_c$を満たすものとして
+リー群を定義する．
 
 
 ## Haar測度 {#sec-Haar_measure}
@@ -527,7 +697,7 @@ c & s\\
 s & -c
 \end{pmatrix}.
 \end{split}
-\end{equation}
+$$
 Here, $c=\cos(2\pi/3)=-1/2$, $s=\sin(2\pi/3)=\sqrt{3}/2$.
 The tensor product of representations can be taken, and it decomposes into a direct sum. For example, 
 $\rho_E \otimes \rho_E = A_1 \oplus A_2 \oplus E$.
@@ -565,4 +735,4 @@ $$
   \begin{split}
     \frac{|c_g|}{d_a}\chi_a(g) 1_a
   \end{split}
-\end{equation} -->
+$$ -->

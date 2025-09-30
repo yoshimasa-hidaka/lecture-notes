@@ -54,8 +54,7 @@ $$ {#eq-commutatorSU2}
 
 ### $\mathrm{SU}(N)$群の表現
 
-$\mathrm{SU}(N)$群は単連結なコンパクトLie群であるため，その有限次元ユニタリ表現はLie代数 $\mathfrak{su}(N)$ の有限次元表現と1対1対応する．
-したがって，群の表現を理解するにはLie代数の表現を調べれば十分である．
+$\mathrm{SU}(2)$群の場合と同様に，Lie代数の表現を求めることで$\mathrm{SU}(N)$群の表現を求めることができる．
 
 $$
   ~[J_0,J_{\pm}] = \pm J_\pm,\quad
@@ -83,23 +82,38 @@ $$
 
 $$
 \begin{aligned}
-  J^2\ket*{j,m}  &= C_2(j)\ket*{j,m} =j(j+1)\ket*{j,m}\,,\\
+  J^2\ket*{a,m}  &= C_2(a)\ket*{j,m} =j(j+1)\ket*{j,m}\,,\\
   J_3\ket*{j,m}  &= m\ket*{j,m}
 \end{aligned}
 $$
 
 を満たす．昇降演算子を状態に作用させると
 
-$$
-  J_{\pm}\ket*{j,m} = \sqrt{j(j+1)-m(m\pm 1)}\ket*{j,m\pm1}
-$$
-
 となる．
-以下，表現 $a$ に付随した$d_a\eqqcolon d_a$ 次元の有限次元複素 Hilbert 空間を $\mathcal{Q}_a$ と表す．
+以下，表現 $a$ に付随した　$d_a\eqqcolon d_a$ 次元の有限次元複素 Hilbert 空間を $\mathcal{Q}_a$ と表す．
+
+で，$N_{ab}^c=N_{ba}^c=N_{b\bar{c}}^{\bar{a}}=N_{\bar{a}\bar{b}}^{\bar{c}}$ を満たす．
+Dynkin ラベルのかわりに表現の次元を用いて状態を指定した． Dynkin ラベル $(p,q)$
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/Young_diagram.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Young_diagram.pdf}}}
+$$
+:::
+
+を用いる場合は，$\bm{1}=(0,0)$, $\bm{8}=(1,1)$, $\bm{10}=(3,0)$, $\overline{\bm{10}}=(0,3)$, 及び ${\bm{27}}=(2,2)$ が対応する
+
+
 
 ### 表現行列
 
-$\mathrm{SU}(N)$の元 $g$ に対応した演算子を
+$\mathrm{SU}(N)$群の元 $g$ に対応した演算子を
 
 $$
   U_g=\exp(\ri\theta^i J_i)
@@ -146,8 +160,10 @@ $$
 ここで $N_{ab}^{c}$ で
 
 
-を導入した．$N_{ab}^{c}$ は fusion 係数またはテンソル積係数と呼ばれる．
-
+を導入した．$N_{ab}^{c}$ は fusion 係数またはテンソル積係数と呼ばれる非負の整数で，既約表現が直積分解の中に何回現れるかを表す多重度である．
+一般には，$N_{ab}^c>1$ の値を取る．
+例えば，$\mathrm{SU}(3)$ の場合に，2つの随伴表現 $\bm{8}$ の合成　$\mathbf{8} \otimes \mathbf{8}
+= \mathbf{27} \oplus \mathbf{10} \oplus \overline{\mathbf{10}}\oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}$ と分解され，$\mathbf{8}$ が2回現れる．従って $N_{\mathbf{8}\mathbf{8}}^{\mathbf{8}}=2$ となる．
 
 3つの表現の合成(直積)は $\mathcal{Q}_{a}\otimes (\mathcal{Q}_{b}\otimes \mathcal{Q}_{c})\simeq (\mathcal{Q}_{a}\otimes \mathcal{Q}_{b}) \otimes \mathcal{Q}_{c}$
   を満たす．これに対応して，fusion係数は，
@@ -158,14 +174,17 @@ $$
 
 を満たす．
 
-次に具体的に表現を合成しよう．表現 $a$, $b$ を合成し $c$ を作ったとする．そのときのベクトル $\ket*{ab;c,m_c}$ は，
+次に具体的に表現を合成しよう．表現 $a$, $b$ を合成し $c$ を作ったとする．そのときのベクトル $\ket*{(ab)c,m_c}$ は，
 
 $$
-  \ket*{ab;c,m_c} = \sum_{m_a,m_b}\ket*{a,m_a} \ket*{b,m_b}\braket{a,m_a;\, b,m_b}{c,m_c;\mu}
+  \ket*{(ab)c,m_c;\mu} = \sum_{m_a,m_b}\ket*{a,m_a} \ket*{b,m_b}\braket{a,m_a;\, b,m_b}{c,m_c;\mu}
 $$ {#eq-decomposition_sun}
 
 と表せる．ここで，
 $\braket{a,m_a;\, b,m_b}{c,m_c;\mu}$ は Clebsch--Gordan 係数である．
+ここで，$\mu\in\{1,2,\cdots, N_{ab}^c\}$ は，多重度に対するラベルである．
+上記の $\mathbf{8} \otimes \mathbf{8}$ の合成に現れる２つの $\mathbf{8}$ に対応して，$f^k_{ij}=\tr T^k[T_i,T_j]$, $d^k_{~ij}=\tr T^k\{T_i,T_j\}$ が Clebsch--Gordan 係数に対応する．
+
 
 式 (@eq-decomposition) は，$\mathcal{Q}_{c}\to \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ の写像を与える．
 つまり，$\ket{v}=\sum_{m_c}v^{m_c}\ket{c,m_c}\in \mathcal{Q}_{c}$を
@@ -173,7 +192,7 @@ $\sum_{m_a,m_b,m_c}\ket*{a,m_a} \ket*{b,m_b}\braket{a,m_a;\, b,m_b}{c,m_c;\mu}v^
 
 
 $$
-\ket*{j_a,m_a} \ket*{j_b,m_b}= \sum_{j_c,m_c}  \ket*{aj_b;c,m_c} \braket{c,m_c;\mu}{a,m_a;\, b,m_b}
+\ket*{a,m_a} \ket*{b,m_b}= \sum_{,m_c}  \ket*{ab;c,m_c} \braket{c,m_c;\mu}{a,m_a;\, b,m_b}
  $$
 
 と表せる．
@@ -182,15 +201,15 @@ $$
 
 $$
   \sum_{m_a,m_b}
-  \braket{j_d,m_d}{j_a,m_a;\, j_b,m_b}
-  \braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}
-  =\delta_{j_c}^{j_d}\delta_{m_c}^{m_d}\delta^c_{ab} \,,
+  \braket{d,m_d;\mu}{a,m_a;\, b,m_b}
+  \braket{a,m_a;\, b,m_b}{c,m_c;\mu'}
+  =\delta^{\mu}_{\mu'}\delta_{c}^{d}\delta_{m_c}^{m_d}\delta^c_{ab} \,,
 $$ {#eq-Clebsch-Gordan_orthogonal1_SUN}
 
 $$
-  \sum_{j_c}\sum_{m_c}
-  \braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}
-  \braket{j_c,m_c}{j_a,m'_a;\, j_b,m'_b}
+  \sum_{c}\sum_{m_c,\mu}
+  \braket{a,m_a;\, b,m_b}{c,m_c;\mu}
+  \braket{c,m_c;\mu}{a,m'_a;\, b,m'_b}
   =\delta^{m_a}_{m'_a}\delta^{m_b}_{m'_b}
 $$ {#eq-Clebsch-Gordan_orthogonal2_SUN}
 
@@ -199,53 +218,44 @@ $$ {#eq-Clebsch-Gordan_orthogonal2_SUN}
 また，Clebsch--Gordan 係数は不変テンソルになっている．つまり，
 
 $$
-\braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}=\sum_{m'_a,m'_b,m'_{c}}
-[D_{j_c}(\bar{g})]^{m_c}_{m'_c}[D_{j_a}(g)]^{m_a}_{m'_a}[D_{j_b}(g)]^{m_b}_{m'_b}
-\braket{j_a,m'_a;\, j_b,m'_b}{j_c,m'_c}
+\braket{a,m_a;\, b,m_b}{c,m_c;\mu}=\sum_{m'_a,m'_b,m'_{c}}
+[D_{c}(\bar{g})]^{m_c}_{m'_c}[D_{a}(g)]^{m_a}_{m'_a}[D_{b}(g)]^{m_b}_{m'_b}
+\braket{a,m'_a;\, b,m'_b}{c,m'_c;\mu}
 $$
 
 を満たす．
 
 
-$\ket*{j_aj_b;j_c,m_c}$ と $\ket*{j_bj_a;j_c,m_c}$ は，位相分だけ状態が異なる:
+$\ket*{(ab)c,m_c}$ と $\ket*{(ba)c,m_c}$ は，
 
 $$
-  \ket*{j_aj_b;j_c,m_c} =R^{ab}_c \ket*{j_bj_a;j_c,m_c} \,.
+  \ket*{(ab)c,m_c;\mu} =\sum_{\nu}[R_c^{ab}]_{\mu\nu}　\ket*{(ba)c,m_c;\nu} \,.
 $$
 
-ここで，
+の関係がある．
 
-$$
-  R^{ab}_c= (-1)^{j_a+j_b-j_c}
-$$
-
-である．これは，$R^{ab}_cR^{ba}_c=1$ を満たす．
-\begin{question}
-  $R^{ab}_c= (-1)^{j_a+j_b-j_c}$を式 (@eq-Clebsch-Gordan-Wigner3j)及び
-  (@eq-Wigner3joddperm)を用いて示せ．
-\end{question}
 
 
 3つの表現 $a$, $b$, $c$ を合成し，$d$ を作る問題を考える．$a$ と $b$ を合成し ${e}$ を作り，その後，$c$ を合成すると，
 
 $$
-  \ket*{(ab)ec;d,m_d}
+  \ket*{((ab)_{e\mu},c)_{d\nu},m_d}
   =
   \sum_{m_{a},m_b,m_c,m_{e}}
   \ket*{a,m_a}\ket*{b,m_b}\ket*{c,m_c}
-  \braket{a,m_a;\, b,m_b}{{e},m_{e}}
-  \braket{{e},m_{e};\, c,m_c}{d,m_d}
+  \braket{a,m_a;\, b,m_b}{{e},m_{e};\mu}
+  \braket{{e},m_{e};\, c,m_c}{d,m_d;\nu}
  $$
 
 となる．一方，先に $b$ と $c$ を合成し，${f}$ を作り，その後，$a$ を合成すると，
 
 $$
-  \ket*{a (bc){f};d,m_d}
+  \ket*{(a,(bc)_{f\rho})_{d\sigma},m_d}
     =
   \sum_{m_{a},m_b,m_c,m_{f}}
   \ket*{a,m_a}\ket*{b,m_b}\ket*{c,m_c}
-  \braket{a,m_a;\, {f},m_{f}}{{d},m_{d}}
-  \braket{{b},m_{b};\, c,m_c}{{f},m_{f}}
+  \braket{a,m_a;\, {f},m_{f}}{{d},m_{d};\sigma}
+  \braket{{b},m_{b};\, c,m_c}{{f},m_{f};\rho}
 $$
 
 となる．
@@ -281,7 +291,7 @@ Clebsch--Gordan 係数を用いて $F$-symbol を表すと
 
 $$
   \begin{split}
-    [F^{abc}_d]_{ef}
+    [F^{abc}_d]_{(e,\mu,\nu)(f)}
     & = \sum_{m_{a},m_b,m_c,m_{e} m_{f}}\braket{a,m_a;\, b,m_b}{{e},m_{e}}\braket{{e},m_{e};\, {c},m_{c}}{{d},m_{d}}\\
     &\qquad\qquad\qquad  \times \braket{{f},m_{f}}{ b,m_b;\, {c},m_{c} }\braket{d,m_d}{a,m_a;\, {f},m_{f}}
   \end{split}
@@ -300,22 +310,23 @@ $$
 で，$[(F^{abc}_d)^{-1}]_{fe}=
 \braket{ (ab){e}c;d,m_d}{a (bc){f};d,m_d}$である．これは，ユニタリである性質
 
-$$
-  [(F^{abc}_d)^{-1}]_{fe}=
-  [(F^{abc}_d)^{\dag}]_{fe}
-  =[F^{abc}_d]^*_{ef}
+
+$$  [(F^{abc}_d)^{-1}]_{(e,\mu,\nu)(f,\rho,\sigma)}
+  =[(F^{abc}_d)^{\dag}]_{(e,\mu,\nu)(f,\rho,\sigma)}
+  =[F^{abc}_d]^{*}_{(f,\rho,\sigma)(e,\mu,\nu)}
 $$
 
 を満たす．
 また，$F$-symbol は，以下の関係を満たす(pentagon equation):
 
+$$  
+\begin{split}
+    &\sum_{\delta}[F_e^{fcd}]_{(g,\beta,\gamma)(l,\nu,\delta)} [F_e^{abl}]_{(f,\alpha,\delta)(k,\mu,\lambda)}\\
+    &\quad= \sum_{h,\sigma,\psi,\rho} [F^{abc}_g]_{(f,\alpha,\beta)(h,\psi,\sigma)} [F_{e}^{ahd}]_{(g,\sigma,\gamma)(k,\rho,\lambda)} [F^{bcd}_{k}]_{(h,\psi,\rho)(l,\nu,\mu)}
+\end{split}
 $$
-  [F_e^{fcd}]_{gl} [F_e^{abl}]_{fk}
-= \sum_{h} [F^{abc}_g]_{fh} [F_{e}^{ahd}]_{gk} [F^{bcd}_{k}]_{hl} \,.
-$$ {#eq-pentagon}
 
 これは表現の結合順序を変える際の一貫性条件を表している．
-
 
 
 
@@ -465,61 +476,29 @@ $$
 $$
 :::
 
-と表すことができる．また，$F$-symbol は，
+と表すことができる．
+また，$F$-symbol は, $[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$ となり，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/fmove1mu.svg" style="height:5.5em;">
+  <img src="figs/fmove1mu.svg" style="height:6.0em;">
   <span class="math display" style="display:inline-block;">
-    $$= \sum_{f}[F^{abc}_d]_{ef}$$
+    $$= \sum_{f,\rho,\sigma} [F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$$
   </span>
-  <img src="figs/fmove2mu.svg" style="height:5.5em;">
+  <img src="figs/fmove2mu.svg" style="height:6.0em;">
 </div>
 :::
 
 ::: {.content-visible when-format=pdf}
-$$
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1mu.pdf}}}
-  =
-  \sum_{f}[F^{abc}_d]_{ef}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2mu.pdf}}}
-$$
+\begin{align}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1mu.pdf}}}
+&= \sum_{f,\rho,\sigma} [F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}
+\ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2mu.pdf}}}
+\label{eq-Fmove}
+\end{align}
 :::
 
-と表現され，$F$-symbol 自身は，
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/fmove.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$=\frac{1}{d_d}[F^{abc}_d]_{ef}$$
-  </span>
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-$$
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove.pdf}}}
-  =\frac{1}{d_d}[F^{abc}_d]_{ef}
-$$
-:::
-
-と表すことができる．また，式 (@eq-pentagon) のペンタゴン方程式は，
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/pentagonRelationmu.svg" style="height:18.5em;">
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-$$
- \includegraphics[scale=0.3]
-  {figs/pentagonRelationmu.pdf}
-$$
-:::
-
-より得られる．
+と表現される．
 
 
 これらのグラフィカルルールを用いると，例えば
@@ -560,6 +539,36 @@ $$
 $${#eq-deform2}
 
 が成り立つが示せる．
+
+
+
+
+を満たす．
+また，Wilson 線の交換に対応するブレイドは，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/Rabmu.svg" style="height:5.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\sum_{\nu}[R_c^{ab}]_{\mu\nu}\ $$
+  </span>
+  <img src="figs/cabnu.svg" style="height:5.0em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+\vcenter{\hbox{\includegraphics[scale=0.3]{figs/Rabmu.pdf}}}
+=
+  \sum_{\nu}[R_c^{ab}]_{\mu\nu}\ 
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cabnu.pdf}}}
+\end{align}
+:::
+
+と記述される．これらは，具体系は書かないが，$[R^{ab}]_{\mu\nu}$ と $F$-symbol は，無矛盾条件 (Hexagon equations) を満たす．
+
+
+
 
 
 <!-- 

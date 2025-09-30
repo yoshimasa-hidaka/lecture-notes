@@ -305,10 +305,10 @@ $$
 
 を満たす．
 
-次に具体的に表現を合成しよう．表現 $j_a$, $j_b$ を合成し $j_c$ を作ったとする．そのときのベクトル $\ket*{j_aj_b;j_c,m_c}$ は，
+次に具体的に表現を合成しよう．表現 $j_a$, $j_b$ を合成し $j_c$ を作ったとする．そのときのベクトル $\ket*{(j_aj_b)j_c,m_c}$ は，
 
 $$
-  \ket*{j_aj_b;j_c,m_c} = \sum_{m_a,m_b}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}
+  \ket*{(j_aj_b)j_c,m_c} = \sum_{m_a,m_b}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}
 $$ {#eq-decomposition}
 
 と表せる．ここで，
@@ -332,7 +332,7 @@ $$ \begin{aligned}
 逆に直積状態は，
 
 $$
-\ket*{j_a,m_a} \ket*{j_b,m_b}= \sum_{j_c,m_c}  \ket*{j_aj_b;j_c,m_c} \braket{j_c,m_c}{j_a,m_a;\, j_b,m_b}
+\ket*{j_a,m_a} \ket*{j_b,m_b}= \sum_{j_c,m_c}  \ket*{(j_aj_b)j_c,m_c} \braket{j_c,m_c}{j_a,m_a;\, j_b,m_b}
  $$
 
 と表せる．
@@ -486,10 +486,10 @@ $$
 \end{question}
 
 
-$\ket*{j_aj_b;j_c,m_c}$ と $\ket*{j_bj_a;j_c,m_c}$ は，位相分だけ状態が異なる:
+$\ket*{(j_aj_b)j_c,m_c}$ と $\ket*{(j_bj_a)j_c,m_c}$ は，位相分だけ状態が異なる:
 
 $$
-  \ket*{j_aj_b;j_c,m_c} =R^{ab}_c \ket*{j_bj_a;j_c,m_c} \,.
+  \ket*{(j_aj_b)j_c,m_c} =R^{ab}_c \ket*{(j_bj_a)j_c,m_c} \,.
 $$
 
 ここで，
@@ -508,7 +508,7 @@ $$
 3つの表現 $j_a$, $j_b$, $j_c$ を合成し，$j_d$ を作る問題を考える．$j_a$ と $j_b$ を合成し $j_{e}$ を作り，その後，$j_c$ を合成すると，
 
 $$
-  \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
+  \ket*{((j_aj_b)j_{e},j_c)j_d,m_d}
   =
   \sum_{m_{a},m_b,m_c,m_{e}}
   \ket*{j_a,m_a}\ket*{j_b,m_b}\ket*{j_c,m_c}
@@ -519,7 +519,7 @@ $$
 となる．一方，先に $j_b$ と $j_c$ を合成し，$j_{f}$ を作り，その後，$j_a$ を合成すると，
 
 $$
-  \ket*{j_a (j_bj_c)j_{f};j_d,m_d}
+  \ket*{(j_a, (j_bj_c)j_{f})j_d,m_d}
     =
   \sum_{m_{a},m_b,m_c,m_{f}}
   \ket*{j_a,m_a}\ket*{j_b,m_b}\ket*{j_c,m_c}
@@ -529,31 +529,31 @@ $$
 
 となる．
 
-$\ket*{(j_aj_b)j_{e}j_c;j_d,m_d}$ と$\ket*{j_a (j_bj_c)j_{f};j_d,m_d}$ は，独立ではなく次のユニタリ変換（$F$-moves）で結びついている:
+$\ket*{((j_aj_b)j_{e},j_c)j_d,m_d}$ と$\ket*{(j_a,(j_bj_c)j_{f})j_d,m_d}$ は，独立ではなく次のユニタリ変換（$F$-moves）で結びついている:
 
 $$
   \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
-  =\sum_{j_{f}}  \ket*{j_a (j_bj_c)j_{f};j_d,m_d}
-  \braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d} \,.
+  =\sum_{j_{f}}  \ket*{(j_a,(j_bj_c)j_{f})j_d,m_d}
+  \braket{(j_a,(j_bj_c)j_{f})j_d,m_d}{((j_aj_b)j_{e},j_c)j_d,m_d} \,.
 $${#eq-recoupling}
 
-この係数は，$\braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$ は，$m_d$ に依存しない．
+この係数は，$\braket{(j_a,(j_bj_c)j_{f})j_d,m_d}{((j_aj_b)j_{e},j_c)j_d,m_d}$ は，$m_d$ に依存しない．
 これは，式 (@eq-recoupling) の両辺に $J_{\pm}$ を作用させることで確かめられる．
 
 \begin{question}
-  $\braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}$ が $m_d$ によらないことを確かめよ．
+  $\braket{(j_a,(j_bj_c)j_{f})j_d,m_d}{((j_aj_b)j_{e},j_c)j_d,m_d}$ が $m_d$ によらないことを確かめよ．
 \end{question}
 
 本稿では，
 $$
-  [F^{abc}_d]_{ef}\coloneqq \braket{j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}
+  [F^{abc}_d]_{ef}\coloneqq \braket{(j_a,(j_bj_c)j_{f})j_d,m_d}{((j_aj_b)j_{e},j_c)j_d,m_d}
 $$
 
   とし $F$-symbolと呼ぶことにする:
 
 $$
-  \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
-  =\sum_{j_f}[F^{abc}_d]_{ef}\ket*{j_a (j_bj_c)j_{f};j_d,m_d} \,.
+  \ket*{((j_aj_b)j_{e},j_c)j_d,m_d}
+  =\sum_{j_f}[F^{abc}_d]_{ef}\ket*{(j_a,(j_bj_c)j_{f})j_d,m_d} \,.
 $$
 
 Clebsch--Gordan 係数を用いて $F$-symbol を表すと
@@ -646,13 +646,12 @@ def f_symbol(ja, jb, jc, jd, je, jf) -> sp.Expr:
 逆変換は，
 
 $$
-  \ket*{j_a (j_bj_c)j_{f};j_d,m_d}
+  \ket*{(j_a,(j_bj_c)j_{f})j_d,m_d}
     =\sum_{j_e}[(F^{abc}_d)^{-1}]_{fe}
-  \ket*{(j_aj_b)j_{e}j_c;j_d,m_d}
+  \ket*{((j_aj_b)j_{e},j_c)j_d,m_d}
 $$
 
-で，$[(F^{abc}_d)^{-1}]_{fe}=
-\braket{ (j_aj_b)j_{e}j_c;j_d,m_d}{j_a (j_bj_c)j_{f};j_d,m_d}$である．これは，ユニタリである性質
+で，$[(F^{abc}_d)^{-1}]_{fe}=\braket{ (j_aj_b)j_{e}j_c;j_d,m_d}{j_a (j_bj_c)j_{f};j_d,m_d}$ である．これは，ユニタリである性質
 
 $$
   [(F^{abc}_d)^{-1}]_{fe}=
@@ -661,7 +660,7 @@ $$
 $$
 
 を満たす．
-また，$F$-symbol は，以下の関係を満たす(pentagon equation):
+また，$F$-symbol は，以下の関係を満たす (pentagon equation):
 
 $$
   [F_e^{fcd}]_{gl} [F_e^{abl}]_{fk}

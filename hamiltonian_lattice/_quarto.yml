@@ -24,6 +24,7 @@ book:
     - part: "基礎編"
       chapters:
         - Lie.qmd
+        - Lie2.qmd
         - quantum_on_SUN.qmd
         - Kogut-Susskind.qmd
         - regularization.qmd

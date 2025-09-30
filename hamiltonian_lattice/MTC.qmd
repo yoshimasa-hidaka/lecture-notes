@@ -14,7 +14,7 @@ Wilson lineの表現に対応する自由度．本稿では，$a,b,c,\cdots$ で
 
 ### String orientations
 
-表現$a$に対して反表現が存在する．それを $\bar{a}$ と書く．グラフィカルな表現では，
+表現 $a$ に対して反表現が存在する．それを $\bar{a}$ と書く．グラフィカルな表現では，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">

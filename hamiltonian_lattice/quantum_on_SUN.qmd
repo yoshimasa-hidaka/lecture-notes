@@ -235,8 +235,29 @@ $${#eq-fusion_U}
 
 と展開できる．
 ここで，$\mu\in\{1,2,\cdots, N_{ab}^c\}$ は，多重度に対するラベルで $N_{ab}^c$ は既約表現が直積分解の中に何回現れるかを表す多重度である．
-例えば，$\mathrm{SU}(3)$ の場合に，随伴表現の合成は $\mathbf{8} \otimes \mathbf{8}
-= \mathbf{27} \oplus \mathbf{10} \oplus \overline{\mathbf{10}}\oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}$ と分解され，$\mathbf{8}$ が2回現れる．従って $N_{\mathbf{8}\mathbf{8}}^{\mathbf{8}}=2$ となる．$\mathrm{SU}(2)$ の場合は，既約表現の合成で同じ表現が2回現れることはなく，多重度 $N_{ab}^c$ は，$1$ か $0$ となり，$\mu$ の添字は必要ない．
+$\mathrm{SU}(2)$ の場合は，既約表現の合成で同じ表現が2回現れることはなく，多重度 $N_{ab}^c$ は，$1$ か $0$ となり，$\mu$ の添字は必要ない．
+
+で，$N_{ab}^c=N_{ba}^c=N_{b\bar{c}}^{\bar{a}}=N_{\bar{a}\bar{b}}^{\bar{c}}$ を満たす．
+ここで，$N_{ab}^{c}$ は多重度と呼ばれ非負の整数である．これは，表現 $a$, $b$ を合成して，$c$ ができる数に対応し，$\mathrm{SU}(2)_k$ の場合は，$N_{ab}^{c}$ は $0$ または $1$ の値を取る．
+一般には，$N_{ab}^c>1$ の値を取る．例えば，$\mathrm{SU}(3)$群の場合は，2つの随伴表現 $\bm{8}$ の合成 $\bm{8}\otimes \bm{8}$ は，$\bm{1}\oplus\bm{8}\oplus\bm{8}\oplus\overline{\bm{10}}\oplus\bm{10}\oplus\bm{27}$ に分解される．つまり，
+$N_{\bm{8}\bm{8}}^{\bm{1}}=N_{\bm{8}\bm{8}}^{\bm{10}}=N_{\bm{8}\bm{8}}^{\overline{\bm{10}}}=N_{\bm{8}\bm{8}}^{{\bm{27}}}=1$ と $N_{\bm{8}\bm{8}}^{\bm{8}}=2$ である．
+Dynkin ラベルのかわりに表現の次元を用いて状態を指定した． Dynkin ラベル $(p,q)$
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/Young_diagram.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Young_diagram.pdf}}}
+$$
+:::
+
+を用いる場合は，$\bm{1}=(0,0)$, $\bm{8}=(1,1)$, $\bm{10}=(3,0)$, $\overline{\bm{10}}=(0,3)$, 及び ${\bm{27}}=(2,2)$ が対応する
+
+
 
 式 (@eq-fusion_U) について $m_a=n_a$, $m_b=n_b$ として和を取ると，
 Clebsch--Gordan　係数の直交性 (@eq-Clebsch-Gordan_orthogonal2_SUN) を用いて
