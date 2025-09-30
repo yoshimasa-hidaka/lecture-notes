@@ -283,70 +283,66 @@ $$ $$ {#eq-Fmove}
 
 の関係も導かれる．ここで$[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$は，$F$-symbol と呼ばれるユニタリ行列である．
 
-::: {.callout-note collapse="false"}
+::: {.callout-note collapse="true"}
 ## 詳細
 辺 $1$, $2$ について，次の演算子を考える：
 
 $$
-\sum_{n_a,n_b,m_e}
-\braket{a,n_a; b,n_b}{e, m_e;\mu}
-    [U_{a}(1)]^{m_a}_{n_a}
-    [U_{b}(1)]^{m_b}_{n_b}
-    [U_{e}(2)]^{m_e}_{n_e}\,.
+\sum_{l_b,l_e,n_e,n_c}
+\braket{a,m_a; b,l_b}{e, l_e;\mu}
+\braket{e,n_e; c,n_c}{d, n_d;\nu}
+    [U_{b}(1)]^{m_b}_{l_b}[U_{e}(2)]^{l_e}_{n_e}
+    [U_{c}(1)]^{m_{c}}_{l_c} [U_{c}(2)]^{l_c}_{n_{c}}
+    \,.
 $$
 
-これに $[U_{c}(1)]^{m_{c}}_{l_c} [U_{c}(2)]^{l_c}_{n_{c}}$ を右から作用させると，
+式 (@eq-fusion_U) を用いて，$U$を合成し，項を整理すると
 
 $$
   \begin{split}
-&\sum_{n_a,n_b,m_e,l_c} 
-\braket{a,n_a; b,n_b}{e, m_e;\mu}
-    [U_{a}(1)]^{m_a}_{n_a}
-    [U_{b}(1)]^{m_b}_{n_b}
-    [U_{e}(2)]^{m_e}_{n_e}[U_{c}(1)]^{m_{c}}_{l_c} [U_{c}(2)]^{l_c}_{n_{c}}\\
-&\sum_{n_a,n_b,m_e,l_c,n_f,m_f,\rho,\mu} 
-\braket{a,n_a; b,n_b}{e, m_e;\mu}
-    [U_{a}(1)]^{m_a}_{n_a}
-    \braket{b,m_b; c,m_c}{f,n_f;\rho}
-    \braket{f,m_f}{b,n_b; c,l_c} 
-    [U_f(1)]^{m_f}_{n_f}
-    [U_{b}(1)]^{m_b}_{n_b}[U_{c}(1)]^{m_{c}}_{l_c}
-    [U_{e}(2)]^{m_e}_{n_e} [U_{c}(2)]^{n_l}_{n_{c}}\\
-&=\sum_{f,e,\nu,\rho}\sum_{n_b,n_e,m_f}\sum_{n_f,m_e,n_a,m_c,l_c}
-\braket{e,n_e;\nu}{{c'},l_c; a,n_a}
-\braket{a,n_a; b,n_b}{c, m_c;\mu}
-\braket{{c'},l_c; c,m_c}{f,m_f;\rho}
-\\
-&\quad\times
-\braket{f,n_f;\rho}{{c'},n_{c'}; c,n_c}
-\braket{{c'},m_{a'}; a, m_a}{e,m_e;\nu}
-[U_{e}(1)]^{m_e}_{n_e} [U_{b}(1)]^{m_b}_{n_b}[U_{f}(2)]^{m_f}_{n_f}\\
-&=\sum_{f,e}
-[(F_{f}^{c'ab})^{-1}]_{(c)(e)}
-\sum_{n_b,n_e,m_f}\\
-&\quad\times
-\braket{f,n_f;}{{c'},n_{c'}\, c;n_c}
-\braket{{c'},m_{a'}; a, m_a}{ e,m_e;}
-\braket{e,n_e; b,n_b}{f,m_f;}[U_{e}(1)]^{m_e}_{n_e} [U_{b}(1)]^{m_b}_{n_b}[U_{f}(2)]^{m_f}_{n_f}
+&\sum_{l_b,l_e,l_c,n_e,n_c} 
+\braket{a,m_a; b,l_b}{e, l_e;\mu}\braket{e,n_e; c,n_c}{d, n_d;\nu}
+    [U_{b}(1)]^{m_b}_{l_b}
+    [U_{e}(2)]^{l_e}_{n_e}[U_{c}(1)]^{m_{c}}_{l_c} [U_{c}(2)]^{l_c}_{n_{c}}\\
+&=\sum_{l_b,l_e,l_c,n_e,n_c}
+\braket{a,m_a; b,l_b}{e, l_e;\mu}\braket{e,n_e; c,n_c}{d, n_d;\nu}\\
+    &\quad \times \sum_{f,m_f,n_f,\rho} \braket{b,m_b; c,m_c}{f,m_f;\rho}
+    \braket{f,n_f;\rho}{b,l_b; c,l_c} 
+    [U_f(1)]^{m_f}_{n_f}\\
+    &\quad \times \sum_{g,m_g,n_g,\lambda}\braket{e,l_e; c,l_c}{g,m_g;\lambda}
+    \braket{g,n_g;\lambda}{e,n_e; c,n_c} 
+    [U_{g}(2)]^{m_g}_{n_g}\\
+&=\sum_{f,m_f,n_f,\rho}\sum_{g,m_g,n_g,\lambda}
+\sum_{l_b,l_e,l_c}
+    \braket{f,n_f;\rho}{b,l_b; c,l_c}
+    \braket{a,m_a; b,l_b}{e, l_e;\mu}
+    \braket{e,l_e; c,l_c}{g,m_g;\lambda}\\
+    &\quad \times
+    \sum_{n_e,n_c}
+        \braket{g,n_g;\lambda}{e,n_e; c,n_c}\braket{e,n_e; c,n_c}{d, n_d;\nu}\\
+    &\quad \times \braket{b,m_b; c,m_c}{f,m_f;\rho}[U_f(1)]^{m_f}_{n_f}[U_{g}(2)]^{m_g}_{n_g}
   \end{split}
-$${#eq-Fmoves_U}
+$$
+
+を得る．最後の等号の１行目の式に，式 (@eq-deform) を用い，2行目に， 式 (@eq-Clebsch-Gordan_orthogonal1_SUN) を用いると，
 
 $$
 \begin{split}
-&\sum_{l_b,l_c,l_e}  \braket{f,n_f;\rho}{b,l_b;\, c,l_c}
-  \braket{a,n_a;\, b,l_b}{e,l_e;\mu}
-  \braket{e,l_e;\, c,l_c}{d,m_d;\nu}\\
-&  =
-\sum_{\sigma}[F_d^{abc}]_{(e,\mu,\nu)(f,\rho,\sigma)}\braket{a,n_a;\,f,n_f}{d,m_d;\sigma}
+  &\sum_{l_b,l_e,n_e,n_c}
+  \braket{a,m_a; b,l_b}{e, l_e;\mu}
+  \braket{e,n_e; c,n_c}{d, n_d;\nu}
+    [U_{b}(1)]^{m_b}_{l_b}[U_{e}(2)]^{l_e}_{n_e}
+    [U_{c}(1)]^{m_{c}}_{l_c} [U_{c}(2)]^{l_c}_{n_{c}}\\
+  &=\sum_{f,\rho,\sigma}
+  [F_d^{abc}]_{(e,\mu,\nu)(f,\rho,\sigma)}\\
+    &\quad \times\sum_{m_d,m_f,n_f}
+    \braket{a,m_a;\,f,n_f}{d,m_d;\sigma}
+    \braket{b,m_b; c,m_c}{f,m_f;\rho}[U_f(1)]^{m_f}_{n_f}[U_{d}(2)]^{m_d}_{n_d}\\
 \end{split}
-$$
+$${#eq-Fmoves_U}
 
-となる．
-ここで，1行目から2行目は，$1$, $2$ の辺について，式 (@eq-fusion_U) を使って変形し，
-$3$行目へは，式 (@eq-deform) を用いて変形した．
-
-この関係式 (@eq-Fmoves_U) を用いると 式 (@eq-Fmove) が得られる．
-
+が得られる．
+この関係式 (@eq-Fmoves_U) に適切に$U$を結合させ，規格化因子を考慮すると， 式 (@eq-Fmove) の図式が得られる．
 :::
 
 
@@ -638,9 +634,7 @@ Equation~(@eq-action_trU) can be graphically derived by using the topological de
 
 ## 一般の格子上での取扱い
 
-\subsubsection{六角(ハニカム)格子上の\texorpdfstring{$\mathrm{SU}(2)_k$}{SU(2)k}ゲージ理論}
-まず，$2$次元六角(ハニカム)格子上の$\mathrm{SU}(2)_k$ゲージ理論を考えよう．
-ハニカム格子は，すべての頂点が$3$点である:
+ここまで，すべての頂点が3点であるハニカム格子上のゲージ理論を考えてきた．
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -648,19 +642,16 @@ Equation~(@eq-action_trU) can be graphically derived by using the topological de
 </div>
 :::
 
-
 :::{ .content-visible when-format=pdf}
 \begin{equation*}
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/HoneycombLattice.pdf}}}\,.
 \end{equation*}
 :::
 
-このハニカム格子上の模型では，$\mathcal{F}$を各六角形の集合，$\tilde{\mathcal{E}}$をすべての辺の集合に取れば良い．
-
-
-\subsubsection{正方格子上の\texorpdfstring{$\mathrm{SU}(2)_k$}{SU(2)k}ゲージ理論}
-次に$2$次元正方格子上の$\mathrm{SU}(2)_k$ゲージ理論を考えよう:
-
+ここでは，辺の向きの矢印は省略してある．
+頂点が3点であるため，Gaussの拘束条件は，Clebsch--Gordan 係数を用いて簡単に解くことができた．
+頂点が4点以上の場合はどのように解けばよいだろうか．
+まず，以下のような各頂点が4点である正方格子を考えよう．
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -673,8 +664,10 @@ $$
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/square.pdf}}}.
 $$
 :::
-頂点は$4$点になっているので，このままでは3点頂点を仮定した我々の模型が適用できない．
-我々の模型が適用できるように補助リンクを導入し各頂点を$3$点に分解する:
+
+Gaussの拘束条件は，4つの表現を合成して，1重項をつくる問題に帰着するが，
+いきなりすべてを合成するのではなく，2つづ合成して構成することができる．
+これは，グラフでいうと，補助リンクを導入し各頂点を3点に分解して問題を考えることに対応する:
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -693,9 +686,11 @@ $$
   \vcenter{\hbox{\includegraphics[scale=0.25]{figs/square_honeycomb.pdf}}}
 $$
 :::
+
 赤線が，補助リンクに対応する．赤線を潰すと正方格子に戻る．
-この右のハニカム格子を用いて正方格子上のゲージ理論ができる．
-$\tilde{\mathcal{E}}$を黒色の辺の集合とする．$\mathcal{F}$は，6角形の集合に取れば良い．
+このグラフの各頂点に，Clebsch--Gordan 係数を付与することでゲージ不変な状態が構成できる．
+逆にハニカム格子を考え，電場の演算子は黒線の上にしか作用しないことにすると，これは，正方格子上の
+ゲージ理論を考えていることと等価になる．
 
 補助線の入れ方には任意性がある．別の補助線の入れ方では，
 
