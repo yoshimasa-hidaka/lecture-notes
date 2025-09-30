@@ -283,7 +283,7 @@ $$ $$ {#eq-Fmove}
 
 の関係も導かれる．ここで$[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$は，$F$-symbol と呼ばれるユニタリ行列である．
 
-::: {.callout-note collapse="true"}
+::: {.callout-note collapse="false"}
 ## 詳細
 辺 $1$, $2$ について，次の演算子を考える：
 
@@ -305,17 +305,17 @@ $$
     [U_{b}(1)]^{m_b}_{n_b}
     [U_{c}(2)]^{m_c}_{n_c}\\
 &=\sum_{f,e,\nu,\rho}\sum_{n_b,n_e,m_f}\sum_{n_f,m_e,n_a,m_c,n_l}
-\braket{e,n_e,\nu}{{c'},n_l; a,n_a}
+\braket{e,n_e;\nu}{{c'},n_l; a,n_a}
 \braket{a,n_a; b,n_b}{c, m_c;\mu}
 \braket{{c'},n_l; c,m_c}{f,m_f;\rho}
 \\
 &\quad\times
 \braket{f,n_f;\rho}{{c'},n_{c'}; c,n_c}
-\braket{{c'},m_{a'}; a, m_a}{e,m_e,\nu}
+\braket{{c'},m_{a'}; a, m_a}{e,m_e;\nu}
 [U_{e}(1)]^{m_e}_{n_e} [U_{b}(1)]^{m_b}_{n_b}[U_{f}(2)]^{m_f}_{n_f}\\
-&=\sum_{j_f,j_e}
+&=\sum_{f,e}
 [(F_{f}^{c'ab})^{-1}]_{(c)(e)}
-\sum_{n_b,n_e,m_f}\sum_{f,e}\\
+\sum_{n_b,n_e,m_f}\\
 &\quad\times
 \braket{f,n_f;}{{c'},n_{c'}\, c;n_c}
 \braket{{c'},m_{a'}; a, m_a}{ e,m_e;}
@@ -323,56 +323,21 @@ $$
   \end{split}
 $${#eq-Fmoves_U}
 
+$$
+\begin{split}
+&\sum_{l_b,l_c,l_e}  \braket{f,n_f;\rho}{b,l_b;\, c,l_c}
+  \braket{a,n_a;\, b,l_b}{e,l_e;\mu}
+  \braket{e,l_e;\, c,l_c}{d,m_d;\nu}\\
+&  =
+\sum_{\sigma}[F_d^{abc}]_{(e,\mu,\nu)(f,\rho,\sigma)}\braket{a,n_a;\,f,n_f}{d,m_d;\sigma}
+\end{split}
+$$
+
 となる．
 ここで，1行目から2行目は，$1$, $2$ の辺について，式 (@eq-fusion_U) を使って変形し，
 $3$行目へは，式 (@eq-deform) を用いて変形した．
 
-\begin{question}
-  式 (@eq-Fmoves_U) を確かめよ．
-\end{question}
-
-この関係式 (@eq-Fmoves_U) を用いると
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/fmove2a.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$=\sum_{e}([F^{abc}_d)^{-1}]_{fe} $$
-  </span>
-  <img src="figs/fmove1a.svg" style="height:5.5em;">
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-$$
-   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2a.pdf}}}=
-  \sum_{e}([F^{abc}_d)^{-1}]_{fe} 
-   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}} 
-$$
-:::
-
-が得られる．同様の手続きで，
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/fmove1a.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$= \sum_{f}[F^{abc}_d]_{ef} $$
-  </span>
-  <img src="figs/fmove2a.svg" style="height:5.5em;">
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-$$
-   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}}
-  =
-  \sum_{f}[F^{abc}_d]_{ef} 
-   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2a.pdf}}}
-$${#eq-F-moves}
-:::
-
-が得られる．
+この関係式 (@eq-Fmoves_U) を用いると 式 (@eq-Fmove) が得られる．
 
 :::
 

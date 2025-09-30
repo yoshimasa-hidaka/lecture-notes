@@ -264,27 +264,23 @@ $\ket*{((ab)_{e,\mu}c)_{d,\nu},m_d}$ と $\ket*{(a,(bc)_{f,\rho})_{d,\sigma},m_d
 
 $$
   \ket*{((ab)_{e,\mu}c)_{d,\nu},m_d}
-  =\sum_{{f,\rho,\sigma}}  \ket*{(a,(bc)_{f,\rho})_{d,\sigma},m_d}
+  =\sum_{f,\rho,\sigma}  \ket*{(a,(bc)_{f,\rho})_{d,\sigma},m_d}
   \braket{(a,(bc)_{f,\rho})_{d,\sigma},m_d}{((ab)_{e,\mu}c)_{d,\nu},m_d} \,.
-$${#eq-recoupling}
+$${#eq-recoupling_sun}
 
 この係数は，$\braket{(a,(bc)_{f,\rho})_{d,\sigma},m_d}{((ab)_{e,\mu}c)_{d,\nu},m_d}$ は，$m_d$ に依存しない．
 これは，式 (@eq-recoupling) の両辺に $J_{\pm}$ を作用させることで確かめられる．
 
-\begin{question}
-  $\braket{a (bc){f};d,m_d}{(ab){e}c;d,m_d}$ が $m_d$ によらないことを確かめよ．
-\end{question}
-
 本稿では，
 $$
-  [F^{abc}_d]_{ef}\coloneqq \braket{(a,(bc)_{f,\rho})_{d,\sigma},m_d}{((ab)_{e,\mu}c)_{d,\nu},m_d}
+  [F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}\coloneqq \braket{(a,(bc)_{f,\rho})_{d,\sigma},m_d}{((ab)_{e,\mu}c)_{d,\nu},m_d}
 $$
 
   とし $F$-symbolと呼ぶことにする:
 
 $$
-  \ket*{(ab){e}c;d,m_d}
-  =\sum_{f}[F^{abc}_d]_{ef}\ket*{a (bc){f};d,m_d} \,.
+  \ket*{((ab)_{e,\mu}c)_{d,\nu},m_d}
+  =\sum_{f,\rho,\sigma} [F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)} \ket*{(a,(bc)_{f,\rho})_{d,\sigma},m_d}
 $$
 
 Clebsch--Gordan 係数を用いて $F$-symbol を表すと
@@ -292,8 +288,8 @@ Clebsch--Gordan 係数を用いて $F$-symbol を表すと
 $$
   \begin{split}
     [F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}
-    & = \sum_{m_{a},m_b,m_c,m_{e} m_{f}}\braket{a,m_a;\, b,m_b}{{e},m_{e}}\braket{{e},m_{e};\, {c},m_{c}}{{d},m_{d}}\\
-    &\qquad\qquad\qquad  \times \braket{{f},m_{f}}{ b,m_b;\, {c},m_{c} }\braket{d,m_d}{a,m_a;\, {f},m_{f}}
+    & = \sum_{m_{a},m_b,m_c,m_{e} m_{f}}\braket{a,m_a;\, b,m_b}{{e},m_{e};\mu}\braket{{e},m_{e};\, {c},m_{c}}{{d},m_{d};\nu}\\
+    &\qquad\qquad\qquad  \times \braket{{f},m_{f};\rho}{ b,m_b;\, {c},m_{c} }\braket{d,m_d;\sigma}{a,m_a;\, {f},m_{f}}
   \end{split}
 $${#eq-F-move_def}
 $[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$
@@ -302,18 +298,17 @@ $[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$
 逆変換は，
 
 $$
-  \ket*{a (bc){f};d,m_d}
-    =\sum_{e}[(F^{abc}_d)^{-1}]_{fe}
-  \ket*{(ab){e}c;d,m_d}
+   \ket*{(a,(bc)_{f,\rho})_{d,\sigma},m_d}
+    =\sum_{e,\mu,\nu}
+    [(F^{abc}_d)^{-1}]_{(f,\rho,\sigma)(e,\mu,\nu)}
+  \ket*{((ab)_{e,\mu}c)_{d,\nu},m_d}
 $$
 
-で，$[(F^{abc}_d)^{-1}]_{fe}=
-\braket{ (ab){e}c;d,m_d}{a (bc){f};d,m_d}$である．これは，ユニタリである性質
+で，$[(F^{abc}_d)^{-1}]_{(f,\rho,\sigma)(e,\mu,\nu)}=\braket{((ab)_{e,\mu}c)_{d,\nu},m_d}{(a,(bc)_{f,\rho})_{d,\sigma},m_d}$ である．これは，ユニタリである性質
 
-
-$$  [(F^{abc}_d)^{-1}]_{(e,\mu,\nu)(f,\rho,\sigma)}
-  =[(F^{abc}_d)^{\dag}]_{(e,\mu,\nu)(f,\rho,\sigma)}
-  =[F^{abc}_d]^{*}_{(f,\rho,\sigma)(e,\mu,\nu)}
+$$  [(F^{abc}_d)^{-1}]_{(f,\rho,\sigma)(e,\mu,\nu)}
+  =[(F^{abc}_d)^{\dag}]_{(f,\rho,\sigma)(e,\mu,\nu)}
+  =[F^{abc}_d]^{*}_{(e,\mu,\nu)(f,\rho,\sigma)}
 $$
 
 を満たす．
@@ -500,16 +495,15 @@ $$
 
 と表現される．
 
-
 これらのグラフィカルルールを用いると，例えば
 
 ::: {.content-visible when-format=html}
 <div  markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/vertex1.svg" style="height:5.5em;">
-  = $\sum_{f} [(F_d^{abc})^{-1}]_{ef}$
-  <img src="figs/vertex2.svg" style="height:5.5em;">
-  = $[(F_d^{abc})^{-1}]_{eg}$
-  <img src="figs/vertex3.svg" style="height:5.5em;">
+  <img src="figs/vertex1sun.svg" style="height:6.8em;">
+   $=\sum_{g,\rho,\sigma} [F_d^{abc}]_{(e,\mu,\nu)(g,\lambda,\sigma)}$
+  <img src="figs/vertex2sun.svg" style="height:6.8em;">
+  $= \sum_{\sigma}[F_d^{abc}]_{(e,\mu,\nu)(f,\rho,\sigma)}$
+  <img src="figs/vertex3sun.svg" style="height:6.8em;">
 </div>
 
 $$\text{}$${#eq-deform}
@@ -518,11 +512,11 @@ $$\text{}$${#eq-deform}
 
 ::: {.content-visible when-format=pdf}
 $$
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex1.pdf}}}
-  =\sum_{f} [(F_d^{abc})^{-1}]_{ef}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex2.pdf}}}
-  = [(F_d^{abc})^{-1}]_{eg}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex3.pdf}}}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex1sun.pdf}}}
+  =\sum_{g,\rho,\sigma} [F_d^{abc}]_{(e,\mu,\nu)(g,\lambda,\sigma)}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex2sun.pdf}}}
+  = \sum_{\sigma}[F_d^{abc}]_{(e,\mu,\nu)(f,\rho,\sigma)}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex3sun.pdf}}}
 $${#eq-deform}
 :::
 
@@ -530,13 +524,13 @@ $${#eq-deform}
 
 $$
 \begin{split}
-&\sum_{l_a,l_b,l_e}  \braket{g,n_g}{a,l_a;\, b,l_b}
-  \braket{b,l_b;\, c,n_c}{e,l_e}
-  \braket{a,l_a;\, e,l_e}{d,m_d}\\
+&\sum_{l_b,l_c,l_e}  \braket{f,n_f;\rho}{b,l_b;\, c,l_c}
+  \braket{a,n_a;\, b,l_b}{e,l_e;\mu}
+  \braket{e,l_e;\, c,l_c}{d,m_d;\nu}\\
 &  =
-[(F_{d}^{abc})^{-1}]_{eg} \braket{g,n_g;\,c,n_c}{d,m_d}
+\sum_{\sigma}[F_d^{abc}]_{(e,\mu,\nu)(f,\rho,\sigma)}\braket{a,n_a;\,f,n_f}{d,m_d;\sigma}
 \end{split}
-$${#eq-deform2}
+$${#eq-deform2sun}
 
 が成り立つが示せる．
 

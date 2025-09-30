@@ -964,9 +964,9 @@ $$
 ::: {.content-visible when-format=html}
 <div  markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/vertex1.svg" style="height:5.5em;">
-  = $\sum_{f} [(F_d^{abc})^{-1}]_{ef}$
+  = $\sum_{g} [F_d^{abc}]_{eg}$
   <img src="figs/vertex2.svg" style="height:5.5em;">
-  = $[(F_d^{abc})^{-1}]_{eg}$
+  = $[F_d^{abc}]_{ef}$
   <img src="figs/vertex3.svg" style="height:5.5em;">
 </div>
 
@@ -977,9 +977,9 @@ $$\text{}$${#eq-deform}
 ::: {.content-visible when-format=pdf}
 $$
  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex1.pdf}}}
-  =\sum_{f} [(F_d^{abc})^{-1}]_{ef}
+  =\sum_{g} [F_d^{abc}]_{eg}
  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex2.pdf}}}
-  = [(F_d^{abc})^{-1}]_{eg}
+  = [F_d^{abc}]_{ef}
  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex3.pdf}}}
 $${#eq-deform}
 :::
@@ -988,11 +988,11 @@ $${#eq-deform}
 
 $$
 \begin{split}
-&\sum_{l_a,l_b,l_e}  \braket{j_g,n_g}{j_a,l_a;\, j_b,l_b}
-  \braket{j_b,l_b;\, j_c,n_c}{j_e,l_e}
-  \braket{j_a,l_a;\, j_e,l_e}{j_d,m_d}\\
+&\sum_{l_b,l_c,l_e}  \braket{j_f,n_f}{j_b,l_b;\, j_c,l_c}
+  \braket{j_a,n_a;\, j_b,l_b}{j_e,l_e}
+  \braket{j_e,l_e;\, j_c,l_c}{j_d,m_d}\\
 &  =
-[(F_{d}^{abc})^{-1}]_{eg} \braket{j_g,n_g;\,j_c,n_c}{j_d,m_d}
+[F_{d}^{abc}]_{ef} \braket{j_a,n_a;\,j_f,n_f}{j_d,m_d}
 \end{split}
 $${#eq-deform2}
 
