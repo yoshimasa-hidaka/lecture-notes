@@ -288,26 +288,34 @@ $$ $$ {#eq-Fmove}
 辺 $1$, $2$ について，次の演算子を考える：
 
 $$
-\sum_{n_a,n_b,m_c}
-\braket{a,n_a; b,n_b}{c, m_c;\mu}
+\sum_{n_a,n_b,m_e}
+\braket{a,n_a; b,n_b}{e, m_e;\mu}
     [U_{a}(1)]^{m_a}_{n_a}
     [U_{b}(1)]^{m_b}_{n_b}
-    [U_{c}(2)]^{m_c}_{n_c}\,.
+    [U_{e}(2)]^{m_e}_{n_e}\,.
 $$
 
-これに $[U_{c'}(1)]^{m_{a'}}_{n_l} [U_{c'}(2)]^{n_l}_{n_{c'}}$ を作用させると，
+これに $[U_{c}(1)]^{m_{c}}_{l_c} [U_{c}(2)]^{l_c}_{n_{c}}$ を右から作用させると，
 
 $$
   \begin{split}
-&\sum_{n_a,n_b,m_c}[U_{c'}(1)]^{m_{a'}}_{n_l} [U_{c'}(2)]^{n_l}_{n_{c'}}
-\braket{a,n_a; b,n_b}{c, m_c;\mu}
+&\sum_{n_a,n_b,m_e,l_c} 
+\braket{a,n_a; b,n_b}{e, m_e;\mu}
     [U_{a}(1)]^{m_a}_{n_a}
     [U_{b}(1)]^{m_b}_{n_b}
-    [U_{c}(2)]^{m_c}_{n_c}\\
-&=\sum_{f,e,\nu,\rho}\sum_{n_b,n_e,m_f}\sum_{n_f,m_e,n_a,m_c,n_l}
-\braket{e,n_e;\nu}{{c'},n_l; a,n_a}
+    [U_{e}(2)]^{m_e}_{n_e}[U_{c}(1)]^{m_{c}}_{l_c} [U_{c}(2)]^{l_c}_{n_{c}}\\
+&\sum_{n_a,n_b,m_e,l_c,n_f,m_f,\rho,\mu} 
+\braket{a,n_a; b,n_b}{e, m_e;\mu}
+    [U_{a}(1)]^{m_a}_{n_a}
+    \braket{b,m_b; c,m_c}{f,n_f;\rho}
+    \braket{f,m_f}{b,n_b; c,l_c} 
+    [U_f(1)]^{m_f}_{n_f}
+    [U_{b}(1)]^{m_b}_{n_b}[U_{c}(1)]^{m_{c}}_{l_c}
+    [U_{e}(2)]^{m_e}_{n_e} [U_{c}(2)]^{n_l}_{n_{c}}\\
+&=\sum_{f,e,\nu,\rho}\sum_{n_b,n_e,m_f}\sum_{n_f,m_e,n_a,m_c,l_c}
+\braket{e,n_e;\nu}{{c'},l_c; a,n_a}
 \braket{a,n_a; b,n_b}{c, m_c;\mu}
-\braket{{c'},n_l; c,m_c}{f,m_f;\rho}
+\braket{{c'},l_c; c,m_c}{f,m_f;\rho}
 \\
 &\quad\times
 \braket{f,n_f;\rho}{{c'},n_{c'}; c,n_c}
