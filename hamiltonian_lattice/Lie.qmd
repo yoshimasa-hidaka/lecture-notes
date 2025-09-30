@@ -577,7 +577,9 @@ $$
 $${#eq-fmoves}
 
 と表せることが知られている．
-Wigner $6$-$j$ シンボルの具体的な表示は，
+
+::: {.callout-note collapse="true"}
+## Wigner $6$-$j$ シンボルの具体的表示
 
 $$
   \begin{split}
@@ -605,6 +607,7 @@ $$
 $$
 
 である．
+:::
 
 ::: {.callout-note collapse="true"}
 ## Pythonでの $F$-symbol の実装
@@ -771,7 +774,7 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$
-  \parbox{.6cm}{\includegraphics[scale=0.3]{figs/a.pdf}}=
+  \vcenter{\hbox{includegraphics[scale=0.3]{figs/a.pdf}}=
  \braket{j_a,n_a}{j_a,m_a} =\delta^{n_a}_{m_a}
  $$
 :::
@@ -795,9 +798,9 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$ \begin{aligned}
-  \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/abc.pdf}}&=  
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abc.pdf}}}&=  
   \braket{ j_c,n_c}{j_a,m_a;\, j_b,m_b}, \\
-  \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/cab.pdf}}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cab.pdf}}}
   &= \braket{j_a,n_a;\, j_b,n_b}{j_c,m_c}
  \end{aligned}$$
 :::
@@ -825,9 +828,9 @@ $c=0$ の特別な場合は，
 
 ::: {.content-visible when-format=pdf}
 $$ \begin{aligned}
-  \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/ab0.pdf}}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/ab0.pdf}}}
   &= \braket{j_a,n_a;\, j_b,n_b}{0,0}=\delta_{j_a,j_b}\delta_{n_a,-n_b}\frac{(-1)^{j_a-n_a}}{\sqrt{d_{a}}},\\  
-  \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/0ab.pdf}}&=  
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/0ab.pdf}}}&=  
   \braket{0,0}{j_a,m_a;\, j_b,m_b}=\delta_{j_a,j_b}\delta_{m_a,-m_b}\frac{(-1)^{j_a-m_a}}{\sqrt{d_{a}}}
  \end{aligned}
 $$
@@ -848,7 +851,7 @@ $$
 ::: {.content-visible when-format=pdf}
 $$ 
   \begin{aligned}
-    \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}= \sum_{l_e}\braket{j_a,n_a;\, j_b,n_b}{j_e,l_e}\braket{j_e,l_e;\, j_c,n_c}{ j_d,m_d}
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}}= \sum_{l_e}\braket{j_a,n_a;\, j_b,n_b}{j_e,l_e}\braket{j_e,l_e;\, j_c,n_c}{ j_d,m_d}
   \end{aligned}
 $$
 :::
@@ -873,10 +876,10 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$
-  \parbox{1.4cm}{\includegraphics[scale=0.3]{figs/abcloop.pdf}}=
-  \parbox{.6cm}{\includegraphics[scale=0.3]{figs/ccprime.pdf}}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abcloop.pdf}}}=
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/ccprime.pdf}}}
   =\delta_{c,c'}
-  \parbox{.6cm}{\includegraphics[scale=0.3]{figs/c.pdf}}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/c.pdf}}}
 $$
 :::
 
@@ -894,9 +897,9 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$
-  \parbox{1.3cm}{\includegraphics[scale=0.3]{figs/parallel1.pdf}}=
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel1.pdf}}}}=
   \sum_{c}
-  \parbox{1.cm}{\includegraphics[scale=0.3]{figs/parallel2.pdf}}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel2.pdf}}}
 $$
 :::
 
@@ -914,10 +917,10 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$
-  \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}}
   =
   \sum_{f}[F^{abc}_d]_{ef}
-  \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove2a.pdf}}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2a.pdf}}}
 $$
 :::
 
@@ -934,7 +937,7 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$
-  \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove.pdf}}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove.pdf}}}
   =\frac{1}{d_d}[F^{abc}_d]_{ef}
 $$
 :::
@@ -974,11 +977,11 @@ $$\text{}$${#eq-deform}
 
 ::: {.content-visible when-format=pdf}
 $$
-  \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/vertex1.pdf}}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex1.pdf}}}
   =\sum_{f} [(F_d^{abc})^{-1}]_{ef}
-  \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/vertex2.pdf}}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex2.pdf}}}
   = [(F_d^{abc})^{-1}]_{eg}
-  \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/vertex3.pdf}}
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex3.pdf}}}
 $${#eq-deform}
 :::
 

@@ -424,10 +424,10 @@ $[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$ は，$d\to abc$ の分解 (または
 
 ::: {.content-visible when-format=pdf}
 $$
-    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22a.pdf}}
+    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove22a.pdf}}}
     =
     \sum_{f,\mu,\nu}[F_{cd}^{ab}]_{(e,\alpha,\beta)(f,\mu,\nu)}
-    \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/fmove22b.pdf}}.
+    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove22b.pdf}}}.
     \label{eq-Fmove2}
 $$
 :::

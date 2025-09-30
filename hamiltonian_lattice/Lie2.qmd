@@ -1,0 +1,743 @@
+## $\mathrm{SU}(N)$群 　{#sec-sun}
+
+$\mathrm{SU}(2)$群でみてきたものを $\mathrm{SU}(N)$群に拡張する．
+
+$\mathrm{SU}(N)$群は，複素 $N$ 次元ベクトル空間の内積を保ち，かつ行列式が $1$ である変換全体からなる群である．
+2つの複素 $N$次元ベクトル $w$, $z$ に対して，変換 $w\mapsto g w$, $z\mapsto gz$ のもとで，内積 $(w,z) \coloneqq w^\dag z$ は，
+次のように変換される:
+
+$$
+  (w,z)\mapsto  (gw,gz) = (w,g^\dag g z) \,.
+$$
+
+ここで，$g$ は，$N \times N$ 複素行列で，$\dag$ はHermite 共役を表す．
+この変換で内積が不変となるためには，$g^\dag g=\mathbf{1}_N$ を満たす必要がある．
+ここで，$\mathbf{1}_N$ は $N \times N$ の単位行列である．
+
+また，行列式が1である条件から，$\det g=1$ が要求される．
+
+$$
+  g= \exp(\ri T_i\theta^i)
+$$ {#eq-gexp}
+
+の指数表示が得られる．
+
+
+### $\mathrm{SU}(N)$群のLie代数
+
+式 (@eq-gexp) において，単位元近傍で展開すると $\theta_i\ll 1$ として，
+
+$$
+  g= 1+\ri T_i\theta^i + \order{\theta^2}
+$$
+
+となる．
+したがって，単位元近傍での無限小変換は，接空間に属し，これが Lie代数を与える．
+実際，$T_i$ は，次の交換関係を満たす：
+
+
+$$
+  [T_i,T_j]=\ri f^k_{~ij}T_k \,.
+$$ {#eq-Lie_SU2}
+
+ここで，$f^k_{~ij}$ は構造定数であり，完全反対称テンソル (Levi-Civita記号) $\epsilon_{ijk}$ を用いて，$f^k_{~ij}=\epsilon_{ijk}$ と表される．
+このLie代数を $\mathfrak{su}(N)$ と書く．
+
+より一般に，抽象的な生成子 $J_i$ を用いて
+
+$$
+g=\exp(\ri J_i\theta^i), \qquad [J_i,J_j]=\ri f^i_{~ij}J_k
+$$ {#eq-commutatorSU2}
+
+と書ける．
+
+
+### $\mathrm{SU}(N)$群の表現
+
+$\mathrm{SU}(N)$群は単連結なコンパクトLie群であるため，その有限次元ユニタリ表現はLie代数 $\mathfrak{su}(N)$ の有限次元表現と1対1対応する．
+したがって，群の表現を理解するにはLie代数の表現を調べれば十分である．
+
+$$
+  ~[J_0,J_{\pm}] = \pm J_\pm,\quad
+  [J_+,J_-]  = 2 J_0
+$$
+
+となる．2次のCasimir演算子$J^2$は，
+
+$$
+  J^2=\sum_{i=1}^3J_i^2=J_+J_-+J_0^2-J_0=J_-J_++J_0^2+J_0
+$$
+
+と表すことができる．$J^2$はすべての$J_i$と可換である．
+
+$\mathrm{SU}(N)$群の有限次元既約表現は $J^2$ と
+$J_3(=J_0)$ の同時固有状態 $\ket*{j,m}$ を用いて表すことができる．
+ここで，状態の内積は，
+
+$$
+  \bra{j,m}\ket{j',m'}=\delta_{j,j'}\delta_{m,m'}
+$$
+
+と規格化されているものとする．
+この状態は，$J^2$ と $J_3$ の固有状態に選んであることから
+
+$$
+\begin{aligned}
+  J^2\ket*{j,m}  &= C_2(j)\ket*{j,m} =j(j+1)\ket*{j,m}\,,\\
+  J_3\ket*{j,m}  &= m\ket*{j,m}
+\end{aligned}
+$$
+
+を満たす．昇降演算子を状態に作用させると
+
+$$
+  J_{\pm}\ket*{j,m} = \sqrt{j(j+1)-m(m\pm 1)}\ket*{j,m\pm1}
+$$
+
+となる．
+以下，表現 $a$ に付随した$d_a\eqqcolon d_a$ 次元の有限次元複素 Hilbert 空間を $\mathcal{Q}_a$ と表す．
+
+### 表現行列
+
+$\mathrm{SU}(N)$の元 $g$ に対応した演算子を
+
+$$
+  U_g=\exp(\ri\theta^i J_i)
+$$
+
+と書くことにする．
+表現行列は，$U_g$ の状態 $\ket{a,m}$ への作用を表すものである:
+
+$$
+  [D_a]^m_n(g)\coloneqq \bra{a,m}U_g\ket{a,n} \,.
+$$ {#eq-Rep_matrix}
+
+Lie代数の表現 $a$ に対する行列要素 $[T_{ai}]^m_{n} \coloneqq \bra{a,m}J_i\ket{a,n}$ を導入すると，
+
+$$
+[D_a(g)]^m_{n} = [\exp(\ri\theta^i T_{ai})]^{m}_{n}
+$$
+
+と表せる．
+$[D_a(g)]^m_{n}$はユニタリ行列なので，
+
+$$
+[D_a(\bar{g})]^m_n= [D^{-1}_a({g})]^m_n=[D^\dag_a(g)]^m_n= [D^*_a(g)]^n_m
+$$
+
+を満たす．また，この行列は，
+
+$$
+  \int\dd{g} [D_{a'}^{*}]^{m'}_{n'}(g) [D_a]^m_n(g) = \frac{1}{d_a}\delta_{a,a'}\delta_{m,m'}\delta_{n,n'}
+$$ {#eq-suN-D-orthogonality}
+
+の直交性関係を満たす．ここで $\dd{g}$ は，$\int\dd{g}=1$ に正規化された $\mathrm{SU}(N)$群のHaar測度である．
+
+### 表現の合成
+
+次に2つの表現 $a$ と $b$ の合成を考える．
+2つの表現を合成(直積)するとそれは既約表現の直和に分解する:
+
+$$
+    \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}
+    =\bigoplus_cN_{ab}^{c}\mathcal{Q}_{c} \,.
+$$
+
+ここで $N_{ab}^{c}$ で
+
+
+を導入した．$N_{ab}^{c}$ は fusion 係数またはテンソル積係数と呼ばれる．
+
+
+3つの表現の合成(直積)は $\mathcal{Q}_{a}\otimes (\mathcal{Q}_{b}\otimes \mathcal{Q}_{c})\simeq (\mathcal{Q}_{a}\otimes \mathcal{Q}_{b}) \otimes \mathcal{Q}_{c}$
+  を満たす．これに対応して，fusion係数は，
+
+$$
+\sum_{d}N_{ad}^{f}N_{bc}^{d}= \sum_{d}N_{ab}^{d}N_{dc}^{f}
+$$
+
+を満たす．
+
+次に具体的に表現を合成しよう．表現 $a$, $b$ を合成し $c$ を作ったとする．そのときのベクトル $\ket*{ab;c,m_c}$ は，
+
+$$
+  \ket*{ab;c,m_c} = \sum_{m_a,m_b}\ket*{a,m_a} \ket*{b,m_b}\braket{a,m_a;\, b,m_b}{c,m_c;\mu}
+$$ {#eq-decomposition_sun}
+
+と表せる．ここで，
+$\braket{a,m_a;\, b,m_b}{c,m_c;\mu}$ は Clebsch--Gordan 係数である．
+
+式 (@eq-decomposition) は，$\mathcal{Q}_{c}\to \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ の写像を与える．
+つまり，$\ket{v}=\sum_{m_c}v^{m_c}\ket{c,m_c}\in \mathcal{Q}_{c}$を
+$\sum_{m_a,m_b,m_c}\ket*{a,m_a} \ket*{b,m_b}\braket{a,m_a;\, b,m_b}{c,m_c;\mu}v^{m_c}\in \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ に移す．
+
+
+$$
+\ket*{j_a,m_a} \ket*{j_b,m_b}= \sum_{j_c,m_c}  \ket*{aj_b;c,m_c} \braket{c,m_c;\mu}{a,m_a;\, b,m_b}
+ $$
+
+と表せる．
+
+また，Clebsch--Gordan 係数は，直交性関係
+
+$$
+  \sum_{m_a,m_b}
+  \braket{j_d,m_d}{j_a,m_a;\, j_b,m_b}
+  \braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}
+  =\delta_{j_c}^{j_d}\delta_{m_c}^{m_d}\delta^c_{ab} \,,
+$$ {#eq-Clebsch-Gordan_orthogonal1_SUN}
+
+$$
+  \sum_{j_c}\sum_{m_c}
+  \braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}
+  \braket{j_c,m_c}{j_a,m'_a;\, j_b,m'_b}
+  =\delta^{m_a}_{m'_a}\delta^{m_b}_{m'_b}
+$$ {#eq-Clebsch-Gordan_orthogonal2_SUN}
+
+を満たす．
+
+また，Clebsch--Gordan 係数は不変テンソルになっている．つまり，
+
+$$
+\braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}=\sum_{m'_a,m'_b,m'_{c}}
+[D_{j_c}(\bar{g})]^{m_c}_{m'_c}[D_{j_a}(g)]^{m_a}_{m'_a}[D_{j_b}(g)]^{m_b}_{m'_b}
+\braket{j_a,m'_a;\, j_b,m'_b}{j_c,m'_c}
+$$
+
+を満たす．
+
+
+$\ket*{j_aj_b;j_c,m_c}$ と $\ket*{j_bj_a;j_c,m_c}$ は，位相分だけ状態が異なる:
+
+$$
+  \ket*{j_aj_b;j_c,m_c} =R^{ab}_c \ket*{j_bj_a;j_c,m_c} \,.
+$$
+
+ここで，
+
+$$
+  R^{ab}_c= (-1)^{j_a+j_b-j_c}
+$$
+
+である．これは，$R^{ab}_cR^{ba}_c=1$ を満たす．
+\begin{question}
+  $R^{ab}_c= (-1)^{j_a+j_b-j_c}$を式 (@eq-Clebsch-Gordan-Wigner3j)及び
+  (@eq-Wigner3joddperm)を用いて示せ．
+\end{question}
+
+
+3つの表現 $a$, $b$, $c$ を合成し，$d$ を作る問題を考える．$a$ と $b$ を合成し ${e}$ を作り，その後，$c$ を合成すると，
+
+$$
+  \ket*{(ab)ec;d,m_d}
+  =
+  \sum_{m_{a},m_b,m_c,m_{e}}
+  \ket*{a,m_a}\ket*{b,m_b}\ket*{c,m_c}
+  \braket{a,m_a;\, b,m_b}{{e},m_{e}}
+  \braket{{e},m_{e};\, c,m_c}{d,m_d}
+ $$
+
+となる．一方，先に $b$ と $c$ を合成し，${f}$ を作り，その後，$a$ を合成すると，
+
+$$
+  \ket*{a (bc){f};d,m_d}
+    =
+  \sum_{m_{a},m_b,m_c,m_{f}}
+  \ket*{a,m_a}\ket*{b,m_b}\ket*{c,m_c}
+  \braket{a,m_a;\, {f},m_{f}}{{d},m_{d}}
+  \braket{{b},m_{b};\, c,m_c}{{f},m_{f}}
+$$
+
+となる．
+
+$\ket*{(ab){e}c;d,m_d}$ と$\ket*{a (bc){f};d,m_d}$ は，独立ではなく次のユニタリ変換（$F$-moves）で結びついている:
+
+$$
+  \ket*{(ab){e}c;d,m_d}
+  =\sum_{{f}}  \ket*{a (bc){f};d,m_d}
+  \braket{a (bc){f};d,m_d}{(ab){e}c;d,m_d} \,.
+$${#eq-recoupling}
+
+この係数は，$\braket{a (bc){f};d,m_d}{(ab){e}c;d,m_d}$ は，$m_d$ に依存しない．
+これは，式 (@eq-recoupling) の両辺に $J_{\pm}$ を作用させることで確かめられる．
+
+\begin{question}
+  $\braket{a (bc){f};d,m_d}{(ab){e}c;d,m_d}$ が $m_d$ によらないことを確かめよ．
+\end{question}
+
+本稿では，
+$$
+  [F^{abc}_d]_{ef}\coloneqq \braket{a (bc){f};d,m_d}{(ab){e}c;d,m_d}
+$$
+
+  とし $F$-symbolと呼ぶことにする:
+
+$$
+  \ket*{(ab){e}c;d,m_d}
+  =\sum_{f}[F^{abc}_d]_{ef}\ket*{a (bc){f};d,m_d} \,.
+$$
+
+Clebsch--Gordan 係数を用いて $F$-symbol を表すと
+
+$$
+  \begin{split}
+    [F^{abc}_d]_{ef}
+    & = \sum_{m_{a},m_b,m_c,m_{e} m_{f}}\braket{a,m_a;\, b,m_b}{{e},m_{e}}\braket{{e},m_{e};\, {c},m_{c}}{{d},m_{d}}\\
+    &\qquad\qquad\qquad  \times \braket{{f},m_{f}}{ b,m_b;\, {c},m_{c} }\braket{d,m_d}{a,m_a;\, {f},m_{f}}
+  \end{split}
+$${#eq-F-move_def}
+
+となる．
+
+逆変換は，
+
+$$
+  \ket*{a (bc){f};d,m_d}
+    =\sum_{e}[(F^{abc}_d)^{-1}]_{fe}
+  \ket*{(ab){e}c;d,m_d}
+$$
+
+で，$[(F^{abc}_d)^{-1}]_{fe}=
+\braket{ (ab){e}c;d,m_d}{a (bc){f};d,m_d}$である．これは，ユニタリである性質
+
+$$
+  [(F^{abc}_d)^{-1}]_{fe}=
+  [(F^{abc}_d)^{\dag}]_{fe}
+  =[F^{abc}_d]^*_{ef}
+$$
+
+を満たす．
+また，$F$-symbol は，以下の関係を満たす(pentagon equation):
+
+$$
+  [F_e^{fcd}]_{gl} [F_e^{abl}]_{fk}
+= \sum_{h} [F^{abc}_g]_{fh} [F_{e}^{ahd}]_{gk} [F^{bcd}_{k}]_{hl} \,.
+$$ {#eq-pentagon}
+
+これは表現の結合順序を変える際の一貫性条件を表している．
+
+
+
+
+### Clebsch--Gordan 係数の演算のグラフィカルな表現 (一般バージョン) {#sec-graphical_Clebsch-Gordan_sun}
+
+Clebsch--Gordan 係数を図を使って表現するといろいろ便利である．
+まず，2点頂点は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/ab.svg" style="height:4.2em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \braket{b, n_b}{a, m_a} = \delta^{b}_{a}\delta^{n_b}_{m_a}$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  = \braket{b,n_b}{a,m_a} = \delta^{b}_{a}\delta^{n_b}_{m_a}
+$$
+:::
+
+と表す．
+特に，$a=b$ のときは，単にドットを取って
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/a.svg" style="height:4.2em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\braket{a,n_a}{a,m_a} =\delta^{n_a}_{m_a}$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}=
+ \braket{a,n_a}{a,m_a} =\delta^{n_a}_{m_a}
+ $$
+:::
+
+ と書くことにする．Clebsch--Gordan 係数は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/cabmu.svg" style="height:4.2em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\braket{c,n_c;\mu}{a,m_a;\, b,m_b}\,,$$
+  </span>
+</div>
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/abcmu.svg" style="height:4.2em;">
+  <span class="math display" style="display:inline-block;">
+    $$=  \braket{a,n_a;\, b,n_b}{c,m_c;\mu}$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$ \begin{aligned}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cabmu.pdf}}}&=  
+  \braket{ c,n_c}{a,m_a;\, b,m_b}, \\
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abcmu.pdf}}}
+  &= \braket{a,n_a;\, b,n_b}{c,m_c}
+ \end{aligned}$$
+:::
+
+で表す．
+
+::: {.content-visible when-format=pdf}
+$$ \begin{aligned}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/ab0.pdf}}}
+  &= \braket{a,n_a;\, b,n_b}{0,0}=\delta_{a,b}\delta_{n_a,-n_b}\frac{(-1)^{a-n_a}}{\sqrt{d_{a}}},\\  
+  \\vcenter{\hbox{\includegraphics[scale=0.3]{figs/0ab.pdf}}}&=  
+  \braket{0,0}{a,m_a;\, b,m_b}=\delta_{a,b}\delta_{m_a,-m_b}\frac{(-1)^{a-m_a}}{\sqrt{d_{a}}}
+ \end{aligned}
+$$
+:::
+
+となる．
+3つの表現の合成に対応するダイアグラムは，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove1mu.svg" style="height:6.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \sum_{l_e}\braket{a,n_a;\, b,n_b}{e,l_e;\mu}\braket{e,l_e;\, c,n_c}{d,m_d;\nu}$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$ 
+  \begin{aligned}
+    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}}
+    = \sum_{l_e}\braket{a,n_a;\, b,n_b}{e,l_e}\braket{e,l_e;\, c,n_c}{ d,m_d}
+  \end{aligned}
+$$
+:::
+
+である．ここで，内線の磁気量子数 ($l_e$) については和を取るものとする．
+
+このルールを用いると，式 (@eq-Clebsch-Gordan_orthogonal1) の直交性は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/abcloopmu.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\delta_{\mu}^{\mu'}$$
+  </span>
+  <img src="figs/ccprime.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\delta_{c}^{c'}\delta_{\mu}^{\mu'}$$
+  </span>
+  <img src="figs/c.svg" style="height:4.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abcloopmu.pdf}}}=
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/ccprime.pdf}}}
+  =\delta_{c,c'}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/c.pdf}}}
+$$
+:::
+
+と表すことができる．同様に，式 (@eq-Clebsch-Gordan_orthogonal2) は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/parallel1.svg" style="height:4.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \sum_{c,\mu}$$
+  </span>
+  <img src="figs/parallel2mu.svg" style="height:4.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel1.pdf}}}=
+  \sum_{c}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel2mu.pdf}}}
+$$
+:::
+
+と表すことができる．また，$F$-symbol は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove1mu.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \sum_{f}[F^{abc}_d]_{ef}$$
+  </span>
+  <img src="figs/fmove2mu.svg" style="height:5.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1mu.pdf}}}
+  =
+  \sum_{f}[F^{abc}_d]_{ef}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2mu.pdf}}}
+$$
+:::
+
+と表現され，$F$-symbol 自身は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$=\frac{1}{d_d}[F^{abc}_d]_{ef}$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove.pdf}}}
+  =\frac{1}{d_d}[F^{abc}_d]_{ef}
+$$
+:::
+
+と表すことができる．また，式 (@eq-pentagon) のペンタゴン方程式は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/pentagonRelationmu.svg" style="height:18.5em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+ \includegraphics[scale=0.3]
+  {figs/pentagonRelationmu.pdf}
+$$
+:::
+
+より得られる．
+
+
+これらのグラフィカルルールを用いると，例えば
+
+::: {.content-visible when-format=html}
+<div  markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/vertex1.svg" style="height:5.5em;">
+  = $\sum_{f} [(F_d^{abc})^{-1}]_{ef}$
+  <img src="figs/vertex2.svg" style="height:5.5em;">
+  = $[(F_d^{abc})^{-1}]_{eg}$
+  <img src="figs/vertex3.svg" style="height:5.5em;">
+</div>
+
+$$\text{}$${#eq-deform}
+:::
+
+
+::: {.content-visible when-format=pdf}
+$$
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex1.pdf}}}
+  =\sum_{f} [(F_d^{abc})^{-1}]_{ef}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex2.pdf}}}
+  = [(F_d^{abc})^{-1}]_{eg}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/vertex3.pdf}}}
+$${#eq-deform}
+:::
+
+が比較的簡単に評価できる．つまり，
+
+$$
+\begin{split}
+&\sum_{l_a,l_b,l_e}  \braket{g,n_g}{a,l_a;\, b,l_b}
+  \braket{b,l_b;\, c,n_c}{e,l_e}
+  \braket{a,l_a;\, e,l_e}{d,m_d}\\
+&  =
+[(F_{d}^{abc})^{-1}]_{eg} \braket{g,n_g;\,c,n_c}{d,m_d}
+\end{split}
+$${#eq-deform2}
+
+が成り立つが示せる．
+
+
+<!-- 
+
+
+
+$$
+  [T_i,T_j] = \ri f^k_{~ij} T_k
+$$
+
+$$
+    [T_i,[T_j,T_k]]+  [T_j,[T_k,T_i]]+[T_k,[T_i,T_j]]=0
+$$
+
+より，
+
+$$
+  \ri f^{m}_{~~il}\ri f^l_{~jk} 
+  +  \ri f^{m}_{~~jl}\ri f^l_{~ki} 
+  +  \ri f^{m}_{~~kl}\ri f^l_{~ij} =0
+$$
+
+が得られる．
+
+$$
+  [T_i^{\mathrm{adj}}]^j_k = \ri f^j_{~ik}
+
+$$
+
+と置くと，
+
+$$
+  [T_i^{\mathrm{adj}},T_j^{\mathrm{adj}}]=\ri f^k_{~ij} T^{\mathrm{adj}}_k
+$$
+
+を満たすことがわかる．つまり構造定数自身もLie代数を満たす．
+また，基本表現では，
+
+$$
+  \sum_{i}[T_i]^j_k [T_i]^l_m = \frac{1}{2}\qty(\delta^j_m\delta^l_k-\frac{1}{N}\delta^j_k\delta^l_m)
+$$
+
+を満たす． -->
+
+
+
+ <!-- まず，$\mathrm{SU}(3)$群の規約表現について復習しよう．
+ ## $\mathrm{SU}(N)$ ゲージ理論
+ 
+   生成子の中で互いに可換な$N-1$個の生成子を$H_i$とする．
+  例えば$\mathrm{SU}(3)$群の場合は，Gell-Mann行列を$\lambda_i$として，
+  生成子を$T_i=\lambda_i/2$とすると$H_1=T_3$, $H_2=T_8$である．
+  残りの
+  \begin{align}
+    [H_i,E_{\vb*{\alpha}}] &= \alpha_i E_{\vb*{\alpha}}\\
+    [H_i,E^\dag_{\vb*{\alpha}}] &= -\alpha_i E^\dag_{\vb*{\alpha}}
+  \end{align}
+  に選ぶことができる．
+  既約表現は，weightベクトル$\vb*{\mu}$を指定すると一意に定まる．
+ $\mathrm{SU(3)}$群の生成子を$T_i$とする．生成子の交換関係は，
+ $$
+   [T_i,T_j]=\ri f^k_{~ij} T_k
+ $$
+ とかける．ここで$f^k_{~ij}$は構造定数である．
+ $i,j,k$の添字は，$1$から$8$まで走る．
+ Gell-Mann行列を$\lambda_i$として，生成子を$T_i=\lambda_i/2$とすると基本表現の生成子の行列表現が得られる．
+ Gell-Mann行列は，
+ \textrm{Gell-Mann}行列
+ \begin{align}
+   &\lambda_1 = \begin{pmatrix}
+     0 & 1 & 0\\
+     1 & 0 & 0\\
+     0 & 0 &  0
+   \end{pmatrix},\quad
+   \lambda_2 = \begin{pmatrix}
+     0 & -\ri & 0\\
+     \ri & 0 & 0\\
+     0 & 0 &  0
+   \end{pmatrix},\quad
+   \lambda_3 = \begin{pmatrix}
+     1 & 0 & 0\\
+     0 & -1 & 0\\
+     0 & 0 &  0
+   \end{pmatrix},\quad
+   \lambda_4 = \begin{pmatrix}
+     0 & 0 & 1\\
+     0 & 0 & 0\\
+     1 & 0 &  0
+   \end{pmatrix},\notag\\
+   &\lambda_5 = \begin{pmatrix}
+     0 & 0 & -\ri\\
+     0 & 0 & 0\\
+     \ri & 0 &  0
+   \end{pmatrix},\quad
+   \lambda_6 = \begin{pmatrix}
+     0 & 0 & 0\\
+     0 & 0 & 1\\
+     0 & 1 &  0
+   \end{pmatrix},\quad
+   \lambda_7 = \begin{pmatrix}
+     0 & 0 & 0\\
+     0 & 0 & -\ri\\
+     0 & \ri & 0
+   \end{pmatrix},\quad
+   \lambda_8 = \frac{1}{\sqrt{3}}\begin{pmatrix}
+     1 & 0 & 0\\
+     0 & 1 & 0\\
+     0 & 0 &  -2
+   \end{pmatrix}.
+ \end{align}
+ このGell-Mann行列から
+ $$
+   d_{ijk}\coloneqq \frac{1}{4}\tr\qty(\{\lambda_i,\lambda_j\}\lambda_k)
+ $$
+ で定義される$d_{ijk}$を用いると，$C_3 =\sum_{i,j,k}d_{ijk}T_iT_jT_k$は，すべての生成子と可換である．
+
+ $H_1=T_3$, $H_2=T_8$，
+
+
+ 残りの
+ \begin{align}
+   [H_i,E_{\vb*{\alpha}}] &= \alpha_i E_{\vb*{\alpha}}\\
+   [H_i,E^\dag_{\vb*{\alpha}}] &= -\alpha_i E^\dag_{\vb*{\alpha}}
+ \end{align}
+ に選ぶことができる．
+ 既約表現は，weightベクトル$\vb*{\mu}$を指定すると決まる．
+ これは，Dynkinラベルを用いて$\lambda=(p,q)$で表すことができる．
+ $$
+   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Young_diagram.pdf}}}
+ $$
+ 基本表現は$(1,0)$，反基本表現は$(0,1)$，随伴表現は$(1,1)$となる．
+
+ 表現の次元は，
+ $$
+   d_a =\frac{1}{2}(p_a+1)(q_a+1)(p_a+q_a+2)
+ $$
+ となる．
+ $2$次のCasimirは,
+ $$
+   C_2 = \frac{1}{3}(p^2+q^2+3p+3p+pq)
+ $$
+ $3$次のCasimirは，
+ $$
+   C_3=\frac{1}{18}(p-q)(3+p+2q)(3+q+2p)
+ $$
+ である．
+
+ 基本表現及び反基本表現と$(p,q)$表現との合成は，
+ $$
+   (p,q)\otimes (1,0)=
+   (p+1,q)\oplus (p-1,q+1)\oplus (p,q-1)
+ $$
+ 及び
+ $$
+   (p,q)\otimes (0,1)=
+   (p-1,q)\oplus (p+1,q-1)\oplus (p,q+1)
+ $$
+ となる．これは，$3$つのベクトル$(1,0)$, $(-1,1)$, $(0,-1)$
+ を加えるまたは，引くことに対応する．
+ $\mathrm{SU}(3)$の場合，一般のClebsch–Gordan係数を求めるのは結構大変である．ここでは，フェルミオン系で必要になるものを計算しておこう．
+ 基本表現の基底ベクトルを下付き，反表現の基底ベクトルを上付きで書くことにする．$\ket{_i}$, $\ket{^i}$で，$i$は，$1$から$3$までの値を取る．daggerは，
+ \begin{align}
+   (\ket{_i})^\dag &=  \bra{^i},\\
+   (\ket{^i})^\dag &=  \bra{_i}
+ \end{align}
+ と表記する．これらの内積は，
+ \begin{align}
+   \braket{_i}{^j}&=\delta_i^j,\\
+   \braket{^i}{_j}&=\delta^i_j  
+ \end{align}
+ を満たす．
+
+ $2$つの基本表現の合成は，$6$表現と$\bar{3}$に分解される．
+ $\bar{3}$表現は，
+ \begin{align}
+   \ket{^i}&=\frac{1}{\sqrt{2}}\epsilon^{ijk}\ket{_j}\ket{_k}
+ \end{align}
+ と表せる．また，$3$表現と$\bar{3}$表現を合成すると，$8$表現と$1$表現が作れるが，$1$表現の次元は，
+ \begin{align}
+   |0\rangle = \frac{\delta^i_j}{\sqrt{3}}\ket{_i}\ket{^j}
+ \end{align} -->
