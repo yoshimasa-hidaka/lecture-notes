@@ -239,7 +239,7 @@ $$
 3つの表現 $a$, $b$, $c$ を合成し，$d$ を作る問題を考える．$a$ と $b$ を合成し ${e}$ を作り，その後，$c$ を合成すると，
 
 $$
-  \ket*{((ab)_{e\mu},c)_{d\nu},m_d}
+  \ket*{((ab)_{e,\mu},c)_{d,\nu},m_d}
   =
   \sum_{m_{a},m_b,m_c,m_{e}}
   \ket*{a,m_a}\ket*{b,m_b}\ket*{c,m_c}
@@ -250,7 +250,7 @@ $$
 となる．一方，先に $b$ と $c$ を合成し，${f}$ を作り，その後，$a$ を合成すると，
 
 $$
-  \ket*{(a,(bc)_{f\rho})_{d\sigma},m_d}
+  \ket*{(a,(bc)_{f,\rho})_{d,\sigma},m_d}
     =
   \sum_{m_{a},m_b,m_c,m_{f}}
   \ket*{a,m_a}\ket*{b,m_b}\ket*{c,m_c}
@@ -260,15 +260,15 @@ $$
 
 となる．
 
-$\ket*{(ab){e}c;d,m_d}$ と$\ket*{a (bc){f};d,m_d}$ は，独立ではなく次のユニタリ変換（$F$-moves）で結びついている:
+$\ket*{((ab)_{e,\mu}c)_{d,\nu},m_d}$ と $\ket*{(a,(bc)_{f,\rho})_{d,\sigma},m_d}$ は，独立ではなく次のユニタリ変換（$F$-moves）で結びついている:
 
 $$
-  \ket*{(ab){e}c;d,m_d}
-  =\sum_{{f}}  \ket*{a (bc){f};d,m_d}
-  \braket{a (bc){f};d,m_d}{(ab){e}c;d,m_d} \,.
+  \ket*{((ab)_{e,\mu}c)_{d,\nu},m_d}
+  =\sum_{{f,\rho,\sigma}}  \ket*{(a,(bc)_{f,\rho})_{d,\sigma},m_d}
+  \braket{(a,(bc)_{f,\rho})_{d,\sigma},m_d}{((ab)_{e,\mu}c)_{d,\nu},m_d} \,.
 $${#eq-recoupling}
 
-この係数は，$\braket{a (bc){f};d,m_d}{(ab){e}c;d,m_d}$ は，$m_d$ に依存しない．
+この係数は，$\braket{(a,(bc)_{f,\rho})_{d,\sigma},m_d}{((ab)_{e,\mu}c)_{d,\nu},m_d}$ は，$m_d$ に依存しない．
 これは，式 (@eq-recoupling) の両辺に $J_{\pm}$ を作用させることで確かめられる．
 
 \begin{question}
@@ -277,7 +277,7 @@ $${#eq-recoupling}
 
 本稿では，
 $$
-  [F^{abc}_d]_{ef}\coloneqq \braket{a (bc){f};d,m_d}{(ab){e}c;d,m_d}
+  [F^{abc}_d]_{ef}\coloneqq \braket{(a,(bc)_{f,\rho})_{d,\sigma},m_d}{((ab)_{e,\mu}c)_{d,\nu},m_d}
 $$
 
   とし $F$-symbolと呼ぶことにする:
@@ -291,12 +291,12 @@ Clebsch--Gordan 係数を用いて $F$-symbol を表すと
 
 $$
   \begin{split}
-    [F^{abc}_d]_{(e,\mu,\nu)(f)}
+    [F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}
     & = \sum_{m_{a},m_b,m_c,m_{e} m_{f}}\braket{a,m_a;\, b,m_b}{{e},m_{e}}\braket{{e},m_{e};\, {c},m_{c}}{{d},m_{d}}\\
     &\qquad\qquad\qquad  \times \braket{{f},m_{f}}{ b,m_b;\, {c},m_{c} }\braket{d,m_d}{a,m_a;\, {f},m_{f}}
   \end{split}
 $${#eq-F-move_def}
-
+$[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$
 となる．
 
 逆変換は，
