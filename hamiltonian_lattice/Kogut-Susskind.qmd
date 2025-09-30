@@ -634,7 +634,7 @@ Equation~(@eq-action_trU) can be graphically derived by using the topological de
 
 ## 一般の格子上での取扱い
 
-ここまで，すべての頂点が3点であるハニカム格子上のゲージ理論を考えてきた．
+ここまで，すべての頂点が3点であるハニカム格子上のゲージ理論を考えてきた：
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -651,7 +651,7 @@ Equation~(@eq-action_trU) can be graphically derived by using the topological de
 ここでは，辺の向きの矢印は省略してある．
 頂点が3点であるため，Gaussの拘束条件は，Clebsch--Gordan 係数を用いて簡単に解くことができた．
 頂点が4点以上の場合はどのように解けばよいだろうか．
-まず，以下のような各頂点が4点である正方格子を考えよう．
+まず，以下のような各頂点が4点である正方格子を考えよう：
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">

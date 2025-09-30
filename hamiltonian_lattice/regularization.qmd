@@ -42,7 +42,7 @@ $$
   [n]\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+2}n)}{\sin\qty(\frac{\pi}{k+2})}
 $${#eq-n}
 
-を定義すると，$d_a=[2j_a+1]$となることが知られている．カットオフ無限大 $k\to\infty$ では，
+を定義すると，$d_a=[2j_a+1]$ となることが知られている．カットオフ無限大 $k\to\infty$ では，
 $d_a=2j_a+1$ に帰着する．
 
 \begin{question}

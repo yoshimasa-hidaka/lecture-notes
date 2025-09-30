@@ -61,9 +61,9 @@ $$
 がユニタリ行列であること，また群の公理(単位元の存在，逆元の存在，結合則)を満たすことを確認せよ．
 \end{question}
 
-### Pauli行列による表現
+### Pauli 行列による表現
 
-パラメータを $\alpha=a_0 + \ri a_3$, $\beta=a_1 + \ri a_2$ と置き，Pauli行列
+パラメータを $\alpha=a_0 + \ri a_3$, $\beta=a_1 + \ri a_2$ と置き，Pauli 行列
 
 $$
     \sigma_1 \coloneqq \begin{pmatrix}
@@ -183,7 +183,7 @@ $$
   [J_+,J_-]  = 2 J_0
 $$
 
-となる．2次のCasimir演算子$J^2$は，
+となる．2次の Casimir 演算子 $J^2$ は，
 
 $$
   J^2=\sum_{i=1}^3J_i^2=J_+J_-+J_0^2-J_0=J_-J_++J_0^2+J_0
@@ -252,13 +252,13 @@ $$
   \int\dd{g} [D_{j'}^{*}]^{m'}_{n'}(g) [D_j]^m_n(g) = \frac{1}{d_j}\delta_{j,j'}\delta_{m,m'}\delta_{n,n'}
 $$ {#eq-su2-D-orthogonality}
 
-の直交性関係を満たす．ここで $\dd{g}$ は，$\int\dd{g}=1$ に正規化された $\mathrm{SU}(2)$群のHaar測度である(詳細は，@sec-Haar_measure 節参照)．
+の直交性関係を満たす．ここで $\dd{g}$ は，$\int\dd{g}=1$ に正規化された $\mathrm{SU}(2)$群の Haar 測度である（詳細は，@sec-Haar_measure 節参照）．
 
 ### 表現の合成
 
 次に2つの表現 $j_a$ と $j_b$ の合成を考える．本稿では，しばしば表現のラベルに $a,b,c,d,\cdots$ を用いる．
 表現の添字は，$\mathcal{Q}_{j_a}$ や $j$ を略して $\mathcal{Q}_{a}$ と書くことがある．
-2つの表現を合成(直積)するとそれは既約表現の直和に分解する:
+2つの表現を合成（直積）するとそれは既約表現の直和に分解する:
 
 $$
     \mathcal{Q}_{j_{a}}\otimes \mathcal{Q}_{j_{b}} = (\mathcal{Q}_{j_{a}+j_{b}})\oplus \mathcal{Q}_{j_{a}+j_{b}-1}\oplus\cdots \oplus \mathcal{Q}_{|j_{a}-j_{b}|}
@@ -296,8 +296,8 @@ $$
 
 で他の $c$ についてゼロとなる．
 
-3つの表現の合成(直積)は $\mathcal{Q}_{a}\otimes (\mathcal{Q}_{b}\otimes \mathcal{Q}_{c})\simeq (\mathcal{Q}_{a}\otimes \mathcal{Q}_{b}) \otimes \mathcal{Q}_{c}$
-  を満たす．これに対応して，fusion係数は，
+3つの表現の合成（直積）は $\mathcal{Q}_{a}\otimes (\mathcal{Q}_{b}\otimes \mathcal{Q}_{c})\simeq (\mathcal{Q}_{a}\otimes \mathcal{Q}_{b}) \otimes \mathcal{Q}_{c}$
+  を満たす．これに対応して，fusion 係数は，
 
 $$
 \sum_{d}N_{ad}^{f}N_{bc}^{d}= \sum_{d}N_{ab}^{d}N_{dc}^{f}

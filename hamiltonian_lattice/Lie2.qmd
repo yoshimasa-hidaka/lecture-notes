@@ -3,7 +3,7 @@
 $\mathrm{SU}(2)$群でみてきたものを $\mathrm{SU}(N)$群に拡張する．
 
 $\mathrm{SU}(N)$群は，複素 $N$ 次元ベクトル空間の内積を保ち，かつ行列式が $1$ である変換全体からなる群である．
-2つの複素 $N$次元ベクトル $w$, $z$ に対して，変換 $w\mapsto g w$, $z\mapsto gz$ のもとで，内積 $(w,z) \coloneqq w^\dag z$ は，
+2つの複素 $N$ 次元ベクトル $w$, $z$ に対して，変換 $w\mapsto g w$, $z\mapsto gz$ のもとで，内積 $(w,z) \coloneqq w^\dag z$ は，
 次のように変換される:
 
 $$
