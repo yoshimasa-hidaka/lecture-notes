@@ -308,16 +308,16 @@ $$
 次に具体的に表現を合成しよう．表現 $j_a$, $j_b$ を合成し $j_c$ を作ったとする．そのときのベクトル $\ket*{j_aj_b;j_c,m_c}$ は，
 
 $$
-  \ket*{j_aj_b;j_c,m_c} = \sum_{m_a,m_b}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_am_a\, j_bm_b}{j_c,m_c}
+  \ket*{j_aj_b;j_c,m_c} = \sum_{m_a,m_b}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}
 $$ {#eq-decomposition}
 
 と表せる．ここで，
-$\braket{j_am_a\, j_bm_b}{j_cm_c}$ は Clebsch--Gordan 係数である．
+$\braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}$ は Clebsch--Gordan 係数である．
 $j_c$ および $m_c$ が取りうる値は
 $j_c\in \{|j_a-j_b|,|j_a-j_b|+1,\cdots, j_a+j_b\}$ 及び，$m_c\in\{-j_c,-j_c+1,\cdots, j_c\}$ である．
 式 (@eq-decomposition) は，$\mathcal{Q}_{c}\to \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ の写像を与える．
 つまり，$\ket{v}=\sum_{m_c}v^{m_c}\ket{j_cm_c}\in \mathcal{Q}_{c}$を
-$\sum_{m_a,m_b,m_c}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_am_a\, j_bm_b}{j_cm_c}v^{m_c}\in \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ に移す．
+$\sum_{m_a,m_b,m_c}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}v^{m_c}\in \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ に移す．
 
 
 また，
@@ -332,26 +332,26 @@ $$ \begin{aligned}
 逆に直積状態は，
 
 $$
-\ket*{j_a,m_a} \ket*{j_b,m_b}= \sum_{j_c,m_c}  \ket*{j_aj_b;j_c,m_c} \braket{j_cm_c}{j_am_a\, j_bm_b}
+\ket*{j_a,m_a} \ket*{j_b,m_b}= \sum_{j_c,m_c}  \ket*{j_aj_b;j_c,m_c} \braket{j_c,m_c}{j_a,m_a;\, j_b,m_b}
  $$
 
 と表せる．
 $\mathrm{SU}(2)$ のClebsch--Gordan 係数は，通常，
-$\braket{j_cm_c}{j_am_a\, j_bm_b}=\braket{j_am_a\, j_bm_b}{j_c,m_c}^*=\braket{j_am_a\, j_bm_b}{j_c,m_c}$
+$\braket{j_c,m_c}{j_a,m_a;\, j_b,m_b}=\braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}^*=\braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}$
 を満たすように位相が選ばれている．
 また，Clebsch--Gordan 係数は，直交性関係
 
 $$
   \sum_{m_a,m_b}
-  \braket{j_dm_d}{j_am_a\, j_b,m_b}
-  \braket{j_am_a\, j_bm_b}{j_c,m_c}
+  \braket{j_d,m_d}{j_a,m_a;\, j_b,m_b}
+  \braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}
   =\delta_{j_c}^{j_d}\delta_{m_c}^{m_d}\delta_{abc} \,,
 $$ {#eq-Clebsch-Gordan_orthogonal1}
 
 $$
   \sum_{j_c}\sum_{m_c}
-  \braket{j_am_a\, j_bm_b}{j_c,m_c}
-  \braket{j_cm_c}{j_am'_a\, j_bm'_b}
+  \braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}
+  \braket{j_c,m_c}{j_a,m'_a;\, j_b,m'_b}
   =\delta^{m_a}_{m'_a}\delta^{m_b}_{m'_b}
 $$ {#eq-Clebsch-Gordan_orthogonal2}
 
@@ -360,9 +360,9 @@ $$ {#eq-Clebsch-Gordan_orthogonal2}
 また，Clebsch--Gordan 係数は不変テンソルになっている．つまり，
 
 $$
-\braket{j_am_a\, j_bm_b}{j_c,m_c}=\sum_{m'_a,m'_b,m'_{c}}
+\braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}=\sum_{m'_a,m'_b,m'_{c}}
 [D_{j_c}(\bar{g})]^{m_c}_{m'_c}[D_{j_a}(g)]^{m_a}_{m'_a}[D_{j_b}(g)]^{m_b}_{m'_b}
-\braket{j_am'_a\, j_bm'_b}{j_c,m'_c}
+\braket{j_a,m'_a;\, j_b,m'_b}{j_c,m'_c}
 $$
 
 を満たす．ここで，$\bar{g}$は，$g$の逆元である．
@@ -378,7 +378,7 @@ $\begin{psmallmatrix}
 を用いると，Clebsch--Gordan 係数は，
 
 $$
-\braket{j_am_a\, j_bm_b}{j_cm_c}
+\braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}
 =(-1)^{j_{a}-j_{b}+m_{c}}\sqrt{d_c}
 \begin{pmatrix}
   j_a & j_b & j_c\\
@@ -482,7 +482,7 @@ $$
 
 \begin{question}
   2つの表現$j_a$, $j_b$を合成し1重項を作り，
-  Clebsch--Gordan 係数$\braket{j_am_a\, j_bm_b}{00}$を具体的に求めよ．
+  Clebsch--Gordan 係数$\braket{j_a,m_a;\, j_b,m_b}{00}$を具体的に求めよ．
 \end{question}
 
 
@@ -512,8 +512,8 @@ $$
   =
   \sum_{m_{a},m_b,m_c,m_{e}}
   \ket*{j_a,m_a}\ket*{j_b,m_b}\ket*{j_c,m_c}
-  \braket{j_am_a\, j_bm_b}{j_{e},m_{e}}
-  \braket{j_{e}m_{e}\, j_cm_c}{j_d,m_d}
+  \braket{j_a,m_a;\, j_b,m_b}{j_{e},m_{e}}
+  \braket{j_{e},m_{e};\, j_c,m_c}{j_d,m_d}
  $$
 
 となる．一方，先に $j_b$ と $j_c$ を合成し，$j_{f}$ を作り，その後，$j_a$ を合成すると，
@@ -523,8 +523,8 @@ $$
     =
   \sum_{m_{a},m_b,m_c,m_{f}}
   \ket*{j_a,m_a}\ket*{j_b,m_b}\ket*{j_c,m_c}
-  \braket{j_am_a\, j_{f}m_{f}}{j_{d},m_{d}}
-  \braket{j_{b}m_{b}\, j_cm_c}{j_{f},m_{f}}
+  \braket{j_a,m_a;\, j_{f},m_{f}}{j_{d},m_{d}}
+  \braket{j_{b},m_{b};\, j_c,m_c}{j_{f},m_{f}}
 $$
 
 となる．
@@ -561,8 +561,8 @@ Clebsch--Gordan 係数を用いて $F$-symbol を表すと
 $$
   \begin{split}
     [F^{abc}_d]_{ef}
-    & = \sum_{m_{a},m_b,m_c,m_{e} m_{f}}\braket{j_am_a\, j_bm_b}{j_{e}m_{e}}\braket{j_{e}m_{e}\, j_{c}m_{c}}{j_{d}m_{d}}\\
-    &\qquad\qquad\qquad  \times \braket{j_{f}m_{f}}{ j_bm_b\, j_{c}m_{c} }\braket{j_dm_d}{j_am_a\, j_{f}m_{f}}
+    & = \sum_{m_{a},m_b,m_c,m_{e} m_{f}}\braket{j_a,m_a;\, j_b,m_b}{j_{e},m_{e}}\braket{j_{e},m_{e};\, j_{c},m_{c}}{j_{d},m_{d}}\\
+    &\qquad\qquad\qquad  \times \braket{j_{f},m_{f}}{ j_b,m_b;\, j_{c},m_{c} }\braket{j_d,m_d}{j_a,m_a;\, j_{f},m_{f}}
   \end{split}
 $${#eq-F-move_def}
 
@@ -745,7 +745,7 @@ Clebsch--Gordan 係数を図を使って表現するといろいろ便利であ�
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/ab.svg" style="height:4.2em;">
   <span class="math display" style="display:inline-block;">
-    $$= \braket{j_b n_b}{j_a m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}$$
+    $$= \braket{j_b, n_b}{j_a, m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}$$
   </span>
 </div>
 :::
@@ -753,7 +753,7 @@ Clebsch--Gordan 係数を図を使って表現するといろいろ便利であ�
 ::: {.content-visible when-format=pdf}
 $$
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-  = \braket{j_b n_b}{j_a m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}
+  = \braket{j_b,n_b}{j_a,m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}
 $$
 :::
 
@@ -764,7 +764,7 @@ $$
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/a.svg" style="height:4.2em;">
   <span class="math display" style="display:inline-block;">
-    $$=\braket{j_an_a}{j_am_a} =\delta^{n_a}_{m_a}$$
+    $$=\braket{j_a,n_a}{j_a,m_a} =\delta^{n_a}_{m_a}$$
   </span>
 </div>
 :::
@@ -772,7 +772,7 @@ $$
 ::: {.content-visible when-format=pdf}
 $$
   \parbox{.6cm}{\includegraphics[scale=0.3]{figs/a.pdf}}=
- \braket{j_an_a}{j_am_a} =\delta^{n_a}_{m_a}
+ \braket{j_a,n_a}{j_a,m_a} =\delta^{n_a}_{m_a}
  $$
 :::
 
@@ -782,13 +782,13 @@ $$
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/abc.svg" style="height:4.2em;">
   <span class="math display" style="display:inline-block;">
-    $$=\braket{ j_cn_c}{j_am_a\, j_bm_b}\,,$$
+    $$=\braket{ j_c,n_c}{j_a,m_a;\, j_b,m_b}\,,$$
   </span>
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/cab.svg" style="height:4.2em;">
   <span class="math display" style="display:inline-block;">
-    $$=  \braket{j_an_a\, j_bn_b}{j_cm_c}$$
+    $$=  \braket{j_a,n_a;\, j_b,n_b}{j_c,m_c}$$
   </span>
 </div>
 :::
@@ -796,9 +796,9 @@ $$
 ::: {.content-visible when-format=pdf}
 $$ \begin{aligned}
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/abc.pdf}}&=  
-  \braket{ j_cn_c}{j_am_a\, j_bm_b}, \\
+  \braket{ j_c,n_c}{j_a,m_a;\, j_b,m_b}, \\
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/cab.pdf}}
-  &= \braket{j_an_a\, j_bn_b}{j_cm_c}
+  &= \braket{j_a,n_a;\, j_b,n_b}{j_c,m_c}
  \end{aligned}$$
 :::
 
@@ -809,7 +809,7 @@ $c=0$ の特別な場合は，
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/ab0.svg" style="height:2.2em;">
   <span class="math display" style="display:inline-block;">
-    $$= \braket{j_an_a\, j_bn_b}{00}=\delta_{j_a,j_b}\delta_{n_a,-n_b}\frac{(-1)^{j_a-n_a}}{\sqrt{d_{a}}}\,,$$
+    $$= \braket{j_a,n_a;\, j_b,n_b}{0,0}=\delta_{j_a,j_b}\delta_{n_a,-n_b}\frac{(-1)^{j_a-n_a}}{\sqrt{d_{a}}}\,,$$
   </span>
 </div>
 :::
@@ -818,7 +818,7 @@ $c=0$ の特別な場合は，
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/0ab.svg" style="height:2.2em;">
   <span class="math display" style="display:inline-block;">
-    $$= \braket{00}{j_am_a\, j_bm_b}=\delta_{j_a,j_b}\delta_{m_a,-m_b}\frac{(-1)^{j_a-m_a}}{\sqrt{d_{a}}}$$
+    $$= \braket{0,0}{j_a,m_a;\, j_b,m_b}=\delta_{j_a,j_b}\delta_{m_a,-m_b}\frac{(-1)^{j_a-m_a}}{\sqrt{d_{a}}}$$
   </span>
 </div>
 :::
@@ -826,9 +826,9 @@ $c=0$ の特別な場合は，
 ::: {.content-visible when-format=pdf}
 $$ \begin{aligned}
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/ab0.pdf}}
-  &= \braket{j_an_a\, j_bn_b}{00}=\delta_{j_a,j_b}\delta_{n_a,-n_b}\frac{(-1)^{j_a-n_a}}{\sqrt{d_{a}}},\\  
+  &= \braket{j_a,n_a;\, j_b,n_b}{0,0}=\delta_{j_a,j_b}\delta_{n_a,-n_b}\frac{(-1)^{j_a-n_a}}{\sqrt{d_{a}}},\\  
   \parbox{1.5cm}{\includegraphics[scale=0.3]{figs/0ab.pdf}}&=  
-  \braket{00}{j_am_a\, j_bm_b}=\delta_{j_a,j_b}\delta_{m_a,-m_b}\frac{(-1)^{j_a-m_a}}{\sqrt{d_{a}}}
+  \braket{0,0}{j_a,m_a;\, j_b,m_b}=\delta_{j_a,j_b}\delta_{m_a,-m_b}\frac{(-1)^{j_a-m_a}}{\sqrt{d_{a}}}
  \end{aligned}
 $$
 :::
@@ -840,7 +840,7 @@ $$
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/fmove1a.svg" style="height:6.0em;">
   <span class="math display" style="display:inline-block;">
-    $$= \sum_{l_e}\braket{j_an_a\, j_bn_b}{j_el_e}\braket{j_el_e\, j_cn_c}{ j_dm_d}$$
+    $$= \sum_{l_e}\braket{j_a,n_a;\, j_b,n_b}{j_e,l_e}\braket{j_e,l_e;\, j_c,n_c}{ j_d,m_d}$$
   </span>
 </div>
 :::
@@ -848,7 +848,7 @@ $$
 ::: {.content-visible when-format=pdf}
 $$ 
   \begin{aligned}
-    \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}= \sum_{l_e}\braket{j_an_a\, j_bn_b}{j_el_e}\braket{j_el_e\, j_cn_c}{ j_dm_d}
+    \parbox{2.5cm}{\includegraphics[scale=0.3]{figs/fmove1a.pdf}}= \sum_{l_e}\braket{j_a,n_a;\, j_b,n_b}{j_e,l_e}\braket{j_e,l_e;\, j_c,n_c}{ j_d,m_d}
   \end{aligned}
 $$
 :::
@@ -985,11 +985,11 @@ $${#eq-deform}
 が比較的簡単に評価できる．つまり，
 
 $$
-\sum_{l_a,l_b,l_e}  \braket{j_g n_g}{j_a l_a \, j_b l_b}
-  \braket{j_b l_b \, j_c n_c}{j_e l_e}
-  \braket{j_al_a\, j_el_e}{j_d,m_d}
+\sum_{l_a,l_b,l_e}  \braket{j_g,n_g}{j_a,l_a;\, j_b,l_b}
+  \braket{j_b,l_b;\, j_c,n_c}{j_e,l_e}
+  \braket{j_a,l_a;\, j_e,l_e}{j_d,m_d}
   =
-[(F_{d}^{abc})^{-1}]_{eg} \braket{j_gn_g j_cn_c}{j_dm_d}
+[(F_{d}^{abc})^{-1}]_{eg} \braket{j_g,n_g;\,j_c,n_c}{j_d,m_d}
 $${#eq-deform2}
 
 が成り立つが示せる．
