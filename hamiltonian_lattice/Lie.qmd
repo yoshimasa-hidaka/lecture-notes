@@ -57,7 +57,7 @@ $$
 \end{pmatrix}\in\mathrm{SU}(2)
 $$
 
-がユニタリ行列であること，また群の公理(単位元の存在，逆元の存在，結合則, @sec--group_theory 節参照)を満たすことを確認せよ．
+がユニタリ行列であること，また群の公理(単位元の存在，逆元の存在，結合則,  \ref{sec-group_theory} 節参照)を満たすことを確認せよ．
 \end{question}
 
 ### Pauli 行列による表現
@@ -773,7 +773,7 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$
-  \vcenter{\hbox{includegraphics[scale=0.3]{figs/a.pdf}}=
+  \vcenter{\hbox{includegraphics[scale=0.3]{figs/a.pdf}}}=
  \braket{j_a,n_a}{j_a,m_a} =\delta^{n_a}_{m_a}
  $$
 :::
@@ -896,7 +896,7 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$
- \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel1.pdf}}}}=
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel1.pdf}}}=
   \sum_{c}
  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel2.pdf}}}
 $$

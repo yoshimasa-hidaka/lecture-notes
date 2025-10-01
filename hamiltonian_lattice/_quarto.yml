@@ -105,16 +105,32 @@ format:
   pdf:
     pdf-engine: lualatex
     documentclass: book
+    classoption: ["oneside"]
     fig-format: pdf
     include-in-header:
       text: |
+        % --- 日本語・数式まわり ---
         \usepackage{luatexja}
-        \usepackage[ipaex]{luatexja-preset} 
-        \usepackage{amsmath,amssymb,mathtools}
+        \usepackage[ipaex]{luatexja-preset}
         \usepackage{amsmath,amssymb,mathtools,bm,bbm}
         \usepackage[italicdiff]{physics}
         \usepackage{unicode-math}
         \numberwithin{equation}{chapter}
+
+        % --- 余白を小さく（必要に応じて調整）---
+        \usepackage[margin=20mm,footskip=10mm]{geometry}
+
+        % --- ヘッダ/フッタ（左右同じ）---
+        \usepackage{fancyhdr}
+        \setlength{\headheight}{15pt}
+        \pagestyle{fancy}
+        \fancyhf{} % 既定をクリア
+        \fancyhead[C]{\nouppercase{\leftmark}} % 章タイトルを中央に
+        \fancyfoot[C]{\thepage}                 % ページ番号を中央下
+        \renewcommand{\headrulewidth}{0.4pt}
+        \renewcommand{\footrulewidth}{0pt}
+
+        % --- お好みのコマンド・定理環境 ---
         \newcommand{\ri}{\mathrm{i}}
         \newcommand{\ER}{R}
         \newcommand{\EL}{L}

@@ -366,7 +366,7 @@ Gauss の拘束条件を満たす基底は，各辺 ($e\in \mathcal{E}$) に既�
 一般的な状態は，この基底の線形結合として
 
 $$
-\ket{\psi} = \sum_{\bm{a},\bm{\mu}}\psi(\bm{a},\bm{\mu})\ket{\bm{a};\symbf{\mu}}
+\ket{\psi} = \sum_{\bm{a},\symbf{\mu}}\psi(\bm{a},\symbf{\mu})\ket{\bm{a};\symbf{\mu}}
 $$
 
 と表される．

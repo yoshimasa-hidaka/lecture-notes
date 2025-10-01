@@ -983,7 +983,7 @@ $$
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}
    ,\\
-   
+   %
    \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vd.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}},\\
    \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}}
@@ -994,7 +994,7 @@ $$
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bq.pdf}}}
    ,\\
-   
+   %
    \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}},\notag\\
@@ -1012,14 +1012,14 @@ $$
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}},\\
    (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}},\\
-   
+   %
    (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vd.pdf}}},\\
    (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}},\\
    (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bq.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}},\\
-   
+   %
    (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}},\\
    (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}}
