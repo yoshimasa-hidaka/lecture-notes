@@ -58,6 +58,7 @@ execute:
 
 bibliography: references.bib
 lang: en
+reference-location: section 
 # csl: nature.csl  # 好みのスタイルに変更可
 
 format:

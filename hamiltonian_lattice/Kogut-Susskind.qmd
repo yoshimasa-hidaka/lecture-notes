@@ -346,32 +346,34 @@ $${#eq-Fmoves_U}
 :::
 
 
-## ゲージ不変な基底による$\mathrm{SU}(N)$ ゲージ理論
+## ゲージ不変な基底による$\mathrm{SU}(N)$ Yang-Mills 理論
 
 #### ハミルトニアン
-ハミルトニアンは 式 (@eq-Hamiltonian)
+ハミルトニアンは 式 (@eq-Hamiltonian) により，
 $$
   H=\sum_{e\in {\mathcal{E}}}\frac{1}{2}E^2(e)
    -\frac{K}{2}\sum_{p\in \mathcal{P}}(\tr U(p)+\tr U^\dag(p) )
-$$ 
+$$ {#eq-Hamiltonian_SUN}
 
-で与えられる．
+と与えられる．
 
 #### 物理状態
 
-Gauss の拘束条件を満たす基底は，各辺 ($e\in \mathcal{E}$) に既約表現 $a_e$ をラベルし，各頂点 ($v\in \mathcal{V}$) に 多重度 $\mu_v$ を付与した状態で，Clebsch--Gordan 係数が消えない組み合わせで与えられる．この基底を $\ket{\bm{a};\symbf{\mu}}$ と書く．
+Gauss の拘束条件を満たす基底は，各辺 ($e\in \mathcal{E}$) に既約表現 $a_e$ を割り当て，各頂点 ($v\in \mathcal{V}$) に 多重度 $\mu_v$ を付与した状態で，Clebsch--Gordan 係数が消えない組み合わせによって構成される．
+この基底を $\ket{\bm{a};\symbf{\mu}}$ と記す．
 グラフィカルには，図 @fig-vertex 右 で表せる．
 
-一般的な状態は，その線形結合
+一般的な状態は，この基底の線形結合として
 
 $$
 \ket{\psi} = \sum_{\bm{a},\bm{\mu}}\psi(\bm{a},\bm{\mu})\ket{\bm{a};\symbf{\mu}}
 $$
-で与えられる．
+
+と表される．
 
 #### ハミルトニアンの状態への作用
 
-$\tr U_{d}$ の作用は，$F$-symbol を用いて
+$\tr U_{d}$ の作用は，$F$-symbol を用いて次のように表される：
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -398,8 +400,8 @@ $$
 $$
 :::
 
-と表される．ここで， $a'_0=a'_6$, $\mu_0=\mu_6$, $\mu'_0=\mu'_6$, および $\mu'_7=\mu'_1$ である．
-一方，電気的基底を取っているので，$E^2$ の作用は，
+ここで， $a'_0=a'_6$, $\mu_0=\mu_6$, $\mu'_0=\mu'_6$, および $\mu'_7=\mu'_1$ である．
+一方，電気的基底を用いているため，$E^2$ の作用は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -423,7 +425,9 @@ $$
 $$
 :::
 
-である．これにより，状態にハミルトニアンを作用させた際の遷移先が定まる．
+である．これにより，状態にハミルトニアンを作用させたときの遷移先が定まる．
+ここでは $\mathrm{SU}(N)$ ゲージ理論を念頭に定式化したが，一般のコンパクト Lie 群に対しても，$C_2(a)$ および $F$-symbol を適切に選ぶことで同様の議論が成り立つ．
+また，有限群の場合も，電場項を適切に修正すれば同様の構成が可能である．
 
 
 
@@ -634,7 +638,7 @@ Equation~(@eq-action_trU) can be graphically derived by using the topological de
 
 ## 一般の格子上での取扱い
 
-ここまで，すべての頂点が3点であるハニカム格子上のゲージ理論を考えてきた：
+ここまでは，すべての頂点が3点であるハニカム格子上のゲージ理論を考えてきた：
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -648,10 +652,10 @@ Equation~(@eq-action_trU) can be graphically derived by using the topological de
 \end{equation*}
 :::
 
-ここでは，辺の向きの矢印は省略してある．
-頂点が3点であるため，Gaussの拘束条件は，Clebsch--Gordan 係数を用いて簡単に解くことができた．
-頂点が4点以上の場合はどのように解けばよいだろうか．
-まず，以下のような各頂点が4点である正方格子を考えよう：
+ここでは，辺の向きを示す矢印は省略してある．
+頂点が3点であるため，Gauss の拘束条件は Clebsch–Gordan 係数を用いて容易に解くことができた．
+では，頂点が4点以上の場合にはどのように解けばよいだろうか．
+まず，各頂点が4点である正方格子を例に取ろう：
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -665,9 +669,9 @@ $$
 $$
 :::
 
-Gaussの拘束条件は，4つの表現を合成して，1重項をつくる問題に帰着するが，
-いきなりすべてを合成するのではなく，2つずつ合成して構成することができる．
-これは，グラフでいうと，補助リンクを導入し各頂点を3点に分解して問題を考えることに対応する:
+Gauss の拘束条件は，4つの表現を合成して1重項を構成する問題に帰着する．
+しかし，いきなり4つを同時に合成するのではなく，まず2つずつ合成してから順に組み合わせていくことができる．
+これはグラフの言葉では，補助リンクを導入して各頂点を3点に分解し，問題を考えることに対応する：
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -687,12 +691,11 @@ $$
 $$
 :::
 
-赤線が，補助リンクに対応する．赤線を潰すと正方格子に戻る．
-このグラフの各頂点に，Clebsch--Gordan 係数を付与することでゲージ不変な状態が構成できる．
-逆にハニカム格子を考え，電場の演算子は黒線の上にしか作用しないことにすると，これは，正方格子上の
-ゲージ理論を考えていることと等価になる．
+赤線が補助リンクに対応しており，これを潰すと元の正方格子に戻る．
+このグラフの各頂点に Clebsch–Gordan 係数を対応させれば，ゲージ不変な状態を構成できる．
+逆にハニカム格子を考え，電場の演算子が黒線のみに作用するようにすれば，これは正方格子上のゲージ理論と等価になる．
 
-補助線の入れ方には任意性がある．別の補助線の入れ方では，
+補助線の入れ方には任意性がある．別の補助線の導入では次のようになる：
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -712,8 +715,10 @@ $$
   \vcenter{\hbox{\includegraphics[scale=0.25]{figs/square_mod.pdf}}}
 $$
 :::
-となる．$F$-symbol の性質のおかげで Wilson 線の作用は，補助線の入れ方には依存しない，
-つまり，理論は補助線の入れ方には依存しないことがわかる．
+
+$F$-symbol の性質により，Wilson 線の作用は補助線の入れ方に依存しない．
+したがって，理論そのものも補助線の取り方には依存しないことがわかる．
+より複雑な格子についても，補助線を導入して各頂点を3点に分解すれば，同様に取り扱うことができる．
 
 
 <!-- ## 線の向きについて

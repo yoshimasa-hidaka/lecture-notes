@@ -1,15 +1,16 @@
 # 量子群による有限次元近似　{#sec-cutoff_representation}
-一般に $\mathrm{SU}(N)$群の既約表現は無限に存在するため，有限の格子上であっても Hilbert 空間は無限次元である．
-量子計算機などで数値計算するためには有限次元の Hilbert 空間に近似する必要がある．
-ここでは，ひとつの有効な方法として，量子群変形を用いた有限次元近似法を紹介する [@Zache:2023dko; @Hayata:2023puo]．
-量子群 $\mathrm{SU}(N)_k$ では，Young 図の横方向の箱の数の最大値が $k$ となる．
-例えば，$\mathrm{SU}(2)_k$ の場合は，スピン $j$ が $0,1/2,1,\cdots, k/2$ の値に制限される．
-量子群変形の利点は，これまでに導入した式 (@eq-partition) や (@eq-Fmove) が形式的にはそのまま成り立つ点である．
-ただし，係数が変形される．
-量子群の詳細は割愛し (@sec-q_deformation 節参照)，ここでは，$\mathrm{SU}(2)_k$ と $\mathrm{SU}(3)_k$ の場合について紹介する．
+一般に $\mathrm{SU}(N)$群の既約表現は無限に存在するため，有限の格子上であっても Hilbert 空間は無限次元となる．
+量子計算機などで数値計算を行うには，有限次元の Hilbert 空間に近似する必要がある．
+ここでは，有効な方法の一つとして量子群変形を用いた有限次元近似法を紹介する [@Zache:2023dko; @Hayata:2023puo]．
+量子群 $\mathrm{SU}(N)_k$ では，Young 図の横方向の箱の数が最大 $k$ に制限される．
+例えば $\mathrm{SU}(2)_k$ の場合，スピン $j$ は $0, \tfrac{1}{2}, 1, \ldots, k/2$ の範囲に限られる．
+量子群変形の利点は，これまで導入した式 (@eq-partition) や (@eq-Fmove) が形式的にはそのまま成立する点にある．
+ただし，各係数は量子群に対応して変形される．
+量子群の詳細についてはここでは立ち入らず（@sec-q_deformation 節を参照），
+以下では $\mathrm{SU}(2)_k$ および $\mathrm{SU}(3)_k$ の場合を具体例として紹介する．
 
 ## $\mathrm{SU}(2)_k$
-表現のカットオフにより，式 (@eq-fusion_delta) の $\delta_{abc}$ は修正され
+表現のカットオフにより，式 (@eq-fusion_delta) の $\delta_{abc}$ は次のように修正される：
 
 $$
   N_{ab}^c=\delta_{abc}\coloneqq \begin{cases}
@@ -24,26 +25,25 @@ $$
   \end{cases}
 $$ {#eq-fusion_q}
 
-となる．表現の次元だった $d_a$ は，量子次元 (Frobenius-Perron dimension) と呼ばれ，
+ここで，表現の次元 $d_a$ は量子次元 (Frobenius–Perron dimension) に置き換わり，
 
 $$
     [N_a]^{c}_{b}=N_{ab}^c
 $$ {#eq-N_matrix}
 
-を行列 $N_{a}$ と見た時の最大固有値で与えられる．これは，パラメータ
-
+を行列 $N_{a}$ とみなしたときの最大固有値で与えられる． 
+これはパラメータ
 $$
   q = \exp\ri \frac{2\pi}{k+2}
 $$
 
-を用いて，
+を用いて定義される $q$ 数
 
 $$
   [n]\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+2}n)}{\sin\qty(\frac{\pi}{k+2})}
 $${#eq-n}
 
-を定義すると，$d_a=[2j_a+1]$ となることが知られている．カットオフ無限大 $k\to\infty$ では，
-$d_a=2j_a+1$ に帰着する．
+を使って $d_a=[2j_a+1]$ と表されることが知られている．$k\to\infty$ の極限では $d_a=2j_a+1$ に戻る．
 
 \begin{question}
   $k=1,2$ の場合に具体的に量子次元を計算し，表現 $j$ の量子次元が $[j+1]$ なることを確かめよ．
@@ -55,17 +55,16 @@ $$
   \mathcal{D} \coloneqq \sqrt{\sum_{a}d_a^2}=\sqrt{\frac{k+2}{2}}\frac{1}{\sin\qty(\frac{\pi}{k+2})}
 $$
 
-と定義される．$k$ が大きい場合に $\mathcal{D}\sim (k+2)^{3/2}$ と振る舞う．
+と定義され，大きな $k$ に対しては $\mathcal{D}\sim (k+2)^{3/2}$ と振る舞う．
 また，2次の Casimir 不変量は
+
 
 $$
   C_2(a)=[j_a][j_a+1]
-$$
+$$ {#eq-C2_su2q}
 
-となる．
-
-Wilson ループの作用を計算するためには $F$-symbol が必要であった．
-これは，式 (@eq-fmoves) と同様に
+となる． 
+Wilson ループの作用計算には $F$-symbol が必要であり，これは式 (@eq-fmoves) と同様に
 
 $$
   [F^{abc}_d]_{ef}=(-1)^{j_a+j_b+j_c+j_d}\sqrt{d_{e}d_{f}}
@@ -75,8 +74,8 @@ $$
   \end{Bmatrix}
 $$
 
-と表せる．
-ただし，Wigner $6$-$j$ シンボルは，
+と表される．
+ただし，Wigner $6$–$j$ シンボルは $q$ 変形され，
 
 $$
   \begin{split}
@@ -85,11 +84,10 @@ $$
       d & e & f
     \end{Bmatrix}
     &\coloneqq \Delta(a,b,c)\Delta(a,e,f)\Delta(d,b,f)\Delta(d,e,c)\sum_z(-1)^z [z+1]!\\ 
-    &\quad\times \frac{([a+b+d+e-z]![a+d+c+f-z]![b+e+c+f-z]!)^{-1}}{[z-a-b-c]![z-a-e-f]![z-d-b-f]![z-d-e-c]!}
+    &\quad\times \frac{([a+b+d+e-z]![a+d+c+f-z]![b+e+c+f-z]!)^{-1}}{[z-a-b-c]![z-a-e-f]![z-d-b-f]![z-d-e-c]!}\,,
   \end{split}
 $$
-
-と修正される．ここで，
+ここで，
 
 $$
   \Delta(a,b,c)=\delta_{abc}\sqrt{\frac{[a+b-c]![a-b+c]![-a+b+c]!}{[a+b+c+1]!}}\,,
@@ -103,7 +101,7 @@ $$
   \min(a+b+d+e,a+d+c+f,b+e+c+f)
 $$
 
-である．
+で与えられる．
 
 ## $\mathrm{SU(3)}_k$
 
@@ -140,54 +138,55 @@ $$
   \end{cases}
 $$
 
-である．$\mathbb{Z}_+$ は非負の整数全体を表す．
+であり，$\mathbb{Z}_+$ は非負の整数全体を表す．
 
-$q$ 変形パラメータ
+$q$ 変形パラメータは
 
 $$
   q = \exp(\ri\frac{2\pi}{k+3})
 $$
 
-を用いて，$q$ 数は，
+で与えられ，対応する $q$ 数は，
 
 $$
   [n]\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+3}n)}{\sin\qty(\frac{\pi}{k+3})}
   \label{eq-[n]su3}
 $$
 
-で定義される．$q$ は，Dynkin ラベルのではない点に注意.
+と定義される．ここでの $q$ は，Dynkin ラベルのではない点に注意.
 
 2次の Casimir 不変量 $C_2(a)$ は，
 
 $$
   C_2(a)  = \frac{1}{2}\qty(\left[\frac{p_a}{3}-\frac{q_a}{3}\right]^2+\left[\frac{2p_a}{3}+\frac{q_a}{3}+1\right]^2+\left[\frac{p_a}{3}+\frac{2q_a}{3}+1\right]^2-2)
-$${#eq-C2_su3}
+$${#eq-C2_su3q}
 
-で与えられる [@Bonatsos:1999xj] \footnote{ここでの$C_2(a)$の規格化因子は [@Bonatsos:1999xj] の $1/2$ を採用している．}．
+で与えられる [@Bonatsos:1999xj] (ここでの$C_2(a)$の規格化因子は [@Bonatsos:1999xj] の $1/2$ を採用している．)．
 
-同様に，量子次元は，
+また，量子次元は，
 
 $$
   d_{a} =\frac{1}{[2]}[p_a+1][q_a+1][p_a+q_a+2]
   \label{eq-dpq}
 $$
 
-となる [@Coquereaux:2005hu]．
-もっとも重要なのは $F$-symbols だが，残念ながらコンパクトな表式は知られていない．小さい $k$ については，[@Ardonne2010ClebschGordanA6] で議論されている．
+で与えられる [@Coquereaux:2005hu]．
+最も重要な $F$-symbol については，残念ながらコンパクトな表式は知られていないが，小さい $k$ の場合には [@Ardonne2010ClebschGordanA6] で議論されている
 
+## $q$ 変形された $\mathrm{SU}(N)_k$ Yang-Mills 理論
 
-
-
-$\mathrm{SU}(3)_k$ Yang-Mills 理論のハミルトニアンは，
-
+$q$ 変形された $\mathrm{SU}(N)_k$ Yang–Mills 理論は，形式的には式 (@eq-Hamiltonian_SUN) と同じハミルトニアンで記述される：
 $$
-  H = \frac{1}{2}\sum_{e\in {\tilde{\mathcal{E}}}} E^2(e) - \frac{K}{2} \sum_{p\in \mathcal{P}}\qty( \tr U_{(1,0)} (p)+\tr U_{(0,1)} (p) )
-$$ {#eq-HamiltonianSU3}
+  H = \frac{1}{2}\sum_{e\in {{\mathcal{E}}}} E^2(e) - \frac{K}{2} \sum_{p\in \mathcal{P}}\qty( \tr U (p)+\tr U^\dag (p) )
+$$ 
 
-で与えられる．ここで， $\tilde{\mathcal{E}}\subset\mathcal{E}$ は電場が作用する辺の集合で $\mathcal{P}$ はプラケットの集合である．
-$E^2_i(e)$ は電場の2乗で $\tr U_{(1,0)} (p)$ は基本表現の Wilson ループである．$K$は結合定数で，通常の結合定数 $g$ とは $K=1/g^4$ の関係にある．
-演算子の状態への作用は，以下で与えられる.
-$E^2$ 項については，
+ここで，$\mathcal{E}$ は電場が作用する辺の集合，$\mathcal{P}$ はプラケットの集合である．
+$E^2(e)$ は電場演算子の2乗，$\tr U(p)$ は基本表現における Wilson ループを表す．$K$ は結合定数である．
+演算子の状態への作用は，$q$ 変形され，以下で与えられる.
+
+#### 電場項の作用
+
+電場項の作用は $q$ 変形により次式で与えられる：
 
 ::: {.content-visible when-format=html}
 <div  style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -204,14 +203,19 @@ $E^2$ 項については，
 
 ::: {.content-visible when-format=pdf}
 $$
-  E_i^2 \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  E^2 \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
   = C_2(a)\
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
   \label{eq-action_electric_field_su3}
 $$
 :::
 
-である．ここで， $C_2(a)$ は2次の Casimir 不変量で，式 (@eq-C2_su3) で与えられる．一方，Wilsonループ $\tr U_{d}$ の作用は，
+ここで $C_2(a)$ は2次の Casimir 不変量である．
+$\mathrm{SU}(2)_k$ および $\mathrm{SU}(3)_k$ の場合には，それぞれ式 (@eq-C2_su2q)，(@eq-C2_su3q) で与えられる．
+
+#### Wilson ループの作用
+
+Wilson ループ $\tr U_d$ の作用は，$q$ 変形された $F$-symbol を用いて次のように表される：
 
 
 ::: {.content-visible when-format=html}
@@ -239,156 +243,113 @@ $$
 $$
 :::
 
-
-となる．ここで， $a'_0=a'_6$, $\mu_0=\mu_6$, $\mu'_0=\mu'_6$, および $\mu'_7=\mu'_1$ である．
-
+ここで，添字に関して $a'_0=a'_6,\ \mu_0=\mu_6,\ \mu'_0=\mu'_6,\ \mu'_7=\mu'_1$ が成り立つ．
 
 
+### ペナルティ項
 
-# ストリングネット模型による記述 {#sec-string_network}
+Gauss の拘束条件を解いたあとの物理状態は非局所的な基底で表される．
+非局所的な基底をそのまま用いて計算することもできるが，実際には扱いにくいことが多い．
+そこで，そこで局所的な基底を導入し，Clebsch–Gordan 係数が消えない状態になるように
+ペナルティ項を課すことで，低エネルギー状態が物理状態に対応するように構成すると便利である．
 
-ハミルトニアン形式で，ゲージ理論を計算機を用いて計算するために，
-空間の離散化，ゲージ群の表現にカットオフを入れ必要があった．
-物理状態の基底は，$\mathrm{SU}(2)_k$ ゲージ理論の場合，スピンネットワークで表現される．
-各頂点は，三角不等式を満たすもののみが物理状態になるため，
-物理状態は非局所的なものになっている．非局所的な基底を使って計算しても良いが，
-若干使いにくいので，局所的な基底を用意し，
-三角不等式を満たすようにハミルトニアンにペナルティ項を
-導入し，低エネルギー状態が物理状態になるように構成すると便利である．
-これにより基底は局所的なスピンとして取り扱う事ができる．
-このペナルティ項は，Gaussの 拘束条件に対応するが，もともとの $\ket*{j,m,n}$ の
-基底に比べて$m$, $n$ の自由度がないため，自由度の節約になっている．
-この節では，$\mathrm{SU}(2)_k$ ゲージ理論がストリングネット模型
-[@Levin:2004mi] で記述されることを見る．
+#### Hilbert空間の構成
 
-## ストリングネット模型
+まず，用意するヒルベルト空間として，各辺 $e\in \mathcal{E}$ に，既約表現でラベルされた基底 $\ket{a_e}$ を持つ Hilbert 空間 $\mathcal{H}_e$ を割り当てる．
+さらに，各頂点 $v\in \mathcal{V}$ に多重度に対応する基底 $\ket{\mu_v}$ ($\mu_v\in\{1,2,\cdots N_\mathrm{max}\}$) を持つ Hilbert 空間 $\mathcal{H}_v^{\mathrm{mult}}$ を導入する．
+ここで，$N_\mathrm{max}$は，多重度の最大値である．
 
-スピンネットワークで表現した，
-頂点が3点のみのグラフ $\Gamma$ 上の $\mathrm{SU}(2)_k$ 格子模型のハミルトニアンは，
-$$
-  H = \frac{1}{2}\sum_{e\in \tilde{\mathcal{E}}} E^2(e) - K \sum_{p\in \mathcal{P}} \tr U ( p) - t\sum_{v\in \mathcal{V}} Q(v)
-$$
-で与えられる．ここで $\mathcal{V}$，$\mathcal{E}$ は頂点および辺の集合で，
-$\tilde{\mathcal{E}}\subseteq \mathcal{E}$ は，電場の運動エネルギーが定義されている辺の集合，
-$\mathcal{P}$は，プラケットの集合である．
-物理的な自由度は辺の上に定義され，$0,1/2,\cdots, k/2$ の $(k+1)$ 状態を取る．
-つまり，辺にスピン $k/2$ を持ったスピン系のように思って良い．
-$Q(v)$ はペナルティ項で，頂点 $v=(a,b,c)$ につながる辺 $a,b,c$ の状態を $\ket*{j_aj_bj_c}$ とすると，
+
+全体の Hilbert 空間は，
 
 $$
-  Q(v)\ket*{j_aj_bj_c} = \delta_{abc}\ket*{j_aj_bj_c}
+\mathcal{H} =\bigotimes_{e\in\mathcal{E}}\mathcal{H}_e\bigotimes_{v\in\mathcal{V}}\mathcal{H}_v^{\mathrm{mult}}
 $$
 
-である．ここで $\delta_{abc}$ は，式 (@eq-fusion_q) で定義されている．
-これは Gauss の拘束条件に対応する項である．
+で与えられ，その基底は
 
-ハミルトニアンに含まれる演算子の状態への作用をグラフフィカルに表現すると
+$$
+\ket{\bm{a},\bm{\mu}}=\bigotimes_{e\in\mathcal{E}}\ket{a_e}\bigotimes_{v\in\mathcal{V}}\ket{\mu_v}
+$$
+
+と表される．
+これにより，局所的な Hilbert 空間上に理論を構成できる．
+
+$\mathrm{SU}(2)_k$ の場合，表現は $0, {1}/{2}, \dots, k/2$ の $(k+1)$ 状態を取り，多重度ラベルは不要である．
+したがって，辺にスピン $k/2$ を持つスピン系とみなすことができる．
+
+この構成では余分な自由度を導入するため Hilbert 空間は大きくなるが，
+もとの基底 $\ket{a,m_a,n_a}$ と比べて $m_a$ や $n_a$ の自由度が不要な分，十分に小さく抑えられている．
+
+#### ペナルティ項の定義
+
+ペナルティ項は、各頂点で Clebsch–Gordan 係数が消えない部分空間への射影 $Q_v$ を用いて定義される．
+
+$$
+\delta_{ab}^{c,\mu} = 
+\begin{cases}
+1 & \text{if $1 \leq \mu \leq N_{ab}^c$}\\
+0 & \text{else}
+\end{cases}
+$$
+
+を用いて，$Q_v$ を
 
 ::: {.content-visible when-format=html}
 <div markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
-  $$ E^2 $$
+    $$Q_v \quad $$
   </span>
-  <img src="figs/a.svg" style="height:5.0em;">
+  <img src="figs/cabmu.svg" style="height:5.5em;">
   <span class="math display" style="display:inline-block;">
-    $$=[j_a][j_a+1]$$
+    $$=\delta_{ab}^{c,\mu}$$
   </span>
-    <img src="figs/a.svg" style="height:5.0em;">
-</div>
-$$ $${#eq-action_electric_field}
-:::
-
-::: {.content-visible when-format=pdf}
-$$
-  E^2 \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-  = [j_a][j_a+1] 
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}},
-$${#eq-action_electric_field}
-:::
-
-
-<!-- ::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/a.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$= \braket{j_b n_b}{j_a m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}$$
-  </span>
+    <img src="figs/cabmu.svg" style="height:5.5em;">
 </div>
 :::
 
 ::: {.content-visible when-format=pdf}
 $$
-   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-  = \braket{j_b n_b}{j_a m_a} = \delta^{j_b}_{j_a}\delta^{n_b}_{m_a}
+  Q_v \quad \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cabmu.pdf}}}
+  =\delta_{ab}^{c,\mu}\vcenter{\hbox{\includegraphics[scale=0.3]{figs/cabmu.pdf}}},
 $$
-::: -->
+:::
+
+
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
-    $$Q$$
+    $$Q_v$$
   </span>
-  <img src="figs/abc.svg" style="height:5.0em;">
+  <img src="figs/abcmu.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
-    $$=\delta_{abc} $$
+    $$=\delta_{ab}^{c,\mu}$$
   </span>
-  <img src="figs/abc.svg" style="height:5.0em;">
+  <img src="figs/abcmu.svg" style="height:5.0em;">
 </div>
 :::
 
 ::: {.content-visible when-format=pdf}
 $$
-  Q \quad \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abc.pdf}}}
-  =\delta_{abc}\vcenter{\hbox{\includegraphics[scale=0.3]{figs/abc.pdf}}},
+  Q_v \quad \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abcmu.pdf}}}
+  =\delta_{ab}^{c,\mu}\vcenter{\hbox{\includegraphics[scale=0.3]{figs/abcmu.pdf}}},
 $$
 :::
 
+となるように定義する．
+$Q(v)$ はすべての $Q(v')$, $E^2(e)$, $\tr U_a(p)$ と可換で，ハミルトニアンとも可換である．
+すべての頂点で，$Q(v)=1$ となる状態が物理的な状態に対応する．
 
-::: {.content-visible when-format=html}
-<div markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <span class="math display" style="display:inline-block;">
-    $$Q \quad $$
-  </span>
-  <img src="figs/cab.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$=\delta_{abc}$$
-  </span>
-    <img src="figs/cab.svg" style="height:5.5em;">
-</div>
-:::
+#### ペナルティ項の導入
 
-::: {.content-visible when-format=pdf}
+ペナルティ項として，$-\lambda\sum_{v}Q_v$ をハミルトニアンに追加し，
+
 $$
-  Q \quad \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cab.pdf}}}
-  =\delta_{abc}\vcenter{\hbox{\includegraphics[scale=0.3]{figs/cab.pdf}}},
+H \to H - \lambda\sum_{v}Q_v
 $$
-:::
 
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <span class="math display" style="display:inline-block;">
-    $$ \tr U $$
-  </span>
-  <img src="figs/plaquetteAction0.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$ =\prod_{i=1}^{4} \sum_{b_{i}}
-       [F_{b_{i}}^{c_{i}a_{i-1}\frac{1}{2}}]_{a_{i}b_{i-1}} $$
-  </span>
-  <img src="figs/plaquetteAction5.svg" style="height:5.5em;">
-</div>
-$$ $$ {#eq-Wilson_loop_action}
-:::
+$\lambda$ が十分大きいところでシミュレーションすることで，ほしい物理状態に制限することができる．
 
-::: {.content-visible when-format=pdf}
-$$
-  \tr U \quad
-       \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction0.pdf}}}
-       =\prod_{i=1}^{4} \sum_{b_{i}}
-       [F_{b_{i}}^{c_{i}a_{i-1}\frac{1}{2}}]_{a_{i}b_{i-1}}
-         \vcenter{\hbox{\\includegraphics[scale=0.3]{figs/plaquetteAction5.pdf}}}
-$$ {#eq-Wilson_loop_action}
-:::
+この模型で，電場項を落とすと，Levin-Wen 模型 [@Levin:2004mi] に帰着する．
 
-となる．
-$Q(v)$ はすべての $Q(v')$, $E^2(e)$, $\tr U(p)$ と可換で，ハミルトニアンとも可換である．
-したがって状態は $Q(v)$ の固有値でラベルすることができる．$Q(v)$ の固有値がすべて $1$ である状態が物理状態に対応する．
