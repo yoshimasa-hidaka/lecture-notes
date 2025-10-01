@@ -1,21 +1,21 @@
 
 # q変形 {#sec-q_deformation}
 
-$q$変形に関する参考文献として [@Bonatsos:1999xj,@Ardonne2010ClebschGordanA6] を上げておく．
+$q$ 変形に関する参考文献として [@Bonatsos:1999xj,@Ardonne2010ClebschGordanA6] を上げておく．
 表現をカットオフしたゲージ理論で性質の良いものは，$q$ 変形された量子群を考えることに対応する．
-ここでは，本稿で用いた$q$変形について簡単に紹介する．
+ここでは，本稿で用いた $q$ 変形について簡単に紹介する．
 
 ## セミシンプルLie代数
 
 まず一般のセミシンプルLie代数 $\mathfrak{g}$ の量子群変形を考えよう．
-$\mathfrak{g}$のルートベクトルを $\symbf{\alpha}_i$  とする．
+$\mathfrak{g}$ のルートベクトルを $\symbf{\alpha}_i$ とする．
 生成子 $H_i$, $L_i^\pm$ の交換関係を Chevalley 基底を用いて，
 
 $$
   [H_i,H_j]=0,\quad
   [H_i,L_j^\pm] = \pm A_{ij}L_{j}^\pm,\quad
   [L_i^+,L_j^-]=\delta_{ij}[H_i]_{q_i}
-$${#eq-q_algebra}
+$$ {#eq-q_algebra}
 
 とする．これらは，
 $i\neq j$ について， Serre 関係式
@@ -42,13 +42,17 @@ $$
   t_j=\frac{2}{(\symbf{\alpha}_j,\symbf{\alpha}_j)}
 $$
 
-で定義されている．ただし，$(\symbf{\alpha}_j,\symbf{\alpha}_j)$ は，規格化に一般にルートベクトルの依存するが，ここでは，最高次のルートベクトル(随伴表現のhighest weight vector)を $\theta$ としたとき，$(\theta,\theta)=2$ と規格化してあるものとする．
-$g$ をdual Coxeter 数\footnote{コルートを $\symbf{\alpha}^{\lor}_i=2\symbf{\alpha}_i/(\symbf{\alpha}_i,\symbf{\alpha}_i)$ と定義する．すると $a_i^{\lor}$ を非負の整数として，$\theta=\sum_{i=1}^ra_i^{\lor}\symbf{\alpha}^{\lor}_i$ と展開できる．ここで，$r$ は，Lie代数のランクである．dual Coxeter 数は $g\coloneqq\sum_{i=1}^r a^{\lor}_{i}+1$ と定義される．}として，$q$ は，
+で定義されている．
+ただし，$(\symbf{\alpha}_j,\symbf{\alpha}_j)$ は，規格化に一般にルートベクトルの依存するが，ここでは，最高次のルートベクトル(随伴表現のhighest weight vector)を $\theta$ としたとき，$(\theta,\theta)=2$ と規格化してあるものとする．
+$g$ をdual Coxeter 数\footnote{コルートを $\symbf{\alpha}^{\lor}_i=2\symbf{\alpha}_i/(\symbf{\alpha}_i,\symbf{\alpha}_i)$ と定義する．
+すると $a_i^{\lor}$ を非負の整数として，$\theta=\sum_{i=1}^ra_i^{\lor}\symbf{\alpha}^{\lor}_i$ と展開できる．
+ここで，$r$ は，Lie代数のランクである．dual Coxeter 数は $g\coloneqq\sum_{i=1}^r a^{\lor}_{i}+1$ と定義される．}として，$q$ は，
 $$
   q\coloneqq e^{\frac{2\pi\ri}{k+g}}
 $$
 
-で定義される．添字付きは $q_i\coloneqq q^{1/t_i}$ とする．
+で定義される．
+添字付きは $q_i\coloneqq q^{1/t_i}$ とする．
 $[n]_{q_i}$ は，
 
 $$
@@ -86,13 +90,13 @@ $$
 
 $$
   ( \Delta\otimes1)\Delta=(1\otimes \Delta)\Delta
-$${#eq-coassociativity}
+$$ {#eq-coassociativity}
 
 を満たす．
 
 \begin{question}
-  式 (@eq-coassociativity)を$L_i^\pm$の場合に確かめよ．
-  つまり，$( \Delta\otimes1)\Delta(L_i^\pm)=(1\otimes \Delta)\Delta(L_i^\pm)$を示せ．
+  式 (@eq-coassociativity) を $L_i^\pm$ の場合に確かめよ．
+  つまり，$(\Delta\otimes1)\Delta(L_i^\pm)=(1\otimes \Delta)\Delta(L_i^\pm)$ を示せ．
 \end{question}
 <!-- 
 
@@ -159,7 +163,7 @@ $$
 として，
 
 $$
-  [n]\coloneqq  \frac{q^{\frac{n}{2}}-q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}}=\frac{\sin\qty(\frac{\pi}{k+2}n)}{\sin\qty(\frac{\pi}{k+2})}
+  [n]\coloneqq  \frac{q^{\frac{n}{2}} - q^{-\frac{n}{2}}}{q^{\frac{1}{2}}-q^{-\frac{1}{2}}} = \frac{\sin\qty(\frac{\pi}{k+2}n)}{\sin\qty(\frac{\pi}{k+2})}
 $$
 
 となる．$J_0=H_0/A$, $J_\pm=L^\pm$ とすると，

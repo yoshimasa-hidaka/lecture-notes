@@ -1,17 +1,17 @@
-# 平均場近似による解析 {#sec-mean_field}
+# 変分波動関数を用いた解析 {#sec-mean_field}
 
-ここでは，平均場近似による解析手法を紹介しよう．
+ここでは，変分波動関数を用いた解析手法を紹介しよう．
 
 ## ハミルトニアン
 
 $\mathrm{SU}(3)_k$ Yang-Mills 理論のハミルトニアンは，
 
 $$
-  H = \frac{1}{2}\sum_{e\in {\tilde{\mathcal{E}}}} E^2(e) - \frac{K}{2} \sum_{f\in \mathcal{P}}\qty( \tr U_{(1,0)} (f)+\tr U_{(0,1)} (f) )
+  H = \frac{1}{2}\sum_{e\in {{\mathcal{E}}}} E^2(e) - \frac{K}{2} \sum_{p\in \mathcal{P}}\qty( \tr U (p)+\tr U^\dag (p) )
 $$ {#eq-HamiltonianSU3}
 
-で与えられる．ここで， $\tilde{\mathcal{E}}\subset\mathcal{E}$ は電場が作用する辺の集合で $\mathcal{P}$ はプラケットの集合である．
-$E^2_i(e)$ は電場の2乗で $\tr U_{(1,0)} (p)$ は基本表現の Wilson ループである．$K$ は結合定数で，通常の結合定数 $g$ とは $K=1/g^4$ の関係にある．
+で与えられる．ここで， ${\mathcal{E}}$ は電場が作用する辺の集合で $\mathcal{P}$ はプラケットの集合である．
+$E^2(e)$ は電場の2乗で $\tr U (p)$ は基本表現の Wilson ループである．$K$ は結合定数で，通常の結合定数 $g$ とは $K=1/g^4$ の関係にある．
 演算子の状態への作用は，以下で与えられる.
 $E^2$ 項については，
 
@@ -26,15 +26,15 @@ $E^2$ 項については，
   </span>
   <img src="figs/a.svg" style="height:5.5em;">
 </div>
+$$ $$ {#eq-action_electric_field_su3}
 :::
 
 ::: {.content-visible when-format=pdf}
 $$
-  E_i^2 \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
+  E^2 \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
   = C_2(a)\
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-  \label{eq-action_electric_field_su3}
-$$
+$$ {#eq-action_electric_field_su3}
 :::
 
 である．ここで， $C_2(a)$ は2次の Casimir 不変量で，式 (@eq-C2_su3) で与えられる．一方，Wilson ループ $\tr U_{d}$ の作用は，
@@ -77,7 +77,7 @@ $$
 変分波動関数として，以下の形を仮定する [@Dusuel:2015sta; @Zache:2023dko; @Hayata:2023bgh]．
 
 $$
-|\Psi\rangle=\prod_{f\in \mathcal{P}} \sum_{a_f}\psi(a_f)\tr U_{a_f}(f)\ket{0} \,.
+|\Psi\rangle=\prod_{p\in \mathcal{P}} \sum_{a_p}\psi(a_p)\tr U_{a_p}(p)\ket{0} \,.
 $$ {#eq-wavefunction}
 
 ここで，$\ket{0}$ は強結合極限の真空である．変分関数 $\psi(a)$ は，$\langle\Psi|\Psi\rangle=1$ となるように $\sum_a |\psi(a)|^2=1$ で規格化されされている．
@@ -92,35 +92,35 @@ $$
   \begin{split}
     &\expval{\tr U_d(\partial S)}\\
     &= 
-    \bra{0}\tr U_{d}(\partial S)\qty(\prod_{f\in \mathcal{P}} \sum_{a_f,b_f}\psi^*(a_f)\psi(b_f)\tr U_{\bar{a}_f}(f)\tr U_{b_f}(f))\ket{0}\\
+    \bra{0}\tr U_{d}(\partial S)\qty(\prod_{f\in \mathcal{P}} \sum_{a_p,b_p}\psi^*(a_p)\psi(b_p)\tr U_{\bar{a}_p}(p)\tr U_{b_p}(p))\ket{0}\\
     &= 
     \sum_{\{a\},\{b\},\{c\}}\qty(\prod_{p'\in\mathcal{P}}\psi^*(a_{p'})\psi(b_{p'})N_{\bar{a}_{p'}b_{p'}}^{c_{p'}})
-    \bra{0}\tr U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_f}(f)\ket{0}
+    \bra{0}\tr U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}
   \end{split}
 $${#eq-expvalue_Wilson_loop}
 
 の形を取る．ここで，表記として，
 
 $$
-  \sum_{\{a\}}=\prod_{f\in\mathcal{P}}\sum_{a_f}
+  \sum_{\{a\}}=\prod_{f\in\mathcal{P}}\sum_{a_p}
 $$
 
 を導入した．
 <!-- % We repeatedly used the fact that all Wilson loops commute with each other. We also used  
 % \begin{align}
-%   \tr U_{b_f}(f)\ket{0} =\  
+%   \tr U_{b_p}(p)\ket{0} =\  
 \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loopbf.pdf}}},
 % \end{align} -->
 非自明な計算は，
 
 $$
-  \bra{0}\tr U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_f}(f)\ket{0}
+  \bra{0}\tr U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}
 $$
 
 の評価である．このために，まず，
 
 $$
-  \tr U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_f}(f)\ket{0} 
+  \tr U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0} 
 $${#eq-state}
 
 を考え，この状態に $\bra{0}$ を作用させることを考える．
@@ -129,7 +129,7 @@ $${#eq-state}
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
-    $$= U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_f}(f)\ket{0}$$
+    $$= U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}$$
   </span>
   <img src="figs/large_Wilson_loop1.svg" style="height:5.5em;">
 </div>
@@ -138,7 +138,7 @@ $${#eq-state}
 ::: {.content-visible when-format=pdf}
 $$
   \begin{split}
-    U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_f}(f)\ket{0}=\ \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop1.pdf}}}
+    U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}=\ \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop1.pdf}}}
   \end{split}
 $$ {#eq-action_Wilson_loop}
 :::
@@ -288,7 +288,7 @@ $$
   \begin{split}
     \expval{\tr U_d(\partial S)}
     &= 
-    d_d\prod_{f\in S} \sum_{a_f,b_f,c_f}\psi^*(a_f)\psi(b_f)N_{\bar{a}_fb_f}^{c_f}\frac{\delta_{c_f}^{\bar{d}}}{d_d}\\
+    d_d\prod_{f\in S} \sum_{a_p,b_p,c_p}\psi^*(a_p)\psi(b_p)N_{\bar{a}_pb_p}^{c_p}\frac{\delta_{c_p}^{\bar{d}}}{d_d}\\
     &=
     d_d\qty(\frac{\sum_{a,b}N_{db}^{a}\psi^*(a)\psi(b)}{d_d})^{|S|}\\
     &=d_d\exp(-|S|\sigma_d)
@@ -309,7 +309,7 @@ $${#eq-stringtension}
 式 (@eq-wilsonloop_vev) を用いると，プラケットに作用するWilson loopはの期待値は，
 
 $$
-  \expval{\tr U_{(1,0)}(f)}{\Psi}=
+  \expval{\tr U(p)}{\Psi}=
   \sum_{a,b}M_{ab}\psi^*(a)\psi(b)
 $$ {#eq-exp_trU10}
 
@@ -317,7 +317,7 @@ $$ {#eq-exp_trU10}
 Wilson ループの期待値の計算と同様の方法で，$\expval{E^2(e)}$ の期待値を評価する:
 $$
   \begin{split}
-    \expval{E_i^2(e)}&=
+    \expval{E^2(e)}&=
     \sum_{a,b,a',b'}\psi^*(a')\psi^*(b')\psi(a)\psi(b)
     \bra{0} \tr U_{\bar{a}'}(p)\tr U_{\bar{b}'}(p') E^2(e)\tr U_{{a}}(p)\tr U_{b}(p')\ket{0}.
   \end{split}
@@ -372,7 +372,7 @@ $$
 :::
 
 となる．1行目，2行目で，
-式 (@eq-partition)，(@eq-action_electric_field) をそれぞれ用いた．
+式 (@eq-partition)，(@eq-action_electric_field_su3) をそれぞれ用いた．
 次にこれらのプラケットにWilson ループを作用させ，期待値を評価すると，
 
 ::: {.content-visible when-format=html}
