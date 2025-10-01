@@ -1,4 +1,4 @@
-## $\mathrm{SU}(N)$群 　{#sec-sun}
+# 一般の群とその表現 　{#sec-sun}
 
 $\mathrm{SU}(2)$群でみてきたものを $\mathrm{SU}(N)$群に拡張する．
 
