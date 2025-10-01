@@ -4,14 +4,14 @@
 
 ## ハミルトニアン
 
-$\mathrm{SU}(3)_k$ Yang-Mills 理論のハミルトニアンは，
+Yang-Mills 理論のハミルトニアンは，
 
 $$
-  H = \frac{1}{2}\sum_{e\in {{\mathcal{E}}}} E^2(e) - \frac{K}{2} \sum_{p\in \mathcal{P}}\qty( \tr U (p)+\tr U^\dag (p) )
+  H = \frac{1}{2}\sum_{e\in {{\mathcal{E}}}} E^2(e) - \frac{K}{2} \sum_{p\in \mathcal{P}}\qty( \tr U_f (p)+\tr U_{\bar{f}} (p) )
 $$ {#eq-HamiltonianSU3}
 
 で与えられる．ここで， ${\mathcal{E}}$ は電場が作用する辺の集合で $\mathcal{P}$ はプラケットの集合である．
-$E^2(e)$ は電場の2乗で $\tr U (p)$ は基本表現の Wilson ループである．$K$ は結合定数で，通常の結合定数 $g$ とは $K=1/g^4$ の関係にある．
+$E^2(e)$ は電場の2乗で $\tr U (p)$ は表現 $f$ の Wilson ループである．$K$ は結合定数である．
 演算子の状態への作用は，以下で与えられる.
 $E^2$ 項については，
 
@@ -37,7 +37,7 @@ $$
 $$ {#eq-action_electric_field_su3}
 :::
 
-である．ここで， $C_2(a)$ は2次の Casimir 不変量で，式 (@eq-C2_su3) で与えられる．一方，Wilson ループ $\tr U_{d}$ の作用は，
+である．ここで， $C_2(a)$ は2次の Casimir 不変量である．一方，Wilson ループ $\tr U_{d}$ の作用は，
 
 
 ::: {.content-visible when-format=html}
@@ -45,12 +45,12 @@ $$ {#eq-action_electric_field_su3}
   <span class="math display" style="display:inline-block;">
     $$\tr U_{d}$$
   </span>
-  <img src="figs/plaquetteAction0_su3.svg" style="height:6.5em;">
+  <img src="figs/plaquetteAction0_su3.svg" style="height:7.0em;">
   <span class="math display" style="display:inline-block;">
     $$ =\sum_{\{a'_{i},\mu'_i\}}\prod_{i=1}^{6}
        [F_{a'_{i}}^{c_{i}a_{i-1}d}]_{(a_{i},\mu_i,\mu_{i+1}),({a'}_{i-1},\mu'_{i-1},\mu'_{i})}$$
   </span>
-  <img src="figs/plaquetteAction2_su3.svg" style="height:5.5em;">
+  <img src="figs/plaquetteAction2_su3.svg" style="height:7.0em;">
 </div>
 :::
 
@@ -309,11 +309,11 @@ $${#eq-stringtension}
 式 (@eq-wilsonloop_vev) を用いると，プラケットに作用するWilson loopはの期待値は，
 
 $$
-  \expval{\tr U(p)}{\Psi}=
-  \sum_{a,b}M_{ab}\psi^*(a)\psi(b)
+  \expval{\tr U_f(p)}{\Psi}=
+  \sum_{a,b}N^a_{fb}\psi^*(a)\psi(b)
 $$ {#eq-exp_trU10}
 
-と表せる．ここで，$M_{ab}=N_{(1,0)b}^{a}$ を定義した．
+と表せる．
 Wilson ループの期待値の計算と同様の方法で，$\expval{E^2(e)}$ の期待値を評価する:
 $$
   \begin{split}
@@ -428,7 +428,7 @@ $$
   \mathcal{H}&=\frac{1}{V}\expval{H}
   \\
   &=   \sum_{a,b,c} C_2(c)N^{c}_{\bar{a}b}\frac{d_{c}}{d_{a}d_{b}} |\psi(a)|^2|\psi(b)|^2
-- \frac{K}{2}\sum_{a,b}\psi^*(a)\left(M_{ab}+M^\dagger_{ab}\right)\psi(b)
+- \frac{K}{2}\sum_{a,b}\psi^*(a)\left(N^a_{fb}+N^a_{\bar{f}b}\right)\psi(b)
   \label{eq-Hamiltonian_one_plaquette_su3}
 \end{split}
 $$
