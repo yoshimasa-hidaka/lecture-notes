@@ -1143,19 +1143,315 @@ $$
   <span class="math display" style="display:inline-block;">
     $$\psi^\dag_n U^n_m\psi^m$$
   </span>
-  <img src="figs/.svg" style="height:3.5em;">
+  <img src="figs/vq.svg" style="height:3.5em;">
     <!-- 行区切り-->
   <span style="flex-basis:100%; height:0;"></span>
 
   <span class="math display" style="display:inline-block;">
     $$=$$
   </span>
-  <img src="figs/.svg" style="height:3.5em;">
+  <img src="figs/qv.svg" style="height:3.5em;">
   <span class="math display" style="display:inline-block;">
     $$\,,$$
   </span>
 </div>
 
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$\psi^\dag_n U^n_m\psi^m$$
+  </span>
+  <img src="figs/qq.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/dv.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$\psi^\dag_n U^n_m\psi^m$$
+  </span>
+  <img src="figs/dq.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/Bv.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$\psi^\dag_n U^n_m\psi^m$$
+  </span>
+  <img src="figs/vd.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/qq.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$\psi^\dag_n U^n_m\psi^m$$
+  </span>
+  <img src="figs/qd.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/dq.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$\psi^\dag_n U^n_m\psi^m$$
+  </span>
+  <img src="figs/dd.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/Bq.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$\psi^\dag_n U^n_m\psi^m$$
+  </span>
+  <img src="figs/vB.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/qd.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$\psi^\dag_n U^n_m\psi^m$$
+  </span>
+  <img src="figs/qB.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/dd.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$\psi^\dag_n U^n_m\psi^m$$
+  </span>
+  <img src="figs/dB.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/Bd.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+:::
+
+および，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+  </span>
+  <img src="figs/qv.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/vq.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+  </span>
+  <img src="figs/dv.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/qq.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+  </span>
+  <img src="figs/Bv.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/dq.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+  </span>
+  <img src="figs/qq.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/vd.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+  </span>
+  <img src="figs/dq.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/qd.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+  </span>
+  <img src="figs/Bq.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/dd.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+  </span>
+  <img src="figs/qd.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/vB.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+  </span>
+  <img src="figs/dd.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/qB.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <span class="math display" style="display:inline-block;">
+    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+  </span>
+  <img src="figs/Bd.svg" style="height:3.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$=$$
+  </span>
+  <img src="figs/dB.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,,$$
+  </span>
+</div>
+
+
+:::
 
 
 ::: {.content-visible when-format=pdf}
@@ -1176,6 +1472,7 @@ $$
 %
    \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vd.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}},\\
+%   
    \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
@@ -1189,9 +1486,11 @@ $$
    \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}},\notag\\
+%   
    \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qB.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}},\\
+%   
    \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dB.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bd.pdf}}}.
