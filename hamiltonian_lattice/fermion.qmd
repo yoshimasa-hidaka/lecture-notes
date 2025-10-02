@@ -1030,7 +1030,8 @@ plt.show()
 
 ## $\mathrm{SU}(3)$
 
- $\mathrm{SU}(3)$ゲージ理論に基本表現のフェルミオンを導入しよう．
+ 次に，$\mathrm{SU}(3)$ の場合を考えよう．
+
  $\psi^\dag_n$, $[d^\dag]^l=\epsilon^{lmn}\psi^\dag_m\psi^\dag_n/2$, $B^\dag =\epsilon^{mnl}\psi_m^\dag \psi_n^\dag \psi_l^\dag/3!$.
 
 $$
