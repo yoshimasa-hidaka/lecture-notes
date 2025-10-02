@@ -4,16 +4,17 @@
 
 ## ハミルトニアン
 
-Yang-Mills 理論のハミルトニアンは，
+ここでは $(2+1)$ 次元，一般のコンパクト Lie 群ゲージ理論を考える．
+ハミルトニアンは次で与えられる：
 
 $$
-  H = \frac{1}{2}\sum_{e\in {{\mathcal{E}}}} E^2(e) - \frac{K}{2} \sum_{p\in \mathcal{P}}\qty( \tr U_f (p)+\tr U_{\bar{f}} (p) )
-$$ {#eq-HamiltonianSU3}
+  H = \frac{1}{2}\sum_{e\in {{\mathcal{E}}}} E^2(e) - \frac{K}{2} \sum_{p\in \mathcal{P}}\qty( \tr U_f (p)+\tr U_{\bar{f}} (p) )\,.
+$$ {#eq-Hamiltonian_general}
 
-で与えられる．ここで， ${\mathcal{E}}$ は電場が作用する辺の集合で $\mathcal{P}$ はプラケットの集合である．
-$E^2(e)$ は電場の2乗で $\tr U (p)$ は表現 $f$ の Wilson ループである．$K$ は結合定数である．
-演算子の状態への作用は，以下で与えられる.
-$E^2$ 項については，
+ここで， ${\mathcal{E}}$ は電場が作用する辺の集合で $\mathcal{P}$ はプラケットの集合である．
+$E^2(e)$ は電場の2乗で $\tr U_f (p)$ は表現 $f$ の Wilson ループである．$K$ は結合定数である．
+
+演算子の状態への作用は，以下で与えられる：
 
 ::: {.content-visible when-format=html}
 <div  style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -26,7 +27,7 @@ $E^2$ 項については，
   </span>
   <img src="figs/a.svg" style="height:5.5em;">
 </div>
-$$ $$ {#eq-action_electric_field_su3}
+$$ $$ {#eq-action_electric_field_general}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -34,11 +35,8 @@ $$
   E^2 \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
   = C_2(a)\
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-$$ {#eq-action_electric_field_su3}
+$$ {#eq-action_electric_field_general}
 :::
-
-である．ここで， $C_2(a)$ は2次の Casimir 不変量である．一方，Wilson ループ $\tr U_{d}$ の作用は，
-
 
 ::: {.content-visible when-format=html}
 <div  style="display:flex; align-items:center; justify-content:center; gap:1em;">
@@ -65,23 +63,22 @@ $$
 $$
 :::
 
-
-となる．ここで， $a'_0=a'_6$, $\mu_0=\mu_6$, $\mu'_0=\mu'_6$, および $\mu'_7=\mu'_1$ である．
-
+となる．
+ここで， $a'_0=a'_6$, $\mu_0=\mu_6$, $\mu'_0=\mu'_6$, および $\mu'_7=\mu'_1$ である．
+また，$C_2(a)$ は2次の Casimir 不変量である．
 
 
 
 ## 平均場波動関数
 
-ここで用いる波動関数は　$(2+1)$　次元系では，閉じ込め相と非閉じ込め相の両方を記述する波動関数である．
-変分波動関数として，以下の形を仮定する [@Dusuel:2015sta; @Zache:2023dko; @Hayata:2023bgh]．
+ここで用いる波動関数は，$(2+1)$ 次元系において閉じ込め相と非閉じ込め相の両方を記述できるものである．
+変分波動関数として，以下の形を仮定する [@Dusuel:2015sta; @Zache:2023dko; @Hayata:2023bgh]：
 
 $$
 |\Psi\rangle=\prod_{p\in \mathcal{P}} \sum_{a_p}\psi(a_p)\tr U_{a_p}(p)\ket{0} \,.
 $$ {#eq-wavefunction}
-
-ここで，$\ket{0}$ は強結合極限の真空である．変分関数 $\psi(a)$ は，$\langle\Psi|\Psi\rangle=1$ となるように $\sum_a |\psi(a)|^2=1$ で規格化されされている．
-空間体積無限大を考え，境界条件として開放端境界条件を置く．
+ここで，$\ket{0}$ は強結合極限における真空状態である． 変分関数 $\psi(a)$ は規格化条件 $\langle\Psi|\Psi\rangle=1$ となるように $\sum_a |\psi(a)|^2=1$ で規格化されている．
+さらに，空間体積は無限大を仮定し，境界条件として開放端境界条件を課す：
 
 ## 物理量の期待値
 
@@ -305,7 +302,7 @@ $${#eq-stringtension}
 を表す．もし，$\sigma_d$ が有限であれば，Wilson ループの期待値は面積則を示す．
 一方，ストリングネット凝縮状態 $\psi(a)=d_a/\mathcal{D}$ [@Levin:2004mi] では，Wilson ループの期待値は定数となり，非閉じ込め相(トポロジカル相)になる．
 
-次にハミルトニアン (@eq-HamiltonianSU3) の期待値を考えよう．
+次にハミルトニアン (@eq-Hamiltonian_general) の期待値を考えよう．
 式 (@eq-wilsonloop_vev) を用いると，プラケットに作用するWilson loopはの期待値は，
 
 $$
@@ -429,7 +426,6 @@ $$
   \\
   &=   \sum_{a,b,c} C_2(c)N^{c}_{\bar{a}b}\frac{d_{c}}{d_{a}d_{b}} |\psi(a)|^2|\psi(b)|^2
 - \frac{K}{2}\sum_{a,b}\psi^*(a)\left(N^a_{fb}+N^a_{\bar{f}b}\right)\psi(b)
-  \label{eq-Hamiltonian_one_plaquette_su3}
 \end{split}
 $$
 

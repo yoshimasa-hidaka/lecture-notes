@@ -808,7 +808,7 @@ $$
 \end{align}
 :::
 
-となる．各セクターの Hilbert 空間次元は，$B=\pm 1$ で $1$ $B=0$ で　$3$ である．
+となる．各セクターの Hilbert 空間次元は，$B=\pm 1$ で $1$，$B=0$ で $3$ である．
 まず，$B=\pm1$ にハミルトニアンを作用させると
 
 ::: {.content-visible when-format=html}
@@ -1031,8 +1031,30 @@ plt.show()
 ## $\mathrm{SU}(3)$
 
  次に，$\mathrm{SU}(3)$ の場合を考えよう．
+局所的な状態は8通り存在し，
 
- $\psi^\dag_n$, $[d^\dag]^l=\epsilon^{lmn}\psi^\dag_m\psi^\dag_n/2$, $B^\dag =\epsilon^{mnl}\psi_m^\dag \psi_n^\dag \psi_l^\dag/3!$.
+$$
+\begin{aligned}
+\ket{0} &\,,\\
+\ket{_n} &= \psi^\dag_n\ket{0}\,,\\
+\ket{^n} &= [d^\dag]^n\ket{0}\,,\\
+\ket{B} &= B^\dag \ket{0}\,,\\
+\end{aligned}
+$$
+
+であり，それぞれ　$\bm{1}$，$\bm{3}$, $\bar{\bm{3}}$, $\bm{1}$ の表現に対応する．
+ここで，$\ket{0}$ は，$\psi_n\ket{0}=0$ となる状態である．
+演算子は次のように定義する：
+
+$$
+[d^\dag]^l=\epsilon^{lmn}\psi^\dag_m\psi^\dag_n/2\,,
+$$
+
+$$
+ B^\dag =\epsilon^{mnl}\psi_m^\dag \psi_n^\dag \psi_l^\dag/3!\,.
+ $$
+
+演算子の積は次を満たす：
 
 $$
    \psi_n^\dag\psi_m^\dag = \epsilon_{nml}[d^\dag]^l \,,
@@ -1054,6 +1076,9 @@ $$
    \psi^n B^\dag   \sim  [d^\dag]^n \,.
 $$
 
+ここで，$\sim$ は，これらの関係が $\ket{0}$ に作用させたときに等しくなることを意味する．
+ゲージ場を繋いだ状態をグラフィカルに表現すると，以下のようになる：
+
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
@@ -1067,7 +1092,7 @@ $$
   <span class="math display" style="display:inline-block;">
     $$,\qquad \text{baryon}$$
   </span>
-  <img src="figs/baryon.svg" style="height:3.em;">
+  <img src="figs/baryon.svg" style="height:2.0em;">
   <span class="math display" style="display:inline-block;">
     $$\,.$$
   </span>
@@ -1083,7 +1108,7 @@ $$
 :::
 
 
- これらの関係を用いると，フェルミオンの合成ルールは，グラフィカルに
+さらに，これらのフェルミオンの合成ルールは，次のように図式的に表現できる：
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
@@ -1111,11 +1136,14 @@ $$
   <span class="math display" style="display:inline-block;">
     $,\qquad$
   </span>
-  <img src="figs/diquark.svg" style="height:3.5em;">
+  <img src="figs/diquark.svg" style="height:2.0em;">
   <span class="math display" style="display:inline-block;">
     $$\Rightarrow \frac{\sqrt{2}}{\sqrt{3}}$$
   </span>
   <img src="figs/split_diquarks.svg" style="height:3.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$\,.$$
+  </span>
 </div>
 :::
 
@@ -1135,7 +1163,8 @@ $$
  \end{align}
 :::
 
- と表される．
+
+ 以下，未完成．
 
 
 
