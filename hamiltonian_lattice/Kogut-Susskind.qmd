@@ -414,6 +414,7 @@ $$
   </span>
   <img src="figs/a.svg" style="height:5.0em;">
 </div>
+$$ $$ {#eq-action_electric_field}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -421,7 +422,7 @@ $$
   E^2 \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
   = C_2(a)
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-  \label{eq-action_electric_field_su3}
+  \label{eq-action_electric_field}
 $$
 :::
 
