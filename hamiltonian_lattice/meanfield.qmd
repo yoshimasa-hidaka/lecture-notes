@@ -4,7 +4,7 @@
 
 ## ハミルトニアン
 
-ここでは $(2+1)$ 次元，一般のコンパクト Lie 群ゲージ理論を考える．
+ここでは $(2+1)$ 次元，ハニカム格子状の一般の $q$ 変形されたコンパクト Lie 群ゲージ理論を考える．
 ハミルトニアンは次で与えられる：
 
 $$
@@ -12,16 +12,18 @@ $$
 $$ {#eq-Hamiltonian_general}
 
 ここで， ${\mathcal{E}}$ は電場が作用する辺の集合で $\mathcal{P}$ はプラケットの集合である．
-$E^2(e)$ は電場の2乗で $\tr U_f (p)$ は表現 $f$ の Wilson ループである．$K$ は結合定数である．
+$E^2(e)$ は電場の2乗で $\tr U_f (p)$ は表現 $f$ の Wilson ループである．
+ここで，表現は任意で，例えば基本表現を取れば良い．
+$K$ は結合定数である．
 
-演算子の状態への作用は，以下で与えられる：
+演算子の状態への作用は，以前と同じように以下で与えられる：
 
 ::: {.content-visible when-format=html}
 <div  style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <span class="math display" style="display:inline-block;">
     $$E^2 $$
   </span>
-  <img src="figs/a.svg" style="height:6.5em;">
+  <img src="figs/a.svg" style="height:5.5em;">
   <span class="math display" style="display:inline-block;">
     $$= C_2(a)$$
   </span>
@@ -35,7 +37,7 @@ $$
   E^2 \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
   = C_2(a)\
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a.pdf}}}
-$$ {#eq-action_electric_field_general}
+$$
 :::
 
 ::: {.content-visible when-format=html}
@@ -78,11 +80,11 @@ $$
 |\Psi\rangle=\prod_{p\in \mathcal{P}} \sum_{a_p}\psi(a_p)\tr U_{a_p}(p)\ket{0} \,.
 $$ {#eq-wavefunction}
 ここで，$\ket{0}$ は強結合極限における真空状態である． 変分関数 $\psi(a)$ は規格化条件 $\langle\Psi|\Psi\rangle=1$ となるように $\sum_a |\psi(a)|^2=1$ で規格化されている．
-さらに，空間体積は無限大を仮定し，境界条件として開放端境界条件を課す：
+さらに，空間体積は無限大を仮定し，境界条件として開放端境界条件を課す．
 
 ## 物理量の期待値
 
-この変分波動関数が得られたとして，物理量$O$の期待値を評価してみよう, $\expval{O}\coloneqq\expval{O}{\Psi}$.
+この変分波動関数が得られたとして，物理量 $O$ の期待値  $\expval{O}\coloneqq\expval{O}{\Psi}$ を評価してみよう.
 例としてWilson ループ $O=\tr U_d(\partial S)$ を考える．ここで，$\partial S$ は，$S$ で囲まれたループを意味する．期待値は，
 
 $$
@@ -94,9 +96,10 @@ $$
     \sum_{\{a\},\{b\},\{c\}}\qty(\prod_{p'\in\mathcal{P}}\psi^*(a_{p'})\psi(b_{p'})N_{\bar{a}_{p'}b_{p'}}^{c_{p'}})
     \bra{0}\tr U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}
   \end{split}
-$${#eq-expvalue_Wilson_loop}
+$$ {#eq-expvalue_Wilson_loop}
 
-の形を取る．ここで，表記として，
+の形を取る．ここで，2行目から3行目へは，式 (@eq-fusion_Wilson_loop) を用いた．
+また，表記として，
 
 $$
   \sum_{\{a\}}=\prod_{f\in\mathcal{P}}\sum_{a_p}
@@ -121,14 +124,14 @@ $$
 $${#eq-state}
 
 を考え，この状態に $\bra{0}$ を作用させることを考える．
-境界の小さい格子を用いて計算法を説明する．状態は，
+境界を持つ小さい格子を用いて計算法を説明する．状態は，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/large_Wilson_loop1.svg" style="height:5.5em;">
   <span class="math display" style="display:inline-block;">
     $$= U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}$$
   </span>
-  <img src="figs/large_Wilson_loop1.svg" style="height:5.5em;">
 </div>
 :::
 
@@ -189,7 +192,8 @@ $$
 $$
 :::
 
-と置き換えることができる．このプラケットの期待値 (@eq-expvalue_Wilson_loop) への寄与は，自明である:
+と置き換えることができる．矢印は，$\bra{0}$ を作用させた時に等号になる置き換えである．
+このプラケットの期待値 (@eq-expvalue_Wilson_loop) への寄与は，自明である:
 
 $$
   \sum_{a,b,c}\psi^*(a)\psi(b)N_{\bar{a}b}^{c}\delta_{c}^0
@@ -303,7 +307,7 @@ $${#eq-stringtension}
 一方，ストリングネット凝縮状態 $\psi(a)=d_a/\mathcal{D}$ [@Levin:2004mi] では，Wilson ループの期待値は定数となり，非閉じ込め相(トポロジカル相)になる．
 
 次にハミルトニアン (@eq-Hamiltonian_general) の期待値を考えよう．
-式 (@eq-wilsonloop_vev) を用いると，プラケットに作用するWilson loopはの期待値は，
+式 (@eq-wilsonloop_vev) を用いると，プラケットに作用するWilson ループの期待値は，
 
 $$
   \expval{\tr U_f(p)}{\Psi}=
@@ -311,7 +315,8 @@ $$
 $$ {#eq-exp_trU10}
 
 と表せる．
-Wilson ループの期待値の計算と同様の方法で，$\expval{E^2(e)}$ の期待値を評価する:
+
+Wilson ループの期待値の計算と同様の方法で，$\expval{E^2(e)}$ を評価する:
 $$
   \begin{split}
     \expval{E^2(e)}&=
@@ -340,15 +345,22 @@ $$
 に $E^2$ を作用させると
 
 ::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
     $$E^2(e)$$
   </span>
   <img src="figs/two_loops1.svg" style="height:4.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+
   <span class="math display" style="display:inline-block;">
     $$=\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}$$
   </span>
   <img src="figs/two_loops2.svg" style="height:4.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
   <span class="math display" style="display:inline-block;">
     $$=\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)$$
   </span>
@@ -369,22 +381,28 @@ $$
 :::
 
 となる．1行目，2行目で，
-式 (@eq-partition)，(@eq-action_electric_field_su3) をそれぞれ用いた．
+式 (@eq-partition)，(@eq-action_electric_field_general) をそれぞれ用いた．
 次にこれらのプラケットにWilson ループを作用させ，期待値を評価すると，
 
 ::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
     $$\tr U_{\bar{a}'}(p)\tr U_{\bar{b}'}(p') E^2(e)\tr U_{{a}}(p)\tr U_{b}(p')\ket{0}
     =\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)
     $$
   </span>
   <img src="figs/two_loops4.svg" style="height:4.5em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
   <span class="math display" style="display:inline-block;">
     $$\to\sum_{c,\mu}\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)
     \frac{\delta_{a}^{a'}\delta_{b}^{b'}}{d_ad_b}$$
   </span>
   <img src="figs/two_loops5.svg" style="height:4.5em;">
+      <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
   <span class="math display" style="display:inline-block;">
     $$=\sum_{c}N_{\bar{a}b}^c\frac{\sqrt{d_c}}{\sqrt{d_{\bar{a}}d_b}}C_2(c)\frac{\delta_{a}^{a'}\delta_{b}^{b'}}{d_ad_b}
     \frac{\sqrt{d_{{a}}d_c}}{\sqrt{d_b}}d_b$$

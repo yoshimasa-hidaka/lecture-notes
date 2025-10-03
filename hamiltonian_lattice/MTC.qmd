@@ -1,18 +1,21 @@
 ## Modular tensor categoryを用いたハミルトニアンゲージ理論
 
 これまでボトムアップ的に理論を構成してきたが，ここではトップダウン的に理論を構成する．
-ゲージ理論の構成に必要なデータとその代数は，
-unitary modular tensor category(UMTC)に含まれている. この代数は，トポロジカル秩序相を記述するエニオン模型でよく用いられる [@Kitaev:2005hzj].
+これまで扱った $q$ 変形された格子ゲージ理論の構成に必要なデータとその代数は，
+unitary modular tensor category (UMTC) に含まれている. 
+この代数は，トポロジカル秩序相を記述するエニオン模型でよく用いられる [@Kitaev:2005hzj].
 $\mathrm{SU}(2)_k$ ゲージ理論で見たように，UMTCは，ゲージ理論を記述する上でも有用である．
 ここでの表記は，参考文献 [@Barkeshli:2014cna] に準じている．
-<!-- % For more comprehensive details, see, e.g., references [@Kitaev:2005hzj,@Bonderson:2007ci]. -->
+<!-- For more comprehensive details, see, e.g., reference [@Bonderson:2007ci]. -->
 
-### String type 
+## 代数構造
 
-Wilson lineの表現に対応する自由度．本稿では，$a,b,c,\cdots$ で表現する．$\mathrm{SU}(2)_k$ ゲージ理論の場合は，角運動量 $j$ がそれに当たる．
-一般に $\mathrm{SU}(N)_k$ の場合は，最高ウェイトベクトルやDynkinラベルに対応する．
+#### String type 
 
-### String orientations
+Wilson 線の表現に対応する自由度．本稿では，$a,b,c,\cdots$ で表現する．$\mathrm{SU}(2)_k$ ゲージ理論の場合は，角運動量 $j$ がそれに当たる．
+一般に $\mathrm{SU}(N)_k$ の場合は，最高ウェイトベクトルや Dynkin ラベルに対応する．
+
+#### String orientations
 
 表現 $a$ に対して反表現が存在する．それを $\bar{a}$ と書く．グラフィカルな表現では，
 
@@ -35,11 +38,11 @@ $$
 
 と表す．
 
-### Branching rule
+#### Branching rule
  
-Wilson lineは合成することができ，合成した，$3$ 点頂点が満たすべき状態のルール．
+Wilson 線は合成することができ，合成した，$3$ 点頂点が満たすべき状態のルール．
 Gaussの拘束条件に対応する．
-$\mathrm{SU}(2)_k$ の時は，三角不等式を満たす状態に対応する．
+$\mathrm{SU}(2)_k$ の時は，三角条件を満たす状態に対応する．
 
 Fusionルールは，
 
@@ -558,4 +561,9 @@ $$ {#eq-inverser_dadb}
 
 が得られる．
 
+以下未完成
 
+## Hilbert 空間
+
+
+## 演算子の状態への作用

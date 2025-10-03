@@ -611,4 +611,4 @@ $3$つの$j=1/2$を合成して，
    X(s,t) = \sum_{\lambda=(\lambda_1,\lambda_2)\in\mathcal{P}^{(k)}}
    s^{\lambda_1}t^{\lambda_2}N_{(\lambda_1,\lambda_2)}
  $$
- $X(s,t)^T=X(t,s)$を満たす． --> -->
+ $X(s,t)^T=X(t,s)$を満たす． -->

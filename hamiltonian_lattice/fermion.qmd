@@ -1,29 +1,29 @@
 # フェルミオン
-まず，$N$ 自由度のフェルミン場を $\chi^n$, $\chi^\dag_n$ とする．
-ここで，$(\chi^n)^\dag = \chi^\dag_n$ という表記を用いる．
+まず，$N$ 自由度のフェルミン場を $\chi^n$, $\chi^\dagger_n$ とする．
+ここで，$(\chi^n)^\dagger = \chi^\dagger_n$ という表記を用いる．
 これらは，
 
 $$
-  \{\chi^n,\chi^\dag_m\} = \delta^n_m
+  \{\chi^n,\chi^\dagger_m\} = \delta^n_m
 $$
 
 を満たす．ここで，$\{,\}$ は反交換関係である．その他の反交換関係はゼロである:
 
 $$
-  \{\chi^m,\chi^n\} = \{\chi^\dag_m,\chi^\dag_n\} = 0 \,.
+  \{\chi^m,\chi^n\} = \{\chi^\dagger_m,\chi^\dagger_n\} = 0 \,.
 $$
 
 ## $\mathrm{SU}(2)$の場合
 
 フェルミオンが 1フレーバー，スピンレス で，$\mathrm{SU}(2)$ の基本表現に属する場合を考える．このとき，添字 $n$ は 2つの値を取る．フェルミオンはグラフの各頂点上に定義される．
 1つの頂点には フェルミオンが 2 個まで入る ことができるので，取り得る局所状態は $4$ 通りである．
-$\ket*{0}$ を $\chi^n\ket*{0}=0$ となる状態，$B^\dag =\epsilon^{mn}\chi^\dag_m\chi^\dag_n/2$とすると，
+$\ket*{0}$ を $\chi^n\ket*{0}=0$ となる状態，$B^\dagger =\epsilon^{mn}\chi^\dagger_m\chi^\dagger_n/2$とすると，
 局所状態は，$\ket*{0}$ および，
 $$
 \begin{aligned}
-  \ket*{\uparrow} &\coloneqq \ket{\frac{1}{2}}=\chi_1^\dag\ket*{0}\,, \\
-  \ket*{\downarrow} &\coloneqq \ket{-\frac{1}{2}}=\chi_2^\dag\ket*{0}\,,\\
-  \ket*{B} &\coloneqq B^\dag\ket*{0}
+  \ket*{\uparrow} &\coloneqq \ket{\frac{1}{2}}=\chi_1^\dagger\ket*{0}\,, \\
+  \ket*{\downarrow} &\coloneqq \ket{-\frac{1}{2}}=\chi_2^\dagger\ket*{0}\,,\\
+  \ket*{B} &\coloneqq B^\dagger\ket*{0}
 \end{aligned}
 $$
 
@@ -41,7 +41,7 @@ $$ {#eq-gauss_fermion}
 ここで，$\rho_i(v)$ は，カラー電荷密度であり，
 
 $$
-\rho_i(v) = \chi^\dag(v) T_i\chi(v)
+\rho_i(v) = \chi^\dagger(v) T_i\chi(v)
 $$ 
 
 で与えられる．この演算子は，Lie代数の交換関係
@@ -83,23 +83,23 @@ $$
 したがって，$\ket{0}$ に作用して頂点上でゲージ不変状態を生成する演算子は，
 
 $$
-  U^m_n \chi^\dag_m
+  U^m_n \chi^\dagger_m
 $$
 
 である．
 
 #### グラフィカルな表現
 
-グラフィカルな表現として，$U^m_n \chi^\dag_m$ および $B^\dag$ に対応する図を
+グラフィカルな表現として，$U^m_n \chi^\dagger_m$ および $B^\dagger$ に対応する図を
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$U^m_n \chi^\dag_m:$$
+    $$U^m_n \chi^\dagger_m:$$
   </span>
   <img src="figs/quark.svg" style="height:3.5em;">
   <span class="math display" style="display:inline-block;">
-    $$\qquad B^\dag: $$
+    $$\qquad B^\dagger: $$
   </span>
   <img src="figs/baryon.svg" style="height:1.5em;">
 </div>
@@ -107,23 +107,23 @@ $$
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
-  U^m_n \chi^\dag_m:
+  U^m_n \chi^\dagger_m:
   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/quark.pdf}}},
   \\
-  B^\dag :\vcenter{\hbox{\includegraphics[scale=0.3]{figs/baryon.pdf}}}
+  B^\dagger :\vcenter{\hbox{\includegraphics[scale=0.3]{figs/baryon.pdf}}}
 \end{align}
 :::
 
 と表す．
 
 次に，状態に演算子を作用させた結果を調べる．
-非自明な状態は，$\chi^\dag_m$ や $B^\dag$ を真空 $\ket{0}$ に作用させることで生成される．これらの状態に作用する演算子は $\chi^n$, $\chi^\dag_n$ であり，ゼロとならない関係は次の通りである：
+非自明な状態は，$\chi^\dagger_m$ や $B^\dagger$ を真空 $\ket{0}$ に作用させることで生成される．これらの状態に作用する演算子は $\chi^n$, $\chi^\dagger_n$ であり，ゼロとならない関係は次の通りである：
 $$
   \chi^m\ket{n} = \delta_n^m\ket{0}\,,
 $$
 
 $$
-  \chi_m^\dag\ket{n} = \epsilon_{mn}\ket{B}\,,
+  \chi_m^\dagger\ket{n} = \epsilon_{mn}\ket{B}\,,
 $$
 
 $$
@@ -133,27 +133,27 @@ $$
 これを演算子の対応として書き直すと，
 
 $$
-  \chi^m\chi^\dag_n\sim \delta^m_n\,,
+  \chi^m\chi^\dagger_n\sim \delta^m_n\,,
 $$ {#eq-psipsidag}
 
 $$
-  \chi^\dag_m\chi^\dag_n=\epsilon_{mn} B^\dag\,,
+  \chi^\dagger_m\chi^\dagger_n=\epsilon_{mn} B^\dagger\,,
 $$
 
 $$
-  \chi^m B^\dag\sim [   \chi^m, B^\dag] = \epsilon^{mn}\chi_n^\dag\,,
+  \chi^m B^\dagger\sim [   \chi^m, B^\dagger] = \epsilon^{mn}\chi_n^\dagger\,,
 $$
 
 $$
-  \chi^\dag_m B^\dag= 0
+  \chi^\dagger_m B^\dagger= 0
 $$
 
 である．
 ここで，$\sim$は，$\ket{0}$ に作用させた時に等しくなるという意味である．例えば，式 (@eq-psipsidag)は，
 
 $$
-  \chi^m\chi_n^\dag\ket{0}=
-  (\delta_n^m-\chi_n^\dag\chi^m)\ket{0}=
+  \chi^m\chi_n^\dagger\ket{0}=
+  (\delta_n^m-\chi_n^\dagger\chi^m)\ket{0}=
   \delta_n^m\ket{0}
 $$
 
@@ -189,13 +189,13 @@ $$ $$ {#eq-fuse_fermion}
 :::
 
 と書ける．
-ここで矢印「$\Rightarrow$」は，$\chi^\dag_n U^n_m \chi^m$ を作用させた操作に対応する．
+ここで矢印「$\Rightarrow$」は，$\chi^\dagger_n U^n_m \chi^m$ を作用させた操作に対応する．
 この演算子はホッピング項であり，始点のフェルミオンを終点へ移動させる作用を持つ．
 
 
 #### 状態への作用ホッピング項の作用
 
-様々な状態に $\chi^\dag_n U^n_m\chi^m$ を作用させることを考えてみよう．
+様々な状態に $\chi^\dagger_n U^n_m\chi^m$ を作用させることを考えてみよう．
 ここでは，以下のような形で表される状態を考える:
 
 
@@ -232,7 +232,7 @@ $$ $$ {#eq-states_fermion}
 :::
 
 ドット線は，自明なWilson線を表す．フェルミオンがない状態は，ドットの端点に何も書かないルールとする．また，ドット線はしばしば省略する．
-これらの状態に $\chi^\dag_n U^n_m\chi^m$ を作用させると，
+これらの状態に $\chi^\dagger_n U^n_m\chi^m$ を作用させると，
 始点にあるフェルミオンが終点に移動する．例えば，
 式 (@eq-states_fermion) の左の状態に作用させると，
 
@@ -252,7 +252,7 @@ $$ $$ {#eq-states_fermion}
 
 ::: {.content-visible when-format=pdf}
 $$
-  \chi^\dag_n U^n_m\chi^m 
+  \chi^\dagger_n U^n_m\chi^m 
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vq.pdf}}}=
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vqmove.pdf}}}
   =\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qv.pdf}}}
@@ -288,7 +288,7 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$
-  \chi^\dag_n U^n_m\chi^m 
+  \chi^\dagger_n U^n_m\chi^m 
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
   =\frac{1}{\sqrt{d_{\frac{1}{2}}}}
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qqmove1.pdf}}}
@@ -306,7 +306,7 @@ $$
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\chi^\dag_n U^n_m\chi^m $$
+    $$\chi^\dagger_n U^n_m\chi^m $$
   </span>
   <img src="figs/vB.svg" style="height:3.5em;">
       <!-- 行区切り-->
@@ -328,7 +328,7 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$
-  \chi^\dag_n U^n_m\chi^m
+  \chi^\dagger_n U^n_m\chi^m
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}}
   =\sqrt{d_{\frac{1}{2}}}
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vBmove1.pdf}}}
@@ -343,7 +343,7 @@ $$
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\chi^\dag_n U^n_m\chi^m$$
+    $$\chi^\dagger_n U^n_m\chi^m$$
   </span>
   <img src="figs/qB.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -373,7 +373,7 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$
-  \chi^\dag_n U^n_m\chi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qB.pdf}}}
+  \chi^\dagger_n U^n_m\chi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qB.pdf}}}
   =
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qBmove1.pdf}}}
   =\sum_{b}
@@ -392,7 +392,7 @@ $$
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\chi^\dag_n U^n_m\chi^m$$
+    $$\chi^\dagger_n U^n_m\chi^m$$
   </span>
   <img src="figs/vq.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -410,7 +410,7 @@ $$ $${#eq-action_hopping1}
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\chi^\dag_n U^n_m\chi^m$$
+    $$\chi^\dagger_n U^n_m\chi^m$$
   </span>
   <img src="figs/qq.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -439,7 +439,7 @@ $$ $${#eq-action_hopping2}
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\chi^\dag_n U^n_m\chi^m$$
+    $$\chi^\dagger_n U^n_m\chi^m$$
   </span>
   <img src="figs/vB.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -464,7 +464,7 @@ $$ $${#eq-action_hopping3}
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\chi^\dag_n U^n_m\chi^m$$
+    $$\chi^\dagger_n U^n_m\chi^m$$
   </span>
   <img src="figs/qB.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -487,10 +487,10 @@ $$ $${#eq-action_hopping4}
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
-  \chi^\dag_n U^n_m\chi^m
+  \chi^\dagger_n U^n_m\chi^m
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vq.pdf}}}
   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qv.pdf}},\label{eq-action_hopping1}}\\
-  \chi^\dag_n U^n_m\chi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
+  \chi^\dagger_n U^n_m\chi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
   &=\delta_{ac}
   \sqrt{d_{\frac{1}{2}}}[F_a^{a\frac{1}{2}\frac{1}{2}}]_{b0}
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}\notag\\
@@ -500,7 +500,7 @@ $$ $${#eq-action_hopping4}
   )
 \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}
   ,\\
-  \chi^\dag_n U^n_m\chi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}}
+  \chi^\dagger_n U^n_m\chi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}}
   &=
   \sum_{b}\sqrt{d_{\frac{1}{2}}}[(F_{a}^{a\frac{1}{2}\frac{1}{2}})^{-1}]_{0b}
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qqaba.pdf}}},\notag\\
@@ -509,7 +509,7 @@ $$ $${#eq-action_hopping4}
   -  \sqrt{\frac{[2j_a]}{[2j_a+1]}}\delta_{a-\frac{1}{2},b}
   )
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qqaba.pdf}}}, \\
-  \chi^\dag_n U^n_m\chi^m 
+  \chi^\dagger_n U^n_m\chi^m 
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qB.pdf}}}
   &=
   [F^{0\frac{1}{2}}_{\frac{1}{2}0}]_{\frac{1}{2}\frac{1}{2}}
@@ -520,13 +520,13 @@ $$ $${#eq-action_hopping4}
 \end{align}
 :::
 
-となる．その他の状態への $\chi^\dag_n U^n_m\chi^m$ の作用は消える．
+となる．その他の状態への $\chi^\dagger_n U^n_m\chi^m$ の作用は消える．
 同様の手続きで，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$ (\chi^\dag_n U^n_m\chi^m)^\dag$$
+    $$ (\chi^\dagger_n U^n_m\chi^m)^\dagger$$
   </span>
   <img src="figs/qv.svg" style="height:3.5em;">
   <span class="math display" style="display:inline-block;">
@@ -541,7 +541,7 @@ $$ $${#eq-action_hopping5}
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$ (\chi^\dag_n U^n_m\chi^m)^\dag$$
+    $$ (\chi^\dagger_n U^n_m\chi^m)^\dagger$$
   </span>
   <img src="figs/qq.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -570,7 +570,7 @@ $$ $${#eq-action_hopping6}
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$ (\chi^\dag_n U^n_m\chi^m)^\dag$$
+    $$ (\chi^\dagger_n U^n_m\chi^m)^\dagger$$
   </span>
   <img src="figs/Bv.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -599,7 +599,7 @@ $$ $${#eq-action_hopping7}
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$ (\chi^\dag_n U^n_m\chi^m)^\dag$$
+    $$ (\chi^\dagger_n U^n_m\chi^m)^\dagger$$
   </span>
   <img src="figs/Bq.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -623,11 +623,11 @@ $$ $${#eq-action_hopping8}
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
-  (\chi^\dag_n U^n_m\chi^m)^\dag
+  (\chi^\dagger_n U^n_m\chi^m)^\dagger
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qv.pdf}}}
   &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vq.pdf}}},
   \label{eq-action_hopping5}\\
-  (\chi^\dag_n U^n_m\chi^m)^\dag
+  (\chi^\dagger_n U^n_m\chi^m)^\dagger
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
   &=\delta_{ac}
   \sqrt{d_{\frac{1}{2}}}[F_a^{a\frac{1}{2}\frac{1}{2}}]_{b0}
@@ -637,7 +637,7 @@ $$ $${#eq-action_hopping8}
   -  \sqrt{\frac{[2j_a]}{[2j_a+1]}}\delta_{a-\frac{1}{2},b}
   )
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}},\\
-  (\chi^\dag_n U^n_m\chi^m)^\dag
+  (\chi^\dagger_n U^n_m\chi^m)^\dagger
   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}
   &=\sum_b
  \sqrt{d_{\frac{1}{2}}}[(F_{a}^{a\frac{1}{2}\frac{1}{2}})^{-1}]_{0b}
@@ -647,7 +647,7 @@ $$ $${#eq-action_hopping8}
 -\sqrt{\frac{[2j_a]}{[2j_a+1]}}\delta_{a-\frac{1}{2},b}
  )
 \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qqaba.pdf}}},\\
- (\chi^\dag_n U^n_m\chi^m)^\dag
+ (\chi^\dagger_n U^n_m\chi^m)^\dagger
 \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bq.pdf}}}
   &=
   [F^{\frac{1}{2}0}_{0\frac{1}{2}}]_{\bar{\frac{1}{2}}\frac{1}{2}}
@@ -662,8 +662,8 @@ $$ $${#eq-action_hopping8}
 
 <!-- ## フレーバ
 %フレーバの自由度がある場合を考えよう．$2$成分の場合，
-%$1$,$\chi^\dag_{n,a}$, $\chi^\dag_{n,a}\chi^\dag_{m,b}$,
-%$\chi^\dag_{n,a}\chi^\dag_{m,b} \chi^\dag_{l,c}$, -->
+%$1$,$\chi^\dagger_{n,a}$, $\chi^\dagger_{n,a}\chi^\dagger_{m,b}$,
+%$\chi^\dagger_{n,a}\chi^\dagger_{m,b} \chi^\dagger_{l,c}$, -->
 
 
 ### 例:　$\mathrm{SU}(2)$ ゲージ理論 + 物質場
@@ -672,7 +672,7 @@ $N$サイト系を考える．頂点集合を $\mathcal{V}=\{1,\cdots, N\}$，�
 するとスタッガードフェルミオンを持つ $\mathrm{SU}(2)_k$ ゲージ理論のハミルトニアンは,
 $$
   H =\frac{g^2}{2}\sum_{n\in \mathcal{V}}E_i^2(n)
-  +t\sum_{n\in  \mathcal{V}}(\chi^\dag(n+1) U(n) \chi(n)+\chi^\dag(n) U^\dag(n) \chi(n+1)) +m\sum_{n\in  \mathcal{V}}(-1)^{n} \chi^\dag(n) \chi(n)
+  +t\sum_{n\in  \mathcal{V}}(\chi^\dagger(n+1) U(n) \chi(n)+\chi^\dagger(n) U^\dagger(n) \chi(n+1)) +m\sum_{n\in  \mathcal{V}}(-1)^{n} \chi^\dagger(n) \chi(n)
 $$
 と記述される．ここで $\chi$ は2成分フェルミオン場，$t$ はホッピングパラメータ，$m$ は質量，$g^2$ は結合定数である．
 
@@ -688,29 +688,29 @@ $$
 
 
 % $$
-%   \chi^\dag(n+1) U(n) \chi(n)\to
-%   \Theta\chi^\dag(n+1) U(n) \chi(n) \Theta^\dag
-%   =\chi^\dag(n+1)\chi(n)
+%   \chi^\dagger(n+1) U(n) \chi(n)\to
+%   \Theta\chi^\dagger(n+1) U(n) \chi(n) \Theta^\dagger
+%   =\chi^\dagger(n+1)\chi(n)
 % $$
 % となるユニタリ変換を考える．これは，
 % $$
-%   \Theta\chi(n) \Theta^\dag
+%   \Theta\chi(n) \Theta^\dagger
 %   = U(n-1)U(n-2)\cdots U(1)\chi(n)
 %   \label{eq-unitary_trans_1+1}
 % $$
 % とすると，
 % $$
 %   \begin{split}
-%     &\Theta\chi^\dag(n+1) U(n) \chi(n) \Theta^\dag\\
+%     &\Theta\chi^\dagger(n+1) U(n) \chi(n) \Theta^\dagger\\
 %     &=
-%     \qty(\chi^\dag(n+1)U^\dag(1)\cdots U^\dag(n-2)U^\dag(n-1)  U^\dag(n))
+%     \qty(\chi^\dagger(n+1)U^\dagger(1)\cdots U^\dagger(n-2)U^\dagger(n-1)  U^\dagger(n))
 %     U(n)
 %     \qty(U(n-1)U(n-2)\cdots U(1)\chi(n))\\
-%     &=\chi^\dag(n+1)\chi(n)    
+%     &=\chi^\dagger(n+1)\chi(n)    
 %   \end{split}
 % $$
 % $$
-%   Q_a(n) = \chi^\dag(n) t_a \chi(n)
+%   Q_a(n) = \chi^\dagger(n) t_a \chi(n)
 % $$
 % として，
 % $$
@@ -718,7 +718,7 @@ $$
 % $$
 % と置くと，
 % $$
-%   W(k)\chi(n)W^\dag(k)= 
+%   W(k)\chi(n)W^\dagger(k)= 
 %   \begin{cases}
 %     U(k)\chi(n)& \mathrm{if}\quad n>k\\
 %     \chi(n)& \mathrm{else}\\ 
@@ -730,8 +730,8 @@ $$
 % 一方で，
 % $$
 %   \begin{split}
-%     W(k) E^{\mathrm{t}}_a(k)W^\dag(k) &= E^{\mathrm{t}}_a(k)W(k) W^\dag(k)
-%     +[W(k), E^{\mathrm{t}}_a(k)]W^\dag(k)\\
+%     W(k) E^{\mathrm{t}}_a(k)W^\dagger(k) &= E^{\mathrm{t}}_a(k)W(k) W^\dagger(k)
+%     +[W(k), E^{\mathrm{t}}_a(k)]W^\dagger(k)\\
 %     &=E^{\mathrm{t}}_a(k)- \sum_{m>k}Q_a(m)
 %   \end{split}
 % $$
@@ -739,7 +739,7 @@ $$
 
 
 % $$
-%   \Theta E^2(n)\Theta^\dag = 
+%   \Theta E^2(n)\Theta^\dagger = 
 % $$ -->
 
 
@@ -748,13 +748,13 @@ $$
 ここでは例として，開放境界条件下の2サイト系を解析してみよう．
 この場合のハミルトニアンは
 $$
-  H=\frac{g^2}{2}E^2 + t{\chi}^\dag_2U\chi_1+t{\chi}^\dag_1U^\dag \chi_2+m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2
+  H=\frac{g^2}{2}E^2 + t{\chi}^\dagger_2U\chi_1+t{\chi}^\dagger_1U^\dagger \chi_2+m\chi^\dagger_1\chi^\dagger_1-m\chi^\dagger_2\chi^\dagger_2
 $$
 である．
 この系は，バリオン数
 
 $$
-  B=\frac{1}{2}(\chi^\dag_1\chi_1+\chi_2^\dag\chi_2)/2-1
+  B=\frac{1}{2}(\chi^\dagger_1\chi_1+\chi_2^\dagger\chi_2)/2-1
 $$
 
 が保存する．$1/2$ の因子は，バリオン数がクォーク数をカラーの数 ($2$) で割ったものであることに由来する．
@@ -847,7 +847,7 @@ $$
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)$$
+    $$\qty(\frac{g^2}{2}E^2 +m\chi^\dagger_1\chi^\dagger_1-m\chi^\dagger_2\chi^\dagger_2)$$
   </span>
   <img src="figs/B0_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
@@ -860,7 +860,7 @@ $$
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)$$
+    $$\qty(\frac{g^2}{2}E^2 +m\chi^\dagger_1\chi^\dagger_1-m\chi^\dagger_2\chi^\dagger_2)$$
   </span>
   <img src="figs/qq_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
@@ -872,7 +872,7 @@ $$
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)$$
+    $$\qty(\frac{g^2}{2}E^2 +m\chi^\dagger_1\chi^\dagger_1-m\chi^\dagger_2\chi^\dagger_2)$$
   </span>
   <img src="figs/0B_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
@@ -884,15 +884,15 @@ $$
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
-  \qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)
+  \qty(\frac{g^2}{2}E^2 +m\chi^\dagger_1\chi^\dagger_1-m\chi^\dagger_2\chi^\dagger_2)
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}}
   &=2m
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}},\\
-  \qty(\frac{g^2}{2}E^2 +m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)
+  \qty(\frac{g^2}{2}E^2 +m\chi^\dagger_1\chi^\dagger_1-m\chi^\dagger_2\chi^\dagger_2)
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}}
   &=\frac{3g^2}{8}
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}},\\
-  \qty(\frac{g^2}{2}E^2+m\chi^\dag_1\chi^\dag_1-m\chi^\dag_2\chi^\dag_2)
+  \qty(\frac{g^2}{2}E^2+m\chi^\dagger_1\chi^\dagger_1-m\chi^\dagger_2\chi^\dagger_2)
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}}
   &=-2m
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}}
@@ -905,7 +905,7 @@ $$
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)$$
+    $$t\qty({\chi}^\dagger_2U\chi_1+{\chi}^\dagger_1U^\dagger \chi_2)$$
   </span>
   <img src="figs/B0_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
@@ -918,7 +918,7 @@ $$
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)$$
+    $$t\qty({\chi}^\dagger_2U\chi_1+{\chi}^\dagger_1U^\dagger \chi_2)$$
   </span>
   <img src="figs/qq_twosite.svg" style="width:6.0em;">
   <span class="math display" style="display:inline-block;">
@@ -931,7 +931,7 @@ $$
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)$$
+    $$t\qty({\chi}^\dagger_2U\chi_1+{\chi}^\dagger_1U^\dagger \chi_2)$$
   </span>
   <img src="figs/0B_twosite.svg" style="height:1.5em;">
   <span class="math display" style="display:inline-block;">
@@ -943,17 +943,17 @@ $$
 
 ::: {.content-visible when-format=pdf}
 \begin{align}
-  t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)
+  t\qty({\chi}^\dagger_2U\chi_1+{\chi}^\dagger_1U^\dagger \chi_2)
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}}
   &=t\sqrt{2}
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}},\\
-  t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)
+  t\qty({\chi}^\dagger_2U\chi_1+{\chi}^\dagger_1U^\dagger \chi_2)
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}}&=
   t\sqrt{2}
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/B0_twosite.pdf}}}
   + t\sqrt{2}
   + \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}},\\
-  t\qty({\chi}^\dag_2U\chi_1+{\chi}^\dag_1U^\dag \chi_2)\
+  t\qty({\chi}^\dagger_2U\chi_1+{\chi}^\dagger_1U^\dagger \chi_2)\
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/0B_twosite.pdf}}}
   &=t\sqrt{2}
   \vcenter{\hbox{\includegraphics[scale=0.2]{figs/qq_twosite.pdf}}},
@@ -1030,15 +1030,16 @@ plt.show()
 
 ## $\mathrm{SU}(3)$
 
- 次に，$\mathrm{SU}(3)$ の場合を考えよう．
-局所的な状態は8通り存在し，
+次に，$\mathrm{SU}(3)$ の場合を考えよう．
+3成分スピンレスフェルミオン場 $\psi^n$ を考える．
+このとき，局所的な状態は8通り存在し，
 
 $$
 \begin{aligned}
 \ket{0} &\,,\\
-\ket{_n} &= \psi^\dag_n\ket{0}\,,\\
-\ket{^n} &= [d^\dag]^n\ket{0}\,,\\
-\ket{B} &= B^\dag \ket{0}\,,\\
+\ket{_n} &= \psi^\dagger_n\ket{0}\,,\\
+\ket{^n} &= [d^\dagger]^n\ket{0}\,,\\
+\ket{B} &= B^\dagger \ket{0}\,,\\
 \end{aligned}
 $$
 
@@ -1047,33 +1048,33 @@ $$
 演算子は次のように定義する：
 
 $$
-[d^\dag]^l=\epsilon^{lmn}\psi^\dag_m\psi^\dag_n/2\,,
+[d^\dagger]^l=\epsilon^{lmn}\psi^\dagger_m\psi^\dagger_n/2\,,
 $$
 
 $$
- B^\dag =\epsilon^{mnl}\psi_m^\dag \psi_n^\dag \psi_l^\dag/3!\,.
+ B^\dagger =\epsilon^{mnl}\psi_m^\dagger \psi_n^\dagger \psi_l^\dagger/3!\,.
  $$
 
 演算子の積は次を満たす：
 
 $$
-   \psi_n^\dag\psi_m^\dag = \epsilon_{nml}[d^\dag]^l \,,
+   \psi_n^\dagger\psi_m^\dagger = \epsilon_{nml}[d^\dagger]^l \,,
 $$
 
 $$
-   [d^\dag]^m \psi_n^\dag  = \delta_n^m B^\dag \,,
+   [d^\dagger]^m \psi_n^\dagger  = \delta_n^m B^\dagger \,,
 $$ 
  
 $$
-   \psi^n  \psi_m^\dag\sim \delta^n_m \,,
+   \psi^n  \psi_m^\dagger\sim \delta^n_m \,,
 $$
 
 $$
-   \psi^n [d^\dag]^m   \sim \epsilon^{nml}\psi_l^\dag \,,
+   \psi^n [d^\dagger]^m   \sim \epsilon^{nml}\psi_l^\dagger \,,
 $$
 
 $$
-   \psi^n B^\dag   \sim  [d^\dag]^n \,.
+   \psi^n B^\dagger   \sim  [d^\dagger]^n \,.
 $$
 
 ここで，$\sim$ は，これらの関係が $\ket{0}$ に作用させたときに等しくなることを意味する．
@@ -1171,7 +1172,7 @@ $$
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\psi^\dag_n U^n_m\psi^m$$
+    $$\psi^\dagger_n U^n_m\psi^m$$
   </span>
   <img src="figs/vq.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1188,7 +1189,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\psi^\dag_n U^n_m\psi^m$$
+    $$\psi^\dagger_n U^n_m\psi^m$$
   </span>
   <img src="figs/qq.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1205,7 +1206,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\psi^\dag_n U^n_m\psi^m$$
+    $$\psi^\dagger_n U^n_m\psi^m$$
   </span>
   <img src="figs/dq.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1222,7 +1223,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\psi^\dag_n U^n_m\psi^m$$
+    $$\psi^\dagger_n U^n_m\psi^m$$
   </span>
   <img src="figs/vd.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1239,7 +1240,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\psi^\dag_n U^n_m\psi^m$$
+    $$\psi^\dagger_n U^n_m\psi^m$$
   </span>
   <img src="figs/qd.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1256,7 +1257,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\psi^\dag_n U^n_m\psi^m$$
+    $$\psi^\dagger_n U^n_m\psi^m$$
   </span>
   <img src="figs/dd.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1273,7 +1274,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\psi^\dag_n U^n_m\psi^m$$
+    $$\psi^\dagger_n U^n_m\psi^m$$
   </span>
   <img src="figs/vB.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1290,7 +1291,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\psi^\dag_n U^n_m\psi^m$$
+    $$\psi^\dagger_n U^n_m\psi^m$$
   </span>
   <img src="figs/qB.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1307,7 +1308,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$\psi^\dag_n U^n_m\psi^m$$
+    $$\psi^\dagger_n U^n_m\psi^m$$
   </span>
   <img src="figs/dB.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1329,7 +1330,7 @@ $$
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+    $$(\psi^\dagger_n U^n_m\psi^m)^\dagger$$
   </span>
   <img src="figs/qv.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1346,7 +1347,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+    $$(\psi^\dagger_n U^n_m\psi^m)^\dagger$$
   </span>
   <img src="figs/dv.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1363,7 +1364,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+    $$(\psi^\dagger_n U^n_m\psi^m)^\dagger$$
   </span>
   <img src="figs/Bv.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1380,7 +1381,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+    $$(\psi^\dagger_n U^n_m\psi^m)^\dagger$$
   </span>
   <img src="figs/qq.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1397,7 +1398,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+    $$(\psi^\dagger_n U^n_m\psi^m)^\dagger$$
   </span>
   <img src="figs/dq.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1414,7 +1415,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+    $$(\psi^\dagger_n U^n_m\psi^m)^\dagger$$
   </span>
   <img src="figs/Bq.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1431,7 +1432,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+    $$(\psi^\dagger_n U^n_m\psi^m)^\dagger$$
   </span>
   <img src="figs/qd.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1448,7 +1449,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+    $$(\psi^\dagger_n U^n_m\psi^m)^\dagger$$
   </span>
   <img src="figs/dd.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1465,7 +1466,7 @@ $$
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <span class="math display" style="display:inline-block;">
-    $$(\psi^\dag_n U^n_m\psi^m)^\dag$$
+    $$(\psi^\dagger_n U^n_m\psi^m)^\dagger$$
   </span>
   <img src="figs/Bd.svg" style="height:3.5em;">
     <!-- 行区切り-->
@@ -1486,71 +1487,71 @@ $$
 
 ::: {.content-visible when-format=pdf}
  \begin{align}
-   \psi^\dag_n U^n_m\psi^m 
+   \psi^\dagger_n U^n_m\psi^m 
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vq.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qv.pdf}}},\\
 %
-   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
+   \psi^\dagger_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dv.pdf}}}
    ,\\
 %
-   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
+   \psi^\dagger_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}
    ,\\
 %
-   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vd.pdf}}}
+   \psi^\dagger_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vd.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}},\\
 %   
-   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}}
+   \psi^\dagger_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
    ,\\
 %
-   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}}
+   \psi^\dagger_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bq.pdf}}}
    ,\\
 %
-   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}}
+   \psi^\dagger_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}},\notag\\
 %   
-   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qB.pdf}}}
+   \psi^\dagger_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/qB.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}},\\
 %   
-   \psi^\dag_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dB.pdf}}}
+   \psi^\dagger_n U^n_m\psi^m \vcenter{\hbox{\includegraphics[scale=0.4]{figs/dB.pdf}}}
    &=
    \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bd.pdf}}}.
  \end{align}
 
  \begin{align}
-   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qv.pdf}}}&=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vq.pdf}}},\\
+   (\psi^\dagger_n U^n_m\psi^m)^\dagger\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qv.pdf}}}&=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vq.pdf}}},\\
 %
-   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dv.pdf}}}
+   (\psi^\dagger_n U^n_m\psi^m)^\dagger\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dv.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}},\\
 %
-   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}
+   (\psi^\dagger_n U^n_m\psi^m)^\dagger\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bv.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}},\\
 %
-   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
+   (\psi^\dagger_n U^n_m\psi^m)^\dagger\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qq.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vd.pdf}}},\\
 %
-   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
+   (\psi^\dagger_n U^n_m\psi^m)^\dagger\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dq.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}},\\
 %
-   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bq.pdf}}}
+   (\psi^\dagger_n U^n_m\psi^m)^\dagger\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bq.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}},\\
 %
-   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}}
+   (\psi^\dagger_n U^n_m\psi^m)^\dagger\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qd.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/vB.pdf}}},\\
 %
-   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}}
+   (\psi^\dagger_n U^n_m\psi^m)^\dagger\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dd.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/qB.pdf}}},\\
 %
-   (\psi^\dag_n U^n_m\psi^m)^\dag\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bd.pdf}}}
+   (\psi^\dagger_n U^n_m\psi^m)^\dagger\vcenter{\hbox{\includegraphics[scale=0.4]{figs/Bd.pdf}}}
    &=\vcenter{\hbox{\includegraphics[scale=0.4]{figs/dB.pdf}}}.
  \end{align}
 :::
