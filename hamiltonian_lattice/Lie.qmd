@@ -197,7 +197,7 @@ $J_3(=J_0)$ の同時固有状態 $\ket*{j,m}$ を用いて表すことができ
 ここで，状態の内積は，
 
 $$
-  \bra{j,m}\ket{j',m'}=\delta_{j,j'}\delta_{m,m'}
+  \bra{j,m}\ket{j',m'}=\delta^{j}_{j'}\delta^{m}_{m'}
 $$
 
 と規格化されているものとする．
@@ -250,7 +250,7 @@ $$
 を満たす．また，この行列は，
 
 $$
-  \int\dd{g} [D_{j'}^{*}]^{m'}_{n'}(g) [D_j]^m_n(g) = \frac{1}{d_j}\delta_{j,j'}\delta_{m,m'}\delta_{n,n'}
+  \int\dd{g} [D_{j'}^{\dagger}]^{m'}_{n'}(g) [D_j]^m_n(g) = \frac{1}{d_j}\delta_{j,j'}\delta^{m}_{n'}\delta^{m'}_{n}
 $$ {#eq-su2-D-orthogonality}
 
 の直交性関係を満たす．ここで $\dd{g}$ は，$\int\dd{g}=1$ に正規化された $\mathrm{SU}(2)$群の Haar 測度である（詳細は，@sec-Haar_measure 節参照）．
@@ -1005,43 +1005,6 @@ Clebsch–Gordan 係数の図の矢印の向きを定めた．
 どちらの流儀も全体で無矛盾になるようになっていれば問題はない．
 （注:本稿の表記では，矢印の向きとカラーのフラックスの向きが逆向きになる．）
 
-<!-- ## $\mathrm{SU}(N)$群
-
-$\mathrm{SU}(2)$群でみてきたものを $\mathrm{SU}(N)$群に拡張する．
- -->
-
-<!-- 
-
-
-
-$$
-  [T_i,T_j] = \ri f^k_{~ij} T_k
-$$
-
-$$
-    [T_i,[T_j,T_k]]+  [T_j,[T_k,T_i]]+[T_k,[T_i,T_j]]=0
-$$
-
-より，
-
-$$
-  \ri f^{m}_{~~il}\ri f^l_{~jk} 
-  +  \ri f^{m}_{~~jl}\ri f^l_{~ki} 
-  +  \ri f^{m}_{~~kl}\ri f^l_{~ij} =0
-$$
-
-が得られる．
-
-$$
-  [T_i^{\mathrm{adj}}]^j_k = \ri f^j_{~ik}
-
-$$
-
-と置くと，
-
-$$
-  [T_i^{\mathrm{adj}},T_j^{\mathrm{adj}}]=\ri f^k_{~ij} T^{\mathrm{adj}}_k
-$$
 
 を満たすことがわかる．つまり構造定数自身もLie代数を満たす．
 また，基本表現では，
@@ -1050,229 +1013,266 @@ $$
   \sum_{i}[T_i]^j_k [T_i]^l_m = \frac{1}{2}\qty(\delta^j_m\delta^l_k-\frac{1}{N}\delta^j_k\delta^l_m)
 $$
 
-を満たす． -->
-
-
-
- <!-- まず，$\mathrm{SU}(3)$群の規約表現について復習しよう．
- ## $\mathrm{SU}(N)$ ゲージ理論
- 
-   生成子の中で互いに可換な$N-1$個の生成子を$H_i$とする．
-  例えば$\mathrm{SU}(3)$群の場合は，Gell-Mann行列を$\lambda_i$として，
-  生成子を$T_i=\lambda_i/2$とすると$H_1=T_3$, $H_2=T_8$である．
-  残りの
-  \begin{align}
-    [H_i,E_{\vb*{\alpha}}] &= \alpha_i E_{\vb*{\alpha}}\\
-    [H_i,E^\dag_{\vb*{\alpha}}] &= -\alpha_i E^\dag_{\vb*{\alpha}}
-  \end{align}
-  に選ぶことができる．
-  既約表現は，weightベクトル$\vb*{\mu}$を指定すると一意に定まる．
- $\mathrm{SU(3)}$群の生成子を$T_i$とする．生成子の交換関係は，
- $$
-   [T_i,T_j]=\ri f^k_{~ij} T_k
- $$
- とかける．ここで$f^k_{~ij}$は構造定数である．
- $i,j,k$の添字は，$1$から$8$まで走る．
- Gell-Mann行列を$\lambda_i$として，生成子を$T_i=\lambda_i/2$とすると基本表現の生成子の行列表現が得られる．
- Gell-Mann行列は，
- \textrm{Gell-Mann}行列
- \begin{align}
-   &\lambda_1 = \begin{pmatrix}
-     0 & 1 & 0\\
-     1 & 0 & 0\\
-     0 & 0 &  0
-   \end{pmatrix},\quad
-   \lambda_2 = \begin{pmatrix}
-     0 & -\ri & 0\\
-     \ri & 0 & 0\\
-     0 & 0 &  0
-   \end{pmatrix},\quad
-   \lambda_3 = \begin{pmatrix}
-     1 & 0 & 0\\
-     0 & -1 & 0\\
-     0 & 0 &  0
-   \end{pmatrix},\quad
-   \lambda_4 = \begin{pmatrix}
-     0 & 0 & 1\\
-     0 & 0 & 0\\
-     1 & 0 &  0
-   \end{pmatrix},\notag\\
-   &\lambda_5 = \begin{pmatrix}
-     0 & 0 & -\ri\\
-     0 & 0 & 0\\
-     \ri & 0 &  0
-   \end{pmatrix},\quad
-   \lambda_6 = \begin{pmatrix}
-     0 & 0 & 0\\
-     0 & 0 & 1\\
-     0 & 1 &  0
-   \end{pmatrix},\quad
-   \lambda_7 = \begin{pmatrix}
-     0 & 0 & 0\\
-     0 & 0 & -\ri\\
-     0 & \ri & 0
-   \end{pmatrix},\quad
-   \lambda_8 = \frac{1}{\sqrt{3}}\begin{pmatrix}
-     1 & 0 & 0\\
-     0 & 1 & 0\\
-     0 & 0 &  -2
-   \end{pmatrix}.
- \end{align}
- このGell-Mann行列から
- $$
-   d_{ijk}\coloneqq \frac{1}{4}\tr\qty(\{\lambda_i,\lambda_j\}\lambda_k)
- $$
- で定義される$d_{ijk}$を用いると，$C_3 =\sum_{i,j,k}d_{ijk}T_iT_jT_k$は，すべての生成子と可換である．
-
- $H_1=T_3$, $H_2=T_8$，
-
-
- 残りの
- \begin{align}
-   [H_i,E_{\vb*{\alpha}}] &= \alpha_i E_{\vb*{\alpha}}\\
-   [H_i,E^\dag_{\vb*{\alpha}}] &= -\alpha_i E^\dag_{\vb*{\alpha}}
- \end{align}
- に選ぶことができる．
- 既約表現は，weightベクトル$\vb*{\mu}$を指定すると決まる．
- これは，Dynkinラベルを用いて$\lambda=(p,q)$で表すことができる．
- $$
-   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Young_diagram.pdf}}}
- $$
- 基本表現は$(1,0)$，反基本表現は$(0,1)$，随伴表現は$(1,1)$となる．
-
- 表現の次元は，
- $$
-   d_a =\frac{1}{2}(p_a+1)(q_a+1)(p_a+q_a+2)
- $$
- となる．
- $2$次のCasimirは,
- $$
-   C_2 = \frac{1}{3}(p^2+q^2+3p+3p+pq)
- $$
- $3$次のCasimirは，
- $$
-   C_3=\frac{1}{18}(p-q)(3+p+2q)(3+q+2p)
- $$
- である．
-
- 基本表現及び反基本表現と$(p,q)$表現との合成は，
- $$
-   (p,q)\otimes (1,0)=
-   (p+1,q)\oplus (p-1,q+1)\oplus (p,q-1)
- $$
- 及び
- $$
-   (p,q)\otimes (0,1)=
-   (p-1,q)\oplus (p+1,q-1)\oplus (p,q+1)
- $$
- となる．これは，$3$つのベクトル$(1,0)$, $(-1,1)$, $(0,-1)$
- を加えるまたは，引くことに対応する．
- $\mathrm{SU}(3)$の場合，一般のClebsch–Gordan係数を求めるのは結構大変である．ここでは，フェルミオン系で必要になるものを計算しておこう．
- 基本表現の基底ベクトルを下付き，反表現の基底ベクトルを上付きで書くことにする．$\ket{_i}$, $\ket{^i}$で，$i$は，$1$から$3$までの値を取る．daggerは，
- \begin{align}
-   (\ket{_i})^\dag &=  \bra{^i},\\
-   (\ket{^i})^\dag &=  \bra{_i}
- \end{align}
- と表記する．これらの内積は，
- \begin{align}
-   \braket{_i}{^j}&=\delta_i^j,\\
-   \braket{^i}{_j}&=\delta^i_j  
- \end{align}
- を満たす．
-
- $2$つの基本表現の合成は，$6$表現と$\bar{3}$に分解される．
- $\bar{3}$表現は，
- \begin{align}
-   \ket{^i}&=\frac{1}{\sqrt{2}}\epsilon^{ijk}\ket{_j}\ket{_k}
- \end{align}
- と表せる．また，$3$表現と$\bar{3}$表現を合成すると，$8$表現と$1$表現が作れるが，$1$表現の次元は，
- \begin{align}
-   |0\rangle = \frac{\delta^i_j}{\sqrt{3}}\ket{_i}\ket{^j}
- \end{align} -->
-
+を満たす．
 
 
 ## $\mathrm{SU}(N)$群
 
-前節の $\mathrm{SU}(2)$群でみてきたものを $\mathrm{SU}(N)$群に拡張する．
+前節で扱った $\mathrm{SU}(2)$群 をより高次元に拡張すると $\mathrm{SU}(N)$群が得られる．
 $\mathrm{SU}(N)$群は，複素 $N$ 次元ベクトル空間の内積を保ち，かつ行列式が $1$ である変換全体からなる群である．
-2つの複素 $N$ 次元ベクトル $w$, $z$ に対して，変換 $w\mapsto g w$, $z\mapsto gz$ のもとで，内積 $(w,z) \coloneqq w^\dag z$ は，
-次のように変換される:
+2つの複素 $N$ 次元ベクトル $w,z$ に対して，変換 $w\mapsto g w$, $z\mapsto gz$ のもとで，内積 
+
+$$
+(w,z) \coloneqq w^\dag z
+$$
+
+は，次のように変換される:
 
 $$
   (w,z)\mapsto  (gw,gz) = (w,g^\dag g z) \,.
 $$
 
-ここで，$g$ は，$N \times N$ 複素行列で，$\dag$ はHermite 共役を表す．
-この変換で内積が不変となるためには，$g^\dag g=\mathbf{1}_N$ を満たす必要がある．
-ここで，$\mathbf{1}_N$ は $N \times N$ の単位行列である．
+ここで，$g$ は，$N \times N$ 複素行列であり，$\dag$ はHermite 共役を表す．
+この変換で内積が不変となるためには，
+
+$$
+g^\dag g=\mathbf{1}_N
+$$
+
+を満たす必要がある．ここで，$\mathbf{1}_N$ は $N \times N$ の単位行列である．
 また，行列式が1である条件から，$\det g=1$ が要求される．
 
-群の元は，
+群の元は，指数表示で，
 $$
   g= \exp(\ri T_i\theta^i)
 $$ {#eq-gexp}
 
-の指数表示で表すことができる．ここで，$\theta^i$ を実数に取ると，
-ユニタリである条件から，$T_i$ はエルミート（$T_i^\dag =T_i$）で，行列式が1という条件から，
-トレースレス（$\tr T_i=0$）が導かれる．
-$N\times N$ エルミート行列は，独立な成分が $N^2$ あり，トレースレスの条件により，$N^2-1$ 個の線形独立な生成子 $T_i$ が存在する．
+と表すことができる．ここで，$\theta^i$ は実数パラメータである．
+ユニタリ条件 $g^\dag g=1$ から，生成子 $T_i$ はエルミート行列（$T_i^\dag =T_i$）でならなければならない．
+また，$\det g=1$ から，トレースレス（$\tr T_i=0$）である．
+$N\times N$ エルミート行列は，独立成分が $N^2$ 個ある．
+トレースレスの条件により，独立な生成子は，$N^2-1$ 個存在する．
 
-また，群が積で閉じる条件から，$[T_i,T_j]$ は，$T_i$ の線形結合で表されなければならない．
-つまり，$T_i$ は，次の交換関係を満たす：
+また，群が積で閉じる条件から，生成子の交換関係が，生成子の線形結合でなければならない．
+すなわち，
 $$
   [T_i,T_j]=\ri f^k_{~ij}T_k \,.
 $$ {#eq-Lie_SUN}
 
-ここで，$f^k_{~ij}$ は構造定数である．$\mathrm{SU}(N)$群の Lie代数を $\mathfrak{su}(N)$ と書く．
-抽象化した生成子を $J_i$ として，$\mathrm{SU}(N)$ 群の要素は，
+が成り立つ．
+ここで，$f^k_{~ij}$ は構造定数である．
+$\mathrm{SU}(N)$群の Lie代数を $\mathfrak{su}(N)$ と書く．
+抽象的な生成子を $J_i$ とすれば，
 $$
-g=\exp(\ri J_i\theta^i), \qquad [J_i,J_j]=\ri f^i_{~ij}J_k
+g=\exp(\ri J_i\theta^i), \qquad [J_i,J_j]=\ri f^k_{~ij}J_k
 $$ {#eq-commutatorSUN}
 
 と表される．
 
 ### $\mathrm{SU}(N)$ 群のユニタリ表現
 
-群の表現は，群の要素にベクトル空間に作用する行列を対応させる．
-特に，ヒルベルト空間に作用する場合，行列はユニタリ行列となる．
+群の線形表現とは, 群の各元にベクトル空間上の可逆線形変換（基底を選べば行列）を対応させる写像である.
+特にヒルベルト空間上で, 対応する行列がユニタリ行列となるとき, これをユニタリ表現と呼ぶ.
 
-$\mathrm{SU}(2)$群の場合，$2J_3$ は整数値を取り，その最大値を指定することで既約表現が定まった．
-$\mathrm{SU}(N)$群では，$N\times N$ トレースレスエルミート行列の対角成分が $N-1$ 個あるのに対応して，$N-1$ 個の可換な生成子が存在する．したがって，$\mathrm{SU}(N)$群は，$N-1$ 個の非負の整数を指定するとで，既約表現を定めることができる．
-本稿では，既約表現の具体的な構成は重要でない．
-既約表現は有限次元であり，表現 $a$ のヒルベルト空間を $\mathcal{Q}_a$ とし，その次元を $d_a$ とする．
-表現の $a$ の正規直交基底を $\ket{a,m}$ して，$[T_{ai}]^m_{n} \coloneqq \bra{a,m}J_i\ket{a,n}$ とすると，
-表現行列は，
+有限次元のユニタリ表現は常に完全可約であり, 既約表現の直和に分解できる.
+すなわち, 適当な基底を選べば, 群のすべての表現行列を同時にブロック対角化することができる.
+逆に, いかなる基底を選んでも非自明なブロック分解ができないとき, その表現を既約という.
+
+---
+
+#### $\mathrm{SU}(2)$ の場合
+$\mathrm{SU}(2)$ 群では, 生成子 $J_3$ の固有値 が表現を特徴づける. 
+最大固有値 $j$ を指定することで既約表現が一意に定まり, 次元は $2j+1$ である.
+
+---
+
+#### $\mathrm{SU}(N)$ の場合
+$\mathrm{SU}(N)$ 群のリー代数 $\mathfrak{su}(N)$ は, $N \times N$ トレースレスなエルミート行列から構成される.
+対角成分は $N-1$ 個の独立な生成子を持ち, これらは互いに可換である. したがって $\mathrm{SU}(N)$ 群は階数 $N-1$ のリー群である.
+
+この構造により, $\mathrm{SU}(N)$群の既約表現は $N-1$ 個の非負整数（最高ウェイトを指定する量子数）で特徴づけられる. 詳細な構成については文献 [@Georgi] を参照する.
+
+::: {.callout-note collapse="true"}
+## $\mathfrak{su}(3)$
+
+QCDで重要になるのが $\mathrm{SU}(3)$群である．
+その Lie代数 $\mathfrak{su}(3)$ の生成子の数は，
+
 $$
-[D_a(g)]^m_{n} = [\exp(\ri\theta^i T_{ai})]^{m}_{n}
+3^2-1=8
+$$ 
+
+である．
+具体的には，Gell-Mann 行列
+$$
+  \begin{split}
+    &\lambda_1 = \begin{pmatrix}
+      0 & 1 & 0\\
+      1 & 0 & 0\\
+      0 & 0 &  0
+    \end{pmatrix},\quad
+    \lambda_2 = \begin{pmatrix}
+      0 & -\ri & 0\\
+      \ri & 0 & 0\\
+      0 & 0 &  0
+    \end{pmatrix},\quad
+    \lambda_3 = \begin{pmatrix}
+      1 & 0 & 0\\
+      0 & -1 & 0\\
+      0 & 0 &  0
+    \end{pmatrix},\quad
+    \lambda_4 = \begin{pmatrix}
+      0 & 0 & 1\\
+      0 & 0 & 0\\
+      1 & 0 &  0
+    \end{pmatrix},\notag\\
+    &\lambda_5 = \begin{pmatrix}
+      0 & 0 & -\ri\\
+      0 & 0 & 0\\
+      \ri & 0 &  0
+    \end{pmatrix},\quad
+    \lambda_6 = \begin{pmatrix}
+      0 & 0 & 0\\
+      0 & 0 & 1\\
+      0 & 1 &  0
+    \end{pmatrix},\quad
+    \lambda_7 = \begin{pmatrix}
+      0 & 0 & 0\\
+      0 & 0 & -\ri\\
+      0 & \ri & 0
+    \end{pmatrix},\quad
+    \lambda_8 = \frac{1}{\sqrt{3}}\begin{pmatrix}
+      1 & 0 & 0\\
+      0 & 1 & 0\\
+      0 & 0 &  -2
+    \end{pmatrix}.
+  \end{split}
 $$
 
-と表すことができる．
-この行列は，
+を用いて，
 
 $$
-  \int\dd{g} [D_{a'}^{*}]^{m'}_{n'}(g) [D_a]^m_n(g) = \frac{1}{d_a}\delta_{a,a'}\delta_{m,m'}\delta_{n,n'}
+T_i=\frac{\lambda_i}{2}
+$$
+
+に取ることができる．
+このとき，規格化条件として
+
+$$
+\tr T_iT_j = \frac{1}{2}\delta_{ij}
+$$
+
+が成り立つ．また，交換関係
+
+$$
+[T_i, T_j] = \ri f^k_{~ij} T_k
+$$
+
+に現れる構造定数 $f^{k}_{~ij}$は，添字を下げて，
+
+$$
+f_{kij}=\delta_{kl}f^{k}_{~ij}
+$$
+
+と書くと，これは完全反対称である．
+
+$f_{ijk}$ で，ゼロでないものは，
+
+$$
+f_{123}=1,\quad  f_{458}=f_{678}=\frac{\sqrt{3}}{2},\quad
+ f_{147}=f_{165}=f_{246}=f_{257}=f_{345}=f_{376}=\frac{1}{2}
+$$
+
+である．
+
+
+これは，既約表現 $a$ は，Dynkinラベルを用いて $a = (p,q)$ で表すことができる．
+ここで，$p$，$q$ は Young 図の1段と2段の箱の数に対応する非負の整数である:
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/Young_diagram.svg" style="height:4.2em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Young_diagram.pdf}}}
+$$
+:::
+
+基本表現は $(1,0)$，反基本表現は $(0,1)$，随伴表現は $(1,1)$ となる．
+
+また，表現の次元は次式で与えられる:
+
+$$
+  d_a = \frac{1}{2}(p+1)(q+1)(p+q+2)\,.
+$$
+
+
+:::
+
+#### 既約表現の表記
+既約表現を $a$ とし，その表現空間を $\mathcal{Q}_a$，次元を $d_a$ と書く. 正規直交基底を $\{\ket{a,m}\}$ とすれば，生成子 $J_i$ の表現行列要素は
+
+$$
+[T_{ai}]^{m}_{n} \coloneqq \bra{a,m} J_i \ket{a,n}
+$$
+
+で定義される.
+
+このとき，群の元 $g \in \mathrm{SU}(N)$ の作用は指数表示によって
+
+$$
+[D_a(g)]^{m}_{n} = \bigl[\exp(i \theta^i T_{ai})\bigr]^{m}_{n}
+$$
+
+と表される.
+
+---
+
+#### 直交性関係
+これらの表現行列は，群の Haar 測度 $\dd g$ に関して次の直交性関係を満たす:
+
+$$
+\int \dd g \,\,
+[D_{a'}(g)^\dagger]^{m'}_{n'} \,
+[D_a(g)]^{m}_{n}
+= \frac{1}{d_a}\,\delta_{a,a'}\,\delta^{m}_{n'}\,\delta^{m'}_{n}.
 $$ {#eq-suN-D-orthogonality}
 
-の直交性関係を満たす．ここで $\dd{g}$ は，$\int\dd{g}=1$ に正規化されたコンパクト  $\mathrm{SU}(N)$群の Haar 測度である．
+ここで $\dd g$ は $\int \dd g = 1$ となるように規格化されたコンパクト群 $\mathrm{SU}(N)$ の Haar 測度である.
 
 ### 表現の合成
 
-次に2つの既約表現 $a$ と $b$ の合成を考える．
-2つの既約表現を合成(直積)するとそれは既約表現の直和に分解する:
+次に2つの既約表現 $a$ と $b$ の合成を考える.  
+2つの既約表現を合成（直積）すると, それは既約表現の直和に分解する:
 
 $$
     \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}
     =\bigoplus_cN_{ab}^{c}\mathcal{Q}_{c} \,.
 $$
 
-ここで，$N_{ab}^{c}$ は fusion 係数またはテンソル積係数と呼ばれる非負の整数で，既約表現が直積分解の中に何回現れるかを表す多重度である．
-一般には，$N_{ab}^c>1$ の値を取りうる．
-例えば，$\mathrm{SU}(3)$ の場合に，2つの随伴表現 $\bm{8}$ の合成は，$\mathbf{8} \otimes \mathbf{8}
-= \mathbf{27} \oplus \mathbf{10} \oplus \overline{\mathbf{10}}\oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}$ と分解され，$\mathbf{8}$ が2回現れる．従って $N_{\mathbf{8}\mathbf{8}}^{\mathbf{8}}=2$ となる．
 
-3つの表現の合成(直積)は $\mathcal{Q}_{a}\otimes (\mathcal{Q}_{b}\otimes \mathcal{Q}_{c})\simeq (\mathcal{Q}_{a}\otimes \mathcal{Q}_{b}) \otimes \mathcal{Q}_{c}$
-  を満たす．これに対応して，fusion係数は，
+ここで, $N_{ab}^{c}$ は fusion 係数（テンソル積係数）と呼ばれる非負の整数で, 既約表現が直積分解の中に何回現れるかを表す多重度である.  
+一般には, $N_{ab}^c > 1$ の値を取りうる.
+
+例えば，$\mathrm{SU}(3)$ の場合に，2つの随伴表現 $\bm{8}$ の合成は，
+
+$$
+\mathbf{8} \otimes \mathbf{8}
+= \mathbf{27} \oplus \mathbf{10} \oplus \overline{\mathbf{10}}\oplus \mathbf{8} \oplus \mathbf{8} \oplus \mathbf{1}
+$$
+
+と分解され，$\mathbf{8}$ が2回現れる．従って $N_{\mathbf{8}\mathbf{8}}^{\mathbf{8}}=2$ となる．
+
+3つの表現の合成(直積)は 
+
+$$
+\mathcal{Q}_{a}\otimes (\mathcal{Q}_{b}\otimes \mathcal{Q}_{c})\simeq (\mathcal{Q}_{a}\otimes \mathcal{Q}_{b}) \otimes \mathcal{Q}_{c}
+$$
+
+を満たす．これに対応して，fusion係数は，
 
 $$
 \sum_{d}N_{ad}^{f}N_{bc}^{d}= \sum_{d}N_{ab}^{d}N_{dc}^{f}
@@ -1280,7 +1280,7 @@ $$
 
 を満たす．
 
-次に具体的に既約表現を合成しよう．表現 $a$, $b$ を合成し $c$ を作ったとする．そのときのベクトル $\ket*{(ab)c,m_c}$ 及び，
+次に具体的に既約表現を合成しよう．表現 $a$，$b$ を合成し $c$ を作ったとする．そのときのベクトル $\ket*{(ab)c,m_c}$ 及び，
 直積状態は，
 
 $$
@@ -1294,8 +1294,8 @@ $$
 
 と表せる．
 ここで，
-$\braket{a,m_a;\, b,m_b}{c,m_c;\mu}$，$\braket{c,m_c;\mu}{a,m_a;\, b,m_b}$  は Clebsch--Gordan 係数である．
-ここで，$\mu\in\{1,2,\cdots, N_{ab}^c\}$ は，多重度に対するラベルである．
+$\braket{a,m_a;\, b,m_b}{c,m_c;\mu}$，$\braket{c,m_c;\mu}{a,m_a;\, b,m_b}$  は Clebsch--Gordan 係数であり，
+$\mu\in\{1,2,\cdots, N_{ab}^c\}$ は，多重度に対するラベルである．
 
 式 (@eq-decomposition_sun) は，$\mathcal{Q}_{c}\to \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ の写像を与える．
 つまり，$\ket{v}=\sum_{m_c}v^{m_c}\ket{c,m_c}\in \mathcal{Q}_{c}$を
@@ -1409,7 +1409,13 @@ $$
   \ket*{((ab)_{e,\mu}c)_{d,\nu},m_d}
 $$
 
-で，$[(F^{abc}_d)^{-1}]_{(f,\rho,\sigma)(e,\mu,\nu)}=\braket{((ab)_{e,\mu}c)_{d,\nu},m_d}{(a,(bc)_{f,\rho})_{d,\sigma},m_d}$ である．これは，ユニタリである性質
+であり，
+
+$$
+[(F^{abc}_d)^{-1}]_{(f,\rho,\sigma)(e,\mu,\nu)}=\braket{((ab)_{e,\mu}c)_{d,\nu},m_d}{(a,(bc)_{f,\rho})_{d,\sigma},m_d}
+$$
+
+となる．これは，ユニタリである性質
 
 $$  [(F^{abc}_d)^{-1}]_{(f,\rho,\sigma)(e,\mu,\nu)}
   =[(F^{abc}_d)^{\dag}]_{(f,\rho,\sigma)(e,\mu,\nu)}
@@ -1498,17 +1504,6 @@ $$ \begin{aligned}
 
 で表す．
 
-::: {.content-visible when-format=pdf}
-$$ \begin{aligned}
-  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/ab0.pdf}}}
-  &= \braket{a,n_a;\, b,n_b}{0,0}=\delta_{a,b}\delta_{n_a,-n_b}\frac{(-1)^{a-n_a}}{\sqrt{d_{a}}},\\  
-  \\vcenter{\hbox{\includegraphics[scale=0.3]{figs/0ab.pdf}}}&=  
-  \braket{0,0}{a,m_a;\, b,m_b}=\delta_{a,b}\delta_{m_a,-m_b}\frac{(-1)^{a-m_a}}{\sqrt{d_{a}}}
- \end{aligned}
-$$
-:::
-
-となる．
 3つの表現の合成に対応するダイアグラムは，
 
 ::: {.content-visible when-format=html}
@@ -1723,6 +1718,71 @@ $$
   \end{align}
   に選ぶことができる．
   既約表現は，weightベクトル$\vb*{\mu}$を指定すると一意に定まる．
+
+ このGell-Mann行列から
+ $$
+   d_{ijk}\coloneqq \frac{1}{4}\tr\qty(\{\lambda_i,\lambda_j\}\lambda_k)
+ $$
+ で定義される$d_{ijk}$を用いると，$C_3 =\sum_{i,j,k}d_{ijk}T_iT_jT_k$は，すべての生成子と可換である．
+
+ $H_1=T_3$, $H_2=T_8$，
+
+
+ 残りの
+ \begin{align}
+   [H_i,E_{\vb*{\alpha}}] &= \alpha_i E_{\vb*{\alpha}}\\
+   [H_i,E^\dag_{\vb*{\alpha}}] &= -\alpha_i E^\dag_{\vb*{\alpha}}
+ \end{align}
+ に選ぶことができる．
+ 既約表現は，weightベクトル$\vb*{\mu}$を指定すると決まる．
+
+ $2$次のCasimirは,
+ $$
+   C_2 = \frac{1}{3}(p^2+q^2+3p+3p+pq)
+ $$
+ $3$次のCasimirは，
+ $$
+   C_3=\frac{1}{18}(p-q)(3+p+2q)(3+q+2p)
+ $$
+ である．
+
+ 基本表現及び反基本表現と$(p,q)$表現との合成は，
+ $$
+   (p,q)\otimes (1,0)=
+   (p+1,q)\oplus (p-1,q+1)\oplus (p,q-1)
+ $$
+ 及び
+ $$
+   (p,q)\otimes (0,1)=
+   (p-1,q)\oplus (p+1,q-1)\oplus (p,q+1)
+ $$
+ となる．これは，$3$つのベクトル$(1,0)$, $(-1,1)$, $(0,-1)$
+ を加えるまたは，引くことに対応する．
+ $\mathrm{SU}(3)$の場合，一般のClebsch–Gordan係数を求めるのは結構大変である．ここでは，フェルミオン系で必要になるものを計算しておこう．
+ 基本表現の基底ベクトルを下付き，反表現の基底ベクトルを上付きで書くことにする．$\ket{_i}$, $\ket{^i}$で，$i$は，$1$から$3$までの値を取る．daggerは，
+ \begin{align}
+   (\ket{_i})^\dag &=  \bra{^i},\\
+   (\ket{^i})^\dag &=  \bra{_i}
+ \end{align}
+ と表記する．これらの内積は，
+ \begin{align}
+   \braket{_i}{^j}&=\delta_i^j,\\
+   \braket{^i}{_j}&=\delta^i_j  
+ \end{align}
+ を満たす．
+
+ $2$つの基本表現の合成は，$6$表現と$\bar{3}$に分解される．
+ $\bar{3}$表現は，
+ \begin{align}
+   \ket{^i}&=\frac{1}{\sqrt{2}}\epsilon^{ijk}\ket{_j}\ket{_k}
+ \end{align}
+ と表せる．また，$3$表現と$\bar{3}$表現を合成すると，$8$表現と$1$表現が作れるが，$1$表現の次元は，
+ \begin{align}
+   |0\rangle = \frac{\delta^i_j}{\sqrt{3}}\ket{_i}\ket{^j}
+ \end{align} -->
+
+
+  <!--
  $\mathrm{SU(3)}$群の生成子を$T_i$とする．生成子の交換関係は，
  $$
    [T_i,T_j]=\ri f^k_{~ij} T_k
@@ -1774,74 +1834,4 @@ $$
      0 & 0 &  -2
    \end{pmatrix}.
  \end{align}
- このGell-Mann行列から
- $$
-   d_{ijk}\coloneqq \frac{1}{4}\tr\qty(\{\lambda_i,\lambda_j\}\lambda_k)
- $$
- で定義される$d_{ijk}$を用いると，$C_3 =\sum_{i,j,k}d_{ijk}T_iT_jT_k$は，すべての生成子と可換である．
-
- $H_1=T_3$, $H_2=T_8$，
-
-
- 残りの
- \begin{align}
-   [H_i,E_{\vb*{\alpha}}] &= \alpha_i E_{\vb*{\alpha}}\\
-   [H_i,E^\dag_{\vb*{\alpha}}] &= -\alpha_i E^\dag_{\vb*{\alpha}}
- \end{align}
- に選ぶことができる．
- 既約表現は，weightベクトル$\vb*{\mu}$を指定すると決まる．
- これは，Dynkinラベルを用いて$\lambda=(p,q)$で表すことができる．
- $$
-   \vcenter{\hbox{\includegraphics[scale=0.4]{figs/Young_diagram.pdf}}}
- $$
- 基本表現は$(1,0)$，反基本表現は$(0,1)$，随伴表現は$(1,1)$となる．
-
- 表現の次元は，
- $$
-   d_a =\frac{1}{2}(p_a+1)(q_a+1)(p_a+q_a+2)
- $$
- となる．
- $2$次のCasimirは,
- $$
-   C_2 = \frac{1}{3}(p^2+q^2+3p+3p+pq)
- $$
- $3$次のCasimirは，
- $$
-   C_3=\frac{1}{18}(p-q)(3+p+2q)(3+q+2p)
- $$
- である．
-
- 基本表現及び反基本表現と$(p,q)$表現との合成は，
- $$
-   (p,q)\otimes (1,0)=
-   (p+1,q)\oplus (p-1,q+1)\oplus (p,q-1)
- $$
- 及び
- $$
-   (p,q)\otimes (0,1)=
-   (p-1,q)\oplus (p+1,q-1)\oplus (p,q+1)
- $$
- となる．これは，$3$つのベクトル$(1,0)$, $(-1,1)$, $(0,-1)$
- を加えるまたは，引くことに対応する．
- $\mathrm{SU}(3)$の場合，一般のClebsch–Gordan係数を求めるのは結構大変である．ここでは，フェルミオン系で必要になるものを計算しておこう．
- 基本表現の基底ベクトルを下付き，反表現の基底ベクトルを上付きで書くことにする．$\ket{_i}$, $\ket{^i}$で，$i$は，$1$から$3$までの値を取る．daggerは，
- \begin{align}
-   (\ket{_i})^\dag &=  \bra{^i},\\
-   (\ket{^i})^\dag &=  \bra{_i}
- \end{align}
- と表記する．これらの内積は，
- \begin{align}
-   \braket{_i}{^j}&=\delta_i^j,\\
-   \braket{^i}{_j}&=\delta^i_j  
- \end{align}
- を満たす．
-
- $2$つの基本表現の合成は，$6$表現と$\bar{3}$に分解される．
- $\bar{3}$表現は，
- \begin{align}
-   \ket{^i}&=\frac{1}{\sqrt{2}}\epsilon^{ijk}\ket{_j}\ket{_k}
- \end{align}
- と表せる．また，$3$表現と$\bar{3}$表現を合成すると，$8$表現と$1$表現が作れるが，$1$表現の次元は，
- \begin{align}
-   |0\rangle = \frac{\delta^i_j}{\sqrt{3}}\ket{_i}\ket{^j}
- \end{align} -->
+ -->

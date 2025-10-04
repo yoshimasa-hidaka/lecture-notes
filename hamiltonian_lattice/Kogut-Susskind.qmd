@@ -2,41 +2,42 @@
 
 ## Kogut--Susskind形式{#sec-hamiltonian}
 
-::: {.content-visible when-format="html"}
-::: {#fig-Honeycomb_Lattice fig-cap="左：ハニカム格子．右：プラケット．" fig-align="center"} 
-::: {layout-ncol=2}
-![](figs/Honeycomb.svg){fig-subcap="ハニカム格子" width=60%}
-![](figs/plaquette.svg){fig-subcap="プラケット"  width=30%}
-:::
-:::
-:::
-
-::: {.content-visible when-format="pdf"}
-::: {#fig-Honeycomb_Lattice fig-cap="左：ハニカム格子．右：プラケット．" fig-align="center"}
-::: {layout-ncol=2}
-![](figs/Honeycomb.pdf){fig-subcap="ハニカム格子"}
-![](figs/plaquette.pdf){fig-subcap="プラケット"}
-:::
-:::
-:::
-
-<!-- \begin{figure}[htbp]
-\centering
-\includegraphics[width=0.35\textwidth]{figs/Honeycomb.pdf}
-\qquad\includegraphics[width=0.17\textwidth]{figs/plaquette.pdf}
-\caption{左：ハニカム格子．右：プラケット．}
-\end{figure} {#fig-Honeycomb_Lattice} -->
-
 格子上のゲージ理論のハミルトニアン形式は Kogut と Susskind によって1970年代に定式化された [@Kogut:1974ag]．
 本節では格子上の $\mathrm{SU}(N)$ Yang--Mills 理論のハミルトニアン形式について考える．
-任意の格子について定式化できるが，ここではゲージ不変な物理状態の構成が容易なハニカム格子を扱う(図 @fig-Honeycomb_Lattice 左)．
+任意の格子について定式化できるが，ここではゲージ不変な物理状態の構成が容易なハニカム格子を扱う：
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/Honeycomb.svg" style="height:6.0em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$ 
+    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/Honeycomb.pdf}}}
+$$
+:::
+
 頂点の集合を $\mathcal{V}$，辺の集合を $\mathcal{E}$ とする．
 各辺は，向きを持ち，始点と終点が定められている．
 辺 $e\in\mathcal{E}$ に対して，その始点および終点を
 それぞれ $\mathrm{s}(e)\in\mathcal{V}$ および $\mathrm{t}(e)\in\mathcal{V}$ と書く．また，$e$ の始点と終点を入れ替えた辺は $\bar{e}$ と表す．
-各六角形をプラケット(図 @fig-Honeycomb_Lattice 右)と呼び，その集合を$\mathcal{P}$とする．
-各プラケットは面であり，その境界をなす有向閉曲線（経路）を定める．
-例えば，図 @fig-Honeycomb_Lattice 右では，始点を $e_1$ として，
+各六角形をプラケットと呼び，その集合を$\mathcal{P}$とする．
+各プラケットは面であり，その境界をなす有向閉曲線（経路）を定める．例えば，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/plaquette.svg" style="height:6.0em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$ 
+    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquette.pdf}}}
+$$
+:::
+
+では，始点を $e_1$ として，
 経路は $e_1 \to e_2 \to e_3 \to \bar{e}_4 \to \bar{e}_5 \to \bar{e}_6$ である．
 
 以下では，物質場を含まないゲージ理論を考える．
@@ -126,37 +127,25 @@ $$ {#eq-gauss}
 
 ## 物理状態の構成
 
-::: {.content-visible when-format="html"}
-::: {#fig-vertex fig-cap="左：頂点とそれにつながる辺．右：物理状態の基底" fig-align="center"}
-::: {layout-ncol=2}
-![](figs/v123.svg){fig-subcap="頂点" width=23%}
-![](figs/PhysState.svg){fig-subcap="物理状態の基底"  width=45%}
-:::
-:::
-:::
-
-::: {.content-visible when-format="pdf"}
-::: {#fig-vertex fig-cap="左：頂点とそれにつながる辺．右：物理状態の基底" fig-align="center"}
-::: {layout-ncol=2}
-![](figs/v123.pdf){fig-subcap="頂点"}
-![](figs/PhysState.pdf){fig-subcap="物理状態の基底"}
-:::
-:::
-:::
-
-<!-- \begin{figure}[htbp]
-\centering
-\includegraphics[width=0.12\textwidth]{figs/v123.pdf}
-\qquad\includegraphics[width=0.3\textwidth]{figs/PhysState.pdf}
-\caption{左：頂点とそれにつながる辺．右：物理状態の基底}
-\end{figure} {#fig-vertex} -->
-
 物理状態は，Gauss の拘束条件 (@eq-gauss) を満たす必要があるが，
 格子上では，電気的基底を用いることで比較的容易に構成できる．
 $G_i(v)$ は Lie代数の生成子であり，式 (@eq-gauss) は，頂点において，状態が表現の1重項になることを要請している．
 ここでは，ハニカム格子を考えているので$3$点頂点を考えれば十分である．頂点を$v$とし，それが
-辺 $e_1$, $e_2$ の始点，$e_3$ の終点になっている場合を考える．
-すなわち，$\mathrm{s}(e_1)=\mathrm{s}(e_2)=\mathrm{t}(e_3)=v$ である (図 @fig-vertex 左)．
+辺 $e_1$, $e_2$ の始点，$e_3$ の終点になっている場合を考える：
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/v123.svg" style="height:4.0em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$ 
+    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/v123.pdf}}}
+$$
+:::
+
+すなわち，$\mathrm{s}(e_1)=\mathrm{s}(e_2)=\mathrm{t}(e_3)=v$ である．
 このとき，状態 $\ket*{a,m_a,n_a}_1\ket*{b,m_b,n_b}_2\ket*{c,m_c,n_c}_3$ に対して，Clebsch--Gordan 係数 $\braket{a,n_a;\, b,n_b}{c,m_c;\mu}$ を用いると
 
 $$
@@ -169,7 +158,21 @@ $$ {#eq-three_point_state}
 ここで，$1/\sqrt{d_c}$ は $\braket{\varphi}{\varphi}=1$ を保証するための規格化因子である．
 
 一般に，各頂点に Clebsch--Gordan 係数を割り当てれば，Gauss の拘束条件を満たす物理状態を構成することができる．
-結果として，物理的な基底は，図 @fig-vertex 右に示すように，辺に表現，頂点に多重度のラベルを付与した表現のネットワークで表される．
+結果として，物理的な基底は，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/PhysState.svg" style="height:8.0em;">
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$ 
+    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/PhysState.pdf}}}
+$$
+:::
+
+のように，辺に表現，頂点に多重度のラベルを付与した表現のネットワークで表される．
 ただし任意の表現が許されるわけではなく，Clebsch--Gordan 係数が非零となる組み合わせのみが許される．
 
 ## 状態と演算子のグラフィカルな表現
@@ -357,6 +360,8 @@ $$ {#eq-Hamiltonian_SUN}
 
 と与えられる．
 
+---
+
 #### 物理状態
 
 Gauss の拘束条件を満たす基底は，各辺 ($e\in \mathcal{E}$) に既約表現 $a_e$ を割り当て，各頂点 ($v\in \mathcal{V}$) に 多重度 $\mu_v$ を付与した状態で，Clebsch--Gordan 係数が消えない組み合わせによって構成される．
@@ -370,6 +375,8 @@ $$
 $$
 
 と表される．
+
+---
 
 #### ハミルトニアンの状態への作用
 

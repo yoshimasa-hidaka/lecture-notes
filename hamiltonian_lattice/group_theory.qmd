@@ -6,8 +6,7 @@
 
 #　群論基礎 {#sec-group_theory}
 
-::: definition
-**群の定義**
+## 群の定義
 
 群 $(G,e,\circ)$ とは，集合 $G$ に積 $\circ:G\times G\to G$ が定まっていて，以下の条件を満たすものである：
 
@@ -18,7 +17,7 @@
 
 任意の $G$ の元 $g,g'$ について，$gg'=g'g$ が成り立つとき，群 $G$ は可換群であるという．
 
-::: example
+<!-- ::: example
 **$\mathbb{Z}_2$群**
 
 要素が $2$ つからなる群は，$\mathbb{Z}_2$ 群と呼ばれる可換群となる．  
@@ -100,133 +99,63 @@ $$ {#eq-Jacobi}
 
 を満たす．
 $[T_i]^j_k=\ri f^{j}_{~ik}$ という行列を考えると，式 (@eq-Jacobi) より
-$[T_i,T_j]=\ri f^{k}_{~ij}T_{k}$ を満たすことがわかる．これは随伴表現と呼ばれる．
+$[T_i,T_j]=\ri f^{k}_{~ij}T_{k}$ を満たすことがわかる．これは随伴表現と呼ばれる． -->
 
-::: example
-**$\mathrm{SU}(2)$群**
-  $T_i^\dag=T_i$で，$\tr T_i=0$となる，$2\times 2$行列は，$3$つあり，これは\textrm{Pauli}行列である:
-  \begin{align}
-    \sigma_1 = 
-    \begin{pmatrix}
-      0 & 1\\
-      1 & 0
-    \end{pmatrix},\quad
-    \sigma_2 = 
-    \begin{pmatrix}
-      0 & -\ri\\
-      \ri & 0
-    \end{pmatrix},\quad
-    \sigma_3 = 
-    \begin{pmatrix}
-      1 & 0\\
-      0 & -1
-    \end{pmatrix}.
-  \end{align}
-  \textrm{Pauli}行列は，$\tr \sigma_i\sigma_j = 2\delta_{ij}$に規格化されている．
-  したがって，規格化因子を考慮して$T_i=\sigma_i/2$に取ると，
-  $[T_i,T_j]=\ri\sum_{i=1}^3\epsilon_{ijk}T_k$ の代数を満たす．$\epsilon_{ijk}$は完全反対称テンソルで，$\epsilon_{123}=1$に符号を取ってある．
-:::
-
-::: example
-**$\mathrm{SU}(3)$群**
-
-QCDで重要になる$\mathrm{SU}(3)$群を考えよう．これは，3次元複素ベクトルの内積を不変にする変換である．
-  $T_i^\dag=T_i$ で，$\tr T_i=0$ となる，$3\times 3$ 行列は8つある．したがって生成子は，
-  \textrm{Gell-Mann}行列
-
-$$
-  \begin{split}
-    &\lambda_1 = \begin{pmatrix}
-      0 & 1 & 0\\
-      1 & 0 & 0\\
-      0 & 0 &  0
-    \end{pmatrix},\quad
-    \lambda_2 = \begin{pmatrix}
-      0 & -\ri & 0\\
-      \ri & 0 & 0\\
-      0 & 0 &  0
-    \end{pmatrix},\quad
-    \lambda_3 = \begin{pmatrix}
-      1 & 0 & 0\\
-      0 & -1 & 0\\
-      0 & 0 &  0
-    \end{pmatrix},\quad
-    \lambda_4 = \begin{pmatrix}
-      0 & 0 & 1\\
-      0 & 0 & 0\\
-      1 & 0 &  0
-    \end{pmatrix},\notag\\
-    &\lambda_5 = \begin{pmatrix}
-      0 & 0 & -\ri\\
-      0 & 0 & 0\\
-      \ri & 0 &  0
-    \end{pmatrix},\quad
-    \lambda_6 = \begin{pmatrix}
-      0 & 0 & 0\\
-      0 & 0 & 1\\
-      0 & 1 &  0
-    \end{pmatrix},\quad
-    \lambda_7 = \begin{pmatrix}
-      0 & 0 & 0\\
-      0 & 0 & -\ri\\
-      0 & \ri & 0
-    \end{pmatrix},\quad
-    \lambda_8 = \frac{1}{\sqrt{3}}\begin{pmatrix}
-      1 & 0 & 0\\
-      0 & 1 & 0\\
-      0 & 0 &  -2
-    \end{pmatrix}.
-  \end{split}
-$$
-
-  を用いて，$T_i=\lambda_i/2$である．
-  構造定数 $f_{ijk}$で，ゼロでないものは，
-   $f_{123}=1$,  $f_{458}=f_{678}={\sqrt{3}}/{2}$, $f_{147}=f_{165}=f_{246}=f_{257}=f_{345}=f_{376}=1/2$である．
-
-:::
 
 ## Haar測度 {#sec-Haar_measure}
-<!-- \subsection{Haar測度}\label{sec-Haar_measure} -->
-群上で関数の積分を行うには，群構造と両立する自然な測度を導入する必要がある．特に，$\mathrm{SU}(N)$ のような連続群においては，離散的な和に代わる操作として，群の左右変換に対して不変な測度が求められる．このような測度は一般にHaar測度と呼ばれ，任意のコンパクト群に対して，定数倍を除いて一意に定まる．
-Haar測度は，群の元 $g\in G$ に対し，
+
+群上で関数の積分を行うには，群構造と両立する自然な測度を導入する必要がある．特に，$\mathrm{SU}(N)$ のような連続群においては，離散的な和に代わる操作として，群の左右変換に対して不変な測度が求められる．このような測度は一般に Haar 測度と呼ばれ，任意のコンパクト群に対して，定数倍を除いて一意に定まる．
+Haar 測度は，群の元 $g\in G$ に対し，
+
 $$
     \int_G \dd{g} f(g)= \int_G \dd{g} f(hg)= \int_G \dd{g} f(gh)
 $$
+
 を満たす測度である．
 ここで，$f(g)$ は，群の元 $g$ に依存する関数である．
 この条件は，測度が群の左・右作用に対して不変であること，すなわち群の構造に依存しない自然な積分を定めることを意味する．
 本稿では，
+
 $$
     \int_G \dd{g}  = 1
 $$
+
 となるように正規化されたものを用いる．
 
 具体的に $\mathrm{SU}(2)$ の場合に見ていこう．
 $\mathrm{SU}(2)$ の元を
+
 $$
     g= \cos\frac{\theta}{2}+\ri \symbf{\sigma}\cdot\bm{n}\sin\frac{\theta}{2}
 $$
+
 と表す (@eq-SU2_n)．
-$\bm{n}\in S^2$で，極座標表示 (@eq-n_polar) を用いると，Haar測度は，
+$\bm{n}\in S^2$で，極座標表示 (@eq-n_polar) を用いると，Haar 測度は，
+
 $$
     \dd g =
     \frac{\dd{\theta}}{\pi} \sin^2\frac{\theta}{2} \frac{\dd{\Omega}}{4\pi}
 $$
+
 となる．ここで，$\dd\Omega$ は，$S^2$ の測度で，
+
 $$
 \dd\Omega=\sin\psi \dd\psi \dd\varphi
 $$
+
 である．パラメータは，$0\leq\theta\leq 2\pi$, $0\leq\psi\leq \pi$, $0\leq\varphi\leq 2\pi$ を取る．
 
 
 ## 中心
-<!-- \subsection{中心} -->
 
 群 $G$ の**中心**とは，群の元 $g\in G$ であって，任意の元 $h\in G$ に対し
+
 $$
   hg=gh
 $$
+
 を満たすものの集合をいう．群 $G$ の中心を $Z(G)$ と表す:
+
 $$
   Z(G)=\{g\in G\mid \forall h\in G,\; hg=gh\}.
 $$
@@ -235,26 +164,31 @@ $Z(G)$ も群(アーベル群)をなす．
 $\mathrm{SU}(N)$ の場合は，すべての元と可換な元は単位行列に比例するので，$\omega\mathbf{1}_N$
 の形をとる．ユニタリ行列である条件から $|\omega|^2=1$ が得られ，行列式が $1$ である条件から，
 $\omega^N=1$ が得られる．これを満たす $\omega$ は，$\exp(2\pi\ri n/N)$ ($n=0,1,\cdots, N-1$) である．したがって，$\mathrm{SU}(N)$ の中心は，
+
 $$
   Z(\mathrm{SU}(N)) \simeq \mathbb{Z}_N
 $$
+
 となる．
 中心は，物質場を含まないゲージ理論においては，閉じ込め，非閉じ込め相を区別する高次対称性と関係する．
 
 ## 共役類
-<!-- \subsection{共役類} -->
+
 群 $G$ において，$2$ つの群の元 $g,g'\in G$ が，ある $h\in G$ を用いて，
+
 $$
   g'=hgh^{-1}
 $$
-と表されるとき，$g$ と $g'$は\textit{共役}であるという．
-このとき，$g$ と $g'$ は\textit{同じ\textit{共役類}に属する}という．
-$g$ の\textit{共役類}を $\mathcal{C}_g$ と表す:
+と表されるとき，$g$ と $g'$は **共役** であるという．
+このとき，$g$ と $g'$ は同じ **共役類** に属するという．
+$g$ の共役類を $\mathcal{C}_g$ と表す:
+
 $$
   \mathcal{C}_g\coloneqq\{hgh^{-1}\mid h\in G\}.
 $$
 
-$G=\mathrm{SU}(N)$ の場合，$hgh^{-1}$ によって，$g$ を対角化できるので，$g$ として対角行列を考えれば良い．対角行列は，
+例えば，$G=\mathrm{SU}(2)$ の場合，$hgh^{-1}$ によって，$g$ を対角化できるので，$g$ として対角行列を考えれば良い．対角行列は，
+
 $$
   e^{\ri\theta T_3}=\begin{pmatrix}
     e^{\ri\theta/2} & 0\\
@@ -262,7 +196,9 @@ $$
   \end{pmatrix}
     \label{eq-representative_SU2}
 $$
+
 と表される．さらに，
+
 $$
   \ri X=\ri \sigma_1= 
   \begin{pmatrix}
@@ -270,7 +206,9 @@ $$
     1 & 0
   \end{pmatrix}
 $$
+
 を用い，$(\ri X)^{-1}=-\ri X$ に注意して，
+
 $$
   \ri X\begin{pmatrix}
     e^{\ri\theta/2} & 0\\
@@ -282,10 +220,12 @@ $$
     0 & e^{\ri\theta/2}
   \end{pmatrix}
 $$
+
 となることがわかる．つまり，$\theta$ と $-\theta$ は共役となるので，
 $\theta$ は，$0$ から $2\pi$ までの範囲を動くと考えることができる．
 以下では，共役類のラベルとして $\mathcal{C}_\theta$ の表記を用いる．
 $\theta=0$ および $2\pi$ に対応する行列は，すべての元と可換であり，中心に属する．したがって，
+
 $$ \begin{aligned}
     \mathcal{C}_0&= \{\mathbf{1}_2\},\\
     \mathcal{C}_{2\pi}&= \{-\mathbf{1}_2\}.
@@ -299,254 +239,272 @@ $$
 $$
 と書ける．
 
-<!-- %  \subsection{中心化群}
-% 群の元の$h\in G$と可換な群の元の集合は，中心化群(Centralizer)と呼ばれる．
-%  $$
-%      \mathrm{C}_G(h)\coloneqq\{g\in G|gh=hg\}
-%      \label{eq-Centralizer}
-%  $$
-%  中心の元$z\in {Z}(G)$関しては，$\mathrm{C}_G(z)=G$となる．
+## 中心化群
 
-%  $\mathrm{SU}(2)$の場合は，中心については，
-%  $$
-%       \mathrm{C}_G(\mathbf{1}_2)=\mathrm{C}_G(-\mathbf{1}_2)=\mathrm{SU}(2)
-%  $$
-%  $h=\exp\ri\theta T_3$については，
-%  $$
-%      C_{\mathrm{SU}(2)}(e^{\ri\theta T_3})=\{ e^{\ri\alpha T_3}|0\leq \alpha<4\pi\}\simeq \mathrm{U}(1)
-%  $$
-%  となる． -->
+ 群の元の $h\in G$ と可換な群の元の集合は，中心化群 (Centralizer) と呼ばれる：
+
+$$
+  \mathrm{C}_G(h)\coloneqq\{g\in G|gh=hg\}
+$$ {#eq-Centralizer}
+
+中心の元 $z\in {Z}(G)$ 関しては，$\mathrm{C}_G(z)=G$ となる．
+
+$\mathrm{SU}(2)$　の場合は，中心については，
+$$
+  \mathrm{C}_G(\mathbf{1}_2)=\mathrm{C}_G(-\mathbf{1}_2)=\mathrm{SU}(2)
+$$
+
+$h=\exp\ri\theta T_3$　については，
+
+$$
+  C_{\mathrm{SU}(2)}(e^{\ri\theta T_3})=\{ e^{\ri\alpha T_3}|0\leq \alpha<4\pi\}\simeq \mathrm{U}(1)
+$$
+
+となる．
 
 
 ## 指標
-<!-- \subsection{指標} -->
-表現行列のトレースは指標と呼ばれる．
+
+表現行列のトレースは **指標** と呼ばれる．
 トレースの性質より，$h\in G$として，$\chi_a(g)=\chi_a(hgh^{-1})$ となることから，共役な元は，同じ指標の値を返すことがわかる．
 
 
 $\mathrm{SU}(2)$ の表現 $j_a$ の指標は，
+
 $$
 \chi_a(g) =\tr_a D_{a}(g)
 =\sum_{m_a} e^{\ri m_a\theta} = \frac{\sin\frac{\theta(2j_a+1)}{2} }{\sin\frac{\theta}{2}}
 $$
+
 と表される．ここで，$e^{\ri m_a\theta}$ は，$D_{a}(g)$ を対角化したときの固有値で，共役類のラベルに対応する．
 このことから，$\chi_a(g)$ の代わりに，$\chi_a(\theta)$ と書くこともある．
 
-\paragraph{指標の直交性}
+---
+
+#### 指標の直交性 
 
 式 (@eq-su2-D-orthogonality)に示される表現の直交性より，
+
 $$
   \int \dd{g} \chi^\dag_a(g) \chi_b(g)=\delta_{ab}
 $$
+
 が成り立つ．指標は共役類のみに依存するため，測度 $\dd{\nu(\theta)}$ を導入することで，
+
 $$
   \int \dd{\nu(\theta)}\chi^\dag_a(\theta) \chi_b(\theta)=\delta_{ab}
 $$ {#eq-character_orthogonality}
+
 という形で表すことができる．
-ここで，$\dd{\nu(\theta)}$は，
+$\dd{\nu(\theta)}$ は，共役類上の規格化された測度である．
+$\mathrm{SU}(2)$の場合， $\dd{\nu(\theta)}$ は，
+
 $$
     \dd{\nu(\theta)}\coloneqq\frac{\dd\theta}{\pi}\sin^2\frac{\theta}{2}
 $$
-で与えられる共役類上の規格化された測度である．
+
+となる．
 
 さらに，
+
 $$
 \sum_{a} \chi^\dag_a(\theta) \chi_a(\theta')=\delta_\nu(\theta-\theta')
 $$
+
 が成り立つ．ここで $\delta_\nu(\theta-\theta')$ は，次を満たすデルタ関数である:
+
 $$
     \int \dd{\nu(\theta')} f(\theta')\delta_\nu(\theta-\theta')=f(\theta).
 $$
 
-$\mathrm{SU}(2)$の指標に，
+$\mathrm{SU}(2)$ の指標に，
+
 $$
 \Delta_\theta=\frac{\partial^2}{\partial\theta^2}+\frac{\cos\frac{\theta}{2}}{\sin\frac{\theta}{2}}\frac{\partial}{\partial\theta}
 $$
+
 を作用させると，次の固有値方程式が成り立つ事がわかる:
+
 $$
 -\Delta_\theta\chi_a(\theta)=C_2(a)\chi_a(\theta).
 $$
+
 ここで，$C_2(a)=j_a(j_a+1)$ は，2次のCasimir不変量である．
-
-<!-- ## $\mathrm{SU}(2)$上のHilbert空間
-$\mathrm{SU}(2)$上の複素関数$f$で，
-$$
-  \int \dd{g} f^*(g)f(g) < \infty
-$$
-を満たすものは，Hilbert空間をなす．
-このヒルベルト空間は，$L^2(\mathrm{SU}(2))$と表される．
-
-
-Dirac記法を導入すると，状態は，
-$$
-\ket{f} = \int dg f(g)\ket{g}
-$$
-の形で書け，$f(g)$は， $f(g)$は内積$\bra{g}\ket{f}$により，
-$$
-f(g) = \bra{g}\ket{f}
-$$
-と表される．
-また，$\ket{g}$の内積は，以下のデルタ関数になる:
-$$
-  \begin{split}
-    \bra{g}\ket{g'} = \delta_{g,g'}.
-  \end{split}
-$$ -->
-
-
-
 
 
 ## 類演算子
 群の元 $h\in G$ に対応する演算子として $L^h$ を導入し，
-$\ket{g}$に対して，
+$\ket{g}$ に対して，
+
 $$
   L^h\ket{g}=\ket{hg}
 $$
+
 と定義する．同様に，右作用を表す演算子 $R^h$ を
+
 $$
   R^h\ket{g}=\ket{g\bar{h}}
 $$
+
 と定義する．ここで，$\bar{h}$ は，$h$ の逆元を表す．
-$L^h$ は，群の左作用，$R^h$は 右作用を表しており，次の関係を満たす:
+$L^h$ は，群の左作用，$R^h$ は 右作用を表しており，次の関係を満たす:
+
 $$ \begin{aligned}
   L^{h}L^{h'}&=L^{hh'},\\
   R^{h}R^{h'}&=R^{hh'},\\
   L^hR^{h'}&=R^{h'}L^h.
- \end{aligned}$$
+ \end{aligned}
+$$
 
 $L^{h}R^{h}$ を状態 $\ket{\psi}$ に作用させると
+
 $$
   \begin{split}
     L^hR^{h}\ket{\psi}=\int dg \psi(g)\ket{hg\bar{h}}=
     \int dg \psi(\bar{h}gh)\ket{g}
   \end{split}
 $$
+
 となる．
-<!-- %  $L^g\ket{h}=\ket{gh}$,
-%  $R^g\ket{h}=\ket{h\bar{g}}$
+<!--   $L^g\ket{h}=\ket{gh}$,
+  $R^g\ket{h}=\ket{h\bar{g}}$
 
-%  $L^g U_a L^{\bar{g}}=D_a(\bar{g})U_a$, 
+  $L^g U_a L^{\bar{g}}=D_a(\bar{g})U_a$, 
 
-%  $R^g U_a R^{\bar{g}}=U_aD_a(g)$
+  $R^g U_a R^{\bar{g}}=U_aD_a(g)$
 
-%  $R^g=e^{\ri\theta^iR_a}$
-%  $L^g=e^{-\ri\theta^iL_a}$
-%  $$
-%    \begin{split}
-%      L^gR^g\ket{j,m,n}=[D_a(\bar{g})]^m_{m'}
-%      [D_a(g)]^{n'}_{n}
-%      \ket{j,m',n'}
-%    \end{split}
-%  $$ -->
+  $R^g=e^{\ri\theta^iR_a}$
+  $L^g=e^{-\ri\theta^iL_a}$
+  $$
+    \begin{split}
+      L^gR^g\ket{j,m,n}=[D_a(\bar{g})]^m_{m'}
+      [D_a(g)]^{n'}_{n}
+      \ket{j,m',n'}
+    \end{split}
+  $$ -->
 
 共役類 $\mathcal{C}_\theta$ に属する元 $g$ にわたる左作用 $L^g$ の積分で定義される演算子
+
 $$
-    T_\theta = \int_{g\in \mathcal{C}_\theta} dg L^g
+    K_\theta = \int_{g\in \mathcal{C}_\theta} dg L^g
 $$
+
 は，すべての $L^h$ および$R^h$ と可換である．
-このような演算子 $T_\theta$ を類演算子と呼ぶ．
+このような演算子 $K_\theta$ を類演算子と呼ぶ．
 ここでは左作用 $L^g$ を用いて定義したが，$R^g$ を使っても同様に定義できる．
 
-群のすべての元と可換であるので，$T_\theta$ は
+群のすべての元と可換であるので，$K_\theta$ は
 表現空間の基底 $\ket{a,m,n}$ を取ると，単位行列に比例する形で作用する．
 したがって，
+
 $$
-    T_\theta = \sum_{a}c_aP_{a}
+    K_\theta = \sum_{a}c_aP_{a}
 $$
+
 ここで，$P_{a}$ は，$\mathcal{Q}^*_a\otimes \mathcal{Q}_a$ への射影演算子で，$c_a$ は係数関数である．
-$T_\theta$に対して表現を取り，トレースとすると，係数 $c_a$ は
+$K_\theta$に対して表現を取り，トレースとすると，係数 $c_a$ は
+
 $$
 c_a = \frac{1}{d_a}\chi_a(\theta)
 $$
+
 と計算される．
 したがって、類演算子は次のように展開される：
+
 $$
-    T_\theta = \sum_{a}\frac{1}{d_a}\chi_j(\theta)P_{a}.
+    K_\theta = \sum_{a}\frac{1}{d_a}\chi_j(\theta)P_{a}.
 $$
 
 
 
-指標の直交性 (@eq-character_orthogonality) を用いると，射影演算子 $P_j$ は，
+指標の直交性 (@eq-character_orthogonality) を用いると，射影演算子 $P_a$ は，
+
 $$
-    P_j =  d_j\int_{0}^{2\pi}\dd{\nu(\theta)}\chi^\dag_j(\theta) T_\theta
+    P_a =  d_a\int \dd{\nu(\theta)}\chi^\dag_j(\theta) K_\theta
 $$ {#eq-projector}
+
 と表すことができる．
+
+
+---
 
 #### 類演算子の積
 
-$T_\theta$と$T_{\theta'}$ の積は，
+$K_\theta$ と $K_{\theta'}$ の積は，
+
 $$
-T_\theta T_{\theta'}
+K_\theta K_{\theta'}
 = \sum_{j}\frac{1}{d^2_j}\chi_j(\theta)\chi_j(\theta')P_j
 $$
+
 となる．
-一方で，射影演算 $P_j$は，式 (@eq-projector) により $T_{\theta''}$ を使って表されるので，
+一方で，射影演算 $P_a$ は，式 (@eq-projector) により $T_{\theta''}$ を使って表されるので，
+
 $$
-T_\theta T_{\theta'}
-=\int_{0}^{2\pi}\dd{\nu(\theta'')}
-\mathcal{K}(\theta,\theta',\theta'') T_{\theta''}
+K_\theta K_{\theta'}
+=\int \dd{\nu(\theta'')}
+N(\theta,\theta';\theta'') T_{\theta''}
 $$
+
 と書くことできる．
-ここで，結合係数（structure constant）$\mathcal{K}(\theta, \theta', \theta'')$ は
+ここで，結合係数（structure constant）$N(\theta, \theta'; \theta'')$ は
 
 $$
-  \begin{split}
-   \mathcal{K}(\theta,\theta',\theta'')= \sum_{a}\frac{1}{d_a}\chi_a(\theta)\chi_a(\theta')\chi^\dag_a(\theta'')
-  \end{split}
+   N(\theta,\theta';\theta'')= \sum_{a}\frac{1}{d_a}\chi_a(\theta)\chi_a(\theta')\chi^\dag_a(\theta'')
 $$
 
-である．この関数は，$\theta''$ が $|\theta-\theta'|\leq \theta''\leq\min(\theta+\theta',4\pi-\theta-\theta')$ のときに値(台)を持つ．その上では次のように具体的に計算される:
+である．
+
+$\mathrm{SU}(2)$の場合，
+この関数は，$\theta''$ が $|\theta-\theta'|\leq \theta''\leq\min(\theta+\theta',4\pi-\theta-\theta')$ のときに値(台)を持つ．その上では次のように具体的に計算される:
 
 $$
-  \begin{split}
-   \mathcal{K}(\theta,\theta',\theta'')
+   N(\theta,\theta';\theta'')
    =\frac{\pi}{4}\frac{1}{\sin\frac{\theta}{2}\sin\frac{\theta'}{2}\sin\frac{\theta''}{2}}.
-  \end{split}
 $$
 
 
-<!-- %  Racah係数$W(abcd;ef)$を用いて，
-%  $$
-%    % \braket{ j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}
-%    [F_{abc}^d]_f^e=v_{e}v_{f}W(j_aj_bj_dj_c;j_{e}j_{f})
-%  $$
-%  と表せる．Wigner $6$-jシンボルを用いると
-%  $$
-%    W(abcd;ef)=(-1)^{a+b+c+d}
-%    \begin{Bmatrix}
-%      a & b & e\\
-%      d & c & f
-%    \end{Bmatrix}
-%    % checked sympy 
-%  $$ -->
+<!--   Racah係数$W(abcd;ef)$を用いて，
+  $$
+     \braket{ j_a (j_bj_c)j_{f};j_d,m_d}{(j_aj_b)j_{e}j_c;j_d,m_d}
+    [F_{abc}^d]_f^e=v_{e}v_{f}W(j_aj_bj_dj_c;j_{e}j_{f})
+  $$
+  と表せる．Wigner $6$-jシンボルを用いると
+  $$
+    W(abcd;ef)=(-1)^{a+b+c+d}
+    \begin{Bmatrix}
+      a & b & e\\
+      d & c & f
+    \end{Bmatrix}
+     checked sympy 
+  $$ -->
 
 
-<!-- %  $$
-%    \begin{split}
-%      &\begin{Bmatrix}
-%        j_a,j_b,j_c\\
-%        j_d,j_e,j_f
-%      \end{Bmatrix}\\
-%      &=\sum_{m_a}(-1)^{\sum_{k}(j_k-m_k)}
-%      \begin{pmatrix}
-%        j_a & j_b & j_c\\
-%        -m_a & -m_b & -m_c
-%      \end{pmatrix}
-%      \begin{pmatrix}
-%        j_a & j_e & j_f\\
-%        m_a & -m_e & m_f
-%      \end{pmatrix}
-%      \begin{pmatrix}
-%        j_d & j_b & j_f\\
-%        m_d & m_b & -m_f
-%      \end{pmatrix}
-%      \begin{pmatrix}
-%        j_d & j_e & j_c\\
-%        -m_d & m_e & m_c
-%      \end{pmatrix}.          
-%    \end{split}
-%  $$ -->
+<!--   $$
+    \begin{split}
+      &\begin{Bmatrix}
+        j_a,j_b,j_c\\
+        j_d,j_e,j_f
+      \end{Bmatrix}\\
+      &=\sum_{m_a}(-1)^{\sum_{k}(j_k-m_k)}
+      \begin{pmatrix}
+        j_a & j_b & j_c\\
+        -m_a & -m_b & -m_c
+      \end{pmatrix}
+      \begin{pmatrix}
+        j_a & j_e & j_f\\
+        m_a & -m_e & m_f
+      \end{pmatrix}
+      \begin{pmatrix}
+        j_d & j_b & j_f\\
+        m_d & m_b & -m_f
+      \end{pmatrix}
+      \begin{pmatrix}
+        j_d & j_e & j_c\\
+        -m_d & m_e & m_c
+      \end{pmatrix}.          
+    \end{split}
+  $$ -->
 
 
 
