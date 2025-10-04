@@ -1115,6 +1115,8 @@ $$
  $$
 :::
 
+ **以下，未完成．**
+
 
 さらに，これらのフェルミオンの合成ルールは，次のように図式的に表現できる：
 
@@ -1122,13 +1124,13 @@ $$
 <div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
   <img src="figs/parallel_fermion.svg" style="height:3.5em;">
   <span class="math display" style="display:inline-block;">
-    $$\Rightarrow\frac{\sqrt{2}}{3}$$
+    $$\Rightarrow\sqrt{\frac{2}{3}}$$
   </span>
   <img src="figs/fuse_quarks_to_diquarks.svg" style="height:3.5em;">
   <span class="math display" style="display:inline-block;">
     $,\qquad$
   </span>
-  <img src="figs/quark_diquark_parallel.svg" style="height:3.5em;">
+  <img src="figs/diquark_quark_parallel.svg" style="height:3.5em;">
   <span class="math display" style="display:inline-block;">
     $$\Rightarrow \frac{1}{\sqrt{3}}$$
   </span>
@@ -1144,7 +1146,7 @@ $$
   <span class="math display" style="display:inline-block;">
     $,\qquad$
   </span>
-  <img src="figs/diquark.svg" style="height:2.0em;">
+  <img src="figs/diquark.svg" style="height:3.5em;">
   <span class="math display" style="display:inline-block;">
     $$\Rightarrow \frac{\sqrt{2}}{\sqrt{3}}$$
   </span>
@@ -1160,7 +1162,7 @@ $$
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel_fermion.pdf}}}&\Rightarrow\frac{\sqrt{2}}{3}
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fuse_quarks_to_diquarks.pdf}}},\label{eq-SU3_fuse_quarks}\\
    %
-   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/quark_diquark_parallel.pdf}}}&\Rightarrow\frac{1}{\sqrt{3}}
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/diquark_quark_parallel.pdf}}}&\Rightarrow\frac{1}{\sqrt{3}}
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fuse_diquarks_to_baryon.pdf}}},\label{eq-SU3_fuse_diquarks}\\
    %
    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/baryon.pdf}}}&\Rightarrow\sqrt{3}\quad
@@ -1172,7 +1174,7 @@ $$
 :::
 
 
- 以下，未完成．
+
 
 
 
