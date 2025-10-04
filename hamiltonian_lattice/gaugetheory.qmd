@@ -1,10 +1,37 @@
 # 連続理論から格子模型へ
 $$
-  \mathcal{L}=-\frac{1}{2}\tr F_{\mu\nu}F^{\mu\nu}
+  \mathcal{L}=-\frac{1}{2g^2}\tr F_{\mu\nu}F^{\mu\nu}
 $$
 $$
   \pi^\mu  = \frac{\partial \mathcal{L}}{\partial \partial_0A^i_\mu}
 $$
 $$
   \mathcal{H} = \dot{\pi}^\mu\partial_0 A_\mu -\mathcal{L}=
+$$
+
+
+
+$$
+g^2_{\mathrm{lat}} = a^{3-d}g^2
+$$
+
+
+$$
+E_{\mathrm{lat}} = a^{d-1} E
+$$
+
+$$
+A_{\mathrm{lat}} = a A
+$$
+
+$$
+H_\mathrm{lat} = a H
+$$
+
+$$
+\delta_{e,e'}\to a^d \delta^{(d)}(x-y)
+$$
+
+$$
+\sum_{e} \to a^d\int d^dx
 $$

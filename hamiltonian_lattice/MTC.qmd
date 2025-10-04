@@ -571,3 +571,44 @@ $$ {#eq-inverser_dadb}
 
 
 ## 演算子の状態への作用
+
+
+<!--  
+Equation~(@eq-action_trU) can be graphically derived by using the topological deformation rules discussed in the previous section.
+ First, let us put defects in the center of all plaquettes.
+ For a plaquette, it is graphically represented as
+ $$
+   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop9.pdf}}}.
+ $$
+ Here, the indices have been dropped for brevity.
+ % The defect is responsible for making the network non-trivial in its topological deformation.
+ The action of $\tr U_d$ on a plaquette is expressed by a loop encircling the defect,
+ $$
+   \tr U_d \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop9.pdf}}}
+   =\ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop1.pdf}}}.
+ $$
+ Using the deformation rules in eqs~(@eq-stacking}-(@eq-Fmove):
+ $$
+   \begin{split}
+     &\vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop1.pdf}}}
+     \overset{\red{\text{eq.~(@eq-partition)}}}{\Longrightarrow}
+     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop2.pdf}}}
+     \overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop3.pdf}}}\\
+     &
+     \overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop4.pdf}}}
+     \overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop5.pdf}}}
+     \overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop6.pdf}}}\\
+     &\overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop7.pdf}}}
+     \overset{\text{eq.~(@eq-Fmove)}}{\Longrightarrow}
+     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop8.pdf}}}
+     \overset{\red{\text{eq.~(@eq-stacking)}}}{\Longrightarrow}
+     \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/loop9.pdf}}},
+   \end{split}
+ $$
+ we obtain eq.~(@eq-action_trU), by tracing the changes of indices.
+--->
