@@ -23,7 +23,8 @@ book:
     - index.qmd                     # トップページ（本の概要）
     - part: "基礎編"
       chapters:
-        - Lie.qmd
+        - SU2.qmd
+        - SUN.qmd
         - quantum_on_SUN.qmd
         - Kogut-Susskind.qmd
         - regularization.qmd
