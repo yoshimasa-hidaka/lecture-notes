@@ -33,6 +33,13 @@ $$
 A_v = \int dg e^{\ri \theta^i G_i(v)}
 $$
 
+$$
+K_{[g]}=\sum_{a}\frac{\chi_a(g)}{d_a}P_a
+$$
+
+$$
+P_a = \sum_{n,m}\ket{a,m,n}\bra{a,m,n}
+$$
 
 
 <!-- % \subsection{物理量}
