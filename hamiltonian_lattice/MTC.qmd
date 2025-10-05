@@ -573,6 +573,68 @@ $$ {#eq-inverser_dadb}
 ## 演算子の状態への作用
 
 
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em; flex-wrap:wrap;">
+  <img src="figs/honeycomb_move_1.svg" style="height:7.0em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow$$
+  </span>
+  <img src="figs/honeycomb_move_2.svg" style="height:7.0em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow$$
+  </span>
+  <img src="figs/honeycomb_move_3.svg" style="height:7.0em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow$$
+  </span>
+  <img src="figs/honeycomb_move_4.svg" style="height:7.0em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow$$
+  </span>
+  <img src="figs/honeycomb_move_5.svg" style="height:7.0em;">
+      <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow$$
+  </span>
+  <img src="figs/honeycomb_move_6.svg" style="height:7.0em;">
+      <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow$$
+  </span>
+  <img src="figs/honeycomb_move_7.svg" style="height:7.0em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow$$
+  </span>
+  <img src="figs/honeycomb_move_8.svg" style="height:7.0em;">
+    <!-- 行区切り-->
+  <span style="flex-basis:100%; height:0;"></span>
+
+  <span class="math display" style="display:inline-block;">
+    $$\Rightarrow$$
+  </span>
+    <img src="figs/honeycomb_move_0.svg" style="height:7.0em;">
+</div>
+:::
+
 <!--  
 Equation~(@eq-action_trU) can be graphically derived by using the topological deformation rules discussed in the previous section.
  First, let us put defects in the center of all plaquettes.
