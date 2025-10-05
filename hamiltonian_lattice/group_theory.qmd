@@ -157,7 +157,7 @@ $$
 を満たすものの集合をいう．群 $G$ の中心を $Z(G)$ と表す:
 
 $$
-  Z(G)=\{g\in G\mid \forall h\in G,\; hg=gh\}.
+  Z(G)=\{g\in G\mid \forall h\in G,\; hg=gh\}\,.
 $$
 
 $Z(G)$ も群(アーベル群)をなす．
@@ -184,7 +184,7 @@ $$
 $g$ の共役類を $\mathcal{C}_g$ と表す:
 
 $$
-  \mathcal{C}_g\coloneqq\{hgh^{-1}\mid h\in G\}.
+  \mathcal{C}_g\coloneqq\{hgh^{-1}\mid h\in G\}\,.
 $$
 
 例えば，$G=\mathrm{SU}(2)$ の場合，$hgh^{-1}$ によって，$g$ を対角化できるので，$g$ として対角行列を考えれば良い．対角行列は，
@@ -194,8 +194,7 @@ $$
     e^{\ri\theta/2} & 0\\
     0 & e^{-\ri\theta/2}
   \end{pmatrix}
-    \label{eq-representative_SU2}
-$$
+$$ {#eq-representative_SU2}
 
 と表される．さらに，
 
@@ -228,7 +227,7 @@ $\theta=0$ および $2\pi$ に対応する行列は，すべての元と可換�
 
 $$ \begin{aligned}
     \mathcal{C}_0&= \{\mathbf{1}_2\},\\
-    \mathcal{C}_{2\pi}&= \{-\mathbf{1}_2\}.
+    \mathcal{C}_{2\pi}&= \{-\mathbf{1}_2\}\,.
  \end{aligned}
  $$
 
@@ -244,7 +243,7 @@ $$
  群の元の $h\in G$ と可換な群の元の集合は，中心化群 (Centralizer) と呼ばれる：
 
 $$
-  \mathrm{C}_G(h)\coloneqq\{g\in G|gh=hg\}
+  \mathrm{C}_G(h)\coloneqq\{g\in G|gh=hg\}\,.
 $$ {#eq-Centralizer}
 
 中心の元 $z\in {Z}(G)$ 関しては，$\mathrm{C}_G(z)=G$ となる．
@@ -254,13 +253,19 @@ $$
   \mathrm{C}_G(\mathbf{1}_2)=\mathrm{C}_G(-\mathbf{1}_2)=\mathrm{SU}(2)
 $$
 
-$h=\exp\ri\theta T_3$　については，
+$h=\exp(\ri\theta T_3)$　については，
 
 $$
   C_{\mathrm{SU}(2)}(e^{\ri\theta T_3})=\{ e^{\ri\alpha T_3}|0\leq \alpha<4\pi\}\simeq \mathrm{U}(1)
 $$
 
 となる．
+
+<!-- $$
+% q_in\bar{q}_{i'}
+% q_{i'}\bar{n}\bar{q}_i
+L^{\bar{c}_i} T^{q_in\bar{q}_{i'}} L^{q_{i'}\bar{n}\bar{q}_i\bar{c}_iq_in\bar{q}_{i'}}
+$$ -->
 
 
 ## 指標
@@ -314,7 +319,7 @@ $$
 が成り立つ．ここで $\delta_\nu(\theta-\theta')$ は，次を満たすデルタ関数である:
 
 $$
-    \int \dd{\nu(\theta')} f(\theta')\delta_\nu(\theta-\theta')=f(\theta).
+    \int \dd{\nu(\theta')} f(\theta')\delta_\nu(\theta-\theta')=f(\theta)\,.
 $$
 
 $\mathrm{SU}(2)$ の指標に，
@@ -326,7 +331,7 @@ $$
 を作用させると，次の固有値方程式が成り立つ事がわかる:
 
 $$
--\Delta_\theta\chi_a(\theta)=C_2(a)\chi_a(\theta).
+-\Delta_\theta\chi_a(\theta)=C_2(a)\chi_a(\theta)\,.
 $$
 
 ここで，$C_2(a)=j_a(j_a+1)$ は，2次のCasimir不変量である．
@@ -352,7 +357,7 @@ $L^h$ は，群の左作用，$R^h$ は 右作用を表しており，次の関�
 $$ \begin{aligned}
   L^{h}L^{h'}&=L^{hh'},\\
   R^{h}R^{h'}&=R^{hh'},\\
-  L^hR^{h'}&=R^{h'}L^h.
+  L^hR^{h'}&=R^{h'}L^h\,.
  \end{aligned}
 $$
 
@@ -412,7 +417,7 @@ $$
 したがって、類演算子は次のように展開される：
 
 $$
-    K_\theta = \sum_{a}\frac{1}{d_a}\chi_j(\theta)P_{a}.
+    K_\theta = \sum_{a}\frac{1}{d_a}\chi_j(\theta)P_{a}\,.
 $$
 
 
@@ -460,7 +465,7 @@ $\mathrm{SU}(2)$の場合，
 
 $$
    N(\theta,\theta';\theta'')
-   =\frac{\pi}{4}\frac{1}{\sin\frac{\theta}{2}\sin\frac{\theta'}{2}\sin\frac{\theta''}{2}}.
+   =\frac{\pi}{4}\frac{1}{\sin\frac{\theta}{2}\sin\frac{\theta'}{2}\sin\frac{\theta''}{2}}\,.
 $$
 
 

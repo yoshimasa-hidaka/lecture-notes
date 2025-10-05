@@ -164,12 +164,13 @@ $$ {#eq-three_point_state}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/PhysState.svg" style="height:8.0em;">
 </div>
+$$ $$ {#eq-PhysState}
 :::
 
 ::: {.content-visible when-format=pdf}
 $$ 
     \vcenter{\hbox{\includegraphics[scale=0.3]{figs/PhysState.pdf}}}
-$$
+$$ {#eq-PhysState}
 :::
 
 のように，辺に表現，頂点に多重度のラベルを付与した表現のネットワークで表される．
@@ -365,8 +366,8 @@ $$ {#eq-Hamiltonian_SUN}
 #### 物理状態
 
 Gauss の拘束条件を満たす基底は，各辺 ($e\in \mathcal{E}$) に既約表現 $a_e$ を割り当て，各頂点 ($v\in \mathcal{V}$) に 多重度 $\mu_v$ を付与した状態で，Clebsch--Gordan 係数が消えない組み合わせによって構成される．
-この基底を $\ket{\bm{a};\symbf{\mu}}$ と記す．
-グラフィカルには，図 @fig-vertex 右 で表せる．
+この基底を $\ket右{\bm{a};\symbf{\mu}}$ と記す．
+グラフィカルには，式({@eq-PhysState}) で表せる．
 
 一般的な状態は，この基底の線形結合として
 

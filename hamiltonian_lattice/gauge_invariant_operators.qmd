@@ -38,7 +38,26 @@ K_{[g]}=\sum_{a}\frac{\chi_a(g)}{d_a}P_a
 $$
 
 $$
-P_a = \sum_{n,m}\ket{a,m,n}\bra{a,m,n}
+P_a = \sum_{n_a,m_a}\ket{a,m_a,n_a}\bra{a,m_a,n_a}
+$$
+
+$$
+\bra{c,m_c,n_c}[U_{a}]^{m_a}_{n_a}\ket{b,m_b,n_b}
+=
+\frac{\sqrt{d_b}}{\sqrt{d_c}}
+\sum_c\sum_{m_c,n_c,\mu} 
+  \braket{a,m_a;\, b,m_b}{c,m_c;\mu}
+  \braket{c,n_c;\mu}{a,n_a;\, b,n_b}
+$$
+
+$$
+P_c [U_a]^{m_a}_{n_a}=
+\sum_{b}\sum_{m_c,n_c} 
+\sum_{m_c,n_c,\mu}\sum_{m_b,n_b}
+\ket{m_c,n_c}
+\frac{\sqrt{d_b}}{\sqrt{d_c}}
+  \braket{a,m_a;\, b,m_b}{c,m_c;\mu}
+  \braket{c,n_c;\mu}{a,n_a;\, b,n_b}\bra{b,m_b,n_b}
 $$
 
 
