@@ -21,6 +21,20 @@ $$
 T^g(e) = \sum_a d_a \tr D_a(g) U_a(e) = \ket{g}\bra{g}
 $$
 
+$$
+\mathbf{1}_e =\int dg T^g(e)
+$$
+
+$$
+B_p = \sum_a d_a \tr U_a(p)
+$$
+
+$$
+A_v = \int dg e^{\ri \theta^i G_i(v)}
+$$
+
+
+
 <!-- % \subsection{物理量}
 % ゲージ理論にはどのような物理量があるだろうか．物理量はゲージ不変である必要がある．まず，空間的なWilson loopのトーレス$\tr W_a(C)$はゲージ不変な演算子である．より一般にWilson lineのネットワークもゲージ不変な演算子になる．
 % 経路積分形式では，時間方向に伸びているWilson loopを考えることができる．
