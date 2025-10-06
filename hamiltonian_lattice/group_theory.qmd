@@ -511,6 +511,32 @@ $$
     \end{split}
   $$ -->
 
+<!-- ## 表現の直交性 {#sec-orthogonality}
+
+$$
+\frac{1}{|G|}\sum_{g\in G} [D^\dag_a]^{m_a}_{n_a}(g) [D_b]^{m_b}_{n_b}(g) = \frac{1}{d_a}\delta^a_{b}\delta_{n_b}^{m_a}\delta_{n_a}^{m_b}
+$$
+
+$|G|$ は，$G$ の元の数(位数)である．
+
+$$
+\int dg [D^\dag_a]^{m_a}_{n_a}(g) [D_b]^{m_b}_{n_b}(g) = \frac{1}{d_a}\delta^a_{b}\delta_{n_b}^{m_a}\delta_{n_a}^{m_b}
+$$
+
+
+指標の直交性
+$$
+\frac{1}{|G|}\sum_{g\in G} \chi^*_a(g) \chi_b(g) = \delta^a_{b}
+$$
+
+$$
+\int dg \chi^*_a(g) \chi_b(g) = \delta^a_{b}
+$$
+
+$$
+\sum_{a}d_a\chi_a(g) = |G|\delta(g)
+$$ -->
+
 
 
 

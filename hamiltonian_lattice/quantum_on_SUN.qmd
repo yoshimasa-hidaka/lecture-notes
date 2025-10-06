@@ -43,6 +43,14 @@ f(x) = \int_{0}^{2\pi} \dd{x'}  \delta_{2\pi}(x-x') f(x')
 $$
 
 を満たす $2\pi$-周期デルタ関数である．ここで，$f(x)$ は $\mathrm{U}(1)$ 上の関数である．
+この $2\pi$-周期デルタ関数は，
+
+$$
+\delta_{2\pi}(x-x') = \frac{1}{2\pi}\sum_{n}e^{\ri n(x-x')}
+$$
+
+と表す事ができる．
+
 一方，周期境界条件から $p$ の固有値は整数 $n\in\mathbb{Z}$ に量子化される．その固有状態 $\ket{n}$ は，直交性関係
 
 $$
@@ -282,17 +290,25 @@ $$
 
 $$
   \begin{split}
-    \bra{g}\ket{g'} = \delta(g^{-1}g'),\quad 1=\int \dd{g} \ket{g}\bra{g}
+    \bra{g}\ket{g'}&= \delta(g\bar{g}')\,,\\
+    \quad 1&=\int \dd{g} \ket{g}\bra{g}
   \end{split}
 $$
 
-で与えられる．$\dd{g}$ は $\int \dd{g} =1$ に規格化された Haar 測度で，$\delta(g^{-1}g')$ は，
+で与えられる．$\dd{g}$ は $\int \dd{g} =1$ に規格化された Haar 測度で，$\delta(gg'^{-1})$ は，
 
 $$
-  \int \dd{g'} \delta(g^{-1}g')\psi(g')=\psi(g)
+  \int \dd{g'} \delta(g\bar{g}')\psi(g')=\psi(g)
 $$
 
 を満たすデルタ関数である．
+このデルタ関数は，指標 $\chi_a(g)=\tr D_a(g)$ を用いて
+
+$$
+\delta(g\bar{g}') = \sum_{a}\chi_a(g)
+$$
+
+と表すことができる．
 
 
 ### 電気的基底
@@ -301,8 +317,10 @@ $E^2 = \delta^{ij}{\ER}_i{\ER}_j = \delta^{ij}{\EL}_i{\EL}_j$ を対角化する
 これは，$\ER_i$, $\EL_i$ の作用に対して，
 
 $$
-    \ER_i\ket{a,m_a,n_a}=\sum_{n'_a}[T_i]^{n'_a}_{n_a}\ket{a,m_a,{n'}_a},\quad
-    \EL_i\ket{a,m_a,n_a}=\sum_{m'_a}[T_i]^{m_a}_{m'_a}\ket{a,{m'}_a,{n}_a}
+\begin{split}
+    \ER_i\ket{a,m_a,n_a}&=\sum_{n'_a}[T_i]^{n'_a}_{n_a}\ket{a,m_a,{n'}_a}\,,\\
+    \EL_i\ket{a,m_a,n_a}&=\sum_{m'_a}[T_i]^{m_a}_{m'_a}\ket{a,{m'}_a,{n}_a}
+\end{split}
 $$
 
 となるように取れば良い．実際，
@@ -320,8 +338,10 @@ $$ {#eq-U_action}
 直交性と完全性は，以下のようになる:
 
 $$
-  \bra{a,m_a,n_a}\ket{b,m_b,n_b}=\delta^a_b\delta_{m_a}^{m_b}\delta^{n_a}_{n_b},\quad
-  1=\sum_{a}\sum_{m_a,n_a}\ket{a,m_a,n_a}\bra{a,m_a,n_a} \,.
+  \begin{split}
+  &\bra{a,m_a,n_a}\ket{b,m_b,n_b}=\delta^a_b\delta_{m_a}^{m_b}\delta^{n_a}_{n_b}\,,\\
+  &1=\sum_{a}\sum_{m_a,n_a}\ket{a,m_a,n_a}\bra{a,m_a,n_a} \,.
+  \end{split}
 $$
 
 ### Fourier(Peter--Weyl) 展開
@@ -332,7 +352,16 @@ $$
 \ket{\psi} = \int \dd{g} \psi(g)\ket{g} =  \sum_a\sum_{m_a,n_a} [\psi^a]_{m_a}^{n_a}\ket{a,m_a,n_a}
 $$
 
-の形で書ける．ここで，$\psi(g) = \bra{g}\ket{\psi}$　および，$[\psi^a]_{m_a}^{n_a}=\bra{a,m_a,n_a}\ket{\psi}$ である．
+の形で書ける．ここで，
+
+$$
+\begin{split}
+  \psi(g) &= \bra{g}\ket{\psi}\,,\\
+  [\psi^a]_{m_a}^{n_a}&=\bra{a,m_a,n_a}\ket{\psi}
+\end{split}
+$$
+
+である．
 $\psi(g)$ と $[\psi^a]_{m_a}^{n_a}$ は，Peter--Weyl 定理により
 
 $$
