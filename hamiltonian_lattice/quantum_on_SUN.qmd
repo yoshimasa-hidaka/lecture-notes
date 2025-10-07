@@ -305,7 +305,7 @@ $$
 このデルタ関数は，指標 $\chi_a(g)=\tr D_a(g)$ を用いて
 
 $$
-\delta(g\bar{g}') = \sum_{a}\chi_a(g)
+\delta(g\bar{g}') = \sum_{a}\chi_a(g\bar{g}')
 $$
 
 と表すことができる．

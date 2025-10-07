@@ -13,7 +13,6 @@ $$
 $$
 もゲージ不変な演算である．
 
-
 $$
 \delta(g) = \sum_{a}d_a \chi_a(g)
 $$
@@ -23,7 +22,7 @@ $$
 $(2+1)$次元時空の場合，これは，リボン演算子と呼ばれている．
 
 $$
-T^g(e) = \sum_a d_a \tr D^\dag_a(g) U_a(e) = \ket{g}\bra{g}
+T^g(e) = \sum_a d_a \tr D_a(g) U^\dag_a(e) = \ket{g}\bra{g}
 $$
 
 $$
