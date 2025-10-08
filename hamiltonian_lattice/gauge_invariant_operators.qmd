@@ -44,7 +44,7 @@ $$
 と作用するので，
 
 $$
-  L^h=\int\dd{g}\ket{hg}
+  L^h=\int d{g}\ket{hg}
 $$
 $$
   R^h\ket{g}=\ket{g\bar{h}}
@@ -114,6 +114,33 @@ P_c [U_a]^{m_a}_{n_a}=
   \braket{a,m_a;\, b,m_b}{c,m_c;\mu}
   \braket{c,n_c;\mu}{a,n_a;\, b,n_b}\bra{b,m_b,n_b}
 $$
+
+
+
+$$
+F_{\rho}^{h,g}=\int dk F^{h,k}_{\rho_1}F^{\bar{k}h\bar{k}g}_{\rho_2}
+$$
+
+
+$$
+\int dk F^{h,k}_{\rho_1}F^{\bar{k}h\bar{k}g}_{\rho_2\rho_3}
+=\int dk F^{h,k}_{\rho_1\rho_2}F^{\bar{k}h\bar{k}g}_{\rho_3}
+$$
+
+$$
+T_\rho^g = F_\rho^{1,g}
+$$
+
+$$
+L_\rho^h = \int dg F_\rho^{h,g}
+$$
+
+?
+$$
+F_{\rho}^{h,g} = L_\rho^h T^g_\rho = T^g_\rho L_\rho^h
+$$
+
+
 
 
 <!-- % \subsection{物理量}
