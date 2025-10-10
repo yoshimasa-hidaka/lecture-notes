@@ -2,17 +2,13 @@
 title: "ハミルトニアン形式による格子QCD入門"
 #subtitle: ""
 #author:
-#   - name: ""
-#     affiliation: ""
+#   - name: "日高義将"
+#     affiliation: "京都大学基礎物理学研究所"
 description: |
     本講義ノートは，[「原子核三者若手 夏の学校2025」](https://www2.yukawa.kyoto-u.ac.jp/~sansha.wakate/school2025/) における講義「ハミルトニアン形式による格子ゲージ理論入門」のノートである．
     本講義では，格子ゲージ理論のハミルトニアン形式に焦点を当て，その基礎的枠組みと物理的意味を解説する．
 ---
 
-<!-- ::: {.callout-tip collapse="true"}
-### クリックで開閉
-ここに折りたたみの中身を書きます。
-::: -->
 
 # はじめに
 
@@ -35,3 +31,4 @@ description: |
 
 本講義ノートでは，Einstein記法を用いる．つまり上下に現れた同じ添字に対しては，断りが無い限り縮約（和を取る）を行うものとする．また，状態のテンソル積 $\ket{a}\otimes \ket{b}$ は，単に $\ket{a}\ket{b}$ のように表記する．
 $\mathbb{Z}$，$\mathbb{R}$，$\mathbb{C}$ は，整数，実数および複素数の集合を表す．
+
