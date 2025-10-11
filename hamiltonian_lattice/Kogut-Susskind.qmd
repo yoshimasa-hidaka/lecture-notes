@@ -441,78 +441,6 @@ $$
 
 
 
-<!-- 具体的な証明は省略するが，このグラフィカルな計算法を使うと，物理状態
-
-::: {.content-visible when-format=html}
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/plaquetteAction0.svg" style="height:5.5em;">
-</div>
-:::
-
-::: {.content-visible when-format=pdf}
-$$
-\begin{split}
-    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction0.pdf}}}
-\end{split}
-$$
-:::
-
-へのWilsonループ$\tr U_d$の作用は，Wilsonループのトポロジカルな変形を用いて評価することができる:
-
-::: {.content-visible when-format=html}
-<div markdown="1" style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/plaquetteAction1.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$=\sum_{b_{1}}\sqrt{\frac{d_{b_{1}} }{d_{a_{1}}d_{d}}}$$
-  </span>
-  <img src="figs/plaquetteAction2.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$=\sum_{b_{1},b_{4}}\sqrt{\frac{d_{b_{1}} }{d_{a_{1}}d_{d}}}  [F_{b_{1}}^{c_{1}a_{4}d}]_{a_{1}b_{4}} $$
-  </span>
-  <img src="figs/plaquetteAction3.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$= \sum_{b_{1},b_{2},b_{3},b_{4},b_{5}}
-\sqrt{\frac{d_{b_{1}} }{d_{a_{1}}d_{d}}}  [F_{b_{1}}^{c_{1}a_{4}d}]_{a_{1}b_{4}}
-[F_{b_{4}}^{c_{4}a_{3}d}]_{a_{4}b_{3}}
-[F_{b_{3}}^{c_{3}a_{2}d}]_{a_{3}b_{2}}
-[F_{b_{2}}^{c_{2}a_{1}d}]_{a_{2}b_{5}}$$
-  </span>
-  <img src="figs/plaquetteAction4.svg" style="height:5.5em;">
-  <span class="math display" style="display:inline-block;">
-    $$  =\prod_{i=1}^{4} \sum_{b_{i}}[F_{b_{i}}^{c_{i}a_{i-1}d}]_{a_{i}b_{i-1}}$$
-  </span>
-  <img src="figs/plaquetteAction5.svg" style="height:5.5em;">
-</div>
-$$ $${#eq-Wilson_loop_action}
-:::
-
-::: {.content-visible when-format=pdf}
-$$
-\begin{split}
-   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction1.pdf}}}
-   &=
-\sum_{b_{1}}\sqrt{\frac{d_{b_{1}} }{d_{a_{1}}d_{d}}}
- \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction2.pdf}}}\\
-&      =\sum_{b_{1},b_{4}}\sqrt{\frac{d_{b_{1}} }{d_{a_{1}}d_{d}}}  [F_{b_{1}}^{c_{1}a_{4}d}]_{a_{1}b_{4}} 
- \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction3.pdf}}}\\
-&      = \sum_{b_{1},b_{2},b_{3},b_{4},b_{5}}
-\sqrt{\frac{d_{b_{1}} }{d_{a_{1}}d_{d}}}  [F_{b_{1}}^{c_{1}a_{4}d}]_{a_{1}b_{4}}
-[F_{b_{4}}^{c_{4}a_{3}d}]_{a_{4}b_{3}}
-[F_{b_{3}}^{c_{3}a_{2}d}]_{a_{3}b_{2}}
-[F_{b_{2}}^{c_{2}a_{1}d}]_{a_{2}b_{5}}
-   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction4.pdf}}}\\
-&      =\prod_{i=1}^{4} \sum_{b_{i}}
-[F_{b_{i}}^{c_{i}a_{i-1}d}]_{a_{i}b_{i-1}}
-   \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquetteAction5.pdf}}}.
-  \end{split}
-$${#eq-Wilson_loop_action}
-:::
-
-ここで，$a_{0}$と$b_{0}$は，$a_{4}$および$b_{4}$と解釈する．
-したがってWilsonループの作用は，$F$-symbolを用いて表すことができることがわかる．
-図の中心に$\times$は，トポロジカルな変形でWilsonループが潰れて自明な作用にならないようにするために導入されてたdefectである． -->
-
-
 
 
 
@@ -596,12 +524,7 @@ $$
   式 (@eq-three_point_state) で定義した，$\ket*{\varphi}$が，
   $\braket{\varphi}{\varphi}=1$を満たすことを確かめよ．
 \end{question}
-一般には係数に位相がついていても良い．$\mathrm{SU}(2)$の場合は，位相をうまく選ぶことによって有向グラフの矢印の向きに依存しないように定式化することもできる．
-
-一般に$3$点頂点からなるネットワークを考え，頂点にClebsch--Gordan係数を付与することで，Gaussの拘束条件を満たす物理状態を構成することができる．
-$4$点頂点がある場合は，補助リンクを導入することで，
-$3$点頂点に分解することができるので，$3$点頂点のみのネットワークを考えれば十分である．
-したがって，物理状態の基底は，頂点が$3$ネットワーク上の辺にスピンの量子数を割り当てることで生成することができる．ただし，各頂点は三角不等式を満たすものとする．このようなネットワークは，スピンネットワークやストリングネットワークと呼ばれる．  -->
+一般には係数に位相がついていても良い．$\mathrm{SU}(2)$の場合は，位相をうまく選ぶことによって有向グラフの矢印の向きに依存しないように定式化することもできる． -->
 
 
 
@@ -695,4 +618,9 @@ $F$-symbol の性質により，Wilson 線の作用は補助線の入れ方に�
 <!-- ## 線の向きについて
 ある表現のWilson線の矢印の向きを反転させると，これは反表現に対応し，一般には区別される状態である．
 しかし，$\mathrm{SU}(2)$の特殊性として，表現と反表現が同型であるという性質がある．この性質を考慮すると矢印の向きを忘れることができる．
+$$
+\bra{j_a,n_a,j_b,n_b}\ket{j_c,m_c}\to
+(-1)^{-j_a-j_b}\bra{j_a,n_a,j_b,n_b}\ket{j_c,m_c}
+$$
+
 具体的には，線と頂点の位相の再定義を使って，$d_a$が現れるところを$(-1)^{j_a}d_a$に置き換えることで，向きを忘れることができる． -->
