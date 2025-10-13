@@ -999,18 +999,18 @@ $${#eq-deform2}
 
 が成り立つが示せる．
 
-本稿では，スピンの合成の式 (@eq-decomposition) を $\mathcal{Q}_{c}\to \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ の写像として，
+本稿では，式 (@eq-decomposition) を $\mathcal{Q}_{c}\to \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ の写像として，
 Clebsch–Gordan 係数の図の矢印の向きを定めた．
 逆に合成だと思って矢印の向きを逆向きに書く流儀もある．
 どちらの流儀も全体で無矛盾になるようになっていれば問題はない．
 （注:本稿の表記では，矢印の向きとカラーのフラックスの向きが逆向きになる．）
 
 
-を満たすことがわかる．つまり構造定数自身もLie代数を満たす．
+<!-- を満たすことがわかる．つまり構造定数自身もLie代数を満たす．
 また，基本表現では，
 
 $$
   \sum_{i}[T_i]^j_k [T_i]^l_m = \frac{1}{2}\qty(\delta^j_m\delta^l_k-\frac{1}{N}\delta^j_k\delta^l_m)
 $$
 
-を満たす．
+を満たす． -->
