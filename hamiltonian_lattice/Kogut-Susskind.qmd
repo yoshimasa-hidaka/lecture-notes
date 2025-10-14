@@ -622,5 +622,118 @@ $$
 \bra{j_a,n_a,j_b,n_b}\ket{j_c,m_c}\to
 (-1)^{-j_a-j_b}\bra{j_a,n_a,j_b,n_b}\ket{j_c,m_c}
 $$
+$$
+v_a^2 = (-1)^{2j_a}d_a
+$$
+[@Dittrich:2016typ]
 
-具体的には，線と頂点の位相の再定義を使って，$d_a$が現れるところを$(-1)^{j_a}d_a$に置き換えることで，向きを忘れることができる． -->
+
+
+具体的には，線と頂点の位相の再定義を使って，$d_a$が現れるところを$(-1)^{j_a}d_a$に置き換えることで，向きを忘れることができる． 
+
+ここで状態と演算子に関して，グラフィカルな表現を導入する．
+式 (@eq-U_action) より状態と $U_a$ には対応関係があり，$v_aU_a$ に表現 $a$ のラベルを持った向きのある線を対応させる:
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/a_na.svg" style="height:5.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$=  v_aU_a\,.$$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/a_na.pdf}}}
+   =  v_aU_a\,.
+$$
+:::
+
+頂点については，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/abc_na.svg" style="height:5.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \braket{a,n_a;\, b,n_b}{c,m_c;\mu}\frac{1}{v_c}\,, $$
+  </span>
+</div>
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/cab_na.svg" style="height:5.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \braket{c,n_c;\mu}{a,m_a;\, b,m_b}\frac{1}{v_c} $$
+  </span>
+</div>
+:::
+
+::: {.content-visible when-format=pdf}
+$$
+    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abc_na.pdf}}}
+  = \braket{a,n_a;\, b,n_b}{c,m_c;\mu}\frac{1}{v_c}
+  ,\quad
+ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cab_na.pdf}}}
+  = \braket{c,n_c;\mu}{a,m_a;\, b,m_b}\frac{1}{v_c}
+$$
+:::
+
+と Clebsch--Gordan 係数を対応づける．
+これにより，式 (@eq-fusion_U) などに対応して，
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/parallel1_na.svg" style="height:5.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \sum_{c,\mu}{\frac{v_c}{v_av_b}}$$
+  </span>
+  <img src="figs/parallel2_na.svg" style="height:5.0em;">
+  <span class="math display" style="display:inline-block;">$$\,,$$</span>
+</div>
+$$ $$ {#eq-stacking}
+
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/abcloop_na.svg" style="height:5.5em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \delta_c^{c'}{\frac{v_av_b}{v_c}}$$
+  </span>
+  <img src="figs/c_na.svg" style="height:5.5em;">
+</div>
+$$ $$ {#eq-partition}
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel1_na.pdf}}}
+= \sum_{c}{\frac{v_c}{v_av_b}}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/parallel2_na.pdf}}},
+\quad  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abcloop_na.pdf}}}
+= \delta_c^{c'}{\frac{v_av_b}{v_c}}
+  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/c_na.pdf}}}
+  \label{eq-partition}
+\end{align}
+:::
+
+を得る．ここで内線の添字は縮約するものとする．
+さらに3つの $U_a$ の積の順番を考慮していくと
+
+
+::: {.content-visible when-format=html}
+<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
+  <img src="figs/fmove1_na.svg" style="height:7.0em;">
+  <span class="math display" style="display:inline-block;">
+    $$= \sum_{f} [F^{abc}_d]_{ef}$$
+  </span>
+  <img src="figs/fmove2_na.svg" style="height:7.0em;">
+</div>
+$$ $$ {#eq-Fmove}
+:::
+
+::: {.content-visible when-format=pdf}
+\begin{align}
+\vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove1_na.pdf}}}
+&= \sum_{f} [F^{abc}_d]_{ef}
+\ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2_na.pdf}}}\label{eq-Fmove}
+\end{align}
+:::
+
+-->
