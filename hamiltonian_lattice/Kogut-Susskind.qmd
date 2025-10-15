@@ -618,13 +618,21 @@ $F$-symbol の性質により，Wilson 線の作用は補助線の入れ方に�
 <!-- ## 線の向きについて
 ある表現のWilson線の矢印の向きを反転させると，これは反表現に対応し，一般には区別される状態である．
 しかし，$\mathrm{SU}(2)$の特殊性として，表現と反表現が同型であるという性質がある．この性質を考慮すると矢印の向きを忘れることができる．
-$$
-\bra{j_a,n_a,j_b,n_b}\ket{j_c,m_c}\to
-(-1)^{-j_a-j_b}\bra{j_a,n_a,j_b,n_b}\ket{j_c,m_c}
-$$
+そのために，
+
 $$
 v_a^2 = (-1)^{2j_a}d_a
 $$
+
+を導入し，$\sqrt{d_a}$ を $v_a$ に置き換えれば実行できる．
+
+$$
+\frac{1}{\sqrt{d_c}}\bra{j_a,n_a,j_b,n_b}\ket{j_c,m_c}\to
+(-1)^{-j_a-j_b}\bra{j_a,n_a,j_b,n_b}\ket{j_c,m_c}
+$$
+
+$v_a = (-1)^{j_a}\sqrt{d_a}$
+
 [@Dittrich:2016typ]
 
 
@@ -656,13 +664,13 @@ $$
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/abc_na.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
-    $$= \braket{a,n_a;\, b,n_b}{c,m_c;\mu}\frac{1}{v_c}\,, $$
+    $$= \braket{a,n_a;\, b,n_b}{c,m_c}\frac{1}{v_c}\,, $$
   </span>
 </div>
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/cab_na.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
-    $$= \braket{c,n_c;\mu}{a,m_a;\, b,m_b}\frac{1}{v_c} $$
+    $$= \braket{c,n_c}{a,m_a;\, b,m_b}\frac{1}{v_c} $$
   </span>
 </div>
 :::
@@ -734,6 +742,5 @@ $$ $$ {#eq-Fmove}
 &= \sum_{f} [F^{abc}_d]_{ef}
 \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2_na.pdf}}}\label{eq-Fmove}
 \end{align}
-:::
-
+::: 
 -->
