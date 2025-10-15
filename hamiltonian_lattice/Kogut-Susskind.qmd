@@ -692,21 +692,21 @@ $$
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/parallel1_na.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
-    $$= \sum_{c,\mu}{\frac{v_c}{v_av_b}}$$
+    $$= \sum_{c}{\frac{v_c}{v_av_b}}$$
   </span>
   <img src="figs/parallel2_na.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">$$\,,$$</span>
 </div>
-$$ $$ {#eq-stacking}
+$$ $$ {#eq-stacking_na}
 
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/abcloop_na.svg" style="height:5.5em;">
+  <img src="figs/abcloop_na.svg" style="height:7.0em;">
   <span class="math display" style="display:inline-block;">
     $$= \delta_c^{c'}{\frac{v_av_b}{v_c}}$$
   </span>
   <img src="figs/c_na.svg" style="height:5.5em;">
 </div>
-$$ $$ {#eq-partition}
+$$ $$ {#eq-partition_na}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -733,7 +733,7 @@ $$ $$ {#eq-partition}
   </span>
   <img src="figs/fmove2_na.svg" style="height:7.0em;">
 </div>
-$$ $$ {#eq-Fmove}
+$$ $$ {#eq-Fmove_na}
 :::
 
 ::: {.content-visible when-format=pdf}
@@ -742,5 +742,5 @@ $$ $$ {#eq-Fmove}
 &= \sum_{f} [F^{abc}_d]_{ef}
 \ \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove2_na.pdf}}}\label{eq-Fmove}
 \end{align}
-::: 
--->
+:::  -->
+
