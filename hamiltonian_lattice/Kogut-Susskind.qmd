@@ -618,6 +618,33 @@ $F$-symbol の性質により，Wilson 線の作用は補助線の入れ方に�
 <!-- ## 線の向きについて
 ある表現のWilson線の矢印の向きを反転させると，これは反表現に対応し，一般には区別される状態である．
 しかし，$\mathrm{SU}(2)$の特殊性として，表現と反表現が同型であるという性質がある．この性質を考慮すると矢印の向きを忘れることができる．
+
+$$
+[\epsilon_a]_{mn} \coloneqq \sqrt{d_a}\braket{0,0}{j_a,m;j_a,n} = \delta_{m,-n}{(-1)^{j_a-m}}
+$$
+
+$$
+[\epsilon_a]^{mn} =\delta^{m,-n}{(-1)^{-j_a-m}}
+$$
+
+$$
+[\epsilon_a]_{mn} [\epsilon_a]^{nk} 
+= \delta_{m}^k
+$$
+
+
+$$
+\braket{0,0}{j_a,m_a,j_a,n}
+\braket{j_a,m_a,j_a,m}{0,0}
+[U^\dagger_a]^n_{m}
+$$
+
+$$
+\braket{0,0}{j_a,m,j_a,n}[D_a^\dag(g)]^{n}_{l} =  [D_a(g)]_m^k\braket{0,0}{j_a,k,j_a,l}
+$$
+
+
+
 そのために，
 
 $$
@@ -637,16 +664,16 @@ $v_a = (-1)^{j_a}\sqrt{d_a}$
 
 
 
-具体的には，線と頂点の位相の再定義を使って，$d_a$が現れるところを$(-1)^{j_a}d_a$に置き換えることで，向きを忘れることができる． 
+具体的には，線と頂点の位相の再定義を使って，$d_a$が現れるところを$(-1)^{j_a}d_a$に置き換えることで，向きを忘れることができる．
 
 ここで状態と演算子に関して，グラフィカルな表現を導入する．
-式 (@eq-U_action) より状態と $U_a$ には対応関係があり，$v_aU_a$ に表現 $a$ のラベルを持った向きのある線を対応させる:
+式 (@eq-U_action) より状態と $U_a$ には対応関係があり，$\sqrt{d_a}\epsilon_a U_a$ に表現 $a$ のラベルを持った線を対応させる:
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/a_na.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
-    $$=  v_aU_a\,.$$
+    $$=  \sqrt{d_a}\epsilon_a U_a\,.$$
   </span>
 </div>
 :::
@@ -664,13 +691,10 @@ $$
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/abc_na.svg" style="height:5.0em;">
   <span class="math display" style="display:inline-block;">
-    $$= \braket{a,n_a;\, b,n_b}{c,m_c}\frac{1}{v_c}\,, $$
-  </span>
-</div>
-<div style="display:flex; align-items:center; justify-content:center; gap:1em;">
-  <img src="figs/cab_na.svg" style="height:5.0em;">
-  <span class="math display" style="display:inline-block;">
-    $$= \braket{c,n_c}{a,m_a;\, b,m_b}\frac{1}{v_c} $$
+    $$= \begin{pmatrix}
+  j_a & j_b & j_c\\
+  m_a & m_b & m_c
+\end{pmatrix} $$
   </span>
 </div>
 :::
@@ -678,10 +702,13 @@ $$
 ::: {.content-visible when-format=pdf}
 $$
     \vcenter{\hbox{\includegraphics[scale=0.3]{figs/abc_na.pdf}}}
-  = \braket{a,n_a;\, b,n_b}{c,m_c;\mu}\frac{1}{v_c}
-  ,\quad
- \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cab_na.pdf}}}
-  = \braket{c,n_c;\mu}{a,m_a;\, b,m_b}\frac{1}{v_c}
+  = \begin{pmatrix}
+  j_a & j_b & j_c\\
+  m_a & m_b & m_c
+\end{pmatrix}\,,
+%   ,\quad
+%  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/cab_na.pdf}}}
+%   = \braket{c,n_c;\mu}{a,m_a;\, b,m_b}\frac{1}{v_c}
 $$
 :::
 

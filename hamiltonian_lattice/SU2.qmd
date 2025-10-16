@@ -362,11 +362,11 @@ $$ {#eq-Clebsch-Gordan_orthogonal2}
 
 $$
 \braket{j_a,m_a;\, j_b,m_b}{j_c,m_c}=\sum_{m'_a,m'_b,m'_{c}}
-[D_{j_c}(\bar{g})]^{m_c}_{m'_c}[D_{j_a}(g)]^{m_a}_{m'_a}[D_{j_b}(g)]^{m_b}_{m'_b}
+[D^\dag_{j_c}(g)]_{m_c}^{m'_c}[D_{j_a}(g)]^{m_a}_{m'_a}[D_{j_b}(g)]^{m_b}_{m'_b}
 \braket{j_a,m'_a;\, j_b,m'_b}{j_c,m'_c}
 $$
 
-を満たす．ここで，$\bar{g}$は，$g$の逆元である．
+を満たす．
 
 
 
