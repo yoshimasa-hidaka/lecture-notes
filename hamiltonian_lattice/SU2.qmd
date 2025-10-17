@@ -579,6 +579,59 @@ $${#eq-fmoves}
 
 と表せることが知られている．
 
+$$
+  \begin{split}
+    [F^{abc}_d]_{ef}
+    & = \sum_{m_{a},m_b,m_c,m_d,m_{e} m_{f}}\frac{1}{d_d}
+    (-1)^{j_{a}-j_{b}+m_{e}}\sqrt{d_e}
+  \begin{pmatrix}
+    j_a & j_b & j_e\\
+    m_a & m_b & -m_e
+  \end{pmatrix}
+    (-1)^{j_{e}-j_{c}+m_{d}}\sqrt{d_d}
+\begin{pmatrix}
+  j_e & j_c & j_d\\
+  m_e & m_c & -m_d
+\end{pmatrix}\\
+    &\qquad\qquad\qquad  \times 
+(-1)^{j_{b}-j_{c}+m_{f}}\sqrt{d_f}
+\begin{pmatrix}
+  j_b & j_c & j_f\\
+  m_b & m_c & -m_f
+\end{pmatrix}
+(-1)^{j_{a}-j_{f}+m_{d}}\sqrt{d_d}
+\begin{pmatrix}
+  j_a & j_f & j_d\\
+  m_a & m_f & -m_d
+\end{pmatrix}\\
+%%%%
+    & = \sum_{m_{a},m_b,m_c,m_d,m_{e} m_{f}}
+    \sqrt{d_ed_f}
+    (-1)^{j_{a}-j_{b}+m_{e}}
+    (-1)^{j_{e}-j_{c}+m_{d}}
+    (-1)^{j_{b}-j_{c}+m_{f}}
+    (-1)^{j_{a}-j_{f}+m_{d}}\\
+&  \begin{pmatrix}
+    j_a & j_b & j_e\\
+    m_a & m_b & -m_e
+  \end{pmatrix}
+\begin{pmatrix}
+  j_e & j_c & j_d\\
+  m_e & m_c & -m_d
+\end{pmatrix}
+\begin{pmatrix}
+  j_b & j_c & j_f\\
+  m_b & m_c & -m_f
+\end{pmatrix}
+\begin{pmatrix}
+  j_a & j_f & j_d\\
+  m_a & m_f & -m_d
+\end{pmatrix}
+  \end{split}
+$$
+
+
+
 ::: {.callout-note collapse="true"}
 ## Wigner $6$-$j$ シンボルの具体的表示
 
@@ -1000,7 +1053,7 @@ $${#eq-deform2}
 が成り立つが示せる．
 
 本稿では，式 (@eq-decomposition) を $\mathcal{Q}_{c}\to \mathcal{Q}_{a}\otimes \mathcal{Q}_{b}$ の写像として，
-Clebsch–Gordan 係数の図の矢印の向きを定めた．
+Clebsch-–Gordan 係数の図の矢印の向きを定めた．
 逆に合成だと思って矢印の向きを逆向きに書く流儀もある．
 どちらの流儀も全体で無矛盾になるようになっていれば問題はない．
 （注:本稿の表記では，矢印の向きとカラーのフラックスの向きが逆向きになる．）
