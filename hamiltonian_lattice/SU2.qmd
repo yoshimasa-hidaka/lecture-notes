@@ -562,7 +562,7 @@ Clebsch--Gordan 係数を用いて $F$-symbol を表すと
 $$
   \begin{split}
     [F^{abc}_d]_{ef}
-    & = \sum_{m_{a},m_b,m_c,m_{e} m_{f}}\braket{j_a,m_a;\, j_b,m_b}{j_{e},m_{e}}\braket{j_{e},m_{e};\, j_{c},m_{c}}{j_{d},m_{d}}\\
+    & =\frac{1}{d_d} \sum_{m_{a},m_b,m_c,m_d,m_{e} m_{f}}\braket{j_a,m_a;\, j_b,m_b}{j_{e},m_{e}}\braket{j_{e},m_{e};\, j_{c},m_{c}}{j_{d},m_{d}}\\
     &\qquad\qquad\qquad  \times \braket{j_{f},m_{f}}{ j_b,m_b;\, j_{c},m_{c} }\braket{j_d,m_d}{j_a,m_a;\, j_{f},m_{f}}
   \end{split}
 $${#eq-F-move_def}
@@ -579,7 +579,7 @@ $${#eq-fmoves}
 
 と表せることが知られている．
 
-$$
+<!-- $$
   \begin{split}
     [F^{abc}_d]_{ef}
     & = \sum_{m_{a},m_b,m_c,m_d,m_{e} m_{f}}\frac{1}{d_d}
@@ -628,7 +628,7 @@ $$
   m_a & m_f & -m_d
 \end{pmatrix}
   \end{split}
-$$
+$$ -->
 
 
 
@@ -983,7 +983,7 @@ $$
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/fmove.svg" style="height:5.5em;">
   <span class="math display" style="display:inline-block;">
-    $$=\frac{1}{d_d}[F^{abc}_d]_{ef}$$
+    $$=d_d[F^{abc}_d]_{ef}$$
   </span>
 </div>
 :::
@@ -991,7 +991,7 @@ $$
 ::: {.content-visible when-format=pdf}
 $$
  \vcenter{\hbox{\includegraphics[scale=0.3]{figs/fmove.pdf}}}
-  =\frac{1}{d_d}[F^{abc}_d]_{ef}
+  =d_d[F^{abc}_d]_{ef}
 $$
 :::
 
