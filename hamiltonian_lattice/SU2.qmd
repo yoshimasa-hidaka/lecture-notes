@@ -157,7 +157,7 @@ $$ {#eq-Lie_SU2}
 ここで，$f^k_{~ij}$ は構造定数であり，完全反対称テンソル (Levi-Civita記号) $\epsilon_{ijk}$ を用いて，$f^k_{~ij}=\epsilon_{ijk}$ と表される．
 このLie代数を $\mathfrak{su}(2)$ と書く．
 
-より一般に，抽象的な生成子 $J_i$ を用いて
+より一般に，抽象的な生成子 (エルミート演算子) $J_i$ ($J_i^\dag=J_i$) を用いて
 
 $$
 g=\exp(\ri J_i\theta^i), \qquad [J_i,J_j]=\ri f^i_{~ij}J_k
@@ -201,16 +201,16 @@ $$
 $$
 
 と規格化されているものとする．
-この状態は，$J^2$ と $J_3$ の固有状態に選んであることから
+この状態は，$J^2$ と $J_0=J_3$ の固有状態に選んであることから
 
 $$
 \begin{aligned}
   J^2\ket*{j,m}  &= C_2(j)\ket*{j,m} =j(j+1)\ket*{j,m}\,,\\
-  J_3\ket*{j,m}  &= m\ket*{j,m}
+  J_0\ket*{j,m}  &= m\ket*{j,m}
 \end{aligned}
 $$
 
-を満たす．昇降演算子を状態に作用させると
+を満たす．昇降演算子を状態に作用させると規格化の位相をのぞいて，
 
 $$
   J_{\pm}\ket*{j,m} = \sqrt{j(j+1)-m(m\pm 1)}\ket*{j,m\pm1}
@@ -231,7 +231,7 @@ $$
 Wigner の $D$ 行列（表現行列）は，$U_g$ の状態 $\ket{j,m}$ への作用を表すものである:
 
 $$
-  [D_j]^m_n(g)\coloneqq \bra{j,m}U_g\ket{j,n} \,.
+  [D_j(g)]^m_n\coloneqq \bra{j,m}U_g\ket{j,n} \,.
 $$ {#eq-Wigner_matrix}
 
 Lie代数の表現 $j$ に対する行列要素 $[T_{ji}]^m_{n} \coloneqq \bra{j,m}J_i\ket{j,n}$ を導入すると，
@@ -288,7 +288,7 @@ $$
   \mathcal{Q}_{1}\otimes \mathcal{Q}_{\frac{1}{2}} \simeq \mathcal{Q}_{\frac{3}{2}}\oplus \mathcal{Q}_{\frac{1}{2}}
 $$
 
-となり，$N^c_{\frac{1}{2}1}$ は，
+となり，$N^c_{1\frac{1}{2}}$ は，
 
 $$
   N_{1\frac{1}{2}}^{\frac{3}{2}}=1,\quad
@@ -326,8 +326,8 @@ $\sum_{m_a,m_b,m_c}\ket*{j_a,m_a} \ket*{j_b,m_b}\braket{j_a,m_a;\, j_b,m_b}{j_c,
 $$ \begin{aligned}
   (J_{a3}+J_{b3})\ket*{j_aj_b;j_c,m_c} &= m_c\ket*{j_aj_b;j_c,m_c} \,,\\
   (J_{a}+J_{b})^2\ket*{j_aj_b;j_c,m_c} &= j_c(j_c+1)\ket*{j_aj_b;j_c,m_c} \,,\\
-  J_{ai}^2\ket*{j_aj_b;j_c,m_c} &= j_a(j_a+1)\ket*{j_aj_b;j_c,m_c} \,,\\
-  J_{bi}^2\ket*{j_aj_b;j_c,m_c} &= j_b(j_b+1)\ket*{j_aj_b;j_c,m_c}
+  J_{a}^2\ket*{j_aj_b;j_c,m_c} &= j_a(j_a+1)\ket*{j_aj_b;j_c,m_c} \,,\\
+  J_{b}^2\ket*{j_aj_b;j_c,m_c} &= j_b(j_b+1)\ket*{j_aj_b;j_c,m_c}
  \end{aligned}$$
 を満たす．ここで，$(J_{a}+J_{b})^2=\sum_{i=1}^3(J_{ai}+J_{bi})^2$ である．
 逆に直積状態は，
