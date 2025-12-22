@@ -273,7 +273,7 @@ $$ {#eq-decomposition_sun}
 
 および
 $$
-\ket*{a,m_a} \ket*{b,m_b}= \sum_{,m_c}  \ket*{(ab)c,m_c;\mu} \braket{c,m_c;\mu}{a,m_a;\, b,m_b}
+\ket*{a,m_a} \ket*{b,m_b}= \sum_{c,m_c,\mu}  \ket*{(ab)c,m_c;\mu} \braket{c,m_c;\mu}{a,m_a;\, b,m_b}
  $$
 
 と表せる．
@@ -309,7 +309,7 @@ $$ {#eq-Clebsch-Gordan_orthogonal2_SUN}
 
 $$
 \braket{a,m_a;\, b,m_b}{c,m_c;\mu}=\sum_{m'_a,m'_b,m'_{c}}
-[D_{c}(\bar{g})]^{m_c}_{m'_c}[D_{a}(g)]^{m_a}_{m'_a}[D_{b}(g)]^{m_b}_{m'_b}
+[D_{c}(\bar{g})]_{m_c}^{m'_c}[D_{a}(g)]^{m_a}_{m'_a}[D_{b}(g)]^{m_b}_{m'_b}
 \braket{a,m'_a;\, b,m'_b}{c,m'_c;\mu}
 $$
 
@@ -377,12 +377,12 @@ Clebsch--Gordan 係数を用いて $F$-symbol を表すと
 $$
   \begin{split}
     [F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}
-    & = \sum_{m_{a},m_b,m_c,m_{e} m_{f}}\braket{a,m_a;\, b,m_b}{{e},m_{e};\mu}\braket{{e},m_{e};\, {c},m_{c}}{{d},m_{d};\nu}\\
+    & = \frac{1}{d_d}\sum_{m_{a},m_b,m_c,m_dm_{e} m_{f}}\braket{a,m_a;\, b,m_b}{{e},m_{e};\mu}\braket{{e},m_{e};\, {c},m_{c}}{{d},m_{d};\nu}\\
     &\qquad\qquad\qquad  \times \braket{{f},m_{f};\rho}{ b,m_b;\, {c},m_{c} }\braket{d,m_d;\sigma}{a,m_a;\, {f},m_{f}}
   \end{split}
 $${#eq-F-move_def}
-$[F^{abc}_d]_{(e,\mu,\nu)(f,\rho,\sigma)}$
-となる．
+
+となる．ここで，右辺は，$m_d$ に依存しないが和を取り$d_d$で割ることで，対称な形になるようにした．
 
 逆変換は，
 
