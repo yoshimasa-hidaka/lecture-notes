@@ -261,7 +261,7 @@ $$
   <span class="math display" style="display:inline-block;">
     $$\quad\to\qty(\prod_{p\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})$$
   </span>
-  <img src="figs/large_Wilson_loop3.svg" style="height:5.5em;">
+  <img src="figs/large_Wilson_loop3_.svg" style="height:5.5em;">
   <span class="math display" style="display:inline-block;">
     $$=d_{d}\qty(\prod_{p\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})$$
   </span>
