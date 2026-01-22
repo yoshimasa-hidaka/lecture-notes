@@ -91,10 +91,10 @@ $$
   \begin{split}
     &\expval{\tr U_d(\partial S)}\\
     &= 
-    \bra{0}\tr U_{d}(\partial S)\qty(\prod_{f\in \mathcal{P}} \sum_{a_p,b_p}\psi^*(a_p)\psi(b_p)\tr U_{\bar{a}_p}(p)\tr U_{b_p}(p))\ket{0}\\
+    \bra{0}\tr U_{d}(\partial S)\qty(\prod_{p\in \mathcal{P}} \sum_{a_p,b_p}\psi^*(a_p)\psi(b_p)\tr U_{\bar{a}_p}(p)\tr U_{b_p}(p))\ket{0}\\
     &= 
     \sum_{\{a\},\{b\},\{c\}}\qty(\prod_{p'\in\mathcal{P}}\psi^*(a_{p'})\psi(b_{p'})N_{\bar{a}_{p'}b_{p'}}^{c_{p'}})
-    \bra{0}\tr U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}
+    \bra{0}\tr U_{d}(\partial S)\prod_{p\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}
   \end{split}
 $$ {#eq-expvalue_Wilson_loop}
 
@@ -102,7 +102,7 @@ $$ {#eq-expvalue_Wilson_loop}
 また，表記として，
 
 $$
-  \sum_{\{a\}}=\prod_{f\in\mathcal{P}}\sum_{a_p}
+  \sum_{\{a\}}=\prod_{p\in\mathcal{P}}\sum_{a_p}
 $$
 
 を導入した．
@@ -114,13 +114,13 @@ $$
 非自明な計算は，
 
 $$
-  \bra{0}\tr U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}
+  \bra{0}\tr U_{d}(\partial S)\prod_{p\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}
 $$
 
 の評価である．このために，まず，
 
 $$
-  \tr U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0} 
+  \tr U_{d}(\partial S)\prod_{p\in \mathcal{P}} \tr U_{c_p}(p)\ket{0} 
 $${#eq-state}
 
 を考え，この状態に $\bra{0}$ を作用させることを考える．
@@ -130,7 +130,7 @@ $${#eq-state}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/large_Wilson_loop1.svg" style="height:5.5em;">
   <span class="math display" style="display:inline-block;">
-    $$= U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}$$
+    $$= U_{d}(\partial S)\prod_{p\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}$$
   </span>
 </div>
 :::
@@ -138,7 +138,7 @@ $${#eq-state}
 ::: {.content-visible when-format=pdf}
 $$
   \begin{split}
-    U_{d}(\partial S)\prod_{f\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}=\ \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop1.pdf}}}
+    U_{d}(\partial S)\prod_{p\in \mathcal{P}} \tr U_{c_p}(p)\ket{0}=\ \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop1.pdf}}}
   \end{split}
 $$ {#eq-action_Wilson_loop}
 :::
@@ -259,11 +259,11 @@ $$
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
   <img src="figs/large_Wilson_loop2.svg" style="height:5.5em;">
   <span class="math display" style="display:inline-block;">
-    $$\quad\to\qty(\prod_{f\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})$$
+    $$\quad\to\qty(\prod_{p\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})$$
   </span>
   <img src="figs/large_Wilson_loop3.svg" style="height:5.5em;">
   <span class="math display" style="display:inline-block;">
-    $$=d_{d}\qty(\prod_{f\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})$$
+    $$=d_{d}\qty(\prod_{p\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})$$
   </span>
   <img src="figs/large_Wilson_loop4.svg" style="height:5.5em;">
 </div>
@@ -274,10 +274,10 @@ $$
   \begin{split}
     \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop2.pdf}}}
     &\to
-    \qty(\prod_{f\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}}) \  
+    \qty(\prod_{p\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}}) \  
      \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop3.pdf}}}\\
     &=
-    d_{d}\qty(\prod_{f\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})\
+    d_{d}\qty(\prod_{p\in S}\frac{\delta^{\bar{d}}_{c_i}}{d_{d}})\
     \vcenter{\hbox{\includegraphics[scale=0.25]{figs/large_Wilson_loop4.pdf}}}
   \end{split}
 $$
@@ -289,7 +289,7 @@ $$
   \begin{split}
     \expval{\tr U_d(\partial S)}
     &= 
-    d_d\prod_{f\in S} \sum_{a_p,b_p,c_p}\psi^*(a_p)\psi(b_p)N_{\bar{a}_pb_p}^{c_p}\frac{\delta_{c_p}^{\bar{d}}}{d_d}\\
+    d_d\prod_{p\in S} \sum_{a_p,b_p,c_p}\psi^*(a_p)\psi(b_p)N_{\bar{a}_pb_p}^{c_p}\frac{\delta_{c_p}^{\bar{d}}}{d_d}\\
     &=
     d_d\qty(\frac{\sum_{a,b}N_{db}^{a}\psi^*(a)\psi(b)}{d_d})^{|S|}\\
     &=d_d\exp(-|S|\sigma_d)
