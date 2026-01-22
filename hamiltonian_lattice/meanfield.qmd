@@ -253,7 +253,7 @@ $$
 $$
 :::
 
-となる．これの操作を繰り返すと，
+となる．この操作を繰り返すと，
 
 ::: {.content-visible when-format=html}
 <div style="display:flex; align-items:center; justify-content:center; gap:1em;">
