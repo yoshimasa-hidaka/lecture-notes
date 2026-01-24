@@ -269,7 +269,7 @@ $$
 で与えられ，その基底は
 
 $$
-\ket{\bm{a},\symbf{\mu}}=\bigotimes_{e\in\mathcal{E}}\ket{a_e}\bigotimes_{v\in\mathcal{V}}\ket{\mu_v}
+\ket{\bm{a},\bm{\mu}}=\bigotimes_{e\in\mathcal{E}}\ket{a_e}\bigotimes_{v\in\mathcal{V}}\ket{\mu_v}
 $$
 
 と表される．

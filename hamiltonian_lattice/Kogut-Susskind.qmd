@@ -14,7 +14,7 @@
 
 ::: {.content-visible when-format=pdf}
 $$ 
-    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/Honeycomb.pdf}}}
+    \vcenter{\hbox{\includegraphics[width=.5\linewidth]{figs/Honeycomb.pdf}}}
 $$
 :::
 
@@ -33,7 +33,7 @@ $$
 
 ::: {.content-visible when-format=pdf}
 $$ 
-    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/plaquette.pdf}}}
+    \vcenter{\hbox{\includegraphics[width=.3\linewidth]{figs/plaquette.pdf}}}
 $$
 :::
 
@@ -141,7 +141,7 @@ $G_i(v)$ は Lie代数の生成子であり，式 (@eq-gauss) は，頂点にお
 
 ::: {.content-visible when-format=pdf}
 $$ 
-    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/v123.pdf}}}
+    \vcenter{\hbox{\includegraphics[scale=1.]{figs/v123.pdf}}}
 $$
 :::
 
@@ -169,7 +169,7 @@ $$ $$ {#eq-PhysState}
 
 ::: {.content-visible when-format=pdf}
 $$ 
-    \vcenter{\hbox{\includegraphics[scale=0.3]{figs/PhysState.pdf}}}
+    \vcenter{\hbox{\includegraphics[scale=1.]{figs/PhysState.pdf}}}
 $$ {#eq-PhysState}
 :::
 
@@ -366,13 +366,13 @@ $$ {#eq-Hamiltonian_SUN}
 #### 物理状態
 
 Gauss の拘束条件を満たす基底は，各辺 ($e\in \mathcal{E}$) に既約表現 $a_e$ を割り当て，各頂点 ($v\in \mathcal{V}$) に 多重度 $\mu_v$ を付与した状態で，Clebsch--Gordan 係数が消えない組み合わせによって構成される．
-この基底を $\ket{\bm{a};\symbf{\mu}}$ と記す．
+この基底を $\ket{\bm{a};\bm{\mu}}$ と記す．
 グラフィカルには，式({@eq-PhysState}) で表せる．
 
 一般的な状態は，この基底の線形結合として
 
 $$
-\ket{\psi} = \sum_{\bm{a},\symbf{\mu}}\psi(\bm{a},\symbf{\mu})\ket{\bm{a};\symbf{\mu}}
+\ket{\psi} = \sum_{\bm{a},\bm{\mu}}\psi(\bm{a},\bm{\mu})\ket{\bm{a};\bm{\mu}}
 $$
 
 と表される．

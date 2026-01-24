@@ -83,14 +83,14 @@ $$ {#eq-Pauli_Matrix}
 を導入する．このとき，$\mathrm{SU}(2)$群の元 $g$ は，次のように表される:
 
 $$
-    g = a_0 \mathbf{1}_2 +\ri\symbf{\sigma}\cdot \bm{a} \,.
+    g = a_0 \mathbf{1}_2 +\ri\bm{\sigma}\cdot \bm{a} \,.
 $$
 
 ここで，$\bm{a} = (a_1, a_2, a_3)^T$ は実ベクトルであり，パラメータは $a_0^2+a_1^2+a_2^2+a_3^2=1$ を満たす．
 さらに3次元単位ベクトル ${\bm{n}}$ を導入すると，$g$ は次のようにも表せる:
 
 $$
-    g= \mathbf{1}_2\cos\frac{\theta}{2}+\ri{\bm{n}}\cdot\symbf{\sigma}\sin\frac{\theta}{2}=\exp(\ri\frac{\theta}{2}{\bm{n}}\cdot\symbf{\sigma}
+    g= \mathbf{1}_2\cos\frac{\theta}{2}+\ri{\bm{n}}\cdot\bm{\sigma}\sin\frac{\theta}{2}=\exp(\ri\frac{\theta}{2}{\bm{n}}\cdot\bm{\sigma}
     )　\,.
 $$ {#eq-SU2_n}
 
@@ -126,7 +126,7 @@ $$
 を用いると，以下の関係が成り立つ:
 
 $$
-    {\bm{n}}\cdot \symbf{\sigma} = \mathcal{U}_{\bm{n}}\sigma_3\mathcal{U}_{\bm{n}}^{-1} \,.
+    {\bm{n}}\cdot \bm{\sigma} = \mathcal{U}_{\bm{n}}\sigma_3\mathcal{U}_{\bm{n}}^{-1} \,.
 $$
 
 したがって，$\mathrm{SU}(2)$群の元は，次のように書くことができる:

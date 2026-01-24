@@ -13,10 +13,10 @@ $$ {#eq-Hamiltonian_strong_coupling}
 
 となる．
 この場合は，表現のネットワークの基底がハミルトニアンの固有状態となる．
-この状態を $\ket{\bm{a};\symbf{\mu}}$ と書くと，
+この状態を $\ket{\bm{a};\bm{\mu}}$ と書くと，
 
 $$
-  H \ket{\bm{a};\symbf{\mu}} = E(\bm{a})\ket{\bm{a};\symbf{\mu}}
+  H \ket{\bm{a};\bm{\mu}} = E(\bm{a})\ket{\bm{a};\bm{\mu}}
 $$
 
 で，エネルギーは 

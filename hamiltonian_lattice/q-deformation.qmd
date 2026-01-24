@@ -8,7 +8,7 @@ $q$ 変形に関する参考文献として [@Bonatsos:1999xj,@Ardonne2010Clebsc
 ## セミシンプルLie代数
 
 まず一般のセミシンプルLie代数 $\mathfrak{g}$ の量子群変形を考えよう．
-$\mathfrak{g}$ のルートベクトルを $\symbf{\alpha}_i$ とする．
+$\mathfrak{g}$ のルートベクトルを $\bm{\alpha}_i$ とする．
 生成子 $H_i$, $L_i^\pm$ の交換関係を Chevalley 基底を用いて，
 
 $$
@@ -33,19 +33,19 @@ $$
 ここで，$A_{ij}$　は Cartan 行列の要素である:
 
 $$
-  A_{ij} = \frac{2(\symbf{\alpha}_i,\symbf{\alpha}_j)}{(\symbf{\alpha}_j,\symbf{\alpha}_j)}.
+  A_{ij} = \frac{2(\bm{\alpha}_i,\bm{\alpha}_j)}{(\bm{\alpha}_j,\bm{\alpha}_j)}.
 $$
 
 また，$t_j$ は，
 
 $$
-  t_j=\frac{2}{(\symbf{\alpha}_j,\symbf{\alpha}_j)}
+  t_j=\frac{2}{(\bm{\alpha}_j,\bm{\alpha}_j)}
 $$
 
 で定義されている．
-ただし，$(\symbf{\alpha}_j,\symbf{\alpha}_j)$ は，規格化に一般にルートベクトルの依存するが，ここでは，最高次のルートベクトル(随伴表現のhighest weight vector)を $\theta$ としたとき，$(\theta,\theta)=2$ と規格化してあるものとする．
-$g$ をdual Coxeter 数\footnote{コルートを $\symbf{\alpha}^{\lor}_i=2\symbf{\alpha}_i/(\symbf{\alpha}_i,\symbf{\alpha}_i)$ と定義する．
-すると $a_i^{\lor}$ を非負の整数として，$\theta=\sum_{i=1}^ra_i^{\lor}\symbf{\alpha}^{\lor}_i$ と展開できる．
+ただし，$(\bm{\alpha}_j,\bm{\alpha}_j)$ は，規格化に一般にルートベクトルの依存するが，ここでは，最高次のルートベクトル(随伴表現のhighest weight vector)を $\theta$ としたとき，$(\theta,\theta)=2$ と規格化してあるものとする．
+$g$ をdual Coxeter 数\footnote{コルートを $\bm{\alpha}^{\lor}_i=2\bm{\alpha}_i/(\bm{\alpha}_i,\bm{\alpha}_i)$ と定義する．
+すると $a_i^{\lor}$ を非負の整数として，$\theta=\sum_{i=1}^ra_i^{\lor}\bm{\alpha}^{\lor}_i$ と展開できる．
 ここで，$r$ は，Lie代数のランクである．dual Coxeter 数は $g\coloneqq\sum_{i=1}^r a^{\lor}_{i}+1$ と定義される．}として，$q$ は，
 $$
   q\coloneqq e^{\frac{2\pi\ri}{k+g}}
@@ -153,7 +153,7 @@ $$ {#eq-coassociativity}
 ## $\mathrm{SU}(2)_k$
 
 具体例として，$\mathfrak{g}=\mathfrak{su}(2)$ の場合を考えよう．
-この場合，ルートベクトルは一つで，$A=2$, $t_1=2/(\symbf{\alpha}_1,\symbf{\alpha}_1)=1$, $g=2$ である．
+この場合，ルートベクトルは一つで，$A=2$, $t_1=2/(\bm{\alpha}_1,\bm{\alpha}_1)=1$, $g=2$ である．
 したがって，
 
 $$
@@ -468,7 +468,7 @@ $3$つの$j=1/2$を合成して，
 
 
 % 基本表現と反基本表現のウェイトベクトルを$\bm{\omega}_1$及び$\bm{\omega}_2$とすると，一般の表現のウェイトベクトルは，$\bm{\omega} = p\bm{\omega}_1+q\bm{\omega}_2$と表すことができる．したがって，表現はDynkin index $(p,q)$で指定することができる．
-% ルートベクトルは，$\symbf{\alpha}_1=2\bm{\omega}_1-\bm{\omega}_2=(2,-1)$, $\symbf{\alpha}_2=-\bm{\omega}_1+2\bm{\omega}_2=(-1,2)$.
+% ルートベクトルは，$\bm{\alpha}_1=2\bm{\omega}_1-\bm{\omega}_2=(2,-1)$, $\bm{\alpha}_2=-\bm{\omega}_1+2\bm{\omega}_2=(-1,2)$.
 
 % \begin{align}
 %   \Delta(H_i)&=1\otimes H_i+H_i\otimes 1\\

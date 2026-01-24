@@ -126,7 +126,7 @@ $$
 $\mathrm{SU}(2)$ の元を
 
 $$
-    g= \cos\frac{\theta}{2}+\ri \symbf{\sigma}\cdot\bm{n}\sin\frac{\theta}{2}
+    g= \cos\frac{\theta}{2}+\ri \bm{\sigma}\cdot\bm{n}\sin\frac{\theta}{2}
 $$
 
 と表す (@eq-SU2_n)．
@@ -234,7 +234,7 @@ $$ \begin{aligned}
 $0<\theta<2\pi$ の場合，共役類は，
 
 $$
-\mathcal{C}_{\theta}=\left\{\mathbf{1}_2\cos\frac{\theta}{2}+\ri\bm{n}\cdot \symbf{\sigma}\sin\frac{\theta}{2}\left|\bm{n}\in S^2\right.\right\}
+\mathcal{C}_{\theta}=\left\{\mathbf{1}_2\cos\frac{\theta}{2}+\ri\bm{n}\cdot \bm{\sigma}\sin\frac{\theta}{2}\left|\bm{n}\in S^2\right.\right\}
 $$
 と書ける．
 
