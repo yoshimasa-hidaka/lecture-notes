@@ -366,7 +366,7 @@ $$ {#eq-Hamiltonian_SUN}
 #### 物理状態
 
 Gauss の拘束条件を満たす基底は，各辺 ($e\in \mathcal{E}$) に既約表現 $a_e$ を割り当て，各頂点 ($v\in \mathcal{V}$) に 多重度 $\mu_v$ を付与した状態で，Clebsch--Gordan 係数が消えない組み合わせによって構成される．
-この基底を $\ket右{\bm{a};\symbf{\mu}}$ と記す．
+この基底を $\ket{\bm{a};\symbf{\mu}}$ と記す．
 グラフィカルには，式({@eq-PhysState}) で表せる．
 
 一般的な状態は，この基底の線形結合として
