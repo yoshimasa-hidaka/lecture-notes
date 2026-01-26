@@ -1,4 +1,4 @@
-# ハミルトニアン形式 {#sec-ks}
+# 格子上のハミルトニアン形式 {#sec-ks}
 
 ## Kogut--Susskind形式{#sec-hamiltonian}
 
@@ -59,7 +59,7 @@ $${#eq-E_tE_tfield}
 で与えられる．
 
 プラケット $p$ に沿った経路を $e_1\to e_2\to e_3\to \bar{e}_4\to \bar{e}_5\to \bar{e}_6$ とし，
-その上の演算子 $U(p)$ を
+その上の演算子 $U_a(p)$ を
 
 $$
   U_a(p)\coloneqq U_a(\bar{e}_6)U_a(\bar{e}_5)U_a(\bar{e}_4)U_a(e_3)U_a(e_2)U_a(e_1)

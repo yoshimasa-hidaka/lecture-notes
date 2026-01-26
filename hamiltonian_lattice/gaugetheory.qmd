@@ -1,7 +1,92 @@
-# 連続理論から格子模型へ
+# 連続理論のハミルトニアン形式
+
+ここでは，ゲージ理論の作用から出発して，ハミルトニアンを導出しよう．
+$(d+1)$ 次元 $\mathrm{SU}(N)$ ゲージ理論の作用は，
 $$
-  \mathcal{L}=-\frac{1}{2g^2}\tr F_{\mu\nu}F^{\mu\nu}
+S= \int d^{d+1}x\mathcal{L}
 $$
+で与えられ，$\mathcal{L}$ はラグランジアン密度で，以下のように与えられる:
+$$
+  \mathcal{L}=-\frac{1}{2g^2}\tr F_{\mu\nu}F^{\mu\nu}.
+$$
+ここで，$F_{\mu\nu}$ は場の強さで，Lie 代数(の基本表現)に値を取るゲージ場 $A_\mu$ を用いて，
+$$
+F_{\mu\nu}=\partial_\mu A_\mu-\partial_\nu A_\mu-\ri[A_\mu,A_\nu]
+$$
+で与えられる．
+上付きの $F^{\mu\nu}$ は，計量 $\eta_{\mu\nu}=\mathop{\mathrm{diag}}(-1,1,\cdots, 1)$ と $\eta_{\mu\nu}\eta^{\nu\rho}=\delta_\mu^\rho$ となる $\eta^{\nu\rho}$ を用いて，
+$F^{\mu\nu} = \eta^{\mu\rho}\eta^{\nu\sigma} F_{\rho\sigma}$ で与えられる．
+
+ゲージ場は，Lie 代数の生成子 $T_a$ を用いて，$A_\mu = T_a A^a_{\mu}$ と展開される．
+同様に，$F_{\mu\nu}= T_a F^{a}_{\mu\nu}$ と分解すると，
+$$
+F^a_{\mu\nu} = \partial_\mu A_\nu^a - \partial_\nu A_\mu^a +f^a_{~bc} A^b_\mu A^c_\nu
+$$
+と表される．$\tr T_a T_b= g_{ab}/2$ を用いて添字の上げ下げをすることにする．
+適切に基底を選ぶと，$g_{ab}=\delta_{ab}$ に取ることができる．
+
+
+ゲージ変換は，ゲージ変換関数 $U(x)=\exp(\ri T_a\theta^a(x))$ を用いて，
+$$
+  A_\mu(x)\to U^\dag(x)A_\mu(x) U(x) + U^\dag(x)\ri\partial_\mu U(x)
+$$
+で与えられる．作用はこの変換のもとで不変である．
+
+正準運動量は，
+$$
+\Pi_a^\mu \coloneqq \frac{\mathcal{L}}{\partial \partial_0 A^a_\mu} = -\frac{1}{g^2}F_a^{0\mu}
+%= -\frac{1}{g^2}(\partial^0 A_a^{\mu} -\partial^\mu A_a^{0} +f_{abc}A^{b0}A^{c\mu})
+$$
+で定義され，正準交換関係は，形式的に
+$$
+[A_\mu^a(\bm{x}),\Pi_b^\nu(\bm{y})] = \ri \delta^a_b \delta^\nu_\mu\delta(\bm{x}-\bm{y})
+$$
+で与えられる．
+$\Pi_a^0=F_a^{00}/g^2=0$ になる点に注意しよう．
+これは，$A^a_0$ の正準運動量が存在しないことを意味し，$A^a_0$ を含む項は，拘束条件を与える．
+ハミルトニアンは，
+$$
+H = \int d^dx\qty(
+  \Pi_a^\mu \partial_0 A^a_\mu - \mathcal{L}
+)=
+ \int d^dx\qty(
+\frac{g^2}{2}\Pi_i^a\Pi^i_a+ \frac{g^{ab}}{4g^2} F^a_{ij}F_a^{ij}
++ (D_i A_0)^a\Pi_a^i
+)
+$$
+で与えられる．ここで，$(D_i A_0)^a=\partial_i A_0^{a} +f^a_{~bc}A_i^{b}A_0^{c}$ として，
+$\partial_0 A^a_{i}=g^2\Pi^a_i  + (D_i A_0)^a$ を用いた．
+$(D_iA_0)^a$ の項を部分積分すると，
+$$
+H=
+ \int d^dx\qty(
+\frac{g^2}{2}\Pi_i^a\Pi^i_a+ \frac{g^{ab}}{4g^2} F^a_{ij}F_a^{ij}
+- A_0^a(D_i\Pi^i)_a
+)
+$$
+が得られる．
+
+また，磁場 $\bm{B}^a= (F^a_{23},F^a_{31},F^a_{12})/g$ 及び，
+電場 $\bm{E}_a=-g\bm{\Pi}_a$ を定義すると，
+
+$$
+H =
+ \int d^dx\qty(
+\frac{1}{2}\bm{E}_a^2+ \frac{1}{2}\bm{B}_a^2
+ +gA_0^a  (\bm{D}\cdot\bm{E})_a
+)
+$$
+
+が得られる．
+$A_0^a$ は Lagrange の未定定数に対応し，$G_a = (\bm{D}\cdot\bm{\Pi})_a=-g(\bm{D}\cdot\bm{E})_a=0$ が Gauss の拘束条件となる．
+これは，物理的状態 $\ket{\Psi}$ は，
+$$
+G_a \ket{\Psi} = 0
+$$
+を満たすことを意味する．
+
+
+<!-- $$
 $$
   \pi^\mu  = \frac{\partial \mathcal{L}}{\partial \partial_0A^i_\mu}
 $$
@@ -34,4 +119,4 @@ $$
 
 $$
 \sum_{e} \to a^d\int d^dx
-$$
+$$ -->
