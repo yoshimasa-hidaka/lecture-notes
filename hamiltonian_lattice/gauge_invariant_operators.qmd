@@ -2,10 +2,10 @@
 
 ## 局所演算子
 
-ハミルトニアンに入っている磁場項はゲージ不変な演算子である．
+ハミルトニアンに入っている磁場項はゲージ不変な演算子である:
 
 $$
-\tr U(p)
+\tr U(p)\,.
 $$
 
 より一般に任意の表現 $a$ の $\tr U_a(p)$ もゲージ不変である．
@@ -14,20 +14,16 @@ $$
 ハミルトニアンに入っている電場項は$E^2(e)$はゲージ不変である．
 さらに共役類でラベルされたゲージ不変な演算子
 $$
-S_{[g]}(e)=\int_{e^{\ri T_i\theta^i}\in [g]} d\theta e^{\ri \theta^i R_i(e)}
+K_{[g]}(e)=\int_{h\in[g]} dh R^{h}(e)
 $$
-も考えることができる．
-ここで，$[g]$ は，$g$ を代表元とする共役類である．
-
+も考えることができる．ここで，$[g]=\{hg\bar{h}|h\in G\}$ は，$g$ を代表元とする共役類で，$R^h$ は，有限変換 (@eq-finte_RL) の右作用の演算子である．
+積分の測度は，$\int_{h\in[g]} dh=1$ になるように規格化されている．
 $$
 \int_{e^{\ri T_i\theta^i}\in [g]} d\theta = 1
 $$
 となるように規格化されているものとする．
 この演算子を表現の基底で展開してみよう．
-ゲージ不変であるということから，すべての
-$$
-e^{\ri \theta^i R_i(e)}
-$$
+ゲージ不変であるということから，すべての $R^h$
 と可換である．これは．各表現空間で，単位元に比例していることを意味する．
 つまり，
 $$
@@ -49,74 +45,49 @@ $$
 $$
 K_{[g]}(e)=\sum_a\frac{\chi_a(g)}{d_a} P_a
 $$ 
-と表すことができる．
+と表すことができる．ここで，右作用の演算子 $R^h$ を用いて定義したが，左作用の演算子 $L^h$ を用いても同じ演算子が得られる．
+
+逆に，$P_a$ は，指標の直交性
+$$
+  \int \dd{g} \chi^\dag_a(g) \chi_b(g)=\delta_{ab}
+$$
+より，
 
 $$
-\delta(g) = \sum_{a}d_a \chi_a(g)
+P_a =d_a\int \dd{g} \chi^\dag_a(g) K_{[g]}(e)
 $$
+
+と表される．指標の直交性は，式 (@eq-su2-D-orthogonality)より得られる．
+
+
 
 ## 非局所演算子
 
-また，任意の閉じた経路からなる空間的なWilson loopのトーレス$\tr W_a(C)$はゲージ不変な演算子である．
+<!-- また，任意の閉じた経路からなる空間的なWilson loopのトーレス$\tr W_a(C)$はゲージ不変な演算子である．
 さらに一般にWilson lineのネットワークもゲージ不変な演算子になる．
 
 
 $(2+1)$次元時空の場合，これは，リボン演算子と呼ばれている．
 文献 [@Bombin:2007qv] に従う．
 
-$$
-L^h \coloneqq e^{-\ri \theta^i L_i}
-$$
-
-$$
-R^h \coloneqq e^{\ri \theta^i R_i}
-$$
-
-を定義する．
 
 基底 $\ket{g}$ に対して，
 
 $$
-  L^h\ket{g}=\ket{hg}
+  L^h\ket{g}=\ket{hg}\,,
 $$
 $$
-  R^h\ket{g}=\ket{g\bar{h}}
-$$
-
-と作用するので，
-
-$$
-  L^h=\int d{g}\ket{hg}
-$$
-$$
-  R^h\ket{g}=\ket{g\bar{h}}
+  R^h\ket{g}=\ket*{g\bar{h}}
 $$
 
+と作用する．
 
-
-$L^h$ は，群の左作用，$R^h$ は 右作用を表しており，次の関係を満たす:
-
-$$ \begin{aligned}
-  L^{h}L^{h'}&=L^{hh'},\\
-  R^{h}R^{h'}&=R^{hh'},\\
-  L^hR^{h'}&=R^{h'}L^h\,.
- \end{aligned}
+リボン演算子は，$R^h$, $L^h$ に加えて，
+$$
+T^g \coloneqq \sum_a d_a \tr D_a(g) U^\dag_a = \ket{g}\bra{g}
 $$
 
-$L^{h}R^{h}$ を状態 $\ket{\psi}$ に作用させると
-
-$$
-  \begin{split}
-    L^hR^{h}\ket{\psi}=\int dg \psi(g)\ket{hg\bar{h}}=
-    \int dg \psi(\bar{h}gh)\ket{g}
-  \end{split}
-$$
-
-
-
-$$
-T^g(e) \coloneqq \sum_a d_a \tr D_a(g) U^\dag_a(e) = \ket{g}\bra{g}
-$$
+の演算子を用いて構成される．
 
 $$
 \mathbf{1}_e =\int dg T^g(e)
@@ -172,7 +143,7 @@ $$
 ?
 $$
 F_{\rho}^{h,g} = L_\rho^h T^g_\rho = T^g_\rho L_\rho^h
-$$
+$$ -->
 
 <!--[@Bais:1998yn]-->
 

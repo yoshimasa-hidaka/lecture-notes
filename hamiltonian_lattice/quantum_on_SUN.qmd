@@ -14,12 +14,12 @@ $$
   [p,U_n] =nU_n
 $$ {#eq-commutation_relation}
 
-であり，有限の変換について，
+であり，有限の変換について，$R^\theta = e^{\ri p\theta}$ と定義すると，
 
-$$e^{\ri pa}U_n e^{-\ri pa}=e^{\ri na}U_n$$
+$$R^\theta U_n R^{\theta\dag}=e^{\ri n\theta}U_n$$
 
 が成り立つ．
-さらに，$e^{\ri p a}e^{\ri p b}=e^{\ri p (a+b)}$ が成立し，また，$e^{\ri n(x+2\pi)}=e^{\ri n x}$ であることから $e^{\ri  2\pi p}$ は恒等変換となる．したがって，$e^{\ri p a}$ の全体は $\mathrm{U}(1)$群をなす．
+さらに，$R^\theta R^{\theta'}=R^{\theta+\theta'}$ が成立し，また，$e^{\ri n(x+2\pi)}=e^{\ri n x}$ であることから $R^{2\pi}$ は恒等変換となる．したがって，$R^\theta$ の全体は $\mathrm{U}(1)$群をなす．
 また，式 (@eq-commutation_relation) は，$U_n$ が $\mathrm{U}(1)$ 電荷が整数 $n$ の既約表現として振る舞うことを意味している．さらに，$U_n$ の積は，$U_nU_m= U_{n+m}$ を満たし，群の構造を持つことがわかる．
 これは可換群の特徴であり，後で見るように，この $U_n$ の群構造は非可換群では成立しない．
 
@@ -50,6 +50,11 @@ $$
 $$
 
 と表す事ができる．
+また，$\ket{y}$ は，$\ket{x=0}$ を用いて
+$$
+\ket{y} = R^{y\dag}\ket{x=0}
+$$
+と表される．
 
 一方，周期境界条件から $p$ の固有値は整数 $n\in\mathbb{Z}$ に量子化される．その固有状態 $\ket{n}$ は，直交性関係
 
@@ -92,6 +97,29 @@ $$
 $$
 
 と結びついている．基底関数 $\bra{x}\ket{n}=e^{\ri n x}/\sqrt{2\pi}$ は，$\mathrm{U}(1)$ の1次元既約表現に対応している．
+
+### 射影 {#sec-Projection_Operator_U1}
+
+$R^x$, $U_n$ はそれぞれの基底で展開することができる:
+$$
+\begin{aligned}
+R^x&= \sum_{m\in\mathbb{Z}}e^{\ri m x}\ket{m}\bra{m}=\int_0^{2\pi}\frac{\dd{y}}{2\pi}\ket{y-x}\bra{y}\,,\\
+U_n&= \sum_{m\in\mathbb{Z}}\ket{m+n}\bra{m}=\int_0^{2\pi}\frac{\dd{y}}{2\pi}e^{\ri ny}\ket{y}\bra{y}\,.
+\end{aligned}
+$$
+
+また，$R^x$ をフーリエ変換することで，
+$$
+ P_n \coloneqq \int_0^{2\pi} \frac{\dd{x}}{2\pi}e^{-\ri n x} R^x = \ket{n}\bra{n}\,
+$$
+
+が得られる．これは，$P_nP_m=\delta_{n,m}P_n$ 及び $1=\sum_n P_n$ を満たすことから，射影演算子になっていることがわかる．
+
+一方，$U^\dag_n$ を逆フーリエ変換することで，
+$$
+T^x \coloneqq  \sum_{n\in\mathbb{Z}}e^{\ri n x} U^\dag_n = \ket{x}\bra{x}
+$$
+が得られる．この演算子は，$T^xT^y = \delta(x-y) T^x$ を満たす．$T^xT^x=\delta(0)T^x$ は発散することから，射影演算子ではない点に注意が必要だが，あまり気にしなくてもよい．
 
 ## $\mathrm{SU}(N)$上の量子力学 {#sec-SUN_quantum}
 
@@ -236,8 +264,25 @@ $$
 より，$\delta^{ij}\ER_{i}\ER_{j}=\delta^{ij} \EL_{i}\EL_{j}\eqqcolon E^2$
 が成り立ち，$\ER_i$ と $\EL_i$ のいずれから定義しても同じ演算子 $E^2$ が得られる．
 
+有限の右作用，左作用は，$h=\exp(\ri \theta^iT_i)$ として，
+$$
+R^h \coloneqq e^{\ri \theta^i R_i}\,,
+\qquad
+L^h \coloneqq e^{-\ri \theta^i L_i}
+$$ {#eq-finte_RL}
+として，
+$$
+R^{h}U_a R^{h\dag}=U_aD_{a}(h)\,,
+$$
+$$
+L^{h}U_a L^{h\dag}=D^\dag_{a}(h)U_a
+$$
+と変換する．
+また，$R^hR^g=R^{hg}$ 及び $L^hL^g=L^{hg}$ を満たす．
 
-$[U_{a}]^{m}_{n}$ の積は，$\mathrm{SU}(N)$ の　Clebsch--Gordan 係数を用いて
+
+
+$[U_{a}]^{m}_{n}$ の積は，$\mathrm{SU}(N)$ の Clebsch--Gordan 係数を用いて
 
 $$
   [U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b}
@@ -283,30 +328,24 @@ $$ {#eq-fusion_Wilson_loop}
 $U_nU_m=U_{n+m}$ となる $\mathrm{U}(1)$ の場合と異なり，$\tr U_a$ または，$[U_a]^{m_a}_{n_a}$ の積は群構造を持たない．
 
 ### 磁気的基底
-群の元 $g\in\mathrm{SU}(N)$ に対応する基底を $\ket{g}$ と表す．これは，$[U_a]^{m_a}_{n_a}$ の作用に対して，表現行列の行列要素を返す状態
+群の元 $g\in G$ に対応する基底を $\ket{g}$ と表す．これは，$[U_a]^{m_a}_{n_a}$ の作用に対して，表現行列の行列要素を返す状態
 
 $$
 [U_{a}]^{m_a}_{n_a}\ket*{g} = [D_{a}(g)]^{m_a}_{n_a} \ket*{g}
 $$
 
 である．
-この基底を磁気的基底と呼ぶことにする．
 また，直交性と完全性は，
 
 $$
   \begin{split}
-    \bra{g}\ket{g'}&= \delta(g\bar{g}')\,,\\
-    \quad 1&=\int \dd{g} \ket{g}\bra{g}
+    \bra{g}\ket{g'}&= \delta_{g,\bar{g}'}\,,\\
+    \quad 1&=\sum_{g\in G} \ket{g}\bra{g}
   \end{split}
 $$
 
-で与えられる．$\dd{g}$ は $\int \dd{g} =1$ に規格化された Haar 測度で，$\delta(gg'^{-1})$ は，
+で与えられる．
 
-$$
-  \int \dd{g'} \delta(g\bar{g}')\psi(g')=\psi(g)
-$$
-
-を満たすデルタ関数である．
 このデルタ関数は，指標 $\chi_a(g)=\tr D_a(g)$ を用いて
 
 $$
@@ -315,11 +354,17 @@ $$
 
 と表すことができる．
 
+$R^h$, $L^h$ の作用は，
+$$
+R^h\ket{g} = \ket*{g\bar{h}}\,,
+$$
+$$
+L^h\ket{g} = \ket{hg}
+$$
+となる．ここで，$\bar{h}$ は，$h$ の逆元を表す．
 
 ### 電気的基底
 
-$E^2 = \delta^{ij}{\ER}_i{\ER}_j = \delta^{ij}{\EL}_i{\EL}_j$ を対角化する基底を導入し，これを 電気的基底と呼ぶ．
-これは，$\ER_i$, $\EL_i$ の作用に対して，
 
 $$
 \begin{split}
@@ -349,6 +394,15 @@ $$
   \end{split}
 $$
 
+$R^h$, $L^h$ の作用は，
+$$
+R^h\ket{a,m_a,n_a} = \ket{a,m_a,n'_a}[D_{a}(h)]^{n'_a}_{n_a} \,,
+$$
+$$
+L^h\ket{a,m_a,n_a} = [D^\dag_{a}(h)]_{m'_a}^{m_a}\ket{a,m'_a,n_a}
+$$
+となる．ここで，$\bar{h}$ は，$h$ の逆元を表す．
+
 ### Fourier(Peter--Weyl) 展開
 
 $\mathrm{U}(1)$ の場合と同様に状態は，
@@ -376,8 +430,180 @@ $$
 と関係している．
 ここで，$\sqrt{d_a}[D_a]^{m_a}_{n_a}(g)=\bra{g}\ket{a,m_a,n_a}$ である．
 
+### 射影 {#sec-Projection_Operator_SUN}
+
+$R^g$, $L^g$, $U_a$ はそれぞれ，基底で展開することができる:
+$$
+\begin{aligned}
+R^g&= \sum_{b,m_b,n_b,n'_b}[D_b(g)]_{n_b}^{n'_b}\ket{b,m_b,n'_b}\bra{b,m_b,n_b}=\int\dd{h}\ket{h\bar{g}}\bra{h}\,,\\
+L^g&= \sum_{b,m_b,n_b}[D^\dag_b(g)]_{m'_b}^{m_b}\ket{b,m'_b,n_b}\bra{b,m_b,n_b}=\int\dd{h}\ket{gh}\bra{h}\,,\\
+[U_a]^{m_a}_{m_a}&=
+\sum_c\sum_{m_c,n_c,\mu} 
+  \braket{a,m_a;\, b,m_b}{c,m_c;\mu}
+  \braket{c,n_c;\mu}{a,n_a;\, b,n_b}
+\sqrt{\frac{d_b}{d_c}}\ket{c,m_c,n_c}\bra{b,m_b,n_b}\\
+&=\int\dd{h}[D_a(h)]^{m_a}_{n_a}\ket{h}\bra{h}\,.
+\end{aligned}
+$$
+
+射影演算子は，
+$$
+ P_{a,m_a,n_a} \coloneqq d_a^2\int\dd{h}[D_a(h)]^{m_a}_{m_a} L^h  \int\dd{g} [D^\dag_a(g)]^{n_a}_{n_a} R^g 
+ = 
+\ket{a,m_a,n_a}\bra{a,m_a,n_a}\,,
+$$
+と得ることができる．ここで，$m_a$, $n_a$ の和は取らないものとする．
+また，表現 $a$ の空間への射影演算子は，
+$$
+ P_{a} \coloneqq d_a\int\dd{h}\chi^\dag_{a}(h) R^h
+ = d_a\int\dd{h}\chi_{a}(h) L^h=
+\sum_{m_a,n_a}\ket{a,m_a,n_a}\bra{a,m_a,n_a}
+$$
+と表すことができる．ここで，$\chi_{a}(h)=\tr D_a(h)$ は指標である．
+また，$U^\dag_a$ の逆フーリエ変換を使って，
+$$
+T^g \coloneqq  \sum_{a}\tr D_{a}(g) U^\dag_a = \ket{g}\bra{g}
+$$
+が得られる．
 
 
+## 有限群上の量子力学 {#sec-finite_G_quantum}
+
+有限群 $G$ 上の量子力学についても前節と同様に議論することができる．
+違いは，Haar 測度 で積分していたものを，和に置き換えれば良い．
+つまり，$G$ 上の関数 $f(g)$ の積分を
+$$
+\int \dd{g} f(g) \to \frac{1}{|G|}\sum_{g\in G} f(g)
+$$
+のように和に置き換えれば良い．
+
+例えば，式 (@eq-suN-D-orthogonality)は，
+
+$$
+\frac{1}{|G|}\sum_{g\in G} \,\,
+[D_{a'}(g)^\dagger]^{m'}_{n'} \,
+[D_a(g)]^{m}_{n}
+= \frac{1}{d_a}\,\delta_{a,a'}\,\delta^{m}_{n'}\,\delta^{m'}_{n}
+$$ {#eq-G-D-orthogonality}
+となる．
+
+### 右作用と左作用
+
+有限の右作用，左作用の演算子を，$h\in G$ として，$R^h$，$L^h$ と表す．
+これらは，$R^hR^g=R^{hg}$ 及び $L^hL^g=L^{hg}$ を満たす．
+
+$G$ の既約表現 $a$ のユニタリ表現行列の行列要素を $[D_a]^{m_a}_{n_a}$ とする．これに対応する演算子を $[U_a]^{m_a}_{n_a}$ と表す．
+
+として，変換を
+$$
+R^{h}U_a R^{h\dag}=U_aD_{a}(h)\,,
+$$
+$$
+L^{h}U_a L^{h\dag}=D^\dag_{a}(h)U_a
+$$
+と変換する．
+
+
+
+$[U_{a}]^{m}_{n}$ の積は，$G$ の Clebsch--Gordan 係数を用いて
+
+$$
+  [U_{a}]^{m_a}_{n_a} [U_{b}]^{m_b}_{n_b}
+  =\sum_c\sum_{m_c,n_c,\mu} 
+  \braket{a,m_a;\, b,m_b}{c,m_c;\mu}
+  \braket{c,n_c;\mu}{a,n_a;\, b,n_b}
+  [U_{c}]^{m_c}_{n_c}
+$${#eq-fusion_U_G}
+
+
+
+$$
+  \tr U_a \tr U_b = \sum_{c}N_{ab}^c \tr U_c
+$$ {#eq-fusion_Wilson_loop_G}
+
+が得られる．
+
+### 磁気的基底
+群の元 $g\in G$ に対応する基底を $\ket{g}$ と表す．これは，$[U_a]^{m_a}_{n_a}$ の作用に対して，表現行列の行列要素を返す状態
+
+$$
+[U_{a}]^{m_a}_{n_a}\ket*{g} = [D_{a}(g)]^{m_a}_{n_a} \ket*{g}
+$$
+
+である．
+また，直交性と完全性は，
+
+$$
+  \begin{split}
+    \bra{g}\ket{g'}&= \delta_{g,g'}\,,\\
+    \quad 1&=\sum_{g\in G} \ket{g}\bra{g}
+  \end{split}
+$$
+
+で与えられる．
+
+$R^h$, $L^h$ の状態へ作用は，
+$$
+R^h\ket{g} = \ket*{g\bar{h}}\,,
+$$
+$$
+L^h\ket{g} = \ket{hg}
+$$
+となる．ここで，$\bar{h}$ は，$h$ の逆元を表す．
+
+### 電気的基底
+
+この状態は，$[U_{a}]^{m_a}_{n_a}$ を用いて，位相の不定性を除いて，
+
+$$
+  [U_{a}]^{m_a}_{n_a}\ket*{0,0,0}=
+  \frac{1}{\sqrt{d_a}}\ket*{a,m_a,n_a}
+$$ {#eq-U_action}
+
+と表すことができる．
+直交性と完全性は，以下のようになる:
+
+$$
+  \begin{split}
+  &\bra{a,m_a,n_a}\ket{b,m_b,n_b}=\delta^a_b\delta_{m_a}^{m_b}\delta^{n_a}_{n_b}\,,\\
+  &1=\sum_{a}\sum_{m_a,n_a}\ket{a,m_a,n_a}\bra{a,m_a,n_a} \,.
+  \end{split}
+$$
+
+$R^h$, $L^h$ の作用は，
+$$
+R^h\ket{a,m_a,n_a} = \ket{a,m_a,n'_a}[D_{a}(h)]^{n'_a}_{n_a} \,,
+$$
+$$
+L^h\ket{a,m_a,n_a} = [D^\dag_{a}(h)]_{m'_a}^{m_a}\ket{a,m'_a,n_a}
+$$
+となる．ここで，$\bar{h}$ は，$h$ の逆元を表す．
+
+### Fourier 展開
+
+$$
+\ket{\psi} = \sum_{g} \psi(g)\ket{g} =  \sum_a\sum_{m_a,n_a} [\psi^a]_{m_a}^{n_a}\ket{a,m_a,n_a}
+$$
+
+の形で書ける．ここで，
+
+$$
+\begin{split}
+  \psi(g) &= \bra{g}\ket{\psi}\,,\\
+  [\psi^a]_{m_a}^{n_a}&=\bra{a,m_a,n_a}\ket{\psi}
+\end{split}
+$$
+
+である．
+$\psi(g)$ と $[\psi^a]_{m_a}^{n_a}$ は，
+
+$$
+  \psi(g) =\sum_{a}\sum_{m_a,n_a}\sqrt{\frac{d_a}{|G|}}[D_a(g)]^{m_a}_{n_a} [\psi^a]_{m_a}^{n_a}
+$$
+
+と関係している．
+ここで，$\sqrt{d_a/|G|}[D_a]^{m_a}_{n_a}(g)=\bra{g}\ket{a,m_a,n_a}$ である．
+ここで，$|G|$のファクター分，連続群の場合と表式が違うが，これは，$\bra{g}\ket{g'}=\delta_{g,g'}$ の規格化を採用したことに起因する．
 
 
 <!-- ## 基底

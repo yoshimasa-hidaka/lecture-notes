@@ -28,7 +28,7 @@ book:
         - quantum_on_SUN.qmd
         - gaugetheory.qmd
         - Kogut-Susskind.qmd
-        #- gauge_invariant_operators.qmd
+        - gauge_invariant_operators.qmd
         - regularization.qmd
         - Example.qmd
     - part: "発展編"
